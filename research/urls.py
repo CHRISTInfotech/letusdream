@@ -1,8 +1,9 @@
 from django.contrib import admin
 from django.urls import path, include
 
-from main.views import index
+from research.views import publications, research
 
 urlpatterns = [
-    path('', index, name='main'),
+    path('', research, name='research'),
+    path('publications', publications, name='publications'),
 ]
