@@ -11,7 +11,7 @@ def aboutUs(request):
 
 
 def media(request):
-    return render(request, 'aboutus/media.html')
+    return render(request, 'aboutus/ltmedia.html')
 
 
 def aboutConference(request):
