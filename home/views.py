@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
 
 # Create your views here.
@@ -7,11 +7,11 @@ def index(request):
 
 
 def aboutUs(request):
-    return render(request, 'aboutUs/aboutUs,html')
+    return render(request, 'aboutUs/aboutUs.html')
 
 
 def media(request):
-    return render(request, 'aboutus/ltmedia.html')
+    return render(request, 'aboutUs/ltmedia.html')
 
 
 def aboutConference(request):
