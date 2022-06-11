@@ -6,7 +6,7 @@ from home.views import index, locations, aboutUs, media, aboutConference, trrien
 
 urlpatterns = [
     path('', index, name='main'),
-    path('location/<str:loc>', locations, name='locations'),
+    path('locations/<str:loc>', locations, name='locations'),
     path('about-us', aboutUs, name='about-us'),
     path('ltmedia', media, name='ltmedia'),
     path('about-conference', aboutConference, name='about-conference'),

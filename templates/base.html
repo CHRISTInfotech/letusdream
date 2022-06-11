@@ -48,10 +48,10 @@
                         DREAMS
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <li><a class="dropdown-item" href="#">DREAMS program</a></li>
-                        <li><a class="dropdown-item" href="#">DREAMS band</a></li>
-                        <li><a class="dropdown-item" href="#">DREAMS pro club</a></li>
-                        <li><a class="dropdown-item" href="#">Leadership Network (GYLN)</a></li>
+                        <li><a class="dropdown-item" href="{% url 'dreams' 'program' %}">DREAMS program</a></li>
+                        <li><a class="dropdown-item" href="{% url 'dreams' 'band' %}">DREAMS band</a></li>
+                        <li><a class="dropdown-item" href="{% url 'dreams' 'proclub' %}">DREAMS pro club</a></li>
+                        <li><a class="dropdown-item" href="{% url 'dreams' 'leadershipnetwork' %}">Leadership Network (GYLN)</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
@@ -90,11 +90,17 @@
                         Locations
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <li>
-                            <a class="dropdown-item" href="#">
-                                India
-                            </a>
-                            <ul class="dropdown-menu dropdown-submenu">
+                        <li><a class="dropdown-item" href="#">India</a>
+                            <ul class="submenu dropdown-menu">
+                                <li><a class="dropdown-item" href="{% url 'locations' 'bangalore' %}">Bangalore</a></li>
+                                <li><a class="dropdown-item" href="{% url 'locations' 'changancherry' %}">Changancherry</a></li>
+                                <li><a class="dropdown-item" href="{% url 'locations' 'mannanam' %}">Mannanam</a></li>
+                                <li><a class="dropdown-item" href="{% url 'locations' 'thiruvananthapuram' %}">Thiruvananthapuram</a></li>
+                                <li><a class="dropdown-item" href="{% url 'locations' 'thiruvallam' %}">Thiruvallam</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="dropdown-item" href="#">U.S.A.</a>
+                            <ul class="submenu dropdown-menu">
                                 <li><a class="dropdown-item" href="#">Bangalore</a></li>
                                 <li><a class="dropdown-item" href="#">Changancherry</a></li>
                                 <li><a class="dropdown-item" href="#">Mannanam</a></li>
@@ -102,8 +108,15 @@
                                 <li><a class="dropdown-item" href="#">Thiruvallam</a></li>
                             </ul>
                         </li>
-                        <li><a class="dropdown-item" href="#">U.S.A.</a></li>
-                        <li><a class="dropdown-item" href="#">Germany</a></li>
+                        <li><a class="dropdown-item" href="#">Germany</a>
+                            <ul class="submenu dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Bangalore</a></li>
+                                <li><a class="dropdown-item" href="#">Changancherry</a></li>
+                                <li><a class="dropdown-item" href="#">Mannanam</a></li>
+                                <li><a class="dropdown-item" href="#">Thiruvananthapuram</a></li>
+                                <li><a class="dropdown-item" href="#">Thiruvallam</a></li>
+                            </ul>
+                        </li>
                     </ul>
                 </li>
             </ul>
