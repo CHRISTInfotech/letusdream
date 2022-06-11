@@ -1,10 +1,65 @@
-{% extends 'base.html' %}
-{% load static %}
+<!DOCTYPE html>
+<html lang = "eng">
+<head>
+    <meta charset="UTF-8">
+    <style>
+    .button {
+      display: inline-block;
+      border-radius: 100px;
+      background-color: MediumSeaGreen;
+      border: none;
+      color: #FFFFFF;
+      text-align: center;
+      font-size: 20px;
+      padding: 14px 28px;
+      width: 200px;
+      transition: all 0.5s;
+      cursor: pointer;
+      margin: 5px;
+    }
 
-{% block title %}
+    .button span {
+      cursor: pointer;
+      display: inline-block;
+      position: relative;
+      transition: 0.5s;
+    }
 
-{% endblock %}
+    .button span:after {
+      content: '\00bb';
+      position: absolute;
+      opacity: 0;
+      top: 0;
+      right: -20px;
+      transition: 0.5s;
+    }
 
-{% block content %}
-    
-{% endblock %}
+    .button:hover span {
+      padding-right: 25px;
+    }
+
+    .button:hover span:after {
+      opacity: 1;
+      right: 0;
+    }
+    </style>
+    <body>
+        <button class="button" style="vertical-align:middle"><span>Join Us</span></button>
+        <img src="C:\Users\HP\Desktop\Dreams-programme-wheel.png" width="300" height="300">
+        <button class="button" style="vertical-align:middle"><span>Our Locations</span></button>
+        </body>
+        <div class="et_pb_text_inner">
+            <h1 style="text-align: center;">
+                About <strong>DREAMS </strong>Program</h1>
+            <p style="text-align: justify;">
+                <span>The <span style="color: #00ccff;">DREAMS Program</span>
+                is a three-year curriculum based community mentoring project for schools and colleges. It started </span><span>as a motivational music band at UC College, Aluva, India in 1998 and in 2003 at Dharmarama College, Bangalore. The program later evolved as a summer camp for the high school students of Changanacherry, Kerala. In 2012 it established itself as a one-year program with a few follow up sessions in Monroe, Louisiana, USA. In the subsequent years, the program design was developed into a three-year after-school program with nine credit hours (eight days/year) for the middle school underperforming/under-serving teenagers. </span></p>
+            <p style="text-align: justify;"></div>
+
+                  <div class="et_pb_text_inner"><p style="text-align: justify;"><span>The project was researched longitudinally at the University of Louisiana, Monroe, USA, on its impact on the middle school participants.</span></p>
+    <p style="text-align: justify;"><span>The focus on the holistic development of young adults is achieved through an active engagement between the youth, the community, and the local community volunteers. Apart from the focus on promoting individual strengths and psycho-social skills, the program also focuses on bringing the community back to schools and colleges.</span></p></div>
+                </div>
+                </div>
+</head>
+</html>
+
