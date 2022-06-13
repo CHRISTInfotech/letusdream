@@ -6,5 +6,55 @@
 {% endblock %}
 
 {% block content %}
-    
+    <div class="container-fluid">
+        <div class="container-lg shadow">
+            <img src="{% static 'locations/bangalore/Banglore-Level-3 (1).jpg' %}" width="100%">
+        </div>
+        <div class="container shadow">
+            <div class="row mb-5">
+                <div class="col mt-5">
+                    <button type="button" class="btn btn-primary"
+                            style="background-color: #2b87da; border-radius: 20px; border-color: white">Register and get
+                        involve
+                    </button>
+                </div>
+                <div class="col mt-5">
+                    <img src="{% static 'locations/bangalore/BANGLORE (1).png' %}" width="330px">
+
+                </div>
+                <div class="col mt-5">
+                    <button type="button" class="btn btn-primary"
+                            style="background-color: #2b87da; border-radius: 20px; border-color: white">Our Locations
+                    </button>
+                </div>
+            </div>
+            <div class="col">
+                <ul class="nav nav-tabs" id="tabList">
+                    <li class="nav-item">
+                        <button class="nav-link active" id="dreamsProgram-tab" data-bs-toggle="tab"
+                                data-bs-target="#dreamsProgram"
+                                type="button" role="tab" aria-controls="dreamsProgram" aria-selected="true">DREAMS
+                            Program
+                        </button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link" id="dreamsBand-tab" data-bs-toggle="tab"
+                                data-bs-target="#dreamsBand"
+                                type="button" role="tab" aria-controls="dreamsBand" aria-selected="true">DREAMS Band
+                        </button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link" id="dreamsProclub-tab" data-bs-toggle="tab"
+                                data-bs-target="#dreamsProclub"
+                                type="button" role="tab" aria-controls="dreamsProclub" aria-selected="true">DREAMS Pro Club
+                        </button>
+                    </li>
+                </ul>
+                <div class="tab-content" id="tabContent">
+                    <div class="tab-pane show active" id="programCotent" role="tabpanel"
+                         aria-labelledby="dreamsProgram-tab">Rohan Harchandani</div>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}
