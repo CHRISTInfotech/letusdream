@@ -16,9 +16,10 @@
 </head>
 
 <body>
-<div>
+<div class="container shadow">
     <nav class="navbar navbar-expand-lg navbar-light bg-light container fixed-top">
-        <a class="navbar-brand" href="#"><img src="{% static 'logo/logo.png' %}" class="logo" alt="LET US DREAM"></a>
+        <a class="navbar-brand" href="#"><img src="{% static 'logo/logo.png' %}" class="logo"
+                                              alt="LET US DREAM"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
                 aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -51,7 +52,8 @@
                         <li><a class="dropdown-item" href="{% url 'dreams' 'program' %}">DREAMS program</a></li>
                         <li><a class="dropdown-item" href="{% url 'dreams' 'band' %}">DREAMS band</a></li>
                         <li><a class="dropdown-item" href="{% url 'dreams' 'proclub' %}">DREAMS pro club</a></li>
-                        <li><a class="dropdown-item" href="{% url 'dreams' 'leadershipnetwork' %}">Leadership Network (GYLN)</a></li>
+                        <li><a class="dropdown-item" href="{% url 'dreams' 'leadershipnetwork' %}">Leadership
+                            Network (GYLN)</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
@@ -62,7 +64,8 @@
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <li><a class="dropdown-item" href="{% url 'about-conference' %}">About conference</a></li>
                         <li><a class="dropdown-item" href="{% url 'annual-conference' %}">Annual conference</a></li>
-                        <li><a class="dropdown-item" href="{% url 'trriennial-conference' %}">Triennial conference</a></li>
+                        <li><a class="dropdown-item" href="{% url 'trriennial-conference' %}">Triennial
+                            conference</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
@@ -92,18 +95,26 @@
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <li><a class="dropdown-item" href="#">India</a>
                             <ul class="submenu dropdown-menu">
-                                <li><a class="dropdown-item" href="{% url 'locations' 'bangalore' %}">Bangalore</a></li>
-                                <li><a class="dropdown-item" href="{% url 'locations' 'changancherry' %}">Changancherry</a></li>
-                                <li><a class="dropdown-item" href="{% url 'locations' 'mannanam' %}">Mannanam</a></li>
-                                <li><a class="dropdown-item" href="{% url 'locations' 'thiruvananthapuram' %}">Thiruvananthapuram</a></li>
-                                <li><a class="dropdown-item" href="{% url 'locations' 'thiruvallam' %}">Thiruvallam</a></li>
+                                <li><a class="dropdown-item" href="{% url 'locations' 'bangalore' %}">Bangalore</a>
+                                </li>
+                                <li><a class="dropdown-item"
+                                       href="{% url 'locations' 'changancherry' %}">Changancherry</a>
+                                </li>
+                                <li><a class="dropdown-item" href="{% url 'locations' 'mannanam' %}">Mannanam</a>
+                                </li>
+                                <li><a class="dropdown-item" href="{% url 'locations' 'thiruvananthapuram' %}">Thiruvananthapuram</a>
+                                </li>
+                                <li><a class="dropdown-item"
+                                       href="{% url 'locations' 'thiruvallam' %}">Thiruvallam</a></li>
                             </ul>
                         </li>
                         <li><a class="dropdown-item" href="#">U.S.A.</a>
                             <ul class="submenu dropdown-menu">
-                                <li><a class="dropdown-item" href="{% url 'locations' 'bastrope' %}">Bastrope</a></li>
+                                <li><a class="dropdown-item" href="{% url 'locations' 'bastrope' %}">Bastrope</a>
+                                </li>
                                 <li><a class="dropdown-item" href="{% url 'locations' 'dalias' %}">Dalias</a></li>
-                                <li><a class="dropdown-item" href="{% url 'locations' 'lagrande' %}">LaGrande</a></li>
+                                <li><a class="dropdown-item" href="{% url 'locations' 'lagrande' %}">LaGrande</a>
+                                </li>
                                 <li><a class="dropdown-item" href="{% url 'locations' 'mcallen' %}">McAllen</a></li>
                                 <li><a class="dropdown-item" href="{% url 'locations' 'monroe' %}">Monroe</a></li>
                             </ul>
@@ -119,7 +130,6 @@
         </div>
     </nav>
 </div>
-
 {% block content %}
 {% endblock content %}
 
