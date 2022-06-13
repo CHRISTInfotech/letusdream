@@ -16,9 +16,9 @@
 </head>
 
 <body>
-<div class="container shadow">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light container fixed-top">
-        <a class="navbar-brand" href="#"><img src="{% static 'logo/logo.png' %}" class="logo"
+<div class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <nav class="container">
+        <a class="navbar-brand" href="{% url 'main' %}"><img src="{% static 'logo/logo.png' %}" class="logo"
                                               alt="LET US DREAM"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
                 aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -130,11 +130,9 @@
         </div>
     </nav>
 </div>
+
 {% block content %}
 {% endblock content %}
-
-</body>
-
 
 <footer class="et-l et-l--footer">
     <div class="p-3 mb-2 bg-dark text-white-50">
@@ -147,4 +145,5 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
+</body>
 </html>
