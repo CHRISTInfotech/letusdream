@@ -6,6 +6,7 @@
 {% endblock %}
 
 {% block content %}
+<<<<<<< HEAD
 
     <div class="container-fluid">
         <div class="container-lg ">
@@ -67,5 +68,105 @@
             </div>
         </div>
     </div>
+=======
+    <style>
+        .center {
+            text-align: center;
+        }
 
-{% endblock content %}
+        .img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 40%;
+        }
+
+        .button {
+            display: inline-block;
+            border-radius: 100px;
+            background-color: MediumSeaGreen;
+            border: none;
+            color: #FFFFFF;
+            text-align: center;
+            font-size: 20px;
+            padding: 14px 28px;
+            width: 200px;
+            transition: all 0.5s;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+        .button span {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+        }
+
+        .button span:after {
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
+        }
+
+        .button:hover span {
+            padding-right: 25px;
+        }
+
+        .button:hover span:after {
+            opacity: 1;
+            right: 0;
+        }
+
+        .right {
+            float: right;
+            width: 300px;
+            padding: 10px;
+        }
+
+        .left {
+            position: absolute;
+            left: 50px;
+            width: 500px;
+            padding: 10px;
+        }
+    </style>
+<<<<<<< HEAD
+
+    <img src="C:\Users\HP\Desktop\dreams-programe-white.jpg">
+=======
+    <body>
+        <img src="templates/dreams/ltstatic/dreams-programe-white.jpg">
+
+        <div class="left"><button class="button" style="vertical-align:middle"><span>Join Us</span></button></div>
+        <div class="img"><img src="templates/dreams/ltstatic/Dreams-programme-wheel.png" width="300" height="300"></div>
+>>>>>>> 6e1700fb884399e9a036b6e21e9051f351944967
+
+    <div class="left">
+        <button class="button" style="vertical-align:middle"><span>Join Us</span></button>
+    </div>
+    <div class="img"><img src="C:\Users\HP\Desktop\Dreams-programme-wheel.png" width="300" height="300"></div>
+
+    <div class="right">
+        <button class="button" style="vertical-align:middle"><span>Our Locations</span></button>
+    </div>
+    <div class="left">
+        <h1 style="text-align: center;">
+            About <strong>DREAMS </strong>Program</h1>
+        <p style="text-align: justify;">
+                <span>The <span style="color: #00ccff;">DREAMS Program</span>
+                is a three-year curriculum based community mentoring project for schools and colleges. It started </span><span>as a motivational music band at UC College, Aluva, India in 1998 and in 2003 at Dharmarama College, Bangalore. The program later evolved as a summer camp for the high school students of Changanacherry, Kerala. In 2012 it established itself as a one-year program with a few follow up sessions in Monroe, Louisiana, USA. In the subsequent years, the program design was developed into a three-year after-school program with nine credit hours (eight days/year) for the middle school underperforming/under-serving teenagers. </span>
+        </p>
+        <p style="text-align: justify;"></div>
+    <div class="right">
+        <p style="text-align: justify;"><span>The project was researched longitudinally at the University of Louisiana, Monroe, USA, on its impact on the middle school participants.</span>
+        </p>
+        <p style="text-align: justify;"><span>The focus on the holistic development of young adults is achieved through an active engagement between the youth, the community, and the local community volunteers. Apart from the focus on promoting individual strengths and psycho-social skills, the program also focuses on bringing the community back to schools and colleges.</span>
+        </p></div>
+
+
+
+{% endblock %}

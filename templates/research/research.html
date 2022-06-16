@@ -1,10 +1,109 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'base.html' %}
+{% load static %}
 
-</body>
-</html>
+{% block title %}
+
+{% endblock %}
+
+{% block content %}
+    <style>
+    .button {
+                display: inline-block;
+                border-radius: 100px;
+                background-color: MediumSeaGreen;
+                border-style: solid;
+                border-color: white;
+                color: #FFFFFF;
+                text-align: center;
+                font-size: 20px;
+                padding: 14px 28px;
+                width: 200px;
+                transition: all 0.5s;
+                cursor: pointer;
+                margin: 5px;
+                background-image: linear-gradient(rgba(0, 128, 0, 0.79),rgba(0, 0, 255, 0.594));
+            }
+
+            .button span {
+                cursor: pointer;
+                display: inline-block;
+                position: relative;
+                transition: 0.5s;
+            }
+
+            .button span:after {
+                content: '\00bb';
+                position: absolute;
+                opacity: 0;
+                top: 0;
+                right: -20px;
+                transition: 0.5s;
+            }
+
+            .button:hover span {
+                padding-right: 25px;
+            }
+
+            .button:hover span:after {
+                opacity: 1;
+                right: 0;
+            }
+    </style>
+    <div class = "container">
+    <img src="{% static 'card/DREAMS-Pro-Club.jpeg' %}" width="100%">
+    </div>
+<div class = "container">
+<div class = "row">
+    <div class = "col-6 ">
+
+Dreams Research Areas
+    <p>
+                DREAMS Intervention Program <br>
+                Community Conferences<br>
+                Professional Club <br>
+                Music band<br>
+                Global Youth Leadership training<br>
+            </p>
+    </div>
+
+    <div class = "col-6">
+<img src = "{% static 'research/Dreams-RESEARCH.png' %}" width="221.94" height="223.16">
+        <div>
+            <button type="button" class = "button"> Join here </button>
+        </div>
+
+    </div>
+</div>
+</div>
+
+
+<div class=" container">
+<div class = "row">
+    <div style="">
+        Research
+    </div>
+    <div>
+        <p>
+          The ‘Let Us Dream’ research team is committed to the scientific evaluation of programs held and their impact
+            on the participants as well as the audience.
+            The multidisciplinary team undertakes high-quality research that contributes to the overall improvement and efficacy of the ‘Let us Dream’ program.
+            This hardworking group rigorously looks into all possible aspects including performing cost/effort-benefit analyses, impact on its participants,
+            the teams in charge of mentoring and leadership, the scope for community improvement etc.
+            Based on this, the team provides suggestions to help improve the program designs and its implementation.
+        </p>
+    </div>
+</div>
+</div>
+
+    <div class="container">
+    <div class="row">
+        <p>
+            The research team invites research enthusiasts and scholars across the globe interested in collaborating on any of the following Research domains
+        </p>
+    </div>
+    </div>
+
+    <div class="container">
+    <img src = "{% static 'research/default/default.jpg' %}">
+    </div>
+{% endblock %}
