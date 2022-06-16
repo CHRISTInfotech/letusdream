@@ -108,34 +108,35 @@
                         </div>
                     </div>
                 </div>
-                <div class="container-fluid shadow">
-                    <div class="row mt-5 mb-5">
-                        <h1 style="text-align: center;color: #3f3f3f">OUR IMPACT</h1>
+                <div class="container-fluid shadow mt-5"
+                     style="background-image: url('{% static 'background/bg.png' %}')">
+                    <div class="row">
+                        <div class="text-center fw-bolder mt-5 fs-1">OUR IMPACT</div>
                     </div>
                     <div class="row mt-auto mb-5 center-block">
-                        <div class="col">
-                            <div class="row-cols-lg-6">
-                                Block 1
-                            </div>
-                            <div class="row">
-                                Block 2
-                            </div>
+                        <div class="col text-center p-3">
+                            Block 1
                         </div>
-                        <div class="col">
-                            <div class="row">
-                                Block 3
-                            </div>
-                            <div class="row">
-                                Block 4
-                            </div>
+                        <div class="col text-center p-3">
+                            Block 2
+                        </div>
+                    </div>
+                     <div class="row mt-auto mb-5
+                     center-block">
+                        <div class="col text-center p-3">
+                            Block 3
+                        </div>
+                        <div class="col text-center p-3">
+                            Block 4
                         </div>
                     </div>
                 </div>
-                <div class="view" style="background-image: {% static 'background/bg.png' %}">
-                    Rohan Harchandani
-                </div>
+            </div>
+            <div class="view" style="background-image: {% static 'background/bg.png' %}">
+                Rohan Harchandani
             </div>
         </div>
+    </div>
     </div>
 
 {% endblock content %}
