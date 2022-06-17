@@ -48,15 +48,18 @@
                 opacity: 1;
                 right: 0;
             }
-            .bg{
-                background-repeat: no-repeat;
-                background-image: inear-gradient(180deg,rgba(12,113,195,0.15) 0%,rgba(12,113,195,0.15) 100%);
-                background-size: 774px 365px;
-            }
             .img{
+                size: 510px 302px;
+                aspect-ratio: 255/151;
+            }
+            .bg{
+                background-image: linear-gradient(180deg,rgba(12,113,195,0.15) 0%,rgba(12,113,195,0.15) 100%),
+                url({% static 'Research/bg.png' %});
+                border-style:;
                 padding: 40px 0px;
-                width: 510px;
-                height: 310px;
+                width: 100%;
+                background-repeat: no-repeat;
+                background-size: 100%;
             }
 
     </style>
@@ -117,28 +120,26 @@ Dreams Research Areas
     </div>
 
     <div class="container">
-    <img src = "{% static 'research/default/default.jpg' %}">
+        <img src = "{% static 'Research/download (2).jpg' %}" width = "1080px" height="540px">
     </div>
 
     <div class = "container-fluid bg">
     <div class = "row">
-        <img src="{% static 'Research/bg.png' %}" width="100%">
-        <div class = "col">
+        <div class = "col-6">
             <p>
-              DREAMS Intervention Program
+                <strong> DREAMS Intervention  </strong>
             </p>
-            <p>
+            <p style="...">
                 The research team aims to understand how the program changes a student’s perception of himself, his social skills, and his leadership skills.
                 It analyses how the program helps school participants, college students (peer mentors) and members of the senior leadership team become leaders in their personal lives, community and the world at large.
                 The team explores how the dream intervention program changes an individual’s life and improve his/her ability to incorporate a brighter and positive outlook concerning being contented and happy.
                 Assesses how the program brings a change in the community by providing a common platform where three groups- community organizations/businesses, Universities/colleges and Schools collaborate and contribute towards creating an impactful association.
             </p>
         </div>
-        <div class="col">
+        <div class="col-6">
             <div class="img">
-                <img src="{% static 'Research/LUD-BG-1.jpg' %}" width="100%">
+                <img src="{% static 'Research/LUD-BG-1.jpg' %}" alt="Image">
             </div>
-
         </div>
     </div>
     </div>
