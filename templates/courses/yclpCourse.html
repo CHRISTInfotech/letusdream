@@ -2,151 +2,166 @@
 {% load static %}
 
 {% block title %}
+    YCLP
 
-
-{% endblock %}
+{% endblock title %}
 
 {% block content %}
-        <title>YCLP</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-        <style>
-            .bg {
-                background-image: url('https://letusdream.org/wp-content/uploads/2020/06/bg.png');
-                background-repeat: no-repeat;
-                background-attachment: fixed;
-                background-size: 100% 100%;
-            }
-            .button {
-                display: inline-block;
-                border-radius: 100px;
-                background-color: MediumSeaGreen;
-                border: none;
-                color: #FFFFFF;
-                text-align: center;
-                font-size: 20px;
-                padding: 14px 28px;
-                width: 300px;
-                transition: all 0.5s;
-                cursor: pointer;
-                margin: 5px;
-                background-image: linear-gradient(rgba(0, 128, 0, 0.79),rgba(0, 0, 255, 0.594));
-            }
+    <style>
+        .bg {
+            background-image: url('https://letusdream.org/wp-content/uploads/2020/06/bg.png');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
 
-            .button span {
-                cursor: pointer;
-                display: inline-block;
-                position: relative;
-                transition: 0.5s;
-            }
+        .button {
+            display: inline-block;
+            border-radius: 100px;
+            background-color: MediumSeaGreen;
+            border: none;
+            color: #FFFFFF;
+            text-align: center;
+            font-size: 20px;
+            padding: 14px 28px;
+            width: 300px;
+            transition: all 0.5s;
+            cursor: pointer;
+            margin: 5px;
+            background-image: linear-gradient(rgba(0, 128, 0, 0.79), rgba(0, 0, 255, 0.594));
+        }
 
-            .button span:after {
-                content: '\00bb';
-                position: absolute;
-                opacity: 0;
-                top: 0;
-                right: -20px;
-                transition: 0.5s;
-            }
+        .button span {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+        }
 
-            .button:hover span {
-                padding-right: 25px;
-            }
+        .button span:after {
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
+        }
 
-            .button:hover span:after {
-                opacity: 1;
-                right: 0;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="container-fluid">
-            <img src="http://letusdream.org/wp-content/uploads/2020/07/letusdream-courses-banner.jpg" alt="banner" style="width:100%">
-        </div>
-        <div class="conatainer-fluid my-5 d-flex justify-content-center">
-            <button type="button" class="button"><span>Download brochure</span></button>
-        </div>
-        <div class="container-fluid bg my-5">
-            <h2 style="text-align:center" class="my-5">
-                <strong>THE YOUNG COMMUNITY LEADERSHIP PROGRAM (YCLP)</strong>
-            </h2>
-            <h2 style="text-align:center; color: blue;">
-                <strong>COURSE PLAN 2020 – 22 </strong>
-            </h2>
-            <div class="container">
-                <div class="row">
-                    <div class="col">
-                        <h2>
-                            <strong>Course Description</strong>
-                        </h2>
-                        <p>
-                            The Young Community Leadership Program (YCLP) is to prepare young aspiring leaders with the skills and experience needed to generate transformative social change. The interdisciplinary program emphasizes highly applied coursework, relationship building, and hands-on practical experiences which are essential components for developing strong leadership, mentoring and coaching skills. The program involves enhancing the community leadership and mentoring skills among students of undergraduate programs through planning and organizing peer mentoring programs in identified schools.
-                        </p>
-                        <p>
-                            The students will be trained to be sensitive to the psycho-social and leadership needs of the teenage students in schools and help them develop those skills through diverse interventions such as training, mentoring, games, music, theater, activities, etc. for three years with a set curriculum. In addition, students will be introduced a community intervention model (DREAMS) and they will be trained how to initiate and implement an action plan to make some substantial and sustainable positive difference in the life of those lower performing teenagers.
-                        </p>
-                    </div>
-                    <div class="col align-self-center">
-                        <img src="https://letusdream.org/wp-content/uploads/2020/09/courses.jpg" class="rounded img-fluid">
-                    </div>
-                </div>
-            </div>
-        </div>
+        .button:hover span {
+            padding-right: 25px;
+        }
+
+        .button:hover span:after {
+            opacity: 1;
+            right: 0;
+        }
+    </style>
+
+    <img src="http://letusdream.org/wp-content/uploads/2020/07/letusdream-courses-banner.jpg" alt="banner"
+         style="width:100%">
+
+    <div class="conatainer-fluid my-5 d-flex justify-content-center">
+        <button type="button" class="button"><span>Download brochure</span></button>
+    </div>
+    <div class="container-fluid bg my-5">
+        <h2 style="text-align:center" class="my-5">
+            <strong>THE YOUNG COMMUNITY LEADERSHIP PROGRAM (YCLP)</strong>
+        </h2>
+        <h2 style="text-align:center; color: blue;">
+            <strong>COURSE PLAN 2020 – 22 </strong>
+        </h2>
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <img src="https://letusdream.org/wp-content/uploads/2020/09/course-details.jpg" class="img-fluid">
-                </div>
-                <div class="col align-self-center">
-                    <h2>Course Objectives</h2>
-                    <p>
-                        To develop leadership, mentoring, organizational, entrepreneurial skills through community based initiatives
-                        To develop psycho-social and leadership skills development and growth assessment<br>
-                        To respond positively to alleviate social issues through community collaboration
-                    </p>
-                    <p>
-                        To utilize skills and talents in developing lower performing students’ psycho-social and leadership skills
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="container-fluid bg my-5">
-            <div class="container">
-                <div class="row">
-                    <div class="col align-self-center">
-                        <h2>
-                            Course Learning Outcomes
-                        </h2>
-                        <p>
-                            Mentoring and leadership skills that help to make positive changes in school students and in the community
-                            <br>Organizing and managing skills in community development initiatives
-                            <br>Design of community intervention programs and evaluate impact of the interventions
-                        </p>
-                        <p>
-                            Apply the DREAMS Model for community development initiatives
-                        </p>
-                    </div>
-                    <div class="col align-self-center">
-                        <img src="https://letusdream.org/wp-content/uploads/2020/09/course-structure.jpg" class="rounded img-fluid">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container my-5">
-            <div class="row">
-                <div class="col align-self-center">
-                    <img src="https://letusdream.org/wp-content/uploads/2020/09/Expected-outcome3.jpg" class="rounded" style="width:100%;height:100%">
-                </div>
-                <div class="col align-self-center">
-                    <h2 class="text-center">
-                        Certification
+                    <h2>
+                        <strong>Course Description</strong>
                     </h2>
                     <p>
-                        The students from CHRIST (Deemed to be University) shall receive the certification of the Young Community Leadership Program (YCLP) along with their final graduation certificate. Students from outside will be awarded a separate certificate upon the successful completion of the program from LET US DREAM.
+                        The Young Community Leadership Program (YCLP) is to prepare young aspiring leaders with the
+                        skills and experience needed to generate transformative social change. The interdisciplinary
+                        program emphasizes highly applied coursework, relationship building, and hands-on practical
+                        experiences which are essential components for developing strong leadership, mentoring and
+                        coaching skills. The program involves enhancing the community leadership and mentoring skills
+                        among students of undergraduate programs through planning and organizing peer mentoring programs
+                        in identified schools.
                     </p>
+                    <p>
+                        The students will be trained to be sensitive to the psycho-social and leadership needs of the
+                        teenage students in schools and help them develop those skills through diverse interventions
+                        such as training, mentoring, games, music, theater, activities, etc. for three years with a set
+                        curriculum. In addition, students will be introduced a community intervention model (DREAMS) and
+                        they will be trained how to initiate and implement an action plan to make some substantial and
+                        sustainable positive difference in the life of those lower performing teenagers.
+                    </p>
+                </div>
+                <div class="col align-self-center">
+                    <img src="https://letusdream.org/wp-content/uploads/2020/09/courses.jpg" class="rounded img-fluid">
                 </div>
             </div>
         </div>
-    </body>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <img src="https://letusdream.org/wp-content/uploads/2020/09/course-details.jpg" class="img-fluid">
+            </div>
+            <div class="col align-self-center">
+                <h2>Course Objectives</h2>
+                <p>
+                    To develop leadership, mentoring, organizational, entrepreneurial skills through community based
+                    initiatives
+                    To develop psycho-social and leadership skills development and growth assessment<br>
+                    To respond positively to alleviate social issues through community collaboration
+                </p>
+                <p>
+                    To utilize skills and talents in developing lower performing students’ psycho-social and leadership
+                    skills
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid bg my-5">
+        <div class="container">
+            <div class="row">
+                <div class="col align-self-center">
+                    <h2>
+                        Course Learning Outcomes
+                    </h2>
+                    <p>
+                        Mentoring and leadership skills that help to make positive changes in school students and in the
+                        community
+                        <br>Organizing and managing skills in community development initiatives
+                        <br>Design of community intervention programs and evaluate impact of the interventions
+                    </p>
+                    <p>
+                        Apply the DREAMS Model for community development initiatives
+                    </p>
+                </div>
+                <div class="col align-self-center">
+                    <img src="https://letusdream.org/wp-content/uploads/2020/09/course-structure.jpg"
+                         class="rounded img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container my-5">
+        <div class="row">
+            <div class="col align-self-center">
+                <img src="https://letusdream.org/wp-content/uploads/2020/09/Expected-outcome3.jpg" class="rounded"
+                     style="width:100%;height:100%">
+            </div>
+            <div class="col align-self-center">
+                <h2 class="text-center">
+                    Certification
+                </h2>
+                <p>
+                    The students from CHRIST (Deemed to be University) shall receive the certification of the Young
+                    Community Leadership Program (YCLP) along with their final graduation certificate. Students from
+                    outside will be awarded a separate certificate upon the successful completion of the program from
+                    LET US DREAM.
+                </p>
+            </div>
+        </div>
+    </div>
 
 {% endblock %}
