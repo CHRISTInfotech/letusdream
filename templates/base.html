@@ -18,8 +18,9 @@
 <body>
 <div class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
     <nav class="container">
-        <a class="navbar-brand" href="{% url 'main' %}"><img src="{% static 'logo/logo.png' %}" class="logo"
-                                              alt="LET US DREAM"></a>
+        <a class="navbar-brand" href="{% url 'main' %}">
+            <img src="{% static 'logo/logo.png' %}" class="logo" alt="LET US DREAM">
+        </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
                 aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -131,8 +132,10 @@
     </nav>
 </div>
 
+<div class="mt-5">
 {% block content %}
 {% endblock content %}
+</div>
 
 <footer class="et-l et-l--footer">
     <div class="p-3 mb-2 bg-dark text-white-50">
