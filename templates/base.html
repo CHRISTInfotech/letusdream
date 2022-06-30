@@ -14,9 +14,15 @@
 
     <title>LET US DREAM | {% block title %}{% endblock title %}</title>
 </head>
-
+<style>
+    .navbar{
+        border-bottom: solid #2b87da;
+        text-align: center;
+        font-weight: bolder;
+    }
+</style>
 <body>
-<div class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+<div class="navbar navbar-expand-lg navbar-light bg-light shadow" style="">
     <nav class="container">
         <a class="navbar-brand" href="{% url 'main' %}">
             <img src="{% static 'logo/logo.png' %}" class="logo" alt="LET US DREAM">

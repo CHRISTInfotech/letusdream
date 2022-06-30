@@ -6,137 +6,140 @@
 {% endblock %}
 
 {% block content %}
+    <style>
+        .card-body{
+            text-align: left;
+        }
+    </style>
     <div style="font-family: Arial, sans-serif">
-        <div>
-            <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img class="d-block w-100" src="{% static '/logo/logo.png' %}" alt="First slide">
-                    </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src="{% static '/logo/logo.png' %}" alt="Second slide">
-                    </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src="{% static '/logo/logo.png' %}" alt="Third slide">
-                    </div>
+        <div id="carouselExampleSlidesOnly shadow" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="d-block w-100" src="{% static '/logo/logo.png' %}" alt="First slide">
                 </div>
-                <div class="d-flex justify-content-center shadow p-3" style="background-color: #2b87da">
-                    <div class="d-flex bd-highlight">
-                        <div class="p-2 flex-grow-1 bd-highlight" style="background-color: #9EEB47">
-                            <p style="color:black;font-size:20px;font-weight: bolder">Register for 2021 Annual
-                                conferences</p>
-                        </div>
-                        <div class="p-2 bd-highlight">
-                            <button type="button" class="btn btn-primary"
-                                    style="background-color: #2b87da; border-radius: 20px; border-color: white">Register
-                            </button>
-                        </div>
-                    </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="{% static '/logo/logo.png' %}" alt="Second slide">
                 </div>
-                <div class="container-fluid shadow" style="background-color: #b9d3af3d">
-                    <div class="row mt-auto mb-5">
-                        <h1 style="text-align: center;color: #3f3f3f">OUR PROGRAMS</h1>
-                    </div>
-                    <div class="row row-cols-1 row-cols-md-4 g-4" style="text-align: center">
-                        <div class="col">
-                            <div class="card shadow" style="border-radius: 20px">
-                                <img src="{% static 'card/DREAMS-Program.jpeg' %}" class="card-img-top"
-                                     alt="DREAMS-Program">
-                                <div class="card-body">
-                                    <h5 class="card-title" style="color: #755400">DREAMS Program</h5>
-                                    <p class="card-text" style="color: #8585bd">The DREAMS Program is a three-year
-                                        curriculum-based community
-                                        mentoring project for schools and colleges, each year focusing on personal
-                                        development, interpersonal skills and leadership skills. The program aims to</p>
-                                </div>
-                            </div>
-                            <button type="button" class="btn-primary mt-4"
-                                    style="background-color: #2bff8e;border-radius: 20px; border-color: white">Join Us
-                            </button>
-
-                        </div>
-                        <div class="col">
-                            <div class="card shadow" style="border-radius: 20px">
-                                <img src="{% static 'card/letusdream.com-dreams-band22.png' %}" class="card-img-top"
-                                     alt="DREAMS Band">
-                                <div class="card-body">
-                                    <h5 class="card-title" style="color: #755400">DREAMS Band</h5>
-                                    <p class="card-text" style="color: #8585bd">The DREAMS Band strives towards making a
-                                        positive difference in
-                                        the community by utilizing their musical skills. DREAMS Band is not only an
-                                        opportunity to sing and motivate the audience but also uses music as a platform
-                                        to empower communities </p>
-                                </div>
-                            </div>
-                            <button type="button" class="btn-primary mt-4"
-                                    style="background-color: #2bff8e;border-radius: 20px; border-color: white">Join Us
-                            </button>
-                        </div>
-                        <div class="col">
-                            <div class="card shadow" style="border-radius: 20px">
-                                <img src="{% static 'card/DREAMS-Pro-Club.jpeg' %}" class="card-img-top"
-                                     alt="DREAMS Pro Club">
-                                <div class="card-body">
-                                    <h5 class="card-title" style="color: #755400">DREAMS Pro Club</h5>
-                                    <p class="card-text" style="color: #8585bd">DREAMS Pro Club is a support group for
-                                        the personal and
-                                        professional development of young professionals. Small groups of 10-12 working
-                                        professionals meet once every month to discuss and implement</p>
-                                </div>
-                            </div>
-                            <button type="button" class="btn-primary mt-4"
-                                    style="background-color: #2bff8e;border-radius: 20px; border-color: white">Join Us
-                            </button>
-
-                        </div>
-                        <div class="col">
-                            <div class="card shadow" style="border-radius: 20px; ">
-                                <img src="{% static 'card/Let-Us-Dream-Conference.jpeg' %}" class="card-img-top"
-                                     alt="Community Conferences">
-                                <div class="card-body">
-                                    <h5 class="card-title" style="color: #755400">Community Conferences</h5>
-                                    <p class="card-text" style="color: #8585bd">Started in 2017, Let Us Dream Conference
-                                        provides a platform
-                                        for researchers, practitioners and volunteers to discuss various possibilities
-                                        of promoting community volunteerism among students, sharing their experiences
-                                        and challenges </p>
-                                </div>
-                            </div>
-                            <button type="button" class="btn-primary mt-4 mb-4"
-                                    style="background-color: #2bff8e;border-radius: 20px; border-color: white">Join Us
-                            </button>
-                        </div>
-                    </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="{% static '/logo/logo.png' %}" alt="Third slide">
                 </div>
-                <div class="container-fluid shadow mt-5"
-                     style="background-image: url('{% static 'background/bg.png' %}')">
-                    <div class="row">
-                        <div class="text-center fw-bolder mt-5 fs-1">OUR IMPACT</div>
-                    </div>
-                    <div class="row mt-auto mb-5 center-block">
-                        <div class="col text-center p-3">
-                            Block 1
-                        </div>
-                        <div class="col text-center p-3">
-                            Block 2
-                        </div>
-                    </div>
-                     <div class="row mt-auto mb-5
-                     center-block">
-                        <div class="col text-center p-3">
-                            Block 3
-                        </div>
-                        <div class="col text-center p-3">
-                            Block 4
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="view" style="background-image: {% static 'background/bg.png' %}">
-                Rohan Harchandani
             </div>
         </div>
-    </div>
+        <div class="d-flex justify-content-center shadow p-3"
+             style="background-color: #2b87da;border-radius: 80px ">
+            <div class="d-flex bd-highlight">
+                <div class="p-2 flex-grow-1 bd-highlight">
+                    <p style="color:white;font-size:40px;font-weight: bolder">Register for 2021 Annual
+                        conferences</p>
+                </div>
+                <div class="p-2 bd-highlight">
+                    <button type="button" class="btn btn-primary btn-lg"
+                            style="background-color: #2b87da; border-radius: 20px; border: solid white">Register Now
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid shadow" style="background-color: #b9d3af3d">
+            <div class="row mt-auto mb-5">
+                <h1 class="mt-5" style="text-align: center;color: #3f3f3f;font-weight: bolder">OUR PROGRAMS</h1>
+            </div>
+            <div class="row row-cols-1 row-cols-md-4 g-4" style="text-align: center">
+                <div class="col">
+                    <div class="card shadow" style="border-radius: 20px">
+                        <img src="{% static 'card/DREAMS-Program.jpeg' %}" class="card-img-top p-3"
+                             alt="DREAMS-Program">
+                        <div class="card-body">
+                            <h5 class="card-title" style="color: #755400">DREAMS Program</h5>
+                            <p class="card-text" style="color: #8585bd">The DREAMS Program is a three-year
+                                curriculum-based community
+                                mentoring project for schools and colleges, each year focusing on personal
+                                development, interpersonal skills and leadership skills. The program aims to</p>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-primary mt-3"
+                            style="background-color: #2b87da; border-radius: 20px; border: solid black">Join Us
+                    </button>
+
+                </div>
+                <div class="col">
+                    <div class="card shadow" style="border-radius: 20px">
+                        <img src="{% static 'card/letusdream.com-dreams-band22.png' %}" class="card-img-top p-3"
+                             alt="DREAMS Band">
+                        <div class="card-body">
+                            <h5 class="card-title" style="color: #755400">DREAMS Band</h5>
+                            <p class="card-text" style="color: #8585bd">The DREAMS Band strives towards making a
+                                positive difference in
+                                the community by utilizing their musical skills. DREAMS Band is not only an
+                                opportunity to sing and motivate the audience but also uses music as a platform
+                                to empower communities </p>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-primary mt-3"
+                            style="background-color: #2b87da; border-radius: 20px; border: solid black">Join Us
+                    </button>
+                </div>
+                <div class="col">
+                    <div class="card shadow" style="border-radius: 20px">
+                        <img src="{% static 'card/DREAMS-Pro-Club.jpeg' %}" class="card-img-top p-3"
+                             alt="DREAMS Pro Club">
+                        <div class="card-body">
+                            <h5 class="card-title" style="color: #755400">DREAMS Pro Club</h5>
+                            <p class="card-text" style="color: #8585bd">DREAMS Pro Club is a support group for
+                                the personal and
+                                professional development of young professionals. Small groups of 10-12 working
+                                professionals meet once every month to discuss and implement</p>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-primary mt-3"
+                            style="background-color: #2b87da; border-radius: 20px; border: solid black">Join Us
+                    </button>
+
+                </div>
+                <div class="col">
+                    <div class="card shadow" style="border-radius: 20px; ">
+                        <img src="{% static 'card/Let-Us-Dream-Conference.jpeg' %}" class="card-img-top p-3"
+                             alt="Community Conferences">
+                        <div class="card-body">
+                            <h5 class="card-title" style="color: #755400">Community Conferences</h5>
+                            <p class="card-text" style="color: #8585bd">Started in 2017, Let Us Dream Conference
+                                provides a platform
+                                for researchers, practitioners and volunteers to discuss various possibilities
+                                of promoting community volunteerism among students, sharing their experiences
+                                and challenges </p>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-primary mt-3"
+                            style="background-color: #2b87da; border-radius: 20px; border: solid black">Join Us
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid shadow mt-5"
+             style="background-image: url('{% static 'background/bg.png' %}')">
+            <div class="row">
+                <div class="text-center fw-bolder mt-5 fs-1">OUR IMPACT</div>
+            </div>
+            <div class="row mt-auto mb-5 center-block">
+                <div class="col text-center p-3">
+                    Block 1
+                </div>
+                <div class="col text-center p-3">
+                    Block 2
+                </div>
+            </div>
+            <div class="row mt-auto mb-5
+                     center-block">
+                <div class="col text-center p-3">
+                    Block 3
+                </div>
+                <div class="col text-center p-3">
+                    Block 4
+                </div>
+            </div>
+        </div>
+        <div class="view" style="background-image: {% static 'background/bg.png' %}">
+            Rohan Harchandani
+        </div>
     </div>
 
 {% endblock content %}
