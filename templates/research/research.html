@@ -61,6 +61,22 @@
                 background-repeat: no-repeat;
                 background-size: 100%;
             }
+            .team-img{
+                      width: 160px;
+
+                      border-radius: 80px;
+                      padding: 5px
+            }
+            .col-3{
+                   height: 100%;
+                   text-align: center;
+            }
+            .bg2{
+                background-image: linear-gradient(180deg, #29c4a9 0%, #2b87da 100%);
+                background-size: 100%;
+            }
+
+
 
     </style>
     <div class = "container">
@@ -265,9 +281,103 @@ Dreams Research Areas
             </div>
         </div>
     </div>
+    <div class="container-fluid mb-lg-5 p-3" style="padding: 54px 0px 23px; size: 1126px 1322px">
+        <h1 style = "text-align: center"> Researchers </h1>
+        <div class="container-lg mt-5">
+            <div class = "row">
+                <div class = "col-3" style = "...">
+                    <img  class = 'team-img' src = "{% static 'Research/Dr-carl.jpg' %}">
+                    <h5><span>Dr Carl L. Thameling </span></h5>
+                    <p><span>University of Louisiana at Monroe, USA</span></p>
+                </div>
 
+                <div class = "col-3" style = "...">
+                    <img class = "team-img" src = "{% static 'Research/LUD-Angela-Curl.jpg' %}">
+                    <h5> <span> Dr Angela L. Curl</span> </h5>
+                    <p><span> Miami University, Ohio, USA </span></p>
+                </div>
 
-    <h1 style = "text-align: center"> Researchers </h1>
+                <div class = "col-3" style="...">
+                    <img class = "team-img" src = "{% static 'Research/LUD-Laura.jpg' %}">
+                    <h5><span>Dr Laura R. Bronstein</span></h5>
+                    <p><span>Binghamton University, New York, USA</span></p>
+                    <a href="https://orcid.org/0000-0002-0194-2572">Orcid ID</a>
+                </div>
+                <div class = "col-3" style="...">
+                    <img class = "team-img" src = "{% static 'Research/Vijaya-LUD.jpg' %}">
+                    <h5><span>Dr Vijaya.R</span></h5>
+                    <p><span>CHRIST (Deemed to be University)
+                        Banglore, INDIA</span></p>
+                    <a href="https://orcid.org/0000-0003-3105-192X">Orcid ID</a>
+                </div>
+
+            </div>
+            <div class = "row">
+                <div class = "col-3" style="...">
+                    <img class = "team-img" src = "{% static 'Research/blank-profile-picture-973460_1280.png' %}">
+                    <h5> <span>Dr Tyler E Conzone</span> </h5>
+                </div>
+
+                <div class = "col-3" style = "...">
+                    <img class = "team-img" src = "{% static 'Research/LUD-Sharon.jpg' %}">
+                    <h5><span> Dr Sharon Custer </span></h5>
+                    <p> <span>Miami University, Ohio, USA </span></p>
+                </div>
+
+                <div class = "col-3" style = "...">
+                    <img class = "team-img" src = "{% static 'Research/blank-profile-picture-973460_1280.png' %}">
+                    <h5> <span>Dr Kevin Washington </span></h5>
+                    <p> <span>Grambling State University, Grambling, LA, USA </span></p>
+                </div>
+
+                <div class = "col-3" style = "...">
+                    <img class = "team-img" src = "{% static 'Research/Mayo-Suzanne-Mynette-min.png' %}">
+                    <h5> <span>Dr Suzanne Mayo-Theus</span></h5>
+                    <p> <span>Grambling State University, Grambling, LA, USA</span> </p>
+                </div>
+            </div>
+            <div class = "row">
+                <div class = "col-3" style="...">
+                    <img class = "team-img" src = "{% static 'Research/MatthewsT-photo-min.png' %}">
+                    <h5> <span>Dr Matthews T</span></h5>
+                    <p><span> Grambling State University, Grambling, LA, USA</span> </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class = "container">
+        <div class = "bg2">
+            <h2 style="text-align: center"> <span> Join Our Group </span> </h2>
+            <div class = "container" style="background-size: 1080px 358px;padding-left: 27px;padding-bottom:54px ">
+                <div class  = "row">
+                    <div class = "col-4">
+                        <form action = " ">
+                            <label for = "Name"> Name </label>
+                            <input type = "text" id = "Name" name = "Name">
+                        </form>
+                    </div>
+                    <div class = "col-7">
+                        <form action = " ">
+                            <label for = "Email Address"> Email Address </label>
+                            <input type = "text" id = "Email Address" name = "Email Address">
+                        </form>
+                    </div>
+                </div>
+                <div class = "row">
+                    <div class = "col-8">
+                        <form action = " ">
+                            <label for = "Message"> Message  </label>
+                            <input type = "text" id = "Message" name = "Message">
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
 
 
 {% endblock %}
