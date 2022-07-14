@@ -63,7 +63,6 @@
             }
             .team-img{
                       width: 160px;
-
                       border-radius: 80px;
                       padding: 5px
             }
@@ -75,44 +74,46 @@
                 background-image: linear-gradient(180deg, #29c4a9 0%, #2b87da 100%);
                 background-size: 100%;
             }
+            .box{
+                background-image: linear-gradient(180deg,rgba(249,233,0,0.77) 0%,#d3d006 100%),
+                url("{% static 'card/DREAMS-Pro-Club.jpeg' %}");
+                background-size: 100% 100%;
+                background-position: top;
+                background-repeat: no-repeat;
+
+            }
+
 
 
 
     </style>
-    <div class = "container">
-    <img src="{% static 'card/DREAMS-Pro-Club.jpeg' %}" width="100%">
-    </div>
-<div class = "container">
-<div class = "row">
-    <div class = "col-6 ">
+    <div class = "box">
+        <div class = "container" style= "padding: 38.612px; contain-intrinsic-size: 521.600px 730.950px">
+            <div class = "row">
+                <div class = "col-6">
+                    <h1> <span> Dreams Research Area </span> </h1>
+                    <h5> <p>
+                        DREAMS Intervention Program <br>
+                        Community Conferences<br>
+                        Professional Club <br>
+                        Music band<br>
+                        Global Youth Leadership training<br>
+                    </p>
+                    </h5>
+                </div>
+                <div class = "col-6">
+                    <img src = "{% static 'Research/Dreams-RESEARCH.png' %}" width="221.94" height="223.16">
+                    <button type="button" class = "button"> Join here </button>
 
-Dreams Research Areas
-    <p>
-                DREAMS Intervention Program <br>
-                Community Conferences<br>
-                Professional Club <br>
-                Music band<br>
-                Global Youth Leadership training<br>
-            </p>
-    </div>
-
-    <div class = "col-6">
-        <img src = "{% static 'Research/Dreams-RESEARCH.png' %}" width="221.94" height="223.16">
-
-    </div>
-    <div>
-        <button type="button" class = "button"> Join here </button>
-    </div>
+                </div>
+            </div>
+        </div>
 
     </div>
-</div>
-</div>
-
-
 <div class=" container">
-<div class = "row">
-    <div style="">
-        Research
+        <div class = "row">
+    <div>
+        <h1 style="text-align: left">Research</h1>
     </div>
     <div>
         <p>
@@ -129,14 +130,14 @@ Dreams Research Areas
 
     <div class="container">
     <div class="row">
-        <p>
+        <p style="color: #666666">
             The research team invites research enthusiasts and scholars across the globe interested in collaborating on any of the following Research domains
         </p>
     </div>
     </div>
 
     <div class="container">
-        <img src = "{% static 'Research/download (2).jpg' %}" width = "1080px" height="540px">
+        <img src = "{% static 'Research/download (2).jpg' %}" width="100%" height="auto">
     </div>
 
     <div class = "container-fluid bg">
@@ -154,7 +155,7 @@ Dreams Research Areas
         </div>
         <div class="col-6">
             <div class="img">
-                <img src="{% static 'Research/LUD-BG-1.jpg' %}" alt="Image">
+                <img src="{% static 'Research/LUD-BG-1.jpg' %}" width="80%" height="80%" alt="Image">
             </div>
         </div>
     </div>
@@ -378,6 +379,6 @@ Dreams Research Areas
 
         </div>
     </div>
-
+</div>
 
 {% endblock %}
