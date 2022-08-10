@@ -17,7 +17,7 @@
     <!--Google font-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Rochester&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 
     <!--  Bootstrap CSS --> 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -29,7 +29,7 @@
     
     <style>
         body{
-            font-family: 'Roboto Slab', serif;
+            font-family: 'Montserrat', sans-serif;
         }
         
         img{
@@ -95,7 +95,7 @@
 
         .content h3{
             width: 80%;
-            margin: 20px auto 100px;
+            margin: 20px auto 50px;
             font-weight: 100;
             line-height: 25px;
         }
@@ -104,12 +104,12 @@
             width: 200px;
             padding: 15px 0;
             text-align: center;
-            margin: 0 10px;
+            margin: 0 15px;
             border-radius: 25px ;
             font-weight: bold;
             border: 2px solid #d3f2e9;
             background: #d3f2e9;
-            color: #ffffff;
+            color: #0a7b79;
             transition: background 0.5s;
         }
 
@@ -127,6 +127,51 @@
             border: 2px solid #d3f2e9;
             background: #d3f2e9;
         }
+
+        .container {
+        font-size: 12px;
+        color: #666666;
+        }
+
+        .card-custom {
+        border-radius: 25px;
+        overflow: hidden;
+        min-height: 450px;
+        box-shadow: 0 0 15px rgba(10, 10, 10, 0.3);
+        }
+
+        .card-custom-img {
+        height: 200px;
+        min-height: 200px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        border-color: inherit;
+        }
+
+        /* First border-left-width setting is a fallback */
+        .card-custom-img::after {
+        position: absolute;
+        content: '';
+        
+        top: 161px;
+        left: 0;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-top-width: 40px;
+        border-right-width: 0;
+        border-bottom-width: 0;
+        border-left-width: 545px;
+        border-left-width: calc(575px - 5vw);
+        border-top-color: transparent;
+        border-right-color: transparent;
+        border-bottom-color: transparent;
+        border-left-color: inherit;
+        }
+
+
+            
     </style>
 </head>
 <body onload="slider()">
@@ -136,13 +181,96 @@
         </div>
         <div class="overlay">
             <div class="content">
-                <h1>LET US DREAM</h1>
+                <h1 style="padding-top: 160px;">LET US DREAM</h1>
                 <h3>Empowering Community</h3>
                 <button type="button">REGISTER NOW</button>
                 <button type="button" class="btn-2">JOIN US</button>
             </div>
         </div>
     </div>
+
+    <div class="container">
+        <div class="row pt-5 max-auto">
+          <div class="col-md-6 col-lg-3 pb-3">
+    
+            <!-- Copy the content below until next comment -->
+            <div class="card card-custom bg-white border-white border-0">
+              <div class="card-custom-img" style="background-image: url(https://cdn.dribbble.com/users/1312159/screenshots/5825513/attachments/1255803/lunamik-team-work.png?compress=1&resize=400x300&vertical=top);"></div>
+              
+              <div class="card-body" style="overflow-y: auto">
+                <h4 class="card-title">Card title</h4>
+                <p class="card-text">Card has minimum height set but will expand if more space is needed for card body content. You can use Bootstrap <a href="https://getbootstrap.com/docs/4.0/components/card/#card-decks" target="_blank">card-decks</a> to align multiple cards nicely in a row.</p>
+              </div>
+              <div class="card-footer" style="background: inherit; border-color: inherit;">
+                <button type="button" class="btn-2">Option</button>
+              </div>
+            </div>
+    
+          </div>
+          <div class="col-md-6 col-lg-3 pb-3">
+    
+            <!-- Add a style="height: XYZpx" to div.card to limit the card height and display scrollbar instead -->
+            <div class="card card-custom bg-white border-white border-0" style="height: 450px">
+              <div class="card-custom-img" style="background-image: url(https://i.pinimg.com/originals/8c/22/2c/8c222c3f4bc0a92105d90564f0abac4b.png);"></div>
+            
+              <div class="card-body" style="overflow-y: auto">
+                <h4 class="card-title">Card title</h4>
+                <p class="card-text">You can also set maximum height on and the card will not expand, instead a scrollbar in the card body will appear.</p>
+                <p class="card-text">Some example text to show the scrollbar.</p>
+                <p class="card-text">Lorem ipsum dolor sit amet, te vix omittam fastidii, enim paulo omnes ea has, illud luptatum no qui. Sed ea qualisque urbanitas, purto elit nec te. Possim inermis antiopam ut eum. Eos te zril labore laboramus, quem erant nam in. Ut sed molestie
+                  antiopam. At altera facilisis mel.</p>
+              </div>
+              <div class="card-footer" style="background: inherit; border-color: inherit;">
+                <button type="button" class="btn-2">Option</button>
+              </div>
+            </div>
+    
+          </div>
+          
+          <div class="col-md-6 col-lg-3 pb-3">
+    
+            <!-- Add a style="height: XYZpx" to div.card to limit the card height and display scrollbar instead -->
+            <div class="card card-custom bg-white border-white border-0" style="height: 450px">
+              <div class="card-custom-img" style="background-image: url(https://img.freepik.com/free-vector/orchestra-concept-illustration_114360-3098.jpg?w=2000);"></div>
+              
+              <div class="card-body" style="overflow-y: auto">
+                <h4 class="card-title">Card title</h4>
+                <p class="card-text">You can also set maximum height on and the card will not expand, instead a scrollbar in the card body will appear.</p>
+                <p class="card-text">Some example text to show the scrollbar.</p>
+                <p class="card-text">Lorem ipsum dolor sit amet, te vix omittam fastidii, enim paulo omnes ea has, illud luptatum no qui. Sed ea qualisque urbanitas, purto elit nec te. Possim inermis antiopam ut eum. Eos te zril labore laboramus, quem erant nam in. Ut sed molestie
+                  antiopam. At altera facilisis mel.</p>
+              </div>
+              <div class="card-footer" style="background: inherit; border-color: inherit;">
+                <button type="button" class="btn-2">Option</button>
+              </div>
+            </div>
+    
+          </div>
+
+          <div class="col-md-6 col-lg-3 pb-3">
+    
+            <!-- Add a style="height: XYZpx" to div.card to limit the card height and display scrollbar instead -->
+            <div class="card card-custom bg-white border-white border-0" style="height: 450px">
+              <div class="card-custom-img" style="background-image: url(https://media.istockphoto.com/vectors/group-of-businesspeople-at-the-video-conference-call-vector-flat-vector-id1184657554?k=20&m=1184657554&s=612x612&w=0&h=wEedqPqoHRv8hG2phAIZxWvKJmZYnf16HLVe4TTxUx4=);"></div>
+              
+              <div class="card-body" style="overflow-y: auto">
+                <h4 class="card-title">Card title</h4>
+                <p class="card-text">You can also set maximum height on and the card will not expand, instead a scrollbar in the card body will appear.</p>
+                <p class="card-text">Some example text to show the scrollbar.</p>
+                <p class="card-text">Lorem ipsum dolor sit amet, te vix omittam fastidii, enim paulo omnes ea has, illud luptatum no qui. Sed ea qualisque urbanitas, purto elit nec te. Possim inermis antiopam ut eum. Eos te zril labore laboramus, quem erant nam in. Ut sed molestie
+                  antiopam. At altera facilisis mel.</p>
+              </div>
+              <div class="card-footer" style="background: inherit; border-color: inherit;">
+                <button type="button" class="btn-2">Option</button>
+              </div>
+            </div>
+    
+          </div>
+    
+          </div>
+        </div>
+      </div>
+    
     
     <script>
         var slideImg=document.getElementById("slideImg");
