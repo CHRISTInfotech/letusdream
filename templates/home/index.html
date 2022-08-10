@@ -1,148 +1,168 @@
 {% extends 'base.html' %}
-{% load static %}
+{% load static %} <!-- Load the static folder -->
 
 {% block title %}
 
 {% endblock %}
 
 {% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+
+    <!--Google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Rochester&display=swap" rel="stylesheet">
+
+    <!--  Bootstrap CSS --> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
     <style>
-        .card-body{
-            text-align: left;
+        body{
+            font-family: 'Roboto Slab', serif;
         }
-        .card{
+        
+        img{
+            width: 100%;
+            height: 85vh;
+        }
+
+        .banner{
+            width: 100%;
+            height: 85vh;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .slider{
+            width: 100%;
+            height: 85vh;
+            position: absolute;
+            top:0;
+        }
+
+        #slideImg{
+            width: 100%;
             height: 100%;
+            animation: zoom 3s linear infinite;
+        }
+
+        @keyframes zoom {
+            0%{
+                transform: scale(1.3);
+            }
+            15%{
+                transform: scale(1);
+            }
+            85%{
+                transform: scale(1);
+            }
+            100%{
+                transform: scale(1.3);
+            }
+        }
+
+        .overlay{
+            width: 100%;
+            height: 85vh;
+            background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7));
+            position: absolute;
+            
+        }
+
+        .content{
+            width: 60%;
+            margin: 160px auto 0;
+            text-align: center;
+            color: #ffffff;
+        }
+
+        .content h1{
+            font-size: 60px;
+            font-size:5rem ;
+            font-family: 'Roboto Slab', serif;
+        }
+
+        .content h3{
+            width: 80%;
+            margin: 20px auto 100px;
+            font-weight: 100;
+            line-height: 25px;
+        }
+
+        button{
+            width: 200px;
+            padding: 15px 0;
+            text-align: center;
+            margin: 0 10px;
+            border-radius: 25px ;
+            font-weight: bold;
+            border: 2px solid #d3f2e9;
+            background: #d3f2e9;
+            color: #ffffff;
+            transition: background 0.5s;
+        }
+
+        button:hover{
+            background: transparent;
+            border: 2px solid #fff;
+        }
+
+        .btn-2{
+            background: transparent;
+            border: 2px solid #fff;
+        }
+
+        .btn-2:hover{
+            border: 2px solid #d3f2e9;
+            background: #d3f2e9;
         }
     </style>
-    <div style="font-family: Arial, sans-serif">
-        <div id="carouselExampleSlidesOnly shadow" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img class="d-block w-100" src="{% static '/logo/logo.png' %}" alt="First slide">
-                </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100" src="{% static '/logo/logo.png' %}" alt="Second slide">
-                </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100" src="{% static '/logo/logo.png' %}" alt="Third slide">
-                </div>
-            </div>
+</head>
+<body onload="slider()">
+    <div class="banner">
+        <div class="slider" >
+            <img src="{% static 'home/img2.png' %}" alt="img1" width="100%" height="85vh" id="slideImg">
         </div>
-        <div class="d-flex justify-content-center shadow p-3"
-             style="background-color: #2b87da;border-radius: 80px ">
-            <div class="d-flex bd-highlight">
-                <div class="p-2 flex-grow-1 bd-highlight">
-                    <p style="color:white;font-size:40px;font-weight: bolder">Register for 2021 Annual
-                        conferences</p>
-                </div>
-                <div class="p-2 bd-highlight">
-                    <button type="button" class="btn btn-primary btn-lg"
-                            style="background-color: #2b87da; border-radius: 20px; border: solid white">Register Now
-                    </button>
-                </div>
+        <div class="overlay">
+            <div class="content">
+                <h1>LET US DREAM</h1>
+                <h3>Empowering Community</h3>
+                <button type="button">REGISTER NOW</button>
+                <button type="button" class="btn-2">JOIN US</button>
             </div>
-        </div>
-        <div class="container-fluid shadow" style="background-color: #b9d3af3d">
-            <div class="row mt-auto mb-5">
-                <h1 class="mt-5" style="text-align: center;color: #3f3f3f;font-weight: bolder">OUR PROGRAMS</h1>
-            </div>
-            <div class="row row-cols-1 row-cols-md-4 g-4" style="text-align: center">
-                <div class="col">
-                    <div class="card shadow" style="border-radius: 20px">
-                        <img src="{% static 'card/DREAMS-Program.jpeg' %}" class="card-img-top p-3"
-                             alt="DREAMS-Program">
-                        <div class="card-body">
-                            <h5 class="card-title" style="color: #755400">DREAMS Program</h5>
-                            <p class="card-text" style="color: #8585bd">The DREAMS Program is a three-year
-                                curriculum-based community
-                                mentoring project for schools and colleges, each year focusing on personal
-                                development, interpersonal skills and leadership skills. The program aims to</p>
-                        </div>
-                    </div>
-                    <button type="button" class="btn btn-primary mt-3"
-                            style="background-color: #2b87da; border-radius: 20px; border: solid black">Join Us
-                    </button>
-
-                </div>
-                <div class="col">
-                    <div class="card shadow" style="border-radius: 20px">
-                        <img src="{% static 'card/letusdream.com-dreams-band22.png' %}" class="card-img-top p-3"
-                             alt="DREAMS Band">
-                        <div class="card-body">
-                            <h5 class="card-title" style="color: #755400">DREAMS Band</h5>
-                            <p class="card-text" style="color: #8585bd">The DREAMS Band strives towards making a
-                                positive difference in
-                                the community by utilizing their musical skills. DREAMS Band is not only an
-                                opportunity to sing and motivate the audience but also uses music as a platform
-                                to empower communities </p>
-                        </div>
-                    </div>
-                    <button type="button" class="btn btn-primary mt-3"
-                            style="background-color: #2b87da; border-radius: 20px; border: solid black">Join Us
-                    </button>
-                </div>
-                <div class="col">
-                    <div class="card shadow" style="border-radius: 20px">
-                        <img src="{% static 'card/DREAMS-Pro-Club.jpeg' %}" class="card-img-top p-3"
-                             alt="DREAMS Pro Club">
-                        <div class="card-body">
-                            <h5 class="card-title" style="color: #755400">DREAMS Pro Club</h5>
-                            <p class="card-text" style="color: #8585bd">DREAMS Pro Club is a support group for
-                                the personal and
-                                professional development of young professionals. Small groups of 10-12 working
-                                professionals meet once every month to discuss and implement</p>
-                        </div>
-                    </div>
-                    <button type="button" class="btn btn-primary mt-3"
-                            style="background-color: #2b87da; border-radius: 20px; border: solid black">Join Us
-                    </button>
-
-                </div>
-                <div class="col">
-                    <div class="card shadow" style="border-radius: 20px; ">
-                        <img src="{% static 'card/Let-Us-Dream-Conference.jpeg' %}" class="card-img-top p-3"
-                             alt="Community Conferences">
-                        <div class="card-body">
-                            <h5 class="card-title" style="color: #755400">Community Conferences</h5>
-                            <p class="card-text" style="color: #8585bd">Started in 2017, Let Us Dream Conference
-                                provides a platform
-                                for researchers, practitioners and volunteers to discuss various possibilities
-                                of promoting community volunteerism among students, sharing their experiences
-                                and challenges </p>
-                        </div>
-                    </div>
-                    <button type="button" class="btn btn-primary mt-3"
-                            style="background-color: #2b87da; border-radius: 20px; border: solid black">Join Us
-                    </button>
-                </div>
-            </div>
-        </div>
-        <div class="container-fluid shadow mt-5"
-             style="background-image: url('{% static 'background/bg.png' %}')">
-            <div class="row">
-                <div class="text-center fw-bolder mt-5 fs-1">OUR IMPACT</div>
-            </div>
-            <div class="row mt-auto mb-5 center-block">
-                <div class="col text-center p-3">
-                    Block 1
-                </div>
-                <div class="col text-center p-3">
-                    Block 2
-                </div>
-            </div>
-            <div class="row mt-auto mb-5
-                     center-block">
-                <div class="col text-center p-3">
-                    Block 3
-                </div>
-                <div class="col text-center p-3">
-                    Block 4
-                </div>
-            </div>
-        </div>
-        <div class="view" style="background-image: {% static 'background/bg.png' %}">
-            Rohan Harchandani
         </div>
     </div>
+    
+    <script>
+        var slideImg=document.getElementById("slideImg");
+        var image = new Array(
+            "{% static 'home/img1.png' %}",
+            "{% static 'home/img2.png' %}",
+            "{% static 'home/img3.png' %}"
+            );
+        var len=image.length;
+        var i=0;
+        function slider(){
+            if(i>len-1){
+                i=0;
+            }
+            slideImg.src=image[i];
+            i++;
+            setTimeout('slider()',3000)        
+        }
+    </script>
+</body>
+</html>
 
 {% endblock content %}
