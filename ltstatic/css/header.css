@@ -2,7 +2,7 @@
 
 :root {
     /* bg color */
-    --bg-primary: #fff;
+    --bg-primary: #d3f2e9;
     --bg-secondary: #262626;
     /* text color */
     --text-white: #fff;
@@ -50,7 +50,7 @@ button:focus,
     width: 100%;
     padding: 10px 200px;
     margin: 0px 10px 25px 0px;
-    background-color: #fff;
+    background-color: #d3f2e9;
 }
 
 .menu-wrapper .navbar-nav .nav-item {
@@ -166,7 +166,7 @@ footer p {
     margin-top: 15px;
     margin-bottom: 10px;
     font-size: .9em;
-
+    font-weight: 300;
 }
 
 footer p a {
