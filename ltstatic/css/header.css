@@ -38,7 +38,7 @@ button:focus,
 
 .navbar-brand img {
     height: 100px;
-
+    width: 134px;
     transition: .5s;
 }
 
@@ -84,7 +84,8 @@ button:focus,
 }
 
 nav.black .navbar-brand img {
-    height: 60px;
+    height: 50px;
+    width: 80px;
 }
 
 nav.black {
@@ -204,6 +205,11 @@ footer p a:hover {
 
     .collapse {
         background-color: #fff;
+    }
+
+    .navbar-brand img {
+        height: 80px;
+        width: 100px;
     }
 
 }
