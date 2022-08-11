@@ -9,150 +9,164 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link href="{% static "css/style.css" %}" rel="stylesheet"/>
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="{% static  'css/style.css' %}" rel="stylesheet" />
+    <link href="{% static  'css/header.css' %}" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <title>LET US DREAM | {% block title %}{% endblock title %}</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(window).on('scroll', function () {
+            console.log("HII")
+            if ($(window).scrollTop()) {
+                $('nav').addClass('black');
+            }
+            else {
+                $('nav').removeClass('black');
+            }
+        })
+    </script>
 </head>
 <style>
-    .navbar{
-        border-bottom: solid #2b87da;
-        text-align: center;
-        font-weight: bolder;
-    }
+
 </style>
+
 <body>
-<div class="navbar navbar-expand-lg navbar-light bg-light shadow fixed-top">
-    <nav class="container">
-        <a class="navbar-brand" href="{% url 'main' %}">
-            <img src="{% static 'logo/logo.png' %}" class="logo" alt="LET US DREAM">
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
-                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link item-toggle" href="https://letusdream.org/"
-                       id="navbarDropdownMenuLink" role="button"
-                       data-bs-toggle="dropdown" aria-expanded="false">
-                        Home
-                    </a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button"
-                       data-bs-toggle="dropdown" aria-expanded="false">
-                        About Us
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <li><a class="dropdown-item" href="{% url 'about-us' %}">About us</a></li>
-                        <li><a class="dropdown-item" href="{% url 'ltmedia' %}">Media</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button"
-                       data-bs-toggle="dropdown" aria-expanded="false">
-                        DREAMS
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <li><a class="dropdown-item" href="{% url 'dreams' 'program' %}">DREAMS program</a></li>
-                        <li><a class="dropdown-item" href="{% url 'dreams' 'band' %}">DREAMS band</a></li>
-                        <li><a class="dropdown-item" href="{% url 'dreams' 'proclub' %}">DREAMS pro club</a></li>
-                        <li><a class="dropdown-item" href="{% url 'dreams' 'leadershipnetwork' %}">Leadership
-                            Network (GYLN)</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-                       data-bs-toggle="dropdown" aria-expanded="false">
-                        Conferences
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <li><a class="dropdown-item" href="{% url 'about-conference' %}">About conference</a></li>
-                        <li><a class="dropdown-item" href="{% url 'annual-conference' %}">Annual conference</a></li>
-                        <li><a class="dropdown-item" href="{% url 'trriennial-conference' %}">Triennial
-                            conference</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-                       data-bs-toggle="dropdown" aria-expanded="false">
-                        Course
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <li><a class="dropdown-item" href="{% url 'yclp-course' %}">YCLP Course</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-                       data-bs-toggle="dropdown" aria-expanded="false">
-                        Research
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <li><a class="dropdown-item" href="{% url 'research' %}">Research</a></li>
-                        <li><a class="dropdown-item" href="publications">Publications</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-                       data-bs-toggle="dropdown" aria-expanded="false">
-                        Locations
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <li><a class="dropdown-item" href="#">India</a>
-                            <ul class="submenu dropdown-menu">
-                                <li><a class="dropdown-item" href="{% url 'locations' 'bangalore' %}">Bangalore</a>
-                                </li>
-                                <li><a class="dropdown-item"
-                                       href="{% url 'locations' 'changancherry' %}">Changancherry</a>
-                                </li>
-                                <li><a class="dropdown-item" href="{% url 'locations' 'mannanam' %}">Mannanam</a>
-                                </li>
-                                <li><a class="dropdown-item" href="{% url 'locations' 'thiruvananthapuram' %}">Thiruvananthapuram</a>
-                                </li>
-                                <li><a class="dropdown-item"
-                                       href="{% url 'locations' 'thiruvallam' %}">Thiruvallam</a></li>
-                            </ul>
-                        </li>
-                        <li><a class="dropdown-item" href="#">U.S.A.</a>
-                            <ul class="submenu dropdown-menu">
-                                <li><a class="dropdown-item" href="{% url 'locations' 'bastrope' %}">Bastrope</a>
-                                </li>
-                                <li><a class="dropdown-item" href="{% url 'locations' 'dalias' %}">Dalias</a></li>
-                                <li><a class="dropdown-item" href="{% url 'locations' 'lagrande' %}">LaGrande</a>
-                                </li>
-                                <li><a class="dropdown-item" href="{% url 'locations' 'mcallen' %}">McAllen</a></li>
-                                <li><a class="dropdown-item" href="{% url 'locations' 'monroe' %}">Monroe</a></li>
-                            </ul>
-                        </li>
-                        <li><a class="dropdown-item" href="#">Germany</a>
-                            <ul class="submenu dropdown-menu">
-                                <li><a class="dropdown-item" href="{% url 'locations' 'cologne' %}">Cologne</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-    </nav>
-</div>
+    <header class="menu-wrapper">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href=" {% url 'main' %}">
+                    <img src="{% static 'logo/let-us-dream-Empowering-Communities-01.png' %}" class="logo-img"
+                        alt="LET US DREAM">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-stream navbar-toggler-icon"></i>
+                </button>
 
-<div class="mt-5">
-{% block content %}
-{% endblock content %}
-</div>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent"">
+                <ul class=" navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                            href="#">About Us</a>
+                        <ul class="dropdown-menu shadow">
+                            <li> <a href="{% url 'about-us' %}" class="dropdown-item">About Us</a></li>
+                            <li> <a href="{% url 'ltmedia' %}" class="dropdown-item">Media</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                            href="#">DREAMS</a>
+                        <ul class="dropdown-menu shadow">
+                            <li> <a href="{% url 'about-us' %}" class="dropdown-item">DREAMS Program</a></li>
+                            <li> <a href="{% url 'ltmedia' %}" class="dropdown-item">DREAMS Band</a></li>
+                            <li> <a href="{% url 'ltmedia' %}" class="dropdown-item">DREAMS Pro Club</a></li>
+                            <li> <a href="{% url 'ltmedia' %}" class="dropdown-item">Leadership NetWork (GYLN)</a></li>
+                        </ul>
+                    </li>
 
-<footer class="et-l et-l--footer">
-    <div class="p-3 mb-2 bg-dark text-white-50">
-        <div>section 1</div>
-        <div>section 2</div>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                            href="#">Conferences</a>
+                        <ul class="dropdown-menu shadow">
+                            <li> <a href="{% url 'about-us' %}" class="dropdown-item">About Conference</a></li>
+                            <li> <a href="{% url 'ltmedia' %}" class="dropdown-item">Annual Conference</a></li>
+                            <li> <a href="{% url 'ltmedia' %}" class="dropdown-item">Triennial Conference</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                            href="#">Courses</a>
+                        <ul class="dropdown-menu shadow">
+                            <li> <a href="{% url 'about-us' %}" class="dropdown-item">YCLP Course</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                            href="#">Research</a>
+                        <ul class="dropdown-menu shadow">
+                            <li> <a href="{% url 'about-us' %}" class="dropdown-item">Research</a></li>
+                            <li> <a href="{% url 'ltmedia' %}" class="dropdown-item">Publications</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                            href="#">Locations</a>
+                        <ul class="dropdown-menu shadow">
+                            <li class="dropstart">
+                                <a href="" class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown">India</a>
+                                <ul class="dropdown-menu shadow">
+                                    <li> <a href="{% url 'ltmedia' %}" class="dropdown-item">Bangalore</a></li>
+                                    <li> <a href="{% url 'ltmedia' %}" class="dropdown-item">Changancherry</a></li>
+                                    <li> <a href="{% url 'ltmedia' %}" class="dropdown-item">Mannanam</a></li>
+                                    <li> <a href="{% url 'ltmedia' %}" class="dropdown-item">Thiruvananthapuram</a></li>
+                                    <li> <a href="{% url 'ltmedia' %}" class="dropdown-item">Thiruvallam</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropend">
+                                <a href="" class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown">USA</a>
+                                <ul class="dropdown-menu shadow">
+                                    <li> <a href="{% url 'ltmedia' %}" class="dropdown-item">Bastrope</a></li>
+                                    <li> <a href="{% url 'ltmedia' %}" class="dropdown-item">Dalias</a></li>
+                                    <li> <a href="{% url 'ltmedia' %}" class="dropdown-item">LaGrande</a></li>
+                                    <li> <a href="{% url 'ltmedia' %}" class="dropdown-item">LaGrande</a></li>
+                                    <li> <a href="{% url 'ltmedia' %}" class="dropdown-item">Monroe</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropstart">
+                                <a href="" class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown">Germany</a>
+                                <ul class="dropdown-menu shadow">
+                                    <li> <a href="{% url 'ltmedia' %}" class="dropdown-item">Cologne</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+
+                    </ul>
+                </div>
+
+            </div>
+
+        </nav>
+    </header>
+
+    <div class="mt-5">
+        {% block content %}
+        {% endblock content %}
     </div>
 
-</footer>
+    <footer>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        <ul class="social-icons">
+            <li><a href=""></a><i class="fab fa-instagram"></i></i></li>
+            <li><a href=""></a><i class="fab fa-youtube"></i></li>
+            <li><a href=""></a><i class="fab fa-facebook"></i></li>
+        </ul>
+        <ul class="menu">
+            <li><a href="">Home</a></li>
+            <li><a href="">About Us</a></li>
+            <li><a href="">Conferences</a></li>
+            <li><a href="">Courses</a></li>
+            <li><a href="">Contact</a></li>
+            <li><a href="">Logim</a></li>
+        </ul>
+
+        <p class="md-12 xm-6">
+            <a href="">Terms&Conditions</a> | <a href="">Privacy Policy</a> | <a href="">API Policy</a> | <a
+                href="">Cookies</a>
+        </p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
 </body>
+
 </html>
