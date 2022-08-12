@@ -8,7 +8,7 @@ urlpatterns = [
     path('', index, name='main'),
     path('locations/<str:loc>', locations, name='locations'),
     path('about-us', aboutUs, name='about-us'),
-    path('ltmedia', media, name='ltmedia'),
+    path('news', media, name='news'),
     path('about-conference', aboutConference, name='about-conference'),
     path('annual-conference', annualConference, name='annual-conference'),
     path('trriennial-conference', trriennialConference, name='trriennial-conference'),
@@ -21,4 +21,5 @@ urlpatterns = [
     path('jyoti-nivas-college-autonomous', jncaB, name = 'jyoti-nivas-college-autonomous'),
     path('louisiana-tech-university', ltuLouisiana, name = 'louisiana-tech-university'),
     path('dreams/<str:drm>', dreams, name='dreams'),
+    path('locations/<str:loc>', locations, name='locations'),
 ]
