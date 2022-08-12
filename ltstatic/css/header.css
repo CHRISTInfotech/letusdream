@@ -27,6 +27,7 @@ body {
 }
 
 .menu-wrapper {
+    font-family: 'Roboto Condensed', sans-serif;
     background-color: var(--bg-primary);
 
     z-index: 999;
@@ -134,7 +135,7 @@ footer .menu li {
 }
 
 footer .social-icons li i {
-    font-size: 5em;
+    font-size: 20px;
     color: #fff;
     margin: 0 15px;
     display: inline-block;
@@ -163,7 +164,7 @@ footer .menu li a:hover {
     transition: 0.5s;
 }
 
-footer p {
+footer div {
     color: #fff;
     text-align: center;
     margin-top: 15px;
@@ -172,13 +173,13 @@ footer p {
     font-weight: 300;
 }
 
-footer p a {
+footer div a {
     color: #262626;
     padding: 5px;
     text-decoration: none;
 }
 
-footer p a:hover {
+footer div a:hover {
     color: #fff;
 }
 
@@ -197,6 +198,14 @@ footer p a:hover {
         transition: .5s ease;
     }
 
+    .menu-wrapper nav.black {
+        padding: 10px 50px;
+    }
+
+    .navbar-toggler {
+        margin-left: 20px;
+    }
+
     .navbar {
         position: fixed;
         top: 0;
@@ -209,14 +218,29 @@ footer p a:hover {
 
     }
 
+    .menu-wrapper .navbar {
+        position: fixed !important;
+        top: 0;
+        left: 0;
+        z-index: 99999;
+        width: 100%;
+        padding: 10px 20px 10px 20px;
+        margin: 0px 10px 25px 0px;
+        background-color: #ffffff;
+        border-bottom: 1px solid #000;
+    }
+
     .collapse {
         background-color: #fff;
     }
 
-    .navbar-brand img {
-        height: 80px;
-        width: 100px;
+    .menu-wrapper .navbar-brand img {
+        height: 60px;
+        width: 80px;
         transition: .5s ease-in-out;
     }
 
+    footer .social-icons li i {
+        font-size: 15px;
+    }
 }
