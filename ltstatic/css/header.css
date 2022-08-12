@@ -19,8 +19,8 @@ body {
 
 }
 
-button:focus,
-.navbar-toggler:focus {
+.menu-wrapper button:focus,
+.menu-wrapper .navbar-toggler:focus {
     outline: 0;
 
     box-shadow: none;
@@ -30,27 +30,29 @@ button:focus,
     background-color: var(--bg-primary);
 
     z-index: 999;
+
 }
 
-.navbar-brand {
+.menu-wrapper .navbar-brand {
     float: left;
 }
 
-.navbar-brand img {
+.menu-wrapper .navbar-brand img {
     height: 100px;
     width: 134px;
-    transition: .5s;
+    transition: .5s ease-in-out;
 }
 
-.navbar {
+.menu-wrapper .navbar {
     position: fixed !important;
     top: 0;
     left: 0;
     z-index: 99999;
     width: 100%;
-    padding: 10px 200px;
+    padding: 10px 200px 10px 20px;
     margin: 0px 10px 25px 0px;
     background-color: #ffffff;
+    border-bottom: 1px solid #000;
 }
 
 .menu-wrapper .navbar-nav .nav-item {
@@ -77,18 +79,18 @@ button:focus,
     transition: 0.5s;
 }
 
-.navbar-collapse {
+.menu-wrapper .navbar-collapse {
     padding-left: 20px;
     flex-grow: 0;
     margin-left: 50px;
 }
 
-nav.black .navbar-brand img {
+.menu-wrapper nav.black .navbar-brand img {
     height: 50px;
     width: 80px;
 }
 
-nav.black {
+.menu-wrapper nav.black {
     height: 80px;
     padding: 10px 150px;
     transition: .5s ease;
@@ -204,6 +206,7 @@ footer p a:hover {
         padding: 10px 20px;
         margin: 0px 10px 25px 0px;
         background-color: #fff;
+
     }
 
     .collapse {
@@ -213,6 +216,7 @@ footer p a:hover {
     .navbar-brand img {
         height: 80px;
         width: 100px;
+        transition: .5s ease-in-out;
     }
 
 }
