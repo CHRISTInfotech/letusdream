@@ -2,32 +2,78 @@
 {% load static %}
 
 {% block title %}
-
+ABOUT US
 {% endblock %}
 
 {% block content %}
-    <style>
-        .pg {
-            padding-top: 50px;
-            padding-right: 150px;
-            padding-bottom: 30px;
-            padding-left: 150px;
-        }
+<style>
+    .aboutus .main-about {
+        margin-top: 80px;
+        padding-bottom: 100px;
+        background: url(../../ltstatic/Aboutus/bg.png);
+        background-color: rgba(24, 125, 207, 0.15) !important;
+    }
 
-        .card {
-            height: 100%;
-        }
-    </style>
-    <div class="container">
-        <h1 style="text-align:center;font-weight: bolder">Let Us Dream Story</h1>
-        <p style="text-align:center;color: #666666"><b>A journey of transforming dreams into action</b></p>
 
-        <iframe style="display: block; margin: auto;" width="700" height="400"
+
+    .aboutus .heading-h1 {
+        padding-top: 120px;
+        padding-bottom: 3px;
+        font-weight: 700;
+        font-size: 40px;
+    }
+
+    .aboutus .heading-h3 {
+        padding-top: 0px;
+        padding-bottom: 10px;
+        font-weight: 700;
+        font-size: 30px;
+    }
+
+    .aboutus .bottom-img {
+        padding-top: 120px;
+        width: 100%;
+        background: url(../../ltstatic/Aboutus/download.svg);
+        opacity: 0.8;
+
+    }
+
+    .pg {
+        padding: 50px 150px 20px 150px;
+        margin: 10px 130px;
+        font-size: 18px;
+        text-align: left;
+        font-weight: 400;
+        line-height: 40px;
+    }
+
+    .pg p {
+        padding: 0px 5px 0px;
+    }
+
+    .pg .div-link {
+        color: #2ea3f2;
+        font-weight: 600;
+    }
+
+    .card {
+        height: 100%;
+    }
+</style>
+<section class="aboutus">
+    <div class="main-about">
+        <div class="container">
+            <h1 style="text-align:center;" class="heading-h1">Let Us Dream Story</h1>
+            <p style="text-align:center;color: #666666"><b>A journey of transforming dreams into action</b></p>
+
+            <iframe style="display: block; margin: auto;" width="1000" height="500"
                 src="https://www.youtube.com/embed/ojd_qrni2Zc" title="YouTube video player" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen></iframe>
-    </div>
+        </div>
 
+    </div>
+    <div class="bottom-img"></div>
     <div class="container-fluid">
         <div class="pg">
             <p style="text-align:justify"> LET US DREAM is a locally rooted and globally established Not-for-Profit
@@ -36,9 +82,8 @@
                 strived for this since its inception.</p>
             <p style="text-align:justify"> We, at LET US DREAM, firmly vouch in the idea of a global family, where each
                 individual and each society works interdependently to create a sustainable world. The program is
-                composed of
-                likeminded people from all ethnic groups around the world to support, guide, and lead this vision of
-                holistic development in the growth of individuals and the society.</p>
+                composed of likeminded people from all ethnic groups around the world to support, guide, and lead this
+                vision of holistic development in the growth of individuals and the society.</p>
             <p style="text-align:justify"> LET US DREAM operates using an impactful and effective community-based
                 working
                 model that join people together while also bridging community organizations together. LET US DREAM aids,
@@ -47,24 +92,35 @@
                 LET US DREAM, through rigorous research and continuous evaluation, strives to accomplish this vision
                 through
                 its four unique projects:</p>
-            <a href="{% url 'dreams' 'program' %}" style="text-decoration: none;">DREAMS Program</a> , &nbsp;
-            <a href="{% url 'dreams' 'band' %}" style="text-decoration: none;">DREAMS Band</a> , &nbsp;
-            <a href="{% url 'dreams' 'proclub' %}" style="text-decoration: none;">DREAMS Pro Club</a> , &nbsp;
-            <a href="{% url 'about-conference' %}" style="text-decoration: none;">Let Us Dream Conferences</a>
-            <p></p>
-            <p>Mahatma Gandhi’s philosophy of “Be the Change you wish to see in the World” has been our motto and a
+            <p style="text-align:justify">
+                <a href="{% url 'dreams' 'program' %}" style="text-decoration: none;" class="div-link">DREAMS
+                    Program</a> ,
+                &nbsp;
+                <a href="{% url 'dreams' 'band' %}" style="text-decoration: none;" class="div-link">DREAMS Band</a> ,
+                &nbsp;
+                <a href="{% url 'dreams' 'proclub' %}" style="text-decoration: none;" class="div-link">DREAMS Pro
+                    Club</a> ,
+                &nbsp;
+                <a href="{% url 'about-conference' %}" style="text-decoration: none;" class="div-link">Let Us Dream
+                    Conferences</a>
+            </p>
+
+            <p style="text-align:justify">Mahatma Gandhi’s philosophy of “Be the Change you wish to see in the World”
+                has been our motto and a
                 guiding
                 principle since our inception. The LET US DREAM team has always been inspired by the quote of the Saint
                 of
                 the Gutters, Mother Teresa. She said, “What we are doing is just a drop in the ocean. But if that drop
                 was
                 not in the ocean, I think the ocean would be less because of that missing drop.”</p>
-            <p>Inspired thus, LET US DREAM extends an invitation to every individual to join this global community in
+            <p style="text-align:justify">Inspired thus, LET US DREAM extends an invitation to every individual to join
+                this global community in
                 order
                 to raise and uplift our societies to progressive and better living standards so that we and the
                 generations
                 to come may reap the benefits of the seeds we sow today.</p>
-            <p>Each of us is called to act as a catalyst to positively impact another person in our life’s time. Each of
+            <p style="text-align:justify">Each of us is called to act as a catalyst to positively impact another person
+                in our life’s time. Each of
                 us
                 has the power to foster positive change, which will have a spiralling impact to make the world a better
                 place.</p>
@@ -75,8 +131,9 @@
 
 
     <div class="pg">
-        <h3>EMPOWERING COMMUNITIES</h3>
-        <p>The LET US DREAM organizational culture is rooted in the universal human values after the vision of St.
+        <h3 class="heading-h3">EMPOWERING COMMUNITIES</h3>
+        <p style="text-align:justify">The LET US DREAM organizational culture is rooted in the universal human values
+            after the vision of St.
             Kuriakose Elias Chavara, that is, the integral formation of a person and commitment to the society. We as
             humans have so much to offer to the society. Success of each individual, strengthens and acts a s foundation
             for the society to grow in. We believe humanity to be one global family, tied together, where our excellence
@@ -85,19 +142,21 @@
     </div>
 
     <div class="container d-flex justify-content-center">
-        <img src="{% static 'About us/about us.png' %}" width="830px" height="600px">
+        <img src="{% static 'Aboutus/about us.png' %}" width="830px" height="600px">
     </div>
 
     <div class="pg">
         <div class="row">
             <div class="col-9">
-                <p>Finding his own confidence through music, Father Reverend Lijo Thomas Pathickal, CMI, wanted to
+                <p style="text-align:justify">Finding his own confidence through music, Father Reverend Lijo Thomas
+                    Pathickal, CMI, wanted to
                     assist people to help children who are under confident, shy and struggle to showcase their
                     capabilities. The drive to share his insights with others like him and helping them realise their
                     full potential led him to forming the DREAM Program. The journey for developing and implementing the
                     programme has been through turbulent and testing times but the sheer will power and the conviction
                     of Rev Fr Lijo Thomas to help the others has helped the project stay afloat for many years now. </p>
-                <p>The Project gradually expanded but the turning point came in 2010, while he was pursuing his Ph.D. in
+                <p style="text-align:justify">The Project gradually expanded but the turning point came in 2010, while
+                    he was pursuing his Ph.D. in
                     Educational Leadership, at the University of Louisiana, Monroe. His mentor at the time, Dr Pauline
                     Leonard, a professor at Louisiana Tech University, suggested that DREAM had the potential of being
                     developed into a working, scientific model and that was the moment the project steered towards the
@@ -105,19 +164,24 @@
                     project, for schools and colleges. Each year focuses on the development of skills and leadership,
                     both at the personal and at the communal levels. The program is further designed to encourage
                     children, especially those with low self-confidence, to rise up to their maximum potential, while
-                    also motivating others to do the same around them. Through a 3-stage developmental model, <strong>DREAM</strong>
+                    also motivating others to do the same around them. Through a 3-stage developmental model,
+                    <strong>DREAM</strong>
                     helps individuals to work through <strong>D</strong>esire, <strong>R</strong>eadiness,
                     <strong>E</strong>mpowerment, and <strong>A</strong>ction, to attain <strong>M</strong>astery for
-                    success.</p>
-                <p>A motivation and an inspiration, Father Reverend Lijo Thomas Pathickal has purposed his life to
+                    success.
+                </p>
+                <p style="text-align:justify">A motivation and an inspiration, Father Reverend Lijo Thomas Pathickal has
+                    purposed his life to
                     helping others grow. </p>
 
             </div>
             <div class="col-3">
-                <div class="card shadow" style="border-radius: 20px">
-                    <img src="{% static 'About us/aboutus-lijo.png' %}" href="https://www.facebook.com/lijo.pathickal.5"
-                         class="card-img-top p-3"
-                         alt="Dr. Fr. Lijo Thomas CMI">
+                <div class="card-shadow" style="border-radius: 20px">
+                    <a href="https://www.facebook.com/lijo.pathickal.5" target="_blank">
+                        <img src="{% static 'Aboutus/aboutus-lijo.png' %}"
+                            href="https://www.facebook.com/lijo.pathickal.5" class="card-img-top p-3"
+                            alt="Dr. Fr. Lijo Thomas CMI">
+                    </a>
                     <div class="card-body">
                         <h5 class="card-head" style="color: #755400">Dr. Fr. Lijo Thomas CMI</h5>
                         <p class="card-text" style="color: #8585bd">Founder/Director</p>
@@ -127,156 +191,165 @@
         </div>
     </div>
     <div class="pg">
-    <h2>Leadership Team </h2>
-    <div class="pg">
-<<<<<<< HEAD
-        <div class="row">
-            <div class="col-2">
-                <div class="card shadow" style="border-radius: 20px">
-                    <img src="{% static 'About us/aboutus-ld1.jpg' %}" href="https://www.facebook.com/lijo.pathickal.5"
-                         class="card-img-top p-2"
-                         alt="Dr. Fr. Lijo Thomas CMI">
-                    <div class="card-body">
-                        <h5 class="card-head" style="color: #755400">Dr. Fr. Lijo Thomas CMI</h5>
-                        <p class="card-text" style="color: #8585bd">Founder/Director</p>
+        <h2 class="heading-h3" style="text-align:center">Leadership Team </h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-2">
+                    <div class="card-shadow" style="border-radius: 20px">
+                        <a href="https://www.facebook.com/lijo.pathickal.5" target="_blank">
+                            <img src="{% static 'Aboutus/aboutus-ld1.jpg' %}" class="card-img-top p-2"
+                                alt="Dr. Fr. Lijo Thomas CMI">
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-head" style="color: #755400">Dr. Fr. Lijo Thomas CMI</h5>
+                            <p class="card-text" style="color: #8585bd">Founder/Director</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="card-shadow" style="border-radius: 20px">
+                        <a href="https://www.facebook.com/SuperJuice" target="_blank">
+                            <img src="{% static 'Aboutus/aboutus-ld2.jpg' %}" class="card-img-top p-2"
+                                alt="Officer Gary Guice Jr.">
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-head" style="color: #755400">Officer Gary Guice Jr.</h5>
+                            <p class="card-text" style="color: #8585bd">President, Board </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="card-shadow" style="border-radius: 20px">
+                        <a href="https://www.facebook.com/maribeth.quillinholzer" target="_blank">
+                            <img src="{% static 'Aboutus/aboutus-ld3.jpg' %}" class="card-img-top p-2"
+                                alt="Officer Gary Guice Jr.">
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-head" style="color: #755400">Ms. Maribeth Holzer</h5>
+                            <p class="card-text" style="color: #8585bd"> Vice President, Board </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="card-shadow" style="border-radius: 20px">
+                        <img src="{% static 'Aboutus/aboutus-ld4.jpg' %}" href="#" class="card-img-top p-2"
+                            alt="Officer Gary Guice Jr.">
+                        <div class="card-body">
+                            <h5 class="card-head" style="color: #755400">Fr. Philip Pazhayakari CMI</h5>
+                            <p class="card-text" style="color: #8585bd"> Vice President, Board </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="card-shadow" style="border-radius: 20px">
+                        <a href="">
+                            <img class="img-fluid" src="{% static 'Aboutus/aboutus-ld5.png' %}"
+                                alt="Officer Gary Guice Jr." class="card-img-top p-2">
+                        </a>
+
+                        <div class="card-body">
+                            <h5 class="card-head" style="color: #755400">Ms. Brandy Soiloue</h5>
+                            <p class="card-text" style="color: #8585bd">Tressurar/secretery, Board</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="card-shadow" style="border-radius: 20px">
+                        <img src="{% static 'Aboutus/aboutus-ld6.jpg' %}"
+                            href="https://www.facebook.com/johnson.kuriakose.7" class="card-img-top p-2"
+                            alt="Officer Gary Guice Jr.">
+                        <div class="card-body">
+                            <h5 class="card-head" style="color: #755400">Mr. Johnson Kuriakose</h5>
+                            <p class="card-text" style="color: #8585bd">Trustee</p>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-2">
-                <div class="card shadow" style="border-radius: 20px">
-                    <img src="{% static 'About us/aboutus-ld2.jpg' %}" href="https://www.facebook.com/SuperJuice"
-                         class="card-img-top p-2"
-                         alt="Officer Gary Guice Jr.">
-                    <div class="card-body">
-                        <h5 class="card-head" style="color: #755400">Officer Gary Guice Jr.</h5>
-                        <p class="card-text" style="color: #8585bd">President, Board </p>
+
+            <div class="row">
+                <div class="col col-2">
+                    <div class="card">
+                        <a href="https://www.facebook.com/lijo.pathickal.5">
+                            <img class="img-fluid" src="{% static 'Aboutus/aboutus-ld1.jpg' %}" width="350px"
+                                height="400px">
+                        </a>
+
+                        <div class="container">
+                            <p>Dr. Fr. Lijo Thomas CMI</p>
+                            <p style="color:DodgerBlue" ;>Founder/Director </p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-2">
-                <div class="card shadow" style="border-radius: 20px">
-                    <img src="{% static 'About us/aboutus-ld3.jpg' %}" href="https://www.facebook.com/SuperJuice"
-                         class="card-img-top p-2"
-                         alt="Officer Gary Guice Jr.">
-                    <div class="card-body">
-                        <h5 class="card-head" style="color: #755400">Ms. Maribeth Holzer</h5>
-                        <p class="card-text" style="color: #8585bd"> Vice President, Board </p>
+                <div class="col col-2">
+                    <div class="card">
+                        <a href="https://www.facebook.com/SuperJuice">
+                            <img class="img-fluid" src="{% static 'Aboutus/aboutus-ld2.jpg' %}" width="350px"
+                                height="400px">
+                        </a>
+
+                        <div class="container">
+                            <p>Officer Gary<br> Guice Jr.</p>
+                            <p style="color:DodgerBlue" ;>President,<br>Board </p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-2">
-                <div class="card shadow" style="border-radius: 20px">
-                    <img src="{% static 'About us/aboutus-ld4.jpg' %}" href="#"
-                         class="card-img-top p-2"
-                         alt="Officer Gary Guice Jr.">
-                    <div class="card-body">
-                        <h5 class="card-head" style="color: #755400">Fr. Philip Pazhayakari CMI</h5>
-                        <p class="card-text" style="color: #8585bd"> Vice President, Board </p>
+                <div class="col col-2">
+                    <div class="card">
+                        <a href="https://www.facebook.com/maribeth.quillinholzer">
+                            <img class="img-fluid" src="{% static 'Aboutus/aboutus-ld3.jpg' %}" width="350px"
+                                height="400px">
+                        </a>
+
+                        <div class="container">
+                            <p>Ms Maribeth Holzer</p>
+                            <p style="color:DodgerBlue" ;>Vice President <br> Board </p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-2">
-                <div class="card shadow" style="border-radius: 20px">
-                    <img src="{% static 'locations/bangalore/default.png' %}" href="#"
-                         class="card-img-top p-2"
-                         alt="Officer Gary Guice Jr.">
-                    <div class="card-body">
-                        <h5 class="card-head" style="color: #755400">Ms. Brandy Soiloue</h5>
-                        <p class="card-text" style="color: #8585bd">Tressurar/secretery, Board</p>
+                <div class="col col-2">
+                    <div class="card">
+                        <a href="">
+                            <img class="img-fluid" src="{% static 'Aboutus/aboutus-ld4.jpg' %}" width="350px"
+                                height="400px">
+                        </a>
+
+                        <div class="container">
+                            <p>Fr. Philip <br> Pazhayakari CMI</p>
+                            <p style="color:DodgerBlue" ;>Vice President <br> Board</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-2">
-                <div class="card shadow" style="border-radius: 20px">
-                    <img src="{% static 'About us/aboutus-ld6.jpg' %}" href="https://www.facebook.com/johnson.kuriakose.7"
-                         class="card-img-top p-2"
-                         alt="Officer Gary Guice Jr.">
-                    <div class="card-body">
-                        <h5 class="card-head" style="color: #755400">Mr. Johnson Kuriakose</h5>
-                        <p class="card-text" style="color: #8585bd">Trustee</p>
+                <div class="col col-2">
+                    <div class="card">
+                        <a href="">
+                            <img class="img-fluid" src="{% static 'Aboutus/aboutus-ld5.png' %}" width="350px"
+                                height="400px">
+                        </a>
+
+                        <div class="container">
+                            <p>Ms. Brandy <br> Soiloue</p>
+                            <p style="color:DodgerBlue" ;>Tressurar/secratery,<br>Board </p>
+                        </div>
                     </div>
                 </div>
+                <div class="col col-2">
+                    <div class="card">
+                        <a href="https://www.facebook.com/johnson.kuriakose.7">
+                            <img class="img-fluid" src="{% static 'Aboutus/aboutus-ld6.jpg' %}" width="350px"
+                                height="400px">
+                        </a>
+
+                        <div class="container">
+                            <p>Mr Johnson<br> Kuriakose</p>
+                            <p style="color:DodgerBlue" ;>Trustee</p>
+                        </div>
+                    </div>
+                </div>
+
+
             </div>
+
         </div>
-=======
-       <div class="row">
-          <div class="col col-2">
-              <div class="card">
-                <a href="https://www.facebook.com/lijo.pathickal.5">
-                  <img class="img-fluid" src="{% static 'About us/aboutus-ld1.jpg' %}" width="350px" height="400px">
-              </a>
-
-               <div class="container">
-               <p>Dr. Fr. Lijo Thomas CMI</p>
-               <p style="color:DodgerBlue";>Founder/Director </p>
-              </div>
-              </div>
-          </div>
-           <div class="col col-2">
-              <div class="card">
-                <a href="https://www.facebook.com/SuperJuice">
-                  <img class="img-fluid" src="{% static 'About us/aboutus-ld2.jpg' %}" width="350px" height="400px">
-              </a>
-
-               <div class="container">
-               <p>Officer Gary<br> Guice Jr.</p>
-               <p style="color:DodgerBlue";>President,<br>Board </p>
-              </div>
-              </div>
-          </div>
-           <div class="col col-2">
-              <div class="card">
-                <a href="https://www.facebook.com/maribeth.quillinholzer">
-                  <img class="img-fluid" src="{% static 'About us/aboutus-ld3.jpg' %}" width="350px" height="400px">
-              </a>
-
-               <div class="container">
-               <p>Ms Maribeth Holzer</p>
-               <p style="color:DodgerBlue";>Vice President <br> Board </p>
-              </div>
-              </div>
-          </div>
-           <div class="col col-2">
-              <div class="card">
-                <a href="">
-                  <img class="img-fluid" src="{% static 'About us/aboutus-ld4.jpg' %}" width="350px" height="400px">
-              </a>
-
-               <div class="container">
-               <p>Fr. Philip <br> Pazhayakari CMI</p>
-               <p style="color:DodgerBlue";>Vice President <br> Board</p>
-              </div>
-              </div>
-          </div>
-           <div class="col col-2">
-              <div class="card">
-                <a href="">
-                  <img class="img-fluid" src="{% static 'About us/aboutus-ld5.png' %}" width="350px" height="400px">
-              </a>
-
-               <div class="container">
-               <p>Ms. Brandy <br> Soiloue</p>
-               <p style="color:DodgerBlue";>Tressurar/secratery,<br>Board </p>
-              </div>
-              </div>
-          </div>
-           <div class="col col-2">
-              <div class="card">
-                <a href="https://www.facebook.com/johnson.kuriakose.7">
-                  <img class="img-fluid" src="{% static 'About us/aboutus-ld6.jpg' %}" width="350px" height="400px">
-              </a>
-
-               <div class="container">
-               <p>Mr Johnson<br> Kuriakose</p>
-               <p style="color:DodgerBlue";>Trustee</p>
-              </div>
-              </div>
-          </div>
-
-
-          </div>
->>>>>>> d619f1993109dbab4db405eb59b1e3b32186b083
-    </div>
-
+</section>
 
 {% endblock %}
