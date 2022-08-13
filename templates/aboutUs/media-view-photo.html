@@ -1,0 +1,145 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+Media-Photos
+{% endblock %}
+
+{% block content %}
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--Google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+    <!--  Bootstrap CSS --> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <style>
+        .view-container{
+            margin-top: 7%;
+            position: relative;
+            min-height: 100vh;
+            
+        }
+        .view-container h1{
+            font-size: 3rem;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: bolder;
+            padding: 15px;
+            color: #0a7b79;
+            text-align: center;
+            text-transform: capitalize;
+        }
+        .view-container .image-container{
+            display: flex;
+            flex-wrap: wrap;
+            gap:15px;
+            justify-content: center;
+            padding:10px ;
+        }
+        .view-container .image-container .image{
+            height: 250px;
+            width: 350px;
+            border: 10px solid #fff;
+            box-shadow: 0 5px 15px rgba(0,0,0,.1);
+            overflow: hidden;
+            cursor: pointer;
+        }
+        .view-container .image-container .image img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            transition: .2s linear;
+        }
+
+        .view-container .image-container .image:hover img{
+            transform: scale(1.1);
+        }
+
+        .view-container .popup-image{
+            position: fixed;
+            top:5%; left:0;
+            background: rgba(0,0,0,0.9);
+            height: 100%;
+            width: 100%;
+            z-index: 100;
+            display: none;
+        }
+
+        .view-container .popup-image span{
+            position: absolute;
+            top:10%; right: 10px;
+            font-size: 40px;
+            font-weight: bolder;
+            color: #fff;
+            cursor: pointer;
+            z-index: 100;
+        }
+
+        .view-container .popup-image img{
+            position: absolute;
+            top:53%; left:50%;
+            transform: translate(-50%,-50%);
+            border-radius: 5px;
+            width: 60%;
+            height: 80%;
+        }
+
+        @media(max-width:768px){
+            .view-container .popup-image img{
+                width: 95%;
+
+            }
+        }
+    </style>
+    </head>
+    <body>
+        <div class="container view-container">
+            <h1>Press Release</h1>
+            <div class="image-container">
+                <div class="image"><img src="https://letusdream.org/wp-content/uploads/2020/08/Media-PressUntitled_08162016_010123_1-min-scaled.jpg" alt="img1"></div>
+                <div class="image"><img src="https://letusdream.org/wp-content/uploads/2020/08/Media-PressMedia-Press2016_1-min.jpg"></div>
+                <div class="image"><img src="https://letusdream.org/wp-content/uploads/2020/08/Media-PressDREAMS-News-Star_2-min-scaled.jpg" ></div>
+                <div class="image"><img src="https://letusdream.org/wp-content/uploads/2020/08/Media-PressDreams-Announcement-News-Star_1-min-scaled.jpg" alt=""></div>
+                <div class="image"><img src="https://letusdream.org/wp-content/uploads/2020/08/Media-PressTNS-11-02-2017-A2.png"></div>
+                <div class="image"><img src="https://letusdream.org/wp-content/uploads/2020/08/Media-PressTNS-11-02-2017-A1.png"></div>
+                <div class="image"><img src="https://letusdream.org/wp-content/uploads/2020/08/Media-Presspress.jpg"></div>
+                <div class="image"><img src="https://letusdream.org/wp-content/uploads/2020/11/Unknown-154.jpeg"></div>
+                <div class="image"><img src="https://letusdream.org/wp-content/uploads/2021/08/Unknown-33.jpeg"></div>
+            </div>
+
+            <div class="popup-image">
+                <span>&times;</span>
+                <img src="https://letusdream.org/wp-content/uploads/2020/08/Media-PressUntitled_08162016_010123_1-min-scaled.jpg" alt="img1">
+            </div>
+        </div>
+        <script>
+            document.querySelectorAll('.image-container img').forEach(image=>{
+
+                image.onclick=()=>{
+                    document.querySelector('.popup-image').style.display="block";
+                    document.querySelector('.popup-image img').src = image.getAttribute('src')
+                }
+            })
+
+            document.querySelector('.popup-image span').onclick =()=>{
+                document.querySelector('.popup-image').style.display="none";
+
+            }
+        </script>
+    </body>
+
+    </html>
+{% endblock %}
