@@ -44,7 +44,7 @@
 
 }
 
-.pg {
+.aboutus .pg {
     padding: 50px 50px 20px 50px;
     margin: 10px 30px;
     font-size: 18px;
@@ -53,27 +53,27 @@
     line-height: 40px;
 }
 
-.pg p {
+.aboutus .pg p {
     padding: 0px 5px 0px;
 }
 
-.pg .div-link {
+.aboutus .pg .div-link {
     color: #2ea3f2;
     font-weight: 600;
 }
 
-.card {
+.aboutus .card {
     height: 100%;
 }
 
-.card-body .card-head {
+.aboutus .card-body .card-head {
     min-height: 60px;
     font-size: 18px;
     text-align: center;
     padding: 5px;
 }
 
-.card-body .card-text {
+.aboutus .card-body .card-text {
     margin-top: 10px;
     padding: 10px;
     font-size: 15px;
@@ -82,52 +82,52 @@
     text-transform: capitalize;
 }
 
-.card-last .card-col {
+.aboutus .card-last .card-col {
     padding: 20px;
 }
 
-.card-last .card {
+.aboutus .card-last .card {
     padding: 10px;
 }
 
-.card-last .card-1 {
+.aboutus .card-last .card-1 {
     background: url(../../ltstatic/Aboutus/bg.png), linear-gradient(180deg, #3197f7 0%, #2377af 100%);
     color: #fff;
 }
 
-.card-last .card-2 {
+.aboutus .card-last .card-2 {
     background: url(../../ltstatic/Aboutus/bg.png), linear-gradient(180deg, rgba(64, 178, 35, 0.97) 0%, #167c15 100%);
     color: #fff;
 }
 
-.card-last .card-3 {
+.aboutus .card-last .card-3 {
     background: url(../../ltstatic/Aboutus/bg.png), linear-gradient(180deg, #3197f7 0%, #2377af 100%);
     color: #fff;
 }
 
-.card-last .card-4 {
+.aboutus .card-last .card-4 {
     background: url(../../ltstatic/Aboutus/bg.png), linear-gradient(180deg, rgba(64, 178, 35, 0.97) 0%, #167c15 100%);
     color: #fff;
 }
 
-.card-last .card-title {
+.aboutus .card-last .card-title {
     color: #fff;
     font-size: 22px;
     font-weight: 600;
 }
 
-.card-last .card-text {
+.aboutus .card-last .card-text {
     text-align: left;
     font-size: 16px;
     font-weight: 500;
 }
 
-.card-last .card-text ul {
+.aboutus .card-last .card-text ul {
     margin-top: 5px;
     padding: 10px;
 }
 
-.card-last .card-body {
+.aboutus .card-last .card-body {
     text-align: left;
 }
 
@@ -139,6 +139,16 @@
         text-align: left;
     }
 
+    .heading-h1 {
+        font-size: 25px;
+        padding-top: 100px;
+
+    }
+
+    .aboutus p {
+        font-size: 15px;
+    }
+
     .aboutus .frame {
         display: block;
         margin: auto;
@@ -146,7 +156,7 @@
         height: 175px;
     }
 
-    .pg {
+    .aboutus .pg {
         padding: 50px 10px 20px 10px;
         margin: 10px 10px;
 
@@ -157,6 +167,18 @@
 @media (max-width:394px) {
     .aboutus {
         width: 377px;
+    }
+
+    .heading-h1 {
+        font-size: 25px;
+        padding-top: 100px;
+
+    }
+
+    .aboutus .heading-h1 {
+        font-size: 25px;
+        padding-top: 100px;
+
     }
 
     .aboutus .main-about,
