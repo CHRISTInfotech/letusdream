@@ -11,7 +11,13 @@ def aboutUs(request):
 
 
 def media(request):
-    return render(request, 'aboutUs/aboutusMedia.html')
+    return render(request, 'aboutUs/media.html')
+
+def mediaPhotos(request):
+    return render(request,'aboutUs/media-view-photo.html')
+
+def photoGallery(request):
+    return render(request,'aboutUs/photo-gallery.html')
 
 
 def aboutConference(request):
