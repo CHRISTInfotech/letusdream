@@ -2,10 +2,12 @@
 {% load static %} <!-- Load the static folder -->
 
 {% block title %}
-
+HOME
 {% endblock %}
 
 {% block content %}
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -38,6 +40,7 @@
         }
 
         .banner{
+            margin-top: 5%;
             width: 100%;
             height: 85vh;
             position: relative;
@@ -100,7 +103,7 @@
             line-height: 25px;
         }
 
-        button{
+        .btn-1{
             width: 200px;
             padding: 15px 0;
             text-align: center;
@@ -113,7 +116,7 @@
             transition: background 0.5s;
         }
 
-        button:hover{
+        .btn-1:hover{
             background: transparent;
             border: 2px solid #fff;
         }
@@ -121,6 +124,12 @@
         .btn-2{
             background: transparent;
             border: 2px solid #fff;
+            width: 200px;
+            padding: 15px 0;
+            text-align: center;
+            border-radius: 25px ;
+            font-weight: bold;
+            color: #0a7b79;
         }
 
         .btn-2:hover{
@@ -149,12 +158,10 @@
         border-color: inherit;
         }
 
-        /* First border-left-width setting is a fallback */
         .card-custom-img::after {
         position: absolute;
         content: '';
-        
-        top: 161px;
+        top: 170px;
         left: 0;
         width: 0;
         height: 0;
@@ -170,6 +177,121 @@
         border-left-color: inherit;
         }
 
+        /* #container-body{
+          background: linear-gradient(-100deg,#B8FFF9 50%, #EFFFFD 50%);
+          height: 70vh;
+          font-family: 'Montserrat', sans-serif;
+        } */
+
+        .img-text{
+          width: 100%;
+          height: 400px;
+          display: block;
+          text-align: center;
+          padding: 40% 5%;
+          background: #d3f2e9;
+          /* 0a7b79 */
+          color: #0a7b79;
+          border-radius: 30px;
+        }
+
+        .img-text h2{
+          margin-top: 10px;
+          margin-bottom: 20px;
+          font-size: 25px;
+          font-weight: bold;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+        }
+
+        .img-text p{
+          font-size: 14px;
+        }
+
+        .single-box{
+          position: relative;
+          margin-left: 10px;
+          margin-bottom: 30px;
+        }
+
+        
+        .img-area{
+          position: absolute;
+          width: 100px;
+          height: 100px;
+          border:5px solid #fff;
+          overflow: hidden;
+          top:20%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          border-radius: 50%;
+        }
+        
+        .img-area img{
+          width: 100%;
+        }
+
+        .carousel-indicators{
+          left:0;
+          top:auto;
+          bottom: -70px;
+        }
+
+        .carousel-indicators li{
+          background: #0a7b79;
+          border-radius: 50%;
+          width: 20px;
+          height: 25px;
+          box-shadow: inset 1px 1px 1px 1px rgba(0,0,0,0.5); 
+        }
+
+        .carousel-indicators :active{
+          background: #0a7b79;
+        }
+
+        .button-testi{
+            width: 200px;
+            padding: 12px 0;
+            text-align: center;
+            margin: 0 15px;
+            border-radius: 25px ;
+            font-weight: bold;
+            border: 2px solid #d3f2e9;
+            background: #d3f2e9;
+            color: #0a7b79;
+            transition: background 0.5s;
+        }
+
+        .container-fluid h1{
+          font-weight: bolder;
+          font-size: 3rem;
+        }
+
+        .img1{
+          width: 100% !important;
+          height: 100% !important;
+        }
+
+        .container h1{
+          font-size: 3rem !important;
+          font-weight: bolder !important;
+        }
+
+        body h3{
+          color: #0a7b79;
+          font-weight: bolder !important;
+        }
+
+        .big-heading{
+          color: #7ca8a1;
+        }
+
+        h6{
+          padding-top:2%;
+          padding-bottom:2%
+        }
+
+       
 
             
     </style>
@@ -177,51 +299,53 @@
 <body onload="slider()">
     <div class="banner">
         <div class="slider" >
-            <img src="{% static 'home/img2.png' %}" alt="img1" width="100%" height="85vh" id="slideImg">
+            <img src="{% static 'home/img2.png' %}" alt="img1" id="slideImg">
         </div>
         <div class="overlay">
             <div class="content">
                 <h1 style="padding-top: 160px;">LET US DREAM</h1>
-                <h3>Empowering Community</h3>
-                <button type="button">REGISTER NOW</button>
-                <button type="button" class="btn-2">JOIN US</button>
+                <h3 >Empowering Community</h3>
+                <button type="button" class="btn-1">JOIN US</button>
             </div>
         </div>
     </div>
 
+
+
+
     <div class="container">
+      <div class="row" style="margin-top: 100px; color: #7ca8a1;">
+        <div class="col">
+          <center><h1>OUR PROGRAM</h1></center>
+        </div>
+      </div>
         <div class="row pt-5 max-auto">
           <div class="col-md-6 col-lg-3 pb-3">
     
-            <!-- Copy the content below until next comment -->
-            <div class="card card-custom bg-white border-white border-0">
-              <div class="card-custom-img" style="background-image: url(https://cdn.dribbble.com/users/1312159/screenshots/5825513/attachments/1255803/lunamik-team-work.png?compress=1&resize=400x300&vertical=top);"></div>
+            <div class="card card-custom bg-white border-white border-0" style="height: 530px">
+              <div class="card-custom-img" style="background-image: url(https://cdn.dribbble.com/users/1312159/screenshots/5825513/attachments/1255803/lunamik-team-work.png?compress=1&resize=400x300&vertical=top);margin-top: 2%;"></div>
               
               <div class="card-body" style="overflow-y: auto">
-                <h4 class="card-title">Card title</h4>
-                <p class="card-text">Card has minimum height set but will expand if more space is needed for card body content. You can use Bootstrap <a href="https://getbootstrap.com/docs/4.0/components/card/#card-decks" target="_blank">card-decks</a> to align multiple cards nicely in a row.</p>
+                <h5 class="card-title" style="color:#0a7b79; ;font-weight: bold; ">DREAMS Program</h5>
+                <p class="card-text" style="color:#7ca8a1; font-weight: bold; text-align: justify;">The DREAMS Program is a three-year curriculum-based community mentoring project for schools and colleges, each year focusing on personal development, interpersonal skills and leadership skills. The program aims to.</p>
               </div>
               <div class="card-footer" style="background: inherit; border-color: inherit;">
-                <button type="button" class="btn-2">Option</button>
+                <center><button type="button" class="btn-2">Join Us</button></center>
               </div>
             </div>
     
           </div>
           <div class="col-md-6 col-lg-3 pb-3">
     
-            <!-- Add a style="height: XYZpx" to div.card to limit the card height and display scrollbar instead -->
-            <div class="card card-custom bg-white border-white border-0" style="height: 450px">
-              <div class="card-custom-img" style="background-image: url(https://i.pinimg.com/originals/8c/22/2c/8c222c3f4bc0a92105d90564f0abac4b.png);"></div>
+            <div class="card card-custom bg-white border-white border-0" style="height: 530px">
+              <div class="card-custom-img" style="background-image: url(https://i.pinimg.com/originals/8c/22/2c/8c222c3f4bc0a92105d90564f0abac4b.png); margin-top: 2%;"></div>
             
               <div class="card-body" style="overflow-y: auto">
-                <h4 class="card-title">Card title</h4>
-                <p class="card-text">You can also set maximum height on and the card will not expand, instead a scrollbar in the card body will appear.</p>
-                <p class="card-text">Some example text to show the scrollbar.</p>
-                <p class="card-text">Lorem ipsum dolor sit amet, te vix omittam fastidii, enim paulo omnes ea has, illud luptatum no qui. Sed ea qualisque urbanitas, purto elit nec te. Possim inermis antiopam ut eum. Eos te zril labore laboramus, quem erant nam in. Ut sed molestie
-                  antiopam. At altera facilisis mel.</p>
+                <h5 class="card-title" style="color:#0a7b79; ;font-weight: bold; ">DREAMS Pro Club</h5>
+                <p class="card-text" style="color:#7ca8a1; font-weight: bold; text-align: justify;">DREAMS Pro Club is a support group  for  the  personal  and  professional  development  of  young  professionals.  Small  groups  of  10-12  working  professionals  meet  once  every  month  to  discuss  and  implement.</p>
               </div>
               <div class="card-footer" style="background: inherit; border-color: inherit;">
-                <button type="button" class="btn-2">Option</button>
+                <center><button type="button" class="btn-2">Join Us</button></center>
               </div>
             </div>
     
@@ -229,19 +353,15 @@
           
           <div class="col-md-6 col-lg-3 pb-3">
     
-            <!-- Add a style="height: XYZpx" to div.card to limit the card height and display scrollbar instead -->
-            <div class="card card-custom bg-white border-white border-0" style="height: 450px">
-              <div class="card-custom-img" style="background-image: url(https://img.freepik.com/free-vector/orchestra-concept-illustration_114360-3098.jpg?w=2000);"></div>
+            <div class="card card-custom bg-white border-white border-0" style="height: 530px">
+              <div class="card-custom-img" style="background-image: url(https://img.freepik.com/free-vector/orchestra-concept-illustration_114360-3098.jpg?w=2000);margin-top: 2%;"></div>
               
               <div class="card-body" style="overflow-y: auto">
-                <h4 class="card-title">Card title</h4>
-                <p class="card-text">You can also set maximum height on and the card will not expand, instead a scrollbar in the card body will appear.</p>
-                <p class="card-text">Some example text to show the scrollbar.</p>
-                <p class="card-text">Lorem ipsum dolor sit amet, te vix omittam fastidii, enim paulo omnes ea has, illud luptatum no qui. Sed ea qualisque urbanitas, purto elit nec te. Possim inermis antiopam ut eum. Eos te zril labore laboramus, quem erant nam in. Ut sed molestie
-                  antiopam. At altera facilisis mel.</p>
+                <h5 class="card-title" style="color:#0a7b79; ;font-weight: bold; ">DREAMS Band</h5>
+                <p class="card-text" style="color:#7ca8a1; font-weight: bold;text-align: justify;">The DREAMS Band strives towards making a positive difference in the community by utilizing their musical skills. DREAMS Band is not only an opportunity to sing and motivate the audience but also uses music as a platform to empower communities.</p>
               </div>
               <div class="card-footer" style="background: inherit; border-color: inherit;">
-                <button type="button" class="btn-2">Option</button>
+                <center><button type="button" class="btn-2">Join Us</button></center>
               </div>
             </div>
     
@@ -249,19 +369,16 @@
 
           <div class="col-md-6 col-lg-3 pb-3">
     
-            <!-- Add a style="height: XYZpx" to div.card to limit the card height and display scrollbar instead -->
-            <div class="card card-custom bg-white border-white border-0" style="height: 450px">
-              <div class="card-custom-img" style="background-image: url(https://media.istockphoto.com/vectors/group-of-businesspeople-at-the-video-conference-call-vector-flat-vector-id1184657554?k=20&m=1184657554&s=612x612&w=0&h=wEedqPqoHRv8hG2phAIZxWvKJmZYnf16HLVe4TTxUx4=);"></div>
+            <div class="card card-custom bg-white border-white border-0" style="height: 530px">
+              <div class="card-custom-img" style="background-image: url(https://media.istockphoto.com/vectors/group-of-businesspeople-at-the-video-conference-call-vector-flat-vector-id1184657554?k=20&m=1184657554&s=612x612&w=0&h=wEedqPqoHRv8hG2phAIZxWvKJmZYnf16HLVe4TTxUx4=); margin-top: 2%;"></div>
               
               <div class="card-body" style="overflow-y: auto">
-                <h4 class="card-title">Card title</h4>
-                <p class="card-text">You can also set maximum height on and the card will not expand, instead a scrollbar in the card body will appear.</p>
-                <p class="card-text">Some example text to show the scrollbar.</p>
-                <p class="card-text">Lorem ipsum dolor sit amet, te vix omittam fastidii, enim paulo omnes ea has, illud luptatum no qui. Sed ea qualisque urbanitas, purto elit nec te. Possim inermis antiopam ut eum. Eos te zril labore laboramus, quem erant nam in. Ut sed molestie
-                  antiopam. At altera facilisis mel.</p>
+                <h5 class="card-title" style="color:#0a7b79; ;font-weight: bold; "
+               >Community Conferences</h5>
+                <p class="card-text" style="color:#7ca8a1; font-weight: bold;text-align: justify;">Started in 2017, Let Us Dream Conference provides a platform for researchers, practitioners and volunteers to discuss various possibilities of promoting community volunteerism among students, sharing their experiences and challenges </p>
               </div>
               <div class="card-footer" style="background: inherit; border-color: inherit;">
-                <button type="button" class="btn-2">Option</button>
+                <center><button type="button" class="btn-2">Join Us</button></center>
               </div>
             </div>
     
@@ -270,8 +387,224 @@
           </div>
         </div>
       </div>
+
+
+      <div class="container-fluid" style="margin-top:5%; margin-bottom: 5%; padding-top:5%; padding-bottom:8%;background-color: #d3f2e9; color: #0a7b79;">
+
+        <center><h1>LATEST EVENTS</h1></center>
+        <br>
+        <center><h3 class="big-heading">Preparing students to make meaningful contributions as engaged citizens and leaders in a complex world.</h3></center>
+
+        <div class="container" style="margin-top: 3%;">
+          <div class="row">
+            <div class="col-sm" style="margin-top: 1%;">
+              <img src="https://www.stanford.edu/wp-content/uploads/2022/08/20220520_Gaurab_Banerjee_N6A0157-2048x1366.jpg" class="img1" height="100" width="100">
+            </div>
+            <div class="col-sm" style="margin-top: 1%;">
+              <img src="https://www.stanford.edu/wp-content/uploads/2022/08/20220714Hopkins_Marine_Station_N6A8435.jpg" class="img1" height="100" width="100">
+            </div>
+            <div class="col-sm" style="margin-top: 1%;">
+              <img src="https://www.stanford.edu/wp-content/uploads/2022/04/Academics-3.jpg" class="img1" height="100" width="100">
+            </div>
+          </div>
+        </div>
+        
+      </div>
+
+      </div>
+
+    <!--Testimonials-->      
+    <div class="container" id="container-body">
+      <div class="row" style="margin-top: 100px; color: #7ca8a1;">
+        <div class="col">
+          <center><h1>TESTIMONIALS</h1></center>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 col-xs-12" style="margin-top: 5%; margin-bottom:5%;">
+          <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="row">
+
+                  <div class="col-lg-4 col-md-6">
+                    <div class="single-box">
+                      <div class="img-area">
+                        <img src="https://letusdream.org/wp-content/uploads/2020/05/Janet-_-Testimonial-2-120x120.jpg" class="img1" alt="testi1" height="26px" width="10%"></div>
+                        <div class="img-text">
+                        <h2>Canaan Charrior</h2>
+                        <p>I’ve witnessed the program change lives in a way that I have never seen any program with similar goals could ever even imagine. Everyone should have a chance to see that they can do anything, and I will help in any way I can to make that happen <emp><b>Read more</b></emp></p>
+                        
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-4 col-md-6">
+                    <div class="single-box">
+                      <div class="img-area">
+                        <img src="https://letusdream.org/wp-content/uploads/2020/05/let-Us-Dream-Profile-Pics-120x120.jpg" class="img1" alt="testi1"></div>
+                        <div class="img-text">
+                        <h2>Dr. Keith Sehon</h2>
+                        <p>….Through encouragement and support from their team members, those that were reluctant slowly allowed themselves to try. You could see a smile on their faces after they participated. The importance of team support,  <emp><b>Read more</b></emp></p>
+                        
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-4 col-md-6">
+                    <div class="single-box">
+                      <div class="img-area">
+                        <img src="https://letusdream.org/wp-content/uploads/2020/05/Dr-Keith-Sehon-120x120.jpg" class="img1" alt="testi1"></div>
+                        <div class="img-text">
+                        <h2>Janet Breard</h2>
+                        <p>The program has had an impact on student’s self-esteem and confidence. Many of the students are more confident in their approach toward their peers. Several of them have become more social and caring in their mannerisms  <emp><b>Read more</b></emp></p>
+                        
+                      </div>
+                    </div>
+                  </div>
+
+
+
+                </div>
+              </div>
+
+
+
+
+              <div class="carousel-item ">
+                <div class="row">
+
+                  <div class="col-lg-4 col-md-6">
+                    <div class="single-box">
+                      <div class="img-area">
+                        <img src="https://letusdream.org/wp-content/uploads/2022/01/Kaici-Gordon_2.jpeg" width="100" class="img1" height="100" alt="testi1"></div>
+                        <div class="img-text">
+                        <h2>Robin Sehon</h2>
+                        <p>Each student came to the program with different needs, as well as different backgrounds. However, what was the same in each student was some level of growth in motivation, confidence in personal ability, self esteem,  <emp><b>Read more</b></emp></p>
+                        
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-4 col-md-6">
+                    <div class="single-box">
+                      <div class="img-area">
+                        <img src="https://letusdream.org/wp-content/uploads/2022/01/Hope-Lenior.png" class="img1" alt="testi1"></div>
+                        <div class="img-text">
+                        <h2>Hope LeNoir</h2>
+                        <p>I was organizing my closet and came across my DREAMS tshirt.  This reminded me of how much fun I had with your students and how your volunteer team made me feel extremely welcome. Thank you for  <emp><b>Read more</b></emp></p>
+                        
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-4 col-md-6">
+                    <div class="single-box">
+                      <div class="img-area">
+                        <img src="http://letusdream.org/wp-content/uploads/2020/05/shan-hughes.jpg" class="img1" alt="testi1"></div>
+                        <div class="img-text">
+                        <h2>Kaici Gordon</h2>
+                        <p>Greetings everyone! I was first introduced to the DREAMS program by Dr. Fr. Lijo Thomas and Mrs. Maribeth Holzer. From the moment I met these two beautiful people, I immediately knew that this was the right program and community for me  <emp><b>Read more</b></emp></p>
+                        
+                      </div>
+                    </div>
+                  </div>
+
+                    
+
+                </div>
+              </div>
+
+
+
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br><br><br>
     
-    
+    <div class="container-fluid" style="margin-top:5%; margin-bottom: 5%; padding-top:5%;background-color: #d3f2e9; color: #0a7b79;">
+
+      <center><h1>OUR GLOBAL PRESENCE</h1></center>
+      <br>
+      <center><h3 class="big-heading">Presence is more than just being there.</h3></center>
+
+      <div class="container" style="margin-top: 3%;color: #7ca8a1; ">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 " style="padding-top: 10px; padding-bottom: 10px; ">
+            <h3>INDIA</h3>
+            <h6>Bangalore, Karnataka</h6>
+            <h6>Chaganacherry, Kerala</h6>
+            <h6>Mannanam, Kerala</h6>
+            <h6>Tiruvananthapuram, Kerala</h6>
+            <h6>Thiruvallam, Kerala</h6>
+          </div>
+          <div class="col-lg-3 col-md-6 " style="padding-top: 10px; padding-bottom: 10px; ">
+            <h3>USA</h3>
+            <h6>Bastrop, Louisiana</h6>
+            <h6>Dallas, Texas</h6>
+            <h6>LaGrande, Oregon</h6>
+            <h6>McAllen, Texas</h6>
+            <h6>Monroe, Louisiana</h6>
+          </div>
+          <div class="col-lg-3 col-md-6 " style="padding-top: 10px; padding-bottom: 10px; ">
+            <h3>Germany</h3>
+            <h6>Cologne</h6>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-6 " style="margin-bottom: 10%;text-align: center">
+            <img src="{% static 'home/location1.jpg' %}" class="img1" height="100" width="100" alt="location">
+          </div>
+
+        </div>
+      </div>
+      
+    </div>
+
+    <div class="container-fluid" style="margin-top:5%; margin-bottom: 8%; padding-top:4%;">
+      <center style="color: #0a7b79;"><h1>ABOUT Let Us Dream</h1></center>
+      <br>
+      <center><h3 class="big-heading" style="padding-top: 2%;">Join us to help foster international collaboration and increased global awareness of community improvement models, research initiatives, and best practices.</h3></center>
+
+      <div class="row" style="margin-top:5%; padding-left:20%; padding-right: 20%; text-align: center;">
+        <div class="feature-box col-lg-3">
+          <h3>Students</h3>
+          <div class="card-body" style="color:#7ca8a1;">
+            <h2 >1614</h2>
+          </div>
+         
+        </div>
+        <div class="feature-box col-lg-3">
+          <h3>Participants</h3>
+          <div class="card-body" style="color:#7ca8a1;">
+            <h2>3029</h2>
+          </div>
+          
+        </div>
+        <div class="feature-box col-lg-3">
+          <h3>Leadership</h3>
+          <div class="card-body" style="color:#7ca8a1;">
+            <h2>246</h2>
+          </div>
+          
+        </div>
+        <div class="feature-box col-lg-3">
+          <h3>Families</h3>
+          <div class="card-body" style="color:#7ca8a1;">
+            <h2 >3185</h2>
+          </div>
+      
+        </div>
+      </div>
+    </div>
+
+
     <script>
         var slideImg=document.getElementById("slideImg");
         var image = new Array(

@@ -1,7 +1,206 @@
-.logo {
-    height: 100px;
+/* about us */
+
+.aboutus {
+    width: 100%;
 }
 
-.card-title{
+
+
+.aboutus .main-about {
+    margin-top: 80px;
+
+    padding-bottom: 100px;
+    background: url(../../ltstatic/Aboutus/bg.png);
+    background-color: rgba(24, 125, 207, 0.15) !important;
+}
+
+.aboutus .frame {
+
+    display: block;
+    margin: auto;
+    width: 1000px;
+    height: 500px;
+}
+
+.aboutus .heading-h1 {
+    padding-top: 120px;
+    padding-bottom: 3px;
+    font-weight: 700;
+    font-size: 40px;
+}
+
+.aboutus .heading-h3 {
+    padding-top: 0px;
+    padding-bottom: 10px;
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.aboutus .bottom-img {
+    padding-top: 120px;
+    width: 100%;
+    background: url(../../ltstatic/Aboutus/download.svg);
+    opacity: 0.8;
+
+}
+
+.aboutus .pg {
+    padding: 50px 50px 20px 50px;
+    margin: 10px 30px;
+    font-size: 18px;
+    text-align: left;
+    font-weight: 500;
+    line-height: 40px;
+}
+
+.aboutus .pg p {
+    padding: 0px 5px 0px;
+}
+
+.aboutus .pg .div-link {
+    color: #2ea3f2;
+    font-weight: 600;
+}
+
+.aboutus .card {
+    height: 100%;
+}
+
+.aboutus .card-body .card-head {
+    min-height: 60px;
+    font-size: 18px;
+    text-align: center;
+    padding: 5px;
+}
+
+.aboutus .card-body .card-text {
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 15px;
+    text-align: center;
+    line-height: 20px;
+    text-transform: capitalize;
+}
+
+.aboutus .card-last .card-col {
+    padding: 20px;
+}
+
+.aboutus .card-last .card {
+    padding: 10px;
+}
+
+.aboutus .card-last .card-1 {
+    background: url(../../ltstatic/Aboutus/bg.png), linear-gradient(180deg, #3197f7 0%, #2377af 100%);
+    color: #fff;
+}
+
+.aboutus .card-last .card-2 {
+    background: url(../../ltstatic/Aboutus/bg.png), linear-gradient(180deg, rgba(64, 178, 35, 0.97) 0%, #167c15 100%);
+    color: #fff;
+}
+
+.aboutus .card-last .card-3 {
+    background: url(../../ltstatic/Aboutus/bg.png), linear-gradient(180deg, #3197f7 0%, #2377af 100%);
+    color: #fff;
+}
+
+.aboutus .card-last .card-4 {
+    background: url(../../ltstatic/Aboutus/bg.png), linear-gradient(180deg, rgba(64, 178, 35, 0.97) 0%, #167c15 100%);
+    color: #fff;
+}
+
+.aboutus .card-last .card-title {
+    color: #fff;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.aboutus .card-last .card-text {
+    text-align: left;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.aboutus .card-last .card-text ul {
+    margin-top: 5px;
+    padding: 10px;
+}
+
+.aboutus .card-last .card-body {
+    text-align: left;
+}
+
+@media (max-width:991px) {
+    .aboutus .main-about {
+        margin-top: 60px;
+        width: 100%;
+        padding-bottom: 80px;
+        text-align: left;
+    }
+
+    .heading-h1 {
+        font-size: 25px;
+        padding-top: 100px;
+
+    }
+
+    .aboutus p {
+        font-size: 15px;
+    }
+
+    .aboutus .frame {
+        display: block;
+        margin: auto;
+        width: 350px;
+        height: 175px;
+    }
+
+    .aboutus .pg {
+        padding: 50px 10px 20px 10px;
+        margin: 10px 10px;
+
+
+    }
+}
+
+@media (max-width:394px) {
+    .aboutus {
+        width: 377px;
+    }
+
+    .heading-h1 {
+        font-size: 25px;
+        padding-top: 100px;
+
+    }
+
+    .aboutus .heading-h1 {
+        font-size: 25px;
+        padding-top: 100px;
+
+    }
+
+    .aboutus .main-about,
+    .aboutus .bottom-img {
+        width: 394px;
+    }
+
+    .aboutus .img-middle {
+        width: 300px;
+        height: 200px;
+    }
+}
+
+
+
+
+
+.logo {
+    height: 10px;
+
+}
+
+.card-title {
     color: #755400;
 }

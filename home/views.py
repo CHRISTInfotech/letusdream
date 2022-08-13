@@ -11,7 +11,13 @@ def aboutUs(request):
 
 
 def media(request):
-    return render(request, 'aboutUs/ltmedia.html')
+    return render(request, 'aboutUs/media.html')
+
+def mediaPhotos(request):
+    return render(request,'aboutUs/media-view-photo.html')
+
+def photoGallery(request):
+    return render(request,'aboutUs/photo-gallery.html')
 
 
 def aboutConference(request):
@@ -19,7 +25,7 @@ def aboutConference(request):
 
 
 def annualConference(request):
-    return render(request, 'conference/annualConference.html')
+    return render(request, 'conference/annalConference.html')
 
 
 def trriennialConference(request):
@@ -52,13 +58,13 @@ def yclpCourse(request):
 
 def dreams(request, drm):
     if drm == 'band':
-        return render(request, 'dreams/dreamsBand.html',{'drm':drm})
+        return render(request, 'dreams/dreamsBand.html', {'drm': drm})
     elif drm == 'proclub':
-        return render(request, 'dreams/dreamsProclub.html',{'drm':drm})
+        return render(request, 'dreams/dreamsProclub.html', {'drm': drm})
     elif drm == 'program':
-        return render(request, 'dreams/dreamsProgram.html',{'drm':drm})
+        return render(request, 'dreams/dreamsProgram.html', {'drm': drm})
     elif drm == 'leadershipnetwork':
-        return render(request, 'dreams/leadershipNetwork.html',{'drm':drm})
+        return render(request, 'dreams/leadershipNetwork.html', {'drm': drm})
 
 
 def locations(request, loc):
