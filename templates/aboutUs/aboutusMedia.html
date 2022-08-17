@@ -6,5 +6,32 @@
 {% endblock %}
 
 {% block content %}
-    
+    <style>
+        .pg {
+            padding-top: 50px;
+            padding-right: 150px;
+            padding-bottom: 30px;
+            padding-left: 150px;
+        }
+    </style>
+    <div clss="pg">
+        <div class="row">
+            <div class="col-6">
+                <img src={% static 'About us/media-pressrelease.png' %}>
+
+            </div>
+
+            <div class="col-6">
+                <img src={% static 'About us/media-youtube.jpg' %}>
+
+
+            </div>
+                <div class="pg">
+                    <img src={% static 'About us/media-photogallery.jpg' %}>
+
+
+                </div>
+        </div>
+        </div>
+    </div>
 {% endblock %}
