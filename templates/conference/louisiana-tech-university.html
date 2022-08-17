@@ -1,0 +1,110 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+
+{% endblock %}
+
+{% block content %}
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <!--Google font-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    
+        <!--  Bootstrap CSS --> 
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+        <!-- Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+        <style>
+            .move-img{
+                
+                position: relative;
+                animation: moving-img 3s;
+                animation-fill-mode: forwards;
+            }
+
+            @keyframes moving-img {
+                from {top: 0px; left:0px;}
+                to {top: 100px; left:200px;}
+            }
+
+            .img1{
+                width: 100% !important;
+                height: 100% !important;
+            }
+
+            .container-body{
+                margin-top: 8%;
+                height: 500px;
+                background-color: #d3f2e9;
+            }
+
+            .row{
+                height: 500px;
+            }
+
+            ol li {
+                list-style-type: none;
+                counter-increment: item;
+            }
+
+            ol li:before {
+                content: counter(item);
+                margin-right: 5px;
+                font-size: 80%;
+                background-color: #0a7b79;
+                color: #d3f2e9;
+                font-weight: bold;
+                padding: 3px 8px;
+                border-radius: 3px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container-body">
+            <div class="row">
+                <div class="col-lg-4 col-md-4">
+                    <div class="move-img">
+                        <img src="https://www.ceros.com/inspire/wp-content/uploads/sites/5/2021/06/3-up-Characters.gif" class="img1">
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-2"></div>
+                <div class="col-lg-6 col-md-6" style="color:#0a7b79; margin-top: 1%;">
+                    <center>
+                        <h2>VISION</h2>
+                        <p>“Empowered local communities for sustainable impact and improvement.”</p>
+                        <br>
+                        <br>
+                        <h2>MISSION</h2>
+                    </center>
+                        <p style="text-transform: justify;">The Let Us Dream Conference was established in 2017 for the purpose of providing a forum for sharing experiences with successes and challenges in community improvement organizations and efforts.
+                    <br> Broad conference goals are to:
+                         <ol class="list">
+                            <li>Improve networking and collaboration among all those interested in community improvement organizations and programs.</li>
+                            <br>
+                            <li>Promote volunteerism and empower all those involved in community improvement organizations and initiatives, including employees, volunteers, post-secondary students, researchers, and practitioners.</li>
+                            <br>
+                            <li>Create a professional learning organization dedicated to improving local communities and characterized by a culture of shared researcher and practitioner knowledge, skills, theories, and best practices.</li>
+                         </ol>   
+                        </p>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+    </body>
+    </html>
+{% endblock %}
