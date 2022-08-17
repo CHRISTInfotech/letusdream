@@ -1,8 +1,7 @@
 from django.contrib import admin
 from django.urls import path, include
 
-from home.views import index, locations, aboutUs, media, aboutConference, mediaPhotos, photoGallery, trriennialConference, buNY, cuB, cuT, jncaB, \
-    ltuLouisiana, dreams, annualConference, yclpCourse, research, publications
+from home.views import index, locations, aboutUs, louisianatechuniversity, media, aboutConference, mediaPhotos, photoGallery, trriennialConference, buNY, cuB, cuT, jncaB, dreams, annualConference, yclpCourse, research, publications
 
 urlpatterns = [
     path('', index, name='main'),
@@ -26,7 +25,7 @@ urlpatterns = [
          name='christ-university-thiruvananthapuram'),
     path('jyoti-nivas-college-autonomous', jncaB,
          name='jyoti-nivas-college-autonomous'),
-    path('louisiana-tech-university', ltuLouisiana,
+    path('louisiana-tech-university', louisianatechuniversity,
          name='louisiana-tech-university'),
     path('dreams/<str:drm>', dreams, name='dreams'),
     path('locations/<str:loc>', locations, name='locations'),
