@@ -11,7 +11,13 @@ def aboutUs(request):
 
 
 def media(request):
-    return render(request, 'aboutUs/aboutusMedia.html')
+    return render(request, 'aboutUs/media.html')
+
+def mediaPhotos(request):
+    return render(request,'aboutUs/media-view-photo.html')
+
+def photoGallery(request):
+    return render(request,'aboutUs/photo-gallery.html')
 
 
 def aboutConference(request):
@@ -19,7 +25,7 @@ def aboutConference(request):
 
 
 def annualConference(request):
-    return render(request, 'conference/annalConference.html')
+    return render(request, 'conference/annual-conference.html')
 
 
 def trriennialConference(request):
@@ -42,8 +48,8 @@ def jncaB(request):
     return render(request, 'conference/jncaB.html')
 
 
-def ltuLouisiana(request):
-    return render(request, 'conference/ituLouisiana.html')
+def louisianatechuniversity(request):
+    return render(request, 'conference/louisiana-tech-university.html')
 
 
 def yclpCourse(request):
