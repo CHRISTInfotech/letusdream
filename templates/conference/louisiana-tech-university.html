@@ -27,96 +27,679 @@
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+        <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+/>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
         <style>
-            .move-img{
-                position: relative;
-                animation: moving-img 1s;
-                animation-fill-mode: forwards;
-            }
+        @import url(&#39;https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600,700,800&#39;);
 
-            @keyframes moving-img {
-                from {top: 0px; left:0px;}
-                to {top: 80px; left:200px;}
-            }
-
-            .img1{
-                width: 100% !important;
-                height: 100% !important;
-            }
-
-            .container-body{
-                margin-top: 8%;
-                height: 800px;
-                background-color: #0a7b79;
-            }
-
-            .row{
-                height: 500px;
-            }
-
-            ol li {
-                list-style-type: none;
-                counter-increment: item;
-            }
-
-            ol li:before {
-                content: counter(item);
-                margin-right: 5px;
-                font-size: 80%;
-                background-color: #d3f2e9;
+        h1{
+                text-align: center;
+                font-family: 'Montserrat', sans-serif;
+                font-weight: bolder !important;
                 color: #0a7b79;
-                font-weight: bold;
-                padding: 3px 8px;
-                border-radius: 3px;
+                font-size: 3.5rem;
+                text-align: center;
+                margin: 5% 0 5% 0;    
             }
 
-            .circleBase {
-                border-radius: 50%;
-            }
+.body-content {
+    padding-top: 10%;
+	 min-height: 50vh;
+     font-family: 'Montserrat', sans-serif;
+	 display: flex;
+}
+ .blog-slider {
+	 width: 95%;
+	 position: relative;
+	 max-width: 800px;
+	 margin: auto;
+	 background:#d3f2e9;
+	 box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
+	 padding: 25px;
+	 border-radius: 25px;
+	 height: 400px;
+	 transition: all 0.3s;
+}
+ @media screen and (max-width: 992px) {
+	 .blog-slider {
+		 max-width: 680px;
+		 height: 100px;
+	}
+}
+ @media screen and (max-width: 768px) {
+	 .blog-slider {
+		 min-height: 500px;
+		 height: auto;
+		 margin: 180px auto;
+	}
+}
+ @media screen and (max-height: 500px) and (min-width: 992px) {
+	 .blog-slider {
+		 height: 350px;
+	}
+}
+ .blog-slider__item {
+	 display: flex;
+	 align-items: center;
+}
+ @media screen and (max-width: 768px) {
+	 .blog-slider__item {
+		 flex-direction: column;
+	}
+}
+ .blog-slider__item.swiper-slide-active .blog-slider__img img {
+	 opacity: 1;
+	 transition-delay: 0.3s;
+}
+ .blog-slider__item.swiper-slide-active .blog-slider__content &gt;
+ * {
+	 opacity: 1;
+	 transform: none;
+}
+ .blog-slider__item.swiper-slide-active .blog-slider__content &gt;
+ *:nth-child(1) {
+	 transition-delay: 0.3s;
+}
+ .blog-slider__item.swiper-slide-active .blog-slider__content &gt;
+ *:nth-child(2) {
+	 transition-delay: 0.4s;
+}
+ .blog-slider__item.swiper-slide-active .blog-slider__content &gt;
+ *:nth-child(3) {
+	 transition-delay: 0.5s;
+}
+ .blog-slider__item.swiper-slide-active .blog-slider__content &gt;
+ *:nth-child(4) {
+	 transition-delay: 0.6s;
+}
+ .blog-slider__item.swiper-slide-active .blog-slider__content &gt;
+ *:nth-child(5) {
+	 transition-delay: 0.7s;
+}
+ .blog-slider__item.swiper-slide-active .blog-slider__content &gt;
+ *:nth-child(6) {
+	 transition-delay: 0.8s;
+}
+ .blog-slider__item.swiper-slide-active .blog-slider__content &gt;
+ *:nth-child(7) {
+	 transition-delay: 0.9s;
+}
+ .blog-slider__item.swiper-slide-active .blog-slider__content &gt;
+ *:nth-child(8) {
+	 transition-delay: 1s;
+}
+ .blog-slider__item.swiper-slide-active .blog-slider__content &gt;
+ *:nth-child(9) {
+	 transition-delay: 1.1s;
+}
+ .blog-slider__item.swiper-slide-active .blog-slider__content &gt;
+ *:nth-child(10) {
+	 transition-delay: 1.2s;
+}
+ .blog-slider__item.swiper-slide-active .blog-slider__content &gt;
+ *:nth-child(11) {
+	 transition-delay: 1.3s;
+}
+ .blog-slider__item.swiper-slide-active .blog-slider__content &gt;
+ *:nth-child(12) {
+	 transition-delay: 1.4s;
+}
+ .blog-slider__item.swiper-slide-active .blog-slider__content &gt;
+ *:nth-child(13) {
+	 transition-delay: 1.5s;
+}
+ .blog-slider__item.swiper-slide-active .blog-slider__content &gt;
+ *:nth-child(14) {
+	 transition-delay: 1.6s;
+}
+ .blog-slider__item.swiper-slide-active .blog-slider__content &gt;
+ *:nth-child(15) {
+	 transition-delay: 1.7s;
+}
+ .blog-slider__img {
+    position: relative;
+	 width: 300px;
+	 flex-shrink: 0;
+	 height: 300px;
+	 background-image: linear-gradient(147deg, #d3f2e9 100%,#0a7b79 0%);
+	 box-shadow: 4px 13px 30px 1px rgba(10,123,121,0.3);
+	 border-radius: 20px;
+	 transform: translateX(-80px);
+	 overflow: hidden;
+}
 
-            .type3 {
-                width: 100%;
-                height: 110%;
-                background: #d3f2e9;
-            }
+.text{
+position: absolute;
+ bottom: 0;
+ right: 0;
+ background: black;
+ color: white;
+ margin-bottom: 5px;
+ font-family: sans-serif;
+ opacity: 0;
+ visibility: hidden;
+ text-align: center;
+ -webkit-transition: visibility 0s, opacity 0.5s linear; 
+ transition: visibility 0s, opacity 0.5s linear;
+}
+
+.blog-slider__img:hover{
+    cursor: pointer;
+}
+
+.blog-slider__img:hover .text{
+ width: 100%;
+ padding: 8px 15px;
+ visibility: visible;
+ opacity: 0.7; 
+}
+
+ .blog-slider__img:after {
+	 content: &#39;
+	 position: absolute;
+	 top: 0;
+	 left: 0;
+	 width: 100%;
+	 height: 100%;
+	 background-image: linear-gradient(147deg, #fe8a39 0%, #fd3838 74%);
+	 border-radius: 20px;
+	 opacity: 0.8;
+}
+ .blog-slider__img img {
+	 width: 100%;
+	 height: 100%;
+	 object-fit: cover;
+	 display: block;
+	 opacity: 0;
+	 border-radius: 20px;
+	 transition: all 0.3s;
+}
+ @media screen and (max-width: 768px) {
+	 .blog-slider__img {
+		 transform: translateY(-50%);
+		 width: 90%;
+	}
+}
+ @media screen and (max-width: 576px) {
+	 .blog-slider__img {
+		 width: 95%;
+	}
+}
+ @media screen and (max-height: 500px) and (min-width: 992px) {
+	 .blog-slider__img {
+		 height: 270px;
+	}
+}
+ .blog-slider__content {
+	 padding-right: 25px;
+}
+ @media screen and (max-width: 768px) {
+	 .blog-slider__content {
+		 margin-top: -80px;
+		 text-align: center;
+		 padding: 0 30px;
+	}
+}
+ @media screen and (max-width: 576px) {
+	 .blog-slider__content {
+		 padding: 0;
+	}
+}
+ .blog-slider__content &gt;
+ * {
+	 opacity: 0;
+	 transform: translateY(25px);
+	 transition: all 0.4s;
+}
+ .blog-slider__code {
+	 color: #7ca8a1;
+	 margin-bottom: 15px;
+	 display: block;
+	 font-weight: 500;
+}
+ .blog-slider__title {
+	 font-size: 24px;
+	 font-weight: 700;
+	 color: #0a7b79;
+	 margin-bottom: 20px;
+}
+ .blog-slider__text {
+	 color: #0a7b79;
+	 margin-bottom: 30px;
+	 line-height: 1.5em;
+}
+
+ @media screen and (max-width: 576px) {
+	 .blog-slider__button {
+		 width: 100%;
+	}
+}
+ .blog-slider .swiper-container-horizontal &gt;
+ .swiper-pagination-bullets, .blog-slider .swiper-pagination-custom, .blog-slider .swiper-pagination-fraction {
+	 bottom: 10px;
+	 left: 0;
+	 width: 100%;
+}
+ .blog-slider__pagination {
+	 position: absolute;
+	 z-index: 21;
+	 right: 20px;
+	 width: 11px !important;
+	 text-align: center;
+	 left: auto !important;
+	 top: 50%;
+	 bottom: auto !important;
+	 transform: translateY(-50%);
+}
+ @media screen and (max-width: 768px) {
+	 .blog-slider__pagination {
+		 transform: translateX(-50%);
+		 left: 50% !important;
+		 top: 205px;
+		 width: 100% !important;
+		 display: flex;
+		 justify-content: center;
+		 align-items: center;
+	}
+}
+ .blog-slider__pagination.swiper-pagination-bullets .swiper-pagination-bullet {
+	 margin: 8px 0;
+}
+ @media screen and (max-width: 768px) {
+	 .blog-slider__pagination.swiper-pagination-bullets .swiper-pagination-bullet {
+		 margin: 0 5px;
+	}
+}
+ .blog-slider__pagination .swiper-pagination-bullet {
+	 width: 11px;
+	 height: 11px;
+	 display: block;
+	 border-radius: 10px;
+	 background: #062744;
+	 opacity: 0.2;
+	 transition: all 0.3s;
+}
+ .blog-slider__pagination .swiper-pagination-bullet-active {
+	 opacity: 1;
+	 background: #0a7b79;
+	 height: 30px;
+	 box-shadow: 0px 0px 20px rgba(252, 56, 56, 0.3);
+}
+ @media screen and (max-width: 768px) {
+	 .blog-slider__pagination .swiper-pagination-bullet-active {
+		 height: 11px;
+		 width: 30px;
+	}
+}
+
+        .btn-2{
+            background: transparent;
+            border: 2px solid #fff;
+            width: 200px;
+            padding: 15px 15px;
+            text-align: center;
+            border-radius: 25px ;
+            font-weight: bold;
+            color: #0a7b79;
+        }
+
+        .btn-2:hover{
+            border: 2px solid #d3f2e9;
+            background: #d3f2e9;
+            color: #7ca8a1;
+            text-decoration: none;
+        }
+
+        .card{
+            position: relative;
+            width: 350px;
+            height: 190px;
+            background-color: #d3f2e9;
+            border-radius: 20px;
+            box-shadow: 0 35px 80px rgba(0,0,0,0.15);
+            transition: 0.5s;
+        }
+
+        .card:hover{
+            height: 450px;
+        }
+
+        .imgbox{
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            background: #000;
+            left:50%;
+            transform: translateX(-50%);
+            top:-50px;
+            border-radius: 20px;
+            box-shadow: 0 15px 50px rgba(0,0,0,0.35);
+            overflow: hidden;
+            transition: 0.5s;
+        }
+
+        .imgbox img{
+            position: absolute;
+            top:0;
+            left:0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+
+        }
+
+        .card:hover .imgbox{
+            width: 250px;
+            height: 250px;
+        }
+
+        .card .content{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            overflow: hidden;
+        }
+
+        .card .content .details{
+            padding: 40px;
+            text-align: center;
+            width: 100%;
+            transition: 0.5s;
+            transform: translateY(150px);
+        }
+
+        .card:hover .content .details{
+            transform: translate(0px);
+        }
+
+        .card .content .details h2 {
+            font-size: 1.25em;
+            font-weight: 600;
+            color: #0a7b79;
+            line-height: 1.2em;
+        }
+
+        .card .content .details h2 span{
+            font-size: 0.75em;
+            font-weight:500;
+            color: #7ca8a1;
+        }
+
+        .card .content .details .data{
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+        }
+
+        .card .content .details .data h3{
+            font-size: 1em;
+            color: #0a7b79; 
+            line-height: 1.2em;
+            font-weight: 600;
+        }
+
+        .card .content .details .data h3 span{
+            font-size: 0.85em;
+            font-weight: 400;
+            color: #7ca8a1;
+        }
+
+        .container-fluid{
+            margin-bottom: 20%;
+        }
+
+        .frame {
+        display: block;
+        margin: auto;
+        width: 700px;
+        height: 380px;
+        border-radius: 20px;
+    }
 
         </style>
     </head>
     <body>
-        <div class="container-body">
+        <div class="body-content">
+            <div class=" blog-slider">
+                <div class="blog-slider__wrp swiper-wrapper">
+                  <div class="blog-slider__item swiper-slide">
+                    <div class="blog-slider__img">
+                      <img src="https://www.pngkey.com/png/detail/333-3339997_mission-logo-mision-png.png" alt="">
+                      <div class="text">History</div>
+                    </div>
+                    <div class="blog-slider__content">
+                      <span class="blog-slider__code">26 December 2017</span>
+                      <div class="blog-slider__title">LET US DREAM</div>
+                      <div class="blog-slider__text">
+                        The LET US DREAM annual community conference was first conducted in 2017 at Louisiana Tech University. The purpose of this conference was to provide a forum for professionals, scholars, researchers, and post-secondary students to share experiences, challenges, and achievements in their respective efforts towards community improvement.
+                      </div>
+                      
+                      <a href="#" class="btn-2">READ MORE</a>
+                    </div>
+                  </div>
+                  <div class="blog-slider__item swiper-slide">
+                    <div class="blog-slider__img">
+                      <img src="https://i.pinimg.com/564x/3f/c6/e9/3fc6e9c530ea4dd0837f03d842136973.jpg" alt="">
+                      <div class="text">Vision</div>
+                    </div>
+                    <div class="blog-slider__content">
+                      <span class="blog-slider__code">26 December 2017</span>
+                      <div class="blog-slider__title">LET US DREAM</div>
+                      <div class="blog-slider__text">
+                        The LET US DREAM annual community conference was first conducted in 2017 at Louisiana Tech University. The purpose of this conference was to provide a forum for professionals, scholars, researchers, and post-secondary students to share experiences, challenges, and achievements in their respective efforts towards community improvement.
+                      </div>
+                      
+                      <a href="#" class="btn-2">READ MORE</a>
+                    </div>
+                  </div>
+                  
+                  <div class="blog-slider__item swiper-slide">
+                    <div class="blog-slider__img">
+                      <img src="https://i.pinimg.com/564x/20/11/48/201148c6005b1c135e7da52226f2e7de.jpg" alt="">
+                      <div class="text">Mission</div>
+                    </div>
+                    <div class="blog-slider__content">
+                      <span class="blog-slider__code">26 December 2017</span>
+                      <div class="blog-slider__title">LET US DREAM</div>
+                      <div class="blog-slider__text">
+                        The LET US DREAM annual community conference was first conducted in 2017 at Louisiana Tech University. The purpose of this conference was to provide a forum for professionals, scholars, researchers, and post-secondary students to share experiences, challenges, and achievements in their respective efforts towards community improvement.
+                      </div>
+                      
+                      <a href="#" class="btn-2">READ MORE</a>
+                    </div>
+                  </div>
+                  
+                </div>
+                <div class="blog-slider__pagination"></div>
+              </div>
+    
+        </div>
+<br><br>
+        <h1>Conference Chairs</h1>
+        <div class="container-body" style="padding: 0 15% 0 15%;">
             <div class="row">
-                <div class="col-lg-4 col-md-4 ">
-                    <div class="move-img circleBase type3">
-                        <img src="https://www.ceros.com/inspire/wp-content/uploads/sites/5/2021/06/3-up-Characters.gif" class="img1">
+                <div class="col-lg-4">
+                    <div class="card">
+                        <div class="imgbox">
+                            <img src="https://letusdream.org/wp-content/uploads/2021/08/Tiffany-Bates-min3.jpg" alt="img1">
+                        </div>
+                        <div class="content">
+                            <div class="details">
+                                <h2>Dr.Tiffany Bates
+                                <br>
+                                <span>Conference Planning chair</span></h2>
+                                <div class="data">
+                                    <h3>Conference Dates
+                                        21 October 2021, 10 AM to 4 PM
+                                        <br>
+                                        <span>at Louisiana Tech’s University Hall.</span></h3>
+                                    
+                                </div>
+                                <div class="actionBtn">
+                                    <center><a href="#" class="btn-2">READ MORE</a></center>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-2 col-md-2 ">
-
+                
+                <div class="col-lg-4">
+                    <div class="card">
+                        <div class="imgbox">
+                            <img src="https://letusdream.org/wp-content/uploads/2021/08/image0-min3.jpeg" alt="img1">
+                        </div>
+                        <div class="content">
+                            <div class="details">
+                                <h2>Mrs.Ella Nimmers
+                                <br>
+                                <span>Conference Co-chair</span></h2>
+                                <div class="data">
+                                    <h3>Conference Dates
+                                        21 October 2021, 10 AM to 4 PM
+                                        <br>
+                                        <span>at Louisiana Tech’s University Hall.</span></h3>
+                                    
+                                </div>
+                                <div class="actionBtn">
+                                    <center><a href="#" class="btn-2">READ MORE</a></center>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-lg-6 col-md-6" style="color:#fff; margin-top: 1%;">
-                    <center>
-                        <h2>VISION</h2>
-                        <p>“Empowered local communities for sustainable impact and improvement.”</p>
-                        <br>
-                        <br>
-                        <h2>MISSION</h2>
-                    </center>
-                        <p style="text-transform: justify;">The Let Us Dream Conference was established in 2017 for the purpose of providing a forum for sharing experiences with successes and challenges in community improvement organizations and efforts.
-                    <br> Broad conference goals are to:
-                         <ol class="list">
-                            <li>Improve networking and collaboration among all those interested in community improvement organizations and programs.</li>
-                            <br>
-                            <li>Promote volunteerism and empower all those involved in community improvement organizations and initiatives, including employees, volunteers, post-secondary students, researchers, and practitioners.</li>
-                            <br>
-                            <li>Create a professional learning organization dedicated to improving local communities and characterized by a culture of shared researcher and practitioner knowledge, skills, theories, and best practices.</li>
-                         </ol>   
-                        </p>
-                    
-                    
+                <div class="col-lg-4">
+                    <div class="card">
+                        <div class="imgbox">
+                            <img src="https://letusdream.org/wp-content/uploads/2021/08/CCB-Head-Shot-min3.jpg" alt="img1">
+                        </div>
+                        <div class="content">
+                            <div class="details">
+                                <h2>Mrs.Cathi Cox-Boniol
+                                <br>
+                                <span>Conference Co-chair</span></h2>
+                                <div class="data">
+                                    <h3>Conference Dates
+                                        21 October 2021, 10 AM to 4 PM
+                                        <br>
+                                        <span>at Louisiana Tech’s University Hall.</span></h3>
+                                    
+                                </div>
+                                <div class="actionBtn">
+                                    <center><a href="#" class="btn-2">READ MORE</a></center>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+
+<br><br>
+        <center><h1>Promo Media</h1></center>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-6 ">
+                            <div id="carouselExampleFade" class="carousel slide carousel-fade carousel-first"
+                                data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="https://letusdream.org/wp-content/uploads/2020/07/DREAMS-BAND-7-1-min-scaled.jpg"
+                                            class="d-block w-100" alt="DREAMS Program" />
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="https://letusdream.org/wp-content/uploads/2020/07/DREAMS-Site-Banner-2-1-scaled.jpg"
+                                            class="d-block w-100" alt="DREAMS Program" />
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="https://letusdream.org/wp-content/uploads/2020/07/DREAMS-BAND-4-1-min-scaled.jpg"
+                                            class="d-block w-100" alt="DREAMS Program" />
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
+                                    data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
+                                    data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div id="carouselExampleIndicators" class="carousel slide carousel-second" data-bs-ride="carousel">
+                                <div class="carousel-indicators">
+                                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                                        class="active" aria-current="true" aria-label="Slide 1"></button>
+                                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                                        aria-label="Slide 2"></button>
+                                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                                        aria-label="Slide 3"></button>
+                                </div>
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <iframe class="frame" src="https://www.youtube.com/embed/VhBG7GVXcNw" 
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                            allowfullscreen></iframe>
         
+                                    </div>
+                                    <div class="carousel-item">
+                                        <iframe class="frame" src="https://www.youtube.com/embed/Dm8-XtFZzA4"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                            allowfullscreen></iframe>
+        
+                                    </div>
+                                    <div class="carousel-item">
+                                        <iframe class="frame" src="https://www.youtube.com/embed/vmLuafs-BhE?feature=oembed"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                            allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                            </div>
+        
+                        </div>
+                    </div>
+                   
+                </div>
+            
+           
+
+
+
+        <!-- kshfgdshgk -->
+
+       
+        
+        
+          <script>
+            var swiper = new Swiper('.blog-slider', {
+            spaceBetween: 30,
+            effect: 'fade',
+            loop: true,
+            mousewheel: {
+                invert: false,
+            },
+            // autoHeight: true,
+            pagination: {
+                el: '.blog-slider__pagination',
+                clickable: true,
+            }
+            });
+          </script>
     </body>
     </html>
 {% endblock %}
