@@ -7,6 +7,48 @@
 <head>
     <meta charset="UTF-8">
     <title>Dreams</title>
+    <style>
+        .button {
+                display: inline-block;
+                border-radius: 100px;
+                background-color: MediumSeaGreen;
+                border: none;
+                color: #FFFFFF;
+                text-align: center;
+                font-size: 20px;
+                padding: 14px 28px;
+                width: 300px;
+                transition: all 0.5s;
+                cursor: pointer;
+                margin: 5px;
+                background-image: linear-gradient(rgba(0, 128, 0, 0.79),rgba(0, 0, 255, 0.594));
+            }
+
+            .button span {
+                cursor: pointer;
+                display: inline-block;
+                position: relative;
+                transition: 0.5s;
+            }
+
+            .button span:after {
+                content: '\00bb';
+                position: absolute;
+                opacity: 0;
+                top: 0;
+                right: -20px;
+                transition: 0.5s;
+            }
+
+            .button:hover span {
+                padding-right: 25px;
+            }
+
+            .button:hover span:after {
+                opacity: 1;
+                right: 0;
+            }
+    </style>
 </head>
 <body>
 >>>>>>> 15c40254c0de955e83f47ef474f5e36afd5401c2
@@ -16,5 +58,136 @@
 {% endblock %}
 
 {% block content %}
-    
+
+    <style>
+        .bg {
+                background-image: url('https://letusdream.org/wp-content/uploads/2020/06/bg.png'),
+            linear-gradient(180deg,
+                rgba(12, 113, 195, 0.15) 0%,
+                rgba(12, 113, 195, 0.15));
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: 100% 100%;
+
+            }
+        .bg2 {
+            background: linear-gradient(0deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.9)),url("https://letusdream.org/wp-content/uploads/2020/05/dreams-world-map-scaled.jpg");
+            background-size: cover;
+            background-attachment: scroll;
+            background-position: center;
+        }
+        .button {
+                display: inline-block;
+                border-radius: 100px;
+                background-color: MediumSeaGreen;
+                border: none;
+                color: #FFFFFF;
+                text-align: center;
+                font-size: 20px;
+                padding: 14px 28px;
+                width: 300px;
+                transition: all 0.5s;
+                cursor: pointer;
+                margin: 5px;
+                background-image: linear-gradient(rgba(0, 128, 0, 0.71),rgba(0, 0, 255, 0.594));
+            }
+
+            .button span {
+                cursor: pointer;
+                display: inline-block;
+                position: relative;
+                transition: 0.5s;
+            }
+
+            .button span:after {
+                content: '\00bb';
+                position: absolute;
+                opacity: 0;
+                top: 0;
+                right: -20px;
+                transition: 0.5s;
+            }
+
+            .button:hover span {
+                padding-right: 25px;
+            }
+
+            .button:hover span:after {
+                opacity: 1;
+                right: 0;
+            }
+            a {
+                text-decoration: none;
+                color:black;
+            }
+    </style>
+    <body>
+        <div class="container-fluid">
+            <img src="https://letusdream.org/wp-content/uploads/2020/07/Let-Us-Dream-Pro-club-slider.jpg" class="w-100">
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col d-flex justify-content-center align-items-center">
+                    <button type="button" class="button"><span>Join Us</span></button>
+                </div>
+                <div class="col">
+                    <img src="https://letusdream.org/wp-content/uploads/2020/07/Dreams-PRO-CLUB.png" class="img-fluid" >
+                </div>
+                <div class="col d-flex justify-content-center align-items-center">
+                    <button type="button" class="button"><span>Our Locations</span></button>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid bg">
+            <div class="container">
+                <div class="row py-5 my-5">
+                    <div class="col">
+                        <h2 class="text-center">About <b>DREAMS</b> Pro Club</h2>
+                        <p class="text-justify">
+                            DREAMS Pro Club is a support group to help in personal and professional development of the young professionals. A team consisting of 10-12 working professionals meet once every month to discuss strategies to understand and support personal and interpersonal life situations.
+                        </p>
+                        <iframe width="516px" height="290px"
+                            src="https://youtu.be/HjYBnoN06RA">
+                        </iframe>
+                    </div>
+                    <div class="col">
+                        <img src="https://letusdream.org/wp-content/uploads/2020/07/Letusdream-proclub-15773-min-scaled.jpg" class="img-fluid rounded">
+                        <p class="text-justify my-5">
+                            The Club helps inculcate the values of identity and community belonging in the members. Apart from enhancing communication skills and problem-solving skills, it also focuses on generating positive attitudes about self and the other, developing leadership, cooperation, and community engagement.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid bg2 my-5">
+            <div class="container px-5">
+                <h2 class="text-center my-5"><strong>OUR L0CATIONS</strong></h2>
+                <div class="row">
+                    <div class="col">
+                        <h2><strong>INDIA</strong></h2>
+                        <h5 class="mt-5"><a href="">Bangalore, Karnataka</a></h5>
+                        <h5 class="my-4"><a href="">Chaganacherry, Kerala</a></h5>
+                        <h5 class="my-4"><a href="">Mannanam, Kerala</a></h5>
+                        <h5 class="my-4"><a href="">Tiruvananthapuram, Kerala</a></h5>
+                        <h5 class="my-4"><a href="">Thiruvallam, Kerala</a></h5>
+                    </div>
+                    <div class="col">
+                        <h2><strong>U.S.A</strong></h2>
+                        <h5 class="mt-5"><a href="">Bastrop, Louisiana</a></h5>
+                        <h5 class="my-4"><a href="">Dallas, Texas</a></h5>
+                        <h5 class="my-4"><a href="">LaGrande, Oregon</a></h5>
+                        <h5 class="my-4"><a href="">McAllen, Texas</a></h5>
+                        <h5 class="my-4"><a href="">Monroe, Louisiana</a></h5>
+                    </div>
+                    <div class="col">
+                        <h2><strong>GERMANY</strong></h2>
+                        <h5 class="mt-5"><a href="">Cologne</a></h5>
+                        <p style="font-size:14px;margin-top:120px;"><a href="" style="color:blue;">Contact us</a> if you don't find your locaction</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+
 {% endblock %}
