@@ -455,7 +455,7 @@ position: absolute;
         }
 
         .container-fluid{
-            margin-bottom: 20%;
+            margin-bottom: 10%;
         }
 
         .frame {
@@ -465,6 +465,100 @@ position: absolute;
         height: 380px;
         border-radius: 20px;
     }
+
+    .box-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 50vh;
+        background-color: #d3f2e9;
+        
+    }
+
+    .box{
+        position: relative;
+        width: 200px;
+        height: 200px;
+        transform-style: preserve-3d;
+        animation: animate 30s linear infinite;
+    }
+
+    @keyframes animate{
+            0% {
+                    transform: perspective(1000px) rotateY(0deg);
+                }
+        100% {
+                     transform: perspective(1000px) rotateY(360deg);
+            }
+    }
+
+    .box span{
+        position: absolute;
+        top:0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transform-origin: center;
+        transform-style: preserve-3d;
+        transform: rotateY(calc(var(--i) * 45deg)) translateZ(300px);
+    }
+
+    .box span img{
+        position: absolute;
+        top:0;
+        left:0;
+        width:100%;
+        height: 100%;
+        border-radius: 10px;
+        object-fit: cover;
+        transition: 2s;
+    }
+
+    .logo-uni{
+        align-items: center;
+        min-height: 50vh;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .logo-uni h1{
+                text-align: center;
+                font-family: 'Montserrat', sans-serif;
+                font-weight: bolder !important;
+                color: #0a7b79;
+                font-size: 3.5rem;
+                text-align: center;
+    }
+
+    .logo-uni img{
+        animation: wiggle 2s linear infinite;
+    }
+
+    @keyframes wiggle {
+            0%, 7% {
+                transform: rotateZ(0);
+            }
+            15% {
+                transform: rotateZ(-15deg);
+            }
+            20% {
+                transform: rotateZ(10deg);
+            }
+            25% {
+                transform: rotateZ(-10deg);
+            }
+            30% {
+                transform: rotateZ(6deg);
+            }
+            35% {
+                transform: rotateZ(-4deg);
+            }
+            40%, 100% {
+                transform: rotateZ(0);
+            }
+            }
+ 
 
         </style>
     </head>
@@ -678,9 +772,29 @@ position: absolute;
             
            
 
+                <h1>Louisiana Previous Conferences</h1>
+                    <div class="box-container">
+                        
+                        <div class="box">
+                           
+                            <!-- {% url 'louisiana-tech-university' %} -->
+                            <span style="--i:1;"><a href="https://letusdream.org/wp-content/uploads/2021/07/Conference-Brochure_2018-LA-Tech-min.pdf" target="_blank"><img src="{% static 'Research/2018.png' %}" alt=""></a></span>
+                            <span style="--i:2;"><a href="https://letusdream.org/wp-content/uploads/2021/07/Conference-Brochure_2019-LA-Tech.pdf"><img src="{% static 'Research/2019.png' %}" alt=""></a></span>
+                            <span style="--i:3;"><img src="https://sgtuniversity.ac.in/icmai2020/wp-content/uploads/2021/02/Intl-Conference-Invitation-2021-C-734x1024.jpg" alt=""></span>
+                    </div>
+                    </div>
 
-
-        <!-- kshfgdshgk -->
+                    
+                    <div class="container logo-uni">
+                                <h1>Organizers</h1>
+                        <div class="row">
+                            <div class="col">
+                                <img src="https://mytopschools.com/wp-content/uploads/2022/08/Louisiana-Tech-University-LA-TECH-Ruston-Admissions-mytopschools.png" alt="">
+                            </div>
+                        </div>
+                        
+                    </div>
+                
 
        
         
