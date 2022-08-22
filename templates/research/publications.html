@@ -1,10 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'base.html' %}
+{% load static %}
 
-</body>
-</html>
+{% block title %}
+PUBLICATIONS
+{% endblock %}
+
+{% block content %}
+<style>
+    .section {
+        margin-top: 130px;
+    }
+</style>
+<section class="section">
+    <h1>Publications</h1>
+</section>
+{% endblock %}
