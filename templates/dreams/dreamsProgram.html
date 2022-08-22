@@ -1,170 +1,209 @@
-{% extends 'base.html' %} {% load static %} {% block title %} D.R.E.A.M.S
-Program {% endblock %} {% block content %}
-
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+D.R.E.A.M.S Program
+{% endblock %}
+{% block content %}
+<!-- style -->
 <style>
-    section .programs-section {
-        font-family: "Montserrat", sans-serif;
-
+    .programs-section {
+        margin-top: 30px;
+        padding-top: 61px;
+        margin-bottom: -16px;
         width: 100%;
-        padding: 10%;
-        margin-top: 10%;
     }
 
-    .programs-section .program-img1 {
-        margin-top: 5%;
+    @keyframes zoomIn {
+        0% {
+            opacity: 0;
+            transform: scale3d(.3, .3, .3)
+        }
+
+        50% {
+            opacity: 1
+        }
     }
 
-    .row {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 3%;
+    .zoomIn {
+        animation-name: zoomIn
     }
 
-    .content-img {
-        padding: 2% 7%;
-        margin-top: -140px;
-        display: flex;
+
+
+    @keyframes fadeIn {
+        0% {
+            opacity: 0
+        }
+
+        to {
+            opacity: 1
+        }
     }
 
-    .program-img2 {
-        max-width: 45%;
-        height: auto;
-        padding: 30px 100px;
-        justify-content: center;
-        margin: 50px;
+    .fadeIn {
+        animation-name: fadeIn
     }
 
-    .button {
-        position: relative;
-        width: 200px;
-        padding: 15px 0;
-        text-align: center;
-        margin: 0 15px;
-        border-radius: 25px;
-        font-weight: bold;
-        border: 2px solid #d3f2e9;
+    @keyframes slideInDown {
+        from {
+            transform: translate3d(0, -100%, 0);
+            visibility: hidden;
+        }
+
+        to {
+            transform: translate3d(0, 0, 0);
+            visibility: visible;
+        }
+    }
+
+    .slideInDown {
+        animation-name: slideInDown;
+    }
+
+
+    .page-header {
+
+        background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(../../ltstatic/background/dreams-programe-white.jpg) no-repeat;
+        background-size: cover;
+        height: 550px;
+    }
+
+    .programs-section .frame {
+        display: block;
+        margin: auto;
+        width: 400px;
+        height: 225px;
+        border-radius: 20px;
+    }
+
+    .programs-section .card,
+    .card-header {
+        background-color: transparent !important;
+        border: none !important;
+        padding: 0 !important;
+        margin-bottom: 10px;
+        text-align: left;
+    }
+
+    .programs-section .card {
+        box-shadow: 0 2px 20px 0 rgba(110, 130, 208, .18);
+    }
+
+    .programs-section .btn-link {
+        width: 100%;
+        height: 60px;
+        color: #0a7b79 !important;
+        font-weight: bold !important;
+        text-align: left !important;
+        text-decoration: none !important;
+    }
+
+    .programs-section .card-body {
+        padding: 30px;
         background: #d3f2e9;
         color: #0a7b79;
-        transition: background 0.5s;
+        margin-top: 10px;
+        text-align: left;
     }
 
-    .button a {
-        text-decoration: none;
-        color: #0a7b79;
-    }
-
-    .button-img1 {
-        padding: 50px 0px 50px 10px;
-        margin-left: -50px;
-        margin-right: -60px;
-        margin-top: 200px;
-    }
-
-    .button-img2 {
-        padding: 50px 0px 50px 10px;
-        margin-left: 120px;
-        margin-right: -60px;
-        margin-top: 200px;
-    }
-
-    .program-img2 img {
-        height: 400px;
-        padding: 0px 40px;
-    }
-
-    .programs-section .carousel {
-        padding: 10px;
-        margin-top: 100px;
-    }
-
-    .programs-section .bg {
-        background-image: url("https://letusdream.org/wp-content/uploads/2020/06/bg.png"),
-            linear-gradient(180deg,
-                rgba(12, 113, 195, 0.15) 0%,
-                rgba(12, 113, 195, 0.15));
-        margin: 0px -320px;
-        background-attachment: fixed;
-        background-size: 100% 100%;
-        background-position: top center;
-        background-repeat: repeat-y;
-        padding: 10px;
-    }
-
-    .programs-section .bg .row {
-        margin: -90px 320px 0px 320px;
-        background: url(../../ltstatic/card/);
-    }
-
-    .programs-section .program-h1 {
-        padding: 10px;
+    .programs-section .btn-link:after {
+        content: '\2212';
+        width: 35px;
+        height: 35px;
+        font-size: 25px;
         text-align: center;
-        color: #262626;
-        font-weight: 600;
-        text-transform: capitalize;
+        border-radius: 5px;
+        right: 15px;
+        top: 11px;
+        position: absolute;
+        background: #d3f2e9;
     }
 
-    .programs-section .program-h1 .main-h1 {
-        font-weight: 900;
-        text-transform: uppercase;
+    .programs-section .btn-link.collapsed:after {
+        content: '\002B';
     }
 
-    .programs-section .carousel .carousel-item img {
-        border-radius: 30px;
+    .programs-section .btn-link:before {
+        content: '';
+        height: 25px;
+        width: 25px;
+        position: absolute;
+        background: #fff;
+        z-index: 1;
+        transform: rotate(45deg);
+        left: 30px;
+        top: 55px;
+    }
+
+    .programs-section .image-model {
+        margin-left: -30px;
+        padding: 30px;
+    }
+
+    .programs-section .image-model h1 {
+        margin-top: -60px;
+        margin-bottom: 40px;
+    }
+
+    .programs-section .image-model img {
+        width: 450px;
+        margin-left: -50px;
+        padding: 20px;
+
+    }
+
+    .programs-section .image-section {
+        padding: 30px;
+    }
+
+    .programs-section .image-implementation {
+        padding: 20px 30px 30px 0px;
+        margin: 20px 30px 30px 0px;
+    }
+
+    .programs-section .image-implementation img {
+        height: 450px;
+    }
+
+    @media (max-width:720px) {
+        .programs-section .image-implementation img {
+            height: 250px;
+        }
+
+        .programs-section .image-model {
+            margin-top: -70px;
+        }
+
+        .programs-section .image-model img {
+            width: 250px;
+            margin-left: 0px;
+            padding: 10px;
+
+        }
     }
 </style>
 
+<!-- section -->
+
 <section class="programs-section">
-    <div class="program-img1">
-        <img src="https://letusdream.org/wp-content/uploads/2020/07/dreams-programe-white.jpg" style="width: 100%" />
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 content-img">
-                <div class="button-img1">
-                    <button class="button">
-                        <a href="">Join Us</a>
-                    </button>
-                </div>
-                <div class="col-md-12 program-img2">
-                    <img src="https://letusdream.org/wp-content/uploads/2020/07/Dreams-programme-wheel.png" />
-                </div>
-                <div class="button-img2">
-                    <button class="button">
-                        <a href="">Our Locations</a>
-                    </button>
-                </div>
-            </div>
+    <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s"
+        style="visibility: visible; animation-delay: 0.1s; animation-name: fadeIn;">
+        <div class="container py-5">
+            <h1 class="display-1 text-white  slideInDown">About Us</h1>
+            <nav aria-label="breadcrumb animated slideInDown">
+                <ol class="breadcrumb text-uppercase mb-0">
+                    <li class="breadcrumb-item"><a class="text-white" href="{% url 'main' %}">Home</a></li>
+                    <li class="breadcrumb-item  active" aria-current="page" style="color: #0a7b79;">About</li>
+                </ol>
+            </nav>
         </div>
-        <div class="bg">
-            <div class="row">
-                <div class="col-md-6">
-                    <h1 class="program-h1" style="text-align: center">
-                        About
-                        <strong class="main-h1"> DREAMS </strong>
-                        Program
-                    </h1>
-                    <p style="text-align: justify">
-                        <span>
-                            The
-                            <span style="color: #00ccff"> DREAMS Program </span>
-                            is a three-year curriculum based community mentoring project for
-                            schools and colleges. It started
-                        </span>
-                        <span>as a motivational music band at UC College, Aluva, India in 1998
-                            and in 2003 at Dharmarama College, Bangalore. The program later
-                            evolved as a summer camp for the high school students of
-                            Changanacherry, Kerala. In 2012 it established itself as a
-                            one-year program with a few follow up sessions in Monroe,
-                            Louisiana, USA. In the subsequent years, the program design was
-                            developed into a three-year after-school program with nine credit
-                            hours (eight days/year) for the middle school
-                            underperforming/under-serving teenagers.
-                        </span>
-                    </p>
-                </div>
-                <div class="col-md-6">
-                    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+    </div>
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6 g-5 mt-30">
+                    <div id="carouselExampleFade" class="carousel slide carousel-fade carousel-first"
+                        data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
                                 <img src="https://letusdream.org/wp-content/uploads/2020/07/DREAMS-BAND-7-1-min-scaled.jpg"
@@ -191,56 +230,292 @@ Program {% endblock %} {% block content %}
                         </button>
                     </div>
                 </div>
-
-                <div class="column">
-                    <p style="text-align: justify">
-                        <span>
-                            The project was researched longitudinally at the University of
-                            Louisiana, Monroe, USA, on its impact on the middle school
-                            participants.
-                        </span>
-                        <span>The focus on the holistic development of young adults is achieved
-                            through an active engagement between the youth, the community, and
-                            the local community volunteers. Apart from the focus on promoting
-                            individual strengths and psycho-social skills, the program also
-                            focuses on bringing the community back to schools and colleges.
-                        </span>
+                <div class="col-lg-6">
+                    <h5 class="section-title ff-secondary text-start text-primary fw-bold">About</h5>
+                    <h1 class="mb-4">DREAMS Program</h1>
+                    <p class="mb-4 fw-semibold">The DREAMS Program is a three-year curriculum based community mentoring
+                        project for
+                        schools and colleges. It started as a motivational music band at UC College, Aluva, India in
+                        1998 and in 2003 at Dharmarama College, Bangalore. The program later evolved as a summer camp
+                        for the high school students of Changanacherry, Kerala.</p>
+                    <p class="mb-4 fw-semibold ">In 2012 it established itself as a one-year program with a few follow
+                        up
+                        sessions in
+                        Monroe, Louisiana, USA. In the subsequent years, the program design was developed into a
+                        three-year after-school program with nine credit hours (eight days/year) for the middle school
+                        underperforming/under-serving teenagers.
                     </p>
+
+
+                </div>
+            </div>
+            <div class="row g-5 align-items-center ">
+
+                <div class="col-lg-6">
+
+                    <p class="mb-4 fw-semibold">The project was researched longitudinally at the University of
+                        Louisiana, Monroe,
+                        USA, on its impact on the middle school participants.</p>
+                    <p class="mb-4 fw-semibold">The focus on the holistic development of young adults is achieved
+                        through an active
+                        engagement between the youth, the community, and the local community volunteers. Apart from the
+                        focus on promoting individual strengths and psycho-social skills, the program also focuses on
+                        bringing the community back to schools and colleges.
+                    </p>
+
+
+                </div>
+                <div class="col-lg-6">
+                    <div id="carouselExampleIndicators" class="carousel slide carousel-second" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                                class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                                aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                                aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <iframe class="frame" src="https://www.youtube.com/embed/VhBG7GVXcNw"
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen></iframe>
+
+                            </div>
+                            <div class="carousel-item">
+                                <iframe class="frame" src="https://www.youtube.com/embed/Dm8-XtFZzA4"
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen></iframe>
+
+                            </div>
+                            <div class="carousel-item">
+                                <iframe class="frame" src="https://www.youtube.com/embed/vmLuafs-BhE?feature=oembed"
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
-        <div class="bottom-img"></div>
+    </div>
+    <div class="container" style="padding: 20px;">
+        <center>
+            <div class="row image-section mt-5">
+                <div class="col-md-6 ">
+                    <center>
+                        <div class="image-model">
+                            <center>
+                                <h1 class="heading-h1"><strong class="main-h1"> DREAMS </strong> Model</h1>
+                            </center>
+                            <img src="https://letusdream.org/wp-content/uploads/2020/07/Dreams-Programme-png.png"
+                                alt="Dreams Model">
+                        </div>
+                    </center>
+                </div>
+                <div class="col-md-6 mt-5">
+                    <div class="accordion accordion-flush" id="accordionFlushExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button collapsed btn btn-link" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                    aria-controls="flush-collapseOne">
+                                    DESIRE
+                                </button>
+                            </h2>
+                            <div id="flush-collapseOne" class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body card-body">The fire that burns in every student, the
+                                    fascination
+                                    and thirst
+                                    for knowledge is
+                                    the first step toward our journey for success.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingTwo">
+                                <button class="accordion-button collapsed btn btn-link" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                                    aria-controls="flush-collapseTwo">
+                                    READINESS
+                                </button>
+                            </h2>
+                            <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                                <div class="card-body accordion-body">
+                                    The ability to face any stones thrown by the world, the second stage of the model,
+                                    transforms this fascination into realisation.“Why is success important?” Together we
+                                    all grapple this question together and seek in our hearts the answer.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingThree">
+                                <button class="accordion-button collapsed btn btn-link" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#flush-collapseThree"
+                                    aria-expanded="false" aria-controls="flush-collapseThree">
+                                    EMPOWERMENT
+                                </button>
+                            </h2>
+                            <div id="flush-collapseThree" class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body card-body"> Giving our body and our soul the power to change,
+                                    not
+                                    only our self but the world
+                                    too. It looks at three different aspects of life – Personal, Interpersonal and
+                                    Leadership.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header card-header" id="flush-headingFour">
+                                <button class="accordion-button collapsed btn btn-link" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false"
+                                    aria-controls="flush-collapseFour">
+                                    Action
+                                </button>
+                            </h2>
+                            <div id="flush-collapseFour" class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body card-body">The stage where mistakes and failures are embraced
+                                    with open arms in order to get
+                                    closer to excellence.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header card-header" id="flush-headingFive">
+                                <button class="accordion-button collapsed btn btn-link" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false"
+                                    aria-controls="flush-collapseFive">
+                                    MASTERY
+                                </button>
+                            </h2>
+                            <div id="flush-collapseFive" class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body card-body">The result of persistent action which launches you
+                                    in
+                                    the orbit of success. Once you
+                                    reach the level of Mastery and success begins a higher level of Desire, and the
+                                    cyclical journey towards Success begins yet again.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header card-header" id="flush-headingSix">
+                                <button class="accordion-button collapsed btn btn-link" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false"
+                                    aria-controls="flush-collapseSix">
+                                    SUCCESS
+                                </button>
+                            </h2>
+                            <div id="flush-collapseSix" class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingSix" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body card-body">Your content goes here. Edit or remove this text
+                                    inline or in the module Content
+                                    settings. You can also style every aspect of this content in the module Design
+                                    settings and even apply custom CSS to this text in the module Advanced settings.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--  -->
+                </div>
+            </div>
+        </center>
+    </div>
+    <div style="background:linear-gradient(180deg,
+    rgba(12, 113, 195, 0.15) 0%,
+    rgba(12, 113, 195, 0.15)) ;">
+        <div class="container" style="padding: 20px;">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="content-implementation">
+
+
+                        <h1 class="program-h1" style="text-align: center ;margin-bottom: 10px;">
+                            About
+                            <strong class="main-h1"> DREAMS </strong>
+                            Program
+                        </h1>
+                        <p style="text-align: justify">
+                            The three-year model of the DREAMS Program is specifically designed and utilized to help the
+                            less privileged and the underperforming middle school students in their holistic development
+                            –
+                            year one focuses on Personal development, year two on Interpersonal skills, and year three
+                            on
+                            Leadership skills.
+                        </p>
+                        <p style="text-align: justify">
+                            This community mentoring project is implemented in Schools by College/University students
+                            with
+                            the support of the local community. 6th grade students with weak academic performances
+                            and/or
+                            with low self-esteem are identified from different local middle schools. Once the target
+                            group
+                            is identified, college students implement this intervention for eight days (45 hours) in a
+                            year
+                            with the support and guidance of the local community volunteers who manages the project.
+                        </p>
+                        <p style="text-align: justify">
+                            This program and the community seeks to impart knowledge and tools for these students to
+                            grow
+                            into a better version of themselves, to lead not only themselves but societies around them
+                            to a
+                            better future.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                    <div class="image-implementation">
+                        <img src="https://letusdream.org/wp-content/uploads/2020/09/DREAMS-Program-Implementation-Ver-7-_page-0001.png"
+                            alt=" Implementation">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid"
+        style="margin-top: 5px;padding-top:5%;background-color: #d3f2e9; color: #0a7b79;margin-bottom: 5px;">
+
+        <center>
+            <h1>OUR GLOBAL PRESENCE</h1>
+        </center>
+        <br>
+        <center>
+            <h3 class="big-heading">Presence is more than just being there.</h3>
+        </center>
+
+        <div class="container" style="margin-top: 3%;color: #7ca8a1;">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 " style="padding-top: 10px; padding-bottom: 10px;color: #262626; ">
+                    <h3>INDIA</h3>
+                    <h6>Bangalore, Karnataka</h6>
+                    <h6>Chaganacherry, Kerala</h6>
+                    <h6>Mannanam, Kerala</h6>
+                    <h6>Tiruvananthapuram, Kerala</h6>
+                    <h6>Thiruvallam, Kerala</h6>
+                </div>
+                <div class="col-lg-3 col-md-6 " style="padding-top: 10px; padding-bottom: 10px;color: #262626; ">
+                    <h3>USA</h3>
+                    <h6>Bastrop, Louisiana</h6>
+                    <h6>Dallas, Texas</h6>
+                    <h6>LaGrande, Oregon</h6>
+                    <h6>McAllen, Texas</h6>
+                    <h6>Monroe, Louisiana</h6>
+                </div>
+                <div class="col-lg-3 col-md-6 last-place">
+                    <h3>GERMANY</h3>
+                    <h6>Cologne</h6>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 " style="margin-bottom: 10%;text-align: center">
+                    <img src="{% static 'home/location1.jpg' %}" class="img1" height="100" width="100" alt="location">
+                </div>
+
+            </div>
+        </div>
+
     </div>
 </section>
-<script>
-    let slideIndex = 1;
-    showSlides(slideIndex);
-    function plusSlides(n) {
-        showSlides((slideIndex += n));
-    }
-    function currentSlide(n) {
-        showSlides((slideIndex = n));
-    }
-    function showSlides(n) {
-        let i;
-        let slides = document.getElementsByClassName("mySlides");
-        let dots = document.getElementsByClassName("demo");
-        let captionText = document.getElementById("caption");
-        if (n > slides.length) {
-            slideIndex = 1;
-        }
-        if (n < 1) {
-            slideIndex = slides.length;
-        }
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-        }
-        for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-        }
-        slides[slideIndex - 1].style.display = "block";
-        dots[slideIndex - 1].className += " active";
-        captionText.innerHTML = dots[slideIndex - 1].alt;
-    }
-</script>
 {% endblock %}
