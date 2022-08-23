@@ -20,6 +20,9 @@
     margin: auto;
     width: 1000px;
     height: 500px;
+    box-shadow: 1px 1px 95px -11px rgba(0, 0, 0, 0.76);
+    -webkit-box-shadow: 1px 1px 95px -11px rgba(0, 0, 0, 0.76);
+    -moz-box-shadow: 1px 1px 95px -11px rgba(0, 0, 0, 0.76);
 }
 
 .aboutus .heading-h1 {
@@ -91,7 +94,10 @@
 
 }
 
-
+.aboutus .img-middle img {
+    width: 830px;
+    height: 600px;
+}
 
 .aboutus .card-last .card {
     padding: 10px;
@@ -179,6 +185,12 @@
     .aboutus .pg {
         padding: 50px 10px 20px 10px;
         margin: 10px 10px;
+    }
+
+
+    .aboutus .img-middle img {
+        width: 300px;
+        height: 200px;
 
 
     }

@@ -66,7 +66,7 @@
                 rgba(12, 113, 195, 0.15) 0%,
                 rgba(12, 113, 195, 0.15));
                 background-repeat: no-repeat;
-                background-attachment: fixed;
+                background-attachment: scroll;
                 background-size: 100% 100%;
 
             }
@@ -146,12 +146,12 @@
                         <p class="text-justify">
                             DREAMS Pro Club is a support group to help in personal and professional development of the young professionals. A team consisting of 10-12 working professionals meet once every month to discuss strategies to understand and support personal and interpersonal life situations.
                         </p>
-                        <iframe width="516px" height="290px"
+                        <iframe class="my-4" width="516px" height="290px"
                             src="https://youtu.be/HjYBnoN06RA">
                         </iframe>
                     </div>
                     <div class="col">
-                        <img src="https://letusdream.org/wp-content/uploads/2020/07/Letusdream-proclub-15773-min-scaled.jpg" class="img-fluid rounded">
+                        <img src="https://letusdream.org/wp-content/uploads/2020/07/Letusdream-proclub-15773-min-scaled.jpg" class="img-fluid rounded my-4">
                         <p class="text-justify my-5">
                             The Club helps inculcate the values of identity and community belonging in the members. Apart from enhancing communication skills and problem-solving skills, it also focuses on generating positive attitudes about self and the other, developing leadership, cooperation, and community engagement.
                         </p>
@@ -165,23 +165,23 @@
                 <div class="row">
                     <div class="col">
                         <h2><strong>INDIA</strong></h2>
-                        <h5 class="mt-5"><a href="">Bangalore, Karnataka</a></h5>
-                        <h5 class="my-4"><a href="">Chaganacherry, Kerala</a></h5>
-                        <h5 class="my-4"><a href="">Mannanam, Kerala</a></h5>
-                        <h5 class="my-4"><a href="">Tiruvananthapuram, Kerala</a></h5>
-                        <h5 class="my-4"><a href="">Thiruvallam, Kerala</a></h5>
+                        <h5 class="mt-5"><a href="{% url 'locations' 'bangalore' %}">Bangalore, Karnataka</a></h5>
+                        <h5 class="my-4"><a href="{% url 'locations' 'changancherry' %}">Chaganacherry, Kerala</a></h5>
+                        <h5 class="my-4"><a href="{% url 'locations' 'mannanam' %}">Mannanam, Kerala</a></h5>
+                        <h5 class="my-4"><a href="{% url 'locations' 'thiruvananthapuram' %}">Tiruvananthapuram, Kerala</a></h5>
+                        <h5 class="my-4"><a href="{% url 'locations' 'thiruvallam' %}">Thiruvallam, Kerala</a></h5>
                     </div>
                     <div class="col">
                         <h2><strong>U.S.A</strong></h2>
-                        <h5 class="mt-5"><a href="">Bastrop, Louisiana</a></h5>
-                        <h5 class="my-4"><a href="">Dallas, Texas</a></h5>
-                        <h5 class="my-4"><a href="">LaGrande, Oregon</a></h5>
-                        <h5 class="my-4"><a href="">McAllen, Texas</a></h5>
-                        <h5 class="my-4"><a href="">Monroe, Louisiana</a></h5>
+                        <h5 class="mt-5"><a href="{% url 'locations' 'bastrope' %}">Bastrop, Louisiana</a></h5>
+                        <h5 class="my-4"><a href="{% url 'locations' 'dalias' %}">Dallas, Texas</a></h5>
+                        <h5 class="my-4"><a href="{% url 'locations' 'lagrande' %}">LaGrande, Oregon</a></h5>
+                        <h5 class="my-4"><a href="{% url 'locations' 'mcallen' %}">McAllen, Texas</a></h5>
+                        <h5 class="my-4"><a href="{% url 'locations' 'monroe' %}">Monroe, Louisiana</a></h5>
                     </div>
                     <div class="col">
                         <h2><strong>GERMANY</strong></h2>
-                        <h5 class="mt-5"><a href="">Cologne</a></h5>
+                        <h5 class="mt-5"><a href="{% url 'locations' 'cologne' %}">Cologne</a></h5>
                         <p style="font-size:14px;margin-top:120px;"><a href="" style="color:blue;">Contact us</a> if you don't find your locaction</p>
                     </div>
                 </div>
