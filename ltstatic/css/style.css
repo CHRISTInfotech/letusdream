@@ -94,7 +94,10 @@
 
 }
 
-
+.aboutus .img-middle img {
+    width: 830px;
+    height: 600px;
+}
 
 .aboutus .card-last .card {
     padding: 10px;
@@ -182,6 +185,12 @@
     .aboutus .pg {
         padding: 50px 10px 20px 10px;
         margin: 10px 10px;
+    }
+
+
+    .aboutus .img-middle img {
+        width: 300px;
+        height: 200px;
 
 
     }
