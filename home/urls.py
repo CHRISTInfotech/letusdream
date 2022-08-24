@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.urls import path, include
 
-from home.views import index, locations, aboutUs, louisianatechuniversity, media, aboutConference, pressRelease, photoGallery, trriennialConference, buNY, cuB, cuT, jncaB, dreams, annualConference, yclpCourse, research, publications
+from home.views import bangalorechristuniversity, index, locations, aboutUs, louisianatechuniversity, media, aboutConference, pressRelease, photoGallery, trriennialConference, cuB, cuT, jncaB, dreams, annualConference, yclpCourse, research, publications
 
 urlpatterns = [
     path('', index, name='main'),
@@ -17,7 +17,7 @@ urlpatterns = [
     path('yclpCourse', yclpCourse, name='yclp-course'),
     path('research', research, name='research'),
     path('publications', publications, name='publications'),
-    path('binghamton-university-new-york', buNY,
+    path('christ-university-bangalore', bangalorechristuniversity,
          name='binghamton-university-new-york'),
     path('christ-university-bangalore', cuB,
          name='christ-university-bangalore'),
