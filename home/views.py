@@ -34,8 +34,8 @@ def trriennialConference(request):
     return render(request, 'conference/triennialConference.html')
 
 
-def buNY(request):
-    return render(request, 'conference/buNY.html')
+def bangalorechristuniversity(request):
+    return render(request, 'conference/christ-university-bangalore.html')
 
 
 def cuB(request):
