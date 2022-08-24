@@ -72,12 +72,13 @@ body {
 }
 
 .menu-wrapper .dropdown-menu .dropdown-item {
-    margin-bottom: 10px;
+    margin-bottom: 0px;
 }
 
 .menu-wrapper .dropdown-menu .dropdown-item:hover {
     color: #3ec922;
     background-color: #82d8d8;
+    border-radius: 20px;
     transition: 0.5s;
 }
 

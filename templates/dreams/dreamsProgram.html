@@ -184,6 +184,7 @@ D.R.E.A.M.S Program
         cursor: pointer;
         margin: 5px;
         margin-top: 170px;
+        margin-bottom: 10px;
     }
 
     .programs-section .button span {
@@ -244,11 +245,52 @@ D.R.E.A.M.S Program
 
         .programs-section .button {
             margin-top: 0px;
+
         }
 
         .programs-section .img-content img {
             height: 250px;
             padding-top: 5%;
+        }
+
+        .programs-section .button {
+            margin-top: 100px;
+        }
+    }
+
+    @media (min-width:991px) and (max-width:1120px) {
+        .programs-section .image-implementation img {
+            height: 250px;
+        }
+
+        .programs-section .button {
+            margin-top: 70px;
+            margin-bottom: 10px;
+            width: 170px;
+        }
+
+        .programs-section .img-content img {
+            height: 300px;
+
+        }
+    }
+
+
+    @media (min-width:1120px) and (max-width:1440px) {
+        .programs-section .button {
+
+            width: 210px;
+        }
+
+
+    }
+
+    @media (min-width:991px) {
+
+
+        .programs-section .img-content img {
+            height: 300px;
+
         }
     }
 </style>
@@ -256,34 +298,32 @@ D.R.E.A.M.S Program
 <!-- section -->
 
 <section class="programs-section">
-    <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s"
-        style="visibility: visible; animation-delay: 0.1s; animation-name: fadeIn;">
-        <div class="container py-5">
-            <h1 class="display-1 text-white  slideInDown">About Us</h1>
-            <nav aria-label="breadcrumb animated slideInDown">
-                <ol class="breadcrumb text-uppercase mb-0">
-                    <li class="breadcrumb-item"><a class="text-white" href="{% url 'main' %}">Home</a></li>
-                    <li class="breadcrumb-item  active" aria-current="page" style="color: #0a7b79;">About</li>
-                </ol>
-            </nav>
-        </div>
-    </div>
+
 
     <div class="container" style="padding: 20px;margin-top: -30px;">
-        <div class="row">
+        <div class="row mt-5">
+            <div class="col-lg-12 mb-4 mt-5">
+                <nav aria-label="breadcrumb animated slideInDown">
+                    <ol class="breadcrumb text-uppercase mb-0">
+                        <li class="breadcrumb-item"><a class="text-black" href="{% url 'main' %}">Home</a></li>
 
-            <div class="col-md-3">
+                        <li class="breadcrumb-item  active" aria-current="page" style="color: #0a7b79;">Dreams Program
+                        </li>
+                    </ol>
+                </nav>
+            </div>
+            <div class="col-lg-3">
                 <center>
                     <a href=""> <button type="button" class="button"><span>Join Us</span></button></a>
                 </center>
             </div>
-            <div class="col-md-6 img-content">
+            <div class="col-lg-6 img-content">
                 <center>
                     <img src="https://letusdream.org/wp-content/uploads/2020/07/Dreams-programme-wheel.png"
                         style="padding-bottom:5%;">
                 </center>
             </div>
-            <div class="col-md-3">
+            <div class="col-lg-3">
                 <center>
                     <a href="#location"><button type="button" class="button"><span>Get Location</span></button></a>
                 </center>
@@ -413,7 +453,7 @@ D.R.E.A.M.S Program
     <div class="container" style="padding: 20px;">
         <center>
             <div class="row image-section mt-5">
-                <div class="col-md-6 ">
+                <div class="col-lg-6 ">
                     <center>
                         <div class="image-model">
                             <center>
@@ -424,7 +464,7 @@ D.R.E.A.M.S Program
                         </div>
                     </center>
                 </div>
-                <div class="col-md-6 mt-5">
+                <div class="col-lg-6 mt-5">
                     <div class="accordion accordion-flush" id="accordionFlushExample">
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="flush-headingOne">
@@ -537,7 +577,7 @@ D.R.E.A.M.S Program
     rgba(12, 113, 195, 0.15)) ;">
         <div class="container" style="padding: 20px;">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-lg-6">
                     <div class="content-implementation">
 
 
@@ -574,7 +614,7 @@ D.R.E.A.M.S Program
                         </p>
                     </div>
                 </div>
-                <div class="col-md-6 col-sm-12">
+                <div class="col-lg-6 col-sm-12">
                     <div class="image-implementation">
                         <img src="https://letusdream.org/wp-content/uploads/2020/09/DREAMS-Program-Implementation-Ver-7-_page-0001.png"
                             alt=" Implementation">
