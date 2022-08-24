@@ -9,22 +9,82 @@ Triennial Conference
 <<<<<<< HEAD
 =======
 <style>
-    .section {
-        margin-top: 130px;
-    }
+
     .pg {
             padding-top: 50px;
             padding-right: 150px;
             padding-bottom: 30px;
             padding-left: 150px;
         }
+    .button {
+                display: inline-block;
+                border-radius: 100px;
+                background-color: MediumSeaGreen;
+                border: none;
+                color: #FFFFFF;
+                text-align:center;
+                font-size: 20px;
+                padding: 14px 28px;
+                width: 300px;
+                transition: all 0.5s;
+                cursor: pointer;
+                margin: 5px;
+                background-image: linear-gradient(rgba(0, 128, 0, 0.79),rgba(0, 0, 255, 0.594));
+                height:45px;
+                vertical-align:top;
+            }
+    .button1 {
+                display: inline-block;
+                border-radius: 100px;
+                background-color: Red;
+                border: none;
+                color: #FFFFFF;
+                text-align:center;
+                font-size: 20px;
+                padding: 14px 28px;
+                width: 300px;
+                transition: all 0.5s;
+                cursor: pointer;
+                margin: 5px;
+                background-image: linear-gradient(rgb(213, 3, 3), rgba(19, 16, 16, 0.59));
+                height:45px;
+                vertical-align:top;
+            }
+
+    .button span {
+                cursor: pointer;
+                display: inline-block;
+                position: relative;
+                transition: 0.5s;
+
+            }
+
+    .button span:after {
+                content: '\00bb';
+                position: absolute;
+                opacity: 0;
+                top: 0;
+                right: -20px;
+                transition: 0.5s;
+            }
+
+    .button:hover span {
+                padding-right: 25px;
+
+            }
+
+    .button:hover span:after {
+                opacity: 1;
+                right: 0;
+
+            }
 </style>
 <section class="section">
     <h1>Triennial Conference</h1>
 </section>
-
+<
 <div class="row text-center">
-    <h1 style="color:#0404d5">LET US DREAM 2020</h1>
+    <h1 style="color:#0404d5;padding-bottom:">LET US DREAM 2020</h1>
 <div class="row text-center">
     <h2>Triennial International Virtual Conference</h2>
 <div class="row text-center">
@@ -33,7 +93,77 @@ Triennial Conference
 </div>
 </div>
 </div>
+    <div class="pg">
+       <div class="row">
+           <div class="col-3">
+               <button type="button" class="button">Keynote Speaker</button>
 
+
+           </div>
+           <div class="col-3">
+               <button type="button" class="button">Unsung Heroes</button>
+
+
+           </div>
+           <div class="col-3">
+               <button type="button" class="button">Newsletter</button>
+
+
+           </div>
+            <div class="col-3">
+               <button type="button" class="button">Virtual Band</button>
+
+
+            </div>
+
+       </div>
+       </div>
+    <div class="pg">
+       <div class="row" style="padding-left:100px; padding-right:100px">
+           <div class="col-4">
+               <button type="button" class="button">Schedule</button>
+
+
+           </div>
+           <div class="col-4">
+               <button type="button" class="button">Panel Discussion</button>
+
+
+           </div>
+           <div class="col-4">
+               <button type="button" class="button ">Promos</button>
+
+
+           </div>
+
+            </div>
+
+       </div>
+       </div>
+    <div class="pg">
+
+            <div class="row">
+                <div class="col-6 d-flex justify-content-end">
+                    <button type="button" class="button">Download Brochure</button>
+
+
+                </div>
+                <div class="col-6 d-flex justify-content-start">
+                    <button type="button" class="button">Register Now</button>
+                </div>
+
+           </div>
+        </div>
+    <div class="pg">
+
+            <div class="row">
+                <div class="col d-flex justify-content-center">
+                    <button type="button" class="button1 btn-danger" >Live Streaming Links </button>
+
+
+                </div>
+            </div>
+    </div>
 
 
 
