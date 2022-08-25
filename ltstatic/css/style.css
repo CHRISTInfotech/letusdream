@@ -8,7 +8,9 @@ p {
     width: 100%;
 }
 
-
+.aboutus .text-green {
+    color: #0a7b79;
+}
 
 .aboutus .main-about {
     margin-top: 80px;
@@ -109,22 +111,22 @@ p {
 }
 
 .aboutus .card-last .card-1 {
-    background: url(../../ltstatic/Aboutus/bg.png), linear-gradient(180deg, #3197f7 0%, #2377af 100%);
+    background: linear-gradient(180deg, #3197f7 0%, #2377af 100%);
     color: #fff;
 }
 
 .aboutus .card-last .card-2 {
-    background: url(../../ltstatic/Aboutus/bg.png), linear-gradient(180deg, rgba(64, 178, 35, 0.97) 0%, #167c15 100%);
+    background: linear-gradient(180deg, rgba(64, 178, 35, 0.97) 0%, #167c15 100%);
     color: #fff;
 }
 
 .aboutus .card-last .card-3 {
-    background: url(../../ltstatic/Aboutus/bg.png), linear-gradient(180deg, #3197f7 0%, #2377af 100%);
+    background: linear-gradient(180deg, #3197f7 0%, #2377af 100%);
     color: #fff;
 }
 
 .aboutus .card-last .card-4 {
-    background: url(../../ltstatic/Aboutus/bg.png), linear-gradient(180deg, rgba(64, 178, 35, 0.97) 0%, #167c15 100%);
+    background: linear-gradient(180deg, rgba(64, 178, 35, 0.97) 0%, #167c15 100%);
     color: #fff;
 
 }
