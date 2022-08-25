@@ -6,123 +6,111 @@ Annual Conference
 {% endblock %}
 
 {% block content %}
-<!DOCTYPE html>
-<html lang="en">
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Annual Conference</title>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Annual Conference</title>
+        <!--Google font-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    
+        <!--  Bootstrap CSS --> 
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+        <!-- Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
-    <!--Google font-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-
-    <!--  Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-    <!-- Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
-
-    <style>
-        h1 {
+        <style>
+  
+            h1{
             text-align: center;
-            margin: 50px 0 !important;
-            color: #0a7b79;
-            font-weight: bolder;
+            margin:50px 0 !important;
+            color:#0a7b79;
+            font-weight: bolder ;
             font-family: 'Montserrat', sans-serif;
             padding: 7% 7% 0% 7%;
-        }
+            }
 
-        .card {
-            position: relative;
-            overflow: hidden;
-        }
+            .card{
+                position: relative;
+                overflow: hidden;
+            }
 
-        .card::before {
-            position: absolute;
-            content: '';
-            width: 80%;
-            height: 220%;
-            background: rgba(211, 242, 233, 0.7);
-            top: -50%;
-            left: -100%;
-            z-index: 1;
-            transform: rotate(25deg);
-            transform-origin: center top 0;
-            transition: 0.5s;
-        }
+            .card::before{
+                position: absolute;
+                content: '';
+                width: 80%;
+                height: 220%;
+                background: rgba(211, 242, 233, 0.7);
+                top:-50%;
+                left:-100%;
+                z-index:1;
+                transform: rotate(25deg);
+                transform-origin:center top 0 ;
+                transition: 0.5s;
+            }
 
-        .card:hover:before {
-            left: 10%;
-        }
+            .card:hover:before{
+                left:10%;
+            }
 
-        .card img {
-            width: 100%;
-            height: 100% !important;
-        }
+            .card img{
+                width: 100%;
+                height: 100% !important;
+            }
 
-        .card-text {
-            width: 100%;
-            padding: 0 20px;
-            position: absolute;
-            top: -100%;
-            color: #0a7b79;
-            left: 0;
-            z-index: 2;
-            transition: 1.1s;
-        }
+            .card-text{
+                width: 100%;
+                padding: 0 20px;
+                position: absolute;
+                top:-100%;
+                color: #0a7b79;
+                left:0;
+                z-index: 2;
+                transition: 1.1s;
+            }
 
-        .card-text h3 {
-            font-family: 'Montserrat', sans-serif;
-        }
+            .card-text h3{
+                font-family: 'Montserrat', sans-serif;
+            }
 
-        .card:hover .card-text {
-            top: 80px;
+            .card:hover .card-text{
+                top:80px;
 
-        }
+            }
 
-        .row {
-            padding-bottom: 5% !important;
-        }
+            .row{
+                padding-bottom: 5% !important;
+            }
 
-        .img1 {
-            width: 100% !important;
-            height: 100% !important;
-        }
-    </style>
-</head>
-
-<body>
-    <h1>"The chance to reconnect with people in person, talk over key topics, and go to some great sessions was
-        invaluable."</h1>
-    <div class="container">
-        <div class="row">
-
-            <div class="col-md-4 col-sm-6">
-                <a href="{% url 'louisiana-tech-university' %}">
+            .img1{
+                width: 100% !important;
+                height: 100% !important;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>"The chance to reconnect with people in person, talk over key topics, and go to some great sessions was invaluable."</h1>
+        <div class="container">
+            <div class="row">
+                
+                <div class="col-md-4 col-sm-6">
+                    <a href="{% url 'louisiana-tech-university' %}">
                     <div class="card">
-                        <img
-                            src="https://www.latech.edu/wp-content/uploads/2021/01/11242020-LouisianaTechUniversity-Drone-01-web.jpg">
-                        <div class="card-text">
+                        <img src="https://www.latech.edu/wp-content/uploads/2021/01/11242020-LouisianaTechUniversity-Drone-01-web.jpg">
+                       <div class="card-text">
                             <h3>Louisiana Tech University</h3>
                             <h5>Louisiana</h5>
                         </div>
                     </div>
                 </a>
-<<<<<<< HEAD
-=======
                 </div>
                 
                 <div class="col-md-4 col-sm-6">
@@ -151,66 +139,34 @@ Annual Conference
                 </a>
                 </div>
 
->>>>>>> 8fc70499b2cab25cd2dc82665057f6aed0134433
             </div>
-
-            <div class="col-md-4 col-sm-6">
-                <div class="card">
-                    <img src="https://images.shiksha.com/mediadata/images/1536744927phpeqzCEr.jpeg" class="img1">
-                    <div class="card-text">
-                        <h3>Binghamton University</h3>
-                        <h5>New York</h5>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4 col-sm-6">
-                <div class="card">
-                    <img src="https://clgonline.in/static/all_collages/img/christ-university-bangalore.jpg"
-                        class="img1">
-                    <div class="card-text">
-                        <h3>Christ
-                            <br>
-                            University
-                        </h3>
-                        <h5>Bangalore</h5>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-        <div class="row">
-            <div class="col-md-4 col-sm-6">
-                <div class="card">
-                    <img src="https://cache.careers360.mobi/media/presets/720X480/colleges/social-media/media-gallery/29015/2020/6/22/Campus%20Building%20View%20of%20Christ%20College%20Vizhinjam_Campus-view.jpg"
-                        class="img1">
-                    <div class="card-text">
-                        <h3>CHRIST <br> University</h3>
-                        <h5>Thiruvananthapuram</h5>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4 col-sm-6">
-                <a href="{% url 'jyoti-nivas-college-autonomous' %}">
+            <div class="row">
+                <div class="col-md-4 col-sm-6">
                     <div class="card">
-                        <img src="https://cache.careers360.mobi/media/presets/500X333/colleges/social-media/media-gallery/6639/2018/8/16/Jyoti-Nivas-College-Autonomous-Bangalore_Auditorium.jpg"
-                            class="img1">
+                        <img src="https://cache.careers360.mobi/media/presets/720X480/colleges/social-media/media-gallery/29015/2020/6/22/Campus%20Building%20View%20of%20Christ%20College%20Vizhinjam_Campus-view.jpg" class="img1">
+                        <div class="card-text">
+                            <h3>CHRIST <br> University</h3>
+                            <h5>Thiruvananthapuram</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="card">
+                        <img src="https://cache.careers360.mobi/media/presets/500X333/colleges/social-media/media-gallery/6639/2018/8/16/Jyoti-Nivas-College-Autonomous-Bangalore_Auditorium.jpg" class="img1">
                         <div class="card-text">
                             <h3>Jyoti Nivas College Autonomous</h3>
                             <h5>Bangalore</h5>
                         </div>
                     </div>
-                </a>
+                </div>
             </div>
+
+
+                
+
+            
         </div>
-
-
-
-
-
-    </div>
-</body>
-
-</html>
+    </body>
+    </html>
 {% endblock %}
