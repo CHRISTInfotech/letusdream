@@ -118,6 +118,42 @@ Jyoti Nivas College Autonomous, Banglore
         opacity: 1;
         right: 0;
     }
+
+    .college .card-main {
+        width: 24rem;
+        border: none;
+        min-height: 520px;
+    }
+
+
+
+    @media (max-width:991px) {
+        .main-section {
+            margin-top: -50px;
+        }
+
+        .college .card-main {
+            width: 20rem;
+        }
+
+
+    }
+
+    @media (max-width:1400px) {
+
+
+        .college .card-main {
+            width: 20rem;
+        }
+
+        .college .button1 {
+            width: 300px;
+        }
+
+        .college .container-custom {
+            margin: 60px;
+        }
+    }
 </style>
 <section class="college">
 
@@ -203,7 +239,7 @@ Jyoti Nivas College Autonomous, Banglore
             </div>
         </div>
     </div>
-    <div class="container conference-date mt-5 p-5">
+    <div class="container conference-date mt-5 ">
         <div class="row justify-content-center align-items-center">
             <div class="col-md-12">
                 <h1 class="text-center text-green fw-bold p-4">Conference Dates</h1>
@@ -215,7 +251,7 @@ Jyoti Nivas College Autonomous, Banglore
     </div>
     <div class="container">
         <div class="row" style="align-items: center;">
-            <div class="col-md-4 p-4">
+            <div class="col-lg-4 p-4">
                 <center>
                     <a href="#location"><button type="button" class="button" style="margin-bottom: 80px;"><span>Download
                                 Broucher</span></button></a>
@@ -224,7 +260,7 @@ Jyoti Nivas College Autonomous, Banglore
                     <a href="#location"><button type="button" class="button"><span>Keynote Speakers</span></button></a>
                 </center>
             </div>
-            <div class="col-md-4 p-4">
+            <div class="col-lg-4 p-4">
                 <center>
                     <a href="#location"><button type="button" class="button button2"
                             style="margin-bottom: 80px;"><span>Register</span></button></a>
@@ -234,7 +270,7 @@ Jyoti Nivas College Autonomous, Banglore
                                 Links</span></button></a>
                 </center>
             </div>
-            <div class="col-md-4 p-4">
+            <div class="col-lg-4 p-4">
                 <center>
                     <a href="#location"><button type="button" class="button"><span>Previous
                                 Conference</span></button></a>
@@ -243,15 +279,15 @@ Jyoti Nivas College Autonomous, Banglore
             </div>
         </div>
     </div>
-    <div class="container mt-5 mb-5 p-5">
+    <div class="container mt-5 mb-5 p-5 container-custom">
         <center>
             <div class="row ">
                 <h1 class="text-green text-center my-5 text-uppercase fw-bold">
                     Conference Chairs
                 </h1>
-                <div class="col-md-4 p-3">
-                    <div class="card shadow d-flex justify-content-center align-items-center p-3 rounded-lg"
-                        style="width: 24rem;border: none;">
+                <div class="col-lg-4 col-md-6 p-3">
+                    <div
+                        class="card shadow d-flex justify-content-center align-items-center p-3 rounded-lg card-main ml-4">
                         <img src="{% static 'conference/Paul-Raj-Recent-min-scaled.jpg' %}"
                             class="card-img-top p-3 img-fluid rounded-circle" alt="...">
                         <div class="card-body">
@@ -263,9 +299,8 @@ Jyoti Nivas College Autonomous, Banglore
                     </div>
 
                 </div>
-                <div class="col-md-4 p-3">
-                    <div class="card shadow d-flex justify-content-center align-items-center p-3 rounded-lg"
-                        style="width: 24rem;border: none;">
+                <div class="col-lg-4 col-md-6 p-3">
+                    <div class="card shadow d-flex justify-content-center align-items-center p-3 rounded-lg card-main">
                         <img src="{% static 'conference/LUD-Anupa.jpg' %}"
                             class="card-img-top p-3 img-fluid rounded-circle" alt="...">
                         <div class="card-body">
@@ -277,9 +312,8 @@ Jyoti Nivas College Autonomous, Banglore
                     </div>
 
                 </div>
-                <div class="col-md-4 p-3">
-                    <div class="card shadow d-flex justify-content-center align-items-center p-3 rounded-lg"
-                        style="width: 24rem;border: none;">
+                <div class="col-lg-4 col-md-6 p-3">
+                    <div class="card shadow d-flex justify-content-center align-items-center p-3 rounded-lg card-main">
                         <img src="{% static 'conference/SXJ-Photo-min.jpg' %}"
                             class="card-img-top p-3 img-fluid rounded-circle" alt="...">
                         <div class="card-body">
@@ -299,7 +333,7 @@ Jyoti Nivas College Autonomous, Banglore
             <div class="col-md-12">
                 <h2 class="text-green text-center my-5 text-uppercase fw-bold">Conference Core Committee</h2>
             </div>
-            <div class="col-md-3">
+            <div class="col-lg-3">
                 <div class="d-flex justify-content-center align-items-center p-4 rounded-lg flex-column">
                     <div class="person-img">
                         <img src="https://letusdream.org/wp-content/uploads/2020/09/image.png" alt=""
@@ -316,7 +350,7 @@ Jyoti Nivas College Autonomous, Banglore
                     </div>
                 </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-lg-3">
                 <div class="d-flex justify-content-center align-items-center p-4 rounded-lg flex-column">
                     <div class="person-img">
                         <img src="https://letusdream.org/wp-content/uploads/2021/08/David-Core-commitee-min.jpeg" alt=""
@@ -333,7 +367,7 @@ Jyoti Nivas College Autonomous, Banglore
                     </div>
                 </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-lg-3">
                 <div class="d-flex justify-content-center align-items-center p-4 rounded-lg flex-column">
                     <div class="person-img">
                         <img src="https://letusdream.org/wp-content/uploads/2021/08/Anita-Eipe.jpg" alt=""
@@ -349,7 +383,7 @@ Jyoti Nivas College Autonomous, Banglore
                     </div>
                 </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-lg-3">
                 <div class="d-flex justify-content-center align-items-center p-4 rounded-lg flex-column">
                     <div class="person-img">
                         <img src="https://letusdream.org/wp-content/uploads/2021/08/Unnati-G-Hunjan.jpeg" alt=""
@@ -366,7 +400,7 @@ Jyoti Nivas College Autonomous, Banglore
                     </div>
                 </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-lg-3">
                 <div class="d-flex justify-content-center align-items-center p-4 rounded-lg flex-column">
                     <div class="person-img">
                         <img src="https://letusdream.org/wp-content/uploads/2021/08/Profile-Photo_Phinu-min.png" alt=""
@@ -384,7 +418,7 @@ Jyoti Nivas College Autonomous, Banglore
                     </div>
                 </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-lg-3">
                 <div class="d-flex justify-content-center align-items-center p-4 rounded-lg flex-column">
                     <div class="person-img">
                         <img src="https://letusdream.org/wp-content/uploads/2021/08/Dr-Uma-krishnan-Spandhana-Calicut-Kerala-India-480x480.jpg"
@@ -400,7 +434,7 @@ Jyoti Nivas College Autonomous, Banglore
                     </div>
                 </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-lg-3">
                 <div class="d-flex justify-content-center align-items-center p-4 rounded-lg flex-column">
                     <div class="person-img">
                         <img src="https://letusdream.org/wp-content/uploads/2021/08/Roseline-07082021-min.jpg" alt=""
