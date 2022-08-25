@@ -183,7 +183,7 @@ D.R.E.A.M.S Program
         transition: all 0.5s;
         cursor: pointer;
         margin: 5px;
-        margin-top: 170px;
+        margin-top: 10px;
         margin-bottom: 10px;
     }
 
@@ -231,7 +231,12 @@ D.R.E.A.M.S Program
     .text-green {
         color: #0a7b79;
     }
-
+.img-middle{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+}
     @media (max-width:720px) {
         .programs-section .image-implementation img {
             height: 250px;
@@ -258,9 +263,7 @@ D.R.E.A.M.S Program
             padding-top: 5%;
         }
 
-        .programs-section .button {
-            margin-top: 100px;
-        }
+
     }
 
     @media (max-width:1120px) {
@@ -279,28 +282,9 @@ D.R.E.A.M.S Program
 
         }
 
-        .programs-section .button {
-            margin-top: 0px;
 
-        }
 
-        .programs-section .img-content img {
-            height: 250px;
-            padding-top: 5%;
-        }
 
-        .programs-section .button {
-            margin-top: 100px;
-
-        }
-    }
-
-    @media (max-width:991px) {
-        .programs-section .button {
-            margin-top: 0px;
-            width: 200px;
-
-        }
     }
 </style>
 
@@ -308,41 +292,45 @@ D.R.E.A.M.S Program
 
 <section class="programs-section">
 
-    <div style="background:linear-gradient(180deg, rgba(211, 242, 233, 0.93) 0%, rgba(211, 242, 233, 0.93) 100%) ;">
-        <div class="container" style="padding: 20px;margin-top: -30px;">
-            <div class="row mt-5">
-                <div class="col-lg-12 mb-4 mt-5">
-                    <nav aria-label="breadcrumb animated slideInDown">
-                        <ol class="breadcrumb text-uppercase mb-0">
-                            <li class="breadcrumb-item"><a class="text-black" href="{% url 'main' %}">Home</a></li>
 
-                            <li class="breadcrumb-item  active" aria-current="page" style="color: #0a7b79;">Dreams
-                                Program
-                            </li>
-                        </ol>
-                    </nav>
-                </div>
-                <div class="col-lg-3">
-                    <center>
-                        <a href=""> <button type="button" class="button"><span>Join Us</span></button></a>
-                    </center>
-                </div>
-                <div class="col-lg-6 img-content">
-                    <center>
-                        <img src="https://letusdream.org/wp-content/uploads/2020/07/Dreams-programme-wheel.png"
-                            style="padding-bottom:5%;">
-                    </center>
-                </div>
-                <div class="col-lg-3">
-                    <center>
-                        <a href="#location"><button type="button" class="button"><span>Get Location</span></button></a>
-                    </center>
-                </div>
+    <div class="container" style="padding: 20px;margin-top: 50px;">
+        <div class="row">
+            <div class="col-lg-12">
+                <nav aria-label="breadcrumb animated slideInDown">
+                    <ol class="breadcrumb text-uppercase mb-0">
+                        <li class="breadcrumb-item"><a class="text-black" href="{% url 'main' %}">Home</a></li>
 
+                        <li class="breadcrumb-item  active" aria-current="page" style="color: #0a7b79;">Dreams
+                            Program
+                        </li>
+                    </ol>
+                </nav>
             </div>
+
+
         </div>
     </div>
+    <!-- dreams logo -->
+    <section class="projects-section bg-light" id="projects">
+        <div class="container px-4 px-lg-5">
+            <!-- dreams Project Row-->
+            <div class="row gx-0 mb-4 mb-lg-5 align-items-center ml-5 pl-5">
+
+                <div class="col-xl-8 col-lg-7 align-items-center img-middle"><img class="img-fluid mb-3 mb-lg-0 ml-5 pl-5"
+                        src="https://letusdream.org/wp-content/uploads/2020/07/Dreams-programme-wheel.png" alt="..." />
+                </div>
+
+                <div class="col-xl-4 col-lg-5">
+                    <div class="featured-text text-center text-lg-left">
+                        <a href="#location"><button type="button" class="button"><span>Get Location</span></button></a>
+                        <a href=""> <button type="button" class="button"><span>Join Us</span></button></a>
+                    </div>
+                </div>
+            </div>
+
+    </section>
     <!-- drams about -->
+
     <div class="container-fluid pb-5">
         <div class="container" style="padding-top: 5%;">
             <div class="row g-5 align-items-center">
@@ -456,6 +444,7 @@ D.R.E.A.M.S Program
             </div>
         </div>
     </div>
+
 
     <!-- dreams Implementation -->
     <div style="background:linear-gradient(180deg, rgba(211, 242, 233, 0.93) 0%, rgba(211, 242, 233, 0.93) 100%) ;">
