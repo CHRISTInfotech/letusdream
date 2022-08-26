@@ -2,16 +2,949 @@
 {% load static %}
 
 {% block title %}
-CHANGANCHERRY
+CHAGANACHERRY
 {% endblock %}
 
 {% block content %}
+
+
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css'>
+<!-- Font Awesome -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+<!-- MDB -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.4.0/mdb.min.css" rel="stylesheet" />
 <style>
-    .location {
-        margin-top: 130px;
+    .text-green {
+        color: #0a7b79;
+    }
+
+    .team-img {
+        width: 160px;
+        border-style: groove;
+        border-radius: 30px;
+        padding: 5px
+    }
+
+    .changacherry-loc .button {
+        display: inline-block;
+        border-radius: 100px;
+        background-color: #d3f2e9;
+        font-weight: bold;
+        border: 2px solid #d3f2e9;
+        color: #0a7b79;
+        text-align: center;
+        font-size: 20px;
+        padding: 14px 28px;
+        width: 300px;
+        transition: all 0.5s;
+        cursor: pointer;
+        margin: 5px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .changacherry-loc .button span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+    }
+
+    .changacherry-loc .button span:after {
+        content: '\00bb';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.5s;
+    }
+
+    .changacherry-loc .button:hover {
+        background-color: transparent;
+        color: #0a7b79;
+        border: 2px solid #0a7b79;
+    }
+
+    .changacherry-loc .button:hover span {
+        padding-right: 25px;
+
+    }
+
+    .changacherry-loc .button:hover span:after {
+        opacity: 1;
+        right: 0;
+    }
+
+    .text-green {
+        color: #0a7b79;
+    }
+
+    .img-middle {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+    }
+
+
+    /* lined tabs */
+
+    .dreams-tab .lined .nav-link {
+        border: none;
+        border-bottom: 3px solid transparent;
+    }
+
+    .dreams-tab .lined .nav-link:hover {
+        border: none;
+        border-bottom: 3px solid transparent;
+    }
+
+    .dreams-tab .lined .nav-link.active {
+        background: none;
+        color: #555;
+        border-color: #2b90d9;
+    }
+
+
+
+    .dreams-tab .nav-pills .nav-link {
+        color: #555;
+    }
+
+    .dreams-tab .text-uppercase {
+        letter-spacing: 0.1em;
+    }
+
+    /* Counter */
+    .sectionClass div,
+    .sectionClass h1,
+    .sectionClass h2,
+    .sectionClass h3,
+    .sectionClass h4,
+    .sectionClass h5,
+    .sectionClass h6,
+    .sectionClass form,
+    .sectionClass p {
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        font-size: 13px;
+        direction: ltr;
+    }
+
+    .sectionClass {
+        padding: 20px 0px 50px 0px;
+        position: relative;
+        display: block;
+    }
+
+    .fullWidth {
+        width: 100% !important;
+        display: table;
+        float: none;
+        padding: 0;
+        min-height: 1px;
+        height: 100%;
+        position: relative;
+    }
+
+
+    .sectiontitle {
+        background-position: center;
+        margin: 30px 0 0px;
+        text-align: center;
+        min-height: 20px;
+    }
+
+    .sectiontitle h2 {
+        font-size: 30px;
+
+        margin-bottom: 0px;
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+
+
+    .headerLine {
+        width: 160px;
+        height: 2px;
+        display: inline-block;
+        background: #101F2E;
+    }
+
+
+    .projectFactsWrap {
+        display: flex;
+        margin-top: 30px;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+
+    #projectFacts .fullWidth {
+        padding: 0;
+    }
+
+    .projectFactsWrap .item {
+        width: 25%;
+        height: 100%;
+        padding: 50px 0px;
+        text-align: center;
+    }
+
+    .projectFactsWrap .item:nth-child(1) {
+        background: #d3f2e9;
+    }
+
+    .projectFactsWrap .item:nth-child(2) {
+        background: #d3f2e9;
+    }
+
+    .projectFactsWrap .item:nth-child(3) {
+        background: #d3f2e9;
+    }
+
+    .projectFactsWrap .item:nth-child(4) {
+        background: #d3f2e9;
+    }
+
+    .projectFactsWrap .item p.number {
+        font-size: 40px;
+        padding: 0;
+        font-weight: bold;
+    }
+
+    .projectFactsWrap .item p {
+        color: #0a7b79;
+        font-size: 18px;
+        margin: 0;
+        padding: 10px;
+        font-family: 'Open Sans';
+    }
+
+    .nav-pills .nav-link.active,
+    .nav-pills .show>.nav-link {
+        box-shadow: none;
+    }
+
+    .nav-pills .nav-link {
+        margin: 0;
+        background-color: transparent;
+    }
+
+    .nav-tabs .nav-link:hover {
+        background-color: transparent;
+    }
+
+    .projectFactsWrap .item span {
+        width: 60px;
+        background: #0a7b79;
+        height: 2px;
+        display: block;
+        margin: 0 auto;
+    }
+
+
+    .projectFactsWrap .item i {
+        vertical-align: middle;
+        font-size: 50px;
+        color: #0a7b79;
+    }
+
+
+    .projectFactsWrap .item:hover i,
+    .projectFactsWrap .item:hover p {
+        color: #2b90d9;
+    }
+
+    .projectFactsWrap .item:hover span {
+        background: #2b90d9;
+    }
+
+    .sectiontitle .heading-h3:after {
+        content: "";
+        /* This is necessary for the pseudo element to work. */
+        display: block;
+        /* This will put the pseudo element on its own line. */
+        margin: 0 auto;
+        /* This will center the border. */
+        width: 50%;
+        /* Change this to whatever width you want. */
+        padding-top: 20px;
+        /* This creates some space between the element and the border. */
+        border-bottom: 2px solid transparent;
+        border-image: linear-gradient(0.90turn, rgb(255, 255, 255), rgb(0, 0, 0), rgb(255, 255, 255));
+        border-image-slice: 1;
+        /* This creates the border. Replace black with whatever color you want. */
+    }
+
+    .sectiontitle .heading-h3 {
+        padding-top: 0px;
+        padding-bottom: 10px;
+        font-weight: 700;
+        font-size: 30px;
+
+    }
+
+
+
+    /*ZoomIn Hover Effect*/
+    .hover-zoomin a {
+        display: block;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .hover-zoomin img {
+        width: 100%;
+        height: auto;
+        -webkit-transition: all 0.5s ease-in-out;
+        -moz-transition: all 0.5s ease-in-out;
+        -o-transition: all 0.5s ease-in-out;
+        -ms-transition: all 0.5s ease-in-out;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .hover-zoomin:hover img {
+        -webkit-transform: scale(1.2);
+        -moz-transform: scale(1.2);
+        -o-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        transform: scale(1.2);
+    }
+
+    /* testimonial section */
+
+
+    .img-text {
+        width: 100%;
+        height: 400px;
+        display: block;
+        text-align: center;
+        padding: 40% 5%;
+        background: #d3f2e9;
+        /* 0a7b79 */
+        color: #0a7b79;
+        border-radius: 30px;
+    }
+
+    .img-text h2 {
+        margin-top: 10px;
+        margin-bottom: 20px;
+        font-size: 25px;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
+    .img-text p {
+        font-size: 14px;
+    }
+
+    .single-box {
+        position: relative;
+        margin-left: 10px;
+        margin-bottom: 30px;
+    }
+
+    .img-area {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        border: 5px solid #7ca8a1;
+        overflow: hidden;
+        top: 15px;
+        left: 125px;
+        border-radius: 50%;
+    }
+
+    .img-area img {
+        width: 100%;
+    }
+
+    .carousel-indicators {
+        left: 0;
+        top: auto;
+        bottom: -20px;
+    }
+
+    .carousel-indicators li {
+        background: #0a7b79;
+        box-shadow: inset 1px 1px 1px 1px rgba(0, 0, 0, 0.5);
+    }
+
+    .carousel-indicators :active {
+        background: #0a7b79;
+    }
+
+    .carousel-indicators.img-area {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        border: 5px solid #fff;
+        overflow: hidden;
+        top: 20%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+    }
+
+    .button-testi {
+        width: 200px;
+        padding: 12px 0;
+        text-align: center;
+        margin: 0 15px;
+        border-radius: 25px;
+        font-weight: bold;
+        border: 2px solid #d3f2e9;
+        background: #d3f2e9;
+        color: #0a7b79;
+        transition: background 0.5s;
+    }
+
+    .img1 {
+        width: 100% !important;
+        height: 100% !important;
+    }
+
+    @media (max-width: 786px) {
+        .projectFactsWrap .item {
+            flex: 0 0 50%;
+        }
     }
 </style>
-<section class="location">
-    <h1>CHANGANCHERRY</h1>
+<section class="changacherry-loc">
+    <br><br><br>
+    <!-- breadcrumb -->
+    <nav aria-label="breadcrumb animated slideInDown" class="ml-4 mt-5 pt-5 " style="margin-left: 1.5rem!important;"">
+        <ol class=" breadcrumb text-uppercase mb-0 ">
+            <li class=" breadcrumb-item ml-5 pl-5"><a class="text-black text-decoration-none"
+            href="{% url 'main' %}">Home</a></li>
+        <li class="breadcrumb-item ml-5 pl-5"><a class="text-black text-decoration-none"
+                href="{% url 'main' %}#location">Location</a>
+        </li>
+
+        <li class="breadcrumb-item  active" aria-current="page" style="color: #0a7b79;">CHAGANACHERRY
+        </li>
+        </ol>
+    </nav>
+    <!-- bangagolre -->
+    <section class="projects-section bg-white mt-4" id="projects">
+        <div class="container px-4 px-lg-5">
+            <!-- dreams Project Row-->
+            <div class="row gx-0 mb-4 mb-lg-5 align-items-center ml-5 pl-5">
+
+                <div class="col-xl-8 col-lg-7 align-items-center img-middle"><img
+                        class="img-fluid mb-3 mb-lg-0 ml-5 pl-5"
+                        src="http://letusdream.org/wp-content/uploads/2020/07/CHAGANACHERRY.png" alt="CHAGANACHERRY" />
+                </div>
+
+                <div class="col-xl-4 col-lg-5">
+                    <div class="featured-text text-center text-lg-left">
+                        <a href="#location"><button type="button" class="button"><span>Get Location</span></button></a>
+                        <a href=""> <button type="button" class="button"><span>Join Us</span></button></a>
+                    </div>
+                </div>
+            </div>
+
+    </section>
+    <div class="container dreams-tab">
+        <div class="row">
+            <div class="col-lg-12">
+                <!-- Tabs navs -->
+                <div class="container py-5">
+
+
+                    <div class="p-5 bg-white rounded shadow mb-5">
+                        <!-- Lined tabs-->
+                        <ul id="myTab2" role="tablist"
+                            class="nav nav-tabs nav-pills with-arrow lined flex-column flex-sm-row text-center">
+                            <li class="nav-item flex-sm-fill">
+                                <a id="program-tab" data-toggle="tab" href="#program" role="tab" aria-controls="program"
+                                    aria-selected="true"
+                                    class="nav-link text-uppercase fw-bold font-weight-bold mr-sm-3 rounded-0 active">DREAMS
+                                    Program</a>
+                            </li>
+                            <li class="nav-item flex-sm-fill">
+                                <a id="band-tab" data-toggle="tab" href="#band" role="tab" aria-controls="band"
+                                    aria-selected="false"
+                                    class="nav-link text-uppercase fw-bold font-weight-bold mr-sm-3 rounded-0">DREAMS
+                                    Band</a>
+                            </li>
+                            <li class="nav-item flex-sm-fill">
+                                <a id="proclub-tab" data-toggle="tab" href="#proclub" role="tab" aria-controls="proclub"
+                                    aria-selected="false"
+                                    class="nav-link text-uppercase fw-bold font-weight-bold rounded-0">DREAMS Pro
+                                    Club</a>
+                            </li>
+                        </ul>
+                        <div id="myTab2Content" class="tab-content">
+                            <div id="program" role="tabpanel" aria-labelledby="program-tab"
+                                class="tab-pane fade px-4 py-5 show active">
+                                <p class="leade font-italic justify-content">The DREAMS chapter in Changanacherry was
+                                    started in 2017 with Mr. James and Mr. Joshi Job as the co-founders. After in-depth
+                                    discussions and meetings, Kristu Jyoti College of Management and Technology,
+                                    Changanacherry had agreed to provide their students as volunteers for the program.
+                                    Around 30 undergraduate students from the Department of Psychology were then given
+                                    training through a couple of sessions and they had started working at the community
+                                    level. The model was later introduced to the students of Assumption College,
+                                    Changanacherry, and St Joseph College of Communication, Changanacherry, and received
+                                    a wider volunteering network.
+                                </p>
+                                <p class="leade font-italic  justify-content">
+                                    The first summer camp hosted by the Changanacherry chapter was conducted in 2018 at
+                                    S.B School Changanacherry in collaboration with four other schools. Around 7
+                                    students studying in 6th grade (middle school) who required special assistance for
+                                    enhancing their self-concept and identity formation were recruited for the camp. Ms.
+                                    Tessy Thomas and Mr. Sebastian had later joined the program and is still continuing
+                                    to ensure community participation in the program. Every year, two batches of
+                                    volunteers consisting of around 35 members are joining from Kristu Jayanti College
+                                    and Assumption College and they have been actively involved in extending the model
+                                    to various schools and colleges in the locality.
+                                </p>
+
+                            </div>
+                            <div id="band" role="tabpanel" aria-labelledby="band-tab" class="tab-pane fade px-4 py-5">
+                                <p class="leade font-italic justify-content">The DREAMS Band strives towards making a
+                                    positive difference in the community by utilizing their musical skills. DREAMS Band
+                                    is not only an opportunity to sing and motivate the audience but also uses music as
+                                    a platform to empower communities and make music of their own, which can empower
+                                    children and youth holistically. It is a band with a meaning and greater goals for
+                                    the benefit of the society.
+                                </p>
+                                <p class="leade font-italic mb-5  justify-content">
+                                    Those who are interested to be a part of the band may contact the respective leaders
+                                    in each locality.
+                                </p>
+
+                            </div>
+                            <div id="proclub" role="tabpanel" aria-labelledby="proclub-tab"
+                                class="tab-pane fade px-4 py-5">
+                                <p class="leade font-italic justify-content">DREAMS Pro-club is a support group for the
+                                    personal and professional development of young professionals. Small groups of 10-12
+                                    working professionals meet once every month to discuss and implement strategies for
+                                    their professional growth. The club helps in inculcating values of identity and
+                                    community belonging among the members. The program aims at enhancing communication
+                                    skills, generating positive attitudes about self and others, developing leadership,
+                                    cooperation, and community engagement.
+                                </p>
+                                <p class="leade font-italic justify-content">This platform is yet to be initiated. Those
+                                    who are interested to take a partnership may contact the respective leaders in each
+                                    locality.
+                                </p>
+
+                            </div>
+                        </div>
+                        <!-- End lined tabs -->
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="sectiontitle">
+                <h2 class="heading-h3 text-green text-uppercase">Our Impact</h2>
+                <!-- <span class="headerLine"></span> -->
+            </div>
+
+            <div class="col-lg-12">
+
+                <div id="projectFacts" class="sectionClass">
+                    <div class="fullWidth eight columns">
+                        <div class="projectFactsWrap ">
+                            <div class="item wow fadeInUpBig animated animated" data-number="12"
+                                style="visibility: visible;">
+                                <i class="fa fa-child"></i>
+                                <p id="number1" class="number">111</p>
+                                <span></span>
+                                <p>Students</p>
+                            </div>
+                            <div class="item wow fadeInUpBig animated animated" data-number="55"
+                                style="visibility: visible;">
+                                <i class="fa fa-smile-o"></i>
+                                <p id="number2" class="number">111</p>
+                                <span></span>
+                                <p>Participants</p>
+                            </div>
+                            <div class="item wow fadeInUpBig animated animated" data-number="359"
+                                style="visibility: visible;">
+                                <i class="fa fa-user"></i>
+                                <p id="number3" class="number">09</p>
+                                <span></span>
+                                <p>Leadership</p>
+                            </div>
+                            <div class="item wow fadeInUpBig animated animated" data-number="246"
+                                style="visibility: visible;">
+                                <i class="fa fa-users"></i>
+                                <p id="number4" class="number">120</p>
+                                <span></span>
+                                <p>Families</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12">
+                <!-- Modal gallery -->
+                <section class="">
+                    <!-- Section: Images -->
+                    <section class="">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+                                <div class="bg-image hover-overlay ripple shadow-1-strong rounded"
+                                    data-ripple-color="light" style="min-height: 234px;">
+
+                                    <img src="{% static 'locations/chaganacherry/1.png'%}" class="w-100"
+                                        style="min-height: 234px;" />
+                                    <a href="#!" data-mdb-toggle="modal" data-mdb-target="#exampleModal1">
+                                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.2);"></div>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 mb-4 mb-lg-0">
+                                <div class="bg-image hover-overlay ripple shadow-1-strong rounded"
+                                    data-ripple-color="light" style="min-height: 234px;">
+                                    <img src="{% static 'locations/chaganacherry/2.png'%}" class="w-100"
+                                        style="min-height: 234px;" />
+                                    <a href="#!" data-mdb-toggle="modal" data-mdb-target="#exampleModal2">
+                                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.2);"></div>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 mb-4 mb-lg-0">
+                                <div class="bg-image hover-overlay ripple shadow-1-strong rounded"
+                                    data-ripple-color="light" style="min-height: 234px;">
+                                    <img src="{% static 'locations/chaganacherry/3.png'%}" class="w-100"
+                                        style="min-height: 234px;" />
+                                    <a href="#!" data-mdb-toggle="modal" data-mdb-target="#exampleModal3">
+                                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.2);"></div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Section: Images -->
+
+                    <!-- Section: Modals -->
+                    <section class="mt-5">
+                        <!-- Modal 1 -->
+                        <div class="modal fade mt-5 pt-5" id="exampleModal1" tabindex="-1"
+                            aria-labelledby="exampleModal1Label" aria-hidden="true">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                    <div class="ratio ratio-16x9">
+                                        <iframe src="https://www.youtube.com/embed/FlVEeAIWCo0"
+                                            title="Never Stop Dreaming" allowfullscreen></iframe>
+                                    </div>
+
+                                    <div class="text-center py-3">
+                                        <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">
+                                            Close
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Modal 2 -->
+                        <div class="modal fade mt-5 pt-5" id="exampleModal2" tabindex="-1"
+                            aria-labelledby="exampleModal2Label" aria-hidden="true">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                    <div class="ratio ratio-16x9">
+                                        <iframe src="https://www.youtube.com/embed/-U7IMk0fOpw"
+                                            title="Fr  Lijo Message Dreams" allowfullscreen></iframe>
+                                    </div>
+
+                                    <div class="text-center py-3">
+                                        <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">
+                                            Close
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Modal 3 -->
+                        <div class="modal fade mt-5 pt-5" id="exampleModal3" tabindex="-1"
+                            aria-labelledby="exampleModal3Label" aria-hidden="true">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                    <div class="ratio ratio-16x9">
+                                        <iframe src="https://www.youtube.com/embed/E9i2R2aZ-x8" title="Waving flag"
+                                            allowfullscreen></iframe>
+                                    </div>
+
+                                    <div class="text-center py-3">
+                                        <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">
+                                            Close
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Section: Modals -->
+                </section>
+                <!-- Modal gallery -->
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row mt-5 p-5">
+
+
+            <div class="col-lg-6 hover-zoomin p-5">
+                <a href="https://www.facebook.com/groups/261616598625869/" title="" target="_blank">
+                    <img src="https://letusdream.org/wp-content/uploads/2020/07/Changanacherry-FB.jpg" alt="" />
+                </a>
+                <h4 class="text-center mt-3 text-green">CHAGANACHERRY FB GROUP</h4>
+            </div>
+
+            <div class="col-lg-6 hover-zoomin p-5">
+                <a href="{% url 'photo-gallery' %}#popup2" title="">
+                    <img src="https://letusdream.org/wp-content/uploads/2020/07/Level3-Changanacherry-Gallery-thumbnails-min.jpg"
+                        alt="" />
+                </a>
+                <h4 class="text-center mt-3 text-green">CHAGANACHERRY GALLERY</h4>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row text-center">
+
+
+
+            <!-- Team item -->
+            <div class="col-xl-3 col-sm-6 mb-5">
+                <div class="bg-white rounded shadow-sm py-5 px-4" style="min-height: 280px;"><img
+                        src="https://letusdream.org/wp-content/uploads/2020/08/Mr-James-160x129.jpeg" alt="" width="100"
+                        class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+                    <h5 class="mb-0">Mr. James Thomas</h5><span class="small text-uppercase text-muted">PRO -
+                        CLUB</span>
+
+                </div>
+            </div><!-- End -->
+
+            <!-- Team item -->
+            <div class="col-xl-3 col-sm-6 mb-5">
+                <div class="bg-white rounded shadow-sm py-5 px-4" style="min-height: 280px;"><img
+                        src="https://bootstrapious.com/i/snippets/sn-team/teacher-1.jpg" alt="" width="100"
+                        class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+                    <h5 class="mb-0">Mr. Joshi Job</h5><span class="small text-uppercase text-muted">PRO - CLUB</span>
+
+                </div>
+            </div><!-- End -->
+
+            <!-- Team item -->
+            <div class="col-xl-3 col-sm-6 mb-5">
+                <div class="bg-white rounded shadow-sm py-5 px-4" style="min-height: 280px;"><img
+                        src="https://letusdream.org/wp-content/uploads/2020/08/Ms-Tessy-Thomas-160x160.jpeg" alt=""
+                        width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+                    <h5 class="mb-0">Ms. Tessy Thomas</h5><span class="small text-uppercase text-muted">PRO -
+                        CLUB</span>
+
+                </div>
+            </div>
+            <!-- End -->
+            <!-- Team item -->
+            <div class="col-xl-3 col-sm-6 mb-5">
+                <div class="bg-white rounded shadow-sm py-5 px-4" style="min-height: 280px;"><img
+                        src="https://letusdream.org/wp-content/uploads/2020/08/Mr-Sebastian-MT-136x160.jpeg" alt=""
+                        width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+                    <h5 class="mb-0">Mr. Sebastian</h5><span class="small text-uppercase text-muted">PRO -
+                        CLUB</span>
+
+                </div>
+            </div>
+            <!-- End -->
+        </div>
+    </div>
+    <!-- testimoial section -->
+    <!--Testimonials-->
+    <div class="container testimonial" id="container-body">
+        <div class="row" style="margin-top: 12%; color: #7ca8a1;">
+            <div class="col">
+                <center>
+                    <h1>TESTIMONIALS</h1>
+                </center>
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="col-md-12">
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="row">
+
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="single-box">
+                                        <div class="img-area"><img
+                                                src="https://letusdream.org/wp-content/uploads/2020/05/Janet-_-Testimonial-2-120x120.jpg"
+                                                class="img1 img-fluid img-middle" alt="testi1" height="26px"
+                                                width="10%"></div>
+                                        <div class="img-text">
+                                            <h2 style="margin-top: -20px;">Canaan Charrior</h2>
+                                            <p>I’ve witnessed the program change lives in a way that I have never seen
+                                                any program with similar goals could ever even imagine. Everyone should
+                                                have a chance to see that they can do anything, and I will help in any
+                                                way I can to make that happen <emp><b>Read more</b></emp>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="single-box">
+                                        <div class="img-area"><img
+                                                src="https://letusdream.org/wp-content/uploads/2022/01/Kaici-Gordon_2.jpeg"
+                                                width="100" class="img1 img-fluid img-middle" height="100" alt="testi1">
+                                        </div>
+                                        <div class="img-text">
+                                            <h2 style="margin-top: -20px;">Robin Sehon</h2>
+                                            <p style="text-align:justify;">Really innovative concept.. I was looking
+                                                forward for such curated content and i got more than i was expecting. I
+                                                am so far very thrilled with overall experience and improvement. <emp>
+                                                    <b>Read more</b>
+                                                </emp>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="single-box">
+                                        <div class="img-area"><img
+                                                src="https://letusdream.org/wp-content/uploads/2022/01/Hope-Lenior.png"
+                                                class="img1 img-fluid img-middle" alt="testi1"></div>
+                                        <div class="img-text">
+                                            <h2 style="margin-top: -20px;">Hope LeNoir</h2>
+                                            <p style="text-align:justify;">I was organizing my closet and came across my
+                                                DREAMS tshirt. This reminded me of how much fun I had with your students
+                                                and how your volunteer team made me feel extremely welcome. Thank you
+                                                for allowing me to be a part of the DREAMS.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="row">
+
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="single-box">
+                                        <div class="img-area"><img
+                                                src="https://letusdream.org/wp-content/uploads/2022/01/Kaici-Gordon_2.jpeg"
+                                                width="100" class="img1" height="100" alt="testi1"></div>
+                                        <div class="img-text">
+                                            <h2 style="margin-top: -20px;">Robin Sehon</h2>
+                                            <p>Each student came to the program with different needs, as well as
+                                                different backgrounds. However, what was the same in each student was
+                                                some level of growth in motivation, confidence in personal ability, self
+                                                esteem, <emp><b>Read more</b></emp>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="single-box">
+                                        <div class="img-area"><img
+                                                src="https://letusdream.org/wp-content/uploads/2022/01/Hope-Lenior.png"
+                                                class="img1" alt="testi1"></div>
+                                        <div class="img-text">
+                                            <h2 style="margin-top: -20px;">Hope LeNoir</h2>
+                                            <p>I was organizing my closet and came across my DREAMS tshirt. This
+                                                reminded me of how much fun I had with your students and how your
+                                                volunteer team made me feel extremely welcome. Thank you for everything.
+                                                <emp><b>Read more</b></emp>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="single-box">
+                                        <div class="img-area"><img
+                                                src="http://letusdream.org/wp-content/uploads/2020/05/shan-hughes.jpg"
+                                                class="img1" alt="testi1"></div>
+                                        <div class="img-text">
+                                            <h2 style="margin-top: -20px;">Kaici Gordon</h2>
+                                            <p>Greetings everyone! I was first introduced to the DREAMS program by Dr.
+                                                Fr. Lijo Thomas and Mrs. Maribeth Holzer. From the moment I met these
+                                                two beautiful people, I immediately knew that this was the right program
+                                                and community for me <emp><b>Read more</b></emp>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </section>
+<script>
+
+    $.fn.jQuerySimpleCounter = function (options) {
+        var settings = $.extend({
+            start: 0,
+            end: 1000,
+            easing: 'swing',
+            duration: 400,
+            complete: ''
+        }, options);
+
+        var thisElement = $(this);
+
+        $({ count: settings.start }).animate({ count: settings.end }, {
+            duration: settings.duration,
+            easing: settings.easing,
+            step: function () {
+                var mathCount = Math.ceil(this.count);
+                thisElement.text(mathCount);
+            },
+            complete: settings.complete
+        });
+    };
+
+
+    $('#number1').jQuerySimpleCounter({ end: 111, duration: 3000 });
+    $('#number2').jQuerySimpleCounter({ end: 111, duration: 3000 });
+    $('#number3').jQuerySimpleCounter({ end: 09, duration: 3000 });
+    $('#number4').jQuerySimpleCounter({ end: 120, duration: 3000 });
+
+
+
+</script>
+<!-- MDB -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.4.0/mdb.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 {% endblock %}
