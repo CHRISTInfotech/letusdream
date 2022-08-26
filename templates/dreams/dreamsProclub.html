@@ -86,13 +86,15 @@ Dream Pro Club
         height: 100%;
         width: 100%;
     }
+    .text-black{
+        text-decoration: none !important;
+    }
 </style>
 <body>
-    <br><br><br><br><br><br>
-    <nav aria-label="breadcrumb animated slideInDown">
+    <nav aria-label="breadcrumb animated slideInDown" style="margin-top: 8%;">
         <ol class="breadcrumb text-uppercase" style="background-color: #fff;">
             <li class="breadcrumb-item"><a class="text-black" href="{% url 'main' %}">Home</a></li>
-
+            <li class="breadcrumb-item"><a class="text-black" href="{% url 'main' %}#dreamProgram">Dreams</a></li>
             <li class="breadcrumb-item  active" aria-current="page" style="color: #0a7b79;">Dreams Pro Club</li>
         </ol>
     </nav>
@@ -137,9 +139,6 @@ Dream Pro Club
                                 <img src="https://letusdream.org/wp-content/uploads/2020/07/Letusdream-proclub-O6PHIU0-min-scaled.jpg" alt="" height="616" width="616" >
                             </div> 
 
-                            <div class="carousel-item">
-                                <iframe width="616" height="616" class="cover" src="https://www.youtube.com/embed/vmLuafs-BhE" ></iframe>
-                            </div>
                         </div> 
                       
                         <a href="#carousel" class="carousel-control-prev" role="button" data-slide="prev">
@@ -156,7 +155,7 @@ Dream Pro Club
         </div>
 
         <div class="row">
-            <div class="col-lg-5 col-md-5 col-sm-12">
+            <div class="col-lg-5 col-md-5 col-sm-12" style="padding-top: 5%;">
                 <p><img src="{% static 'Research\Dreams-RESEARCH.png' %}" alt="" height="500" width="500"></p>
             </div>
             <div class="col-lg-7 col-md-7 col-sm-12" style="padding:10% 10%;">
@@ -169,7 +168,9 @@ Dream Pro Club
             </div>
         </div>
     </div>
+    <br><br><br>
     {% include 'partials/_globalPresence.html' %}    
+    <br><br><br>
     <script>
   
 

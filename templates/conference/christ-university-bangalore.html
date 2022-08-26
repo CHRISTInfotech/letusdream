@@ -43,20 +43,11 @@ Christ Bangalore University
             font-family: 'Montserrat', sans-serif;
         }
 
-        .col h1{
-            text-align: center;
-            margin:50px 0 !important;
-            color:#0a7b79;
-            font-weight: bolder !important;
-             padding-top: 10%;
-        }
-
         h1{
             text-align: center;
-            margin:50px 0 !important;
             color:#0a7b79;
             font-weight: bolder !important;
-            padding: 5% 0 5% 0;
+
         }
         /* Counter */
 
@@ -69,7 +60,7 @@ Christ Bangalore University
         .count-title {
             font-size: 40px;
             font-weight: normal;
-            margin-top: 10px;
+            
             margin-bottom: 0;
             text-align: center;
         }
@@ -77,7 +68,7 @@ Christ Bangalore University
         .count-text {
             font-size: 16px;
             font-weight: normal;
-            margin-top: 10px;
+           
             margin-bottom: 0;
             color: #7ca8a1;
             text-align: center;
@@ -170,7 +161,7 @@ Christ Bangalore University
 
         .testimonial-section .sec-title h2{
             position: relative;
-            margin-bottom: 115px;
+            margin-bottom: 15px;
             color: #0a7b79;
             font-size: 3rem;
             font-weight: bolder;
@@ -515,9 +506,17 @@ Christ Bangalore University
     </head>
     <body>
 
+        <nav aria-label="breadcrumb animated slideInDown" style="margin-top: 8%;">
+            <ol class="breadcrumb text-uppercase" style="background-color: #fff;">
+                <li class="breadcrumb-item"><a class="text-black" href="{% url 'main' %}">Home</a></li>
+                <li class="breadcrumb-item"><a class="text-black" href="{% url 'annual-conference' %}">Annual Conference</a></li>
+                <li class="breadcrumb-item  active" aria-current="page" style="color: #0a7b79;">Christ University</li>
+            </ol>
+        </nav>
+
             <!-- Counter -->
-            <div class="container">
-                <div class="row">
+            <div class="container" >
+                <div class="row" style="margin-bottom: 3%;">
                     <br/>
                    <div class="col text-center">
                     <h1>Countdown Timer</h1>
@@ -604,8 +603,14 @@ Christ Bangalore University
 
 
         <!-- Speakers -->
-        <h1>Conference Chairs</h1>
-        <div class="container-body" style="padding: 0 15% 0 15%;">
+        
+        <div class="container-body" style="padding: 0 15% 5% 15%;" >
+            <div class="row" style="margin-top: 5%;margin-bottom: 5%; color: #7ca8a1; ">
+                <div class="w-100">
+                  <center><h1>Conference Chairs</h1></center>
+                </div>
+              </div>
+            
             <div class="row">
                 <div class="col-lg-4">
                     <div class="card">
@@ -684,7 +689,7 @@ Christ Bangalore University
         </div>
 
 
-      <h1>Image Gallery</h1>
+      <h1 style="margin-bottom: 3%;">Image Gallery</h1>
       <div class="myimages">
           
           <div class="first-column">
