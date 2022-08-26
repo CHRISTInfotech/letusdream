@@ -34,6 +34,9 @@ Dream Band
         <script src="https://kit.fontawesome.com/f8cd4d7fce.js" crossorigin="anonymous"></script>
 
         <style>
+                body{
+        font-family: 'Montserrat', sans-serif;
+    }
             h1{
                 text-align: center;
                 font-family: 'Montserrat', sans-serif;
@@ -179,10 +182,23 @@ Dream Band
             border: 2px solid #fff;
             }
 
+            .text-black{
+                text-decoration: none !important;
+            }
+
         </style>
     </head>
     <body>
-        <div class="container-fluid" style=" padding-top: 10%;">
+
+        <nav aria-label="breadcrumb animated slideInDown" style="margin-top: 8%;">
+            <ol class="breadcrumb text-uppercase" style="background-color: #fff;">
+                <li class="breadcrumb-item"><a class="text-black" href="{% url 'main' %}">Home</a></li>
+                <li class="breadcrumb-item"><a class="text-black" href="{% url 'main' %}#dreamProgram">Dreams</a></li>
+                <li class="breadcrumb-item  active" aria-current="page" style="color: #0a7b79;">Dreams Band</li>
+            </ol>
+        </nav>
+
+        <div class="container-fluid">
             <div class="row">
 
                 <div class="col-lg-4 col-md-4 ">
@@ -220,10 +236,10 @@ Written, composed, performed, and managed by the children in the band, the songs
             </p>
         </div>
        
-        <div class="col-lg-7">
-            <center>
-            <img src="{% static 'Research\Dreams-RESEARCH.png' %}" style="padding-bottom:5%;">
+        <div class="col-lg-7" style="padding-left: 5%;">
            
+            <img src="{% static 'Research\Dreams-RESEARCH.png' %}" style="padding-bottom:5%;" height="500" width="500">
+            <center></center>
                 <button type="button" class="btn-1">Join Us</button>
                 <button type="button" class="btn-1">Our Location</button>
             </center>
@@ -239,13 +255,13 @@ Written, composed, performed, and managed by the children in the band, the songs
             <div class="first-column">
                 <a href="https://images.edexlive.com/uploads/user/imagelibrary/2019/5/10/original/BRU_1511.jpg?w=1200&h=800&dpr=1.3" target="_blank"><img src="https://images.edexlive.com/uploads/user/imagelibrary/2019/5/10/original/BRU_1511.jpg?w=1200&h=800&dpr=1.3" alt="image"></a>
                <a href="https://christuniversity.in/uploads/course/large/67967044_2022-02-21_12-37-57.jpg" target="_blank"><img src="https://christuniversity.in/uploads/course/large/67967044_2022-02-21_12-37-57.jpg" alt="image"></a>
-               <a href="https://christuniversity.in/uploads/photogallery/medium/1472919242_2016-11-25_10-32-50.JPG" target="_blank"><img src="https://christuniversity.in/uploads/photogallery/medium/1472919242_2016-11-25_10-32-50.JPG" alt="image"></a>
+               <a href="https://christuniversity.in/uploads/photogallery/medium/1472919242_2016-11-25_10-32-50.JPG" target="_blank"><img src="https://christuniversity.in/uploads/photogallery/medium/1472919242_2016-11-25_10-32-50.JPG" alt="image" width="100%"></a>
                <a href="https://i.ytimg.com/vi/qxPPa9YywhE/maxresdefault.jpg" target="_blank"><img src="https://i.ytimg.com/vi/qxPPa9YywhE/maxresdefault.jpg" alt="image"></a>
             </div>
             <div class="first-column">
                 <a href="https://letusdream.org/wp-content/uploads/2020/07/DREAMA-BAND345-scaled.jpg" target="_blank"><img src="https://letusdream.org/wp-content/uploads/2020/07/DREAMA-BAND345-scaled.jpg" alt="image"></a>
                 <a href="https://pbs.twimg.com/media/EO87ERNVAAA6mI8?format=jpg&name=4096x4096" target="_blank"><img src="https://pbs.twimg.com/media/EO87ERNVAAA6mI8?format=jpg&name=4096x4096" alt="image"></a>
-                <a href="https://pbs.twimg.com/media/EL-g_muUUAIh6Fv.jpg" target="_blank"><img src="https://pbs.twimg.com/media/EL-g_muUUAIh6Fv.jpg" alt="image"></a>
+                <a href="https://pbs.twimg.com/media/EL-g_muUUAIh6Fv.jpg" target="_blank"><img src="https://pbs.twimg.com/media/EL-g_muUUAIh6Fv.jpg" alt="image" width="100%"></a>
                 <a href="https://letusdream.org/wp-content/uploads/2020/07/DREAMS-BAND234-scaled.jpg" target="_blank"><img src="https://letusdream.org/wp-content/uploads/2020/07/DREAMS-BAND234-scaled.jpg" alt="image"></a>
           </div>
          </div>
@@ -310,9 +326,9 @@ Written, composed, performed, and managed by the children in the band, the songs
                 <iframe src="https://www.youtube.com/embed/LfzJvlfVmOc" style="height:500px;"></iframe>
             </div>
         </div>
-
+<br><br><br>
         {% include 'partials/_globalPresence.html' %}
-
+<br><br><br>
         <script>
             $(document).ready(function(){
     
