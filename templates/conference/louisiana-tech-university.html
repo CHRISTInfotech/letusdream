@@ -47,7 +47,7 @@
             }
 
 .body-content {
-    padding-top: 10%;
+   
 	 min-height: 50vh;
      font-family: 'Montserrat', sans-serif;
 	 display: flex;
@@ -555,10 +555,19 @@ position: absolute;
             }
             }
  
-
+            .text-black{
+                text-decoration: none !important;
+            }
         </style>
     </head>
     <body>
+        <nav aria-label="breadcrumb animated slideInDown" style="margin-top: 8%;">
+            <ol class="breadcrumb text-uppercase" style="background-color: #fff;">
+                <li class="breadcrumb-item"><a class="text-black" href="{% url 'main' %}">Home</a></li>
+                <li class="breadcrumb-item"><a class="text-black" href="{% url 'annual-conference' %}">Annual Conference</a></li>
+                <li class="breadcrumb-item  active" aria-current="page" style="color: #0a7b79;">Louisiana Tech University</li>
+            </ol>
+        </nav>
         <div class="body-content">
             <div class=" blog-slider">
                 <div class="blog-slider__wrp swiper-wrapper">
