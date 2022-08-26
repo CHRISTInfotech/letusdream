@@ -136,7 +136,7 @@ HOME
     .btn-2 {
       background: transparent;
       border: 2px solid #fff;
-      width: 200px;
+      width: 150px;
       padding: 15px 0;
       text-align: center;
       border-radius: 25px;
@@ -298,25 +298,15 @@ HOME
     }
 
     body h3 {
-      color: #0a7b79;
+      color: #7ca8a1;
       font-weight: bolder !important;
     }
 
-    .big-heading {
-      color: #7ca8a1;
-    }
-
+ 
     h6{
       padding-top:2%;
       padding-bottom:2%
-        }
-
-  btn-join, btn-more{
-          display: inline-block; }
-
- 
-
-            
+      }         
     </style>
 
 
@@ -327,10 +317,10 @@ HOME
     <div class="slider">
       <img src="{% static 'home/img2.png' %}" alt="img1" id="slideImg">
     </div>
-    <div class="overlay">
+    <div class="overlay" >
       <div class="content">
         <h1 style="padding-top: 160px;">LET US DREAM</h1>
-        <h3>Empowering Community</h3>
+        <h3 style="color: #0a7b79 !important;">Empowering Community</h3>
         <button type="button" class="btn-1">JOIN US</button>
       </div>
     </div>
@@ -339,16 +329,16 @@ HOME
 
 
 
-    <div class="container-fluid" style="width: 100% !important;">
-      <div class="row" style="margin-top: 100px; color: #7ca8a1;">
+    <div class="container-fluid" style="width: 100% !important;" id="dreamProgram">
+      <div class="row" style="margin-top: 5%; color: #7ca8a1; ">
         <div class="w-100">
           <center><h1>OUR PROGRAM</h1></center>
         </div>
       </div>
-        <div class="row pt-5 max-auto" style="margin-left: 5%; margin-right: 5%; margin-top: 2%;">
+        <div class="row pt-5 max-auto" style="margin-left: 5%; margin-right: 5%;">
           <div class="col-md-6 col-lg-3 pb-3">
     
-            <div class="card card-custom bg-white border-white border-0" style="height: 530px; width:100%;">
+            <div class="card card-custom bg-white border-white border-0" style="height: 100%; width:100%;">
               <div class="card-custom-img" style="background-image: url(https://cdn.dribbble.com/users/1312159/screenshots/5825513/attachments/1255803/lunamik-team-work.png?compress=1&resize=400x300&vertical=top);margin-top: 2%;"></div>
               
               <div class="card-body" style="overflow-y: auto">
@@ -356,8 +346,13 @@ HOME
                 <p class="card-text" style="color:#7ca8a1; font-weight: bold; text-align: justify;">The DREAMS Program is a three-year curriculum-based community mentoring project for schools and colleges, each year focusing on personal development, interpersonal skills and leadership skills. The program aims to.</p>
               </div>
               <div class="card-footer" style="background: inherit; border-color: inherit;">
-                <center><button type="button" id="btn-join" class="btn-2">Join Us</button>
-                <a href="{% url 'dreams' 'program' %}"><button type="button" id="btn-more" class="btn-2">Know more</button></a></center>
+                <center>
+                  <button type="button" class="btn-2">Join Us</button>
+                    <a href="{% url 'dreams' 'program' %}"><button type="button" class="btn-2">Know more</button></a>
+                </center>
+                    
+            
+                
                   
               </div>
             </div>
@@ -365,7 +360,7 @@ HOME
           </div>
           <div class="col-md-6 col-lg-3 pb-3">
     
-            <div class="card card-custom bg-white border-white border-0" style="height: 530px;width:100%;">
+            <div class="card card-custom bg-white border-white border-0" style="height:  100%;width:100%;">
               <div class="card-custom-img" style="background-image: url(https://i.pinimg.com/originals/8c/22/2c/8c222c3f4bc0a92105d90564f0abac4b.png); margin-top: 2%;"></div>
             
               <div class="card-body" style="overflow-y: auto">
@@ -382,7 +377,7 @@ HOME
           
           <div class="col-md-6 col-lg-3 pb-3">
     
-            <div class="card card-custom bg-white border-white border-0" style="height: 530px">
+            <div class="card card-custom bg-white border-white border-0" style="height:  100%;width:100%;">
               <div class="card-custom-img" style="background-image: url(https://img.freepik.com/free-vector/orchestra-concept-illustration_114360-3098.jpg?w=2000);margin-top: 2%;"></div>
               
               <div class="card-body" style="overflow-y: auto">
@@ -399,7 +394,7 @@ HOME
 
           <div class="col-md-6 col-lg-3 pb-3">
     
-            <div class="card card-custom bg-white border-white border-0" style="height: 530px">
+            <div class="card card-custom bg-white border-white border-0" style="height:  100%;width:100%;">
               <div class="card-custom-img" style="background-image: url(https://media.istockphoto.com/vectors/group-of-businesspeople-at-the-video-conference-call-vector-flat-vector-id1184657554?k=20&m=1184657554&s=612x612&w=0&h=wEedqPqoHRv8hG2phAIZxWvKJmZYnf16HLVe4TTxUx4=); margin-top: 2%;"></div>
               
               <div class="card-body" style="overflow-y: auto">
@@ -419,21 +414,21 @@ HOME
       </div>
 
 
-      <div class="container-fluid" style="margin-top:5%; margin-bottom: 5%; padding-top:5%; padding-bottom:8%;background-color: #d3f2e9; color: #0a7b79;">
+      <div class="container-fluid" id="conference" style="margin-top:5%; margin-bottom:5%; padding-top:5%; padding-bottom:8%;background-color: #d3f2e9; color: #0a7b79;">
 
         <center><h1>LATEST EVENTS</h1></center>
         <br>
         <center><h3 class="big-heading">Preparing students to make meaningful contributions as engaged citizens and leaders in a complex world.</h3></center>
 
         <div class="container" >
-          <div class="row">
-            <div class="col-sm" style="margin-top: 1%;">
+          <div class="row" style="margin-top: 3%;">
+            <div class="col-sm">
               <img src="https://www.stanford.edu/wp-content/uploads/2022/08/20220520_Gaurab_Banerjee_N6A0157-2048x1366.jpg" class="img1" height="100" width="100">
             </div>
-            <div class="col-sm" style="margin-top: 1%;">
+            <div class="col-sm" >
               <img src="https://www.stanford.edu/wp-content/uploads/2022/08/20220714Hopkins_Marine_Station_N6A8435.jpg" class="img1" height="100" width="100">
             </div>
-            <div class="col-sm" style="margin-top: 1%;">
+            <div class="col-sm">
               <img src="https://www.stanford.edu/wp-content/uploads/2022/04/Academics-3.jpg" class="img1" height="100" width="100">
             </div>
           </div>
@@ -446,7 +441,7 @@ HOME
 
   <!--Testimonials-->
   <div class="container" id="container-body">
-    <div class="row" style="margin-top: 12%; color: #7ca8a1;">
+    <div class="row" style="margin-top: 5%; color: #7ca8a1;">
       <div class="col">
         <center>
           <h1>TESTIMONIALS</h1>
@@ -455,7 +450,7 @@ HOME
     </div>
 
     <div class="row">
-      <div class="col-md-12" style="margin-top: 7%; ">
+      <div class="col-md-12" style="margin-top: 3%; ">
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
           <ol class="carousel-indicators">
             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -549,47 +544,45 @@ HOME
     </div>
 </div>
     <br><br><br>
-
-
     {% include 'partials/_globalPresence.html' %}
 
     
-  <div class="container-fluid" style="margin-top:5%; margin-bottom: 8%; ">
-    <center style="color: #0a7b79;">
-      <h1>Let Us Dream</h1>
+  <div class="container-fluid" style="margin-top:5%; margin-bottom: 5%; ">
+    <center style="color: #7ca8a1;">
+      <h1>LET US DREAM</h1>
     </center>
     <br>
     <center>
-      <h3 class="big-heading" style="padding-top: 2%;">Join us to help foster international collaboration and increased
+      <h3 class="big-heading" style="color: #0a7b79;">Join us to help foster international collaboration and increased
         global awareness of community improvement models, research initiatives, and best practices.</h3>
     </center>
 
-    <div class="row" style="margin-top:5%; padding-left:20%; padding-right: 20%; text-align: center;">
-      <div class="feature-box col-lg-3">
+    <div class="row" style="margin-top:3%; padding-left:20%; padding-right: 20%; text-align: center;">
+      <div class="feature-box col-sm">
         <h3 style="font-weight:bolder !important;">Students</h3>
         <div class="card-body" style="color:#0a7b79;">
-          <h2>1614</h2>
+          <h2>1614+</h2>
         </div>
 
       </div>
-      <div class="feature-box col-lg-3">
+      <div class="feature-box col-sm">
         <h3>Participants</h3>
         <div class="card-body" style="color:#0a7b79;">
-          <h2>3029</h2>
+          <h2>3029+</h2>
         </div>
 
       </div>
-      <div class="feature-box col-lg-3">
+      <div class="feature-box col-sm">
         <h3>Leadership</h3>
         <div class="card-body" style="color:#0a7b79;">
-          <h2>246</h2>
+          <h2>246+</h2>
         </div>
 
       </div>
-      <div class="feature-box col-lg-3">
+      <div class="feature-box col-sm">
         <h3>Families</h3>
         <div class="card-body" style="color:#0a7b79;">
-          <h2>3185</h2>
+          <h2>3185+</h2>
         </div>
 
       </div>
