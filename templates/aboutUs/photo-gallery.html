@@ -34,10 +34,12 @@ Photo Gallery
     crossorigin="anonymous"></script>
 
   <style>
+    body{
+        font-family: 'Montserrat', sans-serif;
+    }
     h1 {
       text-align: center;
-
-
+      font-weight: bolder;
       color: #0a7b79;
     }
 
@@ -224,18 +226,22 @@ Photo Gallery
 
 <body>
 
-  <nav aria-label="breadcrumb bg-white animated slideInDown" class="ml-4" style="margin-top: 9%">
+  <!-- <nav aria-label="breadcrumb bg-white animated slideInDown" class="ml-4" style="margin-top: 9%">
     <ol class=" breadcrumb text-uppercase bg-white mb-0">
+      
+    </ol>
+  </nav> -->
+
+  <nav aria-label="breadcrumb animated slideInDown" style="margin-top: 9%; margin-left:15%;">
+    <ol class="breadcrumb text-uppercase mb-0 bg-white">
       <li class="breadcrumb-item"><a class="text-black text-decoration-none" href="{% url 'main' %}">Home</a></li>
       <li class="breadcrumb-item"><a class="text-black text-decoration-none" href="{% url 'media' %}">Media</a></li>
-
-      <li class="breadcrumb-item  active" aria-current="page" style="color: #0a7b79;">Photo
-        Gallery
-      </li>
+      <li class="breadcrumb-item  active" aria-current="page" style="color: #0a7b79;">Photo Gallery</li>
     </ol>
-  </nav>
+</nav>
 
-  <h1>Photo Gallery</h1>
+  <h1>PHOTO GALLERY</h1>
+  <br>
   <div class="container">
     <div class="row">
       <div class="col-md-4 col-sm-6">

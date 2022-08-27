@@ -42,7 +42,6 @@ Annual Conference
 
         h1 {
             text-align: center;
-            margin-bottom: 1%;
             color: #7ca8a1;
             font-weight: bolder;
             text-transform: uppercase;
@@ -118,14 +117,14 @@ Annual Conference
 </head>
 
 <body>
-
-    <nav aria-label="breadcrumb animated slideInDown" style="margin-top: 8%;">
-        <ol class="breadcrumb text-uppercase" style="background-color: #fff;">
+    <nav aria-label="breadcrumb animated slideInDown" style="margin-top: 9%; margin-left:15%;">
+        <ol class="breadcrumb text-uppercase mb-0 bg-white">
             <li class="breadcrumb-item"><a class="text-black" href="{% url 'main' %}">Home</a></li>
             <li class="breadcrumb-item"><a class="text-black" href="{% url 'main' %}#conference">Conference</a></li>
             <li class="breadcrumb-item  active" aria-current="page" style="color: #0a7b79;">Annual Conference</li>
         </ol>
     </nav>
+    <br>
     <h1>Annual Conference</h1>
     <h3 class="big-heading">"The chance to reconnect with people in person, talk over key topics, and go to some great
         sessions was
@@ -184,16 +183,24 @@ Annual Conference
         </div>
         <div class="row">
             <div class="col-md-4 col-sm-6">
-                <div class="card">
-                    <img src="{% static 'conference/Christ-thrivandrum.jpg' %}" class="img1">
-                    <div class="card-text">
-                        <h3>CHRIST <br> University</h3>
-                        <h5>Thiruvananthapuram</h5>
+                <a href="{% url 'christ-university-thiruvananthapuram' %}">
+                    <div class="card">
+                        <img src="{% static 'conference/Christ-thrivandrum.jpg' %}" class="img1">
+                        <div class="card-text">
+                            <h3>CHRIST <br> University</h3>
+                            <h5>Thiruvananthapuram</h5>
+                        </div>
                     </div>
-                </div>
+
+                    <center>
+                        <h5>Thiruvananthapuram</h5>
+                    </center>
+
+                </a>
                 <center>
                     <h5>Thiruvananthapuram</h5>
                 </center>
+
             </div>
 
             <div class="col-md-4 col-sm-6">

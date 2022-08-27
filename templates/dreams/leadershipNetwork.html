@@ -2,9 +2,456 @@
 {% load static %}
 
 {% block title %}
+YCLP
 
-{% endblock %}
+{% endblock title %}
 
 {% block content %}
+
+<style>
+
+ 
+    h1,
+    .h1 {
+        font-size: calc(1.375rem + 1.5vw);
+    }
+
+    @media (min-width: 1200px) {
+
+        h1,
+        .h1 {
+            font-size: 2.5rem;
+        }
+    }
+
+    h2,
+    .h2 {
+        font-size: calc(1.325rem + 0.9vw);
+    }
+
+    @media (min-width: 1200px) {
+
+        h2,
+        .h2 {
+            font-size: 2rem;
+        }
+    }
+
+    p {
+        margin-top: 0;
+        margin-bottom: 1rem;
+        text-align: justify;
+    }
+
+    .site-heading {
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+        text-transform: uppercase;
+        line-height: 1;
+
+    }
+
+    .site-heading .site-heading-upper {
+        display: block;
+        font-size: 3rem;
+        font-weight: 800;
+    }
+
+    .site-heading .site-heading-lower {
+        font-size: 2rem;
+        font-weight: 100;
+        line-height: 4rem;
+    }
+
+    .page-section {
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+        line-height: 25px;
+    }
+
+    .section-heading {
+
+        text-transform: uppercase;
+    }
+
+    .section-heading .section-heading-upper {
+        display: block;
+        font-size: 1rem;
+        font-weight: 800;
+    }
+
+    .section-heading .section-heading-lower {
+        display: block;
+        font-size: 3rem;
+        font-weight: 100;
+    }
+
+    .bg-faded {
+        background-color: #d3f2e9;
+    }
+
+    .button {
+        display: inline-block;
+        border-radius: 100px;
+        background-color: #d3f2e9;
+        font-weight: bold;
+        border: 2px solid #d3f2e9;
+        color: #0a7b79;
+        text-align: center;
+        font-size: 20px;
+        padding: 14px 28px;
+        width: 300px;
+        transition: all 0.5s;
+        cursor: pointer;
+        margin: 5px;
+
+        margin-bottom: 10px;
+    }
+
+    .button span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+    }
+
+    .button span:after {
+        content: '\00bb';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.5s;
+    }
+
+    .button:hover {
+        background-color: transparent;
+        color: #0a7b79;
+        border: 2px solid #0a7b79;
+    }
+
+    .button:hover span {
+        padding-right: 25px;
+
+    }
+
+    .button:hover span:after {
+        opacity: 1;
+        right: 0;
+    }
+
+    .text-green {
+        color: #0a7b79;
+    }
+
+    @media (min-width: 992px) {
+        .product-item .product-item-title {
+            position: relative;
+            z-index: 1;
+            margin-bottom: -3rem;
+        }
+
+        .product-item .product-item-img {
+            position: relative;
+            z-index: 0;
+            max-width: 60vw;
+        }
+
+        .product-item .product-item-description {
+            position: relative;
+            z-index: 1;
+            margin-top: -3rem;
+            max-width: 50vw;
+        }
+
+        .site-heading {
+            margin-top: 5rem;
+            margin-bottom: 5rem;
+            text-transform: uppercase;
+            line-height: 1;
+
+        }
+
+        .site-heading .site-heading-upper {
+            display: block;
+            font-size: 3rem;
+            font-weight: 800;
+        }
+
+        .site-heading .site-heading-lower {
+            font-size: 2rem;
+            font-weight: 100;
+            line-height: 4rem;
+        }
+
+    }
+
+    @media (max-width: 441px) {
+        .section-heading .section-heading-upper {
+
+            font-size: 0.85rem;
+
+        }
+
+        .section-heading .section-heading-lower {
+            display: block;
+            font-size: 2rem;
+            font-weight: 100;
+        }
+
+    }
+</style>
+
+<nav aria-label="breadcrumb animated slideInDown" style="margin-top: 9%; margin-left:15%;">
+    <ol class="breadcrumb text-uppercase mb-0 bg-white">
+        <li class="breadcrumb-item"><a class="text-black text-decoration-none" href="{% url 'main' %}">Home</a></li>
+        <li class="breadcrumb-item"><a class="text-black text-decoration-none" href="{% url 'main' %}#dreamProgram">Dreams</a></li>
+        <li class="breadcrumb-item  active" aria-current="page" style="color: #0a7b79;">Leadership Network (GYLN)
+    </ol>
+</nav>
+
+<div class="container ">
+    <div class="row">
+        <div class="col-xs-12">
+            <h1 class="site-heading text-center text-faded  d-lg-block ">
+                <span class="site-heading-upper text-green  mb-3">DREAMS Global Youth Leadership Network: Project Outline</span>  
+            </h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <h5>
+                Applicants from all DREAMS Chapters interested in networking, learning, and developing their leadership skills are eligible for membership in this organization. Become a part of our team at
+            </h5>
+        </div>
+    </div>
+</div>
+
+<div class="conatainer-fluid my-2 d-flex justify-content-center">
+    <button type="button" class="button"><span>Join Us</span></button>
+</div>
+<section class="page-section">
+    <div class="container">
+        <div class="product-item">
+            <div class="product-item-title d-flex">
+                <div class="bg-faded p-5 d-flex ms-auto rounded">
+                    <h2 class="section-heading mb-0">
+                        <span class="section-heading-upper">DREAMS Global Youth Leadership Network: Project Outline</span>
+                        <span class="section-heading-lower">Who We Are</span>
+                    </h2>
+                </div>
+            </div>
+            <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0"
+                src="https://www.import.io/wp-content/uploads/2022/01/who-we-are.jpg" alt="..." />
+            <div class="product-item-description d-flex me-auto">
+                <div class="bg-faded p-5 rounded">
+                    <p class="mb-0">
+                        GYLN is a platform for emerging and prospective youth leaders (from various DREAMS’ Chapters) to 
+                        learn and develop their leadership skills while networking with equally aspiring individuals around the globe. 
+                        The youth of today are the leaders tomorrow. Our young generation needs to enhance their skills and knowledge, 
+                        through which they can contribute to an organization’s growth and upliftment of society.
+                        <br>
+                        In the contemporary world, many young people find it hard in building meaningful relationships with others, 
+                        with this initiative the youth will get an opportunity for self-growth and creating meaningful relationships 
+                        with others in the network. By promoting the three pillars of GLYN: ​Leadership, Personal Empowerment, 
+                        and Social Empowerment GYLN create a safe and holistic space for youth to share their experiences and knowledge.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="page-section">
+    <div class="container">
+        <div class="product-item">
+            <div class="product-item-title d-flex">
+                <div class="bg-faded p-5 d-flex me-auto rounded">
+                    <h2 class="section-heading mb-0">
+                        <span class="section-heading-upper">DREAMS Global Youth Leadership Network: Project Outline</span>
+                        <span class="section-heading-lower">We Aim At </span>
+                    </h2>
+                </div>
+            </div>
+            <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0"
+                src="https://img.freepik.com/premium-vector/business-people-running-carry-huge-arrow-huge-target-successful-professional-team-hitting-aim-good-work-teamwork_458444-1143.jpg?w=2000" alt="..." />
+
+                
+            <div class="product-item-description d-flex ms-auto">
+                <div class="bg-faded p-5 rounded">
+                    <p class="mb-0"> 
+                        Global Youth Leadership Network focuses on connecting individuals transnationally to engage 
+                        in multicultural interactions and promote new community service initiatives. GYLN also aims 
+                        at sharing personal leadership strategies/experiences through which one can enhance individual
+                         leadership styles. Promote entrepreneurship and professional development is also an intention
+                          behind this project.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="page-section">
+    <div class="container">
+        <div class="product-item">
+            <div class="product-item-title d-flex">
+                <div class="bg-faded p-5 d-flex ms-auto rounded">
+                    <h2 class="section-heading mb-0">
+                        <span class="section-heading-upper">DREAMS Global Youth Leadership Network: Project Outline</span>
+                        <span class="section-heading-lower">What We Do </span>
+                    </h2>
+                </div>
+            </div>
+            <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0"
+                src="https://i0.wp.com/fictionistic.com/wp-content/uploads/2021/10/b2b-ecommerce-scaled.jpg?fit=2560%2C1600&ssl=1" alt="..." />
+            <div class="product-item-description d-flex me-auto">
+                <div class="bg-faded p-5 rounded">
+                    <p class="mb-0">The Global Youth Leadership Network will have Monthly Meetings via a virtual platform (Zoom/Google Meets). 
+                        The duration of the meetings will be ​45-60 ​minutes. During the meetings, 
+                        members will discuss their personal experiences, knowledge, and ideas 
+                        (in the light of the topics that are being observed) to inspire others, 
+                        understand different perspectives, and share strategies to widen personal knowledge for better decisions, 
+                        actions, and leadership.
+                        <br>
+                        Globally renowned leaders/speakers from different walks of life share their experiences and 
+                        knowledge to enlighten the overall experience of youth leaders through the activities and meetings. 
+                        These sessions give real-life experiences to the members which helps them to use this knowledge in 
+                        building strong foundations and coping with real-life situations.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="page-section">
+    <div class="container">
+        <div class="product-item">
+            <div class="product-item-title d-flex">
+                <div class="bg-faded p-5 d-flex me-auto rounded">
+                    <h2 class="section-heading mb-0">
+                        <span class="section-heading-upper">DREAMS Global Youth Leadership Network: Project Outline</span>
+                        <span class="section-heading-lower">Learn More About our Interventions</span>
+                    </h2>
+                </div>
+            </div>
+            <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0"
+                src="https://img.freepik.com/free-vector/office-interior-people-working-creative-workspace-open-space_335657-3075.jpg?w=2000" alt="..."/>
+            <div class="product-item-description d-flex ms-auto">
+                <div class="bg-faded p-5 rounded">
+                    <p class="mb-0">
+                        Globally renowned leaders/speakers from different walks of life share their experiences and 
+                        knowledge to enlighten the overall experience of youth leaders through the activities and meetings. 
+                        These sessions give real-life experiences to the members which helps them to use this knowledge in 
+                        building strong foundations and coping with real-life situations.
+
+                        <br>
+                        Self-expression is the expression of one’s thoughts through words, choices, or actions. Self-expression, 
+                        comprises our choices and actions of daily life, our creative expressions, and our choices of words. 
+                        Expressing creative and emotional self facilitates personal growth and subjective well-being. 
+                        Improving our ways of self-expression is important for an individual to make a good impression on others. 
+                        Making an impression on others will help us defines who we are.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+<br><br>
+    <!-- Speaker -->
+    <div class="container">
+        <center><h1>OUR TEAM</h1></center>
+        <div class="row text-center">
+
+
+
+            <!-- Team item -->
+            <div class="col-xl-3 col-sm-6 mb-5">
+                <div class="bg-white rounded shadow-sm py-5 px-4" style="min-height: 280px;"><img
+                        src="https://letusdream.org/wp-content/uploads/2020/08/Reji-C-J-127x160.jpg" alt="" width="100"
+                        class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+                    <h5 class="mb-0">Mr. Reji</h5><span class="small text-uppercase text-muted">PRO -
+                        CLUB</span>
+
+                </div>
+            </div><!-- End -->
+
+            <!-- Team item -->
+            <div class="col-xl-3 col-sm-6 mb-5">
+                <div class="bg-white rounded shadow-sm py-5 px-4" style="min-height: 280px;"><img
+                        src="https://letusdream.org/wp-content/uploads/2020/08/Vincent-Alex-117x160.jpg" alt="" width="100"
+                        class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+                    <h5 class="mb-0">Adv. Vincent</h5><span class="small text-uppercase text-muted">PRO - CLUB</span>
+
+                </div>
+            </div><!-- End -->
+
+            <!-- Team item -->
+            <div class="col-xl-3 col-sm-6 mb-5">
+                <div class="bg-white rounded shadow-sm py-5 px-4" style="min-height: 280px;"><img
+                        src="https://letusdream.org/wp-content/uploads/2020/08/George-122x160.jpg" alt=""
+                        width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+                    <h5 class="mb-0">Mr. George</h5><span class="small text-uppercase text-muted">PRO -
+                        CLUB</span>
+
+                </div>
+            </div>
+            <!-- End -->
+            <!-- Team item -->
+            <div class="col-xl-3 col-sm-6 mb-5">
+                <div class="bg-white rounded shadow-sm py-5 px-4" style="min-height: 280px;"><img
+                        src="https://letusdream.org/wp-content/uploads/2020/08/Chinchu-Rani-Alex-2-121x160.jpg" alt=""
+                        width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+                    <h5 class="mb-0">Prof. Chinju Vincent</h5><span class="small text-uppercase text-muted">PRO -
+                        CLUB</span>
+
+                </div>
+            </div>
+            <!-- End -->
+        </div>
+
+
+        <div class="row text-center">
+
+
+
+            <!-- Team item -->
+            <div class="col-xl-3 col-sm-6 mb-5">
+                <div class="bg-white rounded shadow-sm py-5 px-4" style="min-height: 280px;"><img
+                        src="https://letusdream.org/wp-content/uploads/2020/08/Harsha-129x160.jpg" alt="" width="100"
+                        class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+                    <h5 class="mb-0">Ms. Harsha</h5><span class="small text-uppercase text-muted">PRO -
+                        CLUB</span>
+
+                </div>
+            </div><!-- End -->
+
+            
+
+            <!-- Team item -->
+            <div class="col-xl-3 col-sm-6 mb-5">
+                <div class="bg-white rounded shadow-sm py-5 px-4" style="min-height: 280px;"><img
+                        src="https://letusdream.org/wp-content/uploads/2020/08/Joe--116x160.jpg" alt=""
+                        width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+                    <h5 class="mb-0">Mr. Jo</h5><span class="small text-uppercase text-muted">PRO -
+                        CLUB</span>
+
+                </div>
+            </div>
+            <!-- End -->
+            <!-- Team item -->
+            <div class="col-xl-3 col-sm-6 mb-5">
+                <div class="bg-white rounded shadow-sm py-5 px-4" style="min-height: 280px;"><img
+                        src="https://letusdream.org/wp-content/uploads/2020/08/Jithu-118x160.jpg" alt=""
+                        width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+                    <h5 class="mb-0">Mr. Jithu</h5><span class="small text-uppercase text-muted">PRO -
+                        CLUB</span>
+
+                </div>
+            </div>
+            <!-- End -->
+        </div>
+
+
+    </div>
     
+    {% include 'partials/_testimonials.html' %}
+</section>
 {% endblock %}

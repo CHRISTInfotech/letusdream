@@ -37,6 +37,10 @@ Media-Photos
     <style>
         .view-container {
             margin-top: 7%;
+        }
+
+        .view-container {
+
             position: relative;
             min-height: 100vh;
 
@@ -119,43 +123,81 @@ Media-Photos
             }
         }
     </style>
+    <<<<<<< HEAD </head>
+        =======
 </head>
 
 <body>
+
+    <nav aria-label="breadcrumb animated slideInDown" style="margin-top: 9%; margin-left:15%;">
+        <ol class="breadcrumb text-uppercase mb-0 bg-white">
+            <li class="breadcrumb-item"><a class="text-black text-decoration-none" href="{% url 'main' %}">Home</a></li>
+            <li class="breadcrumb-item"><a class="text-black text-decoration-none" href="{% url 'media' %}">Media</a>
+            </li>
+            <li class="breadcrumb-item  active" aria-current="page" style="color: #0a7b79;">Press Release</li>
+        </ol>
+    </nav>
+
+
     <div class="container view-container">
         <h1>PRESS RELEASE</h1>
         <div class="image-container">
-            <div class="image"><img src="{% static 'Aboutus/Press/Press6.jpg' %}" alt="img1"></div>
-            <div class="image"><img src="{% static 'Aboutus/Press/Press3.jpg' %}"></div>
-            <div class="image"><img src="{% static 'Aboutus/Press/Press2.jpg' %}"></div>
-            <div class="image"><img src="{% static 'Aboutus/Press/Press1.jpg' %}" alt=""></div>
-            <div class="image"><img src="{% static 'Aboutus/Press/Press7.png' %}"></div>
-            <div class="image"><img src="{% static 'Aboutus/Press/Press8.png' %}"></div>
-            <div class="image"><img src="{% static 'Aboutus/Press/Press9.jpg' %}"></div>
-            <div class="image"><img src="{% static 'Aboutus/Press/Press5.jpeg' %}"></div>
-            <div class="image"><img src="{% static 'Aboutus/Press/Press4.jpeg' %}"></div>
+            <div class="image"><img
+                    src="https://letusdream.org/wp-content/uploads/2020/08/Media-PressUntitled_08162016_010123_1-min-scaled.jpg"
+                    alt="img1"></div>
+            <div class="image"><img
+                    src="https://letusdream.org/wp-content/uploads/2020/08/Media-PressMedia-Press2016_1-min.jpg"></div>
+            <div class="image"><img
+                    src="https://letusdream.org/wp-content/uploads/2020/08/Media-PressDREAMS-News-Star_2-min-scaled.jpg">
+            </div>
+            <div class="image"><img
+                    src="https://letusdream.org/wp-content/uploads/2020/08/Media-PressDreams-Announcement-News-Star_1-min-scaled.jpg"
+                    alt=""></div>
+            <div class="image"><img
+                    src="https://letusdream.org/wp-content/uploads/2020/08/Media-PressTNS-11-02-2017-A2.png"></div>
+            <div class="image"><img
+                    src="https://letusdream.org/wp-content/uploads/2020/08/Media-PressTNS-11-02-2017-A1.png"></div>
+            <div class="image"><img src="https://letusdream.org/wp-content/uploads/2020/08/Media-Presspress.jpg"></div>
+            <div class="image"><img src="https://letusdream.org/wp-content/uploads/2020/11/Unknown-154.jpeg"></div>
+            <div class="image"><img src="https://letusdream.org/wp-content/uploads/2021/08/Unknown-33.jpeg"></div>
         </div>
+        >>>>>>> 3f202b79144659398df9d174dbb9cd1faeda6778
 
-        <div class="popup-image">
-            <span>&times;</span>
-            <img src="{% static 'Aboutus/Press/Press6.jpg' %}" alt="img1">
-        </div>
-    </div>
-    <script>
-        document.querySelectorAll('.image-container img').forEach(image => {
+        <body>
+            <div class="container view-container">
+                <h1>PRESS RELEASE</h1>
+                <div class="image-container">
+                    <div class="image"><img src="{% static 'Aboutus/Press/Press6.jpg' %}" alt="img1"></div>
+                    <div class="image"><img src="{% static 'Aboutus/Press/Press3.jpg' %}"></div>
+                    <div class="image"><img src="{% static 'Aboutus/Press/Press2.jpg' %}"></div>
+                    <div class="image"><img src="{% static 'Aboutus/Press/Press1.jpg' %}" alt=""></div>
+                    <div class="image"><img src="{% static 'Aboutus/Press/Press7.png' %}"></div>
+                    <div class="image"><img src="{% static 'Aboutus/Press/Press8.png' %}"></div>
+                    <div class="image"><img src="{% static 'Aboutus/Press/Press9.jpg' %}"></div>
+                    <div class="image"><img src="{% static 'Aboutus/Press/Press5.jpeg' %}"></div>
+                    <div class="image"><img src="{% static 'Aboutus/Press/Press4.jpeg' %}"></div>
+                </div>
 
-            image.onclick = () => {
-                document.querySelector('.popup-image').style.display = "block";
-                document.querySelector('.popup-image img').src = image.getAttribute('src')
-            }
-        })
+                <div class="popup-image">
+                    <span>&times;</span>
+                    <img src="{% static 'Aboutus/Press/Press6.jpg' %}" alt="img1">
+                </div>
+            </div>
+            <script>
+                document.querySelectorAll('.image-container img').forEach(image => {
 
-        document.querySelector('.popup-image span').onclick = () => {
-            document.querySelector('.popup-image').style.display = "none";
+                    image.onclick = () => {
+                        document.querySelector('.popup-image').style.display = "block";
+                        document.querySelector('.popup-image img').src = image.getAttribute('src')
+                    }
+                })
 
-        }
-    </script>
-</body>
+                document.querySelector('.popup-image span').onclick = () => {
+                    document.querySelector('.popup-image').style.display = "none";
+
+                }
+            </script>
+        </body>
 
 </html>
 {% endblock %}

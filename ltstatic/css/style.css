@@ -1,5 +1,28 @@
 /* about us */
+body {
+    font-family: 'Montserrat', sans-serif;
+  }
 
+  h1:after {
+    content: "";
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+    padding-top: 20px;
+    border-bottom: 2px solid transparent;
+    border-image: linear-gradient(0.90turn, rgb(255, 255, 255), rgb(0, 0, 0), rgb(255, 255, 255));
+    border-image-slice: 1;
+}
+
+
+
+h1 {
+    padding-top: 0px;
+    padding-bottom: 10px;
+    font-weight: 700;
+    font-size: 30px;
+
+}
 
 p {
     text-align: justify;
@@ -11,14 +34,6 @@ p {
 
 .aboutus .text-green {
     color: #0a7b79;
-}
-
-.aboutus .main-about {
-    margin-top: 80px;
-
-    padding-bottom: 100px;
-    /* background: url(../../ltstatic/Aboutus/bg.png); */
-    /* background-color: rgba(24, 125, 207, 0.15) !important; */
 }
 
 .aboutus .frame {
@@ -264,3 +279,128 @@ p {
 .card-title {
     color: #755400;
 }
+
+
+
+
+/* Testimonials */
+.testimonials .single-box {
+    position: relative;
+    margin-left: 10px;
+    margin-bottom: 30px;
+  }
+
+  .testimonials .img1 {
+    width: 100% !important;
+    height: 100% !important;
+  }
+
+  .testimonials .img-area{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border: 5px solid #7ca8a1;
+    overflow: hidden;
+    top: 15px;
+    left:125px;
+    border-radius: 50%;
+  }
+
+  .testimonials .img-area img {
+    width: 100%;
+  }
+
+  .testimonials .carousel-indicators{
+    left:0;
+    top:auto;
+    bottom: -20px;
+    }
+
+    .testimonials .carousel-indicators li{
+    background: #0a7b79;
+    box-shadow: inset 1px 1px 1px 1px rgba(0,0,0,0.5); 
+    }
+
+    .testimonials .carousel-indicators :active{
+        background: #0a7b79;
+      } 
+
+      .testimonials .carousel-indicators.img-area {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border: 5px solid #fff;
+    overflow: hidden;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+  }
+  .testimonials .container{
+
+  }
+  .testimonials .img-text {
+    width: 100%;
+    height: 400px;
+    display: block;
+    text-align: center;
+    padding: 40% 5%;
+    background: #d3f2e9;
+    /* 0a7b79 */
+    color: #0a7b79;
+    border-radius: 30px;
+  }
+
+  .testimonials .img-text h2 {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 25px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  .testimonials .img-text p {
+    font-size: 14px;
+  }
+
+ .testimonials .container {
+      font-size: 12px;
+      color: #666666;
+    }
+    
+    .button-testi {
+        width: 200px;
+        padding: 12px 0;
+        text-align: center;
+        margin: 0 15px;
+        border-radius: 25px;
+        font-weight: bold;
+        border: 2px solid #d3f2e9;
+        background: #d3f2e9;
+        color: #0a7b79;
+        transition: background 0.5s;
+      }
+  
+  
+      .testimonials .container-fluid h1 {
+        font-weight: bolder;
+        font-size: 3rem;
+      }
+  
+      .testimonials.img1 {
+        width: 100% !important;
+        height: 100% !important;
+      }
+  
+      .container h1 {
+        font-size: 3rem !important;
+        font-weight: bolder !important;
+      }
+  
+      body h3 {
+        color: #7ca8a1;
+        font-weight: bolder !important;
+      }
+  
+   
