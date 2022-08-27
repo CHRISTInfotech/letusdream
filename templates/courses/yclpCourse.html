@@ -201,6 +201,7 @@ YCLP
 
     }
 </style>
+<<<<<<< HEAD
 
 <nav aria-label="breadcrumb animated slideInDown" style="margin-top: 9%; margin-left:15%;">
     <ol class="breadcrumb text-uppercase mb-0 bg-white">
@@ -209,6 +210,22 @@ YCLP
     </ol>
 </nav>
 
+=======
+<br><br><br>
+<div class="container">
+    <div class="row">
+        <nav aria-label="breadcrumb animated slideInDown" class=" mt-5 pt-5 ">
+            <ol class="breadcrumb text-uppercase mb-0 ">
+                <li class="breadcrumb-item ml-5 pl-5"><a class="text-black" href="{% url 'main' %}">Home</a></li>
+
+                <li class="breadcrumb-item  active" aria-current="page" style="color: #0a7b79;">Leardership
+                    Program
+                </li>
+            </ol>
+        </nav>
+    </div>
+</div>
+>>>>>>> d86edd1b431d9caa7ffb76b871f0d67839676fd1
 <div class="container ">
     <div class="row">
         <div class="col-xs-12">
@@ -223,7 +240,7 @@ YCLP
 </div>
 
 <div class="conatainer-fluid my-2 d-flex justify-content-center">
-    <button type="button" class="button"><span>Download brochure</span></button>
+    <a href=""><button type="button" class="button"><span>Download brochure</span></button></a>
 </div>
 <section class="page-section">
     <div class="container">
@@ -237,7 +254,7 @@ YCLP
                 </div>
             </div>
             <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0"
-                src="https://letusdream.org/wp-content/uploads/2020/09/courses.jpg" alt="..." />
+                src="{% static 'courses/courses.jpg' %}" alt="...courses" />
             <div class="product-item-description d-flex me-auto">
                 <div class="bg-faded p-5 rounded">
                     <p class="mb-0">The Young Community Leadership Program (YCLP) is to prepare young aspiring leaders
@@ -273,7 +290,7 @@ YCLP
                 </div>
             </div>
             <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0"
-                src="https://letusdream.org/wp-content/uploads/2020/09/course-details.jpg" alt="..." />
+                src="{% static 'courses/course-details.jpg' %}" alt="..." />
             <div class="product-item-description d-flex ms-auto">
                 <div class="bg-faded p-5 rounded">
                     <p class="mb-0"> To develop leadership, mentoring, organizational, entrepreneurial skills through
@@ -303,7 +320,7 @@ YCLP
                 </div>
             </div>
             <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0"
-                src="https://letusdream.org/wp-content/uploads/2020/09/course-structure.jpg" alt="..." />
+                src="{% static 'courses/course-structure.jpg' %}" alt="...course-structure.jpg" />
             <div class="product-item-description d-flex me-auto">
                 <div class="bg-faded p-5 rounded">
                     <p class="mb-0">Mentoring and leadership skills that help to make positive changes in school
@@ -331,7 +348,7 @@ YCLP
                 </div>
             </div>
             <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0"
-                src="https://letusdream.org/wp-content/uploads/2020/09/Expected-outcome3.jpg" alt="..." />
+                src="{% static 'courses/Expected-outcome3.jpg' %}" alt="...Expected-outcome3.jpg" />
             <div class="product-item-description d-flex ms-auto">
                 <div class="bg-faded p-5 rounded">
                     <p class="mb-0">The students from CHRIST (Deemed to be University) shall receive the certification
