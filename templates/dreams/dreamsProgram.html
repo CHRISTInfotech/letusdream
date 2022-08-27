@@ -231,12 +231,39 @@ D.R.E.A.M.S Program
     .text-green {
         color: #0a7b79;
     }
-.img-middle{
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    
-}
+
+    .img-middle {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+    }
+
+    .programs-section .heading-h3:after {
+        content: "";
+        /* This is necessary for the pseudo element to work. */
+        display: block;
+        /* This will put the pseudo element on its own line. */
+        margin: 0 auto;
+        /* This will center the border. */
+        width: 50%;
+        /* Change this to whatever width you want. */
+        padding-top: 20px;
+        /* This creates some space between the element and the border. */
+        border-bottom: 2px solid transparent;
+        border-image: linear-gradient(0.90turn, rgb(255, 255, 255), rgb(0, 0, 0), rgb(255, 255, 255));
+        border-image-slice: 1;
+        /* This creates the border. Replace black with whatever color you want. */
+    }
+
+    .programs-section .heading-h3 {
+        padding-top: 0px;
+        padding-bottom: 10px;
+        font-weight: 700;
+        font-size: 30px;
+
+    }
+
     @media (max-width:720px) {
         .programs-section .image-implementation img {
             height: 250px;
@@ -284,39 +311,28 @@ D.R.E.A.M.S Program
 
 
 
-
     }
 </style>
 
 <!-- section -->
-
+<nav aria-label="breadcrumb animated slideInDown" style="margin-top: 9%; margin-left:15%;">
+    <ol class="breadcrumb text-uppercase mb-0 bg-white">
+        <li class="breadcrumb-item"><a class="text-black text-decoration-none" href="{% url 'main' %}">Home</a></li>
+        <li class="breadcrumb-item  active" aria-current="page" style="color: #0a7b79;">Dreams Program</li>
+    </ol>
+</nav>
 <section class="programs-section">
 
 
-    <div class="container" style="padding: 20px;margin-top: 50px;">
-        <div class="row">
-            <div class="col-lg-12">
-                <nav aria-label="breadcrumb animated slideInDown">
-                    <ol class="breadcrumb text-uppercase mb-0">
-                        <li class="breadcrumb-item"><a class="text-black" href="{% url 'main' %}">Home</a></li>
-
-                        <li class="breadcrumb-item  active" aria-current="page" style="color: #0a7b79;">Dreams
-                            Program
-                        </li>
-                    </ol>
-                </nav>
-            </div>
-
-
-        </div>
-    </div>
+    
     <!-- dreams logo -->
-    <section class="projects-section bg-light" id="projects">
+    <section class="projects-section bg-white" id="projects">
         <div class="container px-4 px-lg-5">
             <!-- dreams Project Row-->
             <div class="row gx-0 mb-4 mb-lg-5 align-items-center ml-5 pl-5">
 
-                <div class="col-xl-8 col-lg-7 align-items-center img-middle"><img class="img-fluid mb-3 mb-lg-0 ml-5 pl-5"
+                <div class="col-xl-8 col-lg-7 align-items-center img-middle"><img
+                        class="img-fluid mb-3 mb-lg-0 ml-5 pl-5"
                         src="https://letusdream.org/wp-content/uploads/2020/07/Dreams-programme-wheel.png" alt="..." />
                 </div>
 
@@ -366,8 +382,8 @@ D.R.E.A.M.S Program
                     </center>
                 </div>
                 <div class="col-lg-6">
-                    <h5 class="section-title ff-secondary text-start  fw-bold">About</h5>
-                    <h1 class="mb-4 text-primary fw-semibold">DREAMS Program</h1>
+                    <h5 class="section-title ff-secondary text-start  fw-bold text-center">About</h5>
+                    <h1 class="mb-4 text-primary fw-semibold text-center heading-h3">DREAMS Program</h1>
                     <p class="mb-4 fw-semibold">The DREAMS Program is a three-year curriculum based community
                         mentoring
                         project for
@@ -454,7 +470,7 @@ D.R.E.A.M.S Program
                     <div class="content-implementation">
 
 
-                        <h1 class="program-h1 main-h1 text-uppercase  fw-bold text-green"
+                        <h1 class="program-h1 main-h1 text-uppercase  fw-bold text-green heading-h3"
                             style="text-align: center ;margin-bottom: 10px;">
                             Implementation
                         </h1>
@@ -503,7 +519,8 @@ D.R.E.A.M.S Program
                     <center>
                         <div class="image-model">
                             <center>
-                                <h1 class="heading-h1 text-info"><strong class="main-h1"> DREAMS </strong> Model</h1>
+                                <h1 class="heading-h1 text-green heading-h3"><strong class="main-h1"> DREAMS </strong>
+                                    Model</h1>
                             </center>
                             <img src="https://letusdream.org/wp-content/uploads/2020/07/Dreams-Programme-png.png"
                                 alt="Dreams Model">
