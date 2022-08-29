@@ -36,9 +36,10 @@ Annual Conference
         crossorigin="anonymous"></script>
 
     <style>
-        body{
+        body {
             font-family: 'Montserrat', sans-serif;
         }
+
         h1 {
             text-align: center;
             color: #7ca8a1;
@@ -97,19 +98,21 @@ Annual Conference
             width: 100% !important;
             height: 100% !important;
         }
-        .big-heading{
+
+        .big-heading {
             color: #0a7b79;
             text-align: center;
             font-weight: bolder;
         }
-        
-        h5{
+
+        h5 {
             color: #0a7b79;
             font-weight: bolder !important;
         }
-        .text-black{
-        text-decoration: none !important;
-    }
+
+        .text-black {
+            text-decoration: none !important;
+        }
     </style>
 </head>
 
@@ -123,7 +126,8 @@ Annual Conference
     </nav>
     <br>
     <h1>Annual Conference</h1>
-    <h3 class="big-heading">"The chance to reconnect with people in person, talk over key topics, and go to some great sessions was
+    <h3 class="big-heading">"The chance to reconnect with people in person, talk over key topics, and go to some great
+        sessions was
         invaluable."</h3>
 
     <div class="container">
@@ -132,34 +136,36 @@ Annual Conference
             <div class="col-md-4 col-sm-6">
                 <a href="{% url 'louisiana-tech-university' %}">
                     <div class="card">
-                        <img
-                            src="https://www.latech.edu/wp-content/uploads/2021/01/11242020-LouisianaTechUniversity-Drone-01-web.jpg">
+                        <img src="{% static 'conference/LouisianaTechUniversity.jpg' %}">
                         <div class="card-text">
                             <h3>Louisiana Tech University</h3>
                             <h5>Louisiana</h5>
                         </div>
-                    </div> 
+                    </div>
                 </a>
-                <center><h5>Louisiana</h5></center>
+                <center>
+                    <h5>Louisiana</h5>
+                </center>
             </div>
 
             <div class="col-md-4 col-sm-6">
 
                 <div class="card">
-                    <img src="https://images.shiksha.com/mediadata/images/1536744927phpeqzCEr.jpeg" class="img1">
+                    <img src="{% static 'conference/BinghamtonUniversity.jpeg' %}" class="img1">
                     <div class="card-text">
                         <h3>Binghamton University</h3>
                         <h5>New York</h5>
                     </div>
                 </div>
-                <center><h5>New York</h5></center>
+                <center>
+                    <h5>New York</h5>
+                </center>
             </div>
 
             <div class="col-md-4 col-sm-6">
                 <a href="{% url 'christ-university-bangalore' %}">
                     <div class="card">
-                        <img src="https://clgonline.in/static/all_collages/img/christ-university-bangalore.jpg"
-                            class="img1">
+                        <img src="{% static 'conference/christ-university-bangalore.jpg' %}" class="img1">
                         <div class="card-text">
                             <h3>Christ
                                 <br>
@@ -169,37 +175,47 @@ Annual Conference
                         </div>
                     </div>
                 </a>
-                <center><h5>Bangalore</h5></center>
+                <center>
+                    <h5>Bangalore</h5>
+                </center>
             </div>
 
         </div>
         <div class="row">
             <div class="col-md-4 col-sm-6">
                 <a href="{% url 'christ-university-thiruvananthapuram' %}">
-                <div class="card">
-                    <img src="https://cache.careers360.mobi/media/presets/720X480/colleges/social-media/media-gallery/29015/2020/6/22/Campus%20Building%20View%20of%20Christ%20College%20Vizhinjam_Campus-view.jpg"
-                        class="img1">
-                    <div class="card-text">
-                        <h3>CHRIST <br> University</h3>
-                        <h5>Thiruvananthapuram</h5>
+                    <div class="card">
+                        <img src="{% static 'conference/Christ-thrivandrum.jpg' %}" class="img1">
+                        <div class="card-text">
+                            <h3>CHRIST <br> University</h3>
+                            <h5>Thiruvananthapuram</h5>
+                        </div>
                     </div>
-                </div>
+
+                    <center>
+                        <h5>Thiruvananthapuram</h5>
+                    </center>
+
                 </a>
-                <center><h5>Thiruvananthapuram</h5></center>
+                <center>
+                    <h5>Thiruvananthapuram</h5>
+                </center>
+
             </div>
 
             <div class="col-md-4 col-sm-6">
                 <a href="{% url 'jyoti-nivas-college-autonomous' %}">
                     <div class="card">
-                        <img src="https://cache.careers360.mobi/media/presets/500X333/colleges/social-media/media-gallery/6639/2018/8/16/Jyoti-Nivas-College-Autonomous-Bangalore_Auditorium.jpg"
-                            class="img1">
+                        <img src="{% static 'conference/JyotiNivasCollege.jpg' %}" class="img1">
                         <div class="card-text">
                             <h3>Jyoti Nivas College Autonomous</h3>
                             <h5>Bangalore</h5>
                         </div>
                     </div>
                 </a>
-                <center><h5>Bangalore</h5></center>
+                <center>
+                    <h5>Bangalore</h5>
+                </center>
             </div>
         </div>
 
