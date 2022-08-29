@@ -1,9 +1,9 @@
 /* about us */
 body {
     font-family: 'Montserrat', sans-serif;
-  }
+}
 
-  h1:after {
+h1:after {
     content: "";
     display: block;
     margin: 0 auto;
@@ -14,7 +14,9 @@ body {
     border-image-slice: 1;
 }
 
-
+.text-green {
+    color: #0a7b79;
+}
 
 h1 {
     padding-top: 0px;
@@ -288,44 +290,44 @@ p {
     position: relative;
     margin-left: 10px;
     margin-bottom: 30px;
-  }
+}
 
-  .testimonials .img1 {
+.testimonials .img1 {
     width: 100% !important;
     height: 100% !important;
-  }
+}
 
-  .testimonials .img-area{
+.testimonials .img-area {
     position: absolute;
     width: 100px;
     height: 100px;
     border: 5px solid #7ca8a1;
     overflow: hidden;
     top: 15px;
-    left:125px;
+    left: 125px;
     border-radius: 50%;
-  }
+}
 
-  .testimonials .img-area img {
+.testimonials .img-area img {
     width: 100%;
-  }
+}
 
-  .testimonials .carousel-indicators{
-    left:0;
-    top:auto;
+.testimonials .carousel-indicators {
+    left: 0;
+    top: auto;
     bottom: -20px;
-    }
+}
 
-    .testimonials .carousel-indicators li{
+.testimonials .carousel-indicators li {
     background: #0a7b79;
-    box-shadow: inset 1px 1px 1px 1px rgba(0,0,0,0.5); 
-    }
+    box-shadow: inset 1px 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
 
-    .testimonials .carousel-indicators :active{
-        background: #0a7b79;
-      } 
+.testimonials .carousel-indicators :active {
+    background: #0a7b79;
+}
 
-      .testimonials .carousel-indicators.img-area {
+.testimonials .carousel-indicators.img-area {
     position: absolute;
     width: 100px;
     height: 100px;
@@ -335,11 +337,11 @@ p {
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 50%;
-  }
-  .testimonials .container{
+}
 
-  }
-  .testimonials .img-text {
+.testimonials .container {}
+
+.testimonials .img-text {
     width: 100%;
     height: 400px;
     display: block;
@@ -349,58 +351,56 @@ p {
     /* 0a7b79 */
     color: #0a7b79;
     border-radius: 30px;
-  }
+}
 
-  .testimonials .img-text h2 {
+.testimonials .img-text h2 {
     margin-top: 10px;
     margin-bottom: 20px;
     font-size: 25px;
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 2px;
-  }
+}
 
-  .testimonials .img-text p {
+.testimonials .img-text p {
     font-size: 14px;
-  }
+}
 
- .testimonials .container {
-      font-size: 12px;
-      color: #666666;
-    }
-    
-    .button-testi {
-        width: 200px;
-        padding: 12px 0;
-        text-align: center;
-        margin: 0 15px;
-        border-radius: 25px;
-        font-weight: bold;
-        border: 2px solid #d3f2e9;
-        background: #d3f2e9;
-        color: #0a7b79;
-        transition: background 0.5s;
-      }
-  
-  
-      .testimonials .container-fluid h1 {
-        font-weight: bolder;
-        font-size: 3rem;
-      }
-  
-      .testimonials.img1 {
-        width: 100% !important;
-        height: 100% !important;
-      }
-  
-      .container h1 {
-        font-size: 3rem !important;
-        font-weight: bolder !important;
-      }
-  
-      body h3 {
-        color: #7ca8a1;
-        font-weight: bolder !important;
-      }
-  
-   
+.testimonials .container {
+    font-size: 12px;
+    color: #666666;
+}
+
+.button-testi {
+    width: 200px;
+    padding: 12px 0;
+    text-align: center;
+    margin: 0 15px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #d3f2e9;
+    background: #d3f2e9;
+    color: #0a7b79;
+    transition: background 0.5s;
+}
+
+
+.testimonials .container-fluid h1 {
+    font-weight: bolder;
+    font-size: 3rem;
+}
+
+.testimonials.img1 {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.container h1 {
+    font-size: 3rem !important;
+    font-weight: bolder !important;
+}
+
+body h3 {
+    color: #7ca8a1;
+    font-weight: bolder !important;
+}
