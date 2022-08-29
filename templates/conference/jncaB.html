@@ -125,7 +125,16 @@ Jyoti Nivas College Autonomous, Banglore
         min-height: 520px;
     }
 
+    @media (max-width:551px) {
+        .text-custom {
+            font-size: 25px !important;
+        }
 
+        .container h1 {
+            font-size: 25px !important;
+            font-weight: bolder !important;
+        }
+    }
 
     @media (max-width:991px) {
         .main-section {
@@ -150,9 +159,7 @@ Jyoti Nivas College Autonomous, Banglore
             width: 300px;
         }
 
-        .college .container-custom {
-            margin: 60px;
-        }
+
     }
 </style>
 <section class="college">
@@ -175,7 +182,7 @@ Jyoti Nivas College Autonomous, Banglore
                     </nav>
                 </div>
                 <div class="col-md-12 mt-5">
-                    <h1 class="text-uppercase fw-bold pb-2 pt-3">
+                    <h1 class="text-uppercase fw-bold text-center pb-2 pt-3 text-custom">
                         History:
                     </h1>
                     <p class="text-dark p-3 pt-2">
@@ -197,7 +204,7 @@ Jyoti Nivas College Autonomous, Banglore
                 </div>
                 <div class="col-md-12">
 
-                    <h1 class="text-uppercase fw-bold pb-2">
+                    <h1 class="text-uppercase fw-bold pb-2 text-center text-custom">
                         Vision:
                     </h1>
                     <p class="text-dark p-3 pt-2">
@@ -206,7 +213,7 @@ Jyoti Nivas College Autonomous, Banglore
                 </div>
                 <div class="col-md-12">
 
-                    <h1 class="text-uppercase fw-bold pb-3">
+                    <h1 class="text-custom text-uppercase text-center fw-bold pb-3 text-custom">
                         Mission/Goals:
                     </h1>
                     <p class="text-dark p-3 pt-2">
@@ -279,54 +286,61 @@ Jyoti Nivas College Autonomous, Banglore
             </div>
         </div>
     </div>
-    <div class="container mt-5 mb-5 p-5 container-custom">
-        <center>
-            <div class="row ">
-                <h1 class="text-green text-center my-5 text-uppercase fw-bold">
-                    Conference Chairs
-                </h1>
-                <div class="col-lg-4 col-md-6 p-3">
-                    <div
-                        class="card shadow d-flex justify-content-center align-items-center p-3 rounded-lg card-main ml-4">
-                        <img src="{% static 'conference/Paul-Raj-Recent-min-scaled.jpg' %}"
-                            class="card-img-top p-3 img-fluid rounded-circle" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Mr B. B. Paul Raj</h5>
-                            <p class="card-text text-center fs-6">HOD, B.Voc Department of Psychology,<br>
-                                Jyoti Nivas College Autonomous</p>
+    <div class="container mt-5 mb-5">
 
-                        </div>
+        <div class="row d-flex justify-content-center">
+            <h1 class="text-green text-center my-5 text-uppercase fw-bold">
+                Conference Chairs
+            </h1>
+            <div class="col-md-4 mt-4">
+                <div class="card profile-card-5">
+                    <div class="card-img-block">
+                        <img class="card-img-top card shadow d-flex justify-content-center align-items-center p-3 rounded-lg"
+                            src="{% static 'conference/Paul-Raj-Recent-min-scaled.jpg' %}" alt="Card image cap">
                     </div>
+                    <div class="card-body pt-0 mt-3 align-items-center text-center">
+                        <h5 class="card-title">Mr B. B. Paul Raj</h5>
+                        <p class="card-text text-center">HOD, B.Voc Department of Psychology,<br>
+                            Jyoti Nivas College Autonomous</p>
 
-                </div>
-                <div class="col-lg-4 col-md-6 p-3">
-                    <div class="card shadow d-flex justify-content-center align-items-center p-3 rounded-lg card-main">
-                        <img src="{% static 'conference/LUD-Anupa.jpg' %}"
-                            class="card-img-top p-3 img-fluid rounded-circle" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Ms Anupa Gnanakan</h5>
-                            <p class="card-text text-center fs-6">Director – Education,<br>
-                                ACTS Group of Institutions</p>
-
-                        </div>
                     </div>
-
                 </div>
-                <div class="col-lg-4 col-md-6 p-3">
-                    <div class="card shadow d-flex justify-content-center align-items-center p-3 rounded-lg card-main">
-                        <img src="{% static 'conference/SXJ-Photo-min.jpg' %}"
-                            class="card-img-top p-3 img-fluid rounded-circle" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Mr Shinto Joseph</h5>
-                            <p class="card-text text-center fs-6">Director- South East Asia Operations,<br>
-                                LDRA India</p>
 
-                        </div>
-                    </div>
-
-                </div>
             </div>
-        </center>
+            <div class="col-md-4 mt-4">
+                <div class="card profile-card-5">
+                    <div class="card-img-block">
+                        <img class="card-img-top card shadow d-flex justify-content-center align-items-center p-3 rounded-lg"
+                            src="{% static 'conference/LUD-Anupa.jpg' %}" alt="Card image cap">
+                    </div>
+                    <div class="card-body pt-0 mt-3 text-center">
+                        <h5 class="card-title">Ms Anupa Gnanakan</h5>
+                        <p class="card-text text-center">Director – Education,<br>
+                            ACTS Group of Institutions</p>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-4 mt-4">
+                <div class="card profile-card-5">
+                    <div class="card-img-block">
+                        <img class="card-img-top card shadow d-flex justify-content-center align-items-center p-3 rounded-lg"
+                            src="{% static 'conference/SXJ-Photo-min.jpg' %}" alt="Card image cap">
+                    </div>
+                    <div class="card-body pt-0 mt-3 text-center">
+                        <h5 class="card-title">Mr Shinto Joseph</h5>
+                        <p class="card-text text-center">Director- South East Asia Operations,<br>
+                            LDRA India</p>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
     </div>
     <div class="container p-5">
         <div class="row">
