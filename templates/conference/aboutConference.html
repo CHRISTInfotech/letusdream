@@ -8,10 +8,296 @@ About Conference
 {% block content %}
 <style>
     .section {
-        margin-top: 130px;
+        margin-top: 150px;
+    }
+
+    /*ZoomIn Hover Effect*/
+    .hover-zoomin a {
+        display: block;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .hover-zoomin img {
+        width: 100%;
+        height: auto;
+        -webkit-transition: all 0.5s ease-in-out;
+        -moz-transition: all 0.5s ease-in-out;
+        -o-transition: all 0.5s ease-in-out;
+        -ms-transition: all 0.5s ease-in-out;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .hover-zoomin:hover img {
+        -webkit-transform: scale(1.2);
+        -moz-transform: scale(1.2);
+        -o-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        transform: scale(1.2);
+    }
+
+    /* image section */
+    .card {
+        max-width: 1000px;
+        width: 100%;
+        padding: 4rem;
+        align-items: center;
+        color: #000;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+    }
+
+    @media(max-width:768px) {
+        .card {
+            width: 100%;
+            padding: 1.5rem
+        }
+    }
+
+    .info {
+        padding: 6vh 0vh
+    }
+
+    @media(max-width:768px) {
+        .info {
+            padding: 0
+        }
+    }
+
+
+    img {
+        height: fit-content;
+        width: 75%;
+        padding: 1rem
+    }
+
+    @media(max-width:768px) {
+        img {
+            padding: 2.5rem 0
+        }
+    }
+
+    .title .col {
+        padding: 0
     }
 </style>
 <section class="section">
-    <h1>About Conference</h1>
+    <nav aria-label="breadcrumb animated slideInDown" style="margin-top: 9%; margin-left:15%;">
+        <ol class="breadcrumb text-uppercase mb-0 bg-white">
+            <li class="breadcrumb-item"><a class="text-black text-decoration-none" href="{% url 'main' %}">Home</a></li>
+            <!-- <li class="breadcrumb-item"><a class="text-black text-decoration-none" href="{% url 'main' %}#location">Location</a></li> -->
+            <li class="breadcrumb-item  active" aria-current="page" style="color: #0a7b79;">About Conference</li>
+        </ol>
+    </nav>
+    <h1 class="mb-4  fw-bold text-center fs-1 text-green text-uppercase heading-h3">About Conference</h1>
+    <div class="container">
+        <div class="row mt-5 p-5">
+            <div class="col-lg-6 hover-zoomin p-5">
+                <a href="{% url 'annual-conference' %}" title="" target="_blank">
+                    <img src="{% static 'conference/annual.jpg' %}" alt="" />
+                </a>
+                <h4 class="text-center mt-3 text-green">Annual Conference</h4>
+            </div>
+
+            <div class="col-lg-6 hover-zoomin p-5">
+                <a href="{% url 'trriennial-conference' %}" title="">
+                    <img src="{% static 'conference/Triennial.jpg' %}" alt="" />
+                </a>
+                <h4 class="text-center mt-3 text-green">Triennial Conference</h4>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white">
+        <div class="container py-5">
+            <div class="row h-100 align-items-center  py-5">
+                <div class="col-lg-6">
+                    <h1 class="display-4 text-green heading-h3 text-center">HISTORY</h1>
+                    <p class="lead text-muted mb-0">The LET US DREAM conference is a platform to share, learn, and
+                        celebrate the diversity of our selfless acts around us. It invites individuals with bigger
+                        hearts and deeper thoughts for their society and its progress. The conferences organized by us
+                        aim at introducing different community service possibilities and intervention models among
+                        younger and older generations to promote their volunteerism. Since its inception in the year
+                        2017, conferences have reflected on positive recommendations for community development.</p>
+                    <!-- <p class="lead text-muted">Snippet by <a href="https://bootstrapious.com/snippets"
+                            class="text-muted">
+                            <u>Bootstrapious</u></a>
+                    </p> -->
+                </div>
+                <div class="col-lg-6 d-none d-lg-block ml-5 pl-5 ">
+                    <iframe width="510" height="287" class="ml-5 pl-5" src="https://www.youtube.com/embed/YayLbO0K9Zc"
+                        title="Let Us Dream Conference 2018" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container mb-5">
+        <div class="row">
+            <div class="col-lg-12 align-items-center">
+                <div id="carouselExampleFade" class="carousel slide carousel-fade carousel-first align-items-center"
+                    data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner align-items-center" style="border-radius: 20px; ">
+                        <div class="carousel-item active">
+                            <img src="{% static 'conference/slider1.jpg' %}" class="d-block w-100"
+                                alt="DREAMS Program" />
+                        </div>
+                        <div class="carousel-item align-items-center">
+                            <img src="{% static 'conference/slider2.jpg' %}" class="d-block w-100"
+                                alt="DREAMS Program" />
+                        </div>
+                        <div class="carousel-item align-items-center">
+                            <img src="{% static 'conference/slider3.jpg' %}" class="d-block w-100"
+                                alt="DREAMS Program" />
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bg-light py-5">
+        <div class="container py-5">
+            <div class="row align-items-center mb-5">
+                <div class="col-lg-6 order-2 order-lg-1">
+                    <h2 class="font-weight-light">VISION</h2>
+                    <p class="font-italic text-muted mb-2"> Empowering local communities for sustainable global impact
+                        and improvement.</p>
+                    <!-- <p class="fw-bold font-italic mb-4">The research team invites research enthusiasts and
+                        scholars across the globe interested in collaborating on any of the following Research domains
+                    </p> -->
+                    <!-- <a href="#" class="btn btn-light px-5 rounded-pill shadow-sm">Learn More</a> -->
+                </div>
+                <div class="col-lg-5 px-5 mx-auto order-1 order-lg-2"><img
+                        src="{% static 'conference/Conference1.jpg' %}" alt="" class="img-fluid mb-4 mb-lg-0"></div>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-lg-5 px-5 mx-auto"><img src="{% static 'conference/Conference-2.jpg' %}" alt=""
+                        class="img-fluid mb-4 mb-lg-0"></div>
+                <div class="col-lg-6">
+                    <h2 class="font-weight-light">MISSION</h2>
+                    <p class="font-italic text-muted mb-4">To provide an opportunity to share, learn and support more
+                        community intervention research, theories and models.</p>
+                    <p class="font-italic text-muted mb-4">To provide a forum for sharing experiences including the
+                        successes and challenges in community organisations and efforts.</p>
+                    <p class="font-italic text-muted mb-4">To invite individuals with bigger hearts and deeper thoughts
+                        for their society to be a support system for the community empowerment initiatives.</p>
+                    <!-- <a href="#" class="btn btn-light px-5 rounded-pill shadow-sm">Learn More</a> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bg-white py-5">
+        <div class="container py-5">
+            <div class="row align-items-center mb-5">
+                <div class="col-lg-6 order-2 order-lg-1">
+                    <h2 class="font-weight-light">OBJECTIVES </h2>
+                    <p class="font-italic text-muted mb-2"> To offer the participants an opportunity to bridge the
+                        knowledge gap through the interaction of researchers and practitioners worldwide.</p>
+                    <p class="font-italic text-muted mb-2"> To make recommendations towards achieving greater global
+                        peace and harmony worldwide.</p>
+                    <p class="font-italic text-muted mb-2"> To provide an opportunity to share, learn, and support more
+                        community interventions research, theories, and models.</p>
+                    <p class="font-italic text-muted mb-2"> To provide a forum for sharing experiences including the
+                        successes and challenges in community organizations and efforts.</p>
+                    <p class="font-italic text-muted mb-2"> To invite individuals with bigger hearts and deeper thoughts
+                        for their society to be a support system for the community empowerment initiatives.</p>
+                    <!-- <p class="fw-bold font-italic mb-4">The research team invites research enthusiasts and
+                        scholars across the globe interested in collaborating on any of the following Research domains
+                    </p> -->
+                    <!-- <a href="#" class="btn btn-light px-5 rounded-pill shadow-sm">Learn More</a> -->
+                </div>
+                <div class="col-lg-5 px-5 mx-auto order-1 order-lg-2"><img
+                        src="{% static 'conference/Conference3.jpg' %}" alt="" class="img-fluid mb-4 mb-lg-0"></div>
+            </div>
+
+        </div>
+    </div>
+    <div class="bg-light py-5">
+        <div class="container">
+            <div id="demo" class="carousel slide" data-ride="carousel">
+                <center>
+                    <div class="carousel-inner mb-5">
+                        <div class="carousel-item active">
+                            <div class="card">
+
+
+                                <div class="col-md-12 text-center align-self-center">
+                                    <div class="col-md-12">
+                                        <h2 class="text-center mb-2">IMPLEMENTATION</h2>
+                                    </div>
+                                    <div class=" text-right p-5">
+                                        <p>The LET US DREAM Conference is implemented at three
+                                            levels: in collaboration with Universities, Communities and
+                                            Organizations</p>
+                                    </div>
+                                    <img class="img-fluid" src="{% static 'conference/Conference4.jpg' %}">
+                                </div>
+                                <div class="col-md-12 info ">
+
+
+
+                                    <p class="p-5 text-muted font-italic">The conference has also been expanded into
+                                        different levels during its course: Annual
+                                        Community conference and Triennial- International conference at four locations.
+                                    </p>
+
+                                </div>
+
+
+                            </div>
+                        </div>
+
+                    </div>
+                </center>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <div class="bg-white py-5">
+        <div class="container py-5">
+
+            <div class="row align-items-center">
+                <div class="col-lg-5 px-5 mx-auto"><img src="{% static 'conference/Conference5.jpg' %}" alt=""
+                        class="img-fluid mb-4 mb-lg-0"></div>
+                <div class="col-lg-6">
+                    <h2 class="font-weight-light">TARGET AUDIENCE:</h2>
+                    <p class="font-italic text-muted mb-2">Adult and young adult volunteers, business owners involved in
+                        voluntary community developmental projects in different locations. Not-for-profit organisations,
+                        philanthropists, board members, social workers, educators/educational administrators (who are
+                        interested in community collaboration), College students (psycho-social behavioral studies),
+                        college professors, Anyone interested in community initiatives and leadership to make a positive
+                        difference in their community.</p>
+                    <p class="font-italic text-muted mb-4">Retired people who wish to give their expertise and time back
+                        to their community for its better development and anyone who dreams for the better future of the
+                        next generation.</p>
+                    <!-- <a href="#" class="btn btn-light px-5 rounded-pill shadow-sm">Learn More</a> -->
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 {% endblock %}
