@@ -38,8 +38,8 @@ def bangalorechristuniversity(request):
     return render(request, 'conference/christ-university-bangalore.html')
 
 
-def cuB(request):
-    return render(request, 'conference/cuB.html')
+def binghamtonUniversity(request):
+    return render(request, 'conference/binghamton-university.html')
 
 
 def cuT(request):
