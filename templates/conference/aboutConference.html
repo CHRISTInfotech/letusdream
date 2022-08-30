@@ -37,9 +37,6 @@ About Conference
     }
 
     /* image section */
-
-
-
     .card {
         max-width: 1000px;
         width: 100%;
@@ -55,11 +52,6 @@ About Conference
             padding: 1.5rem
         }
     }
-
-
-
-
-
 
     .info {
         padding: 6vh 0vh
@@ -86,101 +78,6 @@ About Conference
 
     .title .col {
         padding: 0
-    }
-
-
-
-
-
-
-    .carousel-control-prev {
-        width: unset
-    }
-
-    .carousel-control-next {
-        left: 8vh;
-        right: unset;
-        width: unset
-    }
-
-    .lower {
-        margin-top: 3rem
-    }
-
-    .lower i {
-        padding: 2.5vh;
-        margin-right: 1vh;
-        color: grey;
-        border: 1px solid rgb(85, 85, 85)
-    }
-
-    .lower .col {
-        padding: 0
-    }
-
-    @media(max-width:768px) {
-        .lower i {
-            padding: 2vh;
-            margin-right: 1vh;
-            color: grey;
-            border: 1px solid rgb(85, 85, 85)
-        }
-    }
-
-    .btn {
-        background-color: transparent;
-        border-color: rgba(186, 216, 125, 0.863);
-        color: rgba(186, 216, 125, 0.863);
-        padding: 1.8vh 4.5vh;
-        height: fit-content;
-        border-radius: 3px
-    }
-
-    .btn:focus {
-        box-shadow: none;
-        outline: none;
-        box-shadow: none;
-        color: white;
-        -webkit-box-shadow: none;
-        -webkit-user-select: none;
-        transition: none
-    }
-
-    .btn:hover {
-        color: white
-    }
-
-    @media(max-width:768px) {
-        .btn {
-            background-color: transparent;
-            border-color: rgba(186, 216, 125, 0.863);
-            color: rgba(186, 216, 125, 0.863);
-            padding: 1vh;
-            font-size: 0.9rem;
-            height: fit-content;
-            border-radius: 3px
-        }
-    }
-
-    a {
-        color: unset
-    }
-
-    a:hover {
-        color: unset;
-        text-decoration: none
-    }
-
-    label.radio input {
-        position: absolute;
-        top: 0;
-        left: 0;
-        visibility: hidden;
-        pointer-events: none
-    }
-
-    label.radio {
-        cursor: pointer
     }
 </style>
 <section class="section">
@@ -333,40 +230,44 @@ About Conference
 
         </div>
     </div>
+    <div class="bg-light py-5">
+        <div class="container">
+            <div id="demo" class="carousel slide" data-ride="carousel">
+                <center>
+                    <div class="carousel-inner mb-5">
+                        <div class="carousel-item active">
+                            <div class="card">
 
-    <div class="container">
-        <div id="demo" class="carousel slide" data-ride="carousel">
-            <center>
-                <div class="carousel-inner mb-5">
-                    <div class="carousel-item active">
-                        <div class="card">
 
-
-                            <div class="col-md-12 text-center align-self-center">
-                                <img class="img-fluid" src="{% static 'conference/Conference4.jpg' %}">
-                            </div>
-                            <div class="col-md-6 info">
-
-                                <div class="col-md-12">
-                                    <h2 class="text-center mb-2">IMPLEMENTATION</h2>
+                                <div class="col-md-12 text-center align-self-center">
+                                    <div class="col-md-12">
+                                        <h2 class="text-center mb-2">IMPLEMENTATION</h2>
+                                    </div>
+                                    <div class=" text-right p-5">
+                                        <p>The LET US DREAM Conference is implemented at three
+                                            levels: in collaboration with Universities, Communities and
+                                            Organizations</p>
+                                    </div>
+                                    <img class="img-fluid" src="{% static 'conference/Conference4.jpg' %}">
                                 </div>
-                                <div class=" text-right">
-                                    <p>The LET US DREAM Conference is implemented at three
-                                        levels: in collaboration with Universities, Communities and
-                                        Organizations</p>
+                                <div class="col-md-12 info ">
+
+
+
+                                    <p class="p-5 text-muted font-italic">The conference has also been expanded into
+                                        different levels during its course: Annual
+                                        Community conference and Triennial- International conference at four locations.
+                                    </p>
+
                                 </div>
 
-                                <p>The conference has also been expanded into different levels during its course: Annual
-                                    Community conference and Triennial- International conference at four locations.</p>
 
                             </div>
-
-
                         </div>
-                    </div>
 
-                </div>
-            </center>
+                    </div>
+                </center>
+            </div>
         </div>
     </div>
 
@@ -376,8 +277,7 @@ About Conference
 
 
 
-
-    <div class="bg-light py-5">
+    <div class="bg-white py-5">
         <div class="container py-5">
 
             <div class="row align-items-center">
