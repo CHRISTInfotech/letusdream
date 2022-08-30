@@ -6,12 +6,844 @@ THIRUVALLAM
 {% endblock %}
 
 {% block content %}
+
+
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css'>
+<!-- Font Awesome -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+
+<!-- MDB -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.4.0/mdb.min.css" rel="stylesheet" />
 <style>
-    .location {
-        margin-top: 130px;
+    .text-green {
+        color: #0a7b79;
+    }
+
+    .team-img {
+        width: 160px;
+        border-style: groove;
+        border-radius: 30px;
+        padding: 5px
+    }
+
+    .changacherry-loc .button {
+        display: inline-block;
+        border-radius: 100px;
+        background-color: #d3f2e9;
+        font-weight: bold;
+        border: 2px solid #d3f2e9;
+        color: #0a7b79;
+        text-align: center;
+        font-size: 20px;
+        padding: 14px 28px;
+        width: 300px;
+        transition: all 0.5s;
+        cursor: pointer;
+        margin: 5px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .changacherry-loc .button span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+    }
+
+    .changacherry-loc .button span:after {
+        content: '\00bb';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.5s;
+    }
+
+    .changacherry-loc .button:hover {
+        background-color: transparent;
+        color: #0a7b79;
+        border: 2px solid #0a7b79;
+    }
+
+    .changacherry-loc .button:hover span {
+        padding-right: 25px;
+
+    }
+
+    .changacherry-loc .button:hover span:after {
+        opacity: 1;
+        right: 0;
+    }
+
+    .text-green {
+        color: #0a7b79;
+    }
+
+    .img-middle {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+    }
+
+    /*ZoomIn Hover Effect*/
+    .hover-zoomin a {
+        display: block;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .hover-zoomin img {
+        width: 100%;
+        height: auto;
+        -webkit-transition: all 0.5s ease-in-out;
+        -moz-transition: all 0.5s ease-in-out;
+        -o-transition: all 0.5s ease-in-out;
+        -ms-transition: all 0.5s ease-in-out;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .hover-zoomin:hover img {
+        -webkit-transform: scale(1.2);
+        -moz-transform: scale(1.2);
+        -o-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        transform: scale(1.2);
+    }
+
+
+    /* lined tabs */
+
+    .dreams-tab .lined .nav-link {
+        border: none;
+        border-bottom: 3px solid transparent;
+    }
+
+    .dreams-tab .lined .nav-link:hover {
+        border: none;
+        border-bottom: 3px solid transparent;
+    }
+
+    .dreams-tab .lined .nav-link.active {
+        background: none;
+        color: #555;
+        border-color: #d3f2e9;
+    }
+
+
+
+    .dreams-tab .nav-pills .nav-link {
+        color: #555;
+    }
+
+    .dreams-tab .text-uppercase {
+        letter-spacing: 0.1em;
+    }
+
+    /* Counter */
+    .sectionClass div,
+    .sectionClass h1,
+    .sectionClass h2,
+    .sectionClass h3,
+    .sectionClass h4,
+    .sectionClass h5,
+    .sectionClass h6,
+    .sectionClass form,
+    .sectionClass p {
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        font-size: 13px;
+        direction: ltr;
+    }
+
+    .sectionClass {
+        padding: 20px 0px 50px 0px;
+        position: relative;
+        display: block;
+    }
+
+    .fullWidth {
+        width: 100% !important;
+        display: table;
+        float: none;
+        padding: 0;
+        min-height: 1px;
+        height: 100%;
+        position: relative;
+    }
+
+
+    .sectiontitle {
+        background-position: center;
+        margin: 30px 0 0px;
+        text-align: center;
+        min-height: 20px;
+    }
+
+    .sectiontitle h2 {
+        font-size: 30px;
+
+        margin-bottom: 0px;
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+
+
+    .headerLine {
+        width: 160px;
+        height: 2px;
+        display: inline-block;
+        background: #101F2E;
+    }
+
+
+    .projectFactsWrap {
+        display: flex;
+        margin-top: 30px;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+
+    #projectFacts .fullWidth {
+        padding: 0;
+    }
+
+    .projectFactsWrap .item {
+        width: 25%;
+        height: 100%;
+        padding: 50px 0px;
+        text-align: center;
+    }
+
+    .projectFactsWrap .item:nth-child(1) {
+        background: #d3f2e9;
+    }
+
+    .projectFactsWrap .item:nth-child(2) {
+        background: #d3f2e9;
+    }
+
+    .projectFactsWrap .item:nth-child(3) {
+        background: #d3f2e9;
+    }
+
+    .projectFactsWrap .item:nth-child(4) {
+        background: #d3f2e9;
+    }
+
+    .projectFactsWrap .item p.number {
+        font-size: 40px;
+        padding: 0;
+        font-weight: bold;
+    }
+
+    .projectFactsWrap .item p {
+        color: #0a7b79;
+        font-size: 18px;
+        margin: 0;
+        padding: 10px;
+        font-family: 'Open Sans';
+    }
+
+    .nav-pills .nav-link.active,
+    .nav-pills .show>.nav-link {
+        box-shadow: none;
+    }
+
+    .nav-pills .nav-link {
+        margin: 0;
+        background-color: transparent;
+    }
+
+    .nav-tabs .nav-link:hover {
+        background-color: transparent;
+    }
+
+    .projectFactsWrap .item span {
+        width: 60px;
+        background: #0a7b79;
+        height: 2px;
+        display: block;
+        margin: 0 auto;
+    }
+
+
+    .projectFactsWrap .item i {
+        vertical-align: middle;
+        font-size: 50px;
+        color: #0a7b79;
+    }
+
+
+    .projectFactsWrap .item:hover i,
+    .projectFactsWrap .item:hover p {
+        color: #0a7b79;
+    }
+
+    .projectFactsWrap .item:hover span {
+        background: #0a7b79;
+    }
+
+    .sectiontitle .heading-h3:after {
+        content: "";
+        display: block;
+        margin: 0 auto;
+        width: 50%;
+        padding-top: 20px;
+        border-bottom: 2px solid transparent;
+        border-image: linear-gradient(0.90turn, rgb(255, 255, 255), rgb(0, 0, 0), rgb(255, 255, 255));
+        border-image-slice: 1;
+    }
+
+    .sectiontitle .heading-h3 {
+        padding-top: 0px;
+        padding-bottom: 10px;
+        font-weight: 700;
+        font-size: 30px;
+
+    }
+
+    @media (max-width: 786px) {
+        .projectFactsWrap .item {
+            flex: 0 0 50%;
+        }
+    }
+
+    body {
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .btn-2 {
+        background: transparent;
+        border: 1px solid #0a7b79;
+        width: 150px;
+        padding: 15px 0;
+        text-align: center;
+        border-radius: 25px;
+        font-weight: bold;
+        color: #0a7b79;
+    }
+
+    .btn-2:hover {
+        border: 2px solid #d3f2e9;
+        background: #d3f2e9;
     }
 </style>
-<section class="location">
-    <h1>THIRUVALLAM</h1>
+<section class="changacherry-loc">
+
+    <nav aria-label="breadcrumb animated slideInDown" style="margin-top: 12%; margin-left:15%;">
+        <ol class="breadcrumb text-uppercase mb-0 bg-white">
+            <li class="breadcrumb-item"><a class="text-black" href="{% url 'main' %}">Home</a></li>
+            <li class="breadcrumb-item"><a class="text-black" href="{% url 'main' %}#location">Location</a></li>
+            <li class="breadcrumb-item  active" aria-current="page" style="color: #0a7b79;">thiruvallam</li>
+        </ol>
+    </nav>
+    <h1 class="mb-4  fw-bold text-center fs-1 text-green text-uppercase heading-h3 mt-5">DREAMS thiruvallam</h1>
+    <div class="container dreams-tab">
+        <div class="row">
+            <div class="col-lg-12">
+                <!-- Tabs navs -->
+                <div class="container py-5">
+
+
+                    <div class="p-5 bg-white rounded shadow mb-5">
+                        <!-- Lined tabs-->
+                        <ul id="myTab2" role="tablist"
+                            class="nav nav-tabs nav-pills with-arrow lined flex-column flex-sm-row text-center">
+                            <li class="nav-item flex-sm-fill">
+                                <a id="program-tab" data-toggle="tab" href="#program" role="tab" aria-controls="program"
+                                    aria-selected="true"
+                                    class="nav-link text-uppercase fw-bold font-weight-bold mr-sm-3 rounded-0 active">
+                                    <h5 style="color:#0a7b79; font-weight:600;">DREAMS Program</h5>
+                                </a>
+                            </li>
+                            <li class="nav-item flex-sm-fill">
+                                <a id="band-tab" data-toggle="tab" href="#band" role="tab" aria-controls="band"
+                                    aria-selected="false"
+                                    class="nav-link text-uppercase fw-bold font-weight-bold mr-sm-3 rounded-0">
+                                    <h5 style="color:#0a7b79; font-weight:600;">DREAMS Band</h5>
+                                </a>
+                            </li>
+                            <li class="nav-item flex-sm-fill">
+                                <a id="proclub-tab" data-toggle="tab" href="#proclub" role="tab" aria-controls="proclub"
+                                    aria-selected="false"
+                                    class="nav-link text-uppercase fw-bold font-weight-bold rounded-0">
+                                    <h5 style="color:#0a7b79; font-weight:600;">DREAMS Pro Club</h5>
+                                </a>
+                            </li>
+                        </ul>
+                        <div id="myTab2Content" class="tab-content">
+                            <div id="program" role="tabpanel" aria-labelledby="program-tab"
+                                class="tab-pane fade px-4 py-5 show active">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-lg-7 col-sm-12 col-md-12" style="padding: 2% 5% 3% 0;">
+                                            <p class="leade font-italic  justify-content " style="color: #7ca8a1;">
+                                                The DREAMS chapter in Thiruvallam was founded in 2018 with Prof. Sheeba
+                                                as the co-founder. After fruitful meetings, Prof. Sheeba had brought in
+                                                some of her colleagues for the initial meetings. The students from B.Ed
+                                                Teachers’ Training College, Christ Nagar, and Christ College, Vizhinjam
+                                                has entered into the program as community volunteers later on. Children
+                                                from underprivileged communities in Poonthura region have been endorsed
+                                                as the beneficiaries of the program since its inception. Since the
+                                                program volunteers are mostly teacher trainees, those children are also
+                                                receiving extra-benefits through the implementation of active teaching
+                                                and learning pedagogy. The project has been serving more than 32
+                                                students every year with the active support from 20 college volunteers
+                                                and 8-9 senior mentors from the community since 2018.
+                                            </p>
+
+
+                                        </div>
+                                        <div class="col-lg-5 col-sm-12 col-md-12">
+                                            <center>
+                                                <img src="{% static 'locations/thiruvallam/THIRUVALLAM.png' %}"
+                                                    alt="mannanam" height="400" width="400" style="padding-top: 5%; width: 100%;
+                                                    height: auto;">
+                                                <button type="button" class="btn-2 mt-5">Join Us</button>
+                                                &nbsp;&nbsp;&nbsp;
+                                                <button type="button" class="btn-2 mt-5">Our Location</button>
+                                            </center>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+
+
+
+
+                            </div>
+                            <div id="band" role="tabpanel" aria-labelledby="band-tab" class="tab-pane fade px-4 py-5">
+
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-lg-7 col-sm-12 col-md-12" style="padding: 2% 5% 3% 0;">
+                                            <p class="leade font-italic  justify-content " style="color: #7ca8a1;">
+                                                The DREAMS Band strives towards making a positive difference in the
+                                                community by utilizing their musical skills. DREAMS Band is not only an
+                                                opportunity to sing and motivate the audience but also uses music as a
+                                                platform to empower communities and make music of their own, which can
+                                                empower children and youth holistically. It is a band with a meaning and
+                                                greater goals for the benefit of the society.
+                                            </p>
+                                            <p class="leade font-italic  justify-content" style="color: #7ca8a1;">
+                                                Those who are interested to be a part of the band may contact the
+                                                respective leaders in each locality.
+                                            </p>
+
+                                        </div>
+                                        <div class="col-lg-5 col-sm-12 col-md-12">
+                                            <center>
+                                                <img src="{% static 'locations/band.webp' %}" alt="mannanam"
+                                                    height="400" width="400" style="padding-top: 5%; width: 100%;
+                                                height: auto;">
+                                            </center>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div id="proclub" role="tabpanel" aria-labelledby="proclub-tab"
+                                class="tab-pane fade px-4 py-5">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-lg-7 col-sm-12 col-md-12" style="padding: 2% 5% 3% 0;">
+                                            <p class="leade font-italic  justify-content " style="color: #7ca8a1;">
+                                                DREAMS Pro-club is a support group for the personal and professional
+                                                development of young professionals. Small groups of 10-12 working
+                                                professionals meet once every month to discuss and implement strategies
+                                                for their professional growth. The club helps in inculcating values of
+                                                identity and community belonging among the members. The program aims at
+                                                enhancing communication skills, generating positive attitudes about self
+                                                and others, developing leadership, cooperation, and community
+                                                engagement.
+                                            </p>
+                                            <p class="leade font-italic  justify-content" style="color: #7ca8a1;">
+
+                                                This platform is yet to be initiated. Those who are interested to take a
+                                                partnership may contact the respective leaders in each locality.
+                                            </p>
+
+                                        </div>
+                                        <div class="col-lg-5 col-sm-12 col-md-12">
+                                            <center>
+                                                <img src="{% static 'locations/proclub.png' %}" alt="mannanam"
+                                                    height="400" width="400" style="width: 100%; height: auto;">
+                                            </center>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <!-- End lined tabs -->
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="sectiontitle">
+                <h2 class="heading-h3 text-green text-uppercase">Our Impact</h2>
+                <!-- <span class="headerLine"></span> -->
+            </div>
+
+            <div class="col-lg-12">
+
+                <div id="projectFacts" class="sectionClass">
+                    <div class="fullWidth eight columns">
+                        <div class="projectFactsWrap ">
+                            <div class="item wow fadeInUpBig animated animated" data-number="12"
+                                style="visibility: visible;">
+                                <i class="fa fa-child"></i>
+                                <p id="number1" class="number">56</p>
+                                <span></span>
+                                <p>Students</p>
+                            </div>
+                            <div class="item wow fadeInUpBig animated animated" data-number="55"
+                                style="visibility: visible;">
+                                <i class="fa fa-smile-o"></i>
+                                <p id="number2" class="number">56</p>
+                                <span></span>
+                                <p>Participants</p>
+                            </div>
+                            <div class="item wow fadeInUpBig animated animated" data-number="359"
+                                style="visibility: visible;">
+                                <i class="fa fa-user"></i>
+                                <p id="number3" class="number">06</p>
+                                <span></span>
+                                <p>Leadership</p>
+                            </div>
+                            <div class="item wow fadeInUpBig animated animated" data-number="246"
+                                style="visibility: visible;">
+                                <i class="fa fa-users"></i>
+                                <p id="number4" class="number">62</p>
+                                <span></span>
+                                <p>Families</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12">
+                <!-- Modal gallery -->
+                <section class="">
+                    <!-- Section: Images -->
+                    <section class="">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+                                <div class="bg-image hover-overlay ripple shadow-1-strong rounded"
+                                    data-ripple-color="light" style="min-height: 234px;">
+
+                                    <img src="{% static 'locations/chaganacherry/1.png'%}" class="w-100"
+                                        style="min-height: 234px;" />
+                                    <a href="#!" data-mdb-toggle="modal" data-mdb-target="#exampleModal1">
+                                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.2);"></div>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 mb-4 mb-lg-0">
+                                <div class="bg-image hover-overlay ripple shadow-1-strong rounded"
+                                    data-ripple-color="light" style="min-height: 234px;">
+                                    <img src="{% static 'locations/chaganacherry/2.png'%}" class="w-100"
+                                        style="min-height: 234px;" />
+                                    <a href="#!" data-mdb-toggle="modal" data-mdb-target="#exampleModal2">
+                                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.2);"></div>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 mb-4 mb-lg-0">
+                                <div class="bg-image hover-overlay ripple shadow-1-strong rounded"
+                                    data-ripple-color="light" style="min-height: 234px;">
+                                    <img src="{% static 'locations/chaganacherry/3.png'%}" class="w-100"
+                                        style="min-height: 234px;" />
+                                    <a href="#!" data-mdb-toggle="modal" data-mdb-target="#exampleModal3">
+                                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.2);"></div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Section: Images -->
+
+                    <!-- Section: Modals -->
+                    <section class="mt-5">
+                        <!-- Modal 1 -->
+                        <div class="modal fade mt-5 pt-5" id="exampleModal1" tabindex="-1"
+                            aria-labelledby="exampleModal1Label" aria-hidden="true">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                    <div class="ratio ratio-16x9">
+                                        <iframe src="https://www.youtube.com/embed/FlVEeAIWCo0"
+                                            title="Never Stop Dreaming" allowfullscreen></iframe>
+                                    </div>
+
+                                    <div class="text-center py-3">
+                                        <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">
+                                            Close
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Modal 2 -->
+                        <div class="modal fade mt-5 pt-5" id="exampleModal2" tabindex="-1"
+                            aria-labelledby="exampleModal2Label" aria-hidden="true">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                    <div class="ratio ratio-16x9">
+                                        <iframe src="https://www.youtube.com/embed/-U7IMk0fOpw"
+                                            title="Fr  Lijo Message Dreams" allowfullscreen></iframe>
+                                    </div>
+
+                                    <div class="text-center py-3">
+                                        <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">
+                                            Close
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Modal 3 -->
+                        <div class="modal fade mt-5 pt-5" id="exampleModal3" tabindex="-1"
+                            aria-labelledby="exampleModal3Label" aria-hidden="true">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                    <div class="ratio ratio-16x9">
+                                        <iframe src="https://www.youtube.com/embed/E9i2R2aZ-x8" title="Waving flag"
+                                            allowfullscreen></iframe>
+                                    </div>
+
+                                    <div class="text-center py-3">
+                                        <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">
+                                            Close
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Section: Modals -->
+                </section>
+                <!-- Modal gallery -->
+            </div>
+        </div>
+    </div>
+    <!-- social media -->
+    <div class="container">
+        <div class="row mt-5 p-5">
+
+
+            <div class="col-lg-6 hover-zoomin p-5">
+                <a href="https://www.facebook.com/groups/284715366013841/" title="" target="_blank">
+                    <img src="{% static 'locations/thiruvallam/fb.jpg'%}" alt="" />
+                </a>
+                <h4 class="text-center mt-3 text-green">THIRUVALLAM FB GROUP</h4>
+            </div>
+
+            <div class="col-lg-6 hover-zoomin p-5">
+                <a href="{% url 'photo-gallery' %}#popup5" title="">
+                    <img src="{% static 'locations/thiruvallam/gallery.jpg'%}" alt="" />
+                </a>
+                <h4 class="text-center mt-3 text-green">THIRUVALLAM GALLERY</h4>
+            </div>
+        </div>
+    </div>
+    <!-- Speaker -->
+    <div class="container">
+        <div class="row text-center">
+
+
+
+            <!-- Team item -->
+            <div class="col-xl-3 col-sm-6 mb-5">
+                <div class="bg-white rounded shadow-sm py-5 px-4" style="min-height: 280px;"><img
+                        src="{% static 'locations/thiruvallam/Ms-Sheeba.jpg'%}" alt="" width="100" height="100"
+                        class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+                    <h5 class="mb-0">Prof. Sheeba</h5><span class="small text-uppercase text-muted">PRO -
+                        CLUB</span>
+
+                </div>
+            </div><!-- End -->
+
+            <!-- Team item -->
+            <div class="col-xl-3 col-sm-6 mb-5">
+                <div class="bg-white rounded shadow-sm py-5 px-4" style="min-height: 280px;"><img
+                        src="{% static 'locations/thiruvallam/team2.jpg'%}" alt="" width="100"
+                        class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+                    <h5 class="mb-0">
+                        <!--name-->
+                    </h5><span class="small text-uppercase text-muted">
+                        <!--team -->
+                    </span>
+
+                </div>
+            </div><!-- End -->
+
+            <!-- Team item -->
+            <div class="col-xl-3 col-sm-6 mb-5">
+                <div class="bg-white rounded shadow-sm py-5 px-4" style="min-height: 280px;"><img
+                        src="{% static 'locations/thiruvallam/team3.jpg'%}" alt="" width="100"
+                        class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+                    <h5 class="mb-0">
+                        <!--name-->
+                    </h5><span class="small text-uppercase text-muted">
+                        <!--team -->
+                    </span>
+
+                </div>
+            </div>
+            <!-- End -->
+            <!-- Team item -->
+            <div class="col-xl-3 col-sm-6 mb-5">
+                <div class="bg-white rounded shadow-sm py-5 px-4" style="min-height: 280px;"><img
+                        src="{% static 'locations/thiruvallam/team4.jpg'%}" alt="" width="100"
+                        class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+                    <h5 class="mb-0">
+                        <!--name-->
+                    </h5><span class="small text-uppercase text-muted">
+                        <!--team -->
+                    </span>
+
+                </div>
+            </div>
+            <!-- End -->
+        </div>
+
+
+        <div class="row text-center">
+
+
+
+            <!-- Team item -->
+            <div class="col-xl-3 col-sm-6 mb-5">
+                <div class="bg-white rounded shadow-sm py-5 px-4" style="min-height: 280px;"><img
+                        src="{% static 'locations/thiruvallam/team5.jpg'%}" alt="" width="100"
+                        class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+                    <h5 class="mb-0">
+                        <!--name-->
+                    </h5><span class="small text-uppercase text-muted">
+                        <!--team -->
+                    </span>
+
+                </div>
+            </div><!-- End -->
+
+
+
+            <!-- Team item -->
+
+            <!-- End -->
+        </div>
+
+
+    </div>
+    {% include 'partials/_testimonials.html' %}
+    <!-- contact us -->
+
+    <div class="contact_info">
+        <div class="container">
+            <div class="row">
+                <h1 class="text-center text-green mb-5">Connect us</h1>
+                <div class="col-lg-10 offset-lg-1">
+                    <div
+                        class="contact_info_container d-flex flex-lg-row flex-column justify-content-between align-items-between mb-5">
+
+                        <!-- Contact Item -->
+                        <div class="contact_info_item d-flex flex-row align-items-center justify-content-start">
+                            <div class="contact_info_image"><img
+                                    src="https://img.icons8.com/office/24/000000/iphone.png" alt=""></div>
+                            <div class="contact_info_content text-black">
+                                <div class="contact_info_title">Phone</div>
+                                <div class="contact_info_text">
+                                    <!-- contact number -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Contact Item -->
+                        <div class="contact_info_item d-flex flex-row align-items-center justify-content-start">
+                            <div class="contact_info_image"><img
+                                    src="https://img.icons8.com/ultraviolet/24/000000/filled-message.png" alt=""></div>
+                            <div class="contact_info_content text-black fs-bold">
+                                <div class="contact_info_title">Email</div>
+                                <div class="contact_info_text"><a class="text-decoration-none text-black"
+                                        href="mailto: thiruvananthpuram@letusdream.org">
+                                        thiruvananthpuram@letusdream.org</a></div>
+                            </div>
+                        </div>
+
+                        <!-- Contact Item -->
+                        <div class="contact_info_item d-flex flex-row align-items-center justify-content-start">
+                            <div class="contact_info_image"><img
+                                    src="https://img.icons8.com/ultraviolet/24/000000/map-marker.png" alt=""></div>
+                            <div class="contact_info_content text-black">
+                                <div class="contact_info_title">Address</div>
+                                <div class="contact_info_text text-black fw-semibold">CHRIST NAGAR School, 11, 273,
+                                    Keston Rd, Kanaka Nagar, Kowdiar, Thiruvananthapuram, Kerala 695003.</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </section>
+<script>
+
+    $.fn.jQuerySimpleCounter = function (options) {
+        var settings = $.extend({
+            start: 0,
+            end: 1000,
+            easing: 'swing',
+            duration: 400,
+            complete: ''
+        }, options);
+
+        var thisElement = $(this);
+
+        $({ count: settings.start }).animate({ count: settings.end }, {
+            duration: settings.duration,
+            easing: settings.easing,
+            step: function () {
+                var mathCount = Math.ceil(this.count);
+                thisElement.text(mathCount);
+            },
+            complete: settings.complete
+        });
+    };
+
+
+    $('#number1').jQuerySimpleCounter({ end: 56, duration: 3000 });
+    $('#number2').jQuerySimpleCounter({ end: 56, duration: 3000 });
+    $('#number3').jQuerySimpleCounter({ end: 06, duration: 3000 });
+    $('#number4').jQuerySimpleCounter({ end: 62, duration: 3000 });
+
+
+
+</script>
+<!-- MDB -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.4.0/mdb.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 {% endblock %}
+Attachments area
+Preview YouTube video Never Stop Dreaming
+
+Preview YouTube video Fr Lijo Message Dreams
+
+Preview YouTube video Waving flag
+for leadership team images in 1*1 ratio

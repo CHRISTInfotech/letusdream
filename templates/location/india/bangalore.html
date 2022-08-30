@@ -2,14 +2,18 @@
 {% load static %}
 
 {% block title %}
-BANGLORE
+BANGALORE
 {% endblock %}
 
 {% block content %}
 
 
 <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css'>
+<!-- Font Awesome -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
 
+<!-- MDB -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.4.0/mdb.min.css" rel="stylesheet" />
 <style>
     .text-green {
         color: #0a7b79;
@@ -22,7 +26,7 @@ BANGLORE
         padding: 5px
     }
 
-    .bangolre-loc .button {
+    .changacherry-loc .button {
         display: inline-block;
         border-radius: 100px;
         background-color: #d3f2e9;
@@ -40,14 +44,14 @@ BANGLORE
         margin-bottom: 10px;
     }
 
-    .bangolre-loc .button span {
+    .changacherry-loc .button span {
         cursor: pointer;
         display: inline-block;
         position: relative;
         transition: 0.5s;
     }
 
-    .bangolre-loc .button span:after {
+    .changacherry-loc .button span:after {
         content: '\00bb';
         position: absolute;
         opacity: 0;
@@ -56,18 +60,18 @@ BANGLORE
         transition: 0.5s;
     }
 
-    .bangolre-loc .button:hover {
+    .changacherry-loc .button:hover {
         background-color: transparent;
         color: #0a7b79;
         border: 2px solid #0a7b79;
     }
 
-    .bangolre-loc .button:hover span {
+    .changacherry-loc .button:hover span {
         padding-right: 25px;
 
     }
 
-    .bangolre-loc .button:hover span:after {
+    .changacherry-loc .button:hover span:after {
         opacity: 1;
         right: 0;
     }
@@ -81,6 +85,31 @@ BANGLORE
         align-items: center;
         text-align: center;
 
+    }
+
+    /*ZoomIn Hover Effect*/
+    .hover-zoomin a {
+        display: block;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .hover-zoomin img {
+        width: 100%;
+        height: auto;
+        -webkit-transition: all 0.5s ease-in-out;
+        -moz-transition: all 0.5s ease-in-out;
+        -o-transition: all 0.5s ease-in-out;
+        -ms-transition: all 0.5s ease-in-out;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .hover-zoomin:hover img {
+        -webkit-transform: scale(1.2);
+        -moz-transform: scale(1.2);
+        -o-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        transform: scale(1.2);
     }
 
 
@@ -99,7 +128,7 @@ BANGLORE
     .dreams-tab .lined .nav-link.active {
         background: none;
         color: #555;
-        border-color: #2b90d9;
+        border-color: #d3f2e9;
     }
 
 
@@ -219,6 +248,19 @@ BANGLORE
         font-family: 'Open Sans';
     }
 
+    .nav-pills .nav-link.active,
+    .nav-pills .show>.nav-link {
+        box-shadow: none;
+    }
+
+    .nav-pills .nav-link {
+        margin: 0;
+        background-color: transparent;
+    }
+
+    .nav-tabs .nav-link:hover {
+        background-color: transparent;
+    }
 
     .projectFactsWrap .item span {
         width: 60px;
@@ -238,28 +280,22 @@ BANGLORE
 
     .projectFactsWrap .item:hover i,
     .projectFactsWrap .item:hover p {
-        color: #2b90d9;
+        color: #0a7b79;
     }
 
     .projectFactsWrap .item:hover span {
-        background: #2b90d9;
+        background: #0a7b79;
     }
 
     .sectiontitle .heading-h3:after {
         content: "";
-        /* This is necessary for the pseudo element to work. */
         display: block;
-        /* This will put the pseudo element on its own line. */
         margin: 0 auto;
-        /* This will center the border. */
         width: 50%;
-        /* Change this to whatever width you want. */
         padding-top: 20px;
-        /* This creates some space between the element and the border. */
         border-bottom: 2px solid transparent;
         border-image: linear-gradient(0.90turn, rgb(255, 255, 255), rgb(0, 0, 0), rgb(255, 255, 255));
         border-image-slice: 1;
-        /* This creates the border. Replace black with whatever color you want. */
     }
 
     .sectiontitle .heading-h3 {
@@ -270,331 +306,753 @@ BANGLORE
 
     }
 
+
+    /* contact us */
+
+    .contact_info {
+        width: 100%;
+        padding-top: 70px;
+    }
+
+    .contact_info_item {
+        width: calc((100% - 60px) / 3);
+        height: 100px;
+        border: solid 1px #e8e8e8;
+        box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+        padding-left: 32px;
+        padding-right: 15px;
+    }
+
+    .contact_info_image {
+        width: 35px;
+        height: 35px;
+        text-align: center;
+    }
+
+    .contact_info_image img {
+        max-width: 100%;
+    }
+
+    .contact_info_content {
+        padding-left: 17px;
+    }
+
+    .contact_info_title {
+        font-weight: 500;
+    }
+
+    .contact_info_text {
+        font-size: 12px;
+        color: rgba(0, 0, 0, 0.5);
+    }
+
+
+
     @media (max-width: 786px) {
         .projectFactsWrap .item {
             flex: 0 0 50%;
         }
     }
-</style>
-<section class="bangolre-loc">
 
+    body {
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .btn-2 {
+        background: transparent;
+        border: 1px solid #0a7b79;
+        width: 150px;
+        padding: 15px 0;
+        text-align: center;
+        border-radius: 25px;
+        font-weight: bold;
+        color: #0a7b79;
+    }
+
+    .btn-2:hover {
+        border: 2px solid #d3f2e9;
+        background: #d3f2e9;
+    }
+</style>
+<section class="changacherry-loc">
 
     <nav aria-label="breadcrumb animated slideInDown" style="margin-top: 9%; margin-left:15%;">
         <ol class="breadcrumb text-uppercase mb-0 bg-white">
-            <li class=" breadcrumb-item ml-5 pl-5"><a class="text-black text-decoration-none"
-                    href="{% url 'main' %}">Home</a></li>
-            <li class="breadcrumb-item ml-5 pl-5"><a class="text-black text-decoration-none"
-                    href="{% url 'main' %}#location">Location</a></li>
-            <li class="breadcrumb-item  active" aria-current="page" style="color: #0a7b79;">Bangalore</li>
+            <li class="breadcrumb-item"><a class="text-black" href="{% url 'main' %}">Home</a></li>
+            <li class="breadcrumb-item"><a class="text-black" href="{% url 'main' %}#location">Location</a></li>
+            <li class="breadcrumb-item  active" aria-current="page" style="color: #0a7b79;">BANGALORE</li>
         </ol>
     </nav>
-
-    <!-- bangagolre -->
-    <section class="projects-section bg-white mt-4" id="projects">
-        <h1 class="mb-4  fw-bold text-center fs-1 text-green text-uppercase heading-h3">DREAMS Bangalore</h1>
-
-
-        <div class="container dreams-tab">
-            <div class="row">
-                <div class="col-lg-12">
-                    <!-- Tabs navs -->
-                    <div class="container py-5">
+    <h1 class="mb-4  fw-bold text-center fs-1 text-green text-uppercase heading-h3 mt-5">DREAMS BANGALORE</h1>
+    <div class="container dreams-tab">
+        <div class="row">
+            <div class="col-lg-12">
+                <!-- Tabs navs -->
+                <div class="container py-5">
 
 
-                        <div class="p-5 bg-white rounded shadow mb-5">
-                            <!-- Lined tabs-->
-                            <ul id="myTab2" role="tablist"
-                                class="nav nav-tabs nav-pills with-arrow lined flex-column flex-sm-row text-center">
-                                <li class="nav-item flex-sm-fill">
-                                    <a id="program-tab" data-toggle="tab" href="#program" role="tab"
-                                        aria-controls="program" aria-selected="true"
-                                        class="nav-link text-uppercase fw-bold font-weight-bold mr-sm-3 rounded-0 active">DREAMS
-                                        Program</a>
-                                </li>
-                                <li class="nav-item flex-sm-fill">
-                                    <a id="band-tab" data-toggle="tab" href="#band" role="tab" aria-controls="band"
-                                        aria-selected="false"
-                                        class="nav-link text-uppercase fw-bold font-weight-bold mr-sm-3 rounded-0">DREAMS
-                                        Band</a>
-                                </li>
-                                <li class="nav-item flex-sm-fill">
-                                    <a id="proclub-tab" data-toggle="tab" href="#proclub" role="tab"
-                                        aria-controls="proclub" aria-selected="false"
-                                        class="nav-link text-uppercase fw-bold font-weight-bold rounded-0">DREAMS Pro
-                                        Club</a>
-                                </li>
-                            </ul>
-                            <div id="myTab2Content" class="tab-content">
-                                <div id="program" role="tabpanel" aria-labelledby="program-tab"
-                                    class="tab-pane fade px-4 py-5 show active">
-                                    <p class="leade font-italic justify-content">The DREAMS chapter in Bengaluru was
-                                        introduced in February
-                                        2017 under the initiative taken by Ms. Mihika Rajesh, along with her friends
-                                        Ms.Yashikaa Shekar, Ms Milonee Sanghavi, Mr. Saurab Dheer, Ms. Anusha Nag, Ms.
-                                        Avina
-                                        Dubey and a couple of other student volunteers from the Department of Psychology
-                                        and
-                                        School of Education, central campus, CHRIST (Deemed to be University). They were
-                                        led
-                                        under the visionary leadership, guidance, and training by Rev. Father Lijo
-                                        Thomas to
-                                        organize and implement the intervention program.
-                                    </p>
-                                    <p class="leade font-italic  justify-content">
-                                        To lay a foundation, 25 students from Christ School were recruited with the help
-                                        of
-                                        the school counselor. With the consent of their parents and the school
-                                        authorities,
-                                        the first summer camp was hosted at the Bengaluru chapter from 16th to 20th
-                                        April
-                                        2017, for five days. The quarterly follow-up sessions for those students were
-                                        conducted on Saturdays, from 1.30 PM till 5 PM.
-                                    </p>
-                                    <p class="leade font-italic justify-content">
-                                        In 2018, the program was extended to Christ School (state syllabus), Carmel
-                                        School,
-                                        and Kristavidyalaya (kannada medium), Bengaluru. Dr. Anuradha Sathiyaseelan,
-                                        along
-                                        with the above-mentioned students have co-founded the chapters.
-                                    </p>
-                                    <p class="leade font-italic justify-content">
-                                        The student mentors have undergone leadership training in an outbound training
-                                        program for a period of two days. They were provided training on mentoring and
-                                        leadership development.
-                                    </p>
-                                    <p class="leade font-italic justify-content">In 2019 under the leadership of Dr
-                                        Sathyaseelan B Young Community Leadership Program (YCLP) course was introduced
-                                        for
-                                        the systematic training and development of the youth mentors. Later this course
-                                        was
-                                        approved by the academic council of Christ university as a four credit
-                                        certificate
-                                        program. This certificate course is offered to interested students without any
-                                        fees.
-                                        Monthly training programs under YCLP includes seminars, symposium, and practice
-                                        sessions in the schools. These students have also undergone 2 days outbound
-                                        leadership training program.
+                    <div class="p-5 bg-white rounded shadow mb-5">
+                        <!-- Lined tabs-->
+                        <ul id="myTab2" role="tablist"
+                            class="nav nav-tabs nav-pills with-arrow lined flex-column flex-sm-row text-center">
+                            <li class="nav-item flex-sm-fill">
+                                <a id="program-tab" data-toggle="tab" href="#program" role="tab" aria-controls="program"
+                                    aria-selected="true"
+                                    class="nav-link text-uppercase fw-bold font-weight-bold mr-sm-3 rounded-0 active">
+                                    <h5 style="color:#0a7b79; font-weight:600;">DREAMS Program</h5>
+                                </a>
+                            </li>
+                            <li class="nav-item flex-sm-fill">
+                                <a id="band-tab" data-toggle="tab" href="#band" role="tab" aria-controls="band"
+                                    aria-selected="false"
+                                    class="nav-link text-uppercase fw-bold font-weight-bold mr-sm-3 rounded-0">
+                                    <h5 style="color:#0a7b79; font-weight:600;">DREAMS Band</h5>
+                                </a>
+                            </li>
+                            <li class="nav-item flex-sm-fill">
+                                <a id="proclub-tab" data-toggle="tab" href="#proclub" role="tab" aria-controls="proclub"
+                                    aria-selected="false"
+                                    class="nav-link text-uppercase fw-bold font-weight-bold rounded-0">
+                                    <h5 style="color:#0a7b79; font-weight:600;">DREAMS Pro Club</h5>
+                                </a>
+                            </li>
+                        </ul>
+                        <div id="myTab2Content" class="tab-content">
+                            <div id="program" role="tabpanel" aria-labelledby="program-tab"
+                                class="tab-pane fade px-4 py-5 show active">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-lg-7 col-sm-12 col-md-12" style="padding: 2% 5% 3% 0;">
+                                            <p class="leade font-italic  justify-content " style="color: #7ca8a1;">
+                                                The DREAMS chapter in Bengaluru was introduced in February 2017 under
+                                                the initiative taken by Ms. Mihika Rajesh, along with her friends
+                                                Ms.Yashikaa Shekar, Ms Milonee Sanghavi, Mr. Saurab Dheer, Ms. Anusha
+                                                Nag, Ms. Avina Dubey and a couple of other student volunteers from the
+                                                Department of Psychology and School of Education, central campus, CHRIST
+                                                (Deemed to be University). They were led under the visionary leadership,
+                                                guidance, and training by Rev. Father Lijo Thomas to organize and
+                                                implement the intervention program.
+                                            </p>
+                                            <p class="leade font-italic  justify-content " style="color: #7ca8a1;">
+                                                To lay a foundation, 25 students from Christ School were recruited with
+                                                the help of the school counselor. With the consent of their parents and
+                                                the school authorities, the first summer camp was hosted at the
+                                                Bengaluru chapter from 16th to 20th April 2017, for five days. The
+                                                quarterly follow-up sessions for those students were conducted on
+                                                Saturdays, from 1.30 PM till 5 PM.
+                                            </p>
+                                            <p class="leade font-italic  justify-content" style="color: #7ca8a1;">
+                                                In 2018, the program was extended to Christ School (state syllabus),
+                                                Carmel School, and Kristavidyalaya (kannada medium), Bengaluru. Dr.
+                                                Anuradha Sathiyaseelan, along with the above-mentioned students have
+                                                co-founded the chapters.
+                                            </p>
+                                            <p class="leade font-italic  justify-content " style="color: #7ca8a1;">
+                                                The student mentors have undergone leadership training in an outbound
+                                                training program for a period of two days. They were provided training
+                                                on mentoring and leadership development.
+                                            <p class="leade font-italic  justify-content " style="color: #7ca8a1;">
+                                                In 2019 under the leadership of Dr Sathyaseelan B Young Community
+                                                Leadership Program (YCLP) course was introduced for the systematic
+                                                training and development of the youth mentors. Later this course was
+                                                approved by the academic council of Christ university as a four credit
+                                                certificate program. This certificate course is offered to interested
+                                                students without any fees. Monthly training programs under YCLP includes
+                                                seminars, symposium, and practice sessions in the schools. These
+                                                students have also undergone 2 days outbound leadership training
+                                                program.
+                                            </p>
+                                            <p class="leade font-italic  justify-content " style="color: #7ca8a1;">
+                                                At present, the program is actively operating across three locations in
+                                                Bengaluru under the leadership of Dr. Anuradha Sathiyaseelan, Dr.
+                                                Amaresha S. Dr. Sathiyaseelan B, Ms.Sajina from Christ University and
+                                                Prof. Roseline Gomas, Ms. Jasmine and Ms. Avanti from the community. The
+                                                Chapter is planning to extend it further to various schools and colleges
+                                                in the city.
+                                            </p>
 
-                                    </p>
-                                    <p class="leade font-italic mb-0  justify-content">
-                                        At present, the program is actively operating across three locations in
-                                        Bengaluru
-                                        under the leadership of Dr. Anuradha Sathiyaseelan, Dr. Amaresha S. Dr.
-                                        Sathiyaseelan B, Ms.Sajina from Christ University and Prof. Roseline Gomas, Ms.
-                                        Jasmine and Ms. Avanti from the community. The Chapter is planning to extend it
-                                        further to various schools and colleges in the city.
-                                    </p>
+                                        </div>
+                                        <div class="col-lg-5 col-sm-12 col-md-12">
+                                            <center>
+                                                <img src="{% static 'locations/bangalore/BANGLORE.png' %}"
+                                                    alt="mannanam" height="400" width="400" style="padding-top: 5%; width: 100%;
+                                                    height: auto;">
+                                                <button type="button" class="btn-2 mt-5">Join Us</button>
+                                                &nbsp;&nbsp;&nbsp;
+                                                <button type="button" class="btn-2 mt-5">Our Location</button>
+                                            </center>
+                                            <h4 class="mt-3 mb-3 mr-3 font-italic fw-semibold mt-5">Leadership:</h4>
+                                            <p class="leade font-italic justify-content">
+                                                Dr. Anuradha Sathiyaseelan, Dr Ameersha S
+                                                ,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                Dr Sathiyashelan
+                                                B, Ms.Sajina
+                                                begum
+                                            </p>
+                                            <p class="leade font-italic justify-content">
+                                                Prof. Rosline Gomas (Community Lead)
+                                            </p>
+                                            <p class="leade font-italic justify-content">
+                                                Ms Jasmine (community coordinator)
+                                            </p>
+                                            <p class="leade font-italic justify-content">
+                                                Ms Avanthi (Community Coordinator)
+                                            </p>
+                                        </div>
 
-                                    <h4 class="mt-3 mb-3 mr-3 font-italic fw-semibold">Leadership:</h4>
-                                    <p class="leade font-italic justify-content">
-                                        Dr. Anuradha Sathiyaseelan, Dr Ameersha S, Dr Sathiyashelan B, Ms.Sajina begum
-                                    </p>
-                                    <p class="leade font-italic justify-content">
-                                        Prof. Rosline Gomas (Community Lead)
-                                    </p>
-                                    <p class="leade font-italic justify-content">
-                                        Ms Jasmine (community coordinator)
-                                    </p>
-                                    <p class="leade font-italic justify-content">
-                                        Ms Avanthi (Community Coordinator)
-                                    </p>
+                                    </div>
                                 </div>
-                                <div id="band" role="tabpanel" aria-labelledby="band-tab"
-                                    class="tab-pane fade px-4 py-5">
-                                    <p class="leade font-italic justify-content">The DREAMS Band strives towards making
-                                        a
-                                        positive difference in the community by utilizing their musical skills. The band
-                                        was
-                                        established in 2017 in Bengaluru under the leadership of Mr. Nikhil Sebastian
-                                        and a
-                                        few student volunteers. The first concert of the band was organized on 2nd
-                                        February
-                                        2018 at Christ University Central Campus, for a specially invited audience
-                                        including
-                                        Dr. Fr. Thomas C Mathew, then Vice-Chancellor and a few other distinguished
-                                        guests.
-                                        The band has performed on different platforms at Bengaluru and Pune. The
-                                        performances of the band have gained wide recognition in and out of the campus.
-                                    </p>
-                                    <p class="leade font-italic mb-5  justify-content">
-                                        They have released a virtual music album and are currently working on a new
-                                        album
-                                        project and a global virtual band performance for harmony and holistic healing
-                                        of
-                                        the world. Those who are interested in being a part of the band may contact the
-                                        leadership.
-                                    </p>
-                                    <p class="leade font-italic mt-5 justify-content">
-                                        Nikhil Sebastian <strong>(Music Director)</strong>
 
 
-                                    </p>
-                                    <p class="leade font-italic  justify-content">
-                                        Abhishikth George John <strong>(Virtual Project Head)</strong>
-                                    </p>
-                                    <p class="leade font-italic  justify-content">In 2019 under the leadership of Dr
-                                        Adonis Moyo <strong>(Team Lead)</strong>
-                                    </p>
-                                    <p class="leade font-italic   justify-content">
-                                        Anshul Dawar <strong>(Album Lead)</strong>
-                                    </p>
-                                    <p class="leade font-italic mb-0  justify-content">
-                                        Sudha Bhujel <strong>(Band Manager)</strong>
-                                    </p>
-                                </div>
-                                <div id="proclub" role="tabpanel" aria-labelledby="proclub-tab"
-                                    class="tab-pane fade px-4 py-5">
-                                    <p class="leade font-italic justify-content">The first DREAMS Pro Club was initiated
-                                        in
-                                        Bangalore under the leadership of Col. Ranjeev K Babu who believed in the need
-                                        of a
-                                        support/mutual mentoring group for the holistic development of young
-                                        professionals.
-                                        As the co-founder of this club he brought in a few of his friends to this
-                                        exclusive
-                                        – invitation based professional/leadership development club. On September 6th,
-                                        2019
-                                        along with Mr. Rajesh PI (Theater artist/trainer), Mr. Antony Raju (NGO
-                                        consultant)
-                                        and Dr. Deepthi (Community Medicine) under the leadership of Col Ranjeev K Babu
-                                        (corporate trainer and founder/director of Leadership Tribe Pvt. Ltd.) started
-                                        the
-                                        first club meeting at Christ University Campus.
-                                    </p>
-                                    <p class="leade font-italic justify-content">The monthly one hour club meetings of
-                                        sharing and discussions are conducted on personal/professional topics, which are
-                                        previously decided. More new members joined the team and it started its virtual
-                                        meetings based on the needs of the situation.
-                                    </p>
-                                    <p class="leade font-italic justify-content"><strong>DREAMS Pro-club</strong> is a
-                                        support group for the
-                                        personal and professional development of young professionals. Small groups of
-                                        10-12
-                                        working professionals meet once every month to discuss and implement strategies
-                                        for
-                                        their professional growth. The club helps in inculcating values of identity and
-                                        community belonging among the members. The program aims at enhancing
-                                        communication
-                                        skills, generating positive attitudes about self and others, developing
-                                        leadership,
-                                        cooperation and community engagement.
-                                    </p>
-                                    <h4 class="mt-3 mb-3 mr-3 font-italic fw-semibold">Leadership:</h4>
-                                    <p class="leade font-italic mb-0 justify-content">Col. Ranjeev K Babu
-                                        <strong>(Project
-                                            Head)</strong>
-                                    </p>
-                                </div>
+
+
                             </div>
-                            <!-- End lined tabs -->
-                        </div>
+                            <div id="band" role="tabpanel" aria-labelledby="band-tab" class="tab-pane fade px-4 py-5">
 
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-lg-7 col-sm-12 col-md-12" style="padding: 2% 5% 3% 0;">
+                                            <p class="leade font-italic  justify-content " style="color: #7ca8a1;">
+                                                The DREAMS Band strives towards making a positive difference in the
+                                                community by utilizing their musical skills. The band was established in
+                                                2017 in Bengaluru under the leadership of Mr. Nikhil Sebastian and a few
+                                                student volunteers. The first concert of the band was organized on 2nd
+                                                February 2018 at Christ University Central Campus, for a specially
+                                                invited audience including Dr. Fr. Thomas C Mathew, then Vice-Chancellor
+                                                and a few other distinguished guests. The band has performed on
+                                                different platforms at Bengaluru and Pune. The performances of the band
+                                                have gained wide recognition in and out of the campus.
+                                            </p>
+                                            <p class="leade font-italic  justify-content" style="color: #7ca8a1;">
+                                                They have released a virtual music album and are currently working on a
+                                                new album project and a global virtual band performance for harmony and
+                                                holistic healing of the world. Those who are interested in being a part
+                                                of the band may contact the leadership.
+                                            </p>
+                                            <h4 class="mt-3 mb-3 mr-3 font-italic fw-semibold mt-5">Leadership:</h4>
+                                            <p class="leade font-italic justify-content">
+                                                Nikhil Sebastian <strong> (Music Director)</strong>
+                                            </p>
+                                            <p class="leade font-italic justify-content">
+                                                Abhishikth George John <strong>(Virtual Project Head)</strong>
+                                            </p>
+                                            <p class="leade font-italic justify-content">
+                                                Adonis Moyo <strong>(Team Lead)</strong>
+                                            </p>
+                                            <p class="leade font-italic justify-content">
+                                                Anshul Dawar <strong>(Album Lead)</strong>
+                                            </p>
+                                            <p class="leade font-italic justify-content">
+                                                Sudha Bhujel <strong>(Band Manager)</strong>
+                                            </p>
+                                        </div>
+                                        <div class="col-lg-5 col-sm-12 col-md-12">
+                                            <center>
+                                                <img src="{% static 'locations/band.webp' %}" alt="mannanam"
+                                                    height="400" width="400" style="padding-top: 5%; width: 100%;
+                                                height: auto;">
+                                            </center>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div id="proclub" role="tabpanel" aria-labelledby="proclub-tab"
+                                class="tab-pane fade px-4 py-5">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-lg-7 col-sm-12 col-md-12" style="padding: 2% 5% 3% 0;">
+                                            <p class="leade font-italic  justify-content " style="color: #7ca8a1;">
+                                                The first DREAMS Pro Club was initiated in Bangalore under the
+                                                leadership of Col. Ranjeev K Babu who believed in the need of a
+                                                support/mutual mentoring group for the holistic development of young
+                                                professionals. As the co-founder of this club he brought in a few of his
+                                                friends to this exclusive – invitation based professional/leadership
+                                                development club. On September 6th, 2019 along with Mr. Rajesh PI
+                                                (Theater artist/trainer), Mr. Antony Raju (NGO consultant) and Dr.
+                                                Deepthi (Community Medicine) under the leadership of Col Ranjeev K Babu
+                                                (corporate trainer and founder/director of Leadership Tribe Pvt. Ltd.)
+                                                started the first club meeting at Christ University Campus.
+                                            </p>
+                                            <p class="leade font-italic  justify-content" style="color: #7ca8a1;">
+                                                The monthly one hour club meetings of sharing and discussions are
+                                                conducted on personal/professional topics, which are previously decided.
+                                                More new members joined the team and it started its virtual meetings
+                                                based on the needs of the situation.
+                                            </p>
+                                            <p class="leade font-italic  justify-content" style="color: #7ca8a1;">
+                                                DREAMS Pro-club is a support group for the personal and professional
+                                                development of young professionals. Small groups of 10-12 working
+                                                professionals meet once every month to discuss and implement strategies
+                                                for their professional growth. The club helps in inculcating values of
+                                                identity and community belonging among the members. The program aims at
+                                                enhancing communication skills, generating positive attitudes about self
+                                                and others, developing leadership, cooperation and community engagement.
+                                            </p>
+
+
+                                        </div>
+                                        <div class="col-lg-5 col-sm-12 col-md-12">
+                                            <center>
+                                                <img src="{% static 'locations/proclub.png' %}" alt="mannanam"
+                                                    height="400" width="400" style="width: 100%; height: auto;">
+                                            </center>
+                                            <h4 class="mt-3 mb-3 mr-3 font-italic fw-semibold mt-5">Leadership:</h4>
+                                            <p class="leade font-italic justify-content">
+                                                Col. Ranjeev K Babu <strong>(Project Head)</strong>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <!-- End lined tabs -->
                     </div>
 
                 </div>
+
             </div>
         </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="sectiontitle">
+                <h2 class="heading-h3 text-green text-uppercase">Our Impact</h2>
+                <!-- <span class="headerLine"></span> -->
+            </div>
+
+            <div class="col-lg-12">
+
+                <div id="projectFacts" class="sectionClass">
+                    <div class="fullWidth eight columns">
+                        <div class="projectFactsWrap ">
+                            <div class="item wow fadeInUpBig animated animated" data-number="12"
+                                style="visibility: visible;">
+                                <i class="fa fa-child"></i>
+                                <p id="number1" class="number">217</p>
+                                <span></span>
+                                <p>Students</p>
+                            </div>
+                            <div class="item wow fadeInUpBig animated animated" data-number="55"
+                                style="visibility: visible;">
+                                <i class="fa fa-smile-o"></i>
+                                <p id="number2" class="number">882</p>
+                                <span></span>
+                                <p>Participants</p>
+                            </div>
+                            <div class="item wow fadeInUpBig animated animated" data-number="359"
+                                style="visibility: visible;">
+                                <i class="fa fa-user"></i>
+                                <p id="number3" class="number">55</p>
+                                <span></span>
+                                <p>Leadership</p>
+                            </div>
+                            <div class="item wow fadeInUpBig animated animated" data-number="246"
+                                style="visibility: visible;">
+                                <i class="fa fa-users"></i>
+                                <p id="number4" class="number">904</p>
+                                <span></span>
+                                <p>Families</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12">
+                <!-- Modal gallery -->
+                <section class="">
+                    <!-- Section: Images -->
+                    <section class="">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+                                <div class="bg-image hover-overlay ripple shadow-1-strong rounded"
+                                    data-ripple-color="light" style="min-height: 234px;">
+
+                                    <img src="{% static 'locations/chaganacherry/1.png'%}" class="w-100"
+                                        style="min-height: 234px;" />
+                                    <a href="#!" data-mdb-toggle="modal" data-mdb-target="#exampleModal1">
+                                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.2);"></div>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 mb-4 mb-lg-0">
+                                <div class="bg-image hover-overlay ripple shadow-1-strong rounded"
+                                    data-ripple-color="light" style="min-height: 234px;">
+                                    <img src="{% static 'locations/chaganacherry/2.png'%}" class="w-100"
+                                        style="min-height: 234px;" />
+                                    <a href="#!" data-mdb-toggle="modal" data-mdb-target="#exampleModal2">
+                                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.2);"></div>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 mb-4 mb-lg-0">
+                                <div class="bg-image hover-overlay ripple shadow-1-strong rounded"
+                                    data-ripple-color="light" style="min-height: 234px;">
+                                    <img src="{% static 'locations/chaganacherry/3.png'%}" class="w-100"
+                                        style="min-height: 234px;" />
+                                    <a href="#!" data-mdb-toggle="modal" data-mdb-target="#exampleModal3">
+                                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.2);"></div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Section: Images -->
+
+                    <!-- Section: Modals -->
+                    <section class="mt-5">
+                        <!-- Modal 1 -->
+                        <div class="modal fade mt-5 pt-5" id="exampleModal1" tabindex="-1"
+                            aria-labelledby="exampleModal1Label" aria-hidden="true">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                    <div class="ratio ratio-16x9">
+                                        <iframe src="https://www.youtube.com/embed/FlVEeAIWCo0"
+                                            title="Never Stop Dreaming" allowfullscreen></iframe>
+                                    </div>
+
+                                    <div class="text-center py-3">
+                                        <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">
+                                            Close
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Modal 2 -->
+                        <div class="modal fade mt-5 pt-5" id="exampleModal2" tabindex="-1"
+                            aria-labelledby="exampleModal2Label" aria-hidden="true">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                    <div class="ratio ratio-16x9">
+                                        <iframe src="https://www.youtube.com/embed/-U7IMk0fOpw"
+                                            title="Fr  Lijo Message Dreams" allowfullscreen></iframe>
+                                    </div>
+
+                                    <div class="text-center py-3">
+                                        <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">
+                                            Close
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Modal 3 -->
+                        <div class="modal fade mt-5 pt-5" id="exampleModal3" tabindex="-1"
+                            aria-labelledby="exampleModal3Label" aria-hidden="true">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                    <div class="ratio ratio-16x9">
+                                        <iframe src="https://www.youtube.com/embed/E9i2R2aZ-x8" title="Waving flag"
+                                            allowfullscreen></iframe>
+                                    </div>
+
+                                    <div class="text-center py-3">
+                                        <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">
+                                            Close
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Section: Modals -->
+                </section>
+                <!-- Modal gallery -->
+            </div>
+        </div>
+    </div>
+    <!-- social media -->
+    <div class="container">
+        <div class="row mt-5 p-5">
+
+
+            <div class="col-lg-6 hover-zoomin p-5">
+                <a href="https://www.facebook.com/groups/715569419219324/" title="" target="_blank">
+                    <img src="{% static 'locations/bangalore/Banglore-FB-min.jpg' %}" alt="" />
+                </a>
+                <h4 class="text-center mt-3 text-green">BANGALORE FB GROUP</h4>
+            </div>
+
+            <div class="col-lg-6 hover-zoomin p-5">
+                <a href="{% url 'photo-gallery' %}" title="">
+                    <img src="{% static 'locations/bangalore/L3-Banglore-Gallery-thumbnails-min.jpg' %}" alt="" />
+                </a>
+                <h4 class="text-center mt-3 text-green">BANGALORE GALLERY</h4>
+            </div>
+        </div>
+    </div>
+    <!-- Speaker -->
+    <div class="container">
+        <div class="row text-center">
+
+
+
+            <!-- Team item -->
+            <div class="col-xl-3 col-sm-6 mb-5">
+                <div class="bg-white rounded shadow-sm py-5 px-4" style="min-height: 280px;"><img
+                        src="{% static 'locations/bangalore/default.png'%}" alt="" width="100" height="100"
+                        class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+                    <h5 class="mb-0">Dr. Karla Verlinden (Faculty Representative)</h5><span
+                        class="small text-uppercase text-muted">PROGRAMMER</span>
+
+                </div>
+            </div><!-- End -->
+
+            <!-- Team item -->
+            <div class="col-xl-3 col-sm-6 mb-5">
+                <div class="bg-white rounded shadow-sm py-5 px-4" style="min-height: 280px;"><img
+                        src="{% static 'locations/bangalore/Dr-Anuradha-S-124x160.jpg'%}" alt="" width="100"
+                        class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+                    <h5 class="mb-0">
+                        Dr. Anuradha Sathyaseelan
+                    </h5><span class="small text-uppercase text-muted">
+                        BAND/PROGRAMMER
+                    </span>
+
+                </div>
+            </div><!-- End -->
+
+            <!-- Team item -->
+            <div class="col-xl-3 col-sm-6 mb-5">
+                <div class="bg-white rounded shadow-sm py-5 px-4" style="min-height: 280px;"><img
+                        src="{% static 'locations/bangalore/Prof.-Sathyasheelan-141x160.png'%}" alt="" width="100"
+                        class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+                    <h5 class="mb-0">
+                        Dr. Sathiyaseelan
+                    </h5><span class="small text-uppercase text-muted">
+                        PRO-CLUB/ PROGRAMMER
+                    </span>
+
+                </div>
+            </div>
+            <!-- End -->
+            <!-- Team item -->
+            <div class="col-xl-3 col-sm-6 mb-5">
+                <div class="bg-white rounded shadow-sm py-5 px-4" style="min-height: 280px;"><img
+                        src="{% static 'locations/bangalore/Amaresha-Photo-124x160.jpg' %}" alt="" width="100"
+                        class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+                    <h5 class="mb-0">
+                        Dr. Amresh
+                    </h5><span class="small text-uppercase text-muted">
+                        PRO - CLUB
+
+                    </span>
+
+                </div>
+            </div>
+            <!-- End -->
+        </div>
+
+
+        <div class="row text-center">
+
+
+
+            <!-- Team item -->
+            <div class="col-xl-3 col-sm-6 mb-5">
+                <div class="bg-white rounded shadow-sm py-5 px-4" style="min-height: 280px;"><img
+                        src="{% static 'locations/bangalore/default.png' %}" alt="" width="100"
+                        class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+                    <h5 class="mb-0">
+                        Prof. Rosline Gomas (Jyothi Nivas College)
+                    </h5><span class="small text-uppercase text-muted">
+                        PRO-CLUB/ PROGRAMMER
+                    </span>
+
+                </div>
+            </div>
+            <!-- End -->
+
+
+            <!-- Team item -->
+            <div class="col-xl-3 col-sm-6 mb-5">
+                <div class="bg-white rounded shadow-sm py-5 px-4" style="min-height: 280px;"><img
+                        src="{% static 'locations/bangalore/default.png' %}" alt="" width="100"
+                        class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+                    <h5 class="mb-0">
+                        Ms Jasmine
+                    </h5><span class="small text-uppercase text-muted">
+                        PRO-CLUB/ PROGRAMMER
+                    </span>
+
+                </div>
+            </div>
+            <!-- End -->
+
+            <!-- Team item -->
+            <div class="col-xl-3 col-sm-6 mb-5">
+                <div class="bg-white rounded shadow-sm py-5 px-4" style="min-height: 280px;"><img
+                        src="{% static 'locations/bangalore/default.png' %}" alt="" width="100"
+                        class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+                    <h5 class="mb-0">
+                        Ms.Avanthi
+                    </h5><span class="small text-uppercase text-muted">
+                        PRO-CLUB/ PROGRAMMER
+                    </span>
+
+                </div>
+            </div>
+            <!-- End -->
+
+            <!-- Team item -->
+            <div class="col-xl-3 col-sm-6 mb-5">
+                <div class="bg-white rounded shadow-sm py-5 px-4" style="min-height: 280px;"><img
+                        src="{% static 'locations/bangalore/default.png' %}" alt="" width="100"
+                        class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+                    <h5 class="mb-0">
+                        Ms. Abhikshith
+                    </h5><span class="small text-uppercase text-muted">
+                        BAND
+                    </span>
+
+                </div>
+            </div>
+            <!-- End -->
+
+            <!-- Team item -->
+
+            <!-- End -->
+        </div>
+
+        <div class="row text-center">
+
+
+
+            <!-- Team item -->
+            <div class="col-xl-3 col-sm-6 mb-5">
+                <div class="bg-white rounded shadow-sm py-5 px-4" style="min-height: 280px;"><img
+                        src="{% static 'locations/bangalore/default.png' %}" alt="" width="100"
+                        class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+                    <h5 class="mb-0">
+                        Ms. Sudha
+                    </h5><span class="small text-uppercase text-muted">
+                        BAND
+                    </span>
+
+                </div>
+            </div>
+            <!-- End -->
+            <!-- Team item -->
+            <div class="col-xl-3 col-sm-6 mb-5">
+                <div class="bg-white rounded shadow-sm py-5 px-4" style="min-height: 280px;"><img
+                        src="{% static 'locations/bangalore/default.png' %}" alt="" width="100"
+                        class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+                    <h5 class="mb-0">
+                        Mr. Adonese
+                    </h5><span class="small text-uppercase text-muted">
+                        BAND
+                    </span>
+
+                </div>
+            </div>
+            <!-- End -->
+
+
+        </div>
+
+    </div>
+    {% include 'partials/_testimonials.html' %}
+
+    <!-- contact us -->
+
+    <div class="contact_info">
         <div class="container">
             <div class="row">
-                <div class="sectiontitle">
-                    <h2 class="heading-h3 text-green text-uppercase">Our Impact</h2>
-                    <!-- <span class="headerLine"></span> -->
-                </div>
+                <h1 class="text-center text-green mb-5">Connect us</h1>
+                <div class="col-lg-10 offset-lg-1">
+                    <div
+                        class="contact_info_container d-flex flex-lg-row flex-column justify-content-between align-items-between mb-5">
 
-                <div class="col-lg-12">
-
-                    <div id="projectFacts" class="sectionClass">
-                        <div class="fullWidth eight columns">
-                            <div class="projectFactsWrap ">
-                                <div class="item wow fadeInUpBig animated animated" data-number="12"
-                                    style="visibility: visible;">
-                                    <i class="fa fa-child"></i>
-                                    <p id="number1" class="number">217</p>
-                                    <span></span>
-                                    <p>Students</p>
-                                </div>
-                                <div class="item wow fadeInUpBig animated animated" data-number="55"
-                                    style="visibility: visible;">
-                                    <i class="fa fa-smile-o"></i>
-                                    <p id="number2" class="number">882</p>
-                                    <span></span>
-                                    <p>Participants</p>
-                                </div>
-                                <div class="item wow fadeInUpBig animated animated" data-number="359"
-                                    style="visibility: visible;">
-                                    <i class="fa fa-user"></i>
-                                    <p id="number3" class="number">55</p>
-                                    <span></span>
-                                    <p>Leadership</p>
-                                </div>
-                                <div class="item wow fadeInUpBig animated animated" data-number="246"
-                                    style="visibility: visible;">
-                                    <i class="fa fa-users"></i>
-                                    <p id="number4" class="number">904</p>
-                                    <span></span>
-                                    <p>Families</p>
+                        <!-- Contact Item -->
+                        <div class="contact_info_item d-flex flex-row align-items-center justify-content-start">
+                            <div class="contact_info_image"><img
+                                    src="https://img.icons8.com/office/24/000000/iphone.png" alt=""></div>
+                            <div class="contact_info_content text-black">
+                                <div class="contact_info_title">Phone</div>
+                                <div class="contact_info_text">
+                                    <!-- contact number -->
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col-lg-12">
 
+                        <!-- Contact Item -->
+                        <div class="contact_info_item d-flex flex-row align-items-center justify-content-start">
+                            <div class="contact_info_image"><img
+                                    src="https://img.icons8.com/ultraviolet/24/000000/filled-message.png" alt=""></div>
+                            <div class="contact_info_content text-black fs-bold">
+                                <div class="contact_info_title">Email</div>
+                                <div class="contact_info_text"><a class="text-decoration-none text-black"
+                                        href="mailto:bangalore@letusdream.org"> bangalore@letusdream.org</a></div>
+                            </div>
+                        </div>
+
+                        <!-- Contact Item -->
+                        <div class="contact_info_item d-flex flex-row align-items-center justify-content-start">
+                            <div class="contact_info_image"><img
+                                    src="https://img.icons8.com/ultraviolet/24/000000/map-marker.png" alt=""></div>
+                            <div class="contact_info_content text-black">
+                                <div class="contact_info_title">Address</div>
+                                <div class="contact_info_text text-black fw-semibold">CHRIST School, Dharmaram College
+                                    Post 1st Main Road, Bengaluru, Karnataka 560029.</div>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="container px-4 px-lg-5">
-            <!-- dreams Project Row-->
-            <div class="row gx-0 mb-4 mb-lg-5 align-items-center ml-5 pl-5">
+    </div>
 
-                <div class="col-xl-8 col-lg-7 align-items-center img-middle"><img
-                        class="img-fluid mb-3 mb-lg-0 ml-5 pl-5"
-                        src="http://letusdream.org/wp-content/uploads/2020/07/BANGLORE.png" alt="BANGLORE" />
-                </div>
+</section>
+<script>
 
-                <div class="col-xl-4 col-lg-5">
-                    <div class="featured-text text-center text-lg-left">
-                        <a href="#location"><button type="button" class="button"><span>Get Location</span></button></a>
-                        <a href=""> <button type="button" class="button"><span>Join Us</span></button></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <script>
+    $.fn.jQuerySimpleCounter = function (options) {
+        var settings = $.extend({
+            start: 0,
+            end: 1000,
+            easing: 'swing',
+            duration: 400,
+            complete: ''
+        }, options);
 
-        $.fn.jQuerySimpleCounter = function (options) {
-            var settings = $.extend({
-                start: 0,
-                end: 1000,
-                easing: 'swing',
-                duration: 400,
-                complete: ''
-            }, options);
+        var thisElement = $(this);
 
-            var thisElement = $(this);
-
-            $({ count: settings.start }).animate({ count: settings.end }, {
-                duration: settings.duration,
-                easing: settings.easing,
-                step: function () {
-                    var mathCount = Math.ceil(this.count);
-                    thisElement.text(mathCount);
-                },
-                complete: settings.complete
-            });
-        };
+        $({ count: settings.start }).animate({ count: settings.end }, {
+            duration: settings.duration,
+            easing: settings.easing,
+            step: function () {
+                var mathCount = Math.ceil(this.count);
+                thisElement.text(mathCount);
+            },
+            complete: settings.complete
+        });
+    };
 
 
-        $('#number1').jQuerySimpleCounter({ end: 217, duration: 3000 });
-        $('#number2').jQuerySimpleCounter({ end: 882, duration: 3000 });
-        $('#number3').jQuerySimpleCounter({ end: 55, duration: 3000 });
-        $('#number4').jQuerySimpleCounter({ end: 904, duration: 3000 });
+    $('#number1').jQuerySimpleCounter({ end: 56, duration: 3000 });
+    $('#number2').jQuerySimpleCounter({ end: 56, duration: 3000 });
+    $('#number3').jQuerySimpleCounter({ end: 06, duration: 3000 });
+    $('#number4').jQuerySimpleCounter({ end: 62, duration: 3000 });
 
 
 
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    {% endblock %}
+</script>
+<!-- MDB -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.4.0/mdb.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+{% endblock %}
+Attachments area
+Preview YouTube video Never Stop Dreaming
+
+Preview YouTube video Fr Lijo Message Dreams
+
+Preview YouTube video Waving flag
+for leadership team images in 1*1 ratio
