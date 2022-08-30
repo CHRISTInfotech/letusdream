@@ -3,7 +3,7 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
-h1:after {
+h1:after{
     content: "";
     display: block;
     margin: 0 auto;
@@ -18,12 +18,12 @@ h1:after {
     color: #7ca8a1;
 }
 
-h1 {
+h1,h3 {
     padding-top: 0px;
     padding-bottom: 10px;
     font-weight: 700;
     font-size: 30px;
-
+    color:#0a7b79;
 }
 
 p {
@@ -339,7 +339,7 @@ p {
     border-radius: 50%;
 }
 
-.testimonials .container {}
+
 
 .testimonials .img-text {
     width: 100%;
