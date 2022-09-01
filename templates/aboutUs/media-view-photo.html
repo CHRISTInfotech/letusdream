@@ -35,7 +35,6 @@ Media-Photos
         crossorigin="anonymous"></script>
 
     <style>
-
         .view-container {
 
             position: relative;
@@ -120,7 +119,7 @@ Media-Photos
             }
         }
     </style>
- </head>
+</head>
 
 </head>
 
@@ -136,54 +135,46 @@ Media-Photos
     </nav>
 
 
-<<<<<<< HEAD
+
+
     <div class="container view-container">
         <h1>PRESS RELEASE</h1>
         <div class="image-container">
-            <div class="image">
-                <img src="{% static 'Aboutus/Press/Press6.jpg' %}" alt="img1"></div>
-=======
-   
+            <div class="image"><img src="{% static 'Aboutus/Press/Press6.jpg' %}" alt="img1"></div>
 
-        <body>
-            <div class="container view-container">
-                <h1>PRESS RELEASE</h1>
-                <div class="image-container">
-                    <div class="image"><img src="{% static 'Aboutus/Press/Press6.jpg' %}" alt="img1"></div>
->>>>>>> b9915c9a7eead4b75663aa8b244d7a8f8e2aa26b
-                    <div class="image"><img src="{% static 'Aboutus/Press/Press3.jpg' %}"></div>
-                    <div class="image"><img src="{% static 'Aboutus/Press/Press2.jpg' %}"></div>
-                    <div class="image"><img src="{% static 'Aboutus/Press/Press1.jpg' %}" alt=""></div>
-                    <div class="image"><img src="{% static 'Aboutus/Press/Press7.png' %}"></div>
-                    <div class="image"><img src="{% static 'Aboutus/Press/Press8.png' %}"></div>
-                    <div class="image"><img src="{% static 'Aboutus/Press/Press9.jpg' %}"></div>
-                    <div class="image"><img src="{% static 'Aboutus/Press/Press5.jpeg' %}"></div>
-                    <div class="image"><img src="{% static 'Aboutus/Press/Press4.jpeg' %}"></div>
-            
+            <div class="image"><img src="{% static 'Aboutus/Press/Press3.jpg' %}"></div>
+            <div class="image"><img src="{% static 'Aboutus/Press/Press2.jpg' %}"></div>
+            <div class="image"><img src="{% static 'Aboutus/Press/Press1.jpg' %}" alt=""></div>
+            <div class="image"><img src="{% static 'Aboutus/Press/Press7.png' %}"></div>
+            <div class="image"><img src="{% static 'Aboutus/Press/Press8.png' %}"></div>
+            <div class="image"><img src="{% static 'Aboutus/Press/Press9.jpg' %}"></div>
+            <div class="image"><img src="{% static 'Aboutus/Press/Press5.jpeg' %}"></div>
+            <div class="image"><img src="{% static 'Aboutus/Press/Press4.jpeg' %}"></div>
+
         </div>
-        
-         
 
-                <div class="popup-image">
-                    <span>&times;</span>
-                    <img src="{% static 'Aboutus/Press/Press6.jpg' %}" alt="img1">
-                </div>
-           
-            <script>
-                document.querySelectorAll('.image-container img').forEach(image => {
 
-                    image.onclick = () => {
-                        document.querySelector('.popup-image').style.display = "block";
-                        document.querySelector('.popup-image img').src = image.getAttribute('src')
-                    }
-                })
 
-                document.querySelector('.popup-image span').onclick = () => {
-                    document.querySelector('.popup-image').style.display = "none";
+        <div class="popup-image">
+            <span>&times;</span>
+            <img src="{% static 'Aboutus/Press/Press6.jpg' %}" alt="img1">
+        </div>
+    </div>
+    <script>
+        document.querySelectorAll('.image-container img').forEach(image => {
 
-                }
-            </script>
-        </body>
+            image.onclick = () => {
+                document.querySelector('.popup-image').style.display = "block";
+                document.querySelector('.popup-image img').src = image.getAttribute('src')
+            }
+        })
+
+        document.querySelector('.popup-image span').onclick = () => {
+            document.querySelector('.popup-image').style.display = "none";
+
+        }
+    </script>
+</body>
 
 </html>
 {% endblock %}
