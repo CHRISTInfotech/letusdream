@@ -265,10 +265,10 @@ MANNANAM
     .sectiontitle .heading-h3:after {
         content: "";
         display: block;
-         margin: 0 auto;
-         width: 50%;
-          padding-top: 20px;
-         border-bottom: 2px solid transparent;
+        margin: 0 auto;
+        width: 50%;
+        padding-top: 20px;
+        border-bottom: 2px solid transparent;
         border-image: linear-gradient(0.90turn, rgb(255, 255, 255), rgb(0, 0, 0), rgb(255, 255, 255));
         border-image-slice: 1;
     }
@@ -281,39 +281,77 @@ MANNANAM
 
     }
 
+    /* contact us */
+
+    .contact_info {
+        width: 100%;
+        padding-top: 70px;
+    }
+
+    .contact_info_item {
+        width: calc((100% - 60px) / 3);
+        height: 100px;
+        border: solid 1px #e8e8e8;
+        box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+        padding-left: 32px;
+        padding-right: 15px;
+    }
+
+    .contact_info_image {
+        width: 35px;
+        height: 35px;
+        text-align: center;
+    }
+
+    .contact_info_image img {
+        max-width: 100%;
+    }
+
+    .contact_info_content {
+        padding-left: 17px;
+    }
+
+    .contact_info_title {
+        font-weight: 500;
+    }
+
+    .contact_info_text {
+        font-size: 12px;
+        color: rgba(0, 0, 0, 0.5);
+    }
+
     @media (max-width: 786px) {
         .projectFactsWrap .item {
             flex: 0 0 50%;
         }
     }
 
-    body{
+    body {
         font-family: 'Montserrat', sans-serif;
     }
 
     .btn-2 {
-      background: transparent;
-      border: 1px solid #0a7b79;
-      width: 150px;
-      padding: 15px 0;
-      text-align: center;
-      border-radius: 25px;
-      font-weight: bold;
-      color: #0a7b79;
+        background: transparent;
+        border: 1px solid #0a7b79;
+        width: 150px;
+        padding: 15px 0;
+        text-align: center;
+        border-radius: 25px;
+        font-weight: bold;
+        color: #0a7b79;
     }
 
     .btn-2:hover {
-      border: 2px solid #d3f2e9;
-      background: #d3f2e9;
+        border: 2px solid #d3f2e9;
+        background: #d3f2e9;
     }
-
 </style>
 <section class="changacherry-loc">
 
     <nav aria-label="breadcrumb animated slideInDown" style="margin-top: 9%; margin-left:15%;">
         <ol class="breadcrumb text-uppercase mb-0 bg-white">
             <li class="breadcrumb-item"><a class="text-black" href="{% url 'main' %}">Home</a></li>
-            <li class="breadcrumb-item"><a class="text-black"  href="{% url 'main' %}#location">Location</a></li>
+            <li class="breadcrumb-item"><a class="text-black" href="{% url 'main' %}#location">Location</a></li>
             <li class="breadcrumb-item  active" aria-current="page" style="color: #0a7b79;">Mannanam</li>
         </ol>
     </nav>
@@ -332,95 +370,120 @@ MANNANAM
                             <li class="nav-item flex-sm-fill">
                                 <a id="program-tab" data-toggle="tab" href="#program" role="tab" aria-controls="program"
                                     aria-selected="true"
-                                    class="nav-link text-uppercase fw-bold font-weight-bold mr-sm-3 rounded-0 active" >
-                                    <h5 style="color:#0a7b79; font-weight:600;">DREAMS Program</h5></a>
+                                    class="nav-link text-uppercase fw-bold font-weight-bold mr-sm-3 rounded-0 active">
+                                    <h5 style="color:#0a7b79; font-weight:600;">DREAMS Program</h5>
+                                </a>
                             </li>
                             <li class="nav-item flex-sm-fill">
                                 <a id="band-tab" data-toggle="tab" href="#band" role="tab" aria-controls="band"
                                     aria-selected="false"
                                     class="nav-link text-uppercase fw-bold font-weight-bold mr-sm-3 rounded-0">
-                                    <h5 style="color:#0a7b79; font-weight:600;">DREAMS Band</h5></a>
+                                    <h5 style="color:#0a7b79; font-weight:600;">DREAMS Band</h5>
+                                </a>
                             </li>
                             <li class="nav-item flex-sm-fill">
                                 <a id="proclub-tab" data-toggle="tab" href="#proclub" role="tab" aria-controls="proclub"
                                     aria-selected="false"
                                     class="nav-link text-uppercase fw-bold font-weight-bold rounded-0">
-                                    <h5 style="color:#0a7b79; font-weight:600;">DREAMS Pro Club</h5></a>
+                                    <h5 style="color:#0a7b79; font-weight:600;">DREAMS Pro Club</h5>
+                                </a>
                             </li>
                         </ul>
                         <div id="myTab2Content" class="tab-content">
                             <div id="program" role="tabpanel" aria-labelledby="program-tab"
                                 class="tab-pane fade px-4 py-5 show active">
-                                    <div class="container-fluid">
-                                        <div class="row" >
-                                            <div class="col-lg-7 col-sm-12 col-md-12" style="padding: 2% 5% 3% 0;">
-                                                <p class="leade font-italic  justify-content " style="color: #7ca8a1;">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-lg-7 col-sm-12 col-md-12" style="padding: 2% 5% 3% 0;">
+                                            <p class="leade font-italic  justify-content " style="color: #7ca8a1;">
                                                 The DREAMS chapter in Changanacherry was
-                                                started in 2017 with Mr. James and Mr. Joshi Job as the co-founders. After in-depth
-                                                discussions and meetings, Kristu Jyoti College of Management and Technology,
-                                                Changanacherry had agreed to provide their students as volunteers for the program.
-                                                Around 30 undergraduate students from the Department of Psychology were then given
-                                                training through a couple of sessions and they had started working at the community
-                                                level. The model was later introduced to the students of Assumption College,
-                                                Changanacherry, and St Joseph College of Communication, Changanacherry, and received
-                                                a wider volunteering network. 
+                                                started in 2017 with Mr. James and Mr. Joshi Job as the co-founders.
+                                                After in-depth
+                                                discussions and meetings, Kristu Jyoti College of Management and
+                                                Technology,
+                                                Changanacherry had agreed to provide their students as volunteers for
+                                                the program.
+                                                Around 30 undergraduate students from the Department of Psychology were
+                                                then given
+                                                training through a couple of sessions and they had started working at
+                                                the community
+                                                level. The model was later introduced to the students of Assumption
+                                                College,
+                                                Changanacherry, and St Joseph College of Communication, Changanacherry,
+                                                and received
+                                                a wider volunteering network.
                                             </p>
                                             <p class="leade font-italic  justify-content" style="color: #7ca8a1;">
-                                                The first summer camp hosted by the Changanacherry chapter was conducted in 2018 at
-                                                S.B School Changanacherry in collaboration with four other schools. Around 7
-                                                students studying in 6th grade (middle school) who required special assistance for
-                                                enhancing their self-concept and identity formation were recruited for the camp. Ms.
-                                                Tessy Thomas and Mr. Sebastian had later joined the program and is still continuing
-                                                to ensure community participation in the program. Every year, two batches of
-                                                volunteers consisting of around 35 members are joining from Kristu Jayanti College
-                                                and Assumption College and they have been actively involved in extending the model
-                                                to various schools and colleges in the locality. 
+                                                The first summer camp hosted by the Changanacherry chapter was conducted
+                                                in 2018 at
+                                                S.B School Changanacherry in collaboration with four other schools.
+                                                Around 7
+                                                students studying in 6th grade (middle school) who required special
+                                                assistance for
+                                                enhancing their self-concept and identity formation were recruited for
+                                                the camp. Ms.
+                                                Tessy Thomas and Mr. Sebastian had later joined the program and is still
+                                                continuing
+                                                to ensure community participation in the program. Every year, two
+                                                batches of
+                                                volunteers consisting of around 35 members are joining from Kristu
+                                                Jayanti College
+                                                and Assumption College and they have been actively involved in extending
+                                                the model
+                                                to various schools and colleges in the locality.
                                             </p>
-                                                <button type="button" class="btn-2">Join Us</button>
-                                                &nbsp;&nbsp;&nbsp;
-                                                <button type="button" class="btn-2">Our Location</button>
-                                            </div>
-                                            <div class="col-lg-5 col-sm-12 col-md-12" >
-                                                <center>
-                                                    <img src="https://letusdream.org/wp-content/uploads/2020/07/MANNANAM.png" alt="mannanam" height="400" width="400" style="padding-top: 5%; width: 100%;
-                                                    height: auto;">
-                                                </center>
-                                                
-                                            </div>
-                                            
+                                            <button type="button" class="btn-2">Join Us</button>
+                                            &nbsp;&nbsp;&nbsp;
+                                            <button type="button" class="btn-2">Our Location</button>
                                         </div>
-                                    </div>
+                                        <div class="col-lg-5 col-sm-12 col-md-12">
+                                            <center>
+                                                <img src="https://letusdream.org/wp-content/uploads/2020/07/MANNANAM.png"
+                                                    alt="mannanam" height="400" width="400" style="padding-top: 5%; width: 100%;
+                                                    height: auto;">
+                                            </center>
 
-                           
+                                        </div>
+
+                                    </div>
+                                </div>
+
+
 
 
                             </div>
                             <div id="band" role="tabpanel" aria-labelledby="band-tab" class="tab-pane fade px-4 py-5">
 
                                 <div class="container-fluid">
-                                    <div class="row" >
+                                    <div class="row">
                                         <div class="col-lg-7 col-sm-12 col-md-12" style="padding: 2% 5% 3% 0;">
                                             <p class="leade font-italic  justify-content " style="color: #7ca8a1;">
                                                 The DREAMS Band strives towards making a
-                                                positive difference in the community by utilizing their musical skills. DREAMS Band
-                                                is not only an opportunity to sing and motivate the audience but also uses music as
-                                                a platform to empower communities and make music of their own, which can empower
-                                                children and youth holistically. It is a band with a meaning and greater goals for
+                                                positive difference in the community by utilizing their musical skills.
+                                                DREAMS Band
+                                                is not only an opportunity to sing and motivate the audience but also
+                                                uses music as
+                                                a platform to empower communities and make music of their own, which can
+                                                empower
+                                                children and youth holistically. It is a band with a meaning and greater
+                                                goals for
                                                 the benefit of the society.
-                                        </p>
-                                        <p class="leade font-italic  justify-content" style="color: #7ca8a1;">
-                                            Those who are interested to be a part of the band may contact the respective leaders
-                                            in each locality.
-                                        </p>
+                                            </p>
+                                            <p class="leade font-italic  justify-content" style="color: #7ca8a1;">
+                                                Those who are interested to be a part of the band may contact the
+                                                respective leaders
+                                                in each locality.
+                                            </p>
                                             <button type="button" class="btn-2">Join Us</button>
                                             &nbsp;&nbsp;&nbsp;
                                             <button type="button" class="btn-2">Our Location</button>
                                         </div>
-                                        <div class="col-lg-5 col-sm-12 col-md-12" >
+                                        <div class="col-lg-5 col-sm-12 col-md-12">
                                             <center>
-                                                <img src="https://img.freepik.com/free-vector/orchestra-concept-illustration_114360-3098.jpg?w=2000" alt="mannanam" height="400" width="400" style="padding-top: 5%; width: 100%;
+                                                <img src="https://img.freepik.com/free-vector/orchestra-concept-illustration_114360-3098.jpg?w=2000"
+                                                    alt="mannanam" height="400" width="400" style="padding-top: 5%; width: 100%;
                                                 height: auto;">
-                                            </center>   
+                                            </center>
                                         </div>
                                     </div>
                                 </div>
@@ -429,34 +492,42 @@ MANNANAM
                             <div id="proclub" role="tabpanel" aria-labelledby="proclub-tab"
                                 class="tab-pane fade px-4 py-5">
                                 <div class="container-fluid">
-                                    <div class="row" >
+                                    <div class="row">
                                         <div class="col-lg-7 col-sm-12 col-md-12" style="padding: 2% 5% 3% 0;">
                                             <p class="leade font-italic  justify-content " style="color: #7ca8a1;">
                                                 DREAMS Pro-club is a support group for the
-                                                personal and professional development of young professionals. Small groups of 10-12
-                                                working professionals meet once every month to discuss and implement strategies for
-                                                their professional growth. The club helps in inculcating values of identity and
-                                                community belonging among the members. The program aims at enhancing communication
-                                                skills, generating positive attitudes about self and others, developing leadership,
-                                                cooperation, and community engagement. 
-                                        </p>
-                                        <p class="leade font-italic  justify-content" style="color: #7ca8a1;">
-                                            This platform is yet to be initiated. Those
-                                    who are interested to take a partnership may contact the respective leaders in each
-                                    locality.
-                                        </p>
+                                                personal and professional development of young professionals. Small
+                                                groups of 10-12
+                                                working professionals meet once every month to discuss and implement
+                                                strategies for
+                                                their professional growth. The club helps in inculcating values of
+                                                identity and
+                                                community belonging among the members. The program aims at enhancing
+                                                communication
+                                                skills, generating positive attitudes about self and others, developing
+                                                leadership,
+                                                cooperation, and community engagement.
+                                            </p>
+                                            <p class="leade font-italic  justify-content" style="color: #7ca8a1;">
+                                                This platform is yet to be initiated. Those
+                                                who are interested to take a partnership may contact the respective
+                                                leaders in each
+                                                locality.
+                                            </p>
                                             <button type="button" class="btn-2">Join Us</button>
                                             &nbsp;&nbsp;&nbsp;
                                             <button type="button" class="btn-2">Our Location</button>
                                         </div>
-                                        <div class="col-lg-5 col-sm-12 col-md-12" >
+                                        <div class="col-lg-5 col-sm-12 col-md-12">
                                             <center>
-                                                <img src="https://i.pinimg.com/originals/8c/22/2c/8c222c3f4bc0a92105d90564f0abac4b.png" alt="mannanam" height="400" width="400" style="width: 100%; height: auto;">
-                                            </center>   
+                                                <img src="https://i.pinimg.com/originals/8c/22/2c/8c222c3f4bc0a92105d90564f0abac4b.png"
+                                                    alt="mannanam" height="400" width="400"
+                                                    style="width: 100%; height: auto;">
+                                            </center>
                                         </div>
                                     </div>
                                 </div>
-                      
+
 
                             </div>
                         </div>
@@ -524,7 +595,8 @@ MANNANAM
 
                                     <img src="https://letusdream.org/wp-content/uploads/2020/08/Mannanam-Facebook.jpg"
                                         class="w-100" />
-                                    <a href="https://www.facebook.com/groups/684244505701342/" data-mdb-toggle="modal" data-mdb-target="#exampleModal1">
+                                    <a href="https://www.facebook.com/groups/684244505701342/" data-mdb-toggle="modal"
+                                        data-mdb-target="#exampleModal1">
                                         <div class="mask" style="background-color: rgba(251, 251, 251, 0.2);"></div>
                                     </a>
                                 </div>
@@ -535,13 +607,14 @@ MANNANAM
                                     data-ripple-color="light">
                                     <img src="https://letusdream.org/wp-content/uploads/2020/08/Mannanam-Gallery.jpg"
                                         class="w-100" />
-                                    <a href="https://photos.google.com/share/AF1QipMcT-8ZKM1-i3KeTfBKXCxg1PTfP8xSR7XVB4xyhfqcC-uJbRHb85Bstlx9sgQoqw?pli=1&key=UWpaX0FNX3VmM3FCR2NsQ3BiLTdYbkZNT0xObUtB" data-mdb-toggle="modal" data-mdb-target="#exampleModal2">
+                                    <a href="https://photos.google.com/share/AF1QipMcT-8ZKM1-i3KeTfBKXCxg1PTfP8xSR7XVB4xyhfqcC-uJbRHb85Bstlx9sgQoqw?pli=1&key=UWpaX0FNX3VmM3FCR2NsQ3BiLTdYbkZNT0xObUtB"
+                                        data-mdb-toggle="modal" data-mdb-target="#exampleModal2">
                                         <div class="mask" style="background-color: rgba(251, 251, 251, 0.2);"></div>
                                     </a>
                                 </div>
                             </div>
 
-     
+
                         </div>
                     </section>
                     <!-- Section: Images -->
@@ -630,8 +703,8 @@ MANNANAM
             <!-- Team item -->
             <div class="col-xl-3 col-sm-6 mb-5">
                 <div class="bg-white rounded shadow-sm py-5 px-4" style="min-height: 280px;"><img
-                        src="https://letusdream.org/wp-content/uploads/2020/08/Vincent-Alex-117x160.jpg" alt="" width="100"
-                        class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+                        src="https://letusdream.org/wp-content/uploads/2020/08/Vincent-Alex-117x160.jpg" alt=""
+                        width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
                     <h5 class="mb-0">Adv. Vincent</h5><span class="small text-uppercase text-muted">PRO - CLUB</span>
 
                 </div>
@@ -640,8 +713,8 @@ MANNANAM
             <!-- Team item -->
             <div class="col-xl-3 col-sm-6 mb-5">
                 <div class="bg-white rounded shadow-sm py-5 px-4" style="min-height: 280px;"><img
-                        src="https://letusdream.org/wp-content/uploads/2020/08/George-122x160.jpg" alt=""
-                        width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+                        src="https://letusdream.org/wp-content/uploads/2020/08/George-122x160.jpg" alt="" width="100"
+                        class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
                     <h5 class="mb-0">Mr. George</h5><span class="small text-uppercase text-muted">PRO -
                         CLUB</span>
 
@@ -677,13 +750,13 @@ MANNANAM
                 </div>
             </div><!-- End -->
 
-            
+
 
             <!-- Team item -->
             <div class="col-xl-3 col-sm-6 mb-5">
                 <div class="bg-white rounded shadow-sm py-5 px-4" style="min-height: 280px;"><img
-                        src="https://letusdream.org/wp-content/uploads/2020/08/Joe--116x160.jpg" alt=""
-                        width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+                        src="https://letusdream.org/wp-content/uploads/2020/08/Joe--116x160.jpg" alt="" width="100"
+                        class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
                     <h5 class="mb-0">Mr. Jo</h5><span class="small text-uppercase text-muted">PRO -
                         CLUB</span>
 
@@ -693,8 +766,8 @@ MANNANAM
             <!-- Team item -->
             <div class="col-xl-3 col-sm-6 mb-5">
                 <div class="bg-white rounded shadow-sm py-5 px-4" style="min-height: 280px;"><img
-                        src="https://letusdream.org/wp-content/uploads/2020/08/Jithu-118x160.jpg" alt=""
-                        width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+                        src="https://letusdream.org/wp-content/uploads/2020/08/Jithu-118x160.jpg" alt="" width="100"
+                        class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
                     <h5 class="mb-0">Mr. Jithu</h5><span class="small text-uppercase text-muted">PRO -
                         CLUB</span>
 
@@ -751,4 +824,3 @@ Preview YouTube video Never Stop Dreaming
 Preview YouTube video Fr Lijo Message Dreams
 
 Preview YouTube video Waving flag
-
