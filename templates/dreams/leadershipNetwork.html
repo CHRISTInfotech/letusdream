@@ -7,9 +7,26 @@ YCLP
 {% endblock title %}
 
 {% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
 
 <style>
+body {
+    font-family: 'Montserrat', sans-serif !important;
+  }
 
+  h1,h3 {
+    padding-top: 0px;
+    padding-bottom: 10px; 
+    font-size: 30px;
+    color:#0a7b79 !important;
+}
  
     h1,
     .h1 {
@@ -201,6 +218,8 @@ YCLP
 
     }
 </style>
+<body>
+    
 
 <nav aria-label="breadcrumb animated slideInDown" style="margin-top: 9%; margin-left:15%;">
     <ol class="breadcrumb text-uppercase mb-0 bg-white">
@@ -213,13 +232,13 @@ YCLP
 <div class="container ">
     <div class="row">
         <div class="col-xs-12">
-            <h1 class="site-heading text-center text-faded  d-lg-block ">
+            <h1 class="site-heading text-center text-faded  d-lg-block " style="margin-bottom:-0% ;">
                 <span class="site-heading-upper text-green  mb-3">DREAMS Global Youth Leadership Network: Project Outline</span>  
             </h1>
         </div>
-    </div>
-    <div class="row">
+        
         <div class="col-xs-12">
+            <br>
             <h5>
                 Applicants from all DREAMS Chapters interested in networking, learning, and developing their leadership skills are eligible for membership in this organization. Become a part of our team at
             </h5>
@@ -354,6 +373,8 @@ YCLP
             </div>
         </div>
     </div>
+
+</section>
 <br><br>
     <!-- Speaker -->
     <div class="container">
@@ -451,7 +472,8 @@ YCLP
 
 
     </div>
-    
-    {% include 'partials/_testimonials.html' %}
-</section>
+    {% include 'partials/_testimonials.html' %} 
+<br><br>
+</body>
+</html>
 {% endblock %}

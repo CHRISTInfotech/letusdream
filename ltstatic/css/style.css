@@ -1,7 +1,7 @@
 /* about us */
 body {
-    font-family: 'Montserrat', sans-serif;
-}
+    font-family: 'Montserrat', sans-serif !important;
+  }
 
 h1:after{
     content: "";
@@ -20,10 +20,9 @@ h1:after{
 
 h1,h3 {
     padding-top: 0px;
-    padding-bottom: 10px;
-    font-weight: 700;
+    padding-bottom: 10px; 
     font-size: 30px;
-    color:#0a7b79;
+    color:#0a7b79 !important;
 }
 
 p {
