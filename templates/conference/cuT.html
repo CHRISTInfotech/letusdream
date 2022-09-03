@@ -6,124 +6,144 @@ Christ University Thiruvananthapuram
 {% endblock %}
 
 {% block content %}
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<!DOCTYPE html>
+<html lang="en">
 
-        <!--Google font-->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">        
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!--  Bootstrap CSS --> 
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    
-        <!-- Bootstrap JS -->
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!--Google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+    <!--  Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
 
 
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.0/assets/owl.carousel.css" rel="stylesheet">
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.0/assets/owl.carousel.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css" rel="stylesheet">
 
 
-        <style>
-            body {
-                font-family: 'Montserrat', sans-serif;
-            }
-    
-            h1{
-                text-align: center;
-                color:#0a7b79;
-                font-weight: bolder !important;
-                font-size: 3.5rem;
-                text-transform: uppercase;
-            }
-            /* Counter */
-    
-            .counter {
-                background-color:#d3f2e9;
-                padding: 20px 0;
-                border-radius: 5px;
-            }
-    
-            .count-title {
-                font-size: 40px;
-                font-weight: normal;
-                
-                margin-bottom: 0;
-                text-align: center;
-            }
-    
-            .count-text {
-                font-size: 16px;
-                font-weight: normal;
-               
-                margin-bottom: 0;
-                color: #7ca8a1;
-                text-align: center;
-            }
-    
-            .fa-2x {
-                margin: 0 auto;
-                float: none;
-                display: table;
-                color: #0a7b79;
-            }
-    
-            .fa-2x:hover{
-                color: #7ca8a1;
-            }
-    
-            /* Feature Box */
-    
-            .feature-box {
-                padding: 4.5%;
-                text-align: center;
-                color: #0a7b79;
-            }
-    
-            .feature-title {
-                font-size: 1.5rem;
-                font-weight: 900;
-                color: #0a7b79;
-                text-decoration: none;
-            }
-    
-    
-            .feature-box p{
-                text-align: center;
-            }
-    
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+            color: #0a7b79;
+            font-weight: bolder !important;
+            font-size: 3.5rem;
+            text-transform: uppercase;
+        }
+
+        /* Counter */
+
+        .counter {
+            background-color: #d3f2e9;
+            padding: 20px 0;
+            border-radius: 5px;
+        }
+
+        .count-title {
+            font-size: 40px;
+            font-weight: normal;
+
+            margin-bottom: 0;
+            text-align: center;
+        }
+
+        .count-text {
+            font-size: 16px;
+            font-weight: normal;
+
+            margin-bottom: 0;
+            color: #7ca8a1;
+            text-align: center;
+        }
+
+        .fa-2x {
+            margin: 0 auto;
+            float: none;
+            display: table;
+            color: #0a7b79;
+        }
+
+        .fa-2x:hover {
+            color: #7ca8a1;
+        }
+
+        /* Feature Box */
+
+        .feature-box {
+            padding: 4.5%;
+            text-align: center;
+            color: #0a7b79;
+        }
+
+        .feature-title {
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: #0a7b79;
+            text-decoration: none;
+        }
+
+
+        .feature-box p {
+            text-align: center;
+        }
+
         /* About Us */
 
         .fa-spin {
-        -webkit-animation: fa-spin 2s infinite linear;
-                animation: fa-spin 2s infinite linear; }
+            -webkit-animation: fa-spin 2s infinite linear;
+            animation: fa-spin 2s infinite linear;
+        }
 
         .fa-pulse {
-        -webkit-animation: fa-spin 1s infinite steps(8);
-                animation: fa-spin 1s infinite steps(8); }
+            -webkit-animation: fa-spin 1s infinite steps(8);
+            animation: fa-spin 1s infinite steps(8);
+        }
 
         @-webkit-keyframes fa-spin {
-        0% {
-            -webkit-transform: rotate(0deg);
-                    transform: rotate(0deg); }
-        100% {
-            -webkit-transform: rotate(360deg);
-                    transform: rotate(360deg); } }
+            0% {
+                -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
 
         @keyframes fa-spin {
-        0% {
-            -webkit-transform: rotate(0deg);
-                    transform: rotate(0deg); }
-        100% {
-            -webkit-transform: rotate(360deg);
-                    transform: rotate(360deg); } }
+            0% {
+                -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+
         .large-container {
             position: static;
             max-width: 1580px;
@@ -131,13 +151,13 @@ Christ University Thiruvananthapuram
             margin: 0 auto;
         }
 
-        .testimonial-section{
+        .testimonial-section {
             position: relative;
             padding-top: 10%;
-          
+
         }
 
-        .testimonial-section:before{
+        .testimonial-section:before {
             position: absolute;
             top: 10%;
             background-image: url(http://t.commonsupport.com/adro/images/icons/ring-circle.png);
@@ -153,7 +173,7 @@ Christ University Thiruvananthapuram
             animation: fa-spin 25s infinite alternate;
         }
 
-        .testimonial-section .sec-title h2{
+        .testimonial-section .sec-title h2 {
             position: relative;
             margin-bottom: 15px;
             color: #0a7b79;
@@ -161,27 +181,27 @@ Christ University Thiruvananthapuram
             font-weight: bolder;
         }
 
-        
 
-        .testimonial-section .testimonial-carousel{
+
+        .testimonial-section .testimonial-carousel {
             position: relative;
             max-width: 1500px;
             margin: 0 -50px;
         }
 
-        .testimonial-block{
+        .testimonial-block {
             position: relative;
             padding: 50px;
             padding-left: 200px;
         }
 
-        .testimonial-block .inner-box{
+        .testimonial-block .inner-box {
             padding: 80px 105px;
-            background-color:#ffffff;
-            box-shadow: 0 0 50px rgba(226,222,232,0.75);
+            background-color: #ffffff;
+            box-shadow: 0 0 50px rgba(226, 222, 232, 0.75);
         }
 
-        .testimonial-block .text{
+        .testimonial-block .text {
             position: relative;
             display: block;
             font-size: 18px;
@@ -192,13 +212,13 @@ Christ University Thiruvananthapuram
             font-family: "Muli", sans-serif;
         }
 
-        .testimonial-block .info-box{
+        .testimonial-block .info-box {
             position: relative;
             padding-left: 115px;
             padding-top: 10px;
         }
 
-        .testimonial-block .info-box .thumb{
+        .testimonial-block .info-box .thumb {
             position: absolute;
             left: 0;
             top: 0;
@@ -206,16 +226,16 @@ Christ University Thiruvananthapuram
             width: 82px;
         }
 
-        .testimonial-block .info-box .thumb img{
+        .testimonial-block .info-box .thumb img {
             border: 6px solid #d3f2e9;
             border-radius: 50%;
             overflow: hidden;
             display: block;
             width: 100%;
-            box-shadow: 0 45px 45px rgba(147,147,147,0.35);
+            box-shadow: 0 45px 45px rgba(147, 147, 147, 0.35);
         }
 
-        .testimonial-block .info-box .name{
+        .testimonial-block .info-box .name {
             position: relative;
             display: block;
             font-size: 21px;
@@ -226,7 +246,7 @@ Christ University Thiruvananthapuram
             font-family: "Niramit", sans-serif;
         }
 
-        .testimonial-block .info-box .designation{
+        .testimonial-block .info-box .designation {
             position: relative;
             display: block;
             font-size: 16px;
@@ -236,14 +256,14 @@ Christ University Thiruvananthapuram
             font-family: "Muli", sans-serif;
         }
 
-        .testimonial-carousel .owl-nav{
+        .testimonial-carousel .owl-nav {
             position: absolute;
             right: 75px;
             bottom: 70px;
         }
 
         .testimonial-carousel .owl-next,
-        .testimonial-carousel .owl-prev{
+        .testimonial-carousel .owl-prev {
             position: relative;
             display: inline-block;
             height: 75px;
@@ -251,7 +271,7 @@ Christ University Thiruvananthapuram
             line-height: 75px;
             text-align: center;
             border-radius: 50%;
-            background-color:#7ca8a1;
+            background-color: #7ca8a1;
             -webkit-transition: all 300ms ease;
             -moz-transition: all 300ms ease;
             -ms-transition: all 300ms ease;
@@ -260,13 +280,13 @@ Christ University Thiruvananthapuram
         }
 
         .testimonial-carousel .owl-next:hover,
-        .testimonial-carousel .owl-prev:hover{
-            background-color:#7ca8a1;
-            box-shadow: 0 24px 24px rgba(187,187,187,.75);
+        .testimonial-carousel .owl-prev:hover {
+            background-color: #7ca8a1;
+            box-shadow: 0 24px 24px rgba(187, 187, 187, .75);
         }
 
         .arrow-right,
-        .arrow-left{
+        .arrow-left {
             position: relative;
             display: inline-block;
             height: 9px;
@@ -276,186 +296,219 @@ Christ University Thiruvananthapuram
             background-position: center;
         }
 
-        .arrow-right{
+        .arrow-right {
             background-image: url(http://t.commonsupport.com/adro/images/icons/arrow-right-2.png);
         }
 
-        .testimonial-section .thumb-layer{
+        .testimonial-section .thumb-layer {
             position: absolute;
             right: 90px;
             top: 120px;
         }
 
-        .testimonial-section .thumb-layer .image{
+        .testimonial-section .thumb-layer .image {
             position: relative;
             margin-right: 0;
         }
 
-        .testimonial-section .thumb-layer .image img{
+        .testimonial-section .thumb-layer .image img {
             display: inline-block;
             max-width: 100%;
             height: auto;
         }
 
-        
-        .large-img{
+
+        .large-img {
             height: 60%;
             width: 60%;
         }
-        
-/* Conference and event */
-.card{
-	max-width: 450px ;
-	border: none;
-	border-radius: 10px;
-}
-.conference-header img{
-	width: 62px;
-	height: 60px;
-    display: inline;
-}
 
-.conference-header h5{
-    display: inline;
-}
+        /* Conference and event */
+        .card {
+            max-width: 450px;
+            border: none;
+            border-radius: 10px;
+        }
+
+        .conference-header img {
+            width: 62px;
+            height: 60px;
+            display: inline;
+        }
+
+        .conference-header h5 {
+            display: inline;
+        }
 
 
-.users img{
-	border-radius: 50%;
-	border:none;
-	margin-right: -15px;
-	width: 35px;
-	height: 32px;
-}
+        .users img {
+            border-radius: 50%;
+            border: none;
+            margin-right: -15px;
+            width: 35px;
+            height: 32px;
+        }
 
- .text-success{
-	background-color: #D7FCDD;
-	font-size: 12px;
-	font-weight: 500;
-	padding: 5px 16px;
-	border-radius: 20px;
-	margin-right: 11px;
-}
-.conference-header p{
-	font-size: 14px;
-	color: #CDCDCF!important;
-}
-.btn{
-	border-radius: 22px;
-	border: none;
-	height: 40px;
-	width: 100%;
-}
-.btn:focus{
-	border: none;
-	box-shadow: none;
-}
-.btn span{
-	font-size: 14px;
-	font-weight: 500;
-}
-.btn-dark span{
-	color: #E0DFE7;
-}
-.btn.info{
-	background: #E4E4E4;
-}
-.btn.info span{
-	color: #26252B!important;
-}
-.btn.info:hover{
-	background: #CDCED0!important;
-}
+        .text-success {
+            background-color: #D7FCDD;
+            font-size: 12px;
+            font-weight: 500;
+            padding: 5px 16px;
+            border-radius: 20px;
+            margin-right: 11px;
+        }
 
-@media screen and (max-width: 384px){
-	.card{
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		text-align: center;
-	}
-	.row{
-		text-align: center;
-		line-height: 3;
-		display: flex;
-		justify-content: center;
-	}
-	.ml-auto{
-    	margin-left: 20px!important;
-	}
-}
+        .conference-header p {
+            font-size: 14px;
+            color: #CDCDCF !important;
+        }
 
-.container-fluid{
-	background: #d3f2e9;
-    padding: 5% 0 5% 0;
-}
+        .btn {
+            border-radius: 22px;
+            border: none;
+            height: 40px;
+            width: 100%;
+        }
 
-            </style>
-    </head>
-    <body>
-        <nav aria-label="breadcrumb animated slideInDown" style="margin-top: 9%; margin-left:15%;">
-            <ol class="breadcrumb text-uppercase mb-0 bg-white">
-                <li class="breadcrumb-item"><a class="text-black text-decoration-none" href="{% url 'main' %}">Home</a></li>
-                <li class="breadcrumb-item"><a class="text-black text-decoration-none" href="{% url 'annual-conference' %}">Annual Conference</a></li>
-                <li class="breadcrumb-item  active" aria-current="page" style="color: #0a7b79;">Christ University Thiruvananthapuram</li>
-            </ol>
-        </nav>
+        .btn:focus {
+            border: none;
+            box-shadow: none;
+        }
 
-        <section class="testimonial-section">
-            <div class="large-container">
-                <div class="sec-title">
-                    <center><h1>Let Us Dream</h1></center>
+        .btn span {
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .btn-dark span {
+            color: #E0DFE7;
+        }
+
+        .btn.info {
+            background: #E4E4E4;
+        }
+
+        .btn.info span {
+            color: #26252B !important;
+        }
+
+        .btn.info:hover {
+            background: #CDCED0 !important;
+        }
+
+        @media screen and (max-width: 384px) {
+            .card {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
+            }
+
+            .row {
+                text-align: center;
+                line-height: 3;
+                display: flex;
+                justify-content: center;
+            }
+
+            .ml-auto {
+                margin-left: 20px !important;
+            }
+        }
+
+        .container-fluid {
+            background: #d3f2e9;
+            padding: 5% 0 5% 0;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <nav aria-label="breadcrumb animated slideInDown" style="margin-top: 9%; margin-left:15%;">
+        <ol class="breadcrumb text-uppercase mb-0 bg-white">
+            <li class="breadcrumb-item"><a class="text-black text-decoration-none" href="{% url 'main' %}">Home</a></li>
+            <li class="breadcrumb-item"><a class="text-black text-decoration-none"
+                    href="{% url 'annual-conference' %}">Annual Conference</a></li>
+            <li class="breadcrumb-item  active" aria-current="page" style="color: #0a7b79;">Christ University
+                Thiruvananthapuram</li>
+        </ol>
+    </nav>
+
+    <section class="testimonial-section">
+        <div class="large-container">
+            <div class="sec-title">
+                <center>
+                    <h1>Let Us Dream</h1>
+                </center>
+            </div>
+
+            <div class="testimonial-carousel owl-carousel owl-theme">
+                <div class="testimonial-block">
+                    <div class="inner-box">
+                        <div class="text">The LET US DREAM annual community conference organized by the Noda
+                            Centre-CHRIST (Deemed to be University), Thiruvanathapuram was conducted on 11th January
+                            2020. The key theme of the conference ‘Community Interventions and Improvements’ and created
+                            a better networking and collaboration among volunteers, potential volunteers,
+                            Philanthropists, and community organizations, thereby empowering them in their diverse
+                            community improvement programs. The event was chaired by Mr Jimmy Immanuel and the Keynote
+                            speakers were K.Jayakumar I.A.S (Retd.) and Sheela Thomas I.A.S (Retd.). Around 248
+                            participants had attended the conference making it a promising endeavor.</div>
+                        <div class="info-box">
+                            <div class="thumb"><img src="{% static 'conference/bg-img-1.jpg' %}" alt="" height="100%"
+                                    width="100%"></div>
+                            <h4 class="name">History</h4>
+                        </div>
+                    </div>
                 </div>
-    
-                <div class="testimonial-carousel owl-carousel owl-theme">
-                    <div class="testimonial-block">
-                        <div class="inner-box">
-                            <div class="text">The LET US DREAM annual community conference organized by the Noda Centre-CHRIST (Deemed to be University), Thiruvanathapuram was conducted on 11th January 2020. The key theme of the conference ‘Community Interventions and Improvements’ and created a better networking and collaboration among volunteers, potential volunteers, Philanthropists, and community organizations, thereby empowering them in their diverse community improvement programs. The event was chaired by Mr Jimmy Immanuel and the Keynote speakers were K.Jayakumar I.A.S (Retd.) and Sheela Thomas I.A.S (Retd.). Around 248 participants had attended the conference making it a promising endeavor.</div>
-                            <div class="info-box">
-                                <div class="thumb"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSC8rpezwadKcSI_Kw5VUTGYcfLNu1r9nLrBB-E1tnarFz0FUZEmXiZBb9f7M5EjOHGIBA&usqp=CAU" alt="" height="100%" width="100%"></div>
-                                <h4 class="name">History</h4>
-                            </div>
+
+                <div class="testimonial-block">
+                    <div class="inner-box">
+                        <div class="text">“Empowered local communities for sustainable impact and improvement.”</div>
+                        <div class="info-box">
+                            <div class="thumb"><img src="{% static 'conference/bg-img-2.jpg' %}" alt=""></div>
+                            <h4 class="name">Vision</h4>
                         </div>
                     </div>
-    
-                    <div class="testimonial-block">
-                        <div class="inner-box">
-                            <div class="text">“Empowered local communities for sustainable impact and improvement.”</div>
-                            <div class="info-box">
-                                <div class="thumb"><img src="https://i.pinimg.com/564x/3f/c6/e9/3fc6e9c530ea4dd0837f03d842136973.jpg" alt=""></div>
-                                <h4 class="name">Vision</h4>
-                            </div>
+                </div>
+
+                <div class="testimonial-block">
+                    <div class="inner-box">
+                        <div class="text">The Let Us Dream Conference was established in 2017 for the purpose of
+                            providing a forum for sharing experiences with successes and challenges in community
+                            improvement organizations and efforts.
+                            Broad conference goals are to
+                            <ol>
+                                <li>Improve networking and collaboration among all those interested in community
+                                    improvement organizations and programs.</li>
+                                <li>Promote volunteerism and empower all those involved in community improvement
+                                    organizations and initiatives, including employees, volunteers, post-secondary
+                                    students, researchers, and practitioners</li>
+                                <li>Create a professional learning organization dedicated to improving local communities
+                                    and characterized by a culture of shared researcher and practitioner knowledge,
+                                    skills, theories, and best practices.
                         </div>
-                    </div>
-    
-                    <div class="testimonial-block">
-                        <div class="inner-box">
-                            <div class="text">The Let Us Dream Conference was established in 2017 for the purpose of providing a forum for sharing experiences with successes and challenges in community improvement organizations and efforts.
-                                Broad conference goals are to 
-                                <ol>
-                                    <li>Improve networking and collaboration among all those interested in community improvement organizations and programs.</li>
-                                    <li>Promote volunteerism and empower all those involved in community improvement organizations and initiatives, including employees, volunteers, post-secondary students, researchers, and practitioners</li>
-                                    <li>Create a professional learning organization dedicated to improving local communities and characterized by a culture of shared researcher and practitioner knowledge, skills, theories, and best practices. </div></li>
-                                </ol>
-                                
-                                
-                                <div class="info-box">
-                                <div class="thumb"><img src="https://i.pinimg.com/564x/20/11/48/201148c6005b1c135e7da52226f2e7de.jpg" alt=""></div>
-                                <h4 class="name">Mission</h4>
-                                </div>
-                            </div>
+                        </li>
+                        </ol>
+
+
+                        <div class="info-box">
+                            <div class="thumb"><img src="{% static 'conference/bg-img-3.jpg' %}" alt=""></div>
+                            <h4 class="name">Mission</h4>
+                        </div>
                     </div>
                 </div>
             </div>
-        </section>
-    
-    
-        <br><br><br>
+        </div>
+    </section>
+
+
+    <br><br><br>
     <!-- Speaker -->
     <h1>Conference Chairs</h1>
     <div class="container">
         <div class="row text-center">
-            
+
             <!-- Team item -->
             <div class="col-xl-4 col-sm-6 mb-5">
                 <div class="bg-white rounded shadow-sm py-5 px-4" style="min-height: 280px;"><img
@@ -480,7 +533,7 @@ Christ University Thiruvananthapuram
             <!-- Team item -->
             <div class="col-xl-4 col-sm-6 mb-5">
                 <div class="bg-white rounded shadow-sm py-5 px-4" style="min-height: 280px;"><img
-                        src="{% static 'conference/cut-spk1.png' %}" alt="" width="100" 
+                        src="{% static 'conference/cut-spk1.png' %}" alt="" width="100"
                         class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm large-img">
                     <h5 class="mb-0">Ms Sheela Rahulan</h5><span class="small text-uppercase text-muted">PRO -
                         CLUB</span>
@@ -497,31 +550,31 @@ Christ University Thiruvananthapuram
     <div class="container-fluid">
         <div class="container-body">
             <div class="row">
-    
+
                 <!-- card 1 -->
-                <div class=" col-4 card px-4 pt-4 pb-10 mx-auto ">
+                <div class=" col-4 card px-4 pt-4 pb-10 mx-auto  ">
                     <div class="row">
                         <div class="conference-header">
                             <img src="{% static 'logo/logo.png' %}">
                             <h5 class="align-self-center ml-2">Let us Dream</h5>
                             <span class="text-success float-right mt-3">Seats unavailable</span>
                         </div>
-                        
+
                     </div>
                     <p class="mt-3 mb-2">10/06/20 -- Remote</p>
                     <h5>Trivandrum 2020</h5>
                     <p class="mt-4 mb-2">Hosted by</p>
                     <div class="users mb-5">
-                        <img src="https://imgur.com/uRVyoG7.png">
-                        <img src="https://imgur.com/2W4OOpj.png">
-                        <img src="https://imgur.com/3Jkqz66.png">
-                        <img src="https://imgur.com/P5kPDPG.png">
+                        <img src="{% static 'conference/uRVyoG7.png' %}">
+                        <img src="{% static 'conference/2W4OOpj.jfif' %}">
+                        <img src="{% static 'conference/3Jkqz66.png' %}">
+                        <img src="{% static 'conference/P5kPDPG.jfif' %}">
                     </div>
-                    
+
                     <button class="btn info"><span>More information</span></button>
                 </div>
-            
-            
+
+
                 <!-- card 2 -->
                 <div class=" col-4 card px-4 pt-4 pb-4 mx-auto ">
                     <div class="row">
@@ -530,374 +583,375 @@ Christ University Thiruvananthapuram
                             <h5 class="align-self-center ml-2">Christ University</h5>
                             <span class="text-success float-right mt-3">Seats available</span>
                         </div>
-                        
+
                     </div>
                     <p class="mt-3 mb-2">10/06/21 -- Remote</p>
                     <h5>Christites 2021</h5>
                     <p class="mt-4 mb-2">Hosted by</p>
                     <div class="users mb-5">
-                        <img src="https://imgur.com/uRVyoG7.png">
-                        <img src="https://imgur.com/2W4OOpj.png">
-                        <img src="https://imgur.com/3Jkqz66.png">
-                        <img src="https://imgur.com/P5kPDPG.png">
+                        <img src="{% static 'conference/uRVyoG7.png' %}">
+                        <img src="{% static 'conference/2W4OOpj.jfif' %}">
+                        <img src="{% static 'conference/3Jkqz66.png' %}">
+                        <img src="{% static 'conference/P5kPDPG.jfif' %}">
                     </div>
-                    
+
                     <button class="btn info"><span>More information</span></button>
                 </div>
-            
-                   <!-- card 3 -->
-                   <div class="col-4 card px-4 pt-4 pb-4 mx-auto ">
+
+                <!-- card 3 -->
+                <div class="col-4 card px-4 pt-4 pb-4 mx-auto ">
                     <div class="row">
                         <div class="conference-header">
                             <img src="{% static 'logo/logo.png' %}">
                             <h5 class="align-self-center ml-2">Let us Dream</h5>
                             <span class="text-success float-right mt-3">Upcoming</span>
                         </div>
-                        
+
                     </div>
                     <p class="mt-3 mb-2">10/06/22 -- Remote</p>
                     <h5>Worldwide conference 2022</h5>
                     <p class="mt-4 mb-2">Hosted by</p>
                     <div class="users mb-5">
-                        <img src="https://imgur.com/uRVyoG7.png">
-                        <img src="https://imgur.com/2W4OOpj.png">
-                        <img src="https://imgur.com/3Jkqz66.png">
-                        <img src="https://imgur.com/P5kPDPG.png">
+                        <img src="{% static 'conference/uRVyoG7.png' %}">
+                        <img src="{% static 'conference/2W4OOpj.jfif' %}">
+                        <img src="{% static 'conference/3Jkqz66.png' %}">
+                        <img src="{% static 'conference/P5kPDPG.jfif' %}">
                     </div>
-                    
+
                     <button class="btn info"><span>More information</span></button>
                 </div>
             </div>
         </div>
-           
-        </div>
- 
+
+    </div>
 
 
-<br><br><br>
-    </body>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.0/owl.carousel.js"></script>
-
-    <script>
-        (function($) {
-    
-	"use strict";
-	
-	
-	//Hide Loading Box (Preloader)
-	function handlePreloader() {
-		if($('.preloader').length){
-			$('.preloader').delay(200).fadeOut(500);
-		}
-	}
-	
-	
-	//Update Header Style and Scroll to Top
-	function headerStyle() {
-		if($('.main-header').length){
-			var windowpos = $(window).scrollTop();
-			var siteHeader = $('.main-header');
-			var scrollLink = $('.scroll-to-top');
-			if (windowpos >= 1) {
-				siteHeader.addClass('fixed-header');
-				scrollLink.fadeIn(300);
-			} else {
-				siteHeader.removeClass('fixed-header');
-				scrollLink.fadeOut(300);
-			}
-		}
-	}
-	
-	headerStyle();
-	
-	
-	//Submenu Dropdown Toggle
-	if($('.main-header li.dropdown ul').length){
-		$('.main-header li.dropdown').append('<div class="dropdown-btn"><span class="fa fa-angle-down"></span></div>');
-		
-		//Dropdown Button
-		$('.main-header li.dropdown .dropdown-btn').on('click', function() {
-			$(this).prev('ul').slideToggle(500);
-		});
-		
-		//Disable dropdown parent link
-		$('.main-header .navigation li.dropdown > a,.hidden-bar .side-menu li.dropdown > a').on('click', function(e) {
-			e.preventDefault();
-		});
-	}
-
-	//Side Content Toggle
-	if($('.main-header .outer-box .nav-btn').length){
-		//Show Form
-		$('.main-header .outer-box .nav-btn').on('click', function(e) {
-			e.preventDefault();
-			$('body').addClass('side-content-visible');
-		});
-		//Hide Form
-		$('.hidden-bar .inner-box .cross-icon,.form-back-drop,.close-menu').on('click', function(e) {
-			e.preventDefault();
-			$('body').removeClass('side-content-visible');
-		});
-		//Dropdown Menu
-		$('.fullscreen-menu .navigation li.dropdown > a').on('click', function() {
-			$(this).next('ul').slideToggle(500);
-		});
-	}
-
-		//Hidden Sidebar
-	if ($('.hidden-bar').length) {
-		$('.hidden-bar').mCustomScrollbar({
-		    theme:"dark"
-		});
-	}
-
-	// Testimonial Carousel
-	if ($('.testimonial-carousel').length) {
-		$('.testimonial-carousel').owlCarousel({
-			animateOut: 'slideOutDown',
-		    animateIn: 'zoomIn',
-			loop:true,
-			margin:0,
-			nav:true,
-			smartSpeed: 300,
-			autoplay: 7000,
-			navText: [ '<span class="arrow-left"></span>', '<span class="arrow-right"></span>' ],
-			responsive:{
-				0:{
-					items:1
-				},
-				600:{
-					items:1
-				},
-				800:{
-					items:1
-				},
-				1024:{
-					items:1
-				}
-			}
-		});  		
-	}
 
 
-	//Fact Counter + Text Count
-	if($('.count-box').length){
-		$('.count-box').appear(function(){
-	
-			var $t = $(this),
-				n = $t.find(".count-text").attr("data-stop"),
-				r = parseInt($t.find(".count-text").attr("data-speed"), 10);
-				
-			if (!$t.hasClass("counted")) {
-				$t.addClass("counted");
-				$({
-					countNum: $t.find(".count-text").text()
-				}).animate({
-					countNum: n
-				}, {
-					duration: r,
-					easing: "linear",
-					step: function() {
-						$t.find(".count-text").text(Math.floor(this.countNum));
-					},
-					complete: function() {
-						$t.find(".count-text").text(this.countNum);
-					}
-				});
-			}
-			
-		},{accY: 0});
-	}
+</body>
 
-	
-	//Accordion Box
-	if($('.accordion-box').length){
-		$(".accordion-box").on('click', '.acc-btn', function() {
-			
-			var outerBox = $(this).parents('.accordion-box');
-			var target = $(this).parents('.accordion');
-			
-			if($(this).hasClass('active')!==true){
-				$(outerBox).find('.accordion .acc-btn').removeClass('active');
-			}
-			
-			if ($(this).next('.acc-content').is(':visible')){
-				return false;
-			}else{
-				$(this).addClass('active');
-				$(outerBox).children('.accordion').removeClass('active-block');
-				$(outerBox).find('.accordion').children('.acc-content').slideUp(300);
-				target.addClass('active-block');
-				$(this).next('.acc-content').slideDown(300);	
-			}
-		});	
-	}
-	
-	
-	//Tabs Box
-	if($('.tabs-box').length){
-		$('.tabs-box .tab-buttons .tab-btn').on('click', function(e) {
-			e.preventDefault();
-			var target = $($(this).attr('data-tab'));
-			
-			if ($(target).is(':visible')){
-				return false;
-			}else{
-				target.parents('.tabs-box').find('.tab-buttons').find('.tab-btn').removeClass('active-btn');
-				$(this).addClass('active-btn');
-				target.parents('.tabs-box').find('.tabs-content').find('.tab').fadeOut(0);
-				target.parents('.tabs-box').find('.tabs-content').find('.tab').removeClass('active-tab animated fadeIn');
-				$(target).fadeIn(300);
-				$(target).addClass('active-tab animated fadeIn');
-			}
-		});
-	}
-	
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.0/owl.carousel.js"></script>
 
-	//Default Masonary
-	function defaultMasonry() {
-		if($('.masonry-items-container').length){
-	
-			var winDow = $(window);
-			// Needed variables
-			var $container=$('.masonry-items-container');
-	
-			$container.isotope({
-				itemSelector: '.masonry-item',
-				 masonry: {
-					columnWidth :2
-				 },
-				animationOptions:{
-					duration:500,
-					easing:'linear'
-				}
-			});
-	
-			winDow.on('resize', function(){
+<script>
+    (function ($) {
 
-				$container.isotope({ 
-					itemSelector: '.masonry-item',
-					animationOptions: {
-						duration: 500,
-						easing	: 'linear',
-						queue	: false
-					}
-				});
-			});
-		}
-	}
-	defaultMasonry();
-
-	//Gallery Filters
-	 if($('.filter-list').length){
-	 	 $('.filter-list').mixItUp({});
-	 }
-	
-	//LightBox / Fancybox
-	if($('.lightbox-image').length) {
-		$('.lightbox-image').fancybox({
-			openEffect  : 'fade',
-			closeEffect : 'fade',
-			helpers : {
-				media : {}
-			}
-		});
-	}
-	
-	//Contact Form Validation
-	if($('#contact-form').length){
-		$('#contact-form').validate({
-			rules: {
-				username: {
-					required: true
-				},
-				email: {
-					required: true,
-					email: true
-				},
-				phone: {
-					required: true
-				},
-				message: {
-					required: true
-				}
-			}
-		});
-	}
-	
-	
-	// Scroll to a Specific Div
-	if($('.scroll-to-target').length){
-		$(".scroll-to-target").on('click', function() {
-			var target = $(this).attr('data-target');
-		   // animate
-		   $('html, body').animate({
-			   scrollTop: $(target).offset().top
-			 }, 1500);
-	
-		});
-	}
-
-	if($('.paroller').length){
-		$('.paroller').paroller({
-			  factor: 0.05,            // multiplier for scrolling speed and offset, +- values for direction control  
-			  factorLg: 0.05,          // multiplier for scrolling speed and offset if window width is less than 1200px, +- values for direction control  
-			  type: 'foreground',     // background, foreground  
-			  direction: 'horizontal' // vertical, horizontal  
-		});
-	}
+        "use strict";
 
 
-	if($('.timer').length){
-	   $(function(){
-		    $('[data-countdown]').each(function() {
-		   var $this = $(this), finalDate = $(this).data('countdown');
-		   $this.countdown(finalDate, function(event) {
-		     $this.html(event.strftime('%D days %H:%M:%S'));
-		   });
-		 });
-		});
-
-	   $('.cs-countdown').countdown('').on('update.countdown', function(event) {
-		  var $this = $(this).html(event.strftime('<div class="count-col"><span>%m</span><h6>Months</h6></div> <div class="count-col"><span>%D</span><h6>days</h6></div> <div class="count-col"><span>%H</span><h6>Hours</h6></div> <div class="count-col"><span>%M</span><h6>Minutes</h6></div> <div class="count-col"><span>%S</span><h6>Seconds</h6></div>'));
-		});
-	}
-	
-	
-	// Elements Animation
-	if($('.wow').length){
-		var wow = new WOW(
-		  {
-			boxClass:     'wow',      // animated element css class (default is wow)
-			animateClass: 'animated', // animation css class (default is animated)
-			offset:       0,          // distance to the element when triggering the animation (default is 0)
-			mobile:       true,       // trigger animations on mobile devices (default is true)
-			live:         true       // act on asynchronously loaded content (default is true)
-		  }
-		);
-		wow.init();
-	}
+        //Hide Loading Box (Preloader)
+        function handlePreloader() {
+            if ($('.preloader').length) {
+                $('.preloader').delay(200).fadeOut(500);
+            }
+        }
 
 
-/* ==========================================================================
-   When document is Scrollig, do
-   ========================================================================== */
-	
-	$(window).on('scroll', function() {
-		headerStyle();
-	});
-	
-/* ==========================================================================
-   When document is loading, do
-   ========================================================================== */
-	
-	$(window).on('load', function() {
-		handlePreloader();
-		defaultMasonry();
-	});	
+        //Update Header Style and Scroll to Top
+        function headerStyle() {
+            if ($('.main-header').length) {
+                var windowpos = $(window).scrollTop();
+                var siteHeader = $('.main-header');
+                var scrollLink = $('.scroll-to-top');
+                if (windowpos >= 1) {
+                    siteHeader.addClass('fixed-header');
+                    scrollLink.fadeIn(300);
+                } else {
+                    siteHeader.removeClass('fixed-header');
+                    scrollLink.fadeOut(300);
+                }
+            }
+        }
 
-})(window.jQuery);
-    </script>
-    </html>
+        headerStyle();
+
+
+        //Submenu Dropdown Toggle
+        if ($('.main-header li.dropdown ul').length) {
+            $('.main-header li.dropdown').append('<div class="dropdown-btn"><span class="fa fa-angle-down"></span></div>');
+
+            //Dropdown Button
+            $('.main-header li.dropdown .dropdown-btn').on('click', function () {
+                $(this).prev('ul').slideToggle(500);
+            });
+
+            //Disable dropdown parent link
+            $('.main-header .navigation li.dropdown > a,.hidden-bar .side-menu li.dropdown > a').on('click', function (e) {
+                e.preventDefault();
+            });
+        }
+
+        //Side Content Toggle
+        if ($('.main-header .outer-box .nav-btn').length) {
+            //Show Form
+            $('.main-header .outer-box .nav-btn').on('click', function (e) {
+                e.preventDefault();
+                $('body').addClass('side-content-visible');
+            });
+            //Hide Form
+            $('.hidden-bar .inner-box .cross-icon,.form-back-drop,.close-menu').on('click', function (e) {
+                e.preventDefault();
+                $('body').removeClass('side-content-visible');
+            });
+            //Dropdown Menu
+            $('.fullscreen-menu .navigation li.dropdown > a').on('click', function () {
+                $(this).next('ul').slideToggle(500);
+            });
+        }
+
+        //Hidden Sidebar
+        if ($('.hidden-bar').length) {
+            $('.hidden-bar').mCustomScrollbar({
+                theme: "dark"
+            });
+        }
+
+        // Testimonial Carousel
+        if ($('.testimonial-carousel').length) {
+            $('.testimonial-carousel').owlCarousel({
+                animateOut: 'slideOutDown',
+                animateIn: 'zoomIn',
+                loop: true,
+                margin: 0,
+                nav: true,
+                smartSpeed: 300,
+                autoplay: 7000,
+                navText: ['<span class="arrow-left"></span>', '<span class="arrow-right"></span>'],
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    600: {
+                        items: 1
+                    },
+                    800: {
+                        items: 1
+                    },
+                    1024: {
+                        items: 1
+                    }
+                }
+            });
+        }
+
+
+        //Fact Counter + Text Count
+        if ($('.count-box').length) {
+            $('.count-box').appear(function () {
+
+                var $t = $(this),
+                    n = $t.find(".count-text").attr("data-stop"),
+                    r = parseInt($t.find(".count-text").attr("data-speed"), 10);
+
+                if (!$t.hasClass("counted")) {
+                    $t.addClass("counted");
+                    $({
+                        countNum: $t.find(".count-text").text()
+                    }).animate({
+                        countNum: n
+                    }, {
+                        duration: r,
+                        easing: "linear",
+                        step: function () {
+                            $t.find(".count-text").text(Math.floor(this.countNum));
+                        },
+                        complete: function () {
+                            $t.find(".count-text").text(this.countNum);
+                        }
+                    });
+                }
+
+            }, { accY: 0 });
+        }
+
+
+        //Accordion Box
+        if ($('.accordion-box').length) {
+            $(".accordion-box").on('click', '.acc-btn', function () {
+
+                var outerBox = $(this).parents('.accordion-box');
+                var target = $(this).parents('.accordion');
+
+                if ($(this).hasClass('active') !== true) {
+                    $(outerBox).find('.accordion .acc-btn').removeClass('active');
+                }
+
+                if ($(this).next('.acc-content').is(':visible')) {
+                    return false;
+                } else {
+                    $(this).addClass('active');
+                    $(outerBox).children('.accordion').removeClass('active-block');
+                    $(outerBox).find('.accordion').children('.acc-content').slideUp(300);
+                    target.addClass('active-block');
+                    $(this).next('.acc-content').slideDown(300);
+                }
+            });
+        }
+
+
+        //Tabs Box
+        if ($('.tabs-box').length) {
+            $('.tabs-box .tab-buttons .tab-btn').on('click', function (e) {
+                e.preventDefault();
+                var target = $($(this).attr('data-tab'));
+
+                if ($(target).is(':visible')) {
+                    return false;
+                } else {
+                    target.parents('.tabs-box').find('.tab-buttons').find('.tab-btn').removeClass('active-btn');
+                    $(this).addClass('active-btn');
+                    target.parents('.tabs-box').find('.tabs-content').find('.tab').fadeOut(0);
+                    target.parents('.tabs-box').find('.tabs-content').find('.tab').removeClass('active-tab animated fadeIn');
+                    $(target).fadeIn(300);
+                    $(target).addClass('active-tab animated fadeIn');
+                }
+            });
+        }
+
+
+        //Default Masonary
+        function defaultMasonry() {
+            if ($('.masonry-items-container').length) {
+
+                var winDow = $(window);
+                // Needed variables
+                var $container = $('.masonry-items-container');
+
+                $container.isotope({
+                    itemSelector: '.masonry-item',
+                    masonry: {
+                        columnWidth: 2
+                    },
+                    animationOptions: {
+                        duration: 500,
+                        easing: 'linear'
+                    }
+                });
+
+                winDow.on('resize', function () {
+
+                    $container.isotope({
+                        itemSelector: '.masonry-item',
+                        animationOptions: {
+                            duration: 500,
+                            easing: 'linear',
+                            queue: false
+                        }
+                    });
+                });
+            }
+        }
+        defaultMasonry();
+
+        //Gallery Filters
+        if ($('.filter-list').length) {
+            $('.filter-list').mixItUp({});
+        }
+
+        //LightBox / Fancybox
+        if ($('.lightbox-image').length) {
+            $('.lightbox-image').fancybox({
+                openEffect: 'fade',
+                closeEffect: 'fade',
+                helpers: {
+                    media: {}
+                }
+            });
+        }
+
+        //Contact Form Validation
+        if ($('#contact-form').length) {
+            $('#contact-form').validate({
+                rules: {
+                    username: {
+                        required: true
+                    },
+                    email: {
+                        required: true,
+                        email: true
+                    },
+                    phone: {
+                        required: true
+                    },
+                    message: {
+                        required: true
+                    }
+                }
+            });
+        }
+
+
+        // Scroll to a Specific Div
+        if ($('.scroll-to-target').length) {
+            $(".scroll-to-target").on('click', function () {
+                var target = $(this).attr('data-target');
+                // animate
+                $('html, body').animate({
+                    scrollTop: $(target).offset().top
+                }, 1500);
+
+            });
+        }
+
+        if ($('.paroller').length) {
+            $('.paroller').paroller({
+                factor: 0.05,            // multiplier for scrolling speed and offset, +- values for direction control  
+                factorLg: 0.05,          // multiplier for scrolling speed and offset if window width is less than 1200px, +- values for direction control  
+                type: 'foreground',     // background, foreground  
+                direction: 'horizontal' // vertical, horizontal  
+            });
+        }
+
+
+        if ($('.timer').length) {
+            $(function () {
+                $('[data-countdown]').each(function () {
+                    var $this = $(this), finalDate = $(this).data('countdown');
+                    $this.countdown(finalDate, function (event) {
+                        $this.html(event.strftime('%D days %H:%M:%S'));
+                    });
+                });
+            });
+
+            $('.cs-countdown').countdown('').on('update.countdown', function (event) {
+                var $this = $(this).html(event.strftime('<div class="count-col"><span>%m</span><h6>Months</h6></div> <div class="count-col"><span>%D</span><h6>days</h6></div> <div class="count-col"><span>%H</span><h6>Hours</h6></div> <div class="count-col"><span>%M</span><h6>Minutes</h6></div> <div class="count-col"><span>%S</span><h6>Seconds</h6></div>'));
+            });
+        }
+
+
+        // Elements Animation
+        if ($('.wow').length) {
+            var wow = new WOW(
+                {
+                    boxClass: 'wow',      // animated element css class (default is wow)
+                    animateClass: 'animated', // animation css class (default is animated)
+                    offset: 0,          // distance to the element when triggering the animation (default is 0)
+                    mobile: true,       // trigger animations on mobile devices (default is true)
+                    live: true       // act on asynchronously loaded content (default is true)
+                }
+            );
+            wow.init();
+        }
+
+
+        /* ==========================================================================
+           When document is Scrollig, do
+           ========================================================================== */
+
+        $(window).on('scroll', function () {
+            headerStyle();
+        });
+
+        /* ==========================================================================
+           When document is loading, do
+           ========================================================================== */
+
+        $(window).on('load', function () {
+            handlePreloader();
+            defaultMasonry();
+        });
+
+    })(window.jQuery);
+</script>
+
+</html>
 {% endblock %}

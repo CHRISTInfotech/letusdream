@@ -1,68 +1,63 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+{% load static %}
 
 
 
-<!--  Bootstrap CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
 
 
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-  integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-  crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-  integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-  crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-  integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-  crossorigin="anonymous"></script>
-  
-</head>
-<body>
+
+
+
+
+
 <!--Testimonials-->
-<div class="container testimonials" id="container-body">
-  <div class="row" style="margin-top: 5%;">
-    <div class="col">
-      <center>
-        <h1 style=" color: #7ca8a1 !important; ">TESTIMONIALS</h1>
-      </center>
-    </div>
-  </div>
+<section class="testimonials-sec">
+  <div class="container testimonials" id="container-body">
+    <div class="row testi-row">
+      <div class="col">
 
-  <div class="row">
-    <div class="col-md-12" style="margin-top: 3%; ">
-      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-        </ol>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
+        <h1 class="text-center">TESTIMONIALS</h1>
+
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12 testi-col-1" >
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
               <div class="row">
 
                 <div class="col-lg-4 col-md-6">
                   <div class="single-box">
-                    <div class="img-area"><img src="https://letusdream.org/wp-content/uploads/2020/05/Janet-_-Testimonial-2-120x120.jpg" class="img1" alt="testi1" height="26px" width="10%"></div>
+                    <div class="img-area"><img src="{% static 'testimonial/Janet.jpg' %}" class="img1" alt="testi1"
+                        height="26px" width="10%"></div>
                     <div class="img-text">
                       <h2>Canaan Charrior</h2>
-                      <p>I’ve witnessed the program change lives in a way that I have never seen any program with similar goals could ever even imagine. Everyone should have a chance to see that they can do anything, and I will help in any way I can to make that happen <emp><b>Read more</b></emp></p>
+                      <p>I’ve witnessed the program change lives in a way that I have never seen any program with
+                        similar goals could ever even imagine. Everyone should have a chance to see that they can do
+                        anything, and I will help in any way I can to make that happen <emp><b>Read more</b></emp>
+                      </p>
                     </div>
                   </div>
                 </div>
 
                 <div class="col-lg-4 col-md-6">
                   <div class="single-box">
-                    <div class="img-area"><img src="https://letusdream.org/wp-content/uploads/2022/01/Kaici-Gordon_2.jpeg" width="100" class="img1" height="100" alt="testi1"></div>
-                      <div class="img-text">
+                    <div class="img-area"><img src="{% static 'testimonial/Kaici-Gordon_2.jpeg' %}" width="100"
+                        class="img1" height="100" alt="testi1"></div>
+                    <div class="img-text">
                       <h2>Robin Sehon</h2>
-                      <p style="text-align:justify;">Really innovative concept.. I was looking forward for such curated content and i got more than i was expecting. I am so far very thrilled with overall experience and improvement.  <emp><b>Read more</b></emp></p>
+                      <p style="text-align:justify;">Really innovative concept.. I was looking forward for such
+                        curated
+                        content and i got more than i was expecting. I am so far very thrilled with overall
+                        experience
+                        and improvement. <emp><b>Read more</b></emp>
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -70,68 +65,88 @@ integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6J
 
                 <div class="col-lg-4 col-md-6">
                   <div class="single-box">
-                    <div class="img-area"><img src="https://letusdream.org/wp-content/uploads/2022/01/Hope-Lenior.png" class="img1" alt="testi1"></div>
-                      <div class="img-text">
+                    <div class="img-area"><img src="{% static 'testimonial/Hope-Lenior.png' %}" class="img1"
+                        alt="testi1">
+                    </div>
+                    <div class="img-text">
                       <h2>Hope LeNoir</h2>
-                      <p style="text-align:justify;">I was organizing my closet and came across my DREAMS tshirt.  This reminded me of how much fun I had with your students and how your volunteer team made me feel extremely welcome. Thank you for allowing me to be a part of the DREAMS.</p>
+                      <p style="text-align:justify;">I was organizing my closet and came across my DREAMS tshirt.
+                        This
+                        reminded me of how much fun I had with your students and how your volunteer team made me
+                        feel
+                        extremely welcome. Thank you for allowing me to be a part of the DREAMS.</p>
                     </div>
                   </div>
                 </div>
 
               </div>
-          </div>
-
-          <div class="carousel-item">
-            <div class="row">
-
-              <div class="col-lg-4 col-md-6">
-                <div class="single-box">
-                  <div class="img-area"><img src="https://letusdream.org/wp-content/uploads/2022/01/Kaici-Gordon_2.jpeg" width="100"class="img1" height="100" alt="testi1"></div>
-                  <div class="img-text">
-                    <h2>Robin Sehon</h2>
-                    <p>Each student came to the program with different needs, as well as different backgrounds. However, what was the same in each student was some level of growth in motivation, confidence in personal ability, self esteem, <emp><b>Read more</b></emp></p>
-                  </div>
-                </div>
-              </div>
-
-
-
-              <div class="col-lg-4 col-md-6">
-                <div class="single-box">
-                  <div class="img-area"><img src="https://letusdream.org/wp-content/uploads/2022/01/Hope-Lenior.png" class="img1" alt="testi1"></div>
-                  <div class="img-text">
-                    <h2>Hope LeNoir</h2>
-                    <p>I was organizing my closet and came across my DREAMS tshirt. This reminded me of how much fun I had with your students and how your volunteer team made me feel extremely welcome. Thank you for everything.<emp><b>Read more</b></emp></p>
-                  </div>
-                </div>
-              </div>
-
-
-              <div class="col-lg-4 col-md-6">
-                <div class="single-box">
-                  <div class="img-area"><img src="http://letusdream.org/wp-content/uploads/2020/05/shan-hughes.jpg" class="img1" alt="testi1"></div>
-                  <div class="img-text">
-                    <h2>Kaici Gordon</h2>
-                    <p>Greetings everyone! I was first introduced to the DREAMS program by Dr. Fr. Lijo Thomas and Mrs. Maribeth Holzer. From the moment I met these two beautiful people, I immediately knew that this was the right program and community for me <emp><b>Read more</b></emp></p>
-                  </div>
-                </div>
-              </div>
-
-
-
-
             </div>
-        </div>
+
+            <div class="carousel-item">
+              <div class="row">
+
+                <div class="col-lg-4 col-md-6">
+                  <div class="single-box">
+                    <div class="img-area"><img src="{% static 'testimonial/Kaici-Gordon_2.jpeg' %}" width="100"
+                        class="img1" height="100" alt="testi1"></div>
+                    <div class="img-text">
+                      <h2>Robin Sehon</h2>
+                      <p>Each student came to the program with different needs, as well as different backgrounds.
+                        However, what was the same in each student was some level of growth in motivation,
+                        confidence in
+                        personal ability, self esteem, <emp><b>Read more</b></emp>
+                      </p>
+                    </div>
+                  </div>
+                </div>
 
 
 
+                <div class="col-lg-4 col-md-6">
+                  <div class="single-box">
+                    <div class="img-area"><img src="{% static 'testimonial/Hope-Lenior.png' %}" class="img1"
+                        alt="testi1">
+                    </div>
+                    <div class="img-text">
+                      <h2>Hope LeNoir</h2>
+                      <p>I was organizing my closet and came across my DREAMS tshirt. This reminded me of how much
+                        fun I
+                        had with your students and how your volunteer team made me feel extremely welcome. Thank you
+                        for
+                        everything.<emp><b>Read more</b></emp>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+
+                <div class="col-lg-4 col-md-6">
+                  <div class="single-box">
+                    <div class="img-area"><img src="{% static 'testimonial/shan-hughes.jpg' %}" class="img1"
+                        alt="testi1">
+                    </div>
+                    <div class="img-text">
+                      <h2>Kaici Gordon</h2>
+                      <p>Greetings everyone! I was first introduced to the DREAMS program by Dr. Fr. Lijo Thomas and
+                        Mrs. Maribeth Holzer. From the moment I met these two beautiful people, I immediately knew
+                        that
+                        this was the right program and community for me <emp><b>Read more</b></emp>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+
+
+
+              </div>
+            </div>
+
+
+
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>  
-</body>
-</html>
-
-
-
+</section>

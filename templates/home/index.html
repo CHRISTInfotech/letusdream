@@ -4,340 +4,31 @@
 
 {% block title %}
 HOME
-{% endblock %}
+{% endblock title %}
+
+{% block extraStyles %}
+<link rel="stylesheet" href="{% static 'css/index.css' %}">
+{% endblock extraStyles %}
+
+{% block links %}
+
+<!--Google font-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+<!--  Bootstrap CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+
+<!-- Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
+
+{% endblock links %}
+
 
 {% block content %}
-
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home Page</title>
-
-  <!--Google font-->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-
-  <!--  Bootstrap CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-  <!-- Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-    crossorigin="anonymous"></script>
-
-  <style>
-    body {
-      font-family: 'Montserrat', sans-serif !important;
-    }
-
-    img {
-      width: 100%;
-      height: 85vh;
-    }
-
-    .banner {
-      margin-top: 5%;
-      width: 100%;
-      height: 85vh;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .slider {
-      width: 100%;
-      height: 85vh;
-      position: absolute;
-      top: 0;
-    }
-
-    #slideImg {
-      width: 100%;
-      height: 100%;
-      animation: zoom 3s linear infinite;
-    }
-
-    @keyframes zoom {
-      0% {
-        transform: scale(1.3);
-      }
-
-      15% {
-        transform: scale(1);
-      }
-
-      85% {
-        transform: scale(1);
-      }
-
-      100% {
-        transform: scale(1.3);
-      }
-    }
-
-    .overlay {
-      width: 100%;
-      height: 85vh;
-      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
-      position: absolute;
-    }
-
-
-    .content {
-      width: 60%;
-      margin: 160px auto 0;
-      text-align: center;
-      color: #ffffff;
-    }
-
-    .content h1 {
-      font-size: 60px;
-      font-size: 5rem;
-      font-family: 'Roboto Slab', serif;
-    }
-
-    .content h3 {
-      width: 80%;
-      margin: 20px auto 50px;
-      font-weight: 100;
-      line-height: 25px;
-    }
-
-    .btn-1 {
-      width: 200px;
-      padding: 15px 0;
-      text-align: center;
-      margin: 0 15px;
-      border-radius: 25px;
-      font-weight: bold;
-      border: 2px solid #d3f2e9;
-      background: #d3f2e9;
-      color: #0a7b79;
-      transition: background 0.5s;
-    }
-
-    .btn-1:hover {
-      background: transparent;
-      border: 2px solid #fff;
-    }
-
-    .btn-2 {
-      background: transparent;
-      border: 2px solid #fff;
-      width: 150px;
-      padding: 15px 0;
-      text-align: center;
-      border-radius: 25px;
-      font-weight: bold;
-      color: #0a7b79;
-    }
-
-    .btn-2:hover {
-      border: 2px solid #d3f2e9;
-      background: #d3f2e9;
-    }
-
-    .container {
-      font-size: 12px;
-      color: #666666;
-    }
-
-    .card-custom {
-      border-radius: 25px;
-      overflow: hidden;
-      min-height: 450px;
-      box-shadow: 0 0 15px rgba(10, 10, 10, 0.3);
-    }
-
-    .card-custom-img {
-      height: 200px;
-      min-height: 200px;
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
-      border-color: inherit;
-    }
-
-    .card-custom-img::after {
-      position: absolute;
-      content: '';
-      top: 170px;
-      left: 0;
-      width: 0;
-      height: 0;
-      border-style: solid;
-      border-top-width: 40px;
-      border-right-width: 0;
-      border-bottom-width: 0;
-      border-left-width: 545px;
-      border-left-width: calc(575px - 5vw);
-      border-top-color: transparent;
-      border-right-color: transparent;
-      border-bottom-color: transparent;
-      border-left-color: inherit;
-    }
-
-    /* #container-body{
-          background: linear-gradient(-100deg,#B8FFF9 50%, #EFFFFD 50%);
-          height: 70vh;
-          font-family: 'Montserrat', sans-serif;
-        } */
-
-    .img-text {
-      width: 100%;
-      height: 400px;
-      display: block;
-      text-align: center;
-      padding: 40% 5%;
-      background: #d3f2e9;
-      /* 0a7b79 */
-      color: #0a7b79;
-      border-radius: 30px;
-    }
-
-    .img-text h2 {
-      margin-top: 10px;
-      margin-bottom: 20px;
-      font-size: 25px;
-      font-weight: bold;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-    }
-
-    .img-text p {
-      font-size: 14px;
-    }
-
-    .single-box {
-      position: relative;
-      margin-left: 10px;
-      margin-bottom: 30px;
-    }
-
-    .img-area {
-      position: absolute;
-      width: 100px;
-      height: 100px;
-      border: 5px solid #7ca8a1;
-      overflow: hidden;
-      top: 15px;
-      left: 125px;
-      border-radius: 50%;
-    }
-
-    .img-area img {
-      width: 100%;
-    }
-
-    .carousel-indicators {
-      left: 0;
-      top: auto;
-      bottom: -20px;
-    }
-
-    .carousel-indicators li {
-      background: #0a7b79;
-      box-shadow: inset 1px 1px 1px 1px rgba(0, 0, 0, 0.5);
-    }
-
-    .carousel-indicators :active {
-      background: #0a7b79;
-    }
-
-    .carousel-indicators.img-area {
-      position: absolute;
-      width: 100px;
-      height: 100px;
-      border: 5px solid #fff;
-      overflow: hidden;
-      top: 20%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      border-radius: 50%;
-    }
-
-    .button-testi {
-      width: 200px;
-      padding: 12px 0;
-      text-align: center;
-      margin: 0 15px;
-      border-radius: 25px;
-      font-weight: bold;
-      border: 2px solid #d3f2e9;
-      background: #d3f2e9;
-      color: #0a7b79;
-      transition: background 0.5s;
-    }
-
-
-    .container-fluid h1 {
-      font-weight: bolder;
-      font-size: 3rem;
-    }
-
-    .img1 {
-      width: 100% !important;
-      height: 100% !important;
-    }
-
-    .container h1 {
-      font-size: 3rem !important;
-      font-weight: bolder !important;
-    }
-
-    body h3 {
-      color: #7ca8a1;
-      font-weight: bolder !important;
-    }
-
- 
-    h6{
-      padding-top:2%;
-      padding-bottom:2%
-      }     
-      
-      h1:after {
-        content: "";
-        display: block;
-        margin: 0 auto;
-        width: 50%;
-        padding-top: 20px;
-        border-bottom: 2px solid transparent;
-        border-image: linear-gradient(0.90turn, rgb(255, 255, 255), rgb(0, 0, 0), rgb(255, 255, 255));
-        border-image-slice: 1;
-    }
-    
-h1 {
-        padding-top: 0px;
-        padding-bottom: 10px;
-        
-        font-size: 30px;
-
-    }
-    h6 {
-      padding-top: 2%;
-      padding-bottom: 2%
-    }
-
-    </style>
-
-
-
-
-
-</head>
 
 <body onload="slider()">
   <div class="banner">
@@ -346,63 +37,63 @@ h1 {
     </div>
     <div class="overlay">
       <div class="content">
-        <h1 style="padding-top: 160px; color: #fff !important;">LET US DREAM</h1>
-        <h3 style="color: #0a7b79 !important;">Empowering Community</h3>
+        <h1 class="text-white text-h1">LET US DREAM</h1>
+        <h3 class="text-h3">Empowering Community</h3>
         <button type="button" class="btn-1">JOIN US</button>
       </div>
     </div>
   </div>
 
+  <div class="container-fluid flu-con" id="dreamProgram">
+    <div class="row row-index">
+      <div class="w-100 text-center">
 
+        <h1 class="text-h1-cen">OUR PROGRAM</h1>
 
-
-  <div class="container-fluid" style="width: 100% !important;" id="dreamProgram">
-    <div class="row" style="margin-top: 5%;">
-      <div class="w-100">
-        <center>
-          <h1 style=" color: #7ca8a1 !important; ">OUR PROGRAM</h1>
-        </center>
       </div>
     </div>
-    <div class="row pt-5 max-auto" style="margin-left: 5%; margin-right: 5%;">
+    <div class="row pt-5 max-auto row-2">
       <div class="col-md-6 col-lg-3 pb-3">
 
-        <div class="card card-custom bg-white border-white border-0" style="height: 100%; width:100%;">
-          <div class="card-custom-img" style="background-image: url(../../ltstatic/home/program.webp);margin-top: 2%;">
+        <div class="card card-custom bg-white border-white border-0 card-1">
+          <div class="card-custom-img card-img1">
           </div>
 
-          <div class="card-body" style="overflow-y: auto">
-            <h5 class="card-title" style="color:#0a7b79; ;font-weight: bold; ">DREAMS Program</h5>
-            <p class="card-text" style="color:#7ca8a1; font-weight: bold; text-align: justify;">The DREAMS Program is a
+          <div class="card-body cb-1">
+            <h5 class="card-title text-h3 fw-bold">DREAMS Program</h5>
+            <p class="card-text text-h1-cen fw-bold  card-t1">The
+              DREAMS Program is a
               three-year curriculum-based community mentoring project for schools and colleges, each year focusing on
               personal development, interpersonal skills and leadership skills. The program aims to.</p>
           </div>
-          <div class="card-footer" style="background: inherit; border-color: inherit;">
-            <center>
-              <button type="button" class="btn-2">Join Us</button>
-              <a href="{% url 'dreams' 'program' %}"><button type="button" class="btn-2">Know more</button></a>
-            </center>
+          <div class="card-footer text-center bg-white border-0 card-f1">
+
+            <button type="button" class="btn-2">Join Us</button>
+            <a href="{% url 'dreams' 'program' %}">
+              <button type="button" class="btn-2">Know more</button>
+            </a>
+
           </div>
         </div>
 
       </div>
       <div class="col-md-6 col-lg-3 pb-3">
 
-        <div class="card card-custom bg-white border-white border-0" style="height:  100%;width:100%;">
-          <div class="card-custom-img" style="background-image: url(../../ltstatic/home/proclub.png); margin-top: 2%;">
+        <div class="card card-custom bg-white border-white border-0 card-1">
+          <div class="card-custom-img card-img2">
           </div>
 
-          <div class="card-body" style="overflow-y: auto">
-            <h5 class="card-title" style="color:#0a7b79; ;font-weight: bold; ">DREAMS Pro Club</h5>
-            <p class="card-text" style="color:#7ca8a1; font-weight: bold; text-align: justify;">DREAMS Pro Club is a
+          <div class="card-body cb-1">
+            <h5 class="card-title fw-bold text-h3">DREAMS Pro Club</h5>
+            <p class="card-text  text-h1-cen fw-bold  card-t1">DREAMS Pro Club is a
               support group for the personal and professional development of young professionals. Small groups of 10-12
               working professionals meet once every month to discuss and implement.</p>
           </div>
-          <div class="card-footer" style="background: inherit; border-color: inherit;">
-            <center><button type="button" id="btn-join" class="btn-2">Join Us</button>
-              <a href="{% url 'dreams' 'proclub' %}"><button type="button" id="btn-more" class="btn-2">Know
-                  more</button></a>
-            </center>
+          <div class="card-footer text-center bg-white border-0 card-f1">
+            <button type="button" id="btn-join" class="btn-2">Join Us</button>
+            <a href="{% url 'dreams' 'proclub' %}"><button type="button" id="btn-more" class="btn-2">Know
+                more</button></a>
+
           </div>
         </div>
 
@@ -410,22 +101,22 @@ h1 {
 
       <div class="col-md-6 col-lg-3 pb-3">
 
-        <div class="card card-custom bg-white border-white border-0" style="height:  100%;width:100%;">
-          <div class="card-custom-img" style="background-image: url(../../ltstatic/home/band.webp);margin-top: 2%;">
+        <div class="card card-custom bg-white border-white border-0 card-1">
+          <div class="card-custom-img card-img3">
           </div>
 
-          <div class="card-body" style="overflow-y: auto">
-            <h5 class="card-title" style="color:#0a7b79; ;font-weight: bold; ">DREAMS Band</h5>
-            <p class="card-text" style="color:#7ca8a1; font-weight: bold;text-align: justify;">The DREAMS Band strives
+          <div class="card-body cb-1">
+            <h5 class="card-title text-h3 fw-bold">DREAMS Band</h5>
+            <p class="card-text text-h1-cen fw-bold  card-t1">The DREAMS Band strives
               towards making a positive difference in the community by utilizing their musical skills. DREAMS Band is
               not only an opportunity to sing and motivate the audience but also uses music as a platform to empower
               communities.</p>
           </div>
-          <div class="card-footer" style="background: inherit; border-color: inherit;">
-            <center><button type="button" id="btn-join" class="btn-2">Join Us</button>
-              <a href="{% url 'dreams' 'band' %}"><button type="button" id="btn-more" class="btn-2">Know
-                  more</button></a>
-            </center>
+          <div class="card-footer text-center bg-white border-0 card-f1">
+            <button type="button" id="btn-join" class="btn-2">Join Us</button>
+            <a href="{% url 'dreams' 'band' %}"><button type="button" id="btn-more" class="btn-2">Know
+                more</button></a>
+
           </div>
         </div>
 
@@ -433,22 +124,21 @@ h1 {
 
       <div class="col-md-6 col-lg-3 pb-3">
 
-        <div class="card card-custom bg-white border-white border-0" style="height:  100%;width:100%;">
-          <div class="card-custom-img"
-            style="background-image: url(../../ltstatic/home/conferences.jpg); margin-top: 2%;"></div>
+        <div class="card card-custom bg-white border-white border-0 card-1">
+          <div class="card-custom-img card-img4"></div>
 
-          <div class="card-body" style="overflow-y: auto">
-            <h5 class="card-title" style="color:#0a7b79; ;font-weight: bold; ">Community Conferences</h5>
-            <p class="card-text" style="color:#7ca8a1; font-weight: bold;text-align: justify;">Started in 2017, Let Us
+          <div class="card-body cb-1">
+            <h5 class="card-title text-h3 fw-bold">Community Conferences</h5>
+            <p class="card-text text-h1-cen fw-bold  card-t1">Started in 2017, Let Us
               Dream Conference provides a platform for researchers, practitioners and volunteers to discuss various
               possibilities of promoting community volunteerism among students, sharing their experiences and challenges
             </p>
           </div>
-          <div class="card-footer" style="background: inherit; border-color: inherit;">
-            <center><button type="button" id="btn-join" class="btn-2">Join Us</button>
-              <a href="{% url 'annual-conference' %}"><button type="button" id="btn-more" class="btn-2">Know
-                  more</button></a>
-            </center>
+          <div class="card-footer text-center bg-white border-0 card-f1">
+            <button type="button" id="btn-join" class="btn-2">Join Us</button>
+            <a href="{% url 'annual-conference' %}"><button type="button" id="btn-more" class="btn-2">Know
+                more</button></a>
+
           </div>
         </div>
 
@@ -459,20 +149,20 @@ h1 {
   </div>
 
 
-  <div class="container-fluid" id="conference"
-    style="margin-top:5%; margin-bottom:5%; padding-top:5%; padding-bottom:8%;background-color: #d3f2e9 !important; color: #0a7b79;">
+  <div class="container-fluid cf-2 text-h3" id="conference">
 
-    <center>
-      <h1>LATEST EVENTS</h1>
-    </center>
+
+    <h1 class="text-center">LATEST EVENTS</h1>
+
     <br>
-    <center>
-      <h3 class="big-heading">Preparing students to make meaningful contributions as engaged citizens and leaders in a
-        complex world.</h3>
-    </center>
+
+    <h3 class="big-heading text-center">Preparing students to make meaningful contributions as engaged citizens and
+      leaders in a
+      complex world.</h3>
+
 
     <div class="container">
-      <div class="row" style="margin-top: 3%;">
+      <div class="row row-3">
         <div class="col-sm">
           <img src="{% static 'home/event1.webp' %}" class="img1" height="100" width="100">
         </div>
@@ -489,49 +179,47 @@ h1 {
 
   </div>
 
+  {% include 'partials/_testimonials.html' %}
+  <br><br><br>
+  {% include 'partials/_globalPresence.html' %}
 
 
-      {% include 'partials/_testimonials.html' %}
-    <br><br><br>
-    {% include 'partials/_globalPresence.html' %}
+  <div class="container-fluid cf-3">
 
+    <h1 class="text-h1-cen text-center">LET US DREAM</h1>
 
-
-  <div class="container-fluid" style="margin-top:5%; margin-bottom: 5%; ">
-    <center >
-      <h1 style="color: #7ca8a1  !important;">LET US DREAM</h1>
-    </center>
     <br>
-    <center>
-      <h3 class="big-heading" style="color: #0a7b79; padding: 0 7% 0 7%;">Join us to help foster international collaboration and increased
-        global awareness of community improvement models, research initiatives, and best practices.</h3>
-    </center>
 
-    <div class="row" style="margin-top:3%; padding-left:20%; padding-right: 20%; text-align: center;">
+    <h3 class="big-heading text-center text-h3 big-h3">Join us to help foster international
+      collaboration and increased
+      global awareness of community improvement models, research initiatives, and best practices.</h3>
+
+
+    <div class="row text-center row-4">
       <div class="feature-box col-sm">
-        <h3 style="font-weight:bolder !important;">Students</h3>
-        <div class="card-body" style="color:#0a7b79;">
+        <h3 class="fw-bold">Students</h3>
+        <div class="card-body text-h3">
           <h2>1614+</h2>
         </div>
 
       </div>
       <div class="feature-box col-sm">
-        <h3>Participants</h3>
-        <div class="card-body" style="color:#0a7b79;">
+        <h3 class="fw-bold">Participants</h3>
+        <div class="card-body text-h3">
           <h2>3029+</h2>
         </div>
 
       </div>
       <div class="feature-box col-sm">
-        <h3>Leadership</h3>
-        <div class="card-body" style="color:#0a7b79;">
+        <h3 class="fw-bold">Leadership</h3>
+        <div class="card-body text-h3">
           <h2>246+</h2>
         </div>
 
       </div>
       <div class="feature-box col-sm">
-        <h3>Families</h3>
-        <div class="card-body" style="color:#0a7b79;">
+        <h3 class="fw-bold">Families</h3>
+        <div class="card-body text-h3">
           <h2>3185+</h2>
         </div>
 
