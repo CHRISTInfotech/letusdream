@@ -5,210 +5,15 @@
 Binghamton University ,Newyork
 {% endblock %}
 
+
+{% block extraStyles %}
+<link rel="stylesheet" href="{% static 'css/binghamton-university.css' %}">
+{% endblock extraStyles %}
+
+{% block links %}
+{% endblock links %}
+
 {% block content %}
-<style>
-    .college {
-        margin-top: 70px;
-        padding-top: 60px;
-        line-height: 30px;
-
-    }
-
-    .main-section {
-
-        /* background: url(../../ltstatic/Aboutus/bg.png); */
-        background-color: rgba(24, 125, 207, 0.15) !important;
-    }
-
-    .card-joythi img {
-        border-radius: 50%;
-    }
-
-    .person-img img {
-        min-height: 258px;
-    }
-
-    .person-name h3 {
-        font-size: 23px;
-    }
-
-    .info p {
-        font-size: 17px;
-    }
-
-    .info span {
-        font-size: 14px;
-    }
-
-    .text-green {
-        color: #7ca8a1;
-    }
-
-    .main-section p {
-        font-size: 20px;
-        justify-content: center;
-
-    }
-
-    .college .li-text {
-        font-size: 20px;
-        justify-content: center;
-        padding-left: 5px;
-
-    }
-
-    .college .button {
-        display: inline-block;
-        border-radius: 100px;
-        background-color: #d3f2e9;
-        font-weight: bold;
-        border: 2px solid #d3f2e9;
-        align-items: center;
-        color: #0a7b79;
-        text-align: center;
-        font-size: 20px;
-        padding: 14px 28px;
-        width: 300px;
-        transition: all 0.5s;
-        cursor: pointer;
-        margin: 5px;
-
-    }
-
-    .college .button span {
-        cursor: pointer;
-        display: inline-block;
-        position: relative;
-        transition: 0.5s;
-    }
-
-    .college .button span:after {
-        content: '\00bb';
-        position: absolute;
-        opacity: 0;
-        top: 0;
-        right: -20px;
-        transition: 0.5s;
-    }
-
-    .college .button1 {
-        width: 350px;
-        background-color: #67bcf5;
-        color: #262626;
-    }
-
-    .college .button2 {
-        width: 250px;
-        background-color: #67bcf5;
-        color: #262626;
-    }
-
-    .college .button:hover {
-        background-color: transparent;
-        color: #0a7b79;
-        border: 2px solid #0a7b79;
-    }
-
-    .college .button:hover span {
-        padding-right: 25px;
-
-    }
-
-    .college .button:hover span:after {
-        opacity: 1;
-        right: 0;
-    }
-
-    /* image hover start */
-    .box-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 50vh;
-        background-color: #d3f2e9;
-
-    }
-
-    .box {
-        position: relative;
-        width: 200px;
-        height: 200px;
-        transform-style: preserve-3d;
-        animation: animate 30s linear infinite;
-    }
-
-    @keyframes animate {
-        0% {
-            transform: perspective(1000px) rotateY(0deg);
-        }
-
-        100% {
-            transform: perspective(1000px) rotateY(360deg);
-        }
-    }
-
-    .box span {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        transform-origin: center;
-        transform-style: preserve-3d;
-        transform: rotateY(calc(var(--i) * 45deg)) translateZ(300px);
-    }
-
-    .box span img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        border-radius: 10px;
-        object-fit: cover;
-        transition: 2s;
-    }
-
-    .logo-uni {
-        align-items: center;
-        min-height: 50vh;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-    }
-
-    /* end */
-    @media (max-width:551px) {
-        .text-custom {
-            font-size: 25px !important;
-        }
-
-        .container h1 {
-            font-size: 25px !important;
-            font-weight: bolder !important;
-        }
-    }
-
-    @media (max-width:991px) {
-        .main-section {
-            margin-top: -50px;
-        }
-
-
-    }
-
-    @media (max-width:1400px) {
-
-
-
-
-        .college .button1 {
-            width: 300px;
-        }
-
-
-    }
-</style>
 <section class="college">
 
 
@@ -216,14 +21,14 @@ Binghamton University ,Newyork
         <div class="container  p-5">
             <div class="row">
                 <div class="col-lg-12 mb-4">
-                    <nav aria-label="breadcrumb animated slideInDown">
+                    <nav aria-label="breadcrumb animated slideInDown" class="cus-breadcrumb-1">
                         <ol class="breadcrumb text-uppercase mb-0">
                             <li class="breadcrumb-item"><a class="text-black text-decoration-none"
                                     href="{% url 'main' %}">Home</a></li>
                             <li class="breadcrumb-item"><a class="text-black text-decoration-none"
                                     href="{% url 'annual-conference' %}">Annual
                                     Conference</a></li>
-                            <li class="breadcrumb-item  active" aria-current="page" style="color: #0a7b79;">Binghamton
+                            <li class="breadcrumb-item  active" aria-current="page">Binghamton
                                 University Newyork</li>
                         </ol>
                     </nav>
@@ -305,28 +110,31 @@ Binghamton University ,Newyork
     </div>
     <div class="container mb-5">
         <div class="row" style="align-items: center;">
-            <div class="col-lg-4 p-4">
-                <center>
-                    <a href="#location"><button type="button" class="button"><span>Conference
-                                Details</span></button></a>
-                </center>
+            <div class="col-lg-4 p-4 d-flex flex-column"">
+               
+                    <a href=" #location" class="text-center align-items-center"><button type="button"
+                    class="button"><span>Conference
+                        Details</span></button></a>
+
 
             </div>
-            <div class="col-lg-4 p-4">
-                <center>
-                    <a href="#location"><button type="button" class="button button2"
-                            style="margin-bottom: 80px;"><span>Register</span></button></a>
-                </center>
-                <center>
-                    <a href="#location"><button type="button" class="button1 button"><span>Promo
-                                News</span></button></a>
-                </center>
+            <div class="col-lg-4 p-4 d-flex flex-column"">
+               
+                    <a href=" #location" class="text-center align-items-center"><button type="button"
+                    class="button button2 mb-5"><span>Register</span></button></a>
+
+
+                <a href="#location" class="text-center align-items-center"><button type="button"
+                        class="button1 button"><span>Promo
+                            News</span></button></a>
+
             </div>
-            <div class="col-lg-4 p-4">
-                <center>
-                    <a href="#location"><button type="button" class="button"><span>Previous
-                                Conferences</span></button></a>
-                </center>
+            <div class="col-lg-4 p-4 d-flex flex-column"">
+               
+                    <a href=" #location" class="text-center align-items-center"><button type="button"
+                    class="button"><span>Previous
+                        Conferences</span></button></a>
+
 
             </div>
         </div>
@@ -379,7 +187,7 @@ Binghamton University ,Newyork
         </div>
     </section>
 
-    <div class="container-fluid main-section p-5" style="margin-bottom: -5px;">
+    <div class="container-fluid main-section p-5">
         <div class="container">
             <div class="row">
                 <div class="col-md-6 p-5 ">

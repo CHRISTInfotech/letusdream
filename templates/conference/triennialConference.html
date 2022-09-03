@@ -5,799 +5,354 @@
 Triennial Conference
 {% endblock %}
 
+{% block extraStyles %}
+<link rel="stylesheet" href="{% static 'css/triennialConference.css' %}">
+{% endblock extraStyles %}
+
+{% block links %}
+<!--Google font-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+
+<!--  Bootstrap CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+
+<!-- Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
+
+<!-- Font Awesome -->
+<script src="https://kit.fontawesome.com/f8cd4d7fce.js"></script>
+
+{% endblock links %}
+
 {% block content %}
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--Google font-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-
-
-    <!--  Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-    <!-- Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
-
-    <!-- Font Awesome -->
-    <script src="https://kit.fontawesome.com/f8cd4d7fce.js" crossorigin="anonymous"></script>
-
-    <style>
-        body {
-            font-family: 'Montserrat', sans-serif;
-        }
-
-        .body-icons-container {
-            display: flex;
-            gap: 10px
-        }
-
-        .body-icons-container .icon {
-            position: relative;
-            color: #0a7b79;
-            width: 40px;
-            height: 40px;
-            font-size: 25px;
-            text-align: center;
-            margin: 0.3rem;
-            cursor: pointer;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .body-icons-container .icon::after,
-        .body-icons-container .icon::before {
-            content: " ";
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 100%;
-            height: 100%;
-            border: 1px solid #0a7b79;
-            opacity: 0;
-            transition: 0.3s;
-        }
-
-        .body-icons-container .icon:hover::after {
-            opacity: 1;
-            transform: translate(-50%, -50%) scale(1.2) rotate(25deg);
-
-        }
-
-        .body-icons-container .icon:hover::before {
-            opacity: 1;
-            transform: translate(-50%, -50%) scale(1.2) rotate(45deg);
-        }
-
-        .button {
-            display: inline-block;
-            border-radius: 100px;
-            background-color: #d3f2e9;
-            font-weight: bold;
-            border: 1px solid #d3f2e9;
-            color: #0a7b79;
-            text-align: center;
-            font-size: 20px;
-            padding: 10px 20px;
-            width: 250px;
-            transition: all 0.5s;
-            cursor: pointer;
-            margin: 5px;
-            margin-top: 10px;
-            margin-bottom: 10px;
-        }
-
-        .button span {
-            cursor: pointer;
-            display: inline-block;
-            position: relative;
-            transition: 0.5s;
-        }
-
-        .button span:after {
-            content: '\00bb';
-            position: absolute;
-            opacity: 0;
-            top: 0;
-            right: -20px;
-            transition: 0.5s;
-        }
-
-        .button:hover {
-            background-color: transparent;
-            color: #0a7b79;
-            border: 1px solid #0a7b79;
-        }
-
-        .button:hover span {
-            padding-right: 25px;
-
-        }
-
-        .button:hover span:after {
-            opacity: 1;
-            right: 0;
-        }
-
-        .container-btn button {
-
-            height: 50px;
-            width: 200px;
-            border-radius: 100px;
-            background-color: #0a7b79;
-            font-weight: bold;
-            border: 1px solid #d3f2e9;
-            color: #fff;
-            text-align: center;
-            font-size: 20px;
-            padding: 10px 20px;
-            width: 250px;
-            position: relative;
-            overflow: hidden;
-            font-size: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-        }
-
-        .container-btn button span {
-
-            z-index: 10;
-
-        }
-
-        .container-btn button:hover:after {
-            position: absolute;
-            content: '';
-            border-radius: 1px;
-            background-color: #3B90BB;
-            height: 400px;
-            width: 400px;
-            top: -12px;
-            left: -13px;
-
-        }
-
-        .container-btn button:after {
-            position: absolute;
-            content: '';
-            border-radius: 30% 70% 70% 30% / 30% 22% 78% 70%;
-            background-color: #3B90BB;
-            height: 70px;
-            width: 80px;
-            top: -12px;
-            left: -13px;
-            transition: all 1s;
-        }
-
-
-
-        .live-stream-btn a {
-            position: absolute;
-            width: 200px;
-            height: 60px;
-            line-height: 60px;
-            text-decoration: none;
-            text-transform: uppercase;
-            font-size: 20px;
-            color: #0a7b79;
-            text-align: center;
-            font-weight: bolder;
-        }
-
-        .live-stream-btn a svg,
-        a svg rect {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            fill: transparent;
-        }
-
-        .live-stream-btn a svg rect {
-            stroke: #3B90BB;
-            stroke-width: 4;
-            transition: 2s;
-            stroke-dasharray: 60 200;
-            stroke-dashoffset: 300;
-
-        }
-
-        .live-stream-btn a:hover svg rect {
-            stroke: #0a7b79;
-            stroke-dasharray: 200 60;
-            stroke-dashoffset: 0;
-        }
-
-        /* Empowering Communities */
-        .site-heading {
-            margin-top: 5rem;
-            margin-bottom: 5rem;
-            text-transform: uppercase;
-            line-height: 1;
-
-        }
-
-        .site-heading .site-heading-upper {
-            display: block;
-            font-size: 3rem;
-            font-weight: 800;
-        }
-
-        .site-heading .site-heading-lower {
-            font-size: 2rem;
-            font-weight: 100;
-            line-height: 4rem;
-        }
-
-        .page-section {
-            margin-top: 1rem;
-            margin-bottom: 1rem;
-            line-height: 25px;
-        }
-
-        .section-heading {
-
-            text-transform: uppercase;
-        }
-
-        .section-heading .section-heading-upper {
-            display: block;
-            font-size: 1rem;
-            font-weight: 800;
-        }
-
-        .section-heading .section-heading-lower {
-            display: block;
-            font-size: 3rem;
-            font-weight: 100;
-        }
-
-        .bg-faded {
-            background-color: #d3f2e9;
-        }
-
-        .text-green {
-            color: #0a7b79;
-        }
-
-        @media (min-width: 992px) {
-            .product-item .product-item-title {
-                position: relative;
-                z-index: 1;
-                margin-bottom: -3rem;
-            }
-
-            .product-item .product-item-img {
-                position: relative;
-                z-index: 0;
-                max-width: 60vw;
-            }
-
-            .product-item .product-item-description {
-                position: relative;
-                z-index: 1;
-                margin-top: -3rem;
-                max-width: 50vw;
-            }
-
-            .site-heading {
-                margin-top: 5rem;
-                margin-bottom: 5rem;
-                text-transform: uppercase;
-                line-height: 1;
-
-            }
-
-            .site-heading .site-heading-upper {
-                display: block;
-                font-size: 3rem;
-                font-weight: 800;
-            }
-
-            .site-heading .site-heading-lower {
-                font-size: 2rem;
-                font-weight: 100;
-                line-height: 4rem;
-            }
-
-        }
-
-        @media (max-width: 441px) {
-            .section-heading .section-heading-upper {
-
-                font-size: 0.85rem;
-
-            }
-
-            .section-heading .section-heading-lower {
-                display: block;
-                font-size: 2rem;
-                font-weight: 100;
-            }
-
-        }
-
-        .img1 {
-            height: 10%;
-            width: 40%;
-        }
-
-        h2 {
-            color: #333;
-            text-align: center;
-            text-transform: uppercase;
-            font-family: "Roboto", sans-serif;
-            font-weight: bold;
-            position: relative;
-            margin: 25px 0 50px;
-        }
-
-        h2::after {
-            content: "";
-            width: 100px;
-            position: absolute;
-            margin: 0 auto;
-            height: 3px;
-            background: #ffdc12;
-            left: 0;
-            right: 0;
-            bottom: -10px;
-        }
-
-        .carousel {
-            width: 100%;
-            margin: 0 auto;
-            padding-bottom: 50px
-        }
-
-        .carousel .item {
-            color: #999;
-            font-size: 14px;
-            text-align: center;
-            overflow: hidden;
-            min-height: 340px;
-        }
-
-        .carousel .item a {
-            color: #eb7245
-        }
-
-        .carousel .img-box {
-            width: 145px;
-            height: 145px;
-            margin: 0 auto;
-            border-radius: 50%;
-        }
-
-        .carousel .img-box img {
-            width: 100%;
-            height: 100%;
-            display: block;
-            border-radius: 50%;
-        }
-
-        .carousel .testimonial {
-            padding: 30px 0 10px;
-        }
-
-        .testimonial {
-            color: #000000;
-            font: Times Roman;
-        }
-
-        .carousel .overview {
-            text-align: center;
-            padding-bottom: 5px;
-        }
-
-        .carousel .overview b {
-            color: #333;
-            font-size: 15px;
-            text-transform: uppercase;
-            display: block;
-            padding-bottom: 5px;
-        }
-
-        .carousel .star-rating i {
-            font-size: 18px;
-            color: #ffdc12;
-        }
-
-        .carousel .carousel-control {
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            background: #999;
-            text-shadow: none;
-            top: 4px;
-        }
-
-        .carousel-control i {
-            font-size: 20px;
-            margin-right: 2px;
-        }
-
-        .carousel-control.left {
-            left: auto;
-            right: 40px;
-        }
-
-        .carousel-control.right i {
-            margin-right: -2px;
-        }
-
-        .carousel .carousel-indicators {
-            bottom: 15px
-        }
-
-        .carousel-indicators li,
-        .carousel-indicators li.active {
-            width: 11px;
-            height: 11px;
-            margin: 1px 5px;
-            border-radius: 50%;
-        }
-
-        .carousel-indicators li {
-            background: #e2e2e2;
-            border-color: transparent;
-        }
-
-        .carousel-indicators li.active {
-            border: none;
-            background: #888;
-        }
-    </style>
-</head>
-
-<body>
-    <nav aria-label="breadcrumb animated slideInDown" style="margin-top: 9%; margin-left:15%;">
-        <ol class="breadcrumb text-uppercase mb-0 bg-white">
-            <li class="breadcrumb-item"><a class="text-black text-decoration-none" href="{% url 'main' %}">Home</a></li>
-            <li class="breadcrumb-item"><a class="text-black text-decoration-none"
-                    href="{% url 'main' %}#conference">Conference</a></li>
-            <li class="breadcrumb-item  active" aria-current="page" style="color: #0a7b79;">Triennial Conference</li>
-        </ol>
-    </nav>
-    <br><br>
-    <div class="row text-center">
-        <h1 class="display-4 fw-bold" style="color: #0a7b79;">LET US DREAM 2022</h1>
+<nav aria-label="breadcrumb animated slideInDown" class="cus-breadcrumb">
+    <ol class="breadcrumb text-uppercase mb-0 bg-white">
+        <li class="breadcrumb-item"><a class="text-black text-decoration-none" href="{% url 'main' %}">Home</a></li>
+        <li class="breadcrumb-item"><a class="text-black text-decoration-none"
+                href="{% url 'main' %}#conference">Conference</a></li>
+        <li class="breadcrumb-item  active" aria-current="page">Triennial Conference</li>
+    </ol>
+</nav>
+<br><br>
+<div class="row text-center">
+    <h1 class="display-4 fw-bold text-h3">LET US DREAM 2022</h1>
+</div>
+<div class="row text-center">
+    <h3>Triennial International Virtual Conference</h2>
+</div>
+<div class="row text-center">
+    <h4>Connecting Local Communities and Service Initiatives Through Global Networking</h3>
+</div>
+
+<br>
+<div class="container body-icons-container d-flex justify-content-center">
+    <div class="icon ">
+        <i class="fa fa-instagram"></i>
     </div>
-    <div class="row text-center">
-        <h3>Triennial International Virtual Conference</h2>
+    <div class="icon">
+        <i class="fa fa-facebook"></i>
     </div>
-    <div class="row text-center">
-        <h4>Connecting Local Communities and Service Initiatives Through Global Networking</h3>
+    <div class="icon">
+        <i class="fa fa-twitter"></i>
     </div>
+    <div class="icon">
+        <i class="fa fa-linkedin"></i>
+    </div>
+</div>
 
+<br>
+
+
+<!-- buttons section -->
+<div class="container">
+    <div class="row">
+        <img src="{% static 'conference/inf-pic1.jpg' %}" alt="">
+    </div>
     <br>
-    <div class="container body-icons-container d-flex justify-content-center">
-        <div class="icon ">
-            <i class="fa fa-instagram"></i>
+
+
+
+    <div class="row">
+        <div class="col-lg-12 d-flex justify-content-center live-stream-btn">
+            <a href="#">
+                <svg>
+                    <rect></rect>
+                </svg>
+                Live Streaming
+            </a>
         </div>
-        <div class="icon">
-            <i class="fa fa-facebook"></i>
+    </div>
+    <br><br><br><br>
+
+    <div class="row ">
+        <div class="col-lg-6 text-center align-self-center d-flex justify-content-end">
+            <div class="container-btn">
+                <a href="#"></a><button><span>Download Brochure</span></button></a>
+            </div>
         </div>
-        <div class="icon">
-            <i class="fa fa-twitter"></i>
-        </div>
-        <div class="icon">
-            <i class="fa fa-linkedin"></i>
+        <div class="col-lg-6 text-center align-self-center d-flex justify-content-start">
+            <div class="container-btn">
+                <a href="#"></a><button><span>Register Now</span></button></a>
+            </div>
         </div>
     </div>
 
     <br>
 
+    <div class="row align-self-center ml-5 mr-10">
+        <div class="col-lg-4 text-center align-self-center">
+            <a href="#"><button type="button" class="button"><span>Schedule</span></button></a>
+        </div>
+        <div class="col-lg-4 text-center align-self-center">
+            <a href=""> <button type="button" class="button"><span>Panel Discussion</span></button></a>
+        </div>
+        <div class="col-lg-4 text-center align-self-center">
+            <a href=""> <button type="button" class="button"><span>Promos</span></button></a>
+        </div>
+    </div>
 
-    <!-- buttons section -->
+    <br>
+    <div class="row ">
+        <div class="col-lg-3 text-center align-self-center">
+            <a href="#"><button type="button" class="button"><span>Keynote Speaker</span></button></a>
+        </div>
+        <div class="col-lg-3 text-center align-self-center">
+            <a href=""> <button type="button" class="button"><span>Unsung Heroes</span></button></a>
+        </div>
+        <div class="col-lg-3 text-center align-self-center">
+            <a href=""> <button type="button" class="button"><span>Newsletter</span></button></a>
+        </div>
+        <div class="col-lg-3 text-center align-self-center">
+            <a href=""> <button type="button" class="button"><span>Virtual Band</span></button></a>
+        </div>
+    </div>
+
+</div>
+
+<br><br><br><br><br>
+<!-- Empowering Community -->
+<h1>
+    <span class="site-heading-upper text-green d-flex justify-content-center font-weight-bold">EMPOWERING
+        COMMUNITIES</span>
+</h1>
+
+<section class="page-section">
     <div class="container">
-        <div class="row">
-            <img src="{% static 'conference/inf-pic1.jpg' %}" alt="">
-        </div>
-        <br>
-
-
-
-        <div class="row">
-            <div class="col-lg-12 d-flex justify-content-center live-stream-btn">
-                <a href="#">
-                    <svg>
-                        <rect></rect>
-                    </svg>
-                    Live Streaming
-                </a>
+        <div class="product-item">
+            <div class="product-item-title d-flex justify-content-end pb-5">
+                <img src="{% static 'conference/history.png' %}" alt="" class="img1">
+                <!-- <img src="https://cdni.iconscout.com/illustration/premium/thumb/vision-4352694-3611155.png" alt="" class="img1"> -->
             </div>
-        </div>
-        <br><br><br><br>
 
-        <div class="row ">
-            <div class="col-lg-6 text-center align-self-center d-flex justify-content-end">
-                <div class="container-btn">
-                    <a href="#"></a><button><span>Download Brochure</span></button></a>
-                </div>
-            </div>
-            <div class="col-lg-6 text-center align-self-center d-flex justify-content-start">
-                <div class="container-btn">
-                    <a href="#"></a><button><span>Register Now</span></button></a>
-                </div>
-            </div>
-        </div>
-
-        <br>
-
-        <div class="row align-self-center ml-5 mr-10">
-            <div class="col-lg-4 text-center align-self-center">
-                <a href="#"><button type="button" class="button"><span>Schedule</span></button></a>
-            </div>
-            <div class="col-lg-4 text-center align-self-center">
-                <a href=""> <button type="button" class="button"><span>Panel Discussion</span></button></a>
-            </div>
-            <div class="col-lg-4 text-center align-self-center">
-                <a href=""> <button type="button" class="button"><span>Promos</span></button></a>
-            </div>
-        </div>
-
-        <br>
-        <div class="row ">
-            <div class="col-lg-3 text-center align-self-center">
-                <a href="#"><button type="button" class="button"><span>Keynote Speaker</span></button></a>
-            </div>
-            <div class="col-lg-3 text-center align-self-center">
-                <a href=""> <button type="button" class="button"><span>Unsung Heroes</span></button></a>
-            </div>
-            <div class="col-lg-3 text-center align-self-center">
-                <a href=""> <button type="button" class="button"><span>Newsletter</span></button></a>
-            </div>
-            <div class="col-lg-3 text-center align-self-center">
-                <a href=""> <button type="button" class="button"><span>Virtual Band</span></button></a>
-            </div>
-        </div>
-
-    </div>
-
-    <br><br><br><br><br>
-    <!-- Empowering Community -->
-    <h1>
-        <span class="site-heading-upper text-green d-flex justify-content-center font-weight-bold">EMPOWERING
-            COMMUNITIES</span>
-    </h1>
-
-    <section class="page-section">
-        <div class="container">
-            <div class="product-item">
-                <div class="product-item-title d-flex justify-content-end pb-5">
-                    <img src="{% static 'conference/history.png' %}" alt="" class="img1">
-                    <!-- <img src="https://cdni.iconscout.com/illustration/premium/thumb/vision-4352694-3611155.png" alt="" class="img1"> -->
-                </div>
-
-                <div class="product-item-description d-flex me-auto">
-                    <div class="bg-faded p-4 rounded">
-                        <p class="mb-0">
-                            This year will mark the first Triennial International LET US DREAM Conference.
-                            The international conference offers an opportunity to explore and share the many
-                            and varied community-service possibilities and intervention models, as well as
-                            volunteer opportunities for younger and older generations. The primary intent
-                            is to create an inclusive, diverse, cross-cultural environment for sharing and
-                            growth through community improvement discourse among scholars, practitioners, and volunteers
-                            of all ages.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="page-section">
-        <div class="container">
-            <div class="product-item">
-                <div class="product-item-title d-flex justify-content-start pb-5">
-                    <img src="{% static 'conference/vision.png' %}" alt="" class="img1">
-                    <!-- <img src="https://img.freepik.com/premium-vector/history-typographic-header-history-school-subject-knowledge-past-ancient-civilization-idea-science-education-isolated-vector-illustration-flat-style_277904-13304.jpg?w=2000" alt="" class="img1"> -->
-                </div>
-                <div class="product-item-description d-flex ms-auto">
-                    <div class="bg-faded p-4 rounded">
-                        <p class="mb-0"> Empowering local communities for sustainable global impact and improvement.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="page-section">
-        <div class="container">
-            <div class="product-item">
-                <div class="product-item-title d-flex justify-content-end pb-5">
-                    <img src="{% static 'conference/mission.png' %}" alt="" class="img1">
-                    <!-- <img src="https://img.freepik.com/free-vector/illustration-business-mission_53876-26964.jpg?w=1380&t=st=1661846483~exp=1661847083~hmac=c1dd6034b1ca22a70cc41c77888aa8b74e505f85c90c199ff895a9f7d5c8df60" alt="" class="img1"> -->
-                </div>
-
-                <div class="product-item-description d-flex me-auto">
-                    <div class="bg-faded p-4 rounded">
-                        <p class="mb-0">
-                            The Let Us Dream Conference was established in 2017 for the purpose of providing a forum for
-                            sharing experiences with successes and challenges in community improvement organizations and
-                            efforts.
-                            <br>
-                            Broad conference goals are to:
-                        <ol>
-                            <li>Improve networking and collaboration among all those interested in community improvement
-                                organizations and programs;</li>
-                            <li>Promote volunteerism and empower all those involved in community improvement
-                                organizations and initiatives, including employees, volunteers, post-secondary students,
-                                researchers, and practitioners;</li>
-                            <li>Create a professional learning organization dedicated to improving local communities and
-                                characterized by a culture of shared researcher and practitioner knowledge, skills,
-                                theories, and best practices. </li>
-                        </ol>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <br>
-
-
-    <br><br>
-    <div class="container">
-        <h1>
-            <span class="site-heading-upper text-green d-flex justify-content-center font-weight-bold">Target
-                Audience</span>
-        </h1>
-        <div class="row">
-            <div class="col-20">
-                <span class="site-heading-upper d-flex justify-content-center">
-                    <ul>
-                        <li>To improve international networking and collaboration among all those interested in
-                            community improvement organizations and programs.</li>
-                        <li>To promote volunteerism and empower all those involved in local and global community
-                            improvement organizations and initiatives, including employees, volunteers, post-secondary
-                            students, researchers, and practitioners.</li>
-                        <li>To create a professional learning global community dedicated to improving local communities
-                            characterized by a diverse and inclusive culture of shared researcher and practitioner
-                            knowledge, skills, theories, and best practices.</li>
-                    </ul>
-                </span>
-            </div>
-        </div>
-    </div>
-    <section class="page-section">
-        <div class="container">
-            <div class="product-item">
-                <div class="product-item-title pb-5 d-flex justify-content-center">
-                    <img src="{% static 'conference/logoKeynote.png' %}" alt="" class="img1">
-                    <!-- <img src="https://www.thekeynotespeaker.org/key_content/uploads/2016/06/logoKeynote.png" alt="" class="img1"> -->
-                </div>
-                <br><br>
-                <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                    <!-- Carousel indicators -->
-                    <ol class="carousel-indicators">
-                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                        <li data-target="#myCarousel" data-slide-to="1"></li>
-                        <li data-target="#myCarousel" data-slide-to="2"></li>
-                    </ol> <!-- Wrapper for carousel items -->
-                    <div class="carousel-inner">
-                        <div class="item carousel-item active">
-                            <div class="img-box"><img src="{% static 'conference/tony.jpg' %}" alt="" class="img1">
-                            </div>
-                            <p class="testimonial">Phasellus vitae suscipit justo. Mauris pharetra feugiat ante id
-                                lacinia. Etiam faucibus mauris id tempor egestas. Duis luctus turpis at accumsan
-                                tincidunt. Phasellus risus risus, volutpat vel tellus ac, tincidunt fringilla massa.
-                                Etiam hendrerit dolor eget rutrum.</p>
-                            <p class="overview"><b>Paula Wilsons</b>Seo Analyst </p>
-                            <div class="star-rating"> </div>
-                        </div>
-                        <div class="item carousel-item">
-                            <div class="img-box"><img src="{% static 'conference/TRIENNIAL-CONFERENCE-POSTER2.jpg' %}"
-                                    alt=""></div>
-                            <p class="testimonial">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem
-                                tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper
-                                malesuada ante. Vestibulum idac nisl bibendum scelerisque non non purus. Suspendisse
-                                varius nibh non aliquet.</p>
-                            <p class="overview"><b>Paula Wilson</b>Media Analyst </p>
-                            <div class="star-rating"> </div>
-                        </div>
-                        <div class="item carousel-item">
-                            <div class="img-box"><img src="{% static 'conference/tony.jpg' %}" alt=""></div>
-                            <p class="testimonial">Vestibulum quis quam ut magna consequat faucibus. Pellentesque eget
-                                nisi a mi suscipit tincidunt. Utmtc tempus dictum risus. Pellentesque viverra sagittis
-                                quam at mattis. Suspendisse potenti. Aliquam sit amet gravida nibh, facilisis gravida
-                                odio. Phasellus auctor velit.</p>
-                            <p class="overview"><b>Antonio Moreno</b>Web Developer</p>
-                            <div class="star-rating"> </div>
-                        </div>
-                    </div> <!-- Carousel controls --> <a class="carousel-control left carousel-control-prev"
-                        href="#myCarousel" data-slide="prev"> <i class="fa fa-angle-left"></i> </a> <a
-                        class="carousel-control right carousel-control-next" href="#myCarousel" data-slide="next"> <i
-                            class="fa fa-angle-right"></i> </a>
-                </div>
-
-                <div class=" d-flex me-auto">
-
+            <div class="product-item-description d-flex me-auto">
+                <div class="bg-faded p-4 rounded">
                     <p class="mb-0">
-                        Each day will feature two internationally renowned keynote speakers
-                        addressing the major topic of the day (i.e., Education, Health, or Social Service).
-                        The first keynoter will speak from a research-based perspective and the second
-                        from a practitioner perspective.
+                        This year will mark the first Triennial International LET US DREAM Conference.
+                        The international conference offers an opportunity to explore and share the many
+                        and varied community-service possibilities and intervention models, as well as
+                        volunteer opportunities for younger and older generations. The primary intent
+                        is to create an inclusive, diverse, cross-cultural environment for sharing and
+                        growth through community improvement discourse among scholars, practitioners, and volunteers
+                        of all ages.
                     </p>
-
                 </div>
             </div>
-        </div>
-    </section>
-
-    <br><br><br>
-    <div class="container">
-        <h1>
-            <span class="site-heading-upper text-green d-flex justify-content-center font-weight-bold">CONFERENCE
-                SCHEDULE</span>
-        </h1>
-        <div class="row pg">
-            <div class="col-6">
-                <h2 class="text-center" style="font-size:26px"> <strong>Date: Nov 20-22, 2020</strong></h2>
-                <h2 class="text-center" style="font-size:26px"><strong> Time: 7.00 PM – 9.30 PM (IST)</strong></h2>
-                <p class="text-center" style="font-size:18px">7.00 PM – Welcome</p>
-                <p class="text-center" style="font-size:18px">7.05 PM – Official Opening</p>
-                <p class="text-center" style="font-size:18px">7.10 PM – Opening Keynote</p>
-                <p class="text-center" style="font-size:18px">7.40 PM – Panel Breakout</p>
-                <p class="text-center" style="font-size:18px">8.20 PM – Unsung heroes</p>
-                <p class="text-center" style="font-size:18px">8.45 PM – Closing Keynote</p>
-                <p class="text-center" style="font-size:18px">9.10 PM – Closing remarks</p>
-                <p class="text-center" style="font-size:18px">9.20 PM – Virtual Music Band</p>
-                <div class="text-center">
-                    <button type="button" class="button3 btn-primary text-center"
-                        style="background-color:#0c71c3;width:250px;height:30px;font-size:18px">Download Schedule
-                    </button>
-                </div>
-                <p class="text-center" style="font-size:13px;color:#008000"><b>All conference program times are in India
-                        Standard Time (IST). We are providing a time zone converter to assist you in converting IST to
-                        your local time:</b></p>
-                <div class="text-center">
-                    <button type="button" class="button3 text-center"
-                        style="color: #ffffff!important; border-radius: 11px;background-color: #3ec922; width:240px;height:50px;font-size:16px"><a
-                            href="https://www.timeanddate.com/worldclock/converter.html">Time Zone
-                            Converter</a></button>
-                </div>
-            </div>
-            <div class="col-6 ">
-                <img src="{% static 'conference/conf-as1.jpg' %}" height="500px" width='500px'>
-
-            </div>
-
         </div>
     </div>
+</section>
 
-    <br>
+<section class="page-section">
+    <div class="container">
+        <div class="product-item">
+            <div class="product-item-title d-flex justify-content-start pb-5">
+                <img src="{% static 'conference/vision.png' %}" alt="" class="img1">
+                <!-- <img src="https://img.freepik.com/premium-vector/history-typographic-header-history-school-subject-knowledge-past-ancient-civilization-idea-science-education-isolated-vector-illustration-flat-style_277904-13304.jpg?w=2000" alt="" class="img1"> -->
+            </div>
+            <div class="product-item-description d-flex ms-auto">
+                <div class="bg-faded p-4 rounded">
+                    <p class="mb-0"> Empowering local communities for sustainable global impact and improvement.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="page-section">
+    <div class="container">
+        <div class="product-item">
+            <div class="product-item-title d-flex justify-content-end pb-5">
+                <img src="{% static 'conference/mission.png' %}" alt="" class="img1">
+                <!-- <img src="https://img.freepik.com/free-vector/illustration-business-mission_53876-26964.jpg?w=1380&t=st=1661846483~exp=1661847083~hmac=c1dd6034b1ca22a70cc41c77888aa8b74e505f85c90c199ff895a9f7d5c8df60" alt="" class="img1"> -->
+            </div>
+
+            <div class="product-item-description d-flex me-auto">
+                <div class="bg-faded p-4 rounded">
+                    <p class="mb-0">
+                        The Let Us Dream Conference was established in 2017 for the purpose of providing a forum for
+                        sharing experiences with successes and challenges in community improvement organizations and
+                        efforts.
+                        <br>
+                        Broad conference goals are to:
+                    <ol>
+                        <li>Improve networking and collaboration among all those interested in community improvement
+                            organizations and programs;</li>
+                        <li>Promote volunteerism and empower all those involved in community improvement
+                            organizations and initiatives, including employees, volunteers, post-secondary students,
+                            researchers, and practitioners;</li>
+                        <li>Create a professional learning organization dedicated to improving local communities and
+                            characterized by a culture of shared researcher and practitioner knowledge, skills,
+                            theories, and best practices. </li>
+                    </ol>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<br>
+
+
+<br><br>
+<div class="container">
+    <h1>
+        <span class="site-heading-upper text-green d-flex justify-content-center font-weight-bold">Target
+            Audience</span>
+    </h1>
+    <div class="row">
+        <div class="col-20">
+            <span class="site-heading-upper d-flex justify-content-center">
+                <ul>
+                    <li>To improve international networking and collaboration among all those interested in
+                        community improvement organizations and programs.</li>
+                    <li>To promote volunteerism and empower all those involved in local and global community
+                        improvement organizations and initiatives, including employees, volunteers, post-secondary
+                        students, researchers, and practitioners.</li>
+                    <li>To create a professional learning global community dedicated to improving local communities
+                        characterized by a diverse and inclusive culture of shared researcher and practitioner
+                        knowledge, skills, theories, and best practices.</li>
+                </ul>
+            </span>
+        </div>
+    </div>
+</div>
+<section class="page-section">
+    <div class="container">
+        <div class="product-item">
+            <div class="product-item-title pb-5 d-flex justify-content-center">
+                <img src="{% static 'conference/logoKeynote.png' %}" alt="" class="img1">
+                <!-- <img src="https://www.thekeynotespeaker.org/key_content/uploads/2016/06/logoKeynote.png" alt="" class="img1"> -->
+            </div>
+            <br><br>
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <!-- Carousel indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                </ol> <!-- Wrapper for carousel items -->
+                <div class="carousel-inner">
+                    <div class="item carousel-item active">
+                        <div class="img-box"><img src="{% static 'conference/tony.jpg' %}" alt="" class="img1">
+                        </div>
+                        <p class="testimonial">Phasellus vitae suscipit justo. Mauris pharetra feugiat ante id
+                            lacinia. Etiam faucibus mauris id tempor egestas. Duis luctus turpis at accumsan
+                            tincidunt. Phasellus risus risus, volutpat vel tellus ac, tincidunt fringilla massa.
+                            Etiam hendrerit dolor eget rutrum.</p>
+                        <p class="overview"><b>Paula Wilsons</b>Seo Analyst </p>
+                        <div class="star-rating"> </div>
+                    </div>
+                    <div class="item carousel-item">
+                        <div class="img-box"><img src="{% static 'conference/TRIENNIAL-CONFERENCE-POSTER2.jpg' %}"
+                                alt=""></div>
+                        <p class="testimonial">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem
+                            tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper
+                            malesuada ante. Vestibulum idac nisl bibendum scelerisque non non purus. Suspendisse
+                            varius nibh non aliquet.</p>
+                        <p class="overview"><b>Paula Wilson</b>Media Analyst </p>
+                        <div class="star-rating"> </div>
+                    </div>
+                    <div class="item carousel-item">
+                        <div class="img-box"><img src="{% static 'conference/tony.jpg' %}" alt=""></div>
+                        <p class="testimonial">Vestibulum quis quam ut magna consequat faucibus. Pellentesque eget
+                            nisi a mi suscipit tincidunt. Utmtc tempus dictum risus. Pellentesque viverra sagittis
+                            quam at mattis. Suspendisse potenti. Aliquam sit amet gravida nibh, facilisis gravida
+                            odio. Phasellus auctor velit.</p>
+                        <p class="overview"><b>Antonio Moreno</b>Web Developer</p>
+                        <div class="star-rating"> </div>
+                    </div>
+                </div> <!-- Carousel controls --> <a class="carousel-control left carousel-control-prev"
+                    href="#myCarousel" data-slide="prev"> <i class="fa fa-angle-left"></i> </a> <a
+                    class="carousel-control right carousel-control-next" href="#myCarousel" data-slide="next"> <i
+                        class="fa fa-angle-right"></i> </a>
+            </div>
+
+            <div class=" d-flex me-auto">
+
+                <p class="mb-0">
+                    Each day will feature two internationally renowned keynote speakers
+                    addressing the major topic of the day (i.e., Education, Health, or Social Service).
+                    The first keynoter will speak from a research-based perspective and the second
+                    from a practitioner perspective.
+                </p>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<br><br><br>
+<div class="container">
+    <h1>
+        <span class="site-heading-upper text-green d-flex justify-content-center font-weight-bold">CONFERENCE
+            SCHEDULE</span>
+    </h1>
     <div class="row pg">
-        <div class="col d-flex justify-content-center">
-            <img src="{% static 'conference/Conference-Logos1.png' %}" height="150px" width='900px'>
-
+        <div class="col-6">
+            <h2 class="text-center fs-3"> <strong>Date: Nov 20-22, 2020</strong></h2>
+            <h2 class="text-center fs-3"><strong> Time: 7.00 PM – 9.30 PM (IST)</strong></h2>
+            <p class="text-center fs-5">7.00 PM – Welcome</p>
+            <p class="text-center fs-5">7.05 PM – Official Opening</p>
+            <p class="text-center fs-5">7.10 PM – Opening Keynote</p>
+            <p class="text-center fs-5">7.40 PM – Panel Breakout</p>
+            <p class="text-center fs-5">8.20 PM – Unsung heroes</p>
+            <p class="text-center fs-5">8.45 PM – Closing Keynote</p>
+            <p class="text-center fs-5">9.10 PM – Closing remarks</p>
+            <p class="text-center fs-5">9.20 PM – Virtual Music Band</p>
+            <div class="text-center">
+                <button type="button" class="button3 btn-primary text-center cus-but-1">Download Schedule
+                </button>
+            </div>
+            <p class="text-center fs-6 col-green"><b>All conference program times are in
+                    India
+                    Standard Time (IST). We are providing a time zone converter to assist you in converting IST to
+                    your local time:</b></p>
+            <div class="text-center">
+                <button type="button" class="button3 text-center cus-but-2 "><a class="text-decoration-none text-white"
+                        href="https://www.timeanddate.com/worldclock/converter.html" target="_blank">Time Zone
+                        Converter</a></button>
+            </div>
+        </div>
+        <div class="col-6 ">
+            <img src="{% static 'conference/conf-as1.jpg' %}" height="500px" width='500px'>
 
         </div>
-</body>
 
-</html>
+    </div>
+</div>
 
+<br>
+<div class="row pg">
+    <div class="col d-flex justify-content-center">
+        <img src="{% static 'conference/Conference-Logos1.png' %}" height="150px" width='900px'>
+
+
+    </div>
+
+</div>
 {% endblock %}
