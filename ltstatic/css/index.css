@@ -1,0 +1,384 @@
+body {
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+img {
+    width: 100%;
+    height: 85vh;
+}
+
+.banner {
+    margin-top: 5%;
+    width: 100%;
+    height: 85vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.slider {
+    width: 100%;
+    height: 85vh;
+    position: absolute;
+    top: 0;
+}
+
+#slideImg {
+    width: 100%;
+    height: 100%;
+    animation: zoom 3s linear infinite;
+}
+
+@keyframes zoom {
+    0% {
+        transform: scale(1.3);
+    }
+
+    15% {
+        transform: scale(1);
+    }
+
+    85% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.3);
+    }
+}
+
+.overlay {
+    width: 100%;
+    height: 85vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+    position: absolute;
+}
+
+
+.content {
+    width: 60%;
+    margin: 160px auto 0;
+    text-align: center;
+    color: #ffffff;
+}
+
+.content h1 {
+    font-size: 60px;
+    font-size: 5rem;
+    font-family: 'Roboto Slab', serif;
+}
+
+.content h3 {
+    width: 80%;
+    margin: 20px auto 50px;
+    font-weight: 100;
+    line-height: 25px;
+}
+
+.btn-1 {
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 0 15px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #d3f2e9;
+    background: #d3f2e9;
+    color: #0a7b79;
+    transition: background 0.5s;
+}
+
+.btn-1:hover {
+    background: transparent;
+    border: 2px solid #fff;
+}
+
+.btn-2 {
+    background: transparent;
+    border: 2px solid #fff;
+    width: 150px;
+    padding: 15px 0;
+    text-align: center;
+    border-radius: 25px;
+    font-weight: bold;
+    color: #0a7b79;
+}
+
+.btn-2:hover {
+    border: 2px solid #d3f2e9;
+    background: #d3f2e9;
+}
+
+.container {
+    font-size: 12px;
+    color: #666666;
+}
+
+.card-custom {
+    border-radius: 25px;
+    overflow: hidden;
+    min-height: 450px;
+    box-shadow: 0 0 15px rgba(10, 10, 10, 0.3);
+}
+
+.card-custom-img {
+    height: 200px;
+    min-height: 200px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-color: inherit;
+}
+
+.card-custom-img::after {
+    position: absolute;
+    content: '';
+    top: 170px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-top-width: 40px;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 545px;
+    border-left-width: calc(575px - 5vw);
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: inherit;
+}
+
+/* #container-body{
+        background: linear-gradient(-100deg,#B8FFF9 50%, #EFFFFD 50%);
+        height: 70vh;
+        font-family: 'Montserrat', sans-serif;
+      } */
+
+.img-text {
+    width: 100%;
+    height: 400px;
+    display: block;
+    text-align: center;
+    padding: 40% 5%;
+    background: #d3f2e9;
+    /* 0a7b79 */
+    color: #0a7b79;
+    border-radius: 30px;
+}
+
+.img-text h2 {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 25px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.img-text p {
+    font-size: 14px;
+}
+
+.single-box {
+    position: relative;
+    margin-left: 10px;
+    margin-bottom: 30px;
+}
+
+.img-area {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border: 5px solid #7ca8a1;
+    overflow: hidden;
+    top: 15px;
+    left: 125px;
+    border-radius: 50%;
+}
+
+.img-area img {
+    width: 100%;
+}
+
+.carousel-indicators {
+    left: 0;
+    top: auto;
+    bottom: -20px;
+}
+
+.carousel-indicators li {
+    background: #0a7b79;
+    box-shadow: inset 1px 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.carousel-indicators :active {
+    background: #0a7b79;
+}
+
+.carousel-indicators.img-area {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border: 5px solid #fff;
+    overflow: hidden;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+
+.button-testi {
+    width: 200px;
+    padding: 12px 0;
+    text-align: center;
+    margin: 0 15px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #d3f2e9;
+    background: #d3f2e9;
+    color: #0a7b79;
+    transition: background 0.5s;
+}
+
+
+.container-fluid h1 {
+    font-weight: bolder;
+    font-size: 3rem;
+}
+
+.img1 {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.container h1 {
+    font-size: 3rem !important;
+    font-weight: bolder !important;
+}
+
+body h3 {
+    color: #7ca8a1;
+    font-weight: bolder !important;
+}
+
+
+h6 {
+    padding-top: 2%;
+    padding-bottom: 2%
+}
+
+h1:after {
+    content: "";
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+    padding-top: 20px;
+    border-bottom: 2px solid transparent;
+    border-image: linear-gradient(0.90turn, rgb(255, 255, 255), rgb(0, 0, 0), rgb(255, 255, 255));
+    border-image-slice: 1;
+}
+
+h1 {
+    padding-top: 0px;
+    padding-bottom: 10px;
+
+    font-size: 30px;
+
+}
+
+h6 {
+    padding-top: 2%;
+    padding-bottom: 2%
+}
+
+.text-h1 {
+    padding-top: 160px;
+}
+
+.text-h3 {
+    color: #0a7b79 !important;
+}
+
+.row-index {
+    margin-top: 5%;
+}
+
+.flu-con {
+    width: 100% !important;
+}
+
+.text-h1-cen {
+    color: #7ca8a1 !important;
+}
+
+.row-2 {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.card-1 {
+    height: 100%;
+    width: 100%;
+}
+
+.cb-1 {
+    overflow-y: auto
+}
+
+.card-f1 {
+    background: inherit;
+    border-color: inherit;
+
+}
+
+.card-t1 {
+    text-align: justify;
+}
+
+.card-img1 {
+    background-image: url(../../ltstatic/home/program.webp);
+    margin-top: 2%;
+}
+
+.card-img2 {
+    background-image: url(../../ltstatic/home/proclub.png);
+    margin-top: 2%;
+}
+
+.card-img3 {
+    background-image: url(../../ltstatic/home/band.webp);
+    margin-top: 2%;
+}
+
+.card-img4 {
+    background-image: url(../../ltstatic/home/conferences.jpg);
+    margin-top: 2%;
+}
+
+.cf-2 {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    padding-top: 5%;
+    padding-bottom: 8%;
+    background-color: #d3f2e9 !important;
+}
+
+.row-3 {
+    margin-top: 3%;
+}
+
+.cf-3 {
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.big-h3 {
+    padding: 0 7% 0 7%;
+}
+
+.row-4 {
+    margin-top: 3%;
+    padding-left: 20%;
+    padding-right: 20%;
+
+}

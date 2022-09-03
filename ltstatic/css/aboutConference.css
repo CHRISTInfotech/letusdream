@@ -1,0 +1,79 @@
+.section {
+    margin-top: 150px;
+}
+
+/*ZoomIn Hover Effect*/
+.hover-zoomin a {
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+
+.hover-zoomin img {
+    width: 100%;
+    height: auto;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+.hover-zoomin:hover img {
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+/* image section */
+.card {
+    max-width: 1000px;
+    width: 100%;
+    padding: 4rem;
+    align-items: center;
+    color: #000;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+}
+
+.align-ca-center {
+    align-content: center;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+}
+
+@media(max-width:768px) {
+    .card {
+        width: 100%;
+        padding: 1.5rem
+    }
+}
+
+.info {
+    padding: 6vh 0vh
+}
+
+@media(max-width:768px) {
+    .info {
+        padding: 0
+    }
+}
+
+
+img {
+    height: fit-content;
+    width: 95%;
+    padding: 1rem
+}
+
+@media(max-width:768px) {
+    img {
+        padding: 2.5rem 0
+    }
+}
+
+.title .col {
+    padding: 0
+}

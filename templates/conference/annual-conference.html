@@ -5,225 +5,135 @@
 Annual Conference
 {% endblock %}
 
+
+{% block extraStyles %}
+<link rel="stylesheet" href="{% static 'css/annual-conference.css' %}">
+{% endblock extraStyles %}
+
+{% block links %}
+<!--Google font-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+<!--  Bootstrap CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+
+<!-- Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
+
+
+{% endblock links %}
 {% block content %}
-<!DOCTYPE html>
-<html lang="en">
+<nav aria-label="breadcrumb animated slideInDown" class="cus-breadcrumb">
+    <ol class="breadcrumb text-uppercase mb-0 bg-white">
+        <li class="breadcrumb-item"><a class="text-black" href="{% url 'main' %}">Home</a></li>
+        <li class="breadcrumb-item"><a class="text-black" href="{% url 'main' %}#conference">Conference</a></li>
+        <li class="breadcrumb-item  active" aria-current="page">Annual Conference</li>
+    </ol>
+</nav>
+<br>
+<h1>Annual Conference</h1>
+<h3 class="big-heading">"The chance to reconnect with people in person, talk over key topics, and go to some great
+    sessions was
+    invaluable."</h3>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Annual Conference</title>
+<div class="container">
+    <div class="row cus-row">
 
-    <!--Google font-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-
-    <!--  Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-    <!-- Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
-
-    <style>
-        body {
-            font-family: 'Montserrat', sans-serif;
-        }
-
-        h1 {
-            text-align: center;
-            color: #7ca8a1;
-            font-weight: bolder;
-            text-transform: uppercase;
-        }
-
-        .card {
-            position: relative;
-            overflow: hidden;
-        }
-
-        .card::before {
-            position: absolute;
-            content: '';
-            width: 80%;
-            height: 220%;
-            background: rgba(211, 242, 233, 0.7);
-            top: -50%;
-            left: -100%;
-            z-index: 1;
-            transform: rotate(25deg);
-            transform-origin: center top 0;
-            transition: 0.5s;
-        }
-
-        .card:hover:before {
-            left: 10%;
-        }
-
-        .card img {
-            width: 100%;
-            height: 100% !important;
-        }
-
-        .card-text {
-            width: 100%;
-            padding: 0 20px;
-            position: absolute;
-            top: -100%;
-            color: #0a7b79;
-            left: 0;
-            z-index: 2;
-            transition: 1.1s;
-        }
-
-        .card:hover .card-text {
-            top: 80px;
-        }
-
-        .row {
-            padding-bottom: 2% !important;
-        }
-
-        .img1 {
-            width: 100% !important;
-            height: 100% !important;
-        }
-
-        .big-heading {
-            color: #0a7b79;
-            text-align: center;
-            font-weight: bolder;
-        }
-
-        h5 {
-            color: #0a7b79;
-            font-weight: bolder !important;
-        }
-
-        .text-black {
-            text-decoration: none !important;
-        }
-    </style>
-</head>
-
-<body>
-    <nav aria-label="breadcrumb animated slideInDown" style="margin-top: 9%; margin-left:15%;">
-        <ol class="breadcrumb text-uppercase mb-0 bg-white">
-            <li class="breadcrumb-item"><a class="text-black" href="{% url 'main' %}">Home</a></li>
-            <li class="breadcrumb-item"><a class="text-black" href="{% url 'main' %}#conference">Conference</a></li>
-            <li class="breadcrumb-item  active" aria-current="page" style="color: #0a7b79;">Annual Conference</li>
-        </ol>
-    </nav>
-    <br>
-    <h1>Annual Conference</h1>
-    <h3 class="big-heading">"The chance to reconnect with people in person, talk over key topics, and go to some great
-        sessions was
-        invaluable."</h3>
-
-    <div class="container">
-        <div class="row" style="margin-top: 3%;">
-
-            <div class="col-md-4 col-sm-6">
-                <a href="{% url 'louisiana-tech-university' %}">
-                    <div class="card">
-                        <img src="{% static 'conference/LouisianaTechUniversity.jpg' %}">
-                        <div class="card-text">
-                            <h3>Louisiana Tech University</h3>
-                            <h5>Louisiana</h5>
-                        </div>
+        <div class="col-md-4 col-sm-6">
+            <a href="{% url 'louisiana-tech-university' %}">
+                <div class="card">
+                    <img src="{% static 'conference/LouisianaTechUniversity.jpg' %}">
+                    <div class="card-text">
+                        <h3>Louisiana Tech University</h3>
+                        <h5>Louisiana</h5>
                     </div>
-                </a>
-                <center>
-                    <h5>Louisiana</h5>
-                </center>
-            </div>
+                </div>
+            </a>
 
-            <div class="col-md-4 col-sm-6">
-                <a href="{% url 'binghamton-university-new-york' %}">
-                    <div class="card">
-                        <img src="{% static 'conference/BinghamtonUniversity.jpeg' %}" class="img1">
-                        <div class="card-text">
-                            <h3>Binghamton University</h3>
-                            <h5>New York</h5>
-                        </div>
-                    </div>
-                </a>
-                <center>
-                    <h5>New York</h5>
-                </center>
-
-            </div>
-
-            <div class="col-md-4 col-sm-6">
-                <a href="{% url 'christ-university-bangalore' %}">
-                    <div class="card">
-                        <img src="{% static 'conference/christ-university-bangalore.jpg' %}" class="img1">
-                        <div class="card-text">
-                            <h3>Christ
-                                <br>
-                                University
-                            </h3>
-                            <h5>Bangalore</h5>
-                        </div>
-                    </div>
-                </a>
-                <center>
-                    <h5>Bangalore</h5>
-                </center>
-            </div>
+            <h5 class="text-center">Louisiana</h5>
 
         </div>
-        <div class="row">
-            <div class="col-md-4 col-sm-6">
-                <a href="{% url 'christ-university-thiruvananthapuram' %}">
-                    <div class="card">
-                        <img src="{% static 'conference/Christ-thrivandrum.jpg' %}" class="img1">
-                        <div class="card-text">
-                            <h3>CHRIST <br> University</h3>
-                            <h5>Thiruvananthapuram</h5>
-                        </div>
+
+        <div class="col-md-4 col-sm-6">
+            <a href="{% url 'binghamton-university-new-york' %}">
+                <div class="card">
+                    <img src="{% static 'conference/BinghamtonUniversity.jpeg' %}" class="img1">
+                    <div class="card-text">
+                        <h3>Binghamton University</h3>
+                        <h5>New York</h5>
                     </div>
+                </div>
+            </a>
 
-                    
+            <h5 class="text-center">New York</h5>
 
-                </a>
-                <center>
-                    <h5>Thiruvananthapuram</h5>
-                </center>
 
-            </div>
-
-            <div class="col-md-4 col-sm-6">
-                <a href="{% url 'jyoti-nivas-college-autonomous' %}">
-                    <div class="card">
-                        <img src="{% static 'conference/JyotiNivasCollege.jpg' %}" class="img1">
-                        <div class="card-text">
-                            <h3>Jyoti Nivas College Autonomous</h3>
-                            <h5>Bangalore</h5>
-                        </div>
-                    </div>
-                </a>
-                <center>
-                    <h5>Bangalore</h5>
-                </center>
-            </div>
         </div>
 
+        <div class="col-md-4 col-sm-6">
+            <a href="{% url 'christ-university-bangalore' %}">
+                <div class="card">
+                    <img src="{% static 'conference/christ-university-bangalore.jpg' %}" class="img1">
+                    <div class="card-text">
+                        <h3>Christ
+                            <br>
+                            University
+                        </h3>
+                        <h5>Bangalore</h5>
+                    </div>
+                </div>
+            </a>
 
+            <h5 class="text-center">Bangalore</h5>
 
-
+        </div>
 
     </div>
+    <div class="row">
+        <div class="col-md-4 col-sm-6">
+            <a href="{% url 'christ-university-thiruvananthapuram' %}">
+                <div class="card">
+                    <img src="{% static 'conference/Christ-thrivandrum.jpg' %}" class="img1">
+                    <div class="card-text">
+                        <h3>CHRIST <br> University</h3>
+                        <h5>Thiruvananthapuram</h5>
+                    </div>
+                </div>
+
+
+
+            </a>
+
+            <h5 class="text-center">Thiruvananthapuram</h5>
+
+
+        </div>
+
+        <div class="col-md-4 col-sm-6">
+            <a href="{% url 'jyoti-nivas-college-autonomous' %}">
+                <div class="card">
+                    <img src="{% static 'conference/JyotiNivasCollege.jpg' %}" class="img1">
+                    <div class="card-text">
+                        <h3>Jyoti Nivas College Autonomous</h3>
+                        <h5>Bangalore</h5>
+                    </div>
+                </div>
+            </a>
+
+            <h5 class="text-center">Bangalore</h5>
+
+        </div>
+    </div>
+
+
+
+
+
+</div>
 </body>
 
 </html>

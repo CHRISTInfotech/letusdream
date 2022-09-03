@@ -1,0 +1,83 @@
+.view-container {
+
+    position: relative;
+    min-height: 100vh;
+
+}
+
+.view-container h1 {
+    font-size: 3rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+    padding: 15px;
+    color: #0a7b79;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.view-container .image-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    padding: 10px;
+}
+
+.view-container .image-container .image {
+    height: 250px;
+    width: 350px;
+    border: 10px solid #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .1);
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.view-container .image-container .image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: .2s linear;
+}
+
+.view-container .image-container .image:hover img {
+    transform: scale(1.1);
+}
+
+.view-container .popup-image {
+    position: fixed;
+    top: 5%;
+    left: 0;
+    background: rgba(0, 0, 0, 0.9);
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: none;
+}
+
+.view-container .popup-image span {
+    position: absolute;
+    top: 10%;
+    right: 10px;
+    font-size: 40px;
+    font-weight: bolder;
+    color: #fff;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.view-container .popup-image img {
+    position: absolute;
+    top: 53%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    width: 60%;
+    height: 80%;
+}
+
+@media(max-width:768px) {
+    .view-container .popup-image img {
+        width: 95%;
+
+    }
+}

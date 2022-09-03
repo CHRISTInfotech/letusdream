@@ -5,87 +5,22 @@
 About Conference
 {% endblock %}
 
+
+
+{% block extraStyles %}
+<link rel="stylesheet" href="{% static 'css/aboutConference.css' %}">
+{% endblock extraStyles %}
+
+{% block links %}
+{% endblock links %}
+
 {% block content %}
-<style>
-    .section {
-        margin-top: 150px;
-    }
-
-    /*ZoomIn Hover Effect*/
-    .hover-zoomin a {
-        display: block;
-        position: relative;
-        overflow: hidden;
-    }
-
-    .hover-zoomin img {
-        width: 100%;
-        height: auto;
-        -webkit-transition: all 0.5s ease-in-out;
-        -moz-transition: all 0.5s ease-in-out;
-        -o-transition: all 0.5s ease-in-out;
-        -ms-transition: all 0.5s ease-in-out;
-        transition: all 0.5s ease-in-out;
-    }
-
-    .hover-zoomin:hover img {
-        -webkit-transform: scale(1.2);
-        -moz-transform: scale(1.2);
-        -o-transform: scale(1.2);
-        -ms-transform: scale(1.2);
-        transform: scale(1.2);
-    }
-
-    /* image section */
-    .card {
-        max-width: 1000px;
-        width: 100%;
-        padding: 4rem;
-        align-items: center;
-        color: #000;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
-    }
-
-    @media(max-width:768px) {
-        .card {
-            width: 100%;
-            padding: 1.5rem
-        }
-    }
-
-    .info {
-        padding: 6vh 0vh
-    }
-
-    @media(max-width:768px) {
-        .info {
-            padding: 0
-        }
-    }
-
-
-    img {
-        height: fit-content;
-        width: 95%;
-        padding: 1rem
-    }
-
-    @media(max-width:768px) {
-        img {
-            padding: 2.5rem 0
-        }
-    }
-
-    .title .col {
-        padding: 0
-    }
-</style>
 <section class="section">
-    <nav aria-label="breadcrumb animated slideInDown" style="margin-top: 9%; margin-left:15%;">
+    <nav aria-label="breadcrumb animated slideInDown" class="cus-breadcrumb">
         <ol class="breadcrumb text-uppercase mb-0 bg-white">
             <li class="breadcrumb-item"><a class="text-black text-decoration-none" href="{% url 'main' %}">Home</a></li>
             <!-- <li class="breadcrumb-item"><a class="text-black text-decoration-none" href="{% url 'main' %}#location">Location</a></li> -->
-            <li class="breadcrumb-item  active" aria-current="page" style="color: #0a7b79;">About Conference</li>
+            <li class="breadcrumb-item  active" aria-current="page">About Conference</li>
         </ol>
     </nav>
     <h1 class="mb-4  fw-bold text-center fs-1 text-green text-uppercase heading-h3">About Conference</h1>
@@ -145,7 +80,7 @@ About Conference
                         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
                             aria-label="Slide 3"></button>
                     </div>
-                    <div class="carousel-inner align-items-center" style="border-radius: 20px; ">
+                    <div class="carousel-inner align-items-center rounded ">
                         <div class="carousel-item active">
                             <img src="{% static 'conference/slider1.jpg' %}" class="d-block w-100"
                                 alt="DREAMS Program" />
@@ -231,48 +166,48 @@ About Conference
         </div>
     </div>
     <div class="bg-light py-5">
-        <div class="container">
-            <div id="demo" class="carousel slide" data-ride="carousel">
-                <center>
-                    <div class="carousel-inner mb-5">
-                        <div class="carousel-item active">
-                            <div class="card">
+        <div class="container d-flex justify-content-center">
+            <div id="demo" class="carousel slide align-ca-center" data-ride="carousel">
+
+                <div class="carousel-inner mb-5">
+                    <div class="carousel-item active">
+                        <div class="card">
 
 
-                                <div class="col-md-12 text-center align-self-center">
-                                    <div class="col-md-12">
-                                        <h2 class="text-center mb-2">IMPLEMENTATION</h2>
-                                    </div>
-                                    <div class=" text-right p-5">
-                                        <p>The LET US DREAM Conference is implemented at three
-                                            levels: in collaboration with Universities, Communities and
-                                            Organizations</p>
-                                    </div>
-                                    <img class="img-fluid" src="{% static 'conference/Conference4.jpg' %}">
+                            <div class="col-md-12 text-center align-self-center">
+                                <div class="col-md-12">
+                                    <h2 class="text-center mb-2">IMPLEMENTATION</h2>
                                 </div>
-                                <div class="col-md-12 info ">
-
-
-
-                                    <p class="p-5 text-muted font-italic">The conference has also been expanded into
-                                        different levels during its course: Annual
-                                        Community conference and Triennial- International conference at four locations.
-                                    </p>
-
+                                <div class=" text-right p-5">
+                                    <p>The LET US DREAM Conference is implemented at three
+                                        levels: in collaboration with Universities, Communities and
+                                        Organizations</p>
                                 </div>
+                                <img class="img-fluid" src="{% static 'conference/Conference4.jpg' %}">
+                            </div>
+                            <div class="col-md-12 info ">
 
+
+
+                                <p class="p-5 text-muted font-italic">The conference has also been expanded into
+                                    different levels during its course: Annual
+                                    Community conference and Triennial- International conference at four locations.
+                                </p>
 
                             </div>
-                        </div>
 
+
+                        </div>
                     </div>
-                </center>
+
+                </div>
+
             </div>
         </div>
     </div>
 
 
-    <div class=" py-5" style=" background-color:#daf1f7 ;">
+    <div class=" py-5 bg-greenlight">
         <div class="container py-5">
             <div class="row">
                 <h2 class="fw-bold text-center ">A network of local conferences implemented globally </h2>

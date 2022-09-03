@@ -8,10 +8,10 @@ ABOUT US
 {% block content %}
 
 <section class="aboutus">
-    <nav aria-label="breadcrumb animated slideInDown" style="margin-top: 9%; margin-left:15%;">
+    <nav class="cus-breadcrumb" aria-label="breadcrumb animated slideInDown ">
         <ol class="breadcrumb text-uppercase mb-0 bg-white">
             <li class="breadcrumb-item"><a class="text-black text-decoration-none" href="{% url 'main' %}">Home</a></li>
-            <li class="breadcrumb-item  active" aria-current="page" style="color: #0a7b79;">ABOUT US</li>
+            <li class="breadcrumb-item  active " aria-current="page">ABOUT US</li>
         </ol>
     </nav>
     <div class="container-fluid main-about">
@@ -20,9 +20,9 @@ ABOUT US
 
 
                 <div class="col-lg-12">
-                    <h1 style="text-align:center; padding-bottom: 20px; margin-top: -120px;" class="heading-h1">Let Us
+                    <h1 class="heading-h1 text-center about-cus-h1">Let Us
                         Dream Story</h1>
-                    <p style="text-align:center;color: #666666; padding-bottom: 50px;"><b>A journey of transforming
+                    <p class="text-center about-cus-p"><b>A journey of transforming
                             dreams
                             into
                             action</b></p>
@@ -41,13 +41,13 @@ ABOUT US
         <div class="row text-center">
 
             <div class="pg col-md-12">
-                <p style="text-align:justify"> LET US DREAM is a locally rooted and globally established
+                <p class="text-justify"> LET US DREAM is a locally rooted and globally established
                     Not-for-Profit
                     Organization. It was conceived with the idea to create holistically developed communities world
                     over. It
                     has
                     strived for this since its inception.</p>
-                <p style="text-align:justify"> We, at LET US DREAM, firmly vouch in the idea of a global family,
+                <p class="text-justify"> We, at LET US DREAM, firmly vouch in the idea of a global family,
                     where
                     each
                     individual and each society works interdependently to create a sustainable world. The program is
@@ -55,7 +55,7 @@ ABOUT US
                     lead
                     this
                     vision of holistic development in the growth of individuals and the society.</p>
-                <p style="text-align:justify"> LET US DREAM operates using an impactful and effective
+                <p class="text-justify"> LET US DREAM operates using an impactful and effective
                     community-based
                     working
                     model that join people together while also bridging community organizations together. LET US
@@ -69,37 +69,38 @@ ABOUT US
                     vision
                     through
                     its four unique projects:</p>
-                <p style="text-align:justify">
-                    <a href="{% url 'dreams' 'program' %}" style="text-decoration: none;" class="div-link">DREAMS
+                <p class="text-justify">
+                    <a href="{% url 'dreams' 'program' %}" class="div-link text-decoration-none">DREAMS
                         Program</a> ,
                     &nbsp;
-                    <a href="{% url 'dreams' 'band' %}" style="text-decoration: none;" class="div-link">DREAMS
+                    <a href="{% url 'dreams' 'band' %}" class="div-link text-decoration-none"">DREAMS
                         Band</a>
                     ,
                     &nbsp;
-                    <a href="{% url 'dreams' 'proclub' %}" style="text-decoration: none;" class="div-link">DREAMS
+                    <a href=" {% url 'dreams' 'proclub' %}" class="div-link text-decoration-none"">DREAMS
                         Pro
                         Club</a> ,
                     &nbsp;
-                    <a href="{% url 'about-conference' %}" style="text-decoration: none;" class="div-link">Let Us
+                    <a href=" {% url 'about-conference' %}" class="div-link text-decoration-none"">Let Us
                         Dream
                         Conferences</a>
                 </p>
 
-                <p style="text-align:justify">Mahatma Gandhi’s philosophy of “Be the Change you wish to see in the
-                    World”
-                    has been our motto and a
-                    guiding
-                    principle since our inception. The LET US DREAM team has always been inspired by the quote of
-                    the
-                    Saint
-                    of
-                    the Gutters, Mother Teresa. She said, “What we are doing is just a drop in the ocean. But if
-                    that
-                    drop
-                    was
-                    not in the ocean, I think the ocean would be less because of that missing drop.”</p>
-                <p style="text-align:justify">Inspired thus, LET US DREAM extends an invitation to every individual
+                <p class=" text-justify">Mahatma Gandhi’s philosophy of “Be the Change you wish to see in the
+                        World”
+                        has been our motto and a
+                        guiding
+                        principle since our inception. The LET US DREAM team has always been inspired by the quote of
+                        the
+                        Saint
+                        of
+                        the Gutters, Mother Teresa. She said, “What we are doing is just a drop in the ocean. But if
+                        that
+                        drop
+                        was
+                        not in the ocean, I think the ocean would be less because of that missing drop.”
+                </p>
+                <p class="text-justify">Inspired thus, LET US DREAM extends an invitation to every individual
                     to
                     join
                     this global community in
@@ -107,7 +108,7 @@ ABOUT US
                     to raise and uplift our societies to progressive and better living standards so that we and the
                     generations
                     to come may reap the benefits of the seeds we sow today.</p>
-                <p style="text-align:justify">Each of us is called to act as a catalyst to positively impact another
+                <p class="text-justify">Each of us is called to act as a catalyst to positively impact another
                     person
                     in our life’s time. Each of
                     us
@@ -121,7 +122,7 @@ ABOUT US
 
             <div class="pg col-md-12">
                 <h3 class="heading-h3 text-green text-center">EMPOWERING COMMUNITIES</h3>
-                <p style="text-align:justify">The LET US DREAM organizational culture is rooted in the universal human
+                <p class="text-justify">The LET US DREAM organizational culture is rooted in the universal human
                     values
                     after the vision of St.
                     Kuriakose Elias Chavara, that is, the integral formation of a person and commitment to the society.
@@ -137,14 +138,14 @@ ABOUT US
             </div>
 
             <div class="container d-flex justify-content-center img-middle">
-                <a href="{% static 'Aboutus/about us.png' %}" target="_blank"> <img
-                        src="{% static 'Aboutus/about us.png' %}" style="border-radius: 25px; "></a>
+                <a href="{% static 'Aboutus/about us.png' %}"> <img src="{% static 'Aboutus/about us.png' %}"
+                        class="rounded"></a>
             </div>
 
             <div class="pg">
                 <div class="row">
                     <div class="col-lg-9 col-md-9">
-                        <p style="text-align:justify">Finding his own confidence through music, Father Reverend Lijo
+                        <p class="text-justify">Finding his own confidence through music, Father Reverend Lijo
                             Thomas
                             Pathickal, CMI, wanted to
                             assist people to help children who are under confident, shy and struggle to showcase their
@@ -158,7 +159,7 @@ ABOUT US
                             of Rev Fr Lijo Thomas to help the others has helped the project stay afloat for many years
                             now.
                         </p>
-                        <p style="text-align:justify">The Project gradually expanded but the turning point came in 2010,
+                        <p class="text-justify">The Project gradually expanded but the turning point came in 2010,
                             while
                             he was pursuing his Ph.D. in
                             Educational Leadership, at the University of Louisiana, Monroe. His mentor at the time, Dr
@@ -184,7 +185,7 @@ ABOUT US
                             for
                             success.
                         </p>
-                        <p style="text-align:justify">A motivation and an inspiration, Father Reverend Lijo Thomas
+                        <p class="text-justify">A motivation and an inspiration, Father Reverend Lijo Thomas
                             Pathickal
                             has
                             purposed his life to
@@ -192,102 +193,102 @@ ABOUT US
 
                     </div>
                     <div class="col-lg-3 col-md-3">
-                        <div class="card-shadow" style="border-radius: 20px">
+                        <div class="card-shadow rounded">
                             <a href="https://www.facebook.com/lijo.pathickal.5" target="_blank">
                                 <img src="{% static 'Aboutus/aboutus-lijo.png' %}"
                                     href="https://www.facebook.com/lijo.pathickal.5" class="card-img-top p-3"
                                     alt="Dr. Fr. Lijo Thomas CMI">
                             </a>
                             <div class="card-body">
-                                <h5 class="card-head" style="color: #755400">Dr. Fr. Lijo Thomas CMI</h5>
-                                <p class="card-text" style="color: #8585bd">Founder/Director</p>
+                                <h5 class="card-head text-brown">Dr. Fr. Lijo Thomas CMI</h5>
+                                <p class="card-text text-violet">Founder/Director</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="pg">
-                <h2 class="heading-h3 text-green" style="text-align:center">Leadership Team
+                <h2 class="heading-h3 text-green text-center">Leadership Team
                 </h2>
-                <div class="container" style=" margin-top: 30px;">
+                <div class="container about-cus-con">
                     <div class="row">
                         <div class="col-lg-2 col-md-4 col-sm-12">
-                            <div class="card-shadow" style="border-radius: 20px">
+                            <div class="card-shadow rounded">
                                 <a href="https://www.facebook.com/lijo.pathickal.5" target="_blank">
                                     <img src="{% static 'Aboutus/aboutus-ld1.jpg' %}" class="card-img-top p-2"
                                         alt="Dr. Fr. Lijo Thomas CMI">
                                 </a>
                                 <div class="card-body">
-                                    <h5 class="card-head" style="color: #755400">Dr. Fr. Lijo Thomas CMI</h5>
-                                    <p class="card-text" style="color: #8585bd">Founder/Director</p>
+                                    <h5 class="card-head text-brown">Dr. Fr. Lijo Thomas CMI</h5>
+                                    <p class="card-text text-violet">Founder/Director</p>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-2 col-md-4 col-sm-12">
-                            <div class="card-shadow" style="border-radius: 20px">
+                            <div class="card-shadow rounded">
                                 <a href="https://www.facebook.com/SuperJuice" target="_blank">
                                     <img src="{% static 'Aboutus/aboutus-ld2.jpg' %}" class="card-img-top p-2"
                                         alt="Officer Gary Guice Jr.">
                                 </a>
                                 <div class="card-body">
-                                    <h5 class="card-head" style="color: #755400">Officer Gary Guice Jr.</h5>
-                                    <p class="card-text" style="color: #8585bd">President, Board </p>
+                                    <h5 class="card-head text-brown">Officer Gary Guice Jr.</h5>
+                                    <p class="card-text text-violet">President, Board </p>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-2 col-md-4 col-sm-12">
-                            <div class="card-shadow" style="border-radius: 20px">
+                            <div class="card-shadow rounded">
                                 <a href="https://www.facebook.com/maribeth.quillinholzer" target="_blank">
                                     <img src="{% static 'Aboutus/aboutus-ld3.jpg' %}" class="card-img-top p-2"
                                         alt="Ms. Maribeth Holzer">
                                 </a>
                                 <div class="card-body">
-                                    <h5 class="card-head" style="color: #755400">Ms. Maribeth Holzer</h5>
-                                    <p class="card-text" style="color: #8585bd"> Vice President, Board </p>
+                                    <h5 class="card-head text-brown">Ms. Maribeth Holzer</h5>
+                                    <p class="card-text text-violet"> Vice President, Board </p>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-2 col-md-4 col-sm-12">
-                            <div class="card-shadow" style="border-radius: 20px">
+                            <div class="card-shadow rounded">
                                 <a href="" target="_blank">
                                     <img src="{% static 'Aboutus/aboutus-ld4.jpg' %}" href="#" class="card-img-top p-2"
                                         alt="Fr. Philip Pazhayakari CMI">
                                 </a>
                                 <div class="card-body">
-                                    <h5 class="card-head" style="color: #755400">Fr. Philip Pazhayakari CMI</h5>
-                                    <p class="card-text" style="color: #8585bd"> Vice President, Board </p>
+                                    <h5 class="card-head text-brown">Fr. Philip Pazhayakari CMI</h5>
+                                    <p class="card-text text-violet"> Vice President, Board </p>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-2 col-md-4 col-sm-12">
-                            <div class="card-shadow" style="border-radius: 20px">
+                            <div class="card-shadow rounded">
                                 <a href="" target="_blank">
                                     <img class="img-fluid" src="{% static 'Aboutus/aboutus-ld5.png' %}"
                                         alt="Ms. Brandy Soiloue" class="card-img-top p-2">
                                 </a>
 
                                 <div class="card-body">
-                                    <h5 class="card-head" style="color: #755400">Ms. Brandy Soiloue</h5>
-                                    <p class="card-text" style="color: #8585bd">Tressurar/secretery, Board</p>
+                                    <h5 class="card-head text-brown">Ms. Brandy Soiloue</h5>
+                                    <p class="card-text text-violet">Tressurar/secretery, Board</p>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-2 col-md-4 col-sm-12">
-                            <div class="card-shadow" style="border-radius: 20px">
+                            <div class="card-shadow rounded">
                                 <a href="https://www.facebook.com/johnson.kuriakose.7" target="_blank">
                                     <img src="{% static 'Aboutus/aboutus-ld6.jpg' %}" class="card-img-top p-2"
                                         alt="Mr. Johnson Kuriakose">
                                 </a>
                                 <div class="card-body">
-                                    <h5 class="card-head" style="color: #755400">Mr. Johnson Kuriakose</h5>
-                                    <p class="card-text" style="color: #8585bd">Trustee</p>
+                                    <h5 class="card-head text-brown">Mr. Johnson Kuriakose</h5>
+                                    <p class="card-text text-violet">Trustee</p>
                                 </div>
                             </div>
                         </div>
                     </div>
 
 
-                   
+
                 </div>
             </div>
             <!-- card -->
@@ -343,7 +344,7 @@ ABOUT US
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-12 card-col" style="margin-bottom: 45px;">
+                    <div class="col-sm-12 card-col card-col-last">
                         <div class="card card-4">
                             <div class="card-body">
                                 <h5 class="card-title">Core Values</h5>
