@@ -23,11 +23,11 @@ MC ALLEN
 {% block content %}
 <section class="changacherry-loc">
 
-    <nav aria-label="breadcrumb animated slideInDown" style="margin-top: 9%; margin-left:15%;">
+    <nav aria-label="breadcrumb animated slideInDown" class="cus-breadcrumb">
         <ol class="breadcrumb text-uppercase mb-0 bg-white">
             <li class="breadcrumb-item"><a class="text-black" href="{% url 'main' %}">Home</a></li>
             <li class="breadcrumb-item"><a class="text-black" href="{% url 'main' %}#location">Location</a></li>
-            <li class="breadcrumb-item  active" aria-current="page" style="color: #0a7b79;">Mc Allen</li>
+            <li class="breadcrumb-item  active" aria-current="page" >Mc Allen</li>
         </ol>
     </nav>
     <h1 class="mb-4  fw-bold text-center fs-1 text-green text-uppercase heading-h3 mt-5">DREAMS Mc Allen</h1>
@@ -46,21 +46,21 @@ MC ALLEN
                                 <a id="program-tab" data-toggle="tab" href="#program" role="tab" aria-controls="program"
                                     aria-selected="true"
                                     class="nav-link text-uppercase fw-bold font-weight-bold mr-sm-3 rounded-0 active">
-                                    <h5 style="color:#0a7b79; font-weight:600;">DREAMS Program</h5>
+                                    <h5 class="fw-bold text-h3">DREAMS Program</h5>
                                 </a>
                             </li>
                             <li class="nav-item flex-sm-fill">
                                 <a id="band-tab" data-toggle="tab" href="#band" role="tab" aria-controls="band"
                                     aria-selected="false"
                                     class="nav-link text-uppercase fw-bold font-weight-bold mr-sm-3 rounded-0">
-                                    <h5 style="color:#0a7b79; font-weight:600;">DREAMS Band</h5>
+                                    <h5 class="fw-bold text-h3">DREAMS Band</h5>
                                 </a>
                             </li>
                             <li class="nav-item flex-sm-fill">
                                 <a id="proclub-tab" data-toggle="tab" href="#proclub" role="tab" aria-controls="proclub"
                                     aria-selected="false"
                                     class="nav-link text-uppercase fw-bold font-weight-bold rounded-0">
-                                    <h5 style="color:#0a7b79; font-weight:600;">DREAMS Pro Club</h5>
+                                    <h5 class="fw-bold text-h3">DREAMS Pro Club</h5>
                                 </a>
                             </li>
                         </ul>
@@ -69,8 +69,8 @@ MC ALLEN
                                 class="tab-pane fade px-4 py-5 show active">
                                 <div class="container-fluid">
                                     <div class="row">
-                                        <div class="col-lg-7 col-sm-12 col-md-12" style="padding: 2% 5% 3% 0;">
-                                            <p class="leade font-italic  justify-content " style="color: #7ca8a1;">
+                                        <div class="col-lg-7 col-sm-12 col-md-12 p-4" >
+                                            <p class="leade font-italic  justify-content text-h1-cen" >
                                                 The chapter at LaGrande Oregon was co-founded by Fr. Saji Thomas CMI,
                                                 the pastor of Le Grande valley church with the strong support of Mr.
                                                 Alfred Adulsberg. With the help of Dr. Amanda Vilgomes, the DREAMS
@@ -80,7 +80,7 @@ MC ALLEN
                                                 and Mr. Alfred Adulsber had multiple meetings with the school
                                                 superintendent and principal of LaGrande Valley middle school.
                                             </p>
-                                            <p class="leade font-italic  justify-content" style="color: #7ca8a1;">
+                                            <p class="leade font-italic  justify-content text-h1-cen" >
                                                 The first summer camp of the LaGrande OR was held from Monday……………to ………
                                                 under the leadership of Ms. Susan Anderson and Ms. Zee Cosa and a few
                                                 other community volunteers and around 10 youth mentors. Ms. Karen .. is
@@ -95,15 +95,14 @@ MC ALLEN
                                             </p>
 
                                         </div>
-                                        <div class="col-lg-5 col-sm-12 col-md-12">
-                                            <center>
+                                        <div class="col-lg-5 col-sm-12 col-md-12 d-flex justify-content-center align-content-start flex-wrap">
+                                            
                                                 <img src="{% static 'locations/mcallen/MCALLEN.png' %}" alt="mannanam"
-                                                    height="400" width="400" style="padding-top: 5%; width: 100%;
-                                                    height: auto;">
+                                                    height="400" width="400" class="pt-5 w-100 h-auto">
                                                 <button type="button" class="btn-2 mt-5">Join Us</button>
                                                 &nbsp;&nbsp;&nbsp;
                                                 <button type="button" class="btn-2 mt-5">Our Location</button>
-                                            </center>
+                                         
 
                                         </div>
                                     </div>
@@ -117,8 +116,8 @@ MC ALLEN
 
                                 <div class="container-fluid">
                                     <div class="row">
-                                        <div class="col-lg-7 col-sm-12 col-md-12" style="padding: 2% 5% 3% 0;">
-                                            <p class="leade font-italic  justify-content " style="color: #7ca8a1;">
+                                        <div class="col-lg-7 col-sm-12 col-md-12 p-4" >
+                                            <p class="leade font-italic  justify-content text-h1-cen" >
                                                 The DREAMS Band strives towards making a positive difference in the
                                                 community by utilizing their musical skills. DREAMS Band is not only an
                                                 opportunity to sing and motivate the audience but also uses music as a
@@ -126,18 +125,17 @@ MC ALLEN
                                                 empower children and youth holistically. It is a band with meaning and
                                                 greater goals for the benefit of society.
                                             </p>
-                                            <p class="leade font-italic  justify-content" style="color: #7ca8a1;">
+                                            <p class="leade font-italic  justify-content text-h1-cen" >
                                                 Those who are interested to be a part of the band may contact the
                                                 respective leaders in each locality.
                                             </p>
 
                                         </div>
                                         <div class="col-lg-5 col-sm-12 col-md-12">
-                                            <center>
+                                           
                                                 <img src="{% static 'locations/band.webp' %}" alt="mannanam"
-                                                    height="400" width="400" style="padding-top: 5%; width: 100%;
-                                                height: auto;">
-                                            </center>
+                                                    height="400" width="400" class="pt-5 w-100 h-auto">
+                                           
                                         </div>
                                     </div>
                                 </div>
@@ -147,8 +145,8 @@ MC ALLEN
                                 class="tab-pane fade px-4 py-5">
                                 <div class="container-fluid">
                                     <div class="row">
-                                        <div class="col-lg-7 col-sm-12 col-md-12" style="padding: 2% 5% 3% 0;">
-                                            <p class="leade font-italic  justify-content " style="color: #7ca8a1;">
+                                        <div class="col-lg-7 col-sm-12 col-md-12 p-4" >
+                                            <p class="leade font-italic  justify-content text-h1-cen" >
                                                 DREAMS Pro-club is a support group for the personal and professional
                                                 development of young professionals. Small groups of 10-12 working
                                                 professionals meet once every month to discuss and implement strategies
@@ -158,17 +156,17 @@ MC ALLEN
                                                 and others, developing leadership, cooperation, and community
                                                 engagement.
                                             </p>
-                                            <p class="leade font-italic  justify-content" style="color: #7ca8a1;">
+                                            <p class="leade font-italic  justify-content text-h1-cen" >
                                                 This platform is yet to be initiated. Those who are interested to take a
                                                 partnership may contact the respective leaders in each locality.
                                             </p>
 
                                         </div>
                                         <div class="col-lg-5 col-sm-12 col-md-12">
-                                            <center>
+                                            
                                                 <img src="{% static 'locations/proclub.png' %}" alt="mannanam"
-                                                    height="400" width="400" style="width: 100%; height: auto;">
-                                            </center>
+                                                    height="400" width="400" class="pt-5 w-100 h-auto">
+                                        
                                         </div>
                                     </div>
                                 </div>
@@ -235,35 +233,35 @@ MC ALLEN
                     <section class="">
                         <div class="row">
                             <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
-                                <div class="bg-image hover-overlay ripple shadow-1-strong rounded"
-                                    data-ripple-color="light" style="min-height: 234px;">
+                                <div class="bg-image hover-overlay ripple shadow-1-strong rounded min-hieght-240"
+                                    data-ripple-color="light" >
 
-                                    <img src="{% static 'locations/chaganacherry/1.png'%}" class="w-100"
-                                        style="min-height: 234px;" />
+                                    <img src="{% static 'locations/chaganacherry/1.png'%}" class="w-100 min-hieght-240" 
+                                         />
                                     <a href="#!" data-mdb-toggle="modal" data-mdb-target="#exampleModal1">
-                                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.2);"></div>
+                                        <div class="mask mask1" ></div>
                                     </a>
                                 </div>
                             </div>
 
                             <div class="col-lg-4 mb-4 mb-lg-0">
-                                <div class="bg-image hover-overlay ripple shadow-1-strong rounded"
-                                    data-ripple-color="light" style="min-height: 234px;">
-                                    <img src="{% static 'locations/chaganacherry/2.png'%}" class="w-100"
-                                        style="min-height: 234px;" />
+                                <div class="bg-image hover-overlay ripple shadow-1-strong rounded min-hieght-240"
+                                    data-ripple-color="light" >
+                                    <img src="{% static 'locations/chaganacherry/2.png'%}" class="w-100 min-hieght-240"
+                                         />
                                     <a href="#!" data-mdb-toggle="modal" data-mdb-target="#exampleModal2">
-                                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.2);"></div>
+                                        <div class="mask mask1" ></div>
                                     </a>
                                 </div>
                             </div>
 
                             <div class="col-lg-4 mb-4 mb-lg-0">
-                                <div class="bg-image hover-overlay ripple shadow-1-strong rounded"
-                                    data-ripple-color="light" style="min-height: 234px;">
-                                    <img src="{% static 'locations/chaganacherry/3.png'%}" class="w-100"
-                                        style="min-height: 234px;" />
+                                <div class="bg-image hover-overlay ripple shadow-1-strong rounded min-hieght-240"
+                                    data-ripple-color="light" >
+                                    <img src="{% static 'locations/chaganacherry/3.png'%}" class="w-100 min-hieght-240"
+                                         />
                                     <a href="#!" data-mdb-toggle="modal" data-mdb-target="#exampleModal3">
-                                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.2);"></div>
+                                        <div class="mask mask1" ></div>
                                     </a>
                                 </div>
                             </div>
@@ -362,7 +360,7 @@ MC ALLEN
 
             <!-- Team item -->
             <div class="col-xl-3 col-sm-6 mb-5">
-                <div class="bg-white rounded shadow-sm py-5 px-4" style="min-height: 280px;"><img
+                <div class="bg-white rounded shadow-sm py-5 px-4 min-height" ><img
                         src="{% static 'locations/mcallen/Prof.-Susamma-156x160.jpg'%}" alt="" width="100" height="100"
                         class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
                     <h5 class="mb-0">Prof. Susamma Thomas </h5><span
@@ -374,7 +372,7 @@ MC ALLEN
 
             <!-- Team item -->
             <div class="col-xl-3 col-sm-6 mb-5">
-                <div class="bg-white rounded shadow-sm py-5 px-4" style="min-height: 280px;"><img
+                <div class="bg-white rounded shadow-sm py-5 px-4 min-height" ><img
                         src="{% static 'locations/mcallen/Jessy-Jojo-97x160.jpg'%}" alt="" width="100"
                         class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
                     <h5 class="mb-0">
@@ -388,7 +386,7 @@ MC ALLEN
             <!-- End -->
             <!-- Team item -->
             <div class="col-xl-3 col-sm-6 mb-5">
-                <div class="bg-white rounded shadow-sm py-5 px-4" style="min-height: 280px;"><img
+                <div class="bg-white rounded shadow-sm py-5 px-4 min-height" ><img
                         src="{% static 'locations/mcallen/default.png'%}" alt="" width="100"
                         class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
                     <h5 class="mb-0">
@@ -406,7 +404,7 @@ MC ALLEN
 
             <!-- Team item -->
             <div class="col-xl-3 col-sm-6 mb-5">
-                <div class="bg-white rounded shadow-sm py-5 px-4" style="min-height: 280px;"><img
+                <div class="bg-white rounded shadow-sm py-5 px-4 min-height" ><img
                         src="{% static 'locations/mcallen/Jerry-Joseph-135x160.jpg' %}" alt="" width="100"
                         class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
                     <h5 class="mb-0">
