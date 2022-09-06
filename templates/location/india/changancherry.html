@@ -16,19 +16,18 @@ CHAGANACHERRY
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
 
 <!-- MDB -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.4.0/mdb.min.css" rel="stylesheet" />
 {% endblock links %}
 
 {% block content %}
 <section class="changacherry-loc">
 
-    <nav aria-label="breadcrumb animated slideInDown" style="margin-top: 9%; margin-left:15%;">
+    <nav aria-label="breadcrumb animated slideInDown" class="cus-breadcrumb">
         <ol class="breadcrumb text-uppercase mb-0 bg-white">
             <li class=" breadcrumb-item ml-5 pl-5"><a class="text-black text-decoration-none"
                     href="{% url 'main' %}">Home</a></li>
             <li class="breadcrumb-item ml-5 pl-5"><a class="text-black text-decoration-none"
                     href="{% url 'main' %}#location">Location</a></li>
-            <li class="breadcrumb-item  active" aria-current="page" style="color: #0a7b79;">CHAGANACHERRY</li>
+            <li class="breadcrumb-item  active" aria-current="page" >CHAGANACHERRY</li>
         </ol>
     </nav>
 
@@ -213,7 +212,7 @@ CHAGANACHERRY
                                         <img src="{% static 'locations/chaganacherry/1.png'%}" class="w-100"
                                             style="min-height: 234px;" />
                                         <a href="#!" data-mdb-toggle="modal" data-mdb-target="#exampleModal1">
-                                            <div class="mask" style="background-color: rgba(251, 251, 251, 0.2);"></div>
+                                            <div class="mask mask1" ></div>
                                         </a>
                                     </div>
                                 </div>
@@ -224,7 +223,7 @@ CHAGANACHERRY
                                         <img src="{% static 'locations/chaganacherry/2.png'%}" class="w-100"
                                             style="min-height: 234px;" />
                                         <a href="#!" data-mdb-toggle="modal" data-mdb-target="#exampleModal2">
-                                            <div class="mask" style="background-color: rgba(251, 251, 251, 0.2);"></div>
+                                            <div class="mask mask1" ></div>
                                         </a>
                                     </div>
                                 </div>
@@ -235,7 +234,7 @@ CHAGANACHERRY
                                         <img src="{% static 'locations/chaganacherry/3.png'%}" class="w-100"
                                             style="min-height: 234px;" />
                                         <a href="#!" data-mdb-toggle="modal" data-mdb-target="#exampleModal3">
-                                            <div class="mask" style="background-color: rgba(251, 251, 251, 0.2);"></div>
+                                            <div class="mask mask1" ></div>
                                         </a>
                                     </div>
                                 </div>
@@ -352,7 +351,7 @@ CHAGANACHERRY
 
                 <!-- Team item -->
                 <div class="col-xl-3 col-sm-6 mb-5">
-                    <div class="bg-white rounded shadow-sm py-5 px-4" style="min-height: 280px;"><img
+                    <div class="bg-white rounded shadow-sm py-5 px-4 min-height" ><img
                             src="{% static 'locations/chaganacherry/default.png'%}" alt="" width="100"
                             class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
                         <h5 class="mb-0">Mr. James Thomas</h5><span class="small text-uppercase text-muted">PRO -
@@ -363,7 +362,7 @@ CHAGANACHERRY
 
                 <!-- Team item -->
                 <div class="col-xl-3 col-sm-6 mb-5">
-                    <div class="bg-white rounded shadow-sm py-5 px-4" style="min-height: 280px;"><img
+                    <div class="bg-white rounded shadow-sm py-5 px-4 min-height" ><img
                             src="{% static 'locations/chaganacherry/default.png'%}" alt="" width="100"
                             class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
                         <h5 class="mb-0">Mr. Joshi Job</h5><span class="small text-uppercase text-muted">PRO -
@@ -374,7 +373,7 @@ CHAGANACHERRY
 
                 <!-- Team item -->
                 <div class="col-xl-3 col-sm-6 mb-5">
-                    <div class="bg-white rounded shadow-sm py-5 px-4" style="min-height: 280px;"><img
+                    <div class="bg-white rounded shadow-sm py-5 px-4 min-height" ><img
                             src="{% static 'locations/chaganacherry/default.png'%}" alt="" width="100"
                             class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
                         <h5 class="mb-0">Ms. Tessy Thomas</h5><span class="small text-uppercase text-muted">PRO -
@@ -385,7 +384,7 @@ CHAGANACHERRY
                 <!-- End -->
                 <!-- Team item -->
                 <div class="col-xl-3 col-sm-6 mb-5">
-                    <div class="bg-white rounded shadow-sm py-5 px-4" style="min-height: 280px;"><img
+                    <div class="bg-white rounded shadow-sm py-5 px-4 min-height" ><img
                             src="{% static 'locations/chaganacherry/default.png'%}" alt="" width="100"
                             class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
                         <h5 class="mb-0">Mr. Sebastian</h5><span class="small text-uppercase text-muted">PRO -
