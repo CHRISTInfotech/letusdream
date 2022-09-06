@@ -16,3 +16,12 @@ def registration(request):
 
 def view_dt(request):
     return render(request,"Admin/view-dt.html")
+
+def reports(request):
+    return render(request,"Admin/reports.html")
+
+def events(request):
+    return render(request,"Admin/events.html")
+
+def country(request):
+    return render(request,"Admin/country.html")
