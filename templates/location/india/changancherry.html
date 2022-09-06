@@ -4,370 +4,30 @@
 {% block title %}
 CHAGANACHERRY
 {% endblock %}
+{% block extraStyles %}
+<link rel="stylesheet" href="{% static 'css/location.css' %}">
+{% endblock extraStyles %}
 
-{% block content %}
+{% block links %}
 
 
 <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css'>
 <!-- Font Awesome -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+
 <!-- MDB -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.4.0/mdb.min.css" rel="stylesheet" />
-<style>
-    .text-green {
-        color: #0a7b79;
-    }
+{% endblock links %}
 
-    .team-img {
-        width: 160px;
-        border-style: groove;
-        border-radius: 30px;
-        padding: 5px
-    }
-
-    .changacherry-loc .button {
-        display: inline-block;
-        border-radius: 100px;
-        background-color: #d3f2e9;
-        font-weight: bold;
-        border: 2px solid #d3f2e9;
-        color: #0a7b79;
-        text-align: center;
-        font-size: 20px;
-        padding: 14px 28px;
-        width: 300px;
-        transition: all 0.5s;
-        cursor: pointer;
-        margin: 5px;
-        margin-top: 10px;
-        margin-bottom: 10px;
-    }
-
-    .changacherry-loc .button span {
-        cursor: pointer;
-        display: inline-block;
-        position: relative;
-        transition: 0.5s;
-    }
-
-    .changacherry-loc .button span:after {
-        content: '\00bb';
-        position: absolute;
-        opacity: 0;
-        top: 0;
-        right: -20px;
-        transition: 0.5s;
-    }
-
-    .changacherry-loc .button:hover {
-        background-color: transparent;
-        color: #0a7b79;
-        border: 2px solid #0a7b79;
-    }
-
-    .changacherry-loc .button:hover span {
-        padding-right: 25px;
-
-    }
-
-    .changacherry-loc .button:hover span:after {
-        opacity: 1;
-        right: 0;
-    }
-
-    .text-green {
-        color: #0a7b79;
-    }
-
-    .img-middle {
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-
-    }
-
-
-    /* lined tabs */
-
-    .dreams-tab .lined .nav-link {
-        border: none;
-        border-bottom: 3px solid transparent;
-    }
-
-    .dreams-tab .lined .nav-link:hover {
-        border: none;
-        border-bottom: 3px solid transparent;
-    }
-
-    .dreams-tab .lined .nav-link.active {
-        background: none;
-        color: #555;
-        border-color: #2b90d9;
-    }
-
-
-
-    .dreams-tab .nav-pills .nav-link {
-        color: #555;
-    }
-
-    .dreams-tab .text-uppercase {
-        letter-spacing: 0.1em;
-    }
-
-    /* Counter */
-    .sectionClass div,
-    .sectionClass h1,
-    .sectionClass h2,
-    .sectionClass h3,
-    .sectionClass h4,
-    .sectionClass h5,
-    .sectionClass h6,
-    .sectionClass form,
-    .sectionClass p {
-        text-align: center;
-        margin: 0;
-        padding: 0;
-        font-size: 13px;
-        direction: ltr;
-    }
-
-    .sectionClass {
-        padding: 20px 0px 50px 0px;
-        position: relative;
-        display: block;
-    }
-
-    .fullWidth {
-        width: 100% !important;
-        display: table;
-        float: none;
-        padding: 0;
-        min-height: 1px;
-        height: 100%;
-        position: relative;
-    }
-
-
-    .sectiontitle {
-        background-position: center;
-        margin: 30px 0 0px;
-        text-align: center;
-        min-height: 20px;
-    }
-
-    .sectiontitle h2 {
-        font-size: 30px;
-
-        margin-bottom: 0px;
-        padding-right: 10px;
-        padding-left: 10px;
-    }
-
-
-    .headerLine {
-        width: 160px;
-        height: 2px;
-        display: inline-block;
-        background: #101F2E;
-    }
-
-
-    .projectFactsWrap {
-        display: flex;
-        margin-top: 30px;
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-
-
-    #projectFacts .fullWidth {
-        padding: 0;
-    }
-
-    .projectFactsWrap .item {
-        width: 25%;
-        height: 100%;
-        padding: 50px 0px;
-        text-align: center;
-    }
-
-    .projectFactsWrap .item:nth-child(1) {
-        background: #d3f2e9;
-    }
-
-    .projectFactsWrap .item:nth-child(2) {
-        background: #d3f2e9;
-    }
-
-    .projectFactsWrap .item:nth-child(3) {
-        background: #d3f2e9;
-    }
-
-    .projectFactsWrap .item:nth-child(4) {
-        background: #d3f2e9;
-    }
-
-    .projectFactsWrap .item p.number {
-        font-size: 40px;
-        padding: 0;
-        font-weight: bold;
-    }
-
-    .projectFactsWrap .item p {
-        color: #0a7b79;
-        font-size: 18px;
-        margin: 0;
-        padding: 10px;
-        font-family: 'Open Sans';
-    }
-
-    .nav-pills .nav-link.active,
-    .nav-pills .show>.nav-link {
-        box-shadow: none;
-    }
-
-    .nav-pills .nav-link {
-        margin: 0;
-        background-color: transparent;
-    }
-
-    .nav-tabs .nav-link:hover {
-        background-color: transparent;
-    }
-
-    .projectFactsWrap .item span {
-        width: 60px;
-        background: #0a7b79;
-        height: 2px;
-        display: block;
-        margin: 0 auto;
-    }
-
-
-    .projectFactsWrap .item i {
-        vertical-align: middle;
-        font-size: 50px;
-        color: #0a7b79;
-    }
-
-
-    .projectFactsWrap .item:hover i,
-    .projectFactsWrap .item:hover p {
-        color: #2b90d9;
-    }
-
-    .projectFactsWrap .item:hover span {
-        background: #2b90d9;
-    }
-
-    .sectiontitle .heading-h3:after {
-        content: "";
-        /* This is necessary for the pseudo element to work. */
-        display: block;
-        /* This will put the pseudo element on its own line. */
-        margin: 0 auto;
-        /* This will center the border. */
-        width: 50%;
-        /* Change this to whatever width you want. */
-        padding-top: 20px;
-        /* This creates some space between the element and the border. */
-        border-bottom: 2px solid transparent;
-        border-image: linear-gradient(0.90turn, rgb(255, 255, 255), rgb(0, 0, 0), rgb(255, 255, 255));
-        border-image-slice: 1;
-        /* This creates the border. Replace black with whatever color you want. */
-    }
-
-    .sectiontitle .heading-h3 {
-        padding-top: 0px;
-        padding-bottom: 10px;
-        font-weight: 700;
-        font-size: 30px;
-
-    }
-
-
-
-    /*ZoomIn Hover Effect*/
-    .hover-zoomin a {
-        display: block;
-        position: relative;
-        overflow: hidden;
-    }
-
-    .hover-zoomin img {
-        width: 100%;
-        height: auto;
-        -webkit-transition: all 0.5s ease-in-out;
-        -moz-transition: all 0.5s ease-in-out;
-        -o-transition: all 0.5s ease-in-out;
-        -ms-transition: all 0.5s ease-in-out;
-        transition: all 0.5s ease-in-out;
-    }
-
-    .hover-zoomin:hover img {
-        -webkit-transform: scale(1.2);
-        -moz-transform: scale(1.2);
-        -o-transform: scale(1.2);
-        -ms-transform: scale(1.2);
-        transform: scale(1.2);
-    }
-
-    /* contact us */
-
-    .contact_info {
-        width: 100%;
-        padding-top: 70px;
-    }
-
-    .contact_info_item {
-        width: calc((100% - 60px) / 3);
-        height: 100px;
-        border: solid 1px #e8e8e8;
-        box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
-        padding-left: 32px;
-        padding-right: 15px;
-    }
-
-    .contact_info_image {
-        width: 35px;
-        height: 35px;
-        text-align: center;
-    }
-
-    .contact_info_image img {
-        max-width: 100%;
-    }
-
-    .contact_info_content {
-        padding-left: 17px;
-    }
-
-    .contact_info_title {
-        font-weight: 500;
-    }
-
-    .contact_info_text {
-        font-size: 12px;
-        color: rgba(0, 0, 0, 0.5);
-    }
-
-
-    @media (max-width: 786px) {
-        .projectFactsWrap .item {
-            flex: 0 0 50%;
-        }
-    }
-</style>
+{% block content %}
 <section class="changacherry-loc">
 
-    <nav aria-label="breadcrumb animated slideInDown" style="margin-top: 9%; margin-left:15%;">
+    <nav aria-label="breadcrumb animated slideInDown" class="cus-breadcrumb">
         <ol class="breadcrumb text-uppercase mb-0 bg-white">
             <li class=" breadcrumb-item ml-5 pl-5"><a class="text-black text-decoration-none"
                     href="{% url 'main' %}">Home</a></li>
             <li class="breadcrumb-item ml-5 pl-5"><a class="text-black text-decoration-none"
                     href="{% url 'main' %}#location">Location</a></li>
-            <li class="breadcrumb-item  active" aria-current="page" style="color: #0a7b79;">CHAGANACHERRY</li>
+            <li class="breadcrumb-item  active" aria-current="page" >CHAGANACHERRY</li>
         </ol>
     </nav>
 
@@ -546,35 +206,35 @@ CHAGANACHERRY
                         <section class="">
                             <div class="row">
                                 <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
-                                    <div class="bg-image hover-overlay ripple shadow-1-strong rounded"
-                                        data-ripple-color="light" style="min-height: 234px;">
+                                    <div class="bg-image hover-overlay ripple shadow-1-strong rounded min-hieght-240"
+                                        data-ripple-color="light" >
 
-                                        <img src="{% static 'locations/chaganacherry/1.png'%}" class="w-100"
-                                            style="min-height: 234px;" />
+                                        <img src="{% static 'locations/chaganacherry/1.png'%}" class="w-100 min-hieght-240"
+                                             />
                                         <a href="#!" data-mdb-toggle="modal" data-mdb-target="#exampleModal1">
-                                            <div class="mask" style="background-color: rgba(251, 251, 251, 0.2);"></div>
+                                            <div class="mask mask1" ></div>
                                         </a>
                                     </div>
                                 </div>
 
                                 <div class="col-lg-4 mb-4 mb-lg-0">
-                                    <div class="bg-image hover-overlay ripple shadow-1-strong rounded"
-                                        data-ripple-color="light" style="min-height: 234px;">
-                                        <img src="{% static 'locations/chaganacherry/2.png'%}" class="w-100"
-                                            style="min-height: 234px;" />
+                                    <div class="bg-image hover-overlay ripple shadow-1-strong rounded min-hieght-240"
+                                        data-ripple-color="light" >
+                                        <img src="{% static 'locations/chaganacherry/2.png'%}" class="w-100 min-hieght-240"
+                                             />
                                         <a href="#!" data-mdb-toggle="modal" data-mdb-target="#exampleModal2">
-                                            <div class="mask" style="background-color: rgba(251, 251, 251, 0.2);"></div>
+                                            <div class="mask mask1" ></div>
                                         </a>
                                     </div>
                                 </div>
 
                                 <div class="col-lg-4 mb-4 mb-lg-0">
-                                    <div class="bg-image hover-overlay ripple shadow-1-strong rounded"
-                                        data-ripple-color="light" style="min-height: 234px;">
-                                        <img src="{% static 'locations/chaganacherry/3.png'%}" class="w-100"
-                                            style="min-height: 234px;" />
+                                    <div class="bg-image hover-overlay ripple shadow-1-strong rounded min-hieght-240"
+                                        data-ripple-color="light" >
+                                        <img src="{% static 'locations/chaganacherry/3.png'%}" class="w-100 min-hieght-240"
+                                             />
                                         <a href="#!" data-mdb-toggle="modal" data-mdb-target="#exampleModal3">
-                                            <div class="mask" style="background-color: rgba(251, 251, 251, 0.2);"></div>
+                                            <div class="mask mask1" ></div>
                                         </a>
                                     </div>
                                 </div>
@@ -651,7 +311,7 @@ CHAGANACHERRY
 
                 <div class="col-xl-8 col-lg-7 align-items-center img-middle"><img
                         class="img-fluid mb-3 mb-lg-0 ml-5 pl-5"
-                        src="http://letusdream.org/wp-content/uploads/2020/07/CHAGANACHERRY.png" alt="CHAGANACHERRY" />
+                        src="{% static 'locations/chaganacherry/CHAGANACHERRY.png'%}" alt="CHAGANACHERRY" />
                 </div>
 
                 <div class="col-xl-4 col-lg-5">
@@ -669,14 +329,14 @@ CHAGANACHERRY
 
                 <div class="col-lg-6 hover-zoomin p-5">
                     <a href="https://www.facebook.com/groups/261616598625869/" title="" target="_blank">
-                        <img src="https://letusdream.org/wp-content/uploads/2020/07/Changanacherry-FB.jpg" alt="" />
+                        <img src="{% static 'locations/chaganacherry/Changanacherry-FB.jpg'%}" alt="" />
                     </a>
                     <h4 class="text-center mt-3 text-green">CHAGANACHERRY FB GROUP</h4>
                 </div>
 
                 <div class="col-lg-6 hover-zoomin p-5">
                     <a href="{% url 'photo-gallery' %}#popup2" title="">
-                        <img src="https://letusdream.org/wp-content/uploads/2020/07/Level3-Changanacherry-Gallery-thumbnails-min.jpg"
+                        <img src="{% static 'locations/chaganacherry/Level3-Changanacherry-Gallery-thumbnails-min.jpg'%}"
                             alt="" />
                     </a>
                     <h4 class="text-center mt-3 text-green">CHAGANACHERRY GALLERY</h4>
@@ -691,9 +351,9 @@ CHAGANACHERRY
 
                 <!-- Team item -->
                 <div class="col-xl-3 col-sm-6 mb-5">
-                    <div class="bg-white rounded shadow-sm py-5 px-4" style="min-height: 280px;"><img
-                            src="https://letusdream.org/wp-content/uploads/2020/08/Mr-James-160x129.jpeg" alt=""
-                            width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+                    <div class="bg-white rounded shadow-sm py-5 px-4 min-height" ><img
+                            src="{% static 'locations/chaganacherry/default.png'%}" alt="" width="100"
+                            class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
                         <h5 class="mb-0">Mr. James Thomas</h5><span class="small text-uppercase text-muted">PRO -
                             CLUB</span>
 
@@ -702,8 +362,8 @@ CHAGANACHERRY
 
                 <!-- Team item -->
                 <div class="col-xl-3 col-sm-6 mb-5">
-                    <div class="bg-white rounded shadow-sm py-5 px-4" style="min-height: 280px;"><img
-                            src="https://bootstrapious.com/i/snippets/sn-team/teacher-1.jpg" alt="" width="100"
+                    <div class="bg-white rounded shadow-sm py-5 px-4 min-height" ><img
+                            src="{% static 'locations/chaganacherry/default.png'%}" alt="" width="100"
                             class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
                         <h5 class="mb-0">Mr. Joshi Job</h5><span class="small text-uppercase text-muted">PRO -
                             CLUB</span>
@@ -713,9 +373,9 @@ CHAGANACHERRY
 
                 <!-- Team item -->
                 <div class="col-xl-3 col-sm-6 mb-5">
-                    <div class="bg-white rounded shadow-sm py-5 px-4" style="min-height: 280px;"><img
-                            src="https://letusdream.org/wp-content/uploads/2020/08/Ms-Tessy-Thomas-160x160.jpeg" alt=""
-                            width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+                    <div class="bg-white rounded shadow-sm py-5 px-4 min-height" ><img
+                            src="{% static 'locations/chaganacherry/default.png'%}" alt="" width="100"
+                            class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
                         <h5 class="mb-0">Ms. Tessy Thomas</h5><span class="small text-uppercase text-muted">PRO -
                             CLUB</span>
 
@@ -724,9 +384,9 @@ CHAGANACHERRY
                 <!-- End -->
                 <!-- Team item -->
                 <div class="col-xl-3 col-sm-6 mb-5">
-                    <div class="bg-white rounded shadow-sm py-5 px-4" style="min-height: 280px;"><img
-                            src="https://letusdream.org/wp-content/uploads/2020/08/Mr-Sebastian-MT-136x160.jpeg" alt=""
-                            width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+                    <div class="bg-white rounded shadow-sm py-5 px-4 min-height" ><img
+                            src="{% static 'locations/chaganacherry/default.png'%}" alt="" width="100"
+                            class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
                         <h5 class="mb-0">Mr. Sebastian</h5><span class="small text-uppercase text-muted">PRO -
                             CLUB</span>
 
@@ -788,6 +448,8 @@ CHAGANACHERRY
             </div>
         </div>
     </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
     <script>
         function counter() {
             $.fn.jQuerySimpleCounter = function (options) {
@@ -825,5 +487,4 @@ CHAGANACHERRY
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.4.0/mdb.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     {% endblock %}

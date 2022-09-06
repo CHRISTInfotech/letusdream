@@ -1,0 +1,156 @@
+.college {
+
+
+    line-height: 30px;
+
+}
+
+
+
+.card-joythi img {
+    border-radius: 50%;
+}
+
+.person-img img {
+    min-height: 258px;
+}
+
+.person-name h3 {
+    font-size: 23px;
+}
+
+.info p {
+    font-size: 17px;
+}
+
+.info span {
+    font-size: 14px;
+}
+
+.text-green {
+    color: #7ca8a1;
+}
+
+.main-section {
+    margin-bottom: -5px;
+}
+
+.main-section p {
+    font-size: 20px;
+    justify-content: center;
+
+}
+
+.college .li-text {
+    font-size: 20px;
+    justify-content: center;
+    padding-left: 5px;
+
+}
+
+.college .button {
+    display: inline-block;
+    border-radius: 100px;
+    background-color: #d3f2e9;
+    font-weight: bold;
+    border: 2px solid #d3f2e9;
+    align-items: center;
+    color: #0a7b79;
+    text-align: center;
+    font-size: 20px;
+    padding: 14px 28px;
+    width: 300px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+
+}
+
+.college .button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.college .button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.college .button1 {
+    width: 350px;
+    background-color: #67bcf5;
+    color: #262626;
+}
+
+.college .button2 {
+    width: 250px;
+    background-color: #67bcf5;
+    color: #262626;
+}
+
+.college .button:hover {
+    background-color: transparent;
+    color: #0a7b79;
+    border: 2px solid #0a7b79;
+}
+
+.college .button:hover span {
+    padding-right: 25px;
+
+}
+
+.college .button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+.college .card-main {
+    width: 24rem;
+    border: none;
+    min-height: 520px;
+}
+
+
+
+@media (max-width:551px) {
+    .text-custom {
+        font-size: 25px !important;
+    }
+
+    .container h1 {
+        font-size: 25px !important;
+        font-weight: bolder !important;
+    }
+}
+
+@media (max-width:991px) {
+    .main-section {
+        margin-top: -50px;
+    }
+
+    .college .card-main {
+        width: 17rem;
+    }
+
+
+}
+
+@media (max-width:1400px) {
+
+
+    .college .card-main {
+        width: 20rem;
+    }
+
+    .college .button1 {
+        width: 300px;
+    }
+
+
+}
