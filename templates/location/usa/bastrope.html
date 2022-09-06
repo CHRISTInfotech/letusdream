@@ -17,18 +17,17 @@ BASTROPE
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
 
 <!-- MDB -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.4.0/mdb.min.css" rel="stylesheet" />
 {% endblock links %}
 
 {% block content %}
 <section class="changacherry-loc">
 
-    <nav aria-label="breadcrumb animated slideInDown" style="margin-top: 9%; margin-left:15%;">
+    <nav aria-label="breadcrumb animated slideInDown" class="cus-breadcrumb">
         <ol class="breadcrumb text-uppercase mb-0 bg-white">
             <li class="breadcrumb-item"><a class="text-black" href="{% url 'main' %}">Home</a></li>
             <li class="breadcrumb-item"><a class="text-black text-decoration-none"
                     href="{% url 'main' %}#location">Location</a></li>
-            <li class="breadcrumb-item  active" aria-current="page" style="color: #0a7b79;">Bastrope</li>
+            <li class="breadcrumb-item  active" aria-current="page">Bastrope</li>
         </ol>
     </nav>
 
@@ -70,8 +69,8 @@ BASTROPE
                                 class="tab-pane fade px-4 py-5 show active">
                                 <div class="container-fluid">
                                     <div class="row">
-                                        <div class="col-lg-7 col-sm-12 col-md-12" style="padding: 2% 5% 3% 0;">
-                                            <p class="leade font-italic  justify-content " style="color: #7ca8a1;">
+                                        <div class="col-lg-7 col-sm-12 col-md-12 p-4">
+                                            <p class="leade font-italic  justify-content text-h1-cen">
                                                 In 2015, a new DREAMS chapter began its journey in Bastrop, Louisiana
                                                 with the co-founders
                                                 Officer Gary Guice, Ms. Kathy Leonard, and Ms. Cindy Hendrix. They have
@@ -79,7 +78,7 @@ BASTROPE
                                                 meetings with local adult and youth volunteers for the project
                                                 introduction, planning and training.
                                             </p>
-                                            <p class="leade font-italic  justify-content" style="color: #7ca8a1;">
+                                            <p class="leade font-italic  justify-content text-h1-cen">
                                                 The program was introduced and recruited from volunteers from all the 5
                                                 middle schools in Bastrop.
                                                 The project is hosted by Prairie View Academy. This chapter received a
@@ -92,14 +91,15 @@ BASTROPE
                                             </p>
 
                                         </div>
-                                        <div class="col-lg-5 col-sm-12 col-md-12 ">
-                                            <center>
-                                                <img src="{% static 'locations/usa/bastrope.png' %}" alt="mannanam"
-                                                    height="400" width="400">
-                                                <button type="button" class="btn-2 mt-3">Join Us</button>
-                                                &nbsp;&nbsp;&nbsp;
-                                                <button type="button" class="btn-2 mt-3">Our Location</button>
-                                            </center>
+                                        <div
+                                            class="col-lg-5 col-sm-12 col-md-12 d-flex justify-content-center align-content-start flex-wrap">
+
+                                            <img src="{% static 'locations/usa/bastrope.png' %}" alt="mannanam"
+                                                height="400" width="400" class="pt-5 w-100 h-auto">
+                                            <button type="button" class="btn-2 mt-3">Join Us</button>
+                                            &nbsp;&nbsp;&nbsp;
+                                            <button type="button" class="btn-2 mt-3">Our Location</button>
+
 
                                         </div>
 
@@ -114,8 +114,8 @@ BASTROPE
 
                                 <div class="container-fluid">
                                     <div class="row">
-                                        <div class="col-lg-7 col-sm-12 col-md-12" style="padding: 2% 5% 3% 0;">
-                                            <p class="leade font-italic  justify-content " style="color: #7ca8a1;">
+                                        <div class="col-lg-7 col-sm-12 col-md-12 p-4">
+                                            <p class="leade font-italic  justify-content text-h1-cen">
                                                 The DREAMS Band strives towards making a positive difference in the
                                                 community by
                                                 utilizing their musical abilities. DREAMS Band is not only an
@@ -130,21 +130,18 @@ BASTROPE
                                                 Those who are interested to be a part of the band may contact the
                                                 respective leaders in each locality.
                                             </p>
-                                            <p class="leade font-italic  justify-content" style="color: #7ca8a1;">
+                                            <p class="leade font-italic  justify-content text-h1-cen">
                                                 Those who are interested to be a part of the band may contact the
                                                 respective leaders
                                                 in each locality.
                                             </p>
-                                            <button type="button" class="btn-2">Join Us</button>
-                                            &nbsp;&nbsp;&nbsp;
-                                            <button type="button" class="btn-2">Our Location</button>
+
                                         </div>
                                         <div class="col-lg-5 col-sm-12 col-md-12">
-                                            <center>
-                                                <img src="https://img.freepik.com/free-vector/orchestra-concept-illustration_114360-3098.jpg?w=2000"
-                                                    alt="mannanam" height="400" width="400" style="padding-top: 5%; width: 100%;
-                                                height: auto;">
-                                            </center>
+
+                                            <img src="https://img.freepik.com/free-vector/orchestra-concept-illustration_114360-3098.jpg?w=2000"
+                                                alt="mannanam" height="400" width="400" lass="pt-5 w-100 h-auto">
+
                                         </div>
                                     </div>
                                 </div>
@@ -154,8 +151,8 @@ BASTROPE
                                 class="tab-pane fade px-4 py-5">
                                 <div class="container-fluid">
                                     <div class="row">
-                                        <div class="col-lg-7 col-sm-12 col-md-12" style="padding: 2% 5% 3% 0;">
-                                            <p class="leade font-italic  justify-content " style="color: #7ca8a1;">
+                                        <div class="col-lg-7 col-sm-12 col-md-12 p-4">
+                                            <p class="leade font-italic  justify-content text-h1-cen">
                                                 DREAMS Pro-club is a support group for the personal and professional
                                                 development of young professionals. Small groups of 10-12 working
                                                 professionals
@@ -173,21 +170,19 @@ BASTROPE
                                                 This platform is yet to be initiated. Those who are interested to take a
                                                 partnership may contact the respective leaders in each locality.
                                             </p>
-                                            <p class="leade font-italic  justify-content" style="color: #7ca8a1;">
+                                            <p class="leade font-italic  justify-content text-h1-cen">
                                                 This platform is yet to be initiated. Those
                                                 who are interested to take a partnership may contact the respective
                                                 leaders in each
                                                 locality.
                                             </p>
-                                            <button type="button" class="btn-2">Join Us</button>
-                                            &nbsp;&nbsp;&nbsp;
-                                            <button type="button" class="btn-2">Our Location</button>
+
                                         </div>
                                         <div class="col-lg-5 col-sm-12 col-md-12">
-                                            <center>
-                                                <img src="https://i.pinimg.com/originals/8c/22/2c/8c222c3f4bc0a92105d90564f0abac4b.png"
-                                                    alt="mannanam" height="400" width="400">
-                                            </center>
+
+                                            <img src="https://i.pinimg.com/originals/8c/22/2c/8c222c3f4bc0a92105d90564f0abac4b.png"
+                                                alt="mannanam" height="400" width="400" lass="pt-5 w-100 h-auto">
+
                                         </div>
                                     </div>
                                 </div>
@@ -275,58 +270,58 @@ BASTROPE
 </div>
 
 <!-- Speaker -->
-<div class="container-fluid mt-5 mb-5  container-custom">
-    <center>
-        <div class="row" style="padding: 0% 10% 0% 10%;">
-            <h1 class="text-green text-center my-5 text-uppercase fw-bold">
-                Conference Chairs
-            </h1>
-            <div class="col-lg-3 col-md-6 p-3">
-                <div class="card shadow d-flex justify-content-center align-items-center p-3 rounded-lg card-main">
-                    <img src="https://letusdream.org/wp-content/plugins/team-showcase/img/default.png"
-                        class="card-img-top p-3 img-fluid rounded-circle" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Officer Gary Guice</h5>
-                        <p class="card-text text-center fs-6">PROGRAMMER</p>
+<div class="container-fluid mt-5 mb-5  container-custom text-center">
 
-                    </div>
-                </div>
+    <div class="row" style="padding: 0% 10% 0% 10%;">
+        <h1 class="text-green text-center my-5 text-uppercase fw-bold">
+            Conference Chairs
+        </h1>
+        <div class="col-lg-3 col-md-6 p-3">
+            <div class="card shadow d-flex justify-content-center align-items-center p-3 rounded-lg card-main">
+                <img src="https://letusdream.org/wp-content/plugins/team-showcase/img/default.png"
+                    class="card-img-top p-3 img-fluid rounded-circle" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Officer Gary Guice</h5>
+                    <p class="card-text text-center fs-6">PROGRAMMER</p>
 
-            </div>
-            <div class="col-lg-3 col-md-6 p-3">
-                <div class="card shadow d-flex justify-content-center align-items-center p-3 rounded-lg card-main">
-                    <img src="https://letusdream.org/wp-content/plugins/team-showcase/img/default.png"
-                        class="card-img-top p-3 img-fluid rounded-circle" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Ms. Kathy Lenard</h5>
-                        <p class="card-text text-center fs-6">PROGRAMMER</p>
-                    </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6 p-3">
-                <div class="card shadow d-flex justify-content-center align-items-center p-3 rounded-lg card-main">
-                    <img src="https://letusdream.org/wp-content/plugins/team-showcase/img/default.png"
-                        class="card-img-top p-3 img-fluid rounded-circle" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Ms. Cindy Hendrix</h5>
-                        <p class="card-text text-center fs-6">PROGRAMMER</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 p-3">
-                <div class="card shadow d-flex justify-content-center align-items-center p-3 rounded-lg card-main">
-                    <img src="https://letusdream.org/wp-content/plugins/team-showcase/img/default.png"
-                        class="card-img-top p-3 img-fluid rounded-circle" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Ms. Ann Maria Ogden</h5>
-                        <p class="card-text text-center fs-6">PROGRAMMER</p>
 
-                    </div>
+        </div>
+        <div class="col-lg-3 col-md-6 p-3">
+            <div class="card shadow d-flex justify-content-center align-items-center p-3 rounded-lg card-main">
+                <img src="https://letusdream.org/wp-content/plugins/team-showcase/img/default.png"
+                    class="card-img-top p-3 img-fluid rounded-circle" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Ms. Kathy Lenard</h5>
+                    <p class="card-text text-center fs-6">PROGRAMMER</p>
                 </div>
-
             </div>
         </div>
-    </center>
+        <div class="col-lg-3 col-md-6 p-3">
+            <div class="card shadow d-flex justify-content-center align-items-center p-3 rounded-lg card-main">
+                <img src="https://letusdream.org/wp-content/plugins/team-showcase/img/default.png"
+                    class="card-img-top p-3 img-fluid rounded-circle" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Ms. Cindy Hendrix</h5>
+                    <p class="card-text text-center fs-6">PROGRAMMER</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 p-3">
+            <div class="card shadow d-flex justify-content-center align-items-center p-3 rounded-lg card-main">
+                <img src="https://letusdream.org/wp-content/plugins/team-showcase/img/default.png"
+                    class="card-img-top p-3 img-fluid rounded-circle" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Ms. Ann Maria Ogden</h5>
+                    <p class="card-text text-center fs-6">PROGRAMMER</p>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
 </div>
 </section>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

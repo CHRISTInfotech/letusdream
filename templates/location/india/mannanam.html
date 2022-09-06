@@ -2,10 +2,14 @@
 {% load static %}
 
 {% block title %}
-MANNANAM
+COLOGNE
 {% endblock %}
 
-{% block content %}
+{% block extraStyles %}
+<link rel="stylesheet" href="{% static 'css/location.css' %}">
+{% endblock extraStyles %}
+
+{% block links %}
 
 
 <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css'>
@@ -13,349 +17,19 @@ MANNANAM
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
 
 <!-- MDB -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.4.0/mdb.min.css" rel="stylesheet" />
-<style>
-    .text-green {
-        color: #0a7b79;
-    }
+{% endblock links %}
 
-    .team-img {
-        width: 160px;
-        border-style: groove;
-        border-radius: 30px;
-        padding: 5px
-    }
-
-    .changacherry-loc .button {
-        display: inline-block;
-        border-radius: 100px;
-        background-color: #d3f2e9;
-        font-weight: bold;
-        border: 2px solid #d3f2e9;
-        color: #0a7b79;
-        text-align: center;
-        font-size: 20px;
-        padding: 14px 28px;
-        width: 300px;
-        transition: all 0.5s;
-        cursor: pointer;
-        margin: 5px;
-        margin-top: 10px;
-        margin-bottom: 10px;
-    }
-
-    .changacherry-loc .button span {
-        cursor: pointer;
-        display: inline-block;
-        position: relative;
-        transition: 0.5s;
-    }
-
-    .changacherry-loc .button span:after {
-        content: '\00bb';
-        position: absolute;
-        opacity: 0;
-        top: 0;
-        right: -20px;
-        transition: 0.5s;
-    }
-
-    .changacherry-loc .button:hover {
-        background-color: transparent;
-        color: #0a7b79;
-        border: 2px solid #0a7b79;
-    }
-
-    .changacherry-loc .button:hover span {
-        padding-right: 25px;
-
-    }
-
-    .changacherry-loc .button:hover span:after {
-        opacity: 1;
-        right: 0;
-    }
-
-    .text-green {
-        color: #0a7b79;
-    }
-
-    .img-middle {
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-
-    }
-
-
-    /* lined tabs */
-
-    .dreams-tab .lined .nav-link {
-        border: none;
-        border-bottom: 3px solid transparent;
-    }
-
-    .dreams-tab .lined .nav-link:hover {
-        border: none;
-        border-bottom: 3px solid transparent;
-    }
-
-    .dreams-tab .lined .nav-link.active {
-        background: none;
-        color: #555;
-        border-color: #d3f2e9;
-    }
-
-
-
-    .dreams-tab .nav-pills .nav-link {
-        color: #555;
-    }
-
-    .dreams-tab .text-uppercase {
-        letter-spacing: 0.1em;
-    }
-
-    /* Counter */
-    .sectionClass div,
-    .sectionClass h1,
-    .sectionClass h2,
-    .sectionClass h3,
-    .sectionClass h4,
-    .sectionClass h5,
-    .sectionClass h6,
-    .sectionClass form,
-    .sectionClass p {
-        text-align: center;
-        margin: 0;
-        padding: 0;
-        font-size: 13px;
-        direction: ltr;
-    }
-
-    .sectionClass {
-        padding: 20px 0px 50px 0px;
-        position: relative;
-        display: block;
-    }
-
-    .fullWidth {
-        width: 100% !important;
-        display: table;
-        float: none;
-        padding: 0;
-        min-height: 1px;
-        height: 100%;
-        position: relative;
-    }
-
-
-    .sectiontitle {
-        background-position: center;
-        margin: 30px 0 0px;
-        text-align: center;
-        min-height: 20px;
-    }
-
-    .sectiontitle h2 {
-        font-size: 30px;
-
-        margin-bottom: 0px;
-        padding-right: 10px;
-        padding-left: 10px;
-    }
-
-
-    .headerLine {
-        width: 160px;
-        height: 2px;
-        display: inline-block;
-        background: #101F2E;
-    }
-
-
-    .projectFactsWrap {
-        display: flex;
-        margin-top: 30px;
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-
-
-    #projectFacts .fullWidth {
-        padding: 0;
-    }
-
-    .projectFactsWrap .item {
-        width: 25%;
-        height: 100%;
-        padding: 50px 0px;
-        text-align: center;
-    }
-
-    .projectFactsWrap .item:nth-child(1) {
-        background: #d3f2e9;
-    }
-
-    .projectFactsWrap .item:nth-child(2) {
-        background: #d3f2e9;
-    }
-
-    .projectFactsWrap .item:nth-child(3) {
-        background: #d3f2e9;
-    }
-
-    .projectFactsWrap .item:nth-child(4) {
-        background: #d3f2e9;
-    }
-
-    .projectFactsWrap .item p.number {
-        font-size: 40px;
-        padding: 0;
-        font-weight: bold;
-    }
-
-    .projectFactsWrap .item p {
-        color: #0a7b79;
-        font-size: 18px;
-        margin: 0;
-        padding: 10px;
-        font-family: 'Open Sans';
-    }
-
-    .nav-pills .nav-link.active,
-    .nav-pills .show>.nav-link {
-        box-shadow: none;
-    }
-
-    .nav-pills .nav-link {
-        margin: 0;
-        background-color: transparent;
-    }
-
-    .nav-tabs .nav-link:hover {
-        background-color: transparent;
-    }
-
-    .projectFactsWrap .item span {
-        width: 60px;
-        background: #0a7b79;
-        height: 2px;
-        display: block;
-        margin: 0 auto;
-    }
-
-
-    .projectFactsWrap .item i {
-        vertical-align: middle;
-        font-size: 50px;
-        color: #0a7b79;
-    }
-
-
-    .projectFactsWrap .item:hover i,
-    .projectFactsWrap .item:hover p {
-        color: #0a7b79;
-    }
-
-    .projectFactsWrap .item:hover span {
-        background: #0a7b79;
-    }
-
-    .sectiontitle .heading-h3:after {
-        content: "";
-        display: block;
-        margin: 0 auto;
-        width: 50%;
-        padding-top: 20px;
-        border-bottom: 2px solid transparent;
-        border-image: linear-gradient(0.90turn, rgb(255, 255, 255), rgb(0, 0, 0), rgb(255, 255, 255));
-        border-image-slice: 1;
-    }
-
-    .sectiontitle .heading-h3 {
-        padding-top: 0px;
-        padding-bottom: 10px;
-        font-weight: 700;
-        font-size: 30px;
-
-    }
-
-    /* contact us */
-
-    .contact_info {
-        width: 100%;
-        padding-top: 70px;
-    }
-
-    .contact_info_item {
-        width: calc((100% - 60px) / 3);
-        height: 100px;
-        border: solid 1px #e8e8e8;
-        box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
-        padding-left: 32px;
-        padding-right: 15px;
-    }
-
-    .contact_info_image {
-        width: 35px;
-        height: 35px;
-        text-align: center;
-    }
-
-    .contact_info_image img {
-        max-width: 100%;
-    }
-
-    .contact_info_content {
-        padding-left: 17px;
-    }
-
-    .contact_info_title {
-        font-weight: 500;
-    }
-
-    .contact_info_text {
-        font-size: 12px;
-        color: rgba(0, 0, 0, 0.5);
-    }
-
-    @media (max-width: 786px) {
-        .projectFactsWrap .item {
-            flex: 0 0 50%;
-        }
-    }
-
-    body {
-        font-family: 'Montserrat', sans-serif;
-    }
-
-    .btn-2 {
-        background: transparent;
-        border: 1px solid #0a7b79;
-        width: 150px;
-        padding: 15px 0;
-        text-align: center;
-        border-radius: 25px;
-        font-weight: bold;
-        color: #0a7b79;
-    }
-
-    .btn-2:hover {
-        border: 2px solid #d3f2e9;
-        background: #d3f2e9;
-    }
-</style>
+{% block content %}
 <section class="changacherry-loc">
 
-    <nav aria-label="breadcrumb animated slideInDown" style="margin-top: 9%; margin-left:15%;">
+    <nav aria-label="breadcrumb animated slideInDown" class="cus-breadcrumb">
         <ol class="breadcrumb text-uppercase mb-0 bg-white">
             <li class="breadcrumb-item"><a class="text-black" href="{% url 'main' %}">Home</a></li>
             <li class="breadcrumb-item"><a class="text-black" href="{% url 'main' %}#location">Location</a></li>
-            <li class="breadcrumb-item  active" aria-current="page" style="color: #0a7b79;">Mannanam</li>
+            <li class="breadcrumb-item  active" aria-current="page">Mannanam</li>
         </ol>
     </nav>
-
+    <h1 class="mb-4  fw-bold text-center fs-1 text-green text-uppercase heading-h3 mt-5">DREAMS Mannanam</h1>
     <div class="container dreams-tab">
         <div class="row">
             <div class="col-lg-12">
@@ -371,21 +45,21 @@ MANNANAM
                                 <a id="program-tab" data-toggle="tab" href="#program" role="tab" aria-controls="program"
                                     aria-selected="true"
                                     class="nav-link text-uppercase fw-bold font-weight-bold mr-sm-3 rounded-0 active">
-                                    <h5 style="color:#0a7b79; font-weight:600;">DREAMS Program</h5>
+                                    <h5 class="fw-bold text-h3">DREAMS Program</h5>
                                 </a>
                             </li>
                             <li class="nav-item flex-sm-fill">
                                 <a id="band-tab" data-toggle="tab" href="#band" role="tab" aria-controls="band"
                                     aria-selected="false"
                                     class="nav-link text-uppercase fw-bold font-weight-bold mr-sm-3 rounded-0">
-                                    <h5 style="color:#0a7b79; font-weight:600;">DREAMS Band</h5>
+                                    <h5 class="fw-bold text-h3">DREAMS Band</h5>
                                 </a>
                             </li>
                             <li class="nav-item flex-sm-fill">
                                 <a id="proclub-tab" data-toggle="tab" href="#proclub" role="tab" aria-controls="proclub"
                                     aria-selected="false"
                                     class="nav-link text-uppercase fw-bold font-weight-bold rounded-0">
-                                    <h5 style="color:#0a7b79; font-weight:600;">DREAMS Pro Club</h5>
+                                    <h5 class="fw-bold text-h3">DREAMS Pro Club</h5>
                                 </a>
                             </li>
                         </ul>
@@ -394,8 +68,8 @@ MANNANAM
                                 class="tab-pane fade px-4 py-5 show active">
                                 <div class="container-fluid">
                                     <div class="row">
-                                        <div class="col-lg-7 col-sm-12 col-md-12" style="padding: 2% 5% 3% 0;">
-                                            <p class="leade font-italic  justify-content " style="color: #7ca8a1;">
+                                        <div class="col-lg-7 col-sm-12 col-md-12 p-4">
+                                            <p class="leade font-italic  justify-content text-h1-cen">
                                                 The DREAMS chapter in Changanacherry was
                                                 started in 2017 with Mr. James and Mr. Joshi Job as the co-founders.
                                                 After in-depth
@@ -413,7 +87,7 @@ MANNANAM
                                                 and received
                                                 a wider volunteering network.
                                             </p>
-                                            <p class="leade font-italic  justify-content" style="color: #7ca8a1;">
+                                            <p class="leade font-italic  justify-content text-h1-cen">
                                                 The first summer camp hosted by the Changanacherry chapter was conducted
                                                 in 2018 at
                                                 S.B School Changanacherry in collaboration with four other schools.
@@ -432,16 +106,26 @@ MANNANAM
                                                 the model
                                                 to various schools and colleges in the locality.
                                             </p>
-                                            <button type="button" class="btn-2">Join Us</button>
-                                            &nbsp;&nbsp;&nbsp;
-                                            <button type="button" class="btn-2">Our Location</button>
+                                            <!-- <h4 class="mt-3 mb-3 mr-3 font-italic fw-semibold">Leadership:</h4>
+                                            <p class="leade font-italic justify-content">
+                                                Ms. Lisa Jungkamp (Project Head)
+                                            </p>
+                                            <p class="leade font-italic justify-content">
+                                                Dr. Karla Verlinden (Faculty Representative)
+                                            </p>
+                                            <p class="leade font-italic justify-content">
+                                                Fr. George V. ( community Rep)
+                                            </p> -->
+
                                         </div>
-                                        <div class="col-lg-5 col-sm-12 col-md-12">
-                                            <center>
-                                                <img src="{% static 'locations/mannanam/MANNANAM.png'%}" alt="mannanam"
-                                                    height="400" width="400" style="padding-top: 5%; width: 100%;
-                                                    height: auto;">
-                                            </center>
+                                        <div
+                                            class="col-lg-5 col-sm-12 col-md-12 d-flex justify-content-center align-content-start flex-wrap">
+
+                                            <img src="{% static 'locations/mannanam/MANNANAM.png'%}" alt="mannanam"
+                                                height="400" width="400" class="pt-5 w-100 h-auto">
+                                            <button type="button" class="btn-2 mt-5">Join Us</button>
+                                            &nbsp;&nbsp;&nbsp;
+                                            <button type="button" class="btn-2 mt-5">Our Location</button>
 
                                         </div>
 
@@ -456,8 +140,8 @@ MANNANAM
 
                                 <div class="container-fluid">
                                     <div class="row">
-                                        <div class="col-lg-7 col-sm-12 col-md-12" style="padding: 2% 5% 3% 0;">
-                                            <p class="leade font-italic  justify-content " style="color: #7ca8a1;">
+                                        <div class="col-lg-7 col-sm-12 col-md-12 p-4">
+                                            <p class="leade font-italic  justify-content text-h1-cen">
                                                 The DREAMS Band strives towards making a
                                                 positive difference in the community by utilizing their musical skills.
                                                 DREAMS Band
@@ -469,21 +153,18 @@ MANNANAM
                                                 goals for
                                                 the benefit of the society.
                                             </p>
-                                            <p class="leade font-italic  justify-content" style="color: #7ca8a1;">
+                                            <p class="leade font-italic  justify-content text-h1-cen">
                                                 Those who are interested to be a part of the band may contact the
                                                 respective leaders
                                                 in each locality.
                                             </p>
-                                            <button type="button" class="btn-2">Join Us</button>
-                                            &nbsp;&nbsp;&nbsp;
-                                            <button type="button" class="btn-2">Our Location</button>
+
                                         </div>
                                         <div class="col-lg-5 col-sm-12 col-md-12">
-                                            <center>
-                                                <img src="https://img.freepik.com/free-vector/orchestra-concept-illustration_114360-3098.jpg?w=2000"
-                                                    alt="mannanam" height="400" width="400" style="padding-top: 5%; width: 100%;
-                                                height: auto;">
-                                            </center>
+
+                                            <img src="{% static 'locations/band.webp' %}" alt="mannanam" height="400"
+                                                width="400" sclass="pt-5 w-100 h-auto">
+
                                         </div>
                                     </div>
                                 </div>
@@ -493,8 +174,8 @@ MANNANAM
                                 class="tab-pane fade px-4 py-5">
                                 <div class="container-fluid">
                                     <div class="row">
-                                        <div class="col-lg-7 col-sm-12 col-md-12" style="padding: 2% 5% 3% 0;">
-                                            <p class="leade font-italic  justify-content " style="color: #7ca8a1;">
+                                        <div class="col-lg-7 col-sm-12 col-md-12 p-4">
+                                            <p class="leade font-italic  justify-content text-h1-cen">
                                                 DREAMS Pro-club is a support group for the
                                                 personal and professional development of young professionals. Small
                                                 groups of 10-12
@@ -508,22 +189,20 @@ MANNANAM
                                                 leadership,
                                                 cooperation, and community engagement.
                                             </p>
-                                            <p class="leade font-italic  justify-content" style="color: #7ca8a1;">
+                                            <p class="leade font-italic  justify-content text-h1-cen">
+
                                                 This platform is yet to be initiated. Those
                                                 who are interested to take a partnership may contact the respective
                                                 leaders in each
                                                 locality.
                                             </p>
-                                            <button type="button" class="btn-2">Join Us</button>
-                                            &nbsp;&nbsp;&nbsp;
-                                            <button type="button" class="btn-2">Our Location</button>
+
                                         </div>
                                         <div class="col-lg-5 col-sm-12 col-md-12">
-                                            <center>
-                                                <img src="https://i.pinimg.com/originals/8c/22/2c/8c222c3f4bc0a92105d90564f0abac4b.png"
-                                                    alt="mannanam" height="400" width="400"
-                                                    style="width: 100%; height: auto;">
-                                            </center>
+
+                                            <img src="{% static 'locations/proclub.png' %}" alt="mannanam" height="400"
+                                                width="400" class="w-100 h-auto">
+
                                         </div>
                                     </div>
                                 </div>
@@ -589,30 +268,39 @@ MANNANAM
                     <!-- Section: Images -->
                     <section class="">
                         <div class="row">
-                            <div class="col-lg-6 col-md-6 mb-4 mb-lg-0">
-                                <div class="bg-image hover-overlay ripple shadow-1-strong rounded"
+                            <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+                                <div class="bg-image hover-overlay ripple shadow-1-strong rounded min-hieght-240"
                                     data-ripple-color="light">
 
-                                    <img src="{% static 'locations/mannanam/Mannanam-Facebook.jpg'%}" class="w-100" />
-                                    <a href="https://www.facebook.com/groups/684244505701342/" data-mdb-toggle="modal"
-                                        data-mdb-target="#exampleModal1">
-                                        <div class="mask mask1" ></div>
+                                    <img src="{% static 'locations/chaganacherry/1.png'%}"
+                                        class="w-100 min-hieght-240" />
+                                    <a href="#!" data-mdb-toggle="modal" data-mdb-target="#exampleModal1">
+                                        <div class="mask mask1"></div>
                                     </a>
                                 </div>
                             </div>
 
-                            <div class="col-lg-6 mb-4 mb-lg-0">
-                                <div class="bg-image hover-overlay ripple shadow-1-strong rounded"
+                            <div class="col-lg-4 mb-4 mb-lg-0">
+                                <div class="bg-image hover-overlay ripple shadow-1-strong rounded min-hieght-240"
                                     data-ripple-color="light">
-                                    <img src="{% static 'locations/mannanam/Mannanam-Gallery.jpg'%}" class="w-100" />
-                                    <a href="https://photos.google.com/share/AF1QipMcT-8ZKM1-i3KeTfBKXCxg1PTfP8xSR7XVB4xyhfqcC-uJbRHb85Bstlx9sgQoqw?pli=1&key=UWpaX0FNX3VmM3FCR2NsQ3BiLTdYbkZNT0xObUtB"
-                                        data-mdb-toggle="modal" data-mdb-target="#exampleModal2">
-                                        <div class="mask mask1" ></div>
+                                    <img src="{% static 'locations/chaganacherry/2.png'%}"
+                                        class="w-100 min-hieght-240" />
+                                    <a href="#!" data-mdb-toggle="modal" data-mdb-target="#exampleModal2">
+                                        <div class="mask mask1"></div>
                                     </a>
                                 </div>
                             </div>
 
-
+                            <div class="col-lg-4 mb-4 mb-lg-0">
+                                <div class="bg-image hover-overlay ripple shadow-1-strong rounded min-hieght-240"
+                                    data-ripple-color="light">
+                                    <img src="{% static 'locations/chaganacherry/3.png'%}"
+                                        class="w-100 min-hieght-240" />
+                                    <a href="#!" data-mdb-toggle="modal" data-mdb-target="#exampleModal3">
+                                        <div class="mask mask1"></div>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </section>
                     <!-- Section: Images -->
@@ -680,7 +368,26 @@ MANNANAM
             </div>
         </div>
     </div>
+    <!-- social media -->
+    <div class="container">
+        <div class="row mt-5 p-5">
 
+
+            <div class="col-lg-6 hover-zoomin p-5">
+                <a href="https://www.facebook.com/groups/684244505701342/" title="" target="_blank">
+                    <img src="{% static 'locations/mannanam/Mannanam-Facebook.jpg'%}" alt="" />
+                </a>
+                <h4 class="text-center mt-3 text-green">MANNANAM FB GROUP</h4>
+            </div>
+
+            <div class="col-lg-6 hover-zoomin p-5">
+                <a href="{% url 'photo-gallery' %}#popup3" title="">
+                    <img src="{% static 'locations/mannanam/Mannanam-Gallery.jpg'%}" alt="" />
+                </a>
+                <h4 class="text-center mt-3 text-green">MANNANAM GALLERY</h4>
+            </div>
+        </div>
+    </div>
     <!-- Speaker -->
     <div class="container">
         <div class="row text-center">
@@ -689,8 +396,8 @@ MANNANAM
 
             <!-- Team item -->
             <div class="col-xl-3 col-sm-6 mb-5">
-                <div class="bg-white rounded shadow-sm py-5 px-4 min-height" ><img
-                        src="https://letusdream.org/wp-content/uploads/2020/08/Reji-C-J-127x160.jpg" alt="" width="100"
+                <div class="bg-white rounded shadow-sm py-5 px-4 min-height"><img
+                        src="{% static 'locations/cologne/default.png'%}" alt="" width="100" height="100"
                         class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
                     <h5 class="mb-0">Mr. Reji</h5><span class="small text-uppercase text-muted">PRO -
                         CLUB</span>
@@ -700,18 +407,19 @@ MANNANAM
 
             <!-- Team item -->
             <div class="col-xl-3 col-sm-6 mb-5">
-                <div class="bg-white rounded shadow-sm py-5 px-4 min-height" ><img
-                        src="https://letusdream.org/wp-content/uploads/2020/08/Vincent-Alex-117x160.jpg" alt=""
-                        width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+                <div class="bg-white rounded shadow-sm py-5 px-4 min-height"><img
+                        src="{% static 'locations/cologne/default.png'%}" alt="" width="100"
+                        class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
                     <h5 class="mb-0">Adv. Vincent</h5><span class="small text-uppercase text-muted">PRO - CLUB</span>
+
 
                 </div>
             </div><!-- End -->
 
             <!-- Team item -->
             <div class="col-xl-3 col-sm-6 mb-5">
-                <div class="bg-white rounded shadow-sm py-5 px-4 min-height" ><img
-                        src="https://letusdream.org/wp-content/uploads/2020/08/George-122x160.jpg" alt="" width="100"
+                <div class="bg-white rounded shadow-sm py-5 px-4 min-height"><img
+                        src="{% static 'locations/cologne/default.png'%}" alt="" width="100"
                         class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
                     <h5 class="mb-0">Mr. George</h5><span class="small text-uppercase text-muted">PRO -
                         CLUB</span>
@@ -721,12 +429,11 @@ MANNANAM
             <!-- End -->
             <!-- Team item -->
             <div class="col-xl-3 col-sm-6 mb-5">
-                <div class="bg-white rounded shadow-sm py-5 px-4 min-height" ><img
-                        src="https://letusdream.org/wp-content/uploads/2020/08/Chinchu-Rani-Alex-2-121x160.jpg" alt=""
-                        width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+                <div class="bg-white rounded shadow-sm py-5 px-4 min-height"><img
+                        src="{% static 'locations/cologne/default.png' %}" alt="" width="100"
+                        class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
                     <h5 class="mb-0">Prof. Chinju Vincent</h5><span class="small text-uppercase text-muted">PRO -
                         CLUB</span>
-
                 </div>
             </div>
             <!-- End -->
@@ -739,21 +446,21 @@ MANNANAM
 
             <!-- Team item -->
             <div class="col-xl-3 col-sm-6 mb-5">
-                <div class="bg-white rounded shadow-sm py-5 px-4 min-height" ><img
-                        src="https://letusdream.org/wp-content/uploads/2020/08/Harsha-129x160.jpg" alt="" width="100"
+                <div class="bg-white rounded shadow-sm py-5 px-4 min-height"><img
+                        src="{% static 'locations/cologne/default.png' %}" alt="" width="100"
                         class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
                     <h5 class="mb-0">Ms. Harsha</h5><span class="small text-uppercase text-muted">PRO -
                         CLUB</span>
 
+
                 </div>
-            </div><!-- End -->
-
-
+            </div>
+            <!-- End -->
 
             <!-- Team item -->
             <div class="col-xl-3 col-sm-6 mb-5">
-                <div class="bg-white rounded shadow-sm py-5 px-4 min-height" ><img
-                        src="https://letusdream.org/wp-content/uploads/2020/08/Joe--116x160.jpg" alt="" width="100"
+                <div class="bg-white rounded shadow-sm py-5 px-4 min-height"><img
+                        src="{% static 'locations/cologne/default.png' %}" alt="" width="100"
                         class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
                     <h5 class="mb-0">Mr. Jo</h5><span class="small text-uppercase text-muted">PRO -
                         CLUB</span>
@@ -763,8 +470,8 @@ MANNANAM
             <!-- End -->
             <!-- Team item -->
             <div class="col-xl-3 col-sm-6 mb-5">
-                <div class="bg-white rounded shadow-sm py-5 px-4 min-height" ><img
-                        src="https://letusdream.org/wp-content/uploads/2020/08/Jithu-118x160.jpg" alt="" width="100"
+                <div class="bg-white rounded shadow-sm py-5 px-4 min-height"><img
+                        src="{% static 'locations/cologne/default.png' %}" alt="" width="100"
                         class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
                     <h5 class="mb-0">Mr. Jithu</h5><span class="small text-uppercase text-muted">PRO -
                         CLUB</span>
@@ -772,10 +479,16 @@ MANNANAM
                 </div>
             </div>
             <!-- End -->
+
+
+            <!-- Team item -->
+
+            <!-- End -->
         </div>
 
 
     </div>
+    {% include 'partials/_testimonials.html' %}
 
     <!-- contact us -->
 
@@ -817,7 +530,7 @@ MANNANAM
                             <div class="contact_info_content text-black">
                                 <div class="contact_info_title">Address</div>
                                 <div class="contact_info_text text-black fw-semibold">KE English Medium school,
-                                    Mannanam, Kottayam, Kerala 686561..</div>
+                                    Mannanam, Kottayam, Kerala 686561.</div>
                             </div>
                         </div>
 
@@ -826,6 +539,7 @@ MANNANAM
             </div>
         </div>
     </div>
+
 </section>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script>
@@ -853,10 +567,10 @@ MANNANAM
     };
 
 
-    $('#number1').jQuerySimpleCounter({ end: 111, duration: 3000 });
-    $('#number2').jQuerySimpleCounter({ end: 111, duration: 3000 });
-    $('#number3').jQuerySimpleCounter({ end: 09, duration: 3000 });
-    $('#number4').jQuerySimpleCounter({ end: 120, duration: 3000 });
+    $('#number1').jQuerySimpleCounter({ end: 56, duration: 3000 });
+    $('#number2').jQuerySimpleCounter({ end: 56, duration: 3000 });
+    $('#number3').jQuerySimpleCounter({ end: 06, duration: 3000 });
+    $('#number4').jQuerySimpleCounter({ end: 62, duration: 3000 });
 
 
 
@@ -873,3 +587,4 @@ Preview YouTube video Never Stop Dreaming
 Preview YouTube video Fr Lijo Message Dreams
 
 Preview YouTube video Waving flag
+for leadership team images in 1*1 ratio
