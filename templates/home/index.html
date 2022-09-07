@@ -70,7 +70,7 @@ HOME
           </div>
           <div class="card-footer text-center bg-white border-0 card-f1">
 
-            <button type="button" class="btn-2">Join Us</button>
+            <a href="{% url 'registration_user' %}"><button type="button" class="btn-2">Join Us</button></a>
             <a href="{% url 'dreams' 'program' %}">
               <button type="button" class="btn-2">Know more</button>
             </a>
@@ -92,7 +92,8 @@ HOME
               working professionals meet once every month to discuss and implement.</p>
           </div>
           <div class="card-footer text-center bg-white border-0 card-f1">
-            <button type="button" id="btn-join" class="btn-2">Join Us</button>
+            <a href="{% url 'registration_user' %}"> <button type="button" id="btn-join" class="btn-2">Join
+                Us</button></a>
             <a href="{% url 'dreams' 'proclub' %}"><button type="button" id="btn-more" class="btn-2">Know
                 more</button></a>
 
@@ -115,7 +116,8 @@ HOME
               communities.</p>
           </div>
           <div class="card-footer text-center bg-white border-0 card-f1">
-            <button type="button" id="btn-join" class="btn-2">Join Us</button>
+            <a href="{% url 'registration_user' %}"><button type="button" id="btn-join" class="btn-2">Join
+                Us</button></a>
             <a href="{% url 'dreams' 'band' %}"><button type="button" id="btn-more" class="btn-2">Know
                 more</button></a>
 
@@ -137,7 +139,8 @@ HOME
             </p>
           </div>
           <div class="card-footer text-center bg-white border-0 card-f1">
-            <button type="button" id="btn-join" class="btn-2">Join Us</button>
+            <a href="{% url 'registration_user' %}"> <button type="button" id="btn-join" class="btn-2">Join
+                Us</button></a>
             <a href="{% url 'annual-conference' %}"><button type="button" id="btn-more" class="btn-2">Know
                 more</button></a>
 
@@ -203,29 +206,29 @@ HOME
         <div id="projectFacts" class="sectionClass">
           <div class="fullWidth eight columns">
             <div class="projectFactsWrap ">
-              <div class="item wow fadeInUpBig animated animated" data-number="12" style="visibility: visible;">
-                <i class="fa fa-child"></i>
-                <p id="number1" class="number">217</p>
+              <div class="item wow fadeInUpBig animated animated box" data-number="1614" style="visibility: visible;">
+                <i class="fa fa-child icon"></i>
+                <p id="number1" class="number counter">1614</p>
                 <span></span>
-                <p>Students</p>
+                <p class="text">Students</p>
               </div>
-              <div class="item wow fadeInUpBig animated animated" data-number="55" style="visibility: visible;">
-                <i class="fa fa-smile-o"></i>
-                <p id="number2" class="number">882</p>
+              <div class="item wow fadeInUpBig animated animated box" data-number="3029" style="visibility: visible;">
+                <i class="fa fa-smile icon"></i>
+                <p id="number2" class="number counter">3029</p>
                 <span></span>
-                <p>Participants</p>
+                <p class="text">Participants</p>
               </div>
-              <div class="item wow fadeInUpBig animated animated" data-number="359" style="visibility: visible;">
-                <i class="fa fa-user"></i>
-                <p id="number3" class="number">55</p>
+              <div class="item wow fadeInUpBig animated animated box" data-number="246" style="visibility: visible;">
+                <i class="fa fa-user icon"></i>
+                <p id="number3" class="number counter">246</p>
                 <span></span>
-                <p>Leadership</p>
+                <p class="text">Leadership</p>
               </div>
-              <div class="item wow fadeInUpBig animated animated" data-number="246" style="visibility: visible;">
-                <i class="fa fa-users"></i>
-                <p id="number4" class="number">904</p>
+              <div class="item wow fadeInUpBig animated animated box" data-number="3185" style="visibility: visible;">
+                <i class="fa fa-users icon"></i>
+                <p id="number4" class="number counter">3185</p>
                 <span></span>
-                <p>Families</p>
+                <p class="text">Families</p>
               </div>
             </div>
           </div>
@@ -277,11 +280,10 @@ HOME
     };
 
 
-    $('#number1').jQuerySimpleCounter({ end: 56, duration: 3000 });
-    $('#number2').jQuerySimpleCounter({ end: 56, duration: 3000 });
-    $('#number3').jQuerySimpleCounter({ end: 06, duration: 3000 });
-    $('#number4').jQuerySimpleCounter({ end: 62, duration: 3000 });
-
+    $('#number1').jQuerySimpleCounter({ end: 1614, duration: 3000 });
+    $('#number2').jQuerySimpleCounter({ end: 3029, duration: 3000 });
+    $('#number3').jQuerySimpleCounter({ end: 246, duration: 3000 });
+    $('#number4').jQuerySimpleCounter({ end: 3185, duration: 3000 });
 
 
   </script>
