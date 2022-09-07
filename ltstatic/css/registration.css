@@ -1,0 +1,25 @@
+.registration-section {
+    font-family: 'Montserrat', sans-serif;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+}
+
+.registration {
+    width: 400px;
+    height: min-content;
+    padding: 20px;
+    border-radius: 20px;
+    background: #ffffff;
+}
+
+.registration form .form-group {
+    margin-bottom: 12px;
+}
+
+.registration form input[type="submit"] {
+    font-size: 20px;
+    margin-top: 15px;
+}

@@ -1,3 +1,4 @@
+
 .registration-section {
     font-family: 'Montserrat', sans-serif;
     
@@ -35,6 +36,7 @@
 
 /*Login Page*/
 .login-section {
+
     font-family: 'Montserrat', sans-serif;
     height: 100vh;
     display: flex;
@@ -43,22 +45,38 @@
     background-color: #eee;
 }
 
+
+.registration {
+    width: 400px;
+}
 .login {
     width: 360px;
+
     height: min-content;
     padding: 20px;
     border-radius: 20px;
     background: #ffffff;
 }
 
+
+.registration form .form-group {
+    margin-bottom: 12px;
+}
+
+
+
 .login form .form-group {
     margin-bottom: 12px;
 }
 
 .login form input[type="submit"] {
+
     font-size: 20px;
     margin-top: 15px;
 }
+
+
+
 
 .wrapper {
     position: relative;
@@ -80,18 +98,22 @@ i.fa-solid {
 
 
 
-/*View-dt.html*/
+
 
 .view-dt-section {
+
     font-family: 'Montserrat', sans-serif;
     margin: 2em;
 }
+
+
 
 .view-dt-section thead input {
     width: 100%;
     padding: 3px;
     box-sizing: border-box;
 }
+
 
 .view-dt-section div.dataTables_wrapper div.dataTables_length select {
     height: auto;

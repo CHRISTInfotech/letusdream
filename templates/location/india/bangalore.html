@@ -24,8 +24,14 @@ BANGALORE
 
     <nav aria-label="breadcrumb animated slideInDown" class="cus-breadcrumb">
         <ol class="breadcrumb text-uppercase mb-0 bg-white">
+<<<<<<< HEAD
             <li class="breadcrumb-item"><a class="text-black text-black text-decoration-none" href="{% url 'main' %}">Home</a></li>
             <li class="breadcrumb-item"><a class="text-black text-black text-decoration-none" href="{% url 'main' %}#location">Location</a></li>
+=======
+            <li class="breadcrumb-item"><a class="text-black text-decoration-none" href="{% url 'main' %}">Home</a></li>
+            <li class="breadcrumb-item"><a class="text-black text-decoration-none"
+                    href="{% url 'main' %}#location">Location</a></li>
+>>>>>>> b3255c9efa6cec4f5f3555a0be1b5acd16cedf94
             <li class="breadcrumb-item  active" aria-current="page">BANGALORE</li>
         </ol>
     </nav>
@@ -123,9 +129,11 @@ BANGALORE
 
                                             <img src="{% static 'locations/bangalore/BANGLORE.png' %}" alt="mannanam"
                                                 height="400" width="400" class="pt-5 w-100 h-auto">
-                                            <button type="button" class="btn-2 mt-5">Join Us</button>
+                                            <a href="{% url 'registration_user' %}"><button type="button"
+                                                    class="btn-2 mt-5">Join Us</button></a>
                                             &nbsp;&nbsp;&nbsp;
-                                            <button type="button" class="btn-2 mt-5">Our Location</button>
+                                            <a href="{% url 'main' %}#location"><button type="button"
+                                                    class="btn-2 mt-5">Our Location</button></a>
 
                                             <h4 class="mt-3 mb-3 mr-3 font-italic fw-semibold mt-5">Leadership:</h4>
                                             <p class="leade font-italic justify-content">
