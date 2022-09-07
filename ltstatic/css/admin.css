@@ -1,8 +1,40 @@
-.signup body{
+.registration-sec {
     font-family: 'Montserrat', sans-serif;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: #eee;
+}
+
+.registration {
+    width: 400px;
+    height: min-content;
+    padding: 20px;
+    border-radius: 20px;
+    background: #ffffff;
+}
+
+.registration form .form-group {
+    margin-bottom: 12px;
+}
+
+.registration form input[type="submit"] {
+    font-size: 20px;
+    margin-top: 15px;
+}
+
+.report-section {
+    font-family: 'Montserrat', sans-serif;
+    margin: 2em;
+}
+
+thead input {
+    width: 100%;
+    padding: 3px;
+    box-sizing: border-box;
+}
+
+div.dataTables_wrapper div.dataTables_length select {
+    height: auto;
 }
