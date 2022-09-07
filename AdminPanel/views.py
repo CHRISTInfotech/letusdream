@@ -23,5 +23,3 @@ def reports(request):
 def events(request):
     return render(request,"Admin/events.html")
 
-def country(request):
-    return render(request,"Admin/country.html")

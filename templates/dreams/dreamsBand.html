@@ -43,21 +43,14 @@ Dream Band
     </ol>
 </nav>
 
-<div class="container mb-5 ">
+<div class="container ">
     <div class="row">
-
-        <div class="col-lg-5 col-md-5 ">
-            <div class="move-img circleBase type3">
-                <img src="{% static 'DreamsProgram/3-up-Characters.gif' %}" class="img1">
-            </div>
-
-        </div>
-        <div class="col-lg-2 col-md-2"></div>
-        <div class="col-lg-5 col-md-5">
-            <div class="colored-section">
+    
+        <div class="col-lg m-5">
+            
                 <h1 class="big-heading">ABOUT DREAMS BAND</h1>
                 <br>
-                <p class="text-justify">Music the ultimate expression of self. Music is the closest thing
+                <p class="text-justify colored-section">Music the ultimate expression of self. Music is the closest thing
                     today to divinity. It casts the beauty of the soul and magnifies everything it touches. Not only
                     a form of self-expression, but also the harbinger of peace and prosperity. Music is the soul’s
                     way of connecting with God.
@@ -65,18 +58,19 @@ Dream Band
                     of talented and determined individuals in various location of the DREAMS.
                     <br><br>
                 </p>
-            </div>
+         
 
         </div>
     </div>
 </div>
 
 
-<div class="container cus-con-fl">
+<div class="container ">
     <div class="row">
-        <div class="col-lg-5 colored-section">
-            <h1 class="big-heading">DREAMS</h1>
-            <p class="text-justify">
+        <div class="col-lg-7 colored-section p-5">
+            
+            <p class="text-justify ">
+                <h1 class="big-heading">DREAMS</h1>
                 Project, who wish to make positive changes around them through the power of music. At the core of
                 the DREAMS Band lies the conviction in the ability of music to transform, educate, and inspire human
                 beings. Through songs with motivational lyrics and upbeat music, the band attempts to uplift the
@@ -85,34 +79,38 @@ Dream Band
                 Written, composed, performed, and managed by the children in the band, the songs share stories of
                 values, and success. The children are also supported and guided by the local musicians. The Band
                 performs one day musical retreats apart from the regular concerts of 1-2 hours’ duration.
+                <p class="p-2 m-3 text-center"> 
+                    <button type="button" class="btn-1">Join Us</button>
+                <button type="button" class="btn-1">Our Location</button>   
+                </p>
+                
             </p>
         </div>
 
-        <div class="col-lg-7 pt-5 pl-5">
+        <div class="col-lg-5 p-5">
 
-            <img src="{% static 'Research\Dreams-RESEARCH.png' %}" class="pb-5" height="500" width="500">
-
-            <button type="button" class="btn-1">Join Us</button>
-            <button type="button" class="btn-1">Our Location</button>
-
+            <img src="{% static 'Research\Dreams-RESEARCH.png' %}" height="500" width="500">
 
         </div>
     </div>
 </div>
 
 
-<h1>IMAGE GALLERY</h1>
-<div class="myimages">
-
+<div class="container p-5 text-center">
+    <div class="row">
+        <h1 class="big-heading">IMAGE GALLERY</h1>
+    </div>
+</div>
+<div class="myimages"> 
     <div class="first-column">
-        <a href="{% static 'conference/BRU_1511.webp' %}"><img src="{% static 'conference/BRU_1511.webp' %}"
-                alt="image"></a>
-        <a href="{% static 'conference/67967044_2022-02-21_12-37-57.jpg' %}"><img
-                src="{% static 'conference/67967044_2022-02-21_12-37-57.jpg' %}" alt="image"></a>
-        <a href="{% static 'conference/1472919242_2016-11-25_10-32-50.jfif' %}"><img
-                src="{% static 'conference/1472919242_2016-11-25_10-32-50.jfif' %}" alt="image"></a>
-        <a href="{% static 'conference/maxresdefault.jpg' %}"><img src="{% static 'conference/maxresdefault.jpg' %}"
-                alt="image"></a>
+        <a href="{% static 'conference/BRU_1511.webp' %}">
+            <img src="{% static 'conference/BRU_1511.webp' %}"alt="image"></a>
+        <a href="{% static 'conference/67967044_2022-02-21_12-37-57.jpg' %}">
+            <img src="{% static 'conference/67967044_2022-02-21_12-37-57.jpg' %}" alt="image"></a>
+        <a href="{% static 'conference/1472919242_2016-11-25_10-32-50.jfif' %}">
+            <img src="{% static 'conference/1472919242_2016-11-25_10-32-50.jfif' %}" alt="image" class="w-100"></a>
+        <a href="{% static 'conference/maxresdefault.jpg' %}">
+            <img src="{% static 'conference/maxresdefault.jpg' %}"alt="image"></a>
     </div>
     <div class="first-column">
         <a href="{% static 'conference/DREAMA-BAND345-scaled.jpg' %}"><img
@@ -127,10 +125,7 @@ Dream Band
 </div>
 
 
-<div class="container-fluid cus-con-1">
-
-
-
+<div class="container-fluid cus-con-1 colored-section">
 
     <div class="container mt-4">
         <div class="row">
@@ -169,8 +164,12 @@ Dream Band
 </div>
 
 
+<div class="container">
+    <div class="row">
+        <h1 class="big-heading">VIDEO GALLERY</h1>
+    </div>
+</div>
 
-<h1>VIDEO GALLERY</h1>
 <div class="gallery">
     <div class="video-box cus-he">
         <iframe src="https://www.youtube.com/embed/Ux9nD9YuGv0" class="cus-he"></iframe>
@@ -188,7 +187,7 @@ Dream Band
         <iframe src="https://www.youtube.com/embed/LfzJvlfVmOc" class="cus-he"></iframe>
     </div>
 </div>
-<br><br><br>
+
 {% include 'partials/_globalPresence.html' %}
 
 <script>
