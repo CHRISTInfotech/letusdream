@@ -23,7 +23,9 @@ HOME
 
 <!--  Bootstrap CSS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
-
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css'>
+<!-- Font Awesome -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
 <!-- Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
@@ -44,7 +46,7 @@ HOME
     </div>
   </div>
 
-  <div class="container-fluid flu-con mt-5 p-5" id="dreamProgram">
+  <div class="container flu-con mt-5 p-5" id="dreamProgram">
     <div class="row row-index">
       <div class="w-100 text-center">
 
@@ -196,38 +198,43 @@ HOME
 
 
     <div class="row text-center row-4">
-      <div class="feature-box col-sm">
-        <h3 class="fw-bold">Students</h3>
-        <div class="card-body text-h3">
-          <h2>1614+</h2>
-        </div>
+      <div class="col-lg-12">
 
-      </div>
-      <div class="feature-box col-sm">
-        <h3 class="fw-bold">Participants</h3>
-        <div class="card-body text-h3">
-          <h2>3029+</h2>
+        <div id="projectFacts" class="sectionClass">
+          <div class="fullWidth eight columns">
+            <div class="projectFactsWrap ">
+              <div class="item wow fadeInUpBig animated animated" data-number="12" style="visibility: visible;">
+                <i class="fa fa-child"></i>
+                <p id="number1" class="number">217</p>
+                <span></span>
+                <p>Students</p>
+              </div>
+              <div class="item wow fadeInUpBig animated animated" data-number="55" style="visibility: visible;">
+                <i class="fa fa-smile-o"></i>
+                <p id="number2" class="number">882</p>
+                <span></span>
+                <p>Participants</p>
+              </div>
+              <div class="item wow fadeInUpBig animated animated" data-number="359" style="visibility: visible;">
+                <i class="fa fa-user"></i>
+                <p id="number3" class="number">55</p>
+                <span></span>
+                <p>Leadership</p>
+              </div>
+              <div class="item wow fadeInUpBig animated animated" data-number="246" style="visibility: visible;">
+                <i class="fa fa-users"></i>
+                <p id="number4" class="number">904</p>
+                <span></span>
+                <p>Families</p>
+              </div>
+            </div>
+          </div>
         </div>
-
-      </div>
-      <div class="feature-box col-sm">
-        <h3 class="fw-bold">Leadership</h3>
-        <div class="card-body text-h3">
-          <h2>246+</h2>
-        </div>
-
-      </div>
-      <div class="feature-box col-sm">
-        <h3 class="fw-bold">Families</h3>
-        <div class="card-body text-h3">
-          <h2>3185+</h2>
-        </div>
-
       </div>
     </div>
   </div>
 
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script>
     var slideImg = document.getElementById("slideImg");
     var image = new Array(
@@ -245,7 +252,43 @@ HOME
       i++;
       setTimeout('slider()', 3000)
     }
+
+
+    $.fn.jQuerySimpleCounter = function (options) {
+      var settings = $.extend({
+        start: 0,
+        end: 1000,
+        easing: 'swing',
+        duration: 400,
+        complete: ''
+      }, options);
+
+      var thisElement = $(this);
+
+      $({ count: settings.start }).animate({ count: settings.end }, {
+        duration: settings.duration,
+        easing: settings.easing,
+        step: function () {
+          var mathCount = Math.ceil(this.count);
+          thisElement.text(mathCount);
+        },
+        complete: settings.complete
+      });
+    };
+
+
+    $('#number1').jQuerySimpleCounter({ end: 56, duration: 3000 });
+    $('#number2').jQuerySimpleCounter({ end: 56, duration: 3000 });
+    $('#number3').jQuerySimpleCounter({ end: 06, duration: 3000 });
+    $('#number4').jQuerySimpleCounter({ end: 62, duration: 3000 });
+
+
+
   </script>
+  <!-- MDB -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.4.0/mdb.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 </body>
 
 </html>
