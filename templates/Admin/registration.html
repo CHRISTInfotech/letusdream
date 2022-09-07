@@ -2,11 +2,36 @@
 
 
 {% block title %}
+<<<<<<< HEAD
 ADMIN
 {% endblock title %}
 
 {% block content %}
 <section class="registration-sec">
+=======
+Registration
+{% endblock title %}
+<!-- Bootstrap v5.1.3 CDNs -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Google font family -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+<!-- Font Awesome kit -->
+<script src="https://kit.fontawesome.com/f8cd4d7fce.js" crossorigin="anonymous"></script>
+{% block content %}
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a class="text-black" >Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Registration</li>
+    </ol>
+</nav>
+
+<section class="registration-section">
+>>>>>>> 9a72e22fc0d0cdc5d7530418bd4c96d8ba516126
     <div class="registration">
         <h1 class="text-center fw-bold mb-3">Registration</h1>
         <form class="row g-3 needs-validation" novalidate>
@@ -27,7 +52,7 @@ ADMIN
 
             <div class="col-md-6">
                 <label for="validationCustom01" class="form-label">DOB</label>
-                <input type="text" class="form-control" type="text" id="validationCustom01" required>
+                <input type="text" class="form-control" type="date" id="validationCustom01" required>
                 <div class="valid-feedback">
                     Looks good!
                 </div>
@@ -36,7 +61,7 @@ ADMIN
                 <label for="validationCustom02" class="form-label">Phone no</label>
                 <div class="input-group has-validation">
                     <span class="input-group-text" id="inputGroupPrepend">+</span>
-                    <input type="text" class="form-control" type="text" id="validationCustom02" required>
+                    <input type="text" class="form-control" type="number" id="validationCustom02" required>
                     <div class="valid-feedback">
                         Looks good!
                     </div>
@@ -55,21 +80,22 @@ ADMIN
             </div>
 
             <div class="col-md-12">
-                <label for="validationCustomUsername" class="form-label">Password</label>
+                <label for="validationCustomUsername" class="form-label">Father's Name</label>
                 <div class="input-group has-validation">
                     <input type="text" class="form-control" id="validationCustomUsername"
                         aria-describedby="inputGroupPrepend" required>
                     <div class="invalid-feedback">
-                        Strong Password
+                       
                     </div>
                 </div>
             </div>
 
 
             <div class="col-md-12">
-                <label for="validationCustomUsername" class="form-label">Father Name</label>
+                <label for="validationCustomUsername" class="form-label">Father's Phone No</label>
                 <div class="input-group has-validation">
-                    <input type="text" class="form-control" id="validationCustomUsername"
+                    <span class="input-group-text" id="inputGroupPrepend">+</span>
+                    <input type="number" class="form-control" id="validationCustomUsername"
                         aria-describedby="inputGroupPrepend" required>
                     <div class="invalid-feedback">
                         Strong Password
@@ -82,9 +108,9 @@ ADMIN
                 <label for="validationCustom04" class="form-label">Country</label>
                 <select class="form-select" id="validationCustom04" required>
                     <option selected disabled value="">Choose...</option>
-                    <option>Karnataka</option>
-                    <option>Maharastra</option>
-                    <option>Gujarat</option>
+                    <option>India</option>
+                    <option>USA</option>
+                    <option>Germany</option>
                 </select>
                 <div class="invalid-feedback">
                     Please select a valid state.
@@ -135,6 +161,14 @@ ADMIN
         </form>
     </div>
 </section>
+<<<<<<< HEAD
+=======
+
+
+
+
+
+>>>>>>> 9a72e22fc0d0cdc5d7530418bd4c96d8ba516126
 <script>
     // Example starter JavaScript for disabling form submissions if there are invalid fields
     (function () {
@@ -157,4 +191,8 @@ ADMIN
             })
     })()
 </script>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 9a72e22fc0d0cdc5d7530418bd4c96d8ba516126
 {% endblock content %}
