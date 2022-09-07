@@ -38,7 +38,8 @@ Dream Band
 <nav aria-label="breadcrumb animated slideInDown" class="cus-breadcrumb">
     <ol class="breadcrumb text-uppercase mb-0 bg-white">
         <li class="breadcrumb-item"><a class="text-black text-decoration-none" href="{% url 'main' %}">Home</a></li>
-        <li class="breadcrumb-item"><a class="text-black text-decoration-none" href="{% url 'main' %}#dreamProgram">Dreams</a></li>
+        <li class="breadcrumb-item"><a class="text-black text-decoration-none"
+                href="{% url 'main' %}#dreamProgram">Dreams</a></li>
         <li class="breadcrumb-item  active" aria-current="page">Dreams Band</li>
     </ol>
 </nav>
@@ -92,8 +93,8 @@ Dream Band
 
             <img src="{% static 'Research\Dreams-RESEARCH.png' %}" class="pb-5" height="500" width="500">
 
-            <button type="button" class="btn-1">Join Us</button>
-            <button type="button" class="btn-1">Our Location</button>
+            <a href="{% url 'registration_user' %}"><button type="button" class="btn-1">Join Us</button></a>
+            <a href=""><button type="button" class="btn-1">Our Location</button></a>
 
 
         </div>

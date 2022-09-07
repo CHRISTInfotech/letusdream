@@ -25,7 +25,8 @@ BANGALORE
     <nav aria-label="breadcrumb animated slideInDown" class="cus-breadcrumb">
         <ol class="breadcrumb text-uppercase mb-0 bg-white">
             <li class="breadcrumb-item"><a class="text-black text-decoration-none" href="{% url 'main' %}">Home</a></li>
-            <li class="breadcrumb-item"><a class="text-black text-decoration-none" href="{% url 'main' %}#location">Location</a></li>
+            <li class="breadcrumb-item"><a class="text-black text-decoration-none"
+                    href="{% url 'main' %}#location">Location</a></li>
             <li class="breadcrumb-item  active" aria-current="page">BANGALORE</li>
         </ol>
     </nav>
@@ -123,7 +124,8 @@ BANGALORE
 
                                             <img src="{% static 'locations/bangalore/BANGLORE.png' %}" alt="mannanam"
                                                 height="400" width="400" class="pt-5 w-100 h-auto">
-                                            <button type="button" class="btn-2 mt-5">Join Us</button>
+                                            <a href="{% url 'registration_user' %}"><button type="button"
+                                                    class="btn-2 mt-5">Join Us</button></a>
                                             &nbsp;&nbsp;&nbsp;
                                             <button type="button" class="btn-2 mt-5">Our Location</button>
 
