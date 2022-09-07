@@ -16,7 +16,7 @@ MONRORE
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
 
 <!-- MDB -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.4.0/mdb.min.css" rel="stylesheet" />
+
 {% endblock links %}
 
 {% block content %}
@@ -24,8 +24,8 @@ MONRORE
 
     <nav aria-label="breadcrumb animated slideInDown" class="cus-breadcrumb">
         <ol class="breadcrumb text-uppercase mb-0 bg-white">
-            <li class="breadcrumb-item"><a class="text-black" href="{% url 'main' %}">Home</a></li>
-            <li class="breadcrumb-item"><a class="text-black" href="{% url 'main' %}#location">Location</a></li>
+            <li class="breadcrumb-item"><a class="text-black text-decoration-none" href="{% url 'main' %}">Home</a></li>
+            <li class="breadcrumb-item"><a class="text-black text-decoration-none" href="{% url 'main' %}#location">Location</a></li>
             <li class="breadcrumb-item  active" aria-current="page">Monrore</li>
         </ol>
     </nav>
@@ -375,7 +375,7 @@ MONRORE
     <!-- social media -->
     <div class="container">
         <div class="row mt-5 p-5">
-
+        
 
             <div class="col-lg-6 hover-zoomin p-5">
                 <a href="https://www.facebook.com/groups/3183208815051583/" title="" target="_blank">
@@ -397,7 +397,9 @@ MONRORE
         <div class="row text-center">
 
 
-
+            <h1 class="text-green text-center my-5 text-uppercase fw-bold">
+                Conference Chairs
+            </h1>
             <div class="col-xl-3 col-sm-6 mb-5">
                 <div class="bg-white rounded shadow-sm py-5 px-4 min-height" ><img
                         src="{% static 'locations/monroe/default.png'%}" alt="" width="100"
