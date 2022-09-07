@@ -100,3 +100,7 @@ def research(request):
 
 def publications(request):
     return render(request, 'research/publications.html')
+
+
+def registration_user(request):
+    return render(request, 'registration.html')

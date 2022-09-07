@@ -124,7 +124,7 @@
     z-index: 1;
     transform: rotate(45deg);
     left: 30px;
-    top: 55px;
+    top: 53px;
 }
 
 .programs-section .image-model {
@@ -188,11 +188,16 @@
 
 .programs-section .button span:after {
     content: '\00bb';
+
     position: absolute;
     opacity: 0;
     top: 0;
     right: -20px;
     transition: 0.5s;
+}
+
+.accordion-button:not(.collapsed)::after {
+    background-image: none !important;
 }
 
 .programs-section .button:hover {

@@ -4,8 +4,11 @@
 {% block title %}
 MONRORE
 {% endblock %}
+{% block extraStyles %}
+<link rel="stylesheet" href="{% static 'css/location.css' %}">
+{% endblock extraStyles %}
 
-{% block content %}
+{% block links %}
 
 
 <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css'>
@@ -14,371 +17,17 @@ MONRORE
 
 <!-- MDB -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.4.0/mdb.min.css" rel="stylesheet" />
-<style>
-    .text-green {
-        color: #0a7b79;
-    }
+{% endblock links %}
 
-    .team-img {
-        width: 160px;
-        border-style: groove;
-        border-radius: 30px;
-        padding: 5px
-    }
-
-    .changacherry-loc .button {
-        display: inline-block;
-        border-radius: 100px;
-        background-color: #d3f2e9;
-        font-weight: bold;
-        border: 2px solid #d3f2e9;
-        color: #0a7b79;
-        text-align: center;
-        font-size: 20px;
-        padding: 14px 28px;
-        width: 300px;
-        transition: all 0.5s;
-        cursor: pointer;
-        margin: 5px;
-        margin-top: 10px;
-        margin-bottom: 10px;
-    }
-
-    .changacherry-loc .button span {
-        cursor: pointer;
-        display: inline-block;
-        position: relative;
-        transition: 0.5s;
-    }
-
-    .changacherry-loc .button span:after {
-        content: '\00bb';
-        position: absolute;
-        opacity: 0;
-        top: 0;
-        right: -20px;
-        transition: 0.5s;
-    }
-
-    .changacherry-loc .button:hover {
-        background-color: transparent;
-        color: #0a7b79;
-        border: 2px solid #0a7b79;
-    }
-
-    .changacherry-loc .button:hover span {
-        padding-right: 25px;
-
-    }
-
-    .changacherry-loc .button:hover span:after {
-        opacity: 1;
-        right: 0;
-    }
-
-    .text-green {
-        color: #0a7b79;
-    }
-
-    .img-middle {
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-
-    }
-
-
-    /* lined tabs */
-
-    .dreams-tab .lined .nav-link {
-        border: none;
-        border-bottom: 3px solid transparent;
-    }
-
-    .dreams-tab .lined .nav-link:hover {
-        border: none;
-        border-bottom: 3px solid transparent;
-    }
-
-    .dreams-tab .lined .nav-link.active {
-        background: none;
-        color: #555;
-        border-color: #d3f2e9;
-    }
-
-
-
-    .dreams-tab .nav-pills .nav-link {
-        color: #555;
-    }
-
-    .dreams-tab .text-uppercase {
-        letter-spacing: 0.1em;
-    }
-
-    /* Counter */
-    .sectionClass div,
-    .sectionClass h1,
-    .sectionClass h2,
-    .sectionClass h3,
-    .sectionClass h4,
-    .sectionClass h5,
-    .sectionClass h6,
-    .sectionClass form,
-    .sectionClass p {
-        text-align: center;
-        margin: 0;
-        padding: 0;
-        font-size: 13px;
-        direction: ltr;
-    }
-
-    .sectionClass {
-        padding: 20px 0px 50px 0px;
-        position: relative;
-        display: block;
-    }
-
-    .fullWidth {
-        width: 100% !important;
-        display: table;
-        float: none;
-        padding: 0;
-        min-height: 1px;
-        height: 100%;
-        position: relative;
-    }
-
-
-    .sectiontitle {
-        background-position: center;
-        margin: 30px 0 0px;
-        text-align: center;
-        min-height: 20px;
-    }
-
-    .sectiontitle h2 {
-        font-size: 30px;
-
-        margin-bottom: 0px;
-        padding-right: 10px;
-        padding-left: 10px;
-    }
-
-
-    .headerLine {
-        width: 160px;
-        height: 2px;
-        display: inline-block;
-        background: #101F2E;
-    }
-
-
-    .projectFactsWrap {
-        display: flex;
-        margin-top: 30px;
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-
-
-    #projectFacts .fullWidth {
-        padding: 0;
-    }
-
-    .projectFactsWrap .item {
-        width: 25%;
-        height: 100%;
-        padding: 50px 0px;
-        text-align: center;
-    }
-
-    .projectFactsWrap .item:nth-child(1) {
-        background: #d3f2e9;
-    }
-
-    .projectFactsWrap .item:nth-child(2) {
-        background: #d3f2e9;
-    }
-
-    .projectFactsWrap .item:nth-child(3) {
-        background: #d3f2e9;
-    }
-
-    .projectFactsWrap .item:nth-child(4) {
-        background: #d3f2e9;
-    }
-
-    .projectFactsWrap .item p.number {
-        font-size: 40px;
-        padding: 0;
-        font-weight: bold;
-    }
-
-    .projectFactsWrap .item p {
-        color: #0a7b79;
-        font-size: 18px;
-        margin: 0;
-        padding: 10px;
-        font-family: 'Open Sans';
-    }
-
-    .nav-pills .nav-link.active,
-    .nav-pills .show>.nav-link {
-        box-shadow: none;
-    }
-
-    .nav-pills .nav-link {
-        margin: 0;
-        background-color: transparent;
-    }
-
-    .nav-tabs .nav-link:hover {
-        background-color: transparent;
-    }
-
-    .projectFactsWrap .item span {
-        width: 60px;
-        background: #0a7b79;
-        height: 2px;
-        display: block;
-        margin: 0 auto;
-    }
-
-
-    .projectFactsWrap .item i {
-        vertical-align: middle;
-        font-size: 50px;
-        color: #0a7b79;
-    }
-
-
-    .projectFactsWrap .item:hover i,
-    .projectFactsWrap .item:hover p {
-        color: #0a7b79;
-    }
-
-    .projectFactsWrap .item:hover span {
-        background: #0a7b79;
-    }
-
-    .sectiontitle .heading-h3:after {
-        content: "";
-        display: block;
-        margin: 0 auto;
-        width: 50%;
-        padding-top: 20px;
-        border-bottom: 2px solid transparent;
-        border-image: linear-gradient(0.90turn, rgb(255, 255, 255), rgb(0, 0, 0), rgb(255, 255, 255));
-        border-image-slice: 1;
-    }
-
-    .sectiontitle .heading-h3 {
-        padding-top: 0px;
-        padding-bottom: 10px;
-        font-weight: 700;
-        font-size: 30px;
-
-    }
-
-    /*ZoomIn Hover Effect*/
-    .hover-zoomin a {
-        display: block;
-        position: relative;
-        overflow: hidden;
-    }
-
-    .hover-zoomin img {
-        width: 100%;
-        height: auto;
-        -webkit-transition: all 0.5s ease-in-out;
-        -moz-transition: all 0.5s ease-in-out;
-        -o-transition: all 0.5s ease-in-out;
-        -ms-transition: all 0.5s ease-in-out;
-        transition: all 0.5s ease-in-out;
-    }
-
-    .hover-zoomin:hover img {
-        -webkit-transform: scale(1.2);
-        -moz-transform: scale(1.2);
-        -o-transform: scale(1.2);
-        -ms-transform: scale(1.2);
-        transform: scale(1.2);
-    }
-
-
-    /* contact us */
-
-    .contact_info {
-        width: 100%;
-        padding-top: 70px;
-    }
-
-    .contact_info_item {
-        width: calc((100% - 60px) / 3);
-        height: 100px;
-        border: solid 1px #e8e8e8;
-        box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
-        padding-left: 32px;
-        padding-right: 15px;
-    }
-
-    .contact_info_image {
-        width: 35px;
-        height: 35px;
-        text-align: center;
-    }
-
-    .contact_info_image img {
-        max-width: 100%;
-    }
-
-    .contact_info_content {
-        padding-left: 17px;
-    }
-
-    .contact_info_title {
-        font-weight: 500;
-    }
-
-    .contact_info_text {
-        font-size: 12px;
-        color: rgba(0, 0, 0, 0.5);
-    }
-
-    @media (max-width: 786px) {
-        .projectFactsWrap .item {
-            flex: 0 0 50%;
-        }
-    }
-
-    body {
-        font-family: 'Montserrat', sans-serif;
-    }
-
-    .btn-2 {
-        background: transparent;
-        border: 1px solid #0a7b79;
-        width: 150px;
-        padding: 15px 0;
-        text-align: center;
-        border-radius: 25px;
-        font-weight: bold;
-        color: #0a7b79;
-    }
-
-    .btn-2:hover {
-        border: 2px solid #d3f2e9;
-        background: #d3f2e9;
-    }
-</style>
+{% block content %}
 <section class="changacherry-loc">
 
-    <nav aria-label="breadcrumb animated slideInDown" style="margin-top: 9%; margin-left:15%;">
+    <nav aria-label="breadcrumb animated slideInDown" class="cus-breadcrumb">
         <ol class="breadcrumb text-uppercase mb-0 bg-white">
-            <li class="breadcrumb-item"><a class="text-black" href="{% url 'main' %}">Home</a></li>
-            <li class="breadcrumb-item"><a class="text-black" href="{% url 'main' %}#location">Location</a></li>
-            <li class="breadcrumb-item  active" aria-current="page" style="color: #0a7b79;">Monrore</li>
+            <li class="breadcrumb-item"><a class="text-black text-decoration-none" href="{% url 'main' %}">Home</a></li>
+            <li class="breadcrumb-item"><a class="text-black text-decoration-none"
+                    href="{% url 'main' %}#location">Location</a></li>
+            <li class="breadcrumb-item  active" aria-current="page">Monrore</li>
         </ol>
     </nav>
     <h1 class="mb-4  fw-bold text-center fs-1 text-green text-uppercase heading-h3 mt-5">DREAMS Monrore</h1>
@@ -397,21 +46,21 @@ MONRORE
                                 <a id="program-tab" data-toggle="tab" href="#program" role="tab" aria-controls="program"
                                     aria-selected="true"
                                     class="nav-link text-uppercase fw-bold font-weight-bold mr-sm-3 rounded-0 active">
-                                    <h5 style="color:#0a7b79; font-weight:600;">DREAMS Program</h5>
+                                    <h5 class="fw-bold text-h3">DREAMS Program</h5>
                                 </a>
                             </li>
                             <li class="nav-item flex-sm-fill">
                                 <a id="band-tab" data-toggle="tab" href="#band" role="tab" aria-controls="band"
                                     aria-selected="false"
                                     class="nav-link text-uppercase fw-bold font-weight-bold mr-sm-3 rounded-0">
-                                    <h5 style="color:#0a7b79; font-weight:600;">DREAMS Band</h5>
+                                    <h5 class="fw-bold text-h3">DREAMS Band</h5>
                                 </a>
                             </li>
                             <li class="nav-item flex-sm-fill">
                                 <a id="proclub-tab" data-toggle="tab" href="#proclub" role="tab" aria-controls="proclub"
                                     aria-selected="false"
                                     class="nav-link text-uppercase fw-bold font-weight-bold rounded-0">
-                                    <h5 style="color:#0a7b79; font-weight:600;">DREAMS Pro Club</h5>
+                                    <h5 class="fw-bold text-h3">DREAMS Pro Club</h5>
                                 </a>
                             </li>
                         </ul>
@@ -420,8 +69,8 @@ MONRORE
                                 class="tab-pane fade px-4 py-5 show active">
                                 <div class="container-fluid">
                                     <div class="row">
-                                        <div class="col-lg-7 col-sm-12 col-md-12" style="padding: 2% 5% 3% 0;">
-                                            <p class="leade font-italic  justify-content " style="color: #7ca8a1;">
+                                        <div class="col-lg-7 col-sm-12 col-md-12 p-4">
+                                            <p class="leade font-italic  justify-content text-h1-cen ">
                                                 The chapter in Monroe, Louisiana was established in connection with the
                                                 implementation of the DREAMS intervention model research by Fr. Lijo
                                                 Thomas in July 2011 at the University of Louisiana, Monroe. The
@@ -436,7 +85,7 @@ MONRORE
 
 
                                             </p>
-                                            <p class="leade font-italic  justify-content" style="color: #7ca8a1;">
+                                            <p class="leade font-italic  justify-content text-h1-cen">
                                                 In 2012, the program was moved to Ouachita Junior High School in Monroe.
                                                 The program was shown to be beneficial for under-performing middle
                                                 school students. The pilot study and another longitudinal study showed
@@ -444,7 +93,7 @@ MONRORE
                                                 personal and interpersonal behavior of those who participated in the
                                                 DREAMS program.
                                             </p>
-                                            <p class="leade font-italic  justify-content" style="color: #7ca8a1;">
+                                            <p class="leade font-italic  justify-content text-h1-cen">
                                                 The Monroe DREAMS Chapter serves approximately 33 students per year with
                                                 the help of 12 youth mentors and 10 adult community volunteers. Mrs.
                                                 Kristy Cobb is the school representative of the chapter. She provides a
@@ -452,7 +101,7 @@ MONRORE
                                                 Not only does she add fun and enthusiasm to the summer program, she
                                                 serves as a mentor to participants all through the year.
                                             </p>
-                                            <p class="leade font-italic  justify-content" style="color: #7ca8a1;">
+                                            <p class="leade font-italic  justify-content text-h1-cen">
                                                 In 2012 Ms. Maribeth Holzer further introduced the program with the
                                                 leadership of Ouachita School System and later it was welcomed by the
                                                 system and introduced to Ouachita Junior High School, Monroe for the
@@ -462,22 +111,24 @@ MONRORE
                                                 life-orientation and engagement, academic achievements, and personal and
                                                 interpersonal behavior of those who participated in the DREAMS program.
                                             </p>
-                                            <p class="leade font-italic  justify-content" style="color: #7ca8a1;">
+                                            <p class="leade font-italic  justify-content text-h1-cen">
                                                 The Monroe DREAMS Chapter serves an average of 33 students with the help
                                                 of around 12 youth mentors and around 10 adult community volunteers
                                                 every year. Ms. Kristy Cob is the school representative of the chapter.
                                             </p>
 
                                         </div>
-                                        <div class="col-lg-5 col-sm-12 col-md-12">
-                                            <center>
-                                                <img src="{% static 'locations/monroe/MONROE.png' %}" alt="mannanam"
-                                                    height="400" width="400" style="padding-top: 5%; width: 100%;
-                                                    height: auto;">
-                                                <button type="button" class="btn-2 mt-5">Join Us</button>
-                                                &nbsp;&nbsp;&nbsp;
-                                                <button type="button" class="btn-2 mt-5">Our Location</button>
-                                            </center>
+                                        <div
+                                            class="col-lg-5 col-sm-12 col-md-12  d-flex justify-content-center align-content-start flex-wrap">
+
+                                            <img src="{% static 'locations/monroe/MONROE.png' %}" alt="mannanam"
+                                                height="400" width="400" class="pt-5 w-100 h-auto">
+                                            <a href="{% url 'registration_user' %}"><button type="button"
+                                                    class="btn-2 mt-5">Join Us</button></a>
+                                            &nbsp;&nbsp;&nbsp;
+                                            <a href="{% url 'main' %}#location"><button type="button"
+                                                class="btn-2 mt-5">Our Location</button></a>
+
 
                                         </div>
                                     </div>
@@ -491,8 +142,8 @@ MONRORE
 
                                 <div class="container-fluid">
                                     <div class="row">
-                                        <div class="col-lg-7 col-sm-12 col-md-12" style="padding: 2% 5% 3% 0;">
-                                            <p class="leade font-italic  justify-content " style="color: #7ca8a1;">
+                                        <div class="col-lg-7 col-sm-12 col-md-12 p-4">
+                                            <p class="leade font-italic  justify-content text-h1-cen">
                                                 The DREAMS Band in Monroe, LA strives to make a positive impact in the
                                                 community by utilizing their musical skills with the help of local
                                                 musicians and youth musicians. The Monroe DREAMS Band began its journey
@@ -507,14 +158,14 @@ MONRORE
                                                 and coordinating the parents of the students; eventually leading to a
                                                 band completely managed by the parents of the band members.
                                             </p>
-                                            <p class="leade font-italic  justify-content" style="color: #7ca8a1;">
+                                            <p class="leade font-italic  justify-content text-h1-cen">
                                                 The band performed several concerts and musical events in and outside of
                                                 Louisiana. The band performed Christmas Canticles for Shalom, a global
                                                 TV network, in 2015. Later in 2016, the band published its first
                                                 educational music album, Math Music, to teach kids mathematical concepts
                                                 through music. The band performs every year at the Monroe DREAMS Camps
                                             </p>
-                                            <p class="leade font-italic  justify-content" style="color: #7ca8a1;">
+                                            <p class="leade font-italic  justify-content text-h1-cen">
                                                 To date, more than 135 youth have played in the band and built their
                                                 musical, psycho-social, and leadership skills for their future success.
                                                 Presently, the leadership of the band is comprised of Mr. Carlos Tenorio
@@ -524,11 +175,10 @@ MONRORE
 
                                         </div>
                                         <div class="col-lg-5 col-sm-12 col-md-12">
-                                            <center>
-                                                <img src="{% static 'locations/band.webp' %}" alt="mannanam"
-                                                    height="400" width="400" style="padding-top: 5%; width: 100%;
-                                                height: auto;">
-                                            </center>
+
+                                            <img src="{% static 'locations/band.webp' %}" alt="mannanam" height="400"
+                                                width="400" class="pt-5 w-100 h-auto">
+
                                         </div>
                                     </div>
                                 </div>
@@ -538,8 +188,8 @@ MONRORE
                                 class="tab-pane fade px-4 py-5">
                                 <div class="container-fluid">
                                     <div class="row">
-                                        <div class="col-lg-7 col-sm-12 col-md-12" style="padding: 2% 5% 3% 0;">
-                                            <p class="leade font-italic  justify-content " style="color: #7ca8a1;">
+                                        <div class="col-lg-7 col-sm-12 col-md-12 p-4">
+                                            <p class="leade font-italic  justify-content text-h1-cen">
                                                 The DREAMS Pro-club is a support group for the personal and professional
                                                 development of young professionals. Small groups of 10-12 working
                                                 professionals meet once every month to discuss and implement strategies
@@ -549,17 +199,17 @@ MONRORE
                                                 and others, developing leadership, cooperation, and community
                                                 engagement.
                                             </p>
-                                            <p class="leade font-italic  justify-content" style="color: #7ca8a1;">
+                                            <p class="leade font-italic  justify-content text-h1-cen">
                                                 This platform is yet to be initiated. Those who are interested to take a
                                                 partnership may contact Mr. Arun Marian for further details.
                                             </p>
 
                                         </div>
                                         <div class="col-lg-5 col-sm-12 col-md-12">
-                                            <center>
-                                                <img src="{% static 'locations/proclub.png' %}" alt="mannanam"
-                                                    height="400" width="400" style="width: 100%; height: auto;">
-                                            </center>
+
+                                            <img src="{% static 'locations/proclub.png' %}" alt="mannanam" height="400"
+                                                width="400" class="pt-5 w-100 h-auto">
+
                                         </div>
                                     </div>
                                 </div>
@@ -626,35 +276,35 @@ MONRORE
                     <section class="">
                         <div class="row">
                             <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
-                                <div class="bg-image hover-overlay ripple shadow-1-strong rounded"
-                                    data-ripple-color="light" style="min-height: 234px;">
+                                <div class="bg-image hover-overlay ripple shadow-1-strong rounded min-hieght-240"
+                                    data-ripple-color="light">
 
-                                    <img src="{% static 'locations/chaganacherry/1.png'%}" class="w-100"
-                                        style="min-height: 234px;" />
+                                    <img src="{% static 'locations/chaganacherry/1.png'%}"
+                                        class="w-100 min-hieght-240" />
                                     <a href="#!" data-mdb-toggle="modal" data-mdb-target="#exampleModal1">
-                                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.2);"></div>
+                                        <div class="mask mask1"></div>
                                     </a>
                                 </div>
                             </div>
 
                             <div class="col-lg-4 mb-4 mb-lg-0">
-                                <div class="bg-image hover-overlay ripple shadow-1-strong rounded"
-                                    data-ripple-color="light" style="min-height: 234px;">
-                                    <img src="{% static 'locations/chaganacherry/2.png'%}" class="w-100"
-                                        style="min-height: 234px;" />
+                                <div class="bg-image hover-overlay ripple shadow-1-strong rounded min-hieght-240"
+                                    data-ripple-color="light">
+                                    <img src="{% static 'locations/chaganacherry/2.png'%}"
+                                        class="w-100 min-hieght-240" />
                                     <a href="#!" data-mdb-toggle="modal" data-mdb-target="#exampleModal2">
-                                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.2);"></div>
+                                        <div class="mask mask1"></div>
                                     </a>
                                 </div>
                             </div>
 
                             <div class="col-lg-4 mb-4 mb-lg-0">
-                                <div class="bg-image hover-overlay ripple shadow-1-strong rounded"
-                                    data-ripple-color="light" style="min-height: 234px;">
-                                    <img src="{% static 'locations/chaganacherry/3.png'%}" class="w-100"
-                                        style="min-height: 234px;" />
+                                <div class="bg-image hover-overlay ripple shadow-1-strong rounded min-hieght-240"
+                                    data-ripple-color="light">
+                                    <img src="{% static 'locations/chaganacherry/3.png'%}"
+                                        class="w-100 min-hieght-240" />
                                     <a href="#!" data-mdb-toggle="modal" data-mdb-target="#exampleModal3">
-                                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.2);"></div>
+                                        <div class="mask mask1"></div>
                                     </a>
                                 </div>
                             </div>
@@ -752,7 +402,7 @@ MONRORE
 
 
             <div class="col-xl-3 col-sm-6 mb-5">
-                <div class="bg-white rounded shadow-sm py-5 px-4" style="min-height: 280px;"><img
+                <div class="bg-white rounded shadow-sm py-5 px-4 min-height"><img
                         src="{% static 'locations/monroe/default.png'%}" alt="" width="100"
                         class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
                     <h5 class="mb-0">
@@ -767,7 +417,7 @@ MONRORE
             <!-- End -->
             <!-- Team item -->
             <div class="col-xl-3 col-sm-6 mb-5">
-                <div class="bg-white rounded shadow-sm py-5 px-4" style="min-height: 280px;"><img
+                <div class="bg-white rounded shadow-sm py-5 px-4 min-height"><img
                         src="{% static 'locations/monroe/default.png'%}" alt="" width="100"
                         class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
                     <h5 class="mb-0">
@@ -782,7 +432,7 @@ MONRORE
             <!-- End -->
             <!-- Team item -->
             <div class="col-xl-3 col-sm-6 mb-5">
-                <div class="bg-white rounded shadow-sm py-5 px-4" style="min-height: 280px;"><img
+                <div class="bg-white rounded shadow-sm py-5 px-4 min-height"><img
                         src="{% static 'locations/monroe/default.png'%}" alt="" width="100"
                         class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
                     <h5 class="mb-0">
@@ -800,7 +450,7 @@ MONRORE
 
             <!-- Team item -->
             <div class="col-xl-3 col-sm-6 mb-5">
-                <div class="bg-white rounded shadow-sm py-5 px-4" style="min-height: 280px;"><img
+                <div class="bg-white rounded shadow-sm py-5 px-4 min-height"><img
                         src="{% static 'locations/monroe/default.png'%}" alt="" width="100"
                         class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
                     <h5 class="mb-0">
@@ -819,7 +469,7 @@ MONRORE
         <div class="row text-center">
             <!-- Team item -->
             <div class="col-xl-3 col-sm-6 mb-5">
-                <div class="bg-white rounded shadow-sm py-5 px-4" style="min-height: 280px;"><img
+                <div class="bg-white rounded shadow-sm py-5 px-4 min-height"><img
                         src="{% static 'locations/monroe/default.png'%}" alt="" width="100"
                         class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
                     <h5 class="mb-0">
@@ -837,7 +487,7 @@ MONRORE
             <!-- End -->
             <!-- Team item -->
             <div class="col-xl-3 col-sm-6 mb-5">
-                <div class="bg-white rounded shadow-sm py-5 px-4" style="min-height: 280px;"><img
+                <div class="bg-white rounded shadow-sm py-5 px-4 min-height"><img
                         src="{% static 'locations/monroe/default.png'%}" alt="" width="100"
                         class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
                     <h5 class="mb-0">
@@ -854,7 +504,7 @@ MONRORE
             <!-- End -->
             <!-- Team item -->
             <div class="col-xl-3 col-sm-6 mb-5">
-                <div class="bg-white rounded shadow-sm py-5 px-4" style="min-height: 280px;"><img
+                <div class="bg-white rounded shadow-sm py-5 px-4 min-height"><img
                         src="{% static 'locations/monroe/default.png'%}" alt="" width="100"
                         class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
                     <h5 class="mb-0">
@@ -870,7 +520,7 @@ MONRORE
             <!-- End -->
             <!-- Team item -->
             <div class="col-xl-3 col-sm-6 mb-5">
-                <div class="bg-white rounded shadow-sm py-5 px-4" style="min-height: 280px;"><img
+                <div class="bg-white rounded shadow-sm py-5 px-4 min-height"><img
                         src="{% static 'locations/monroe/default.png'%}" alt="" width="100"
                         class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
                     <h5 class="mb-0">
@@ -941,6 +591,8 @@ MONRORE
     </div>
 
 </section>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 <script>
 
     $.fn.jQuerySimpleCounter = function (options) {
@@ -966,10 +618,10 @@ MONRORE
     };
 
 
-    $('#number1').jQuerySimpleCounter({ end: 482, duration: 3000 });
-    $('#number2').jQuerySimpleCounter({ end: 482, duration: 3000 });
-    $('#number3').jQuerySimpleCounter({ end: 61, duration: 3000 });
-    $('#number4').jQuerySimpleCounter({ end: 543, duration: 3000 });
+    $('#number1').jQuerySimpleCounter({ end: 482, duration: 5000 });
+    $('#number2').jQuerySimpleCounter({ end: 482, duration: 5000 });
+    $('#number3').jQuerySimpleCounter({ end: 61, duration: 5000 });
+    $('#number4').jQuerySimpleCounter({ end: 543, duration: 5000 });
 
 
 
@@ -978,7 +630,6 @@ MONRORE
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.4.0/mdb.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 {% endblock %}
 Attachments area
 Preview YouTube video Never Stop Dreaming
