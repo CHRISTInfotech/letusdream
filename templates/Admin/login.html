@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,7 +7,7 @@
     <title>SignUp Page</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    {% load static %}
+    
     <link rel="stylesheet" href="{% static 'css/admin.css' %}">
 
     <!-- Bootstrap v5.1.3 CDNs -->
@@ -21,47 +22,7 @@
     <!-- Font Awesome kit -->
     <script src="https://kit.fontawesome.com/f8cd4d7fce.js" crossorigin="anonymous"></script>
 
-    <style>
-        body {
-            font-family: 'Montserrat', sans-serif;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: #eee;
-        }
 
-        .login {
-            width: 360px;
-            height: min-content;
-            padding: 20px;
-            border-radius: 20px;
-            background: #ffffff;
-        }
-
-        .login form .form-group {
-            margin-bottom: 12px;
-        }
-
-        .login form input[type="submit"] {
-            font-size: 20px;
-            margin-top: 15px;
-        }
-
-        .wrapper {
-            position: relative;
-        }
-
-        i.fa-solid {
-            position: absolute;
-            top: 25%;
-            left: 3%;
-        }
-
-        .fs-6 {
-            font-size: 13px !important;
-        }
-    </style>
 
 
 
@@ -69,18 +30,18 @@
 
 <body>
 
-    <section class="signup">
+    <section class="login-section">
         <div class="login">
 
             <h1 class="text-center fw-bold">Welcome Back</h1>
             <p class="text-secondary fs-6">Enter your credentials to access your account.</p>
 
-            <form class="needs-validation requires-validation " novalidate>
+            <form class="needs-validation requires-validation " novalidate action="{% url 'verification' %}">
                 <div class="form-group input-icons">
                     <label class="form-label" for="email">Email address</label>
                     <div class="wrapper">
                         <i class="fa-solid fa-envelope"></i>
-                        <input class="form-control input-field" type="email" id="email" required>
+                        <input class="form-control input-field"  type="email" id="email" required>
                     </div>
                     <div class="valid-feedback">
                         email
@@ -104,7 +65,8 @@
                     </div>
                 </div>
 
-                <input class="btn btn-primary w-100 rounded-3" type="submit" value="SIGN IN">
+                <!-- <a href=""></a> -->
+                <input class="btn btn-primary w-100 rounded-3" type="submit" value="SIGN IN" >
             </form>
 
         </div>
