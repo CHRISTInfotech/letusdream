@@ -25,7 +25,12 @@ MONRORE
     <nav aria-label="breadcrumb animated slideInDown" class="cus-breadcrumb">
         <ol class="breadcrumb text-uppercase mb-0 bg-white">
             <li class="breadcrumb-item"><a class="text-black text-decoration-none" href="{% url 'main' %}">Home</a></li>
+<<<<<<< HEAD
             <li class="breadcrumb-item"><a class="text-black text-decoration-none" href="{% url 'main' %}#location">Location</a></li>
+=======
+            <li class="breadcrumb-item"><a class="text-black text-decoration-none"
+                    href="{% url 'main' %}#location">Location</a></li>
+>>>>>>> b3255c9efa6cec4f5f3555a0be1b5acd16cedf94
             <li class="breadcrumb-item  active" aria-current="page">Monrore</li>
         </ol>
     </nav>
@@ -122,9 +127,11 @@ MONRORE
 
                                             <img src="{% static 'locations/monroe/MONROE.png' %}" alt="mannanam"
                                                 height="400" width="400" class="pt-5 w-100 h-auto">
-                                            <button type="button" class="btn-2 mt-5">Join Us</button>
+                                            <a href="{% url 'registration_user' %}"><button type="button"
+                                                    class="btn-2 mt-5">Join Us</button></a>
                                             &nbsp;&nbsp;&nbsp;
-                                            <button type="button" class="btn-2 mt-5">Our Location</button>
+                                            <a href="{% url 'main' %}#location"><button type="button"
+                                                class="btn-2 mt-5">Our Location</button></a>
 
 
                                         </div>
@@ -274,10 +281,10 @@ MONRORE
                         <div class="row">
                             <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
                                 <div class="bg-image hover-overlay ripple shadow-1-strong rounded min-hieght-240"
-                                    data-ripple-color="light" >
+                                    data-ripple-color="light">
 
-                                    <img src="{% static 'locations/chaganacherry/1.png'%}" class="w-100 min-hieght-240"
-                                         />
+                                    <img src="{% static 'locations/chaganacherry/1.png'%}"
+                                        class="w-100 min-hieght-240" />
                                     <a href="#!" data-mdb-toggle="modal" data-mdb-target="#exampleModal1">
                                         <div class="mask mask1"></div>
                                     </a>
@@ -286,9 +293,9 @@ MONRORE
 
                             <div class="col-lg-4 mb-4 mb-lg-0">
                                 <div class="bg-image hover-overlay ripple shadow-1-strong rounded min-hieght-240"
-                                    data-ripple-color="light" >
-                                    <img src="{% static 'locations/chaganacherry/2.png'%}" class="w-100 min-hieght-240"
-                                         />
+                                    data-ripple-color="light">
+                                    <img src="{% static 'locations/chaganacherry/2.png'%}"
+                                        class="w-100 min-hieght-240" />
                                     <a href="#!" data-mdb-toggle="modal" data-mdb-target="#exampleModal2">
                                         <div class="mask mask1"></div>
                                     </a>
@@ -297,9 +304,9 @@ MONRORE
 
                             <div class="col-lg-4 mb-4 mb-lg-0">
                                 <div class="bg-image hover-overlay ripple shadow-1-strong rounded min-hieght-240"
-                                    data-ripple-color="light" >
-                                    <img src="{% static 'locations/chaganacherry/3.png'%}" class="w-100 min-hieght-240"
-                                         />
+                                    data-ripple-color="light">
+                                    <img src="{% static 'locations/chaganacherry/3.png'%}"
+                                        class="w-100 min-hieght-240" />
                                     <a href="#!" data-mdb-toggle="modal" data-mdb-target="#exampleModal3">
                                         <div class="mask mask1"></div>
                                     </a>
@@ -401,7 +408,7 @@ MONRORE
                 Conference Chairs
             </h1>
             <div class="col-xl-3 col-sm-6 mb-5">
-                <div class="bg-white rounded shadow-sm py-5 px-4 min-height" ><img
+                <div class="bg-white rounded shadow-sm py-5 px-4 min-height"><img
                         src="{% static 'locations/monroe/default.png'%}" alt="" width="100"
                         class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
                     <h5 class="mb-0">
@@ -416,7 +423,7 @@ MONRORE
             <!-- End -->
             <!-- Team item -->
             <div class="col-xl-3 col-sm-6 mb-5">
-                <div class="bg-white rounded shadow-sm py-5 px-4 min-height" ><img
+                <div class="bg-white rounded shadow-sm py-5 px-4 min-height"><img
                         src="{% static 'locations/monroe/default.png'%}" alt="" width="100"
                         class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
                     <h5 class="mb-0">
@@ -431,7 +438,7 @@ MONRORE
             <!-- End -->
             <!-- Team item -->
             <div class="col-xl-3 col-sm-6 mb-5">
-                <div class="bg-white rounded shadow-sm py-5 px-4 min-height" ><img
+                <div class="bg-white rounded shadow-sm py-5 px-4 min-height"><img
                         src="{% static 'locations/monroe/default.png'%}" alt="" width="100"
                         class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
                     <h5 class="mb-0">
@@ -449,7 +456,7 @@ MONRORE
 
             <!-- Team item -->
             <div class="col-xl-3 col-sm-6 mb-5">
-                <div class="bg-white rounded shadow-sm py-5 px-4 min-height" ><img
+                <div class="bg-white rounded shadow-sm py-5 px-4 min-height"><img
                         src="{% static 'locations/monroe/default.png'%}" alt="" width="100"
                         class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
                     <h5 class="mb-0">
@@ -468,7 +475,7 @@ MONRORE
         <div class="row text-center">
             <!-- Team item -->
             <div class="col-xl-3 col-sm-6 mb-5">
-                <div class="bg-white rounded shadow-sm py-5 px-4 min-height" ><img
+                <div class="bg-white rounded shadow-sm py-5 px-4 min-height"><img
                         src="{% static 'locations/monroe/default.png'%}" alt="" width="100"
                         class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
                     <h5 class="mb-0">
@@ -486,7 +493,7 @@ MONRORE
             <!-- End -->
             <!-- Team item -->
             <div class="col-xl-3 col-sm-6 mb-5">
-                <div class="bg-white rounded shadow-sm py-5 px-4 min-height" ><img
+                <div class="bg-white rounded shadow-sm py-5 px-4 min-height"><img
                         src="{% static 'locations/monroe/default.png'%}" alt="" width="100"
                         class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
                     <h5 class="mb-0">
@@ -503,7 +510,7 @@ MONRORE
             <!-- End -->
             <!-- Team item -->
             <div class="col-xl-3 col-sm-6 mb-5">
-                <div class="bg-white rounded shadow-sm py-5 px-4 min-height" ><img
+                <div class="bg-white rounded shadow-sm py-5 px-4 min-height"><img
                         src="{% static 'locations/monroe/default.png'%}" alt="" width="100"
                         class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
                     <h5 class="mb-0">
@@ -519,7 +526,7 @@ MONRORE
             <!-- End -->
             <!-- Team item -->
             <div class="col-xl-3 col-sm-6 mb-5">
-                <div class="bg-white rounded shadow-sm py-5 px-4 min-height" ><img
+                <div class="bg-white rounded shadow-sm py-5 px-4 min-height"><img
                         src="{% static 'locations/monroe/default.png'%}" alt="" width="100"
                         class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
                     <h5 class="mb-0">

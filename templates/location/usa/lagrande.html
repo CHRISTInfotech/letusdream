@@ -99,9 +99,10 @@ La Grande
 
                                             <img src="{% static 'locations/lagrande/LAGRANDE.png' %}" alt="mannanam"
                                                 height="400" width="400" class="pt-5 w-100 h-auto">
-                                            <button type="button" class="btn-2 mt-5">Join Us</button>
+                                            <a href="{% url 'registration_user' %}"><button type="button" class="btn-2 mt-5">Join Us</button></a>
                                             &nbsp;&nbsp;&nbsp;
-                                            <button type="button" class="btn-2 mt-5">Our Location</button>
+                                            <a href="{% url 'main' %}#location"><button type="button"
+                                                class="btn-2 mt-5">Our Location</button></a>
 
 
                                         </div>

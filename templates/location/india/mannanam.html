@@ -24,8 +24,13 @@ COLOGNE
 
     <nav aria-label="breadcrumb animated slideInDown" class="cus-breadcrumb">
         <ol class="breadcrumb text-uppercase mb-0 bg-white">
+<<<<<<< HEAD
             <li class="breadcrumb-item"><a class="text-black text-black text-decoration-none" href="{% url 'main' %}">Home</a></li>
             <li class="breadcrumb-item"><a class="text-black text-black text-decoration-none" href="{% url 'main' %}#location">Location</a></li>
+=======
+            <li class="breadcrumb-item"><a class="text-black text-decoration-none" href="{% url 'main' %}">Home</a></li>
+            <li class="breadcrumb-item"><a class="text-black text-decoration-none" href="{% url 'main' %}#location">Location</a></li>
+>>>>>>> b3255c9efa6cec4f5f3555a0be1b5acd16cedf94
             <li class="breadcrumb-item  active" aria-current="page">Mannanam</li>
         </ol>
     </nav>
@@ -123,10 +128,10 @@ COLOGNE
 
                                             <img src="{% static 'locations/mannanam/MANNANAM.png'%}" alt="mannanam"
                                                 height="400" width="400" class="pt-5 w-100 h-auto">
-                                            <button type="button" class="btn-2 mt-5">Join Us</button>
+                                           <a href="{% url 'registration_user' %}"> <button type="button" class="btn-2 mt-5">Join Us</button></a>
                                             &nbsp;&nbsp;&nbsp;
-                                            <button type="button" class="btn-2 mt-5">Our Location</button>
-
+                                            <a href="{% url 'main' %}#location"><button type="button"
+                                                class="btn-2 mt-5">Our Location</button></a>
                                         </div>
 
                                     </div>
