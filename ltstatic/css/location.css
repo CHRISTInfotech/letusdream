@@ -328,6 +328,12 @@
     color: rgba(0, 0, 0, 0.5);
 }
 
+@media (max-width: 991px) {
+    .contact_info_item {
+        width: calc((100% - 0px) / 1.5) !important;
+    }
+}
+
 @media (max-width: 786px) {
     .projectFactsWrap .item {
         flex: 0 0 50%;
