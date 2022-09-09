@@ -297,10 +297,40 @@ a svg rect {
 
 }
 
-.img1 {
+
+.img-res{
     height: 10%;
     width: 40%;
 }
+
+@media screen and (max-width: 1027px) {
+    .img-res {
+      height: 30%;
+      width: 60%;
+    }
+  }
+
+  @media screen and (max-width: 931px) {
+    .img-res {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+
+  .partnership-img{
+    height:60%;
+    width:60%;
+  }
+
+  @media screen and (max-width: 1131px) {
+    .partnership-img{
+        height:60%;
+        width:100%;
+      }
+  }
+
+
 
 h2 {
     color: #333;
