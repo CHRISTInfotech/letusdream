@@ -204,6 +204,12 @@ footer div a:hover {
         transition: .5s ease;
     }
 
+    .menu-wrapper nav.black .navbar-brand img {
+        height: 70px;
+        width: 92px;
+        margin-top: -10px;
+    }
+
     .menu-wrapper nav.black {
         padding: 10px 50px;
     }
@@ -240,13 +246,27 @@ footer div a:hover {
         background-color: #fff;
     }
 
-    .menu-wrapper .navbar-brand img {
-        height: 60px;
-        width: 80px;
-        transition: .5s ease-in-out;
-    }
+
 
     footer .social-icons li i {
         font-size: 15px;
+    }
+}
+
+@media (min-width:991px) and (max-width:1200px) {
+    .menu-wrapper nav.black {
+
+        padding: 10px 80px;
+    }
+
+
+    .menu-wrapper .navbar-collapse {
+        padding-left: 0px;
+
+        margin-left: 0px;
+    }
+
+    .menu-wrapper .navbar-nav .nav-item {
+        margin: 0 0px;
     }
 }
