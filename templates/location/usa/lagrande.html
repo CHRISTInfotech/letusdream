@@ -26,7 +26,8 @@ La Grande
     <nav aria-label="breadcrumb animated slideInDown" class="cus-breadcrumb">
         <ol class="breadcrumb text-uppercase mb-0 bg-white">
             <li class="breadcrumb-item"><a class="text-black text-decoration-none" href="{% url 'main' %}">Home</a></li>
-            <li class="breadcrumb-item"><a class="text-black text-decoration-none" href="{% url 'main' %}#location">Location</a></li>
+            <li class="breadcrumb-item"><a class="text-black text-decoration-none"
+                    href="{% url 'main' %}#location">Location</a></li>
             <li class="breadcrumb-item  active" aria-current="page">La Grande</li>
         </ol>
     </nav>
@@ -99,10 +100,11 @@ La Grande
 
                                             <img src="{% static 'locations/lagrande/LAGRANDE.png' %}" alt="mannanam"
                                                 height="400" width="400" class="pt-5 w-100 h-auto">
-                                            <a href="{% url 'registration_user' %}"><button type="button" class="btn-2 mt-5">Join Us</button></a>
+                                            <a href="{% url 'registration_user' %}"><button type="button"
+                                                    class="btn-2 mt-5">Join Us</button></a>
                                             &nbsp;&nbsp;&nbsp;
                                             <a href="{% url 'main' %}#location"><button type="button"
-                                                class="btn-2 mt-5">Our Location</button></a>
+                                                    class="btn-2 mt-5">Our Location</button></a>
 
 
                                         </div>
@@ -453,7 +455,7 @@ La Grande
                 <h1 class="text-center text-green mb-5">Connect us</h1>
                 <div class="col-lg-10 offset-lg-1">
                     <div
-                        class="contact_info_container d-flex flex-lg-row flex-column justify-content-between align-items-between mb-5">
+                        class="contact_info_container d-flex flex-lg-row flex-column justify-content-between align-items-center mb-5">
 
                         <!-- Contact Item -->
                         <div class="contact_info_item d-flex flex-row align-items-center justify-content-start">
