@@ -112,8 +112,8 @@ Dream Pro Club
         </ol>
     </nav>
     <div class="container">
-        <div class="row">
-            <div class="col-md-5 col-sm-12">
+        <div class="row p-5">
+            <div class="col-md-5 col-sm-12 ">
                 <div class="about-dream">
                     <p><span>ABOUT</span></p>
                     <h3 class="big-heading">Dreams Pro Club</h3>
@@ -127,7 +127,7 @@ Dream Pro Club
                         positive attitudes about self and the other, developing leadership, cooperation, and community
                         engagement.
                     </p>
-                   <a href="{% url 'registration_user' %}"> <button type="button" class="btn-2">Join Us</button></a>
+                   <a href="{% url 'registration_user' %}"> <button type="button" class="btn-2 m-3 ">Join Us</button></a>
                 </div>
 
 
@@ -146,17 +146,17 @@ Dream Pro Club
                         <div class="carousel-inner" role="listbox">
                             <div class="carousel-item active carousel-img">
                                 <img src="{% static 'DreamsProgram/Letusdream-proclub-89038-min-scaled.jpg' %}" alt=""
-                                    height="616" width="616">
+                                    height="616" class="w-100">
                             </div>
 
                             <div class="carousel-item carousel-img">
                                 <img src="{% static 'DreamsProgram/Letusdream-proclub-15773-min-scaled.jpg' %}" alt=""
-                                    height="616" width="616">
+                                    height="616" class="w-100">
                             </div>
 
                             <div class="carousel-item carousel-img">
                                 <img src="{% static 'DreamsProgram/Letusdream-proclub-O6PHIU0-min-scaled.jpg' %}" alt=""
-                                    height="616" width="616">
+                                    height="616" class="w-100">
                             </div>
 
                         </div>
@@ -174,11 +174,11 @@ Dream Pro Club
             </div>
         </div>
 
-        <div class="row">
-            <div class="col-lg-5 col-md-5 col-sm-12" style="padding-top: 5%;">
-                <p><img src="{% static 'Research\Dreams-RESEARCH.png' %}" alt="" height="500" width="500"></p>
+        <div class="row p-5">
+            <div class="col-lg-5 col-md-5 d-flex aligns-items-center justify-content-center h-100">
+                <img src="{% static 'Research\Dreams-RESEARCH.png' %}" alt="" height="400" width="400">
             </div>
-            <div class="col-lg-7 col-md-7 col-sm-12" style="padding:10% 10%;">
+            <div class="col-lg-7 col-md-7 p-3">
 
                 <h3 class="big-heading">Dreams</h3>
                 <p>Volunteers from the local community including business owners involved in voluntary community
@@ -186,13 +186,13 @@ Dream Pro Club
                     educational administrators, retired personnel, students, or anyone interested in contributing to
                     their community development can be a part of the conference and engage in fruitful dialogues with
                     visionaries through the conference.</p>
-                <button type="button" class="btn-2">Join Us</button>
-                <button type="button" class="btn-2">Our Location</button>
+                <button type="button" class="btn-2 m-1">Join Us</button>
+                <button type="button" class="btn-2 m-1">Our Location</button>
 
             </div>
         </div>
     </div>
-    <br><br><br>
+    
     {% include 'partials/_globalPresence.html' %}
 
     <script>
