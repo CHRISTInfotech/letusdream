@@ -253,6 +253,24 @@ p {
     line-height: 30px;
 }
 
+.aboutus .logo-align{
+    display: flex;
+    justify-content: end;
+    margin: 2%;
+}
+
+.aboutus .logo-align :hover{
+    color: #0a7b79;
+}
+
+@media (max-width:1000px) {
+    .aboutus .logo-align{
+        display: flex;
+        justify-content: start;
+        margin: 2%;
+    }   
+}
+
 @media (max-width:991px) {
     .aboutus .main-about {
         margin-top: 60px;
