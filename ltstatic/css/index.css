@@ -336,23 +336,19 @@ h6 {
 }
 
 .card-img1 {
-    background-image: url(../../ltstatic/home/program.webp);
-    margin-top: 2%;
+    background-image: url(../../ltstatic/home/DREAMS-Program.jpeg);
 }
 
 .card-img2 {
-    background-image: url(../../ltstatic/home/proclub.png);
-    margin-top: 2%;
+    background-image: url(../../ltstatic/home/DREAMS-Pro-Club.jpeg);
 }
 
 .card-img3 {
-    background-image: url(../../ltstatic/home/band.webp);
-    margin-top: 2%;
+    background-image: url(../../ltstatic/home/letusdream.com-dreams-band22.png);
 }
 
 .card-img4 {
-    background-image: url(../../ltstatic/home/conferences.jpg);
-    margin-top: 2%;
+    background-image: url(../../ltstatic/home/Let-Us-Dream-Conference.jpeg);
 }
 
 .cf-2 {
@@ -384,7 +380,7 @@ h6 {
 }
 
 /* Counter */
-.sectionClass div,
+/* .sectionClass div,
 .sectionClass h1,
 .sectionClass h2,
 .sectionClass h3,
@@ -558,4 +554,102 @@ h6 {
     .projectFactsWrap .item {
         flex: 0 0 100%;
     }
+} */
+
+
+
+/* counter */
+
+.counter {
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    padding: 22px 0 0;
+    margin: 0 10px;
+    position: relative;
 }
+
+.counter:before {
+    content: "";
+    border: 2px solid #575757;
+    border-radius: 10px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    z-index: 1;
+}
+
+.counter .counter-icon {
+    color: #00A69C;
+    font-size: 40px;
+    margin: 0 0 22px;
+}
+
+.counter .counter-content {
+    background-color: #0a7b79;
+    padding: 26px 18px 20px;
+    border-radius: 0 0 10px 10px;
+    position: relative;
+}
+
+.counter .counter-content:before {
+    content: '';
+    background-color: #0a7b79;
+    width: 25px;
+    height: 25px;
+    transform: translateX(-50%) rotate(45deg);
+    position: absolute;
+    left: 50%;
+    top: -13px;
+}
+
+.counter h3 {
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: capitalize;
+    margin: 0 0 8px;
+}
+
+.counter .counter-value {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.counter.red .counter-icon {
+    color: #3b90bb;
+}
+
+.counter.red .counter-content,
+.counter.red .counter-content:before {
+    background-color: #3b90bb;
+}
+
+.counter.blue .counter-icon {
+    color: #027981;
+}
+
+.counter.blue .counter-content,
+.counter.blue .counter-content:before {
+    background-color: rgba(2, 121, 129, 0.9);
+}
+
+.counter.purple .counter-icon {
+    color: #3E6491;
+}
+
+.counter.purple .counter-content,
+.counter.purple .counter-content:before {
+    background-color: rgba(62, 100, 145, 0.9);
+}
+
+@media screen and (max-width:990px) {
+    .counter {
+        margin-bottom: 40px;
+    }
+}
+
+
+/* instagram feed */
+
