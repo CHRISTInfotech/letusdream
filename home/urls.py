@@ -1,13 +1,14 @@
 from django.contrib import admin
 from django.urls import path, include
 
-from home.views import bangalorechristuniversity, binghamtonUniversity, index, locations, aboutUs, louisianatechuniversity, media, aboutConference, pressRelease, photoGallery,  registration_user, trriennialConference,  cuT, jncaB, dreams, annualConference, yclpCourse, research, publications
+from home.views import bangalorechristuniversity, binghamtonUniversity, index, locations, aboutUs, louisianatechuniversity, media, aboutConference, newsletter, pressRelease, photoGallery,  registration_user, trriennialConference,  cuT, jncaB, dreams, annualConference, yclpCourse, research, publications
 
 urlpatterns = [
     path('', index, name='main'),
     path('locations/<str:loc>', locations, name='locations'),
     path('about-us', aboutUs, name='about-us'),
     path('media', media, name='media'),
+    path('newsletter', newsletter, name='newsletter'),
     path('press-release/', pressRelease, name="press-release"),
     path('photo-gallery/', photoGallery, name="photo-gallery"),
     path('about-conference', aboutConference, name='about-conference'),
