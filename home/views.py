@@ -18,6 +18,10 @@ def pressRelease(request):
     return render(request, 'aboutUs/media-view-photo.html')
 
 
+def newsletter(request):
+    return render(request, 'aboutUs/newsletter.html')
+
+
 def photoGallery(request):
     return render(request, 'aboutUs/photo-gallery.html')
 
