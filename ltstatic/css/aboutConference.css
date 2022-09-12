@@ -62,14 +62,14 @@
 }
 
 
-img {
+.section img {
     height: fit-content;
     width: 95%;
     padding: 1rem
 }
 
 @media(max-width:768px) {
-    img {
+    .section img {
         padding: 2.5rem 0
     }
 }
