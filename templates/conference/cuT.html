@@ -7,7 +7,7 @@ Christ University Thiruvananthapuram
 
 
 {% block extraStyles %}
-<link rel="stylesheet" href="{% static 'css/cuT.css' %}">
+<link rel="stylesheet" href="{% static 'css/louisiana-tech-university.css' %}">
 {% endblock extraStyles %}
 
 {% block links %}
@@ -18,547 +18,271 @@ Christ University Thiruvananthapuram
 
 <!--  Bootstrap CSS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <!-- Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
 
 
-<link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.0/assets/owl.carousel.css" rel="stylesheet">
-<link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.0/owl.carousel.js"></script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
 
 {% endblock links %}
 
 {% block content %}
+
 <nav aria-label="breadcrumb animated slideInDown" class="cus-breadcrumb">
     <ol class="breadcrumb text-uppercase mb-0 bg-white">
         <li class="breadcrumb-item"><a class="text-black text-decoration-none" href="{% url 'main' %}">Home</a></li>
-        <li class="breadcrumb-item"><a class="text-black text-decoration-none"
-                href="{% url 'annual-conference' %}">Annual Conference</a></li>
-        <li class="breadcrumb-item  active" aria-current="page">Christ University
-            Thiruvananthapuram</li>
+        <li class="breadcrumb-item"><a class="text-black text-decoration-none" href="{% url 'annual-conference' %}">Annual Conference</a>
+        </li>
+        <li class="breadcrumb-item  active" aria-current="page">Christ University Thiruvananthapuram
+        </li>
     </ol>
 </nav>
 
-<section class="testimonial-section mt-0">
-    <div class="large-container">
-        <div class="sec-title">
+<div class="body-content">
+    <div class=" blog-slider">
+        <div class="blog-slider__wrp swiper-wrapper">
+            <div class="blog-slider__item swiper-slide">
+                <div class="blog-slider__img">
+                    <img src="{% static 'conference/333-3339997_mission-logo-mision-png.png' %}" alt="">
+                    <div class="text">History</div>
+                </div>
+                <div class="blog-slider__content">
+                    <span class="blog-slider__code">26 December 2017</span>
+                    <div class="blog-slider__title">LET US DREAM</div>
+                    <div class="blog-slider__text">
+                        The LET US DREAM annual community conference was first conducted in 2017 at Louisiana Tech
+                        University. The purpose of this conference was to provide a forum for professionals,
+                        scholars, researchers, and post-secondary students to share experiences, challenges, and
+                        achievements in their respective efforts towards community improvement.
+                    </div>
 
-            <h1 class="text-center">Let Us Dream</h1>
+                    
+                    <a href="#" class="text-center align-items-center"><button type="button"
+                        class="button"><span>READ MORE</span></button></a>
+                       
+                </div>
+            </div>
+            <div class="blog-slider__item swiper-slide">
+                <div class="blog-slider__img">
+                    <img src="{% static 'conference/3fc6e9c530ea4dd0837f03d842136973.jpg' %}" alt="">
+                    <div class="text">Vision</div>
+                </div>
+                <div class="blog-slider__content">
+                    <span class="blog-slider__code">26 December 2017</span>
+                    <div class="blog-slider__title">LET US DREAM</div>
+                    <div class="blog-slider__text">
+                        The LET US DREAM annual community conference was first conducted in 2017 at Louisiana Tech
+                        University. The purpose of this conference was to provide a forum for professionals,
+                        scholars, researchers, and post-secondary students to share experiences, challenges, and
+                        achievements in their respective efforts towards community improvement.
+                    </div>
+
+                    <a href="#" class="text-center align-items-center"><button type="button"
+                        class="button"><span>READ MORE</span></button></a>
+                </div>
+            </div>
+
+            <div class="blog-slider__item swiper-slide">
+                <div class="blog-slider__img">
+                    <img src="{% static 'conference/201148c6005b1c135e7da52226f2e7de.jpg' %}" alt="">
+                    <div class="text">Mission</div>
+                </div>
+                <div class="blog-slider__content">
+                    <span class="blog-slider__code">26 December 2017</span>
+                    <div class="blog-slider__title">LET US DREAM</div>
+                    <div class="blog-slider__text">
+                        The LET US DREAM annual community conference was first conducted in 2017 at Louisiana Tech
+                        University. The purpose of this conference was to provide a forum for professionals,
+                        scholars, researchers, and post-secondary students to share experiences, challenges, and
+                        achievements in their respective efforts towards community improvement.
+                    </div>
+
+                    <a href="#" class="text-center align-items-center"><button type="button"
+                        class="button"><span>READ MORE</span></button></a>
+                </div>
+            </div>
 
         </div>
+        <div class="blog-slider__pagination"></div>
+    </div>
 
-        <div class="testimonial-carousel owl-carousel owl-theme">
-            <div class="testimonial-block">
-                <div class="inner-box">
-                    <div class="text">The LET US DREAM annual community conference organized by the Noda
-                        Centre-CHRIST (Deemed to be University), Thiruvanathapuram was conducted on 11th January
-                        2020. The key theme of the conference ‘Community Interventions and Improvements’ and created
-                        a better networking and collaboration among volunteers, potential volunteers,
-                        Philanthropists, and community organizations, thereby empowering them in their diverse
-                        community improvement programs. The event was chaired by Mr Jimmy Immanuel and the Keynote
-                        speakers were K.Jayakumar I.A.S (Retd.) and Sheela Thomas I.A.S (Retd.). Around 248
-                        participants had attended the conference making it a promising endeavor.</div>
-                    <div class="info-box">
-                        <div class="thumb"><img src="{% static 'conference/bg-img-1.jpg' %}" alt="" height="100%"
-                                width="100%"></div>
-                        <h4 class="name">History</h4>
-                    </div>
-                </div>
-            </div>
+</div>
 
-            <div class="testimonial-block">
-                <div class="inner-box">
-                    <div class="text">“Empowered local communities for sustainable impact and improvement.”</div>
-                    <div class="info-box">
-                        <div class="thumb"><img src="{% static 'conference/bg-img-2.jpg' %}" alt=""></div>
-                        <h4 class="name">Vision</h4>
-                    </div>
-                </div>
-            </div>
-
-            <div class="testimonial-block">
-                <div class="inner-box">
-                    <div class="text">The Let Us Dream Conference was established in 2017 for the purpose of
-                        providing a forum for sharing experiences with successes and challenges in community
-                        improvement organizations and efforts.
-                        Broad conference goals are to
-                        <ol>
-                            <li>Improve networking and collaboration among all those interested in community
-                                improvement organizations and programs.</li>
-                            <li>Promote volunteerism and empower all those involved in community improvement
-                                organizations and initiatives, including employees, volunteers, post-secondary
-                                students, researchers, and practitioners</li>
-                            <li>Create a professional learning organization dedicated to improving local communities
-                                and characterized by a culture of shared researcher and practitioner knowledge,
-                                skills, theories, and best practices.
-                    </div>
-                    </li>
-                    </ol>
-
-
-                    <div class="info-box">
-                        <div class="thumb"><img src="{% static 'conference/bg-img-3.jpg' %}" alt=""></div>
-                        <h4 class="name">Mission</h4>
-                    </div>
-                </div>
-            </div>
+<div class="container conference-date mt-5 pt-5">
+    <div class="row justify-content-center align-items-center">
+        <div class="col-md-12">
+            <h1 class="text-center text-green fw-bold ">Conference Dates</h1>
+            <h3 class=" text-center text-black p-3">
+                21 October 2021, 10 AM to 4 PM <br> at Christ University's Thiruvananthapuram Hall.
+            </h3>
+     
         </div>
     </div>
-</section>
-
-
-<br><br><br>
-<!-- Speaker -->
-<h1>Conference Chairs</h1>
+</div>
 <div class="container">
-    <div class="row text-center">
+    <div class="row align-items-center">
+        <div class="col-lg-4 p-4 d-flex flex-column">
 
-        <!-- Team item -->
-        <div class="col-xl-4 col-sm-6 mb-5">
-            <div class="bg-white rounded shadow-sm py-5 px-4 cus-div-1"><img
-                    src="{% static 'conference/cut-spk1.png' %}" alt="" width="100"
-                    class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm large-img">
-                <h5 class="mb-0">Dr Jyothi Krishnan</h5><span class="small text-uppercase text-muted">PRO -
-                    CLUB</span>
+            <a href="https://community.latech.edu/let-us-dream/" class="text-center align-items-center"><button type="button"
+                    class="button "><span>Download
+                        Broucher</span></button></a>
 
-            </div>
-        </div><!-- End -->
-
-        <!-- Team item -->
-        <div class="col-xl-4 col-sm-6 mb-5">
-            <div class="bg-white rounded shadow-sm py-5 px-4 cus-div-1"><img
-                    src="{% static 'conference/cut-spk2.png' %}" alt="" width="100"
-                    class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm large-img">
-                <h5 class="mb-0">Mr Rahul R L</h5><span class="small text-uppercase text-muted">PRO - CLUB</span>
-
-            </div>
-        </div><!-- End -->
-
-        <!-- Team item -->
-        <div class="col-xl-4 col-sm-6 mb-5">
-            <div class="bg-white rounded shadow-sm py-5 px-4 cus-div-1"><img
-                    src="{% static 'conference/cut-spk1.png' %}" alt="" width="100"
-                    class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm large-img">
-                <h5 class="mb-0">Ms Sheela Rahulan</h5><span class="small text-uppercase text-muted">PRO -
-                    CLUB</span>
-
-            </div>
         </div>
-        <!-- End -->
+        <div class="col-lg-4 p-4 d-flex flex-column">
+
+            <a href="{% url 'registration_user' %}" class="text-center"><button type="button"
+                    class="button "><span>Register</span></button></a>
+
+        </div>
+        <div class="col-lg-4 p-4 d-flex flex-column">
+
+            <a href="https://community.latech.edu/let-us-dream/unsung-hero/" class="text-center"><button type="button" class="button"><span>Previous
+                        Conference</span></button></a>
+
+
+        </div>
     </div>
 </div>
 
-<br><br><br><br><br><br>
-<!-- Conference and event card -->
-<h1>previous conferences</h1>
-<div class="container-fluid">
-    <div class="container-body">
-        <div class="row">
 
-            <!-- card 1 -->
-            <div class=" col-4 card px-4 pt-4 pb-10 mx-auto  ">
-                <div class="row">
-                    <div class="conference-header">
-                        <img src="{% static 'logo/logo.png' %}">
-                        <h5 class="align-self-center ml-2">Let us Dream</h5>
-                        <span class="text-success float-right mt-3">Seats unavailable</span>
+<div class="container ">
+    <h1 class="big-heading m-5 p-5">Conference Chairs</h1>
+    <div class="row">
+        <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="card m-5">
+                <div class="imgbox">
+                    <img src="{% static 'conference/cut-spk1.png' %}" alt="img1">
+                </div>
+                <div class="content">
+                    <div class="details">
+                        <h2>Ms Sheela Rahulan
+                            <br>
+                            <span>Conference Planning chair</span>
+                        </h2>
+                        <div class="data">
+                            <h3>Conference Dates
+                                21 October 2021, 10 AM to 4 PM
+                                <br>
+                                <span>at Louisiana Tech’s University Hall.</span>
+                            </h3>
+
+                        </div>
+                        
+                    
+                        
+                        
                     </div>
-
                 </div>
-                <p class="mt-3 mb-2">10/06/20 -- Remote</p>
-                <h5>Trivandrum 2020</h5>
-                <p class="mt-4 mb-2">Hosted by</p>
-                <div class="users mb-5">
-                    <img src="{% static 'conference/uRVyoG7.png' %}">
-                    <img src="{% static 'conference/2W4OOpj.jfif' %}">
-                    <img src="{% static 'conference/3Jkqz66.png' %}">
-                    <img src="{% static 'conference/P5kPDPG.jfif' %}">
-                </div>
-
-                <button class="btn info"><span>More information</span></button>
             </div>
+        </div>
 
+        <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="card m-5">
+                <div class="imgbox">
+                    <img src="{% static 'conference/cut-spk2.png' %}" alt="img1">
+                </div>
+                <div class="content">
+                    <div class="details">
+                        <h2>Mr Rahul R L
+                            <br>
+                            <span>Conference Co-chair</span>
+                        </h2>
+                        <div class="data">
+                            <h3>Conference Dates
+                                21 October 2021, 10 AM to 4 PM
+                                <br>
+                                <span>at Louisiana Tech’s University Hall.</span>
+                            </h3>
 
-            <!-- card 2 -->
-            <div class=" col-4 card px-4 pt-4 pb-4 mx-auto ">
-                <div class="row">
-                    <div class="conference-header">
-                        <img src="{% static 'logo/Christ-University.png' %}">
-                        <h5 class="align-self-center ml-2">Christ University</h5>
-                        <span class="text-success float-right mt-3">Seats available</span>
+                        </div>
+                       
                     </div>
-
                 </div>
-                <p class="mt-3 mb-2">10/06/21 -- Remote</p>
-                <h5>Christites 2021</h5>
-                <p class="mt-4 mb-2">Hosted by</p>
-                <div class="users mb-5">
-                    <img src="{% static 'conference/uRVyoG7.png' %}">
-                    <img src="{% static 'conference/2W4OOpj.jfif' %}">
-                    <img src="{% static 'conference/3Jkqz66.png' %}">
-                    <img src="{% static 'conference/P5kPDPG.jfif' %}">
-                </div>
-
-                <button class="btn info"><span>More information</span></button>
             </div>
+        </div>
 
-            <!-- card 3 -->
-            <div class="col-4 card px-4 pt-4 pb-4 mx-auto ">
-                <div class="row">
-                    <div class="conference-header">
-                        <img src="{% static 'logo/logo.png' %}">
-                        <h5 class="align-self-center ml-2">Let us Dream</h5>
-                        <span class="text-success float-right mt-3">Upcoming</span>
+        <div class="col-lg-4 col-md-12 col-sm-12">
+            <div class="card m-5">
+                <div class="imgbox">
+                    <img src="{% static 'locations/cologne/default.png' %}" alt="img1">
+                </div>
+                <div class="content">
+                    <div class="details">
+                        <h2>Mrs.Cathi Cox-Boniol
+                            <br>
+                            <span>Conference Co-chair</span>
+                        </h2>
+                        <div class="data">
+                            <h3>Conference Dates
+                                21 October 2021, 10 AM to 4 PM
+                                <br>
+                                <span>at Louisiana Tech’s University Hall.</span>
+                            </h3>
+
+                        </div>
+                       
                     </div>
-
                 </div>
-                <p class="mt-3 mb-2">10/06/22 -- Remote</p>
-                <h5>Worldwide conference 2022</h5>
-                <p class="mt-4 mb-2">Hosted by</p>
-                <div class="users mb-5">
-                    <img src="{% static 'conference/uRVyoG7.png' %}">
-                    <img src="{% static 'conference/2W4OOpj.jfif' %}">
-                    <img src="{% static 'conference/3Jkqz66.png' %}">
-                    <img src="{% static 'conference/P5kPDPG.jfif' %}">
-                </div>
-
-                <button class="btn info"><span>More information</span></button>
             </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container ">
+    <h1 class="big-heading mt-5 pt-5">Louisiana Previous Conferences</h1>
+</div>
+<div class="box-container">
+
+    <div class="box">
+
+        <!-- {% url 'louisiana-tech-university' %} -->
+        <span style="--i:1;"><a
+                href="https://letusdream.org/wp-content/uploads/2021/08/Trivendrum-2020-Conference-min.pdf"
+                target="_blank"><img src="{% static 'conference/trivandrum-conference-1.png' %}" alt=""></a></span>
+        <span style="--i:2;"><a
+                href="#"><img
+                    src="{% static 'Research/.png' %}" alt=""></a></span>
+        <span style="--i:3;"><img
+                src="#"
+                alt=""></span>
+    </div>
+</div>
+
+
+<div class="container logo-uni">
+    <h1 class="big-heading m-5">Organizers</h1>
+    <div class="row">
+        <div class="col">
+            <img src="{% static 'conference/Christ-thrivandrum-logo.jpg' %}"
+                alt="">
         </div>
     </div>
 
 </div>
-
-
-
-
-</body>
-
 
 
 <script>
-    (function ($) {
-
-        "use strict";
-
-
-        //Hide Loading Box (Preloader)
-        function handlePreloader() {
-            if ($('.preloader').length) {
-                $('.preloader').delay(200).fadeOut(500);
-            }
+    var swiper = new Swiper('.blog-slider', {
+        spaceBetween: 30,
+        effect: 'fade',
+        loop: true,
+        mousewheel: {
+            invert: false,
+        },
+        // autoHeight: true,
+        pagination: {
+            el: '.blog-slider__pagination',
+            clickable: true,
         }
-
-
-        //Update Header Style and Scroll to Top
-        function headerStyle() {
-            if ($('.main-header').length) {
-                var windowpos = $(window).scrollTop();
-                var siteHeader = $('.main-header');
-                var scrollLink = $('.scroll-to-top');
-                if (windowpos >= 1) {
-                    siteHeader.addClass('fixed-header');
-                    scrollLink.fadeIn(300);
-                } else {
-                    siteHeader.removeClass('fixed-header');
-                    scrollLink.fadeOut(300);
-                }
-            }
-        }
-
-        headerStyle();
-
-
-        //Submenu Dropdown Toggle
-        if ($('.main-header li.dropdown ul').length) {
-            $('.main-header li.dropdown').append('<div class="dropdown-btn"><span class="fa fa-angle-down"></span></div>');
-
-            //Dropdown Button
-            $('.main-header li.dropdown .dropdown-btn').on('click', function () {
-                $(this).prev('ul').slideToggle(500);
-            });
-
-            //Disable dropdown parent link
-            $('.main-header .navigation li.dropdown > a,.hidden-bar .side-menu li.dropdown > a').on('click', function (e) {
-                e.preventDefault();
-            });
-        }
-
-        //Side Content Toggle
-        if ($('.main-header .outer-box .nav-btn').length) {
-            //Show Form
-            $('.main-header .outer-box .nav-btn').on('click', function (e) {
-                e.preventDefault();
-                $('body').addClass('side-content-visible');
-            });
-            //Hide Form
-            $('.hidden-bar .inner-box .cross-icon,.form-back-drop,.close-menu').on('click', function (e) {
-                e.preventDefault();
-                $('body').removeClass('side-content-visible');
-            });
-            //Dropdown Menu
-            $('.fullscreen-menu .navigation li.dropdown > a').on('click', function () {
-                $(this).next('ul').slideToggle(500);
-            });
-        }
-
-        //Hidden Sidebar
-        if ($('.hidden-bar').length) {
-            $('.hidden-bar').mCustomScrollbar({
-                theme: "dark"
-            });
-        }
-
-        // Testimonial Carousel
-        if ($('.testimonial-carousel').length) {
-            $('.testimonial-carousel').owlCarousel({
-                animateOut: 'slideOutDown',
-                animateIn: 'zoomIn',
-                loop: true,
-                margin: 0,
-                nav: true,
-                smartSpeed: 300,
-                autoplay: 7000,
-                navText: ['<span class="arrow-left"></span>', '<span class="arrow-right"></span>'],
-                responsive: {
-                    0: {
-                        items: 1
-                    },
-                    600: {
-                        items: 1
-                    },
-                    800: {
-                        items: 1
-                    },
-                    1024: {
-                        items: 1
-                    }
-                }
-            });
-        }
-
-
-        //Fact Counter + Text Count
-        if ($('.count-box').length) {
-            $('.count-box').appear(function () {
-
-                var $t = $(this),
-                    n = $t.find(".count-text").attr("data-stop"),
-                    r = parseInt($t.find(".count-text").attr("data-speed"), 10);
-
-                if (!$t.hasClass("counted")) {
-                    $t.addClass("counted");
-                    $({
-                        countNum: $t.find(".count-text").text()
-                    }).animate({
-                        countNum: n
-                    }, {
-                        duration: r,
-                        easing: "linear",
-                        step: function () {
-                            $t.find(".count-text").text(Math.floor(this.countNum));
-                        },
-                        complete: function () {
-                            $t.find(".count-text").text(this.countNum);
-                        }
-                    });
-                }
-
-            }, { accY: 0 });
-        }
-
-
-        //Accordion Box
-        if ($('.accordion-box').length) {
-            $(".accordion-box").on('click', '.acc-btn', function () {
-
-                var outerBox = $(this).parents('.accordion-box');
-                var target = $(this).parents('.accordion');
-
-                if ($(this).hasClass('active') !== true) {
-                    $(outerBox).find('.accordion .acc-btn').removeClass('active');
-                }
-
-                if ($(this).next('.acc-content').is(':visible')) {
-                    return false;
-                } else {
-                    $(this).addClass('active');
-                    $(outerBox).children('.accordion').removeClass('active-block');
-                    $(outerBox).find('.accordion').children('.acc-content').slideUp(300);
-                    target.addClass('active-block');
-                    $(this).next('.acc-content').slideDown(300);
-                }
-            });
-        }
-
-
-        //Tabs Box
-        if ($('.tabs-box').length) {
-            $('.tabs-box .tab-buttons .tab-btn').on('click', function (e) {
-                e.preventDefault();
-                var target = $($(this).attr('data-tab'));
-
-                if ($(target).is(':visible')) {
-                    return false;
-                } else {
-                    target.parents('.tabs-box').find('.tab-buttons').find('.tab-btn').removeClass('active-btn');
-                    $(this).addClass('active-btn');
-                    target.parents('.tabs-box').find('.tabs-content').find('.tab').fadeOut(0);
-                    target.parents('.tabs-box').find('.tabs-content').find('.tab').removeClass('active-tab animated fadeIn');
-                    $(target).fadeIn(300);
-                    $(target).addClass('active-tab animated fadeIn');
-                }
-            });
-        }
-
-
-        //Default Masonary
-        function defaultMasonry() {
-            if ($('.masonry-items-container').length) {
-
-                var winDow = $(window);
-                // Needed variables
-                var $container = $('.masonry-items-container');
-
-                $container.isotope({
-                    itemSelector: '.masonry-item',
-                    masonry: {
-                        columnWidth: 2
-                    },
-                    animationOptions: {
-                        duration: 500,
-                        easing: 'linear'
-                    }
-                });
-
-                winDow.on('resize', function () {
-
-                    $container.isotope({
-                        itemSelector: '.masonry-item',
-                        animationOptions: {
-                            duration: 500,
-                            easing: 'linear',
-                            queue: false
-                        }
-                    });
-                });
-            }
-        }
-        defaultMasonry();
-
-        //Gallery Filters
-        if ($('.filter-list').length) {
-            $('.filter-list').mixItUp({});
-        }
-
-        //LightBox / Fancybox
-        if ($('.lightbox-image').length) {
-            $('.lightbox-image').fancybox({
-                openEffect: 'fade',
-                closeEffect: 'fade',
-                helpers: {
-                    media: {}
-                }
-            });
-        }
-
-        //Contact Form Validation
-        if ($('#contact-form').length) {
-            $('#contact-form').validate({
-                rules: {
-                    username: {
-                        required: true
-                    },
-                    email: {
-                        required: true,
-                        email: true
-                    },
-                    phone: {
-                        required: true
-                    },
-                    message: {
-                        required: true
-                    }
-                }
-            });
-        }
-
-
-        // Scroll to a Specific Div
-        if ($('.scroll-to-target').length) {
-            $(".scroll-to-target").on('click', function () {
-                var target = $(this).attr('data-target');
-                // animate
-                $('html, body').animate({
-                    scrollTop: $(target).offset().top
-                }, 1500);
-
-            });
-        }
-
-        if ($('.paroller').length) {
-            $('.paroller').paroller({
-                factor: 0.05,            // multiplier for scrolling speed and offset, +- values for direction control  
-                factorLg: 0.05,          // multiplier for scrolling speed and offset if window width is less than 1200px, +- values for direction control  
-                type: 'foreground',     // background, foreground  
-                direction: 'horizontal' // vertical, horizontal  
-            });
-        }
-
-
-        if ($('.timer').length) {
-            $(function () {
-                $('[data-countdown]').each(function () {
-                    var $this = $(this), finalDate = $(this).data('countdown');
-                    $this.countdown(finalDate, function (event) {
-                        $this.html(event.strftime('%D days %H:%M:%S'));
-                    });
-                });
-            });
-
-            $('.cs-countdown').countdown('').on('update.countdown', function (event) {
-                var $this = $(this).html(event.strftime('<div class="count-col"><span>%m</span><h6>Months</h6></div> <div class="count-col"><span>%D</span><h6>days</h6></div> <div class="count-col"><span>%H</span><h6>Hours</h6></div> <div class="count-col"><span>%M</span><h6>Minutes</h6></div> <div class="count-col"><span>%S</span><h6>Seconds</h6></div>'));
-            });
-        }
-
-
-        // Elements Animation
-        if ($('.wow').length) {
-            var wow = new WOW(
-                {
-                    boxClass: 'wow',      // animated element css class (default is wow)
-                    animateClass: 'animated', // animation css class (default is animated)
-                    offset: 0,          // distance to the element when triggering the animation (default is 0)
-                    mobile: true,       // trigger animations on mobile devices (default is true)
-                    live: true       // act on asynchronously loaded content (default is true)
-                }
-            );
-            wow.init();
-        }
-
-
-        /* ==========================================================================
-           When document is Scrollig, do
-           ========================================================================== */
-
-        $(window).on('scroll', function () {
-            headerStyle();
-        });
-
-        /* ==========================================================================
-           When document is loading, do
-           ========================================================================== */
-
-        $(window).on('load', function () {
-            handlePreloader();
-            defaultMasonry();
-        });
-
-    })(window.jQuery);
+    });
 </script>
 
-</html>
 {% endblock %}
