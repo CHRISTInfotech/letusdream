@@ -62,8 +62,8 @@ HOME
           </div>
 
           <div class="card-body cb-1">
-            <h5 class="card-title text-h3 fw-bold">DREAMS Program</h5>
-            <p class="card-text text-h1-cen fw-bold  card-t1">The
+            <h5 class="card-title text-h3 fw-bold fs-4">DREAMS Program</h5>
+            <p class="card-text text-h1-cen fw-bold  card-t1 fs-6">The
               DREAMS Program is a
               three-year curriculum-based community mentoring project for schools and colleges, each year focusing on
               personal development, interpersonal skills and leadership skills. The program aims to.</p>
@@ -86,8 +86,8 @@ HOME
           </div>
 
           <div class="card-body cb-1">
-            <h5 class="card-title fw-bold text-h3">DREAMS Pro Club</h5>
-            <p class="card-text  text-h1-cen fw-bold  card-t1">DREAMS Pro Club is a
+            <h5 class="card-title fw-bold text-h3 fs-4">DREAMS Pro Club</h5>
+            <p class="card-text  text-h1-cen fw-bold fs-6  card-t1 ">DREAMS Pro Club is a
               support group for the personal and professional development of young professionals. Small groups of 10-12
               working professionals meet once every month to discuss and implement.</p>
           </div>
@@ -109,8 +109,8 @@ HOME
           </div>
 
           <div class="card-body cb-1">
-            <h5 class="card-title text-h3 fw-bold">DREAMS Band</h5>
-            <p class="card-text text-h1-cen fw-bold  card-t1">The DREAMS Band strives
+            <h5 class="card-title text-h3 fs-4 fw-bold">DREAMS Band</h5>
+            <p class="card-text text-h1-cen fw-bold  fs-6 card-t1">The DREAMS Band strives
               towards making a positive difference in the community by utilizing their musical skills. DREAMS Band is
               not only an opportunity to sing and motivate the audience but also uses music as a platform to empower
               communities.</p>
@@ -132,8 +132,8 @@ HOME
           <div class="card-custom-img card-img4"></div>
 
           <div class="card-body cb-1">
-            <h5 class="card-title text-h3 fw-bold">Community Conferences</h5>
-            <p class="card-text text-h1-cen fw-bold  card-t1">Started in 2017, Let Us
+            <h5 class="card-title text-h3 fs-4 fw-bold">Community Conferences</h5>
+            <p class="card-text text-h1-cen fs-6 fw-bold  card-t1">Started in 2017, Let Us
               Dream Conference provides a platform for researchers, practitioners and volunteers to discuss various
               possibilities of promoting community volunteerism among students, sharing their experiences and challenges
             </p>
@@ -161,7 +161,8 @@ HOME
 
     <br>
 
-    <h3 class="big-heading text-center">Preparing students to make meaningful contributions as engaged citizens and
+    <h3 class="big-heading text-center fs-5 mb-5">Preparing students to make meaningful contributions as engaged
+      citizens and
       leaders in a
       complex world.</h3>
 
@@ -169,13 +170,13 @@ HOME
     <div class="container">
       <div class="row row-3">
         <div class="col-sm">
-          <img src="{% static 'home/event1.webp' %}" class="img1" height="100" width="100">
+          <img src="{% static 'home/event1.webp' %}" class="img1 mb-2" height="100" width="100">
         </div>
         <div class="col-sm">
-          <img src="{% static 'home/event2.webp' %}" class="img1" height="100" width="100">
+          <img src="{% static 'home/event2.webp' %}" class="img1 mb-2" height="100" width="100">
         </div>
         <div class="col-sm">
-          <img src="{% static 'home/event3.webp' %}" class="img1" height="100" width="100">
+          <img src="{% static 'home/event3.webp' %}" class="img1 mb-2" height="100" width="100">
         </div>
       </div>
     </div>
@@ -201,7 +202,7 @@ HOME
 
 
     <div class="row text-center row-4">
-      <div class="col-lg-12 mt-4">
+      <div class="col-lg-12 mt-5">
 
         <div class="container">
           <div class="row">
@@ -254,12 +255,16 @@ HOME
       </div>
     </div>
   </div>
-  
+
   <!-- instagram feed -->
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <!-- <div class='sk-instagram-feed' data-embed-id='92126'></div> -->
+
+  <div class="container-fluid bg-green">
+    <div class="container">
+      <div class="row">
+        <h1 class="text-center mt-5">LATEST FEEDS</h1>
+        <div class="col-md-12">
+          <!-- <div class='sk-instagram-feed mb-5' data-embed-id='92126'></div> -->
+        </div>
       </div>
     </div>
   </div>
@@ -292,7 +297,7 @@ HOME
         $(this).prop('Counter', 0).animate({
           Counter: $(this).text()
         }, {
-          duration: 3500,
+          duration: 9999,
           easing: 'swing',
           step: function (now) {
             $(this).text(Math.ceil(now));
