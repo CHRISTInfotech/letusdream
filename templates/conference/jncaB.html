@@ -114,10 +114,10 @@ Jyoti Nivas College Autonomous, Banglore
 
 </div>
 
-<div class="container conference-date mt-5 pt-5">
+<div class="container conference-date ">
     <div class="row justify-content-center align-items-center">
         <div class="col-md-12">
-            <h1 class="text-center text-green fw-bold ">Conference Dates</h1>
+            <h1 class="text-center text-green fw-bold mb-3">Conference Dates</h1>
             <h3 class=" text-center text-black p-3">
                 10, 11 & 12  November, 2021 4.00 PM-6.00 PM IST
             </h3>
@@ -239,7 +239,7 @@ Jyoti Nivas College Autonomous, Banglore
 <div class="container p-5">
     <div class="row">
         <div class="col-md-12">
-            <h1 class="big-heading mt-5 pt-5">Conference Core Committee</h2>
+            <h1 class="big-heading m-5 p-5">Conference Core Committee</h2>
         </div>
         <div class="col-lg-3">
             <div class="d-flex justify-content-center align-items-center p-4 rounded-lg flex-column">
@@ -248,7 +248,7 @@ Jyoti Nivas College Autonomous, Banglore
                         class="img-fluid rounded-circle shadow p-1">
                 </div>
                 <div class="person-name my-2">
-                    <h3 class="text-info">Dr Fr Lijo Thomas</h3>
+                    <h4 class="text-info fw-bolder">Dr Fr Lijo Thomas</h4>
                 </div>
                 <div class="info">
                     <p class="text-dark text-center">
@@ -265,7 +265,7 @@ Jyoti Nivas College Autonomous, Banglore
                         class="img-fluid rounded-circle shadow p-1">
                 </div>
                 <div class="person-name my-2">
-                    <h3 class="text-info">Mr David Selvaraj</h3>
+                    <h4 class="text-info fw-bolder">Mr David Selvaraj</h4>
                 </div>
                 <div class="info">
                     <p class="text-dark text-center">
@@ -282,7 +282,7 @@ Jyoti Nivas College Autonomous, Banglore
                         class="img-fluid rounded-circle shadow p-1">
                 </div>
                 <div class="person-name my-2">
-                    <h3 class="text-info">Ms Anita Eipe</h3>
+                    <h4 class="text-info fw-bolder">Ms Anita Eipe</h4>
                 </div>
                 <div class="info">
                     <p class="text-dark text-center">
@@ -298,7 +298,7 @@ Jyoti Nivas College Autonomous, Banglore
                         class="img-fluid rounded-circle shadow p-1">
                 </div>
                 <div class="person-name my-2">
-                    <h3 class="text-info">Ms Unnati Hunjan</h3>
+                    <h4 class="text-info fw-bolder">Ms Unnati Hunjan</h4>
                 </div>
                 <div class="info">
                     <p class="text-dark text-center">
@@ -315,7 +315,7 @@ Jyoti Nivas College Autonomous, Banglore
                         class="img-fluid rounded-circle shadow p-1">
                 </div>
                 <div class="person-name my-2">
-                    <h3 class="text-info">Ms Phinu Jose</h3>
+                    <h4 class="text-info fw-bolder">Ms Phinu Jose</h4>
                 </div>
                 <div class="info">
                     <p class="text-dark text-center" style="font-size: 16px;">
@@ -333,7 +333,7 @@ Jyoti Nivas College Autonomous, Banglore
                         class="img-fluid rounded-circle shadow p-1">
                 </div>
                 <div class="person-name my-2">
-                    <h3 class="text-info">Ms Uma Krishnan</h3>
+                    <h4 class="text-info fw-bolder">Ms Uma Krishnan</h4>
                 </div>
                 <div class="info">
                     <p class="text-dark text-center">
@@ -349,7 +349,7 @@ Jyoti Nivas College Autonomous, Banglore
                         class="img-fluid rounded-circle shadow p-1">
                 </div>
                 <div class="person-name my-2">
-                    <h3 class="text-info">Ms Roseline Gomes</h3>
+                    <h4 class="text-info fw-bolder">Ms Roseline Gomes</h4>
                 </div>
                 <div class="info">
                     <p class="text-dark text-center">
@@ -399,23 +399,29 @@ Jyoti Nivas College Autonomous, Banglore
                 <div id="carouselExampleControls1" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <iframe class="frame d-block w-100" src="conference/Let-Us-Dream-Conference-980x693.jpeg"
+                            <!-- <iframe class="frame d-block w-100" src="conference/Let-Us-Dream-Conference-980x693.jpeg"
                             title="YouTube video player" frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen ></iframe>
+                            allowfullscreen ></iframe> -->
+                            <img src="{% static 'conference/Let-Us-Dream-Conference-980x693.jpeg' %}"
+                            class="d-block w-100" alt="...">
                         </div>
                         <div class="carousel-item">
-                            <iframe class="frame d-block w-100" src="conference/DREAMS-Program.jpeg"
+                            <!-- <iframe class="frame d-block w-100" src="conference/DREAMS-Program.jpeg"
                             title="YouTube video player" frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe>
+                            allowfullscreen></iframe> -->
+                            <img src="{% static 'conference/DREAMS-Program.jpeg' %}" class="d-block w-100"
+                            alt="...">
 
                         </div>
                         <div class="carousel-item">
-                            <iframe class="frame d-block w-100" src="conference/DREAMS-Pro-Club.jpeg"
+                            <!-- <iframe class="frame d-block w-100" src="conference/DREAMS-Pro-Club.jpeg"
                             title="YouTube video player" frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe>
+                            allowfullscreen></iframe> -->
+                            <img src="{% static 'conference/DREAMS-Pro-Club.jpeg' %}" class="d-block w-100"
+                            alt="...">
                         </div>
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls1"
@@ -436,14 +442,14 @@ Jyoti Nivas College Autonomous, Banglore
 
 
 
-<div class="container ">
+<!-- <div class="container ">
     <h1 class="big-heading mt-5 pt-5">Jyoti Nivasa Previous Conferences</h1>
 </div>
 <div class="box-container">
 
     <div class="box">
 
-        <!-- {% url 'louisiana-tech-university' %} -->
+      
         <span style="--i:1;"><a
                 href="https://letusdream.org/wp-content/uploads/2021/07/Conference-Brochure_2018-LA-Tech-min.pdf"
                 target="_blank"><img src="{% static 'Research/2018.png' %}" alt=""></a></span>
@@ -454,14 +460,14 @@ Jyoti Nivas College Autonomous, Banglore
                 src="https://sgtuniversity.ac.in/icmai2020/wp-content/uploads/2021/02/Intl-Conference-Invitation-2021-C-734x1024.jpg"
                 alt=""></span>
     </div>
-</div>
+</div> -->
 
 
 <div class="container logo-uni">
     <h1 class="big-heading m-5">Organizers</h1>
     <div class="row">
         <div class="col">
-            <img src="{% static 'conference/Louisiana-Tech-University-LA-TECH-Ruston-Admissions-mytopschools.png' %}"
+            <img src="{% static 'conference/jnc.png' %}"
                 alt="">
         </div>
     </div>
