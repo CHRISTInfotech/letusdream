@@ -1,25 +1,43 @@
-.registration-section {
-    font-family: 'Montserrat', sans-serif;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #fff;
+.border-md {
+    border-width: 2px;
 }
 
-.registration {
-    width: 400px;
-    height: min-content;
-    padding: 20px;
-    border-radius: 20px;
-    background: #ffffff;
+.btn-facebook {
+    background: #405D9D;
+    border: none;
 }
 
-.registration form .form-group {
-    margin-bottom: 12px;
+.btn-facebook:hover,
+.btn-facebook:focus {
+    background: #314879;
 }
 
-.registration form input[type="submit"] {
-    font-size: 20px;
-    margin-top: 15px;
+.btn-twitter {
+    background: #42AEEC;
+    border: none;
+}
+
+.btn-twitter:hover,
+.btn-twitter:focus {
+    background: #1799e4;
+}
+
+
+.form-control:not(select) {
+    padding: 1.5rem 0.5rem;
+}
+
+select.form-control {
+    height: 52px;
+    padding-left: 0.5rem;
+}
+
+.form-control::placeholder {
+    color: #ccc;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.form-control:focus {
+    box-shadow: none;
 }

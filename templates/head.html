@@ -99,7 +99,8 @@
                     Hello, Sonali Rathod
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <li><a class="dropdown-item" href="#">Sign out</a></li>
+                    <li><a class="dropdown-item" href="#" target="_blank">Sign out</a></li>
+                    <li><a class="dropdown-item" href="{% url 'main' %}" target="_blank">Let us Dream</a></li>
                 </ul>
             </div>
         </div>
@@ -146,7 +147,7 @@
                             </a>
                         </li>
                         <li class="nav-item has-submenu">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" href="{% url 'events' %}">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                     fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                     stroke-linejoin="round" class="feather feather-settings">
@@ -156,13 +157,18 @@
                                     </path>
                                 </svg>
                                 <span class="ml-2">Settings</span></a>
-                                    <ul class="submenu collapse">
+                                    <!-- <ul class="submenu collapse">
                                         <li><a class="nav-link" href="{% url 'events' %}#events">Events </a></li>
                                         
                                         <li><a class="nav-link" href="{% url 'events' %}#country">Country </a></li>
-                                    </ul>
+                                    </ul> -->
                         </li>
-
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'modify_statistics' %}">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-graph-up-arrow" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M0 0h1v15h15v1H0V0Zm10 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V4.9l-3.613 4.417a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61L13.445 4H10.5a.5.5 0 0 1-.5-.5Z"/> </svg>
+                                <span class="ml-2">Modify Statistics</span>
+                            </a>
+                        </li>
 
                     </ul>
                 </div>

@@ -1,3 +1,4 @@
+import statistics
 from django.shortcuts import render, redirect
 
 
@@ -29,3 +30,7 @@ def reports(request):
 
 def events(request):
     return render(request, "Admin/events.html")
+
+
+def modify_statistics(request):
+    return render(request, "Admin/modify-statistics.html")

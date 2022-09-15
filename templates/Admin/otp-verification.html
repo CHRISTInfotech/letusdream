@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,6 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>Verification</title>
 
     <!-- Bootstrap v5.0 CDNs -->
@@ -63,7 +65,10 @@
 <body>
     <div class="d-flex justify-content-center align-items-center container text-center">
         <div class="card py-5 px-3">
+            <img src="{% static 'logo/let-us-dream-Empowering-Communities-01.png' %}" alt="" class="w-50 h-50 rounded mx-auto d-block">
             <h4 class="m-0 fw-bold">
+                <!-- <img src="C:\Users\sonali.rathod\Documents\letusdream\letusdream\ltstatic\logo\let-us-dream-Empowering-Communities-01.png" alt="" class="w-50 h-50 rounded mx-auto d-block"> -->
+                
                 Please enter the One-Time Password to verify your account
             </h4>
             <span>
@@ -79,7 +84,10 @@
             </div>
 
             <div class="text-center mt-5">
-                <div id="some_div"></div>
+                <div id="some_div">
+                    
+                </div>
+                
                 <span class="d-block ">Don't Receive the code ? <span class="text-primary">Resend Code</span></span>
                 <a class="text-decoration-none" href="{% url 'dashboard' %} "><span class="font-weight-bold text-primary ">Submit</span></a>
             </div>
