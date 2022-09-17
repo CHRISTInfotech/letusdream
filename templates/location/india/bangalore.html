@@ -274,49 +274,10 @@ BANGALORE
 
     <div class="container">
         <div class="row">
-            <div class="sectiontitle">
-                <h2 class="heading-h3 text-green text-uppercase">Our Impact</h2>
-                <!-- <span class="headerLine"></span> -->
-            </div>
-
-            <div class="col-lg-12">
-
-                <div id="projectFacts" class="sectionClass">
-                    <div class="fullWidth eight columns">
-                        <div class="projectFactsWrap ">
-                            <div class="item wow fadeInUpBig animated animated" data-number="12"
-                                style="visibility: visible;">
-                                <i class="fa fa-child"></i>
-                                <p id="number1" class="number">217</p>
-                                <span></span>
-                                <p>Students</p>
-                            </div>
-                            <div class="item wow fadeInUpBig animated animated" data-number="55"
-                                style="visibility: visible;">
-                                <i class="fa fa-smile-o"></i>
-                                <p id="number2" class="number">882</p>
-                                <span></span>
-                                <p>Participants</p>
-                            </div>
-                            <div class="item wow fadeInUpBig animated animated" data-number="359"
-                                style="visibility: visible;">
-                                <i class="fa fa-user"></i>
-                                <p id="number3" class="number">55</p>
-                                <span></span>
-                                <p>Leadership</p>
-                            </div>
-                            <div class="item wow fadeInUpBig animated animated" data-number="246"
-                                style="visibility: visible;">
-                                <i class="fa fa-users"></i>
-                                <p id="number4" class="number">904</p>
-                                <span></span>
-                                <p>Families</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-12">
+            
+            {% include 'partials/_countDetails.html' %}
+           
+            <div class="col-lg-12 m-5 p-5">
                 <!-- Modal gallery -->
                 <section class="">
                     <!-- Section: Images -->
@@ -360,9 +321,9 @@ BANGALORE
                     <!-- Section: Images -->
 
                     <!-- Section: Modals -->
-                    <section class="mt-5">
+                    <section>
                         <!-- Modal 1 -->
-                        <div class="modal fade mt-5 pt-5" id="exampleModal1" tabindex="-1"
+                        <div class="modal fade pt-5" id="exampleModal1" tabindex="-1"
                             aria-labelledby="exampleModal1Label" aria-hidden="true">
                             <div class="modal-dialog modal-lg">
                                 <div class="modal-content">
