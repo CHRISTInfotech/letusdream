@@ -4,33 +4,33 @@ from django.shortcuts import render, redirect
 
 # Create your views here.
 def signup(request):
-    return render(request, 'Admin/login.html')
+    return render(request, 'AdminPanel/login.html')
 
 
 def verification(request):
-    return render(request, "Admin/otp-verification.html")
+    return render(request, "AdminPanel/otp-verification.html")
 
 
 def dashboard(request):
-    return render(request, "Admin/home.html")
+    return render(request, "AdminPanel/home.html")
 
 
 def registration(request):
-    return render(request, "Admin/registration.html")
+    return render(request, "AdminPanel/registration.html")
 
 
 def view_dt(request):
 
-    return render(request, "Admin/view-dt.html")
+    return render(request, "AdminPanel/view-dt.html")
 
 
 def reports(request):
-    return render(request, "Admin/reports.html")
+    return render(request, "AdminPanel/reports.html")
 
 
 def events(request):
-    return render(request, "Admin/events.html")
+    return render(request, "AdminPanel/events.html")
 
 
 def modify_statistics(request):
-    return render(request, "Admin/modify-statistics.html")
+    return render(request, "AdminPanel/modify-statistics.html")
