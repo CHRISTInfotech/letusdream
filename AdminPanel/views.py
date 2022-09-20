@@ -1,10 +1,9 @@
 import statistics
-from django.shortcuts import render, redirect
-
+from django.shortcuts import render, redirect, HttpResponseRedirect
+from django.contrib.auth import authenticate, login
 
 # Create your views here.
-def signup(request):
-    return render(request, 'AdminPanel/login.html')
+
 
 
 def verification(request):
@@ -34,3 +33,21 @@ def events(request):
 
 def modify_statistics(request):
     return render(request, "AdminPanel/modify-statistics.html")
+
+
+#Login view function
+
+def signup(request):
+    if request.method == "POST":
+       username=request.POST['username']
+       password=request.POST['password']
+
+       user=authenticate(request,username=username,password=password)
+      
+       if user is not None:
+        login(request,user)
+        # return HttpResponseRedirect('/AdminPanel/verification/')
+        return redirect("verification")
+    else :
+        return render(request,'AdminPanel/login.html')
+
