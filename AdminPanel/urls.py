@@ -4,7 +4,6 @@ from AdminPanel.views import  dashboard, events, modify_statistics, registration
 
 
 urlpatterns = [
-
     path('signup',signup,name="signup"),
     path('verification',verification,name="verification"),
     path('dashboard',dashboard,name="dashboard"),

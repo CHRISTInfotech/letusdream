@@ -34,16 +34,15 @@
             <!-- <h1 class="text-center fw-bold">Admin Panel</h1> -->
             <p class="text-secondary fs-4 text-center">Welcome to Let us Dream Admin Panel</p>
 
-            <form class="needs-validation requires-validation " novalidate action="{% url 'verification' %}">
+            <form action="" method="post" class="needs-validation requires-validation " novalidate >
+                {% csrf_token %}
                 <div class="form-group input-icons">
                     <label class="form-label" for="email">Email address</label>
                     <div class="wrapper">
                         <i class="fa-solid fa-envelope"></i>
-                        <input class="form-control input-field"  type="email" id="email" required>
+                        <input class="form-control input-field"  type="email" id="email"  name="username" required>
                     </div>
-                    <div class="valid-feedback">
-                        email
-                    </div>
+                    
                     <div class="invalid-feedback">
                         Please enter your email address
                     </div>
@@ -53,10 +52,10 @@
                     <label class="form-label" for="password">Password</label>
                     <div class="wrapper">
                         <i class="fa-solid fa-lock"></i>
-                        <input class="form-control" type="password" id="password" required>
+                        <input class="form-control" type="password" id="password" name="password" required>
                     </div>
                     <div class="valid-feedback">
-                        password
+                        Strong password
                     </div>
                     <div class="invalid-feedback">
                         Please enter your password
