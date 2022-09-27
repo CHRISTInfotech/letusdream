@@ -4,10 +4,8 @@ from django.contrib.auth import authenticate, login
 
 # Create your views here.
 
-
-
-def verification(request):
-    return render(request, "AdminPanel/otp-verification.html")
+# def verification(request):
+#     return render(request, "AdminPanel/otp-verification.html")
 
 
 def dashboard(request):
@@ -47,7 +45,8 @@ def signup(request):
        if user is not None:
         login(request,user)
         # return HttpResponseRedirect('/AdminPanel/verification/')
-        return redirect("verification")
+        return redirect("dashboard")
+
     else :
         return render(request,'AdminPanel/login.html')
 
