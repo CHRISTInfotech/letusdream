@@ -25,9 +25,12 @@ Louisiana Tech University
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
 
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
-
 <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+<!-- MDB -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.css" rel="stylesheet"/>
 
 
 {% endblock links %}
@@ -83,64 +86,114 @@ Louisiana Tech University
 </div>
 
 
-<div class="testimonial-main">
-<h1 class="mb-4  fw-bold text-center fs-1 text-green text-uppercase heading-h3 mt-5 pt-5">Our History, Vision, and Goal</h1>
-<p>The LET US DREAM annual community conference was first conducted in 2017 at Louisiana Tech University. The purpose of this conference was to provide a forum for professionals, scholars, researchers, and post-secondary students to share experiences, challenges, and achievements in their respective efforts towards community improvement. The 2017 conference was a great success, featuring prominent keynote speakers, three separate panel discussions–Education, Health and Social Service—and numerous organizational table presentations. Approximately 200 people attended the conference.</p>
-<div id="testimonial-slider" class="owl-carousel">
-<div class="testimonial">
-    <div class="testimonial-inner">
-        <div class="pic">
-            <img src="{% static 'conference/333-3339997_mission-logo-mision-png.png' %}" alt="">
-        </div>
-        <div class="description">
-            <h3>History</h3>
-            <p>Volunteers from the local community including business owners involved in voluntary community developmental projects, non-profit organizations, philanthropists, social workers, educators or educational administrators, retired personnel, students, or anyone interested in contributing to their community development can be a part of the conference and engage in fruitful dialogues with visionaries through the conference.</p>
-           
+<section id="testimonial-main">
+    <div class="container">
+        <h1 class="mb-4  fw-bold text-center fs-1 text-green text-uppercase heading-h3 mt-5 pt-5">Our History, Vision, and Goal</h1>
+        <p>The LET US DREAM annual community conference was first conducted in 2017 at Louisiana Tech University. The purpose of this conference was to provide a forum for professionals, scholars, researchers, and post-secondary students to share experiences, challenges, and achievements in their respective efforts towards community improvement. The 2017 conference was a great success, featuring prominent keynote speakers, three separate panel discussions–Education, Health and Social Service—and numerous organizational table presentations. Approximately 200 people attended the conference.</p>
+        <div class="testimonials">
+            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="single-item">
+                      <div class="row">
+                          <div class="col-md-5">
+                            <div class="row text-center">
+                                <div class="bio">
+                                    <h2>MISSION</h2>
+                                </div>
+                            </div>
+                            <div class="row d-flex justify-content-center">
+                                <div class="img-area h-100 w-100">
+                                    <img src="{% static 'conference/333-3339997_mission-logo-mision-png.png' %}" alt="">
+                                  </div>
+                            </div>
+                          
+                          </div>
+                          <div class="col-md-6">
+                              <div class="content">
+                                  <p><span><i class="fa fa-quote-left"></i></span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel a eius excepturi molestias commodi aliquam error magnam consectetur laboriosam numquam, minima eveniet nostrum sequi saepe ipsam non ea, inventore tenetur! Corporis commodi consequatur molestiae voluptatum!</p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="single-item">
+                      <div class="row">
+                          <div class="col-md-5">
+                            <div class="row text-center">
+                                <div class="bio">
+                                    <h2>VISION</h2>    
+                                </div>
+                            </div>
+                            <div class="row d-flex justify-content-center ">
+                                <div class="img-area h-100 w-100">
+                                    <img src="{% static 'conference/3fc6e9c530ea4dd0837f03d842136973.jpg' %}" alt="">
+                                  </div>
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                              <div class="content">
+                                  <p><span><i class="fa fa-quote-left"></i></span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel a eius excepturi molestias commodi aliquam error magnam consectetur laboriosam numquam, minima eveniet nostrum sequi saepe ipsam non ea, inventore tenetur! Corporis commodi consequatur molestiae voluptatum!</p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="single-item">
+                      <div class="row">
+                          <div class="col-md-5">
+                            <div class="row text-center">
+                                <div class="bio">
+                                    <h2>MISSION</h2>     
+                                </div>
+                            </div>
+                            <div class="row d-flex justify-content-center ">
+                                <div class="img-area h-100 w-100">
+                                    <img src="{% static 'conference/201148c6005b1c135e7da52226f2e7de.jpg' %}" alt="" class="img-fluid">
+                                  </div>
+                            </div>
+                            
+                          </div>
+                          <div class="col-md-6">
+                              <div class="content">
+                                  <p><span><i class="fa fa-quote-left"></i>
+                                </span>The LET US DREAM annual community conference was first conducted in 2017 at Louisiana Tech
+                                University. The purpose of this conference was to provide a forum for professionals,
+                                scholars, researchers, and post-secondary students to share experiences, challenges, and
+                                achievements in their respective efforts towards community improvement.</p>
+                                
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" ></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+            
         </div>
     </div>
-    <div class="testimonial-inner1">
-        <div class="pic1">
-            <img src="{% static 'conference/333-3339997_mission-logo-mision-png.png' %}" alt="">
-        </div>
-        <div class="description1">
-            <h3>Vision</h3>
-            <p>“Empowered local communities for sustainable impact and improvement.”</p>
-           
-        </div>
-    </div>
-    <div class="testimonial-inner2">
-        <div class="pic">
-            <img src="{% static 'conference/333-3339997_mission-logo-mision-png.png' %}" alt="">
-        </div>
-        <div class="description">
-            <h3>Goal</h3>
-            <p>The Let Us Dream Conference was established in 2017 for the purpose of providing a forum for sharing experiences with successes and challenges in community improvement organizations and efforts.
+</section>
 
-                Broad conference goals are to:
-                
-                I.       Improve networking and collaboration among all those interested in community improvement organizations and programs;
-                
-                II.     Promote volunteerism and empower all those involved in community improvement organizations and initiatives, including employees, volunteers, post-secondary students, researchers, and practitioners;
-                
-                III.   Create a professional learning organization dedicated to improving local communities and characterized by a culture of shared researcher and practitioner knowledge, skills, theories, and best practices. </p>
-           
-        </div>
-    </div>
-</div>
-</div>
-</div>
-
-<br>
 <section class="home ">
-    <div class="container-fluid m-5 p-5">
+    <div class="container-fluid">
         <div class="row">
-            <div class="col-md-6">
+            <div class="col">
                 <div id="carousel" class="carousel slide" data-ride="carousel">
                     <div class="carousel-controls">
                       <ol class="carousel-indicators">
-                        <li data-target="#carousel" data-slide-to="0" class="active" style="background-image:url('ltstatic/img/slide-1.jpg')"></li>
-                        <li data-target="#carousel" data-slide-to="1" style="background-image:url('ltstatic/img/slide-2.jpg')"></li>
-                        <li data-target="#carousel" data-slide-to="2" style="background-image:url('ltstatic/img/slide-3.jpg')"></li>
+                        <li data-target="#carousel" data-slide-to="0" class="active" style="background-image:url('ltstatic/conference/DREAMS-BAND-7-1-min-scaled.jpg')"></li>
+                        <li data-target="#carousel" data-slide-to="1" style="background-image:url('ltstatic/conference/DREAMS-Site-Banner-2-1-scaled.jpg')"></li>
+                        <li data-target="#carousel" data-slide-to="2" style="background-image:url('ltstatic/conference/DREAMS-BAND-4-1-min-scaled.jpg')"></li>
                         
                       </ol>
                       <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
@@ -151,9 +204,9 @@ Louisiana Tech University
                     </a>
                     </div>
                     <div class="carousel-inner pt-5">
-                      <div class="carousel-item active" style="background-image:url('ltstatic/img/slide-1.jpg')"></div>
-                      <div class="carousel-item" style="background-image:url('ltstatic/img/slide-2.jpg')"></div>
-                      <div class="carousel-item" style="background-image:url('ltstatic/img/slide-3.jpg')"></div>
+                      <div class="carousel-item active h-100 w-100" style="background-image:url('ltstatic/conference/DREAMS-BAND-7-1-min-scaled.jpg'); object-fit: cover;"></div>
+                      <div class="carousel-item h-100 w-100" style="background-image:url('ltstatic/conference/DREAMS-Site-Banner-2-1-scaled.jpg'); object-fit: cover;"></div>
+                      <div class="carousel-item h-100 w-100" style="background-image:url('ltstatic/conference/DREAMS-BAND-4-1-min-scaled.jpg')"></div>
                     </div>
                   </div>
             </div>
@@ -162,9 +215,63 @@ Louisiana Tech University
     </div>
 
    </section>
+
+   <div class="container ">
+    <div class="row">
+        <div class="col-lg-12 ">
+            <div class="gallery">
+              <div>
+                <iframe src="//www.youtube.com/embed/VhBG7GVXcNw" allowfullscreen frameborder="0" name="tab"></iframe>
+              </div>
+              <div>
+                <span>
+                <a href="//www.youtube.com/embed/VhBG7GVXcNw" target="tab"><img src="//img.youtube.com/vi/VhBG7GVXcNw/default.jpg"></a>
+                <a href="//www.youtube.com/embed/Dm8-XtFZzA4" target="tab"><img src="//img.youtube.com/vi/Dm8-XtFZzA4/default.jpg"></a>
+                <a href="//www.youtube.com/embed/vmLuafs-BhE" target="tab"><img src="//img.youtube.com/vi/vmLuafs-BhE/default.jpg"></a>
+                <!-- <a href="//www.youtube.com/embed/WFhzzJjRncI?rel=0&autoplay=1" target="tab"><img src="//img.youtube.com/vi/WFhzzJjRncI/default.jpg"></a> -->
+              </span>
+              </div>
+            </div>
+                 
+            </div>
+    </div>
+   </div>
+ 
+   
+<!-- Gallery -->
+<div class="container">
+    <div class="row">
+        <h1 class="big-heading mt-5 pt-5 text-center">Louisiana Previous Conferences</h1>
+        <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+            <a href="https://letusdream.org/wp-content/uploads/2021/07/Conference-Brochure_2018-LA-Tech-min.pdf"
+            target="_blank"><img src="/ltstatic/Research/2019.png" class="w-100 shadow-1-strong rounded mb-4" />
+            </a>
+        </div>
+      
+        <div class="col-lg-4 mb-4 mb-lg-0">
+            <a href="https://letusdream.org/wp-content/uploads/2021/07/Conference-Brochure_2019-LA-Tech.pdf"><img src="/ltstatic/Research/2018.png" class="w-100 shadow-1-strong rounded mb-4"/>
+            </a>
+        </div>
+      
+        <div class="col-lg-4 mb-4 mb-lg-0">
+          <img src="https://sgtuniversity.ac.in/icmai2020/wp-content/uploads/2021/02/Intl-Conference-Invitation-2021-C-734x1024.jpg" class="w-100 shadow-1-strong rounded mb-4"/>
+      
+        
+        </div>
+      </div>
+</div>
+
+  <!-- Gallery -->
+   
+
   
  
 <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>   
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- MDB -->
+<!-- MDB -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.js"></script>
 </body>
 
 </html>

@@ -15,10 +15,9 @@ def dashboard(request):
 
 
 def registration(request):
-
+    
     query_results = Registration.objects.all()
     print(query_results)
-    
 
     if request.method == "POST":
         fname=request.POST.get("fname")
@@ -31,7 +30,7 @@ def registration(request):
         en=Registration.objects.create(fname=fname,lname=lname,phone=phone,email=email,dreams=dreams,dreamsOption=dreamsOption)
         # print(en)
         en.save()
-        
+ 
         return render(request,"AdminPanel/registration.html",{'query_results':query_results})
         # return redirect("registration")
     else:
