@@ -25,20 +25,19 @@ def registration(request):
         phone=request.POST.get('phone')
         email=request.POST.get('email')
         dreams=request.POST.get('dreams')
-        dreamsOption=request.POST.getlist('dreamsOption')
+        dreamsOption=request.POST.get('dreamsOption')
         # print(dreamsOption)
         en=Registration.objects.create(fname=fname,lname=lname,phone=phone,email=email,dreams=dreams,dreamsOption=dreamsOption)
         # print(en)
         en.save()
  
-        return render(request,"AdminPanel/registration.html",{'query_results':query_results})
-        # return redirect("registration")
+        # return render(request,"AdminPanel/registration.html",{'query_results':query_results})
+        return redirect("registration")
     else:
         return render(request, "AdminPanel/registration.html",{'query_results':query_results})
 
 
 def view_dt(request):
-
     return render(request, "AdminPanel/view-dt.html")
 
 
