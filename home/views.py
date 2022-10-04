@@ -107,4 +107,4 @@ def publications(request):
 
 
 def registration_user(request):
-    return render(request, 'registration.html')
+   return render(request, 'registration.html')
