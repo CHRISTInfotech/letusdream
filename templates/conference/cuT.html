@@ -5,10 +5,11 @@
 Christ University Thiruvananthapuram
 {% endblock %}
 
-
 {% block extraStyles %}
+<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
 <link rel="stylesheet" href="{% static 'css/louisiana-tech-university.css' %}">
 {% endblock extraStyles %}
+
 
 {% block links %}
 <!--Google font-->
@@ -24,101 +25,32 @@ Christ University Thiruvananthapuram
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
 
-
-
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
-
 <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+<!-- MDB -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.css" rel="stylesheet"/>
 
 
 {% endblock links %}
+
 
 {% block content %}
 
 <nav aria-label="breadcrumb animated slideInDown" class="cus-breadcrumb">
     <ol class="breadcrumb text-uppercase mb-0 bg-white">
         <li class="breadcrumb-item"><a class="text-black text-decoration-none" href="{% url 'main' %}">Home</a></li>
-        <li class="breadcrumb-item"><a class="text-black text-decoration-none" href="{% url 'annual-conference' %}">Annual Conference</a>
-        </li>
-        <li class="breadcrumb-item  active" aria-current="page">Christ University Thiruvananthapuram
-        </li>
+        <li class="breadcrumb-item"><a class="text-black text-decoration-none" href="{% url 'annual-conference' %}">Annual Conference</a></li>
+        <li class="breadcrumb-item  active" aria-current="page">Christ University Thiruvananthapuram</li>
     </ol>
 </nav>
 
-<div class="body-content">
-    <div class=" blog-slider">
-        <div class="blog-slider__wrp swiper-wrapper">
-            <div class="blog-slider__item swiper-slide">
-                <div class="blog-slider__img">
-                    <img src="{% static 'conference/333-3339997_mission-logo-mision-png.png' %}" alt="">
-                    <div class="text">History</div>
-                </div>
-                <div class="blog-slider__content">
-                    <span class="blog-slider__code">26 December 2017</span>
-                    <div class="blog-slider__title">LET US DREAM</div>
-                    <div class="blog-slider__text">
-                        The LET US DREAM annual community conference was first conducted in 2017 at Louisiana Tech
-                        University. The purpose of this conference was to provide a forum for professionals,
-                        scholars, researchers, and post-secondary students to share experiences, challenges, and
-                        achievements in their respective efforts towards community improvement.
-                    </div>
-
-                    
-                    <a href="#" class="text-center align-items-center"><button type="button"
-                        class="button"><span>READ MORE</span></button></a>
-                       
-                </div>
-            </div>
-            <div class="blog-slider__item swiper-slide">
-                <div class="blog-slider__img">
-                    <img src="{% static 'conference/3fc6e9c530ea4dd0837f03d842136973.jpg' %}" alt="">
-                    <div class="text">Vision</div>
-                </div>
-                <div class="blog-slider__content">
-                    <span class="blog-slider__code">26 December 2017</span>
-                    <div class="blog-slider__title">LET US DREAM</div>
-                    <div class="blog-slider__text">
-                        The LET US DREAM annual community conference was first conducted in 2017 at Louisiana Tech
-                        University. The purpose of this conference was to provide a forum for professionals,
-                        scholars, researchers, and post-secondary students to share experiences, challenges, and
-                        achievements in their respective efforts towards community improvement.
-                    </div>
-
-                    <a href="#" class="text-center align-items-center"><button type="button"
-                        class="button"><span>READ MORE</span></button></a>
-                </div>
-            </div>
-
-            <div class="blog-slider__item swiper-slide">
-                <div class="blog-slider__img">
-                    <img src="{% static 'conference/201148c6005b1c135e7da52226f2e7de.jpg' %}" alt="">
-                    <div class="text">Mission</div>
-                </div>
-                <div class="blog-slider__content">
-                    <span class="blog-slider__code">26 December 2017</span>
-                    <div class="blog-slider__title">LET US DREAM</div>
-                    <div class="blog-slider__text">
-                        The LET US DREAM annual community conference was first conducted in 2017 at Louisiana Tech
-                        University. The purpose of this conference was to provide a forum for professionals,
-                        scholars, researchers, and post-secondary students to share experiences, challenges, and
-                        achievements in their respective efforts towards community improvement.
-                    </div>
-
-                    <a href="#" class="text-center align-items-center"><button type="button"
-                        class="button"><span>READ MORE</span></button></a>
-                </div>
-            </div>
-
-        </div>
-        <div class="blog-slider__pagination"></div>
-    </div>
-
-</div>
-
-<div class="container conference-date mt-5 pt-5">
+<h1 class="mb-4  fw-bold text-center fs-1 text-green text-uppercase heading-h3 mt-5">Christ University Thiruvananthapuram Conference</h1>
+<div class="container conference-date">
     <div class="row justify-content-center align-items-center">
         <div class="col-md-12">
-            <h1 class="text-center text-green fw-bold ">Conference Dates</h1>
+            <p class="h1 text-center fw-bold">Conference Dates</p>
             <h3 class=" text-center text-black p-3">
                 21 October 2021, 10 AM to 4 PM <br> at Christ University's Thiruvananthapuram Hall.
             </h3>
@@ -126,6 +58,8 @@ Christ University Thiruvananthapuram
         </div>
     </div>
 </div>
+
+
 <div class="container">
     <div class="row align-items-center">
         <div class="col-lg-4 p-4 d-flex flex-column">
@@ -152,137 +86,194 @@ Christ University Thiruvananthapuram
 </div>
 
 
-<div class="container ">
-    <h1 class="big-heading m-5 p-5">Conference Chairs</h1>
+<section id="testimonial-main">
+    <div class="container">
+        <h1 class="mb-4  fw-bold text-center fs-1 text-green text-uppercase heading-h3 mt-5 pt-5">Our History, Vision, and Goal</h1>
+        <p >The LET US DREAM annual community conference was first conducted in 2017 at Louisiana Tech University. The purpose of this conference was to provide a forum for professionals, scholars, researchers, and post-secondary students to share experiences, challenges, and achievements in their respective efforts towards community improvement. The 2017 conference was a great success, featuring prominent keynote speakers, three separate panel discussions–Education, Health and Social Service—and numerous organizational table presentations. Approximately 200 people attended the conference.</p>
+        <div class="testimonials">
+            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="single-item">
+                      <div class="row">
+                          <div class="col-md-5">
+                            <div class="row text-center">
+                                <div class="bio">
+                                    <h2>MISSION</h2>
+                                </div>
+                            </div>
+                            <div class="row d-flex justify-content-center">
+                                <div class="img-area h-100 w-100">
+                                    <img src="{% static 'conference/333-3339997_mission-logo-mision-png.png' %}" alt="">
+                                  </div>
+                            </div>
+                          
+                          </div>
+                          <div class="col-md-6">
+                              <div class="content">
+                                  <p class="mb-5"><span><i class="fa fa-quote-left"></i></span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel a eius excepturi molestias commodi aliquam error magnam consectetur laboriosam numquam, minima eveniet nostrum sequi saepe ipsam non ea, inventore tenetur! Corporis commodi consequatur molestiae voluptatum!</p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="single-item">
+                      <div class="row">
+                          <div class="col-md-5">
+                            <div class="row text-center">
+                                <div class="bio">
+                                    <h2>VISION</h2>    
+                                </div>
+                            </div>
+                            <div class="row d-flex justify-content-center ">
+                                <div class="img-area h-100 w-100">
+                                    <img src="{% static 'conference/3fc6e9c530ea4dd0837f03d842136973.jpg' %}" alt="">
+                                  </div>
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                              <div class="content">
+                                  <p class="mb-5"><span><i class="fa fa-quote-left"></i></span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel a eius excepturi molestias commodi aliquam error magnam consectetur laboriosam numquam, minima eveniet nostrum sequi saepe ipsam non ea, inventore tenetur! Corporis commodi consequatur molestiae voluptatum!</p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="single-item">
+                      <div class="row">
+                          <div class="col-md-5">
+                            <div class="row text-center">
+                                <div class="bio">
+                                    <h2>GOAL</h2>     
+                                </div>
+                            </div>
+                            <div class="row d-flex justify-content-center ">
+                                <div class="img-area h-100 w-100">
+                                    <img src="{% static 'conference/201148c6005b1c135e7da52226f2e7de.jpg' %}" alt="" class="img-fluid">
+                                  </div>
+                            </div>
+                            
+                          </div>
+                          <div class="col-md-6">
+                              <div class="content">
+                                  <p class="mb-5"><span><i class="fa fa-quote-left"></i>
+                                </span>The LET US DREAM annual community conference was first conducted in 2017 at Louisiana Tech
+                                University. The purpose of this conference was to provide a forum for professionals,
+                                scholars, researchers, and post-secondary students to share experiences, challenges, and
+                                achievements in their respective efforts towards community improvement.</p>
+                                
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" ></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+<section class="home ">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <div id="carousel" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-controls">
+                      <ol class="carousel-indicators">
+                        <li data-target="#carousel" data-slide-to="0" class="active" style="background-image:url('ltstatic/coference/DREAMS-BAND-7-1-min-scaled.jpg')"></li>
+                        <li data-target="#carousel" data-slide-to="1" style="background-image:url('ltstatic/conference/DRAMS-Site-Banner-2-1-scaled.jpg')"></li>
+                        <li data-target="#carousel" data-slide-to="2" style="background-image:url('ltstatic/conference/DRAMS-BAND-4-1-min-scaled.jpg')"></li>
+                        
+                      </ol>
+                      <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+                       <img src="ltstatic/img/left-arrow.svg" alt="Prev"> 
+                    </a>
+                    <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+                      <img src="ltstatic/img/right-arrow.svg" alt="Next">
+                    </a>
+                    </div>
+                    <div class="carousel-inner pt-5">
+                      <div class="carousel-item active h-100 w-100" style="background-image:url('ltstatic/conference/DEAMS-BAND-7-1-min-scaled.jpg'); object-fit: cover;"></div>
+                      <div class="carousel-item h-100 w-100" style="background-image:url('ltstatic/conference/DREAMS-Sie-Banner-2-1-scaled.jpg'); object-fit: cover;"></div>
+                      <div class="carousel-item h-100 w-100" style="background-image:url('ltstatic/conference/DREAMS-BAD-4-1-min-scaled.jpg')"></div>
+                    </div>
+                  </div>
+            </div>
+        </div>
+
+    </div>
+
+   </section>
+
+   <div class="container ">
     <div class="row">
-        <div class="col-lg-4 col-md-6 col-sm-12">
-            <div class="card m-5">
-                <div class="imgbox">
-                    <img src="{% static 'conference/cut-spk1.png' %}" alt="img1">
-                </div>
-                <div class="content">
-                    <div class="details">
-                        <h2>Ms Sheela Rahulan
-                            <br>
-                            <span>Conference Planning chair</span>
-                        </h2>
-                        <div class="data">
-                            <h3>Conference Dates
-                                21 October 2021, 10 AM to 4 PM
-                                <br>
-                                <span>at Thiruvananthapuram Tech’s University Hall.</span>
-                            </h3>
-
-                        </div>
-                        
-                    
-                        
-                        
-                    </div>
-                </div>
+        <div class="col-lg-12 ">
+            <div class="gallery">
+              <div>
+                <iframe src="//www.youtube.com/embed/VhBGGVXcNw" allowfullscreen frameborder="0" name="tab"></iframe>
+              </div>
+              <div>
+                <span>
+                <a href="//www.youtube.com/embed/VhBG7GVXcNw" target="tab"><img src="//img.youtube.com/vi/VhBG7GVXcN/default.jpg"></a>
+                <a href="//www.youtube.com/embed/Dm8-XtFZzA4" target="tab"><img src="//img.youtube.com/vi/Dm8-XtFZA4/default.jpg"></a>
+                <a href="//www.youtube.com/embed/vmLuafs-BhE" target="tab"><img src="//img.youtube.com/vi/vmLuafs-BE/default.jpg"></a>
+                <!-- <a href="//www.youtube.com/embed/WFhzzJjRncI?rel=0&autoplay=1" target="tab"><img src="//img.youtube.com/vi/WFhzzJjRncI/default.jpg"></a> -->
+              </span>
+              </div>
             </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 col-sm-12">
-            <div class="card m-5">
-                <div class="imgbox">
-                    <img src="{% static 'conference/cut-spk2.png' %}" alt="img1">
-                </div>
-                <div class="content">
-                    <div class="details">
-                        <h2>Mr Rahul R L
-                            <br>
-                            <span>Conference Co-chair</span>
-                        </h2>
-                        <div class="data">
-                            <h3>Conference Dates
-                                21 October 2021, 10 AM to 4 PM
-                                <br>
-                                <span>at Thiruvananthapuram Tech’s University Hall.</span>
-                            </h3>
-
-                        </div>
-                       
-                    </div>
-                </div>
+                 
             </div>
-        </div>
-
-        <div class="col-lg-4 col-md-12 col-sm-12">
-            <div class="card m-5">
-                <div class="imgbox">
-                    <img src="{% static 'locations/cologne/default.png' %}" alt="img1">
-                </div>
-                <div class="content">
-                    <div class="details">
-                        <h2>Mrs.Cathi Cox-Boniol
-                            <br>
-                            <span>Conference Co-chair</span>
-                        </h2>
-                        <div class="data">
-                            <h3>Conference Dates
-                                21 October 2021, 10 AM to 4 PM
-                                <br>
-                                <span>at Thiruvananthapuram Tech’s University Hall.</span>
-                            </h3>
-
-                        </div>
-                       
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
-</div>
-
-
-<div class="container ">
-    <h1 class="big-heading mt-5 pt-5">Christ University Thiruvananthapuram Previous Conferences</h1>
-</div>
-<div class="box-container">
-
-    <div class="box">
-
-        <!-- {% url 'louisiana-tech-university' %} -->
-        <span style="--i:1;"><a
-                href="https://letusdream.org/wp-content/uploads/2021/08/Trivendrum-2020-Conference-min.pdf"
-                target="_blank"><img src="{% static 'conference/trivandrum-conference-1.png' %}" alt=""></a></span>
-        <span style="--i:2;"><a
-                href="#"><img
-                    src="{% static 'Research/.png' %}" alt=""></a></span>
-        <span style="--i:3;"><img
-                src="#"
-                alt=""></span>
-    </div>
-</div>
-
-
-<div class="container logo-uni">
-    <h1 class="big-heading m-5">Organizers</h1>
+   </div>
+ 
+   
+<!-- Gallery -->
+<div class="container">
     <div class="row">
-        <div class="col">
-            <img src="{% static 'conference/Christ-thrivandrum-logo.jpg' %}"
-                alt="">
+        <h1 class="big-heading mt-5 pt-5 text-center">Thiruvananthapuram Previous Conferences</h1>
+        <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+            <a href="https://letusdream.org/wp-content/uploads/2021/08/Trivendrum-2020-Conference-min.pdf"
+            target="_blank"><img src="/ltstatic/conference/trivandrum-conference-1.png" class="w-100 shadow-1-strong rounded mb-4" />
+            </a>
         </div>
-    </div>
-
+      
+        <div class="col-lg-4 mb-4 mb-lg-0">
+            <a href="#"><img src="/ltstatic/Research/.png" class="w-100 shadow-1-strong rounded mb-4"/>
+            </a>
+        </div>
+      
+        <div class="col-lg-4 mb-4 mb-lg-0">
+          <img src="https://sgtuniversity.ac.in/icmai2020/wp-content/uploads/2021/02/Intl-Confrence-Invitation-2021-C-734x1024.jpg" class="w-100 shadow-1-strong rounded mb-4"/>
+      
+        
+        </div>
+      </div>
 </div>
 
+  <!-- Gallery -->
+   
 
-<script>
-    var swiper = new Swiper('.blog-slider', {
-        spaceBetween: 30,
-        effect: 'fade',
-        loop: true,
-        mousewheel: {
-            invert: false,
-        },
-        // autoHeight: true,
-        pagination: {
-            el: '.blog-slider__pagination',
-            clickable: true,
-        }
-    });
+  
+ 
+<script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+<!-- Christ University Thiruvananthapuram Passing string -->
+<script>  
+var event_CUT="conference";
+sessionStorage.setItem("event_CUT",event_CUT);
 </script>
+</body>
+
+</html>
 
 {% endblock %}

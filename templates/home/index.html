@@ -41,7 +41,7 @@ HOME
       <div class="content">
         <h1 class="text-white text-h1">LET US DREAM</h1>
         <h3 class="text-h3">Empowering Community</h3>
-        <button type="button" class="btn-1">JOIN US</button>
+        <a href="{% url 'registration_user'  %}"><button type="button" class="btn-1" id="register">JOIN US</button></a>
       </div>
     </div>
   </div>
@@ -245,8 +245,18 @@ HOME
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.4.0/mdb.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-</body>
 
+  <script>
+    // Index Page Passing string 
+    
+/*     const element = document.getElementById('register')
+
+// always checking if the element is clicked, if so, do alert('hello')
+element.addEventListener("click", () => {
+sessionStorage.setItem("event",none);
+}); */
+  </script>
+</body>
 </html>
 
 {% endblock content %}

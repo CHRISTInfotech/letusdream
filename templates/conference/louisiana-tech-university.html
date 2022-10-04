@@ -72,7 +72,7 @@ Louisiana Tech University
         <div class="col-lg-4 p-4 d-flex flex-column">
 
             <a href="{% url 'registration_user' %}" class="text-center"><button type="button"
-                    class="button "><span>Register</span></button></a>
+                    class="button " id="register"><span>Register</span></button></a>
 
         </div>
         <div class="col-lg-4 p-4 d-flex flex-column">
@@ -89,7 +89,7 @@ Louisiana Tech University
 <section id="testimonial-main">
     <div class="container">
         <h1 class="mb-4  fw-bold text-center fs-1 text-green text-uppercase heading-h3 mt-5 pt-5">Our History, Vision, and Goal</h1>
-        <p>The LET US DREAM annual community conference was first conducted in 2017 at Louisiana Tech University. The purpose of this conference was to provide a forum for professionals, scholars, researchers, and post-secondary students to share experiences, challenges, and achievements in their respective efforts towards community improvement. The 2017 conference was a great success, featuring prominent keynote speakers, three separate panel discussions–Education, Health and Social Service—and numerous organizational table presentations. Approximately 200 people attended the conference.</p>
+        <p >The LET US DREAM annual community conference was first conducted in 2017 at Louisiana Tech University. The purpose of this conference was to provide a forum for professionals, scholars, researchers, and post-secondary students to share experiences, challenges, and achievements in their respective efforts towards community improvement. The 2017 conference was a great success, featuring prominent keynote speakers, three separate panel discussions–Education, Health and Social Service—and numerous organizational table presentations. Approximately 200 people attended the conference.</p>
         <div class="testimonials">
             <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
               <div class="carousel-inner">
@@ -111,7 +111,7 @@ Louisiana Tech University
                           </div>
                           <div class="col-md-6">
                               <div class="content">
-                                  <p><span><i class="fa fa-quote-left"></i></span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel a eius excepturi molestias commodi aliquam error magnam consectetur laboriosam numquam, minima eveniet nostrum sequi saepe ipsam non ea, inventore tenetur! Corporis commodi consequatur molestiae voluptatum!</p>
+                                  <p class="mb-5"><span><i class="fa fa-quote-left"></i></span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel a eius excepturi molestias commodi aliquam error magnam consectetur laboriosam numquam, minima eveniet nostrum sequi saepe ipsam non ea, inventore tenetur! Corporis commodi consequatur molestiae voluptatum!</p>
                               </div>
                           </div>
                       </div>
@@ -134,7 +134,7 @@ Louisiana Tech University
                           </div>
                           <div class="col-md-6">
                               <div class="content">
-                                  <p><span><i class="fa fa-quote-left"></i></span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel a eius excepturi molestias commodi aliquam error magnam consectetur laboriosam numquam, minima eveniet nostrum sequi saepe ipsam non ea, inventore tenetur! Corporis commodi consequatur molestiae voluptatum!</p>
+                                  <p class="mb-5"><span><i class="fa fa-quote-left"></i></span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel a eius excepturi molestias commodi aliquam error magnam consectetur laboriosam numquam, minima eveniet nostrum sequi saepe ipsam non ea, inventore tenetur! Corporis commodi consequatur molestiae voluptatum!</p>
                               </div>
                           </div>
                       </div>
@@ -146,7 +146,7 @@ Louisiana Tech University
                           <div class="col-md-5">
                             <div class="row text-center">
                                 <div class="bio">
-                                    <h2>MISSION</h2>     
+                                    <h2>GOAL</h2>     
                                 </div>
                             </div>
                             <div class="row d-flex justify-content-center ">
@@ -158,7 +158,7 @@ Louisiana Tech University
                           </div>
                           <div class="col-md-6">
                               <div class="content">
-                                  <p><span><i class="fa fa-quote-left"></i>
+                                  <p class="mb-5"><span><i class="fa fa-quote-left"></i>
                                 </span>The LET US DREAM annual community conference was first conducted in 2017 at Louisiana Tech
                                 University. The purpose of this conference was to provide a forum for professionals,
                                 scholars, researchers, and post-secondary students to share experiences, challenges, and
@@ -267,11 +267,17 @@ Louisiana Tech University
   
  
 <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>   
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
-<!-- MDB -->
-<!-- MDB -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.js"></script>
+<!-- Louisiana Tech Passing string -->
+<script>
+
+  
+  const element = document.getElementById('register')
+
+// always checking if the element is clicked, if so, do alert('hello')
+element.addEventListener("click", () => {
+sessionStorage.setItem("event",conference);
+});
+</script>
 </body>
 
 </html>
