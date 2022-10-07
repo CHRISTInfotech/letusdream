@@ -507,6 +507,7 @@ h6 {
 .content-button:hover{
     color: #027981;
     background-color: #fff;
+    border: 2px solid #027981;
     font-weight: bolder;
 }
 .tab {
@@ -516,7 +517,7 @@ h6 {
 
 .feed-area{
     width: 100% !important;
-    height: 25vw !important;
-    text-align: center; 
-    object-fit: cover;
+    height: 300px !important;
+    text-align: center !important; 
+    object-fit: cover !important;
 }
