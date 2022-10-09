@@ -108,3 +108,6 @@ def publications(request):
 
 def registration_user(request):
    return render(request, 'registration.html')
+
+def calender(request):
+    return render(request,'home/calender.html')
