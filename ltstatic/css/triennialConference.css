@@ -320,7 +320,7 @@ a svg rect {
 
 
   .partnership-img{
-    height:60%;
+    height:80%;
     width:60%;
   }
 
@@ -343,17 +343,7 @@ h2 {
     margin: 25px 0 50px;
 }
 
-h2::after {
-    content: "";
-    width: 100px;
-    position: absolute;
-    margin: 0 auto;
-    height: 3px;
-    background: #ffdc12;
-    left: 0;
-    right: 0;
-    bottom: -10px;
-}
+
 
 .carousel {
     width: 100%;
@@ -388,12 +378,13 @@ h2::after {
 }
 
 .carousel .testimonial {
-    padding: 30px 0 10px;
+    padding: 50px 50px 0px;
 }
 
 .testimonial {
     color: #000000;
-    font: Times Roman;
+    font-family: 'Montserrat', sans-serif;
+    
 }
 
 .carousel .overview {
@@ -418,7 +409,7 @@ h2::after {
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    background: #999;
+    background: #000;
     text-shadow: none;
     top: 4px;
 }
@@ -437,26 +428,12 @@ h2::after {
     margin-right: -2px;
 }
 
-.carousel .carousel-indicators {
-    bottom: 15px
-}
-
-.carousel-indicators li,
-.carousel-indicators li.active {
-    width: 11px;
-    height: 11px;
-    margin: 1px 5px;
-    border-radius: 50%;
+.carousel-indicators .active {
+    background-color: #000 !important;
 }
 
 .carousel-indicators li {
-    background: #e2e2e2;
-    border-color: transparent;
-}
-
-.carousel-indicators li.active {
-    border: none;
-    background: #888;
+    background-color: #D3D3D3 !important;
 }
 
 .cus-but-1 {
