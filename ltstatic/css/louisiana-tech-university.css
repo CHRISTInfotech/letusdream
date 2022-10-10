@@ -263,3 +263,65 @@ span.carousel-control-next-icon {
     max-width: 100%;
     vertical-align: middle;
   }
+
+
+
+  
+
+  .social {
+    position: fixed;
+    top: 40%;
+  }
+  .social ul {
+    padding: 0px;
+    -webkit-transform: translate(-270px, 0);
+    -moz-transform: translate(-270px, 0);
+    -ms-transform: translate(-270px, 0);
+    -o-transform: translate(-270px, 0);
+    transform: translate(-270px, 0);
+  }
+  .social ul li {
+    display: block;
+    margin: 5px;
+    background: rgba(0, 0, 0, 0.36);
+    width: 300px;
+    text-align: right;
+    padding: 8px;
+    -webkit-border-radius: 0 50px 50px 0;
+    -moz-border-radius: 0 30px 30px 0;
+    border-radius: 0 30px 30px 0;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -ms-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
+  }
+  .social ul li:hover {
+    -webkit-transform: translate(300px, 0);
+    -moz-transform: translate(300px, 0);
+    -ms-transform: translate(300px, 0);
+    -o-transform: translate(300px, 0);
+    transform: translate(300px, 0);
+    background: rgba(255, 255, 255, 0.4);
+    text-decoration: none;
+  }
+  .social ul li:hover a {
+    color: #000;
+  }
+  .social ul li:hover i {
+    color: #000;
+   
+   
+  }
+  .social ul li i {
+    padding-right: 25px !important;
+    color: #000;
+    text-decoration: none;
+    padding: 10px;
+    
+    width: 30px;
+    height: 30px;
+    font-size: 25px;
+  }
+  
+  
