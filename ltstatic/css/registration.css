@@ -1,27 +1,29 @@
+.form-label {
+    margin-bottom: 0rem !important;
+}
+
+.required:after {
+    content:" *";
+    color: red;
+}
+
+.border-md {
+    border-width: 5px;   
+}
+
 .border-md {
     border-width: 2px;
 }
 
-
-
-
-.form-control:not(select) {
-    padding: 1.5rem 0.5rem;
-}
-
-select.form-control {
-    height: 52px;
-    padding-left: 0.5rem;
-}
-
-.form-control::placeholder {
-    color: #000 !important;
-    opacity: 1;
-    
+.bi{
+    color: #7F8487;
 }
 
 
 
-.form-control:focus {
-    box-shadow: none;
-}
+
+
+
+
+
+

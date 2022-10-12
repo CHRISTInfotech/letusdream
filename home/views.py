@@ -1,4 +1,7 @@
+import email
 from django.shortcuts import render, redirect
+
+from home.models import ConferenceRegistration
 
 
 # Create your views here.
@@ -107,7 +110,25 @@ def publications(request):
 
 
 def registration_user(request):
-   return render(request, 'registration.html')
+
+    if request.method == "POST":
+        name=request.POST.get('name')
+        email=request.POST.get('email')
+        aboutme=request.POST.get('aboutme')
+        aboutother=request.POST.get('aboutother')
+        orgaff=request.POST.get('orgaff')
+        orgname=request.POST.get('orgname')
+        phone=request.POST.get('phone')
+        confdate=request.POST.getlist('confdate')
+        prevconf=request.POST.getlist('prevconf')
+
+        confreg=ConferenceRegistration.objects.create(name=name,email=email,aboutme=aboutme,aboutother=aboutother,orgaff=orgaff,orgname=orgname,phone=phone,confdate=confdate,prevconf=prevconf)
+        confreg.save()
+        print(confreg)
+        return redirect('registration_user')
+    else :
+        return render(request,'registration.html')
+#    return render(request, 'registration.html')
 
 def calender(request):
     return render(request,'home/calender.html')
