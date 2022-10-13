@@ -32,7 +32,7 @@ Registration
     </ol>
 </nav>
 
-<section class="registration-section">
+<!-- <section class="registration-section">
 
     <div class="registration">
         <h1 class="text-center fw-bold mb-3">Registration</h1>
@@ -90,9 +90,6 @@ Registration
                 <label class="form-label required">DREAMS Program</label>
                 <select class="form-select" id="MenuDreamsProgram" name="dreamsOption">
                     <option>Select Interest</option>
-                    <!-- <option value="participant">Participant </option>
-                    <option value="volunteer">Volunteer </option>
-                    <option value="partner">Partner</option> -->
                 </select>
                 <div class="invalid-feedback">
                     Please select a valid state.
@@ -120,7 +117,7 @@ Registration
     
 
     
-</section>
+</section> -->
 
 <h1 class="h2">Summary</h1>
 
@@ -133,23 +130,30 @@ Registration
                     <table class="table">
                         <thead>
                             <tr>
-                                <th scope="col">First Name</th>
-                                <th scope="col">Last Name</th>
-                                <th scope="col">Phone Number</th>
-                                <th scope="col">Email</th>
-                                <th scope="col">DREAMS Events</th>
-                                <th scope="col">Prefences</th>            
+                                <th scope="col">Name</th>
+                                <th scope="col">Email ID</th>
+                                <th scope="col">About me</th>
+                                <th scope="col">if other</th>
+                                <th scope="col">Organisation Affilation</th>
+                                <th scope="col">Organisation Name</th> 
+                                <th scope="col">Phone No</th>           
+                                <th scope="col">Conference Date</th>
+                                <th scope="col">Previos Conference</th>
+
                             </tr>
                         </thead>
                         {% for item in query_results %}
                         <tbody>
                             <tr>
-                                <th scope="row">{{ item.fname }}</th>
-                                <td>{{ item.lname }}</td>
-                                <td>{{ item.phone }}</td>
+                                <th scope="row">{{ item.name }}</th>
                                 <td>{{ item.email }}</td>
-                                <td>{{ item.dreams }}</td>
-                                <td>{{ item.dreamsOption }}</td>
+                                <td>{{ item.aboutme }}</td>
+                                <td>{{ item.aboutother }}</td>
+                                <td>{{ item.orgaff }}</td>
+                                <td>{{ item.orgname }}</td>
+                                <td>{{ item.phone }}</td>
+                                <td>{{ item.confdate }}</td>
+                                <td>{{ item.prevconf }}</td>
                                 
                             </tr>
                             
@@ -157,7 +161,8 @@ Registration
                         {% endfor %}
                     </table>
                 </div>
-                <a href="#" class="btn btn-block btn-light">View all</a>
+                
+                <a href="{% url 'downloadcsv' %}" class="btn btn-block btn-light">Export as CSV</a>
             </div>
         </div>
     </div>

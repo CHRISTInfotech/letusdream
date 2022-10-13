@@ -1,4 +1,5 @@
-import email
+import csv
+from django.http import HttpResponse
 from django.shortcuts import render, redirect
 
 from home.models import ConferenceRegistration
@@ -132,3 +133,14 @@ def registration_user(request):
 
 def calender(request):
     return render(request,'home/calender.html')
+
+def downloadcsv(request):
+    response = HttpResponse(content_type='text/csv')    
+    response['Content-Disposition'] = 'attachment; filename="file.csv"'  
+    confreg = ConferenceRegistration.objects.all()  
+    writer = csv.writer(response)  
+
+    writer.writerow(['Name','Email ID','About me','if other','Organisation Affilation','Organisation Name','Phone No','Conference Date','Previos Conference'])
+    for i in confreg:
+        writer.writerow([i.name,i.email,i.aboutme,i.aboutother,i.orgaff,i.orgname,i.phone,i.confdate,i.prevconf])
+    return response
