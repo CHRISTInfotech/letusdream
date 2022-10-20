@@ -9,6 +9,10 @@ h1 {
     text-transform: uppercase;
 }
 
+.text-green{
+    color: #0a7b79 !important;
+}
+
 .card {
     position: relative;
     overflow: hidden;
@@ -56,10 +60,7 @@ h1 {
     padding-bottom: 2% !important;
 }
 
-.img1 {
-    width: 100% !important;
-    height: 100% !important;
-}
+
 
 .big-heading {
     color: #0a7b79;
@@ -79,3 +80,10 @@ h5 {
 .cus-row {
     margin-top: 3%;
 }
+
+.feed-area{
+    width: 100% !important;
+    height: 500px  !important;
+    text-align: center !important; 
+    object-fit: cover !important;
+  }

@@ -61,6 +61,8 @@ def jncaB(request):
 def louisianatechuniversity(request):
     return render(request, 'conference/louisiana-tech-university.html')
 
+def donboscocollege(request):
+    return render(request,'conference/donbosco-college-of-arts-and-science.html')
 
 def yclpCourse(request):
     return render(request, 'courses/yclpCourse.html')
@@ -88,6 +90,8 @@ def locations(request, loc):
         return render(request, 'location/india/thiruvallam.html')
     elif loc == 'thiruvananthapuram':
         return render(request, 'location/india/thiruvananthapuram.html')
+    elif loc == 'chennai':
+        return render(request, 'location/india/chennai.html')
     elif loc == 'cologne':
         return render(request, 'location/germany/cologne.html')
     elif loc == 'bastrope':
