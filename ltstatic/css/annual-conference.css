@@ -87,3 +87,50 @@ h5 {
     text-align: center !important; 
     object-fit: cover !important;
   }
+
+
+
+   .font-weight-medium {
+    font-weight: 500;
+  }
+   .text-themecolor {
+    color: #316ce8;
+  }
+  
+  a.link {
+    color: #3e4555;
+  }
+  
+ a.link:hover {
+    color: #316ce8;
+  }
+  
+ .on-hover {
+    -webkit-transition: 0.2s ease-in;
+    -o-transition: 0.2s ease-in;
+    transition: 0.2s ease-in;
+  }
+  
+ .on-hover:hover {
+    -webkit-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
+  
+.date-pos {
+    right: 10px;
+    top: 10px;
+  }
+  
+  .date-pos span {
+    font-size: 30px;
+    line-height: 30px;
+  }
+  .bg-info-gradiant {
+      background: #188ef4;
+      background: -webkit-linear-gradient(legacy-direction(to right), #188ef4 0%, #316ce8 100%);
+      background: -webkit-gradient(linear, left top, right top, from(#188ef4), to(#316ce8));
+      background: -webkit-linear-gradient(left, #188ef4 0%, #316ce8 100%);
+      background: -o-linear-gradient(left, #188ef4 0%, #316ce8 100%);
+      background: linear-gradient(to right, #188ef4 0%, #316ce8 100%);
+  }

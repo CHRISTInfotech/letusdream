@@ -64,6 +64,12 @@ def louisianatechuniversity(request):
 def donboscocollege(request):
     return render(request,'conference/donbosco-college-of-arts-and-science.html')
 
+def loyola(request):
+    return render(request,'conference/loyola.html')  
+
+def stannescollege(request):
+    return render(request,'conference/stannes-college.html')   
+
 def yclpCourse(request):
     return render(request, 'courses/yclpCourse.html')
 

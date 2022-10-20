@@ -1,3 +1,6 @@
+body,p {
+  font-family: 'Montserrat', sans-serif !important;
+}
 .button {
     display: inline-block;
     border-radius: 100px;
@@ -560,9 +563,8 @@ li {
 
 
 .feed-area{
-  width: 100% !important;
-  height: 300px  !important;
-  text-align: center !important; 
+  width: 400px !important;
+  height: 400px  !important;
   object-fit: cover !important;
 }
 
@@ -682,3 +684,18 @@ li {
     left: 0%;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
