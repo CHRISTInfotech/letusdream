@@ -6,7 +6,6 @@ Louisiana Tech University
 {% endblock %}
 
 {% block extraStyles %}
-<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
 <link rel="stylesheet" href="{% static 'css/louisiana-tech-university.css' %}">
 
 {% endblock extraStyles %}
@@ -33,9 +32,6 @@ Louisiana Tech University
 <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.css" rel="stylesheet"/>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 
-
-
-
 {% endblock links %}
 
 
@@ -49,8 +45,11 @@ Louisiana Tech University
     </ol>
 </nav>
 
-<h1 class="mb-4  fw-bold text-center fs-1 text-green text-uppercase heading-h3 mt-5">Louisiana Tech University Conference</h1>
-
+<h1 class="fw-bold text-center fs-1 text-green text-uppercase heading-h3 mt-5">Louisiana Tech University Conference</h1>
+<p class="text-center  fs-4">
+ 27 October 2022, 9:30 AM to 4:30 PM at Louisiana Tech University.
+</p>
+     
 
 
 <!-- <div class="container">
@@ -83,7 +82,7 @@ Louisiana Tech University
        
 
 <div class="container">
-    <p>The LET US DREAM annual community conference was first conducted in 2017 at Louisiana Tech University. The purpose of this conference was to provide a forum for professionals, scholars, researchers, and post-secondary students to share experiences, challenges, and achievements in their respective efforts towards community improvement. The 2017 conference was a great success, featuring prominent keynote speakers, three separate panel discussions–Education, Health and Social Service—and numerous organizational table presentations. Approximately 200 people attended the conference.</p>
+    <p class="pl-4 pr-5">The Let Us Dream community conference was first held in 2017 at Louisiana Tech University. The conference provides a forum for professionals, scholars, researchers, and college and university students to share experiences, challenges, and achievements in their respective efforts towards community improvement.</p>
     <div class="row py-5">
         <div class="col-md-12">
             <div class="main-timeline">
@@ -187,63 +186,81 @@ Louisiana Tech University
     </div>
    </div>
  
+ 
    
-<!-- Previous Conference -->
-<!-- <div class="container">
-    <div class="row">
-        <h1 class="big-heading mt-5 pt-5 text-center">Louisiana Previous Conferences</h1>
-        <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
-            <a href="https://letusdream.org/wp-content/uploads/2021/07/Conference-Brochure_2018-LA-Tech-min.pdf"
-            target="_blank"><img src="/ltstatic/Research/2019.png" class="w-100 shadow-1-strong rounded mb-4" />
-            </a>
-        </div>
-      
-        <div class="col-lg-4 mb-4 mb-lg-0">
-            <a href="https://letusdream.org/wp-content/uploads/2021/07/Conference-Brochure_2019-LA-Tech.pdf"><img src="/ltstatic/Research/2018.png" class="w-100 shadow-1-strong rounded mb-4"/>
-            </a>
-        </div>
-      
-        <div class="col-lg-4 mb-4 mb-lg-0">
-          <img src="#" class="w-100 shadow-1-strong rounded mb-4"/>
-      
-        
-        </div>
-      </div>
-</div> -->
 
-<section style="background-color: #F0F2F5;">
-    <div class="container py-5">
-      <div class="main-timeline-2">
-        <div class="timeline-2 left-2">
-          <div class="card">
-            <img src="/ltstatic/Research/2019.png" class="img-fluid card-img-top feed-area"
-              alt="Responsive image">
-            <div class="card-body p-4">
-              <h4 class="fw-bold mb-4 h-50">Louisiana Tech Conference</h4>
-              <p class="text-muted mb-4"><i class="far fa-clock" aria-hidden="true"></i> 2018</p>
-              
-            </div>
-          </div>
+
+
+<div class="container">
+      <h1 class="text-center mt-5 pt-5">LATEST FEEDS</h1>
+      <div class="row d-flex justify-content-center mt-5 ">
+        <!-- Gallery item -->
+        <div class="col-lg-6 col-md-6 mb-4 text-center">
+            <p class="text-center"><i class="far fa-clock" aria-hidden="true"></i> 2019</p>
+            <img src="/ltstatic/Research/2019.png" alt="" class="img-fluid card-img-top feed-area">
+            <h4 class="fw-bold mb-4 h-50">LUD - Community Conference</h4> 
         </div>
-        <div class="timeline-2 right-2">
-          <div class="card">
-            <img src="/ltstatic/Research/2018.png" class="img-fluid card-img-top feed-area" alt="Responsive image">
-            <div class="card-body p-4">
-              <h4 class="fw-bold mb-4">Louisiana Tech Conference</h4>
-              <p class="text-muted mb-4"><i class="far fa-clock" aria-hidden="true"></i> 2019</p>
+        <div class="col-lg-6 col-md-6 mb-4 text-center">
+            <p class="text-center"><i class="far fa-clock" aria-hidden="true"></i> 2018</p>
+        <img src="/ltstatic/Research/2018.png" alt="" class="img-fluid card-img-top feed-area"></a>
+       
+        <h4 class="fw-bold mb-4">LUD - Triennial International Conference</h4>
+       
           
-            </div>
-          </div>
         </div>
-
+        <!-- End -->
       </div>
-    </div>
-  </section>
+</div>
+
+
 
 
 
 
   <!-- Gallery -->
+
+  <div class="container p-5">
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <h1 class="big-heading m-5 p-5  text-uppercase">Keynote Speakers</h1>
+        </div>
+        <div class="col-lg-4">
+            <div class="d-flex justify-content-center align-items-center p-5 m-2 rounded-lg flex-column">
+                <div class="person-img">
+                    <img src="{% static 'conference/lud/image-1.jpg' %}" alt=""
+                        class="img-fluid rounded-circle shadow p-1">
+                </div>
+                <div class="person-name my-2">
+                    <h4 class="text-info fw-bolder">Dr.Tiffany Bates</h4>
+                </div>
+                <div class="info">
+                    <p class="text-dark text-center">
+                        Conference Planning chair
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="d-flex justify-content-center align-items-center p-5 m-2 rounded-lg flex-column">
+                <div class="person-img">
+                    <img src="{% static 'conference/lud/image-2.jpg' %}" alt=""
+                        class="img-fluid rounded-circle shadow p-1">
+                </div>
+                <div class="person-name my-2">
+                    <h4 class="text-info fw-bolder">Mrs.Ella Nimmers</h4>
+                </div>
+                <div class="info">
+                    <p class="text-dark text-center">
+                        Conference Co-chair
+                    </p>
+                </div>
+            </div>
+        </div>
+     
+
+    </div>
+</div>
+
+
 
     <div class="container p-5">
         <div class="row">
@@ -301,61 +318,7 @@ Louisiana Tech University
         </div>
     </div>
 
-    <div class="container p-5">
-        <div class="row">
-            <div class="col-md-12 text-center">
-                <h1 class="big-heading m-5 p-5  text-uppercase"> Conference Core Committee</h1>
-            </div>
-            <div class="col-lg-4">
-                <div class="d-flex justify-content-center align-items-center p-5 m-2 rounded-lg flex-column">
-                    <div class="person-img">
-                        <img src="{% static 'conference/Tiffany-Bates-min3.jpg'%}" alt=""
-                            class="img-fluid rounded-circle shadow p-1">
-                    </div>
-                    <div class="person-name my-2">
-                        <h4 class="text-info fw-bolder">Dr.Tiffany Bates</h4>
-                    </div>
-                    <div class="info">
-                        <p class="text-dark text-center">
-                            Conference Planning chair
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="d-flex justify-content-center align-items-center p-5 m-2 rounded-lg flex-column">
-                    <div class="person-img">
-                        <img src="{% static 'conference/image0-min3.jpeg'%}" alt=""
-                            class="img-fluid rounded-circle shadow p-1">
-                    </div>
-                    <div class="person-name my-2">
-                        <h4 class="text-info fw-bolder">Mrs.Ella Nimmers</h4>
-                    </div>
-                    <div class="info">
-                        <p class="text-dark text-center">
-                            Conference Co-chair
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="d-flex justify-content-center align-items-center p-5 m-2 rounded-lg flex-column">
-                    <div class="person-img">
-                        <img src="{% static 'conference/CCB-Head-Shot-min3.jpg'%}" alt=""
-                            class="img-fluid rounded-circle shadow p-1">
-                    </div>
-                    <div class="person-name my-2">
-                        <h4 class="text-info fw-bolder">Mrs.Cathi Cox-Boniol</h4>
-                    </div>
-                    <div class="info">
-                        <p class="text-dark text-center">
-                            Conference Co-chair
-                        </p>
-                    </div>
-                </div>
-            </div>
 
-        </div>
-    </div>
 
 
 
