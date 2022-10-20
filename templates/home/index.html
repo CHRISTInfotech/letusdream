@@ -16,47 +16,47 @@ HOME
 
 {% endblock links %}
 
-<!--Google font-->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-
-<!--  Bootstrap CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
-<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css'>
-<!-- Font Awesome -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet" />
-<!-- Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
 {% block content %}
-
-<body onload="slider()">
-  <div class="banner">
-    <div class="slider">
-      <img src="{% static 'home/img1.png' %}" alt="img1" id="slideImg">
+<div class="mt-5 mb-5 row"></div>
+<div id="carouselExampleCaptions" class="carousel slide mt-5" data-bs-ride="false">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+      aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{% static 'home/img1.png' %}" class="d-block w-100" alt="...">
     </div>
-    <div class="overlay">
-      <div class="content">
-        <h1 class="text-white text-h1">LET US DREAM</h1>
-        <h3 class="text-h3">Empowering Community</h3>
-        <a href="{% url 'registration_user'  %}"><button type="button" class="btn-1" id="register">JOIN US</button></a>
-      </div>
+    <div class="carousel-item">
+      <img src="{% static 'home/img2.png' %}" class="d-block w-100" alt="...">
     </div>
-    <div class="content-div fs-5">Register for 2022 Annual Conference <span class="tab">
-        <a href="{% url 'registration_user' %}"><button class="content-button fs-6">Register Now</button></a></span>
+    <div class="carousel-item">
+      <img src="{% static 'home/img3.png' %}" class="d-block w-100" alt="...">
     </div>
   </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
 
-  <div class="container flu-con mt-5 p-5" id="dreamProgram">
-    <div class="row row-index">
-      <div class="w-100 text-center">
+<div class="content-div fs-5">
+  <div class="p-5">
+    Register for 2022 Annual Conferences <a href="{% url 'registration_user' %}"><button
+        class="content-button fs-6">Register Now</button></a>
+  </div>
+</div>
 
-        <h1 class="text-h1-cen">OUR PROGRAM</h1>
-
-      </div>
-    </div>
+<div class="row m-auto mt-5 p-5 " id="dreamProgram">
+  <h1 class="text-center text-uppercase">OUR PROGRAM</h1>
+  <div class="col-10 offset-1">
+    
     <div class="row pt-5 max-auto row-2">
       <div class="col-md-6 col-lg-3 pb-3">
 
@@ -91,7 +91,8 @@ HOME
           <div class="card-body cb-1">
             <h5 class="card-title fw-bold text-h3 fs-4">DREAMS Pro Club</h5>
             <p class="card-text  text-h1-cen fw-bold fs-6  card-t1 ">DREAMS Pro Club is a
-              support group for the personal and professional development of young professionals. Small groups of 10-12
+              support group for the personal and professional development of young professionals. Small groups of
+              10-12
               working professionals meet once every month to discuss and implement.</p>
           </div>
           <div class="card-footer text-center bg-white border-0 card-f1">
@@ -138,7 +139,8 @@ HOME
             <h5 class="card-title text-h3 fs-4 fw-bold">Community Conferences</h5>
             <p class="card-text text-h1-cen fs-6 fw-bold  card-t1">Started in 2017, Let Us
               Dream Conference provides a platform for researchers, practitioners and volunteers to discuss various
-              possibilities of promoting community volunteerism among students, sharing their experiences and challenges
+              possibilities of promoting community volunteerism among students, sharing their experiences and
+              challenges
             </p>
           </div>
           <div class="card-footer text-center bg-white border-0 card-f1">
@@ -154,222 +156,162 @@ HOME
 
     </div>
   </div>
-  </div>
+</div>
 
 
-  <div class="container-fluid cf-2 text-h3" id="conference">
+<div class="container-fluid cf-2 text-h3" id="conference">
 
 
-    <h1 class="text-center text-uppercase">Upcoming Events</h1>
+  <h1 class="text-center text-uppercase">Upcoming Events</h1>
 
-    <div class="blog-home2">
-      <div class="container">
-        <!-- Row  -->
-        <div class="row justify-content-center">
-          <!-- Column -->
-          <div class="col-md-8 text-center">
-            <h5 class="font-weight-medium mt-3 text-h3">You can relay on our amazing features list and also our customer services will be great experience for you without doubt</h5>
-          </div>
-          <!-- Column -->
-          <!-- Column -->
+  <div class="blog-home2">
+    <div class="container">
+      <!-- Row  -->
+      <div class="row justify-content-center">
+        <!-- Column -->
+        <div class="col-md-8 text-center">
+          <h5 class="font-weight-medium mt-3 text-h3">You can relay on our amazing features list and also our customer
+            services will be great experience for you without doubt</h5>
         </div>
-        <div class="row mt-4">
-          <!-- Column -->
-          <div class="col-md-4 on-hover">
-            <div class="card border-0 mb-4">
-              <a href="#"><img class="img-fluid card-img-top feed-area" src="/ltstatic/home/event1.webp" alt="wrappixel kit"></a>
-              <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">Oct<span class="d-block">23</span></div>
-              <h5 class="font-weight-medium mt-3"><a href="#" class="text-decoration-none link">You should have eagle’s eye on new trends and techonogies</a></h5>
-             
-              <a href="#" class="text-decoration-none linking text-themecolor mt-2">Learn More</a>
-            </div>
+        <!-- Column -->
+        <!-- Column -->
+      </div>
+      <div class="row mt-4">
+        <!-- Column -->
+        <div class="col-md-4 on-hover">
+          <div class="card border-0 ">
+            <a href="#"><img class="img-fluid card-img-top feed-area" src="/ltstatic/home/event1.webp"
+                alt="wrappixel kit"></a>
+            <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
+              Oct<span class="d-block">23</span></div>
+            <h5 class="font-weight-medium mt-3"><a href="#" class="text-decoration-none link">You should have eagle’s
+                eye on new trends and techonogies</a></h5>
+
+            <a href="#" class="text-decoration-none linking text-themecolor mt-2">Learn More</a>
           </div>
-          <!-- Column -->
-          <div class="col-md-4 on-hover">
-            <div class="card border-0 mb-4">
-              <a href="#"><img class="img-fluid card-img-top feed-area" src="/ltstatic/home/event2.webp" alt="wrappixel kit"></a>
-              <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">Oct<span class="d-block">24</span></div>
-              <h5 class="font-weight-medium mt-3"><a href="#" class="text-decoration-none link">New Seminar on Newest Food Recipe from World’s Best</a></h5>
-             
-              <a href="#" class="text-decoration-none linking text-themecolor mt-2">Learn More</a>
-            </div>
+        </div>
+        <!-- Column -->
+        <div class="col-md-4 on-hover">
+          <div class="card border-0 ">
+            <a href="#"><img class="img-fluid card-img-top feed-area" src="/ltstatic/home/event2.webp"
+                alt="wrappixel kit"></a>
+            <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
+              Oct<span class="d-block">24</span></div>
+            <h5 class="font-weight-medium mt-3"><a href="#" class="text-decoration-none link">New Seminar on Newest
+                Food Recipe from World’s Best</a></h5>
+
+            <a href="#" class="text-decoration-none linking text-themecolor mt-2">Learn More</a>
           </div>
-          <!-- Column -->
-          <div class="col-md-4 on-hover">
-            <div class="card border-0 mb-4">
-              <a href="#"><img class="img-fluid card-img-top feed-area" src="/ltstatic/home/event3.webp" alt="wrappixel kit"></a>
-              <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">Oct<span class="d-block">25</span></div>
-              <h5 class="font-weight-medium mt-3"><a href="#" class="text-decoration-none link">Learn from small things to create something bigger.</a></h5>
-              
-              <a href="#" class="text-decoration-none linking text-themecolor mt-2">Learn More</a>
-            </div>
+        </div>
+        <!-- Column -->
+        <div class="col-md-4 on-hover">
+          <div class="card border-0 ">
+            <a href="#"><img class="img-fluid card-img-top feed-area" src="/ltstatic/home/event3.webp"
+                alt="wrappixel kit"></a>
+            <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
+              Oct<span class="d-block">25</span></div>
+            <h5 class="font-weight-medium mt-3"><a href="#" class="text-decoration-none link">Learn from small things
+                to create something bigger.</a></h5>
+
+            <a href="#" class="text-decoration-none linking text-themecolor mt-2">Learn More</a>
           </div>
         </div>
       </div>
     </div>
-
-
-
   </div>
+</div>
 
-  </div>
+{% include 'partials/_testimonials.html' %}
+<br><br><br>
+{% include 'partials/_globalPresence.html' %}
 
-  {% include 'partials/_testimonials.html' %}
-  <br><br><br>
-  {% include 'partials/_globalPresence.html' %}
+{% include 'partials/_countDetails.html' %}
 
-  {% include 'partials/_countDetails.html' %}
+<!-- instagram feed -->
 
-  <!-- instagram feed -->
+<div class="container-fluid bg-green">
+  <div class="px-lg-5 mb-5">
+    <h1 class="text-center mt-5 pt-5">LATEST FEEDS</h1>
+    <div class="row d-flex justify-content-center mt-5 ">
+      <!-- Gallery item -->
+      <div class="col-lg-2 col-md-6 mb-4">
+        <div class="bg-white rounded shadow-sm"><a href="https://www.instagram.com/p/CdECrwLKVUq/" target="_blank"><img
+              src="/ltstatic/feed/1.jpg" alt="" class="img-fluid card-img-top feed-area">
+            <div class="p-4">
+              <p class="fs-6 text-center"><a href="https://www.instagram.com/p/CdECrwLKVUq/"
+                  class="text-black text-decoration-none"> Bangalore</a></p>
 
-  <div class="container-fluid bg-green">
-    <div class="container-fluid">
-      <div class="px-lg-5">
-
-
-        <h1 class="text-center mt-5 pt-5">LATEST FEEDS</h1>
-        <div class="row d-flex justify-content-center mt-5">
-          <!-- Gallery item -->
-          <div class="col-lg-2 col-md-6 mb-4">
-            <div class="bg-white rounded shadow-sm"><a href="https://www.instagram.com/p/CdECrwLKVUq/" target="_blank"><img
-                  src="/ltstatic/feed/1.jpg" alt="" class="img-fluid card-img-top feed-area">
-                <div class="p-4">
-                  <p class="fs-6 text-center"><a href="https://www.instagram.com/p/CdECrwLKVUq/"
-                      class="text-black text-decoration-none"> Bangalore</a></p>
-             
-                </div>
             </div>
-          </div>
-          <!-- End -->
+        </div>
+      </div>
+      <!-- End -->
 
-          <!-- Gallery item -->
-          <div class="col-lg-2 col-md-6 mb-4">
-            <div class="bg-white rounded shadow-sm"><a href="https://www.instagram.com/p/CXJpkFfBB-7/" target="_blank"><img
-                  src="/ltstatic/feed/2.jpg" alt="" class="img-fluid card-img-top feed-area img-fluid"></a>
-              <div class="p-4">
-                <p class="fs-6 text-center"><a href="https://www.instagram.com/p/CXJpkFfBB-7/"
-                    class="text-black text-decoration-none"> Chaganacherry</a></p>
-                
-              </div>
-            </div>
-          </div>
-          <!-- End -->
+      <!-- Gallery item -->
+      <div class="col-lg-2 col-md-6 mb-4">
+        <div class="bg-white rounded shadow-sm"><a href="https://www.instagram.com/p/CXJpkFfBB-7/" target="_blank"><img
+              src="/ltstatic/feed/2.jpg" alt="" class="img-fluid card-img-top feed-area img-fluid"></a>
+          <div class="p-4">
+            <p class="fs-6 text-center"><a href="https://www.instagram.com/p/CXJpkFfBB-7/"
+                class="text-black text-decoration-none"> Chaganacherry</a></p>
 
-          <!-- Gallery item -->
-          <div class="col-lg-2 col-md-6 mb-4">
-            <div class="bg-white rounded shadow-sm"><a href="https://www.instagram.com/p/CWvKqoSJBHm/" target="_blank"><img
-                  src="/ltstatic/feed/3.jpg" alt="" class="img-fluid card-img-top feed-area"></a>
-              <div class="p-4">
-                <p class="fs-6 text-center"><a href="https://www.instagram.com/p/CWvKqoSJBHm/"
-                    class="text-black text-decoration-none">Thiruvananthapuram</a></p>
-               
-              </div>
-            </div>
-          </div>
-          <!-- End -->
-
-          <!-- Gallery item -->
-          <div class="col-lg-2 col-md-6 mb-4">
-            <div class="bg-white rounded shadow-sm"><a href="https://www.instagram.com/p/CU71jpADkQA/" target="_blank"><img
-                  src="/ltstatic/feed/4.jpg" alt="" class="img-fluid card-img-top feed-area"></a>
-              <div class="p-4">
-                <p class="fs-6 text-center"><a href="https://www.instagram.com/p/CU71jpADkQA/"
-                    class="text-black text-decoration-none"> Bangalore</a></p>
-              
-              </div>
-            </div>
-          </div>
-          <!-- End -->
-
-          <!-- Gallery item -->
-          <div class="col-lg-2 col-md-6 mb-4">
-            <div class="bg-white rounded shadow-sm"><a
-                href="https://www.instagram.com/accounts/login/?next=%2Fp%2FCUyr2Dhpw43%2F" target="_blank"><img
-                  src="/ltstatic/feed/5.jpg" alt="" class="img-fluid card-img-top feed-area"></a>
-              <div class="p-4">
-                <p class="fs-6 text-center"><a
-                    href="https://www.instagram.com/accounts/login/?next=%2Fp%2FCUyr2Dhpw43%2F"
-                    class="text-black text-decoration-none"> Bangalore</a></p>
-                
-              </div>
-            </div>
-            <!-- End -->
-
-          </div>
-
-          <!-- Newsletter -->
-
-
-          <div class="row d-flex justify-content-center">
-            <h1 class="text-center mt-5 ">NEWSLETTERS</h1>
-            <div class="col-lg-4 pt-3 pb-5 mb-5">
-              <a href="{% url 'newsletter' %}"><img src="/ltstatic/feed/Newletter-Thumbnail-1-scaled.jpg" alt=""
-                  class="img-fluid"></a>
-            </div>
           </div>
         </div>
       </div>
+      <!-- End -->
+
+      <!-- Gallery item -->
+      <div class="col-lg-2 col-md-6 mb-4">
+        <div class="bg-white rounded shadow-sm"><a href="https://www.instagram.com/p/CWvKqoSJBHm/" target="_blank"><img
+              src="/ltstatic/feed/3.jpg" alt="" class="img-fluid card-img-top feed-area"></a>
+          <div class="p-4">
+            <p class="fs-6 text-center"><a href="https://www.instagram.com/p/CWvKqoSJBHm/"
+                class="text-black text-decoration-none">Thiruvananthapuram</a></p>
+
+          </div>
+        </div>
+      </div>
+      <!-- End -->
+
+      <!-- Gallery item -->
+      <div class="col-lg-2 col-md-6 mb-4">
+        <div class="bg-white rounded shadow-sm"><a href="https://www.instagram.com/p/CU71jpADkQA/" target="_blank"><img
+              src="/ltstatic/feed/4.jpg" alt="" class="img-fluid card-img-top feed-area"></a>
+          <div class="p-4">
+            <p class="fs-6 text-center"><a href="https://www.instagram.com/p/CU71jpADkQA/"
+                class="text-black text-decoration-none"> Bangalore</a></p>
+
+          </div>
+        </div>
+      </div>
+      <!-- End -->
+
+      <!-- Gallery item -->
+      <div class="col-lg-2 col-md-6 mb-4">
+        <div class="bg-white rounded shadow-sm"><a
+            href="https://www.instagram.com/accounts/login/?next=%2Fp%2FCUyr2Dhpw43%2F" target="_blank"><img
+              src="/ltstatic/feed/5.jpg" alt="" class="img-fluid card-img-top feed-area"></a>
+          <div class="p-4">
+            <p class="fs-6 text-center"><a href="https://www.instagram.com/accounts/login/?next=%2Fp%2FCUyr2Dhpw43%2F"
+                class="text-black text-decoration-none"> Bangalore</a></p>
+
+          </div>
+        </div>
+        <!-- End -->
+
+      </div>
+
     </div>
-
-    <!-- Testing -->
-
-   
-    
-
-    <!-- intsgram feed script -->
-    <script src='https://widgets.sociablekit.com/instagram-feed/widget.js' async defer></script>
-    <!-- script closing -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script>
-      var slideImg = document.getElementById("slideImg");
-      var image = new Array(
-        "{% static 'home/img1.png' %}",
-        "{% static 'home/img2.png' %}",
-        "{% static 'home/img4.png' %}"
-      );
-      var len = image.length;
-      var i = 0;
-      function slider() {
-        if (i > len - 1) {
-          i = 0;
-        }
-        slideImg.src = image[i];
-        i++;
-        setTimeout('slider()', 3000)
-      }
+  </div>
+  <div class="row m-auto mt-5"></div>
+</div>
 
 
-
-      $(document).ready(function () {
-        $('.counter-value').each(function () {
-          $(this).prop('Counter', 0).animate({
-            Counter: $(this).text()
-          }, {
-            duration: 9999,
-            easing: 'swing',
-            step: function (now) {
-              $(this).text(Math.ceil(now));
-            }
-          });
-        });
-      });
-    </script>
-    <!-- MDB -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.4.0/mdb.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-
-    <script>
-    // Index Page Passing string 
-
-      /*     const element = document.getElementById('register')
-      
-      element.addEventListener("click", () => {
-      sessionStorage.setItem("event",none);
-      }); */
-    </script>
-</body>
-
-</html>
+<div class="row m-auto d-flex justify-content-center mt-5">
+  <h1 class="text-center mt-5 mb-5">NEWSLETTERS</h1>
+  <div class="col-lg-4 pt-3 pb-5 mb-5">
+    <a href="{% url 'newsletter' %}"><img src="/ltstatic/feed/Newletter-Thumbnail-1-scaled.jpg" alt=""
+        class="img-fluid"></a>
+  </div>
+</div>
 
 {% endblock content %}
