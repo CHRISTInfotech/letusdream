@@ -1,7 +1,4 @@
-
-
-  
-  .button {
+.button {
     display: inline-block;
     border-radius: 100px;
     background-color: #d3f2e9;
@@ -562,7 +559,12 @@ li {
 }
 
 
-
+.feed-area{
+  width: 100% !important;
+  height: 300px  !important;
+  text-align: center !important; 
+  object-fit: cover !important;
+}
 
 
 /* The actual timeline (the vertical ruler) */
