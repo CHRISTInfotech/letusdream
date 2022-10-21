@@ -70,6 +70,18 @@ def loyola(request):
 def stannescollege(request):
     return render(request,'conference/stannes-college.html')   
 
+def universityofLouisianaMonroe(request):
+    return render(request,'conference/universityofLouisianaMonroe.html') 
+
+def allsaintssollege(request):
+    return render(request,'conference/allsaintssollege.html')
+
+def louisianastateuniversityshreveport(request):
+    return render(request,'conference/louisianastateuniversityshreveport.html')  
+
+def gramblingstateuniversitylouisiana(request):
+    return render(request,'conference/grambling-state-university-louisiana.html')  
+    
 def yclpCourse(request):
     return render(request, 'courses/yclpCourse.html')
 
