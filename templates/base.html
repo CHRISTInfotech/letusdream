@@ -10,7 +10,11 @@
     <!-- favicon.icon -->
     <link rel="shortcut icon" href="{% static 'logo/favicon.png' %}" type="image/x-icon">
     <title>LET US DREAM | {% block title %}{% endblock title %}</title>
-    <!-- Bootstrap CSS -->
+
+    <!--Google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 
     {% block extraStyles %}
 
@@ -19,15 +23,17 @@
     {% block links %}
 
     {% endblock links %}
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link href="{% static  'css/style.css' %}" rel="stylesheet" />
     <link href="{% static  'css/header.css' %}" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
-</head>
-<style>
 
-</style>
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+</head>
 
 <body ondragstart="return false">
     <header class="menu-wrapper">
@@ -44,109 +50,121 @@
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class=" navbar-nav ml-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="{% url 'main' %}">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" data-bs-auto-close="outside"
-                            href="#">About Us</a>
-                        <ul class="dropdown-menu shadow">
-                            <li> <a href="{% url 'about-us' %}" class="dropdown-item">About Us</a></li>
-                            <li> <a href="{% url 'media' %}" class="dropdown-item">Media</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" data-bs-auto-close="outside"
-                            href="#">DREAMS</a>
-                        <ul class="dropdown-menu shadow">
+                    <ul class=" navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="{% url 'main' %}">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                                href="#">About Us</a>
+                            <ul class="dropdown-menu shadow">
+                                <li> <a href="{% url 'about-us' %}" class="dropdown-item">About Us</a></li>
+                                <li> <a href="{% url 'media' %}" class="dropdown-item">Media</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                                href="#">DREAMS</a>
+                            <ul class="dropdown-menu shadow">
 
-                            <li> <a href="{% url 'dreams' 'program' %}" class="dropdown-item">DREAMS Program</a></li>
-                            <li> <a href="{% url 'dreams' 'band' %}" class="dropdown-item">DREAMS Band</a></li>
-                            <li> <a href="{% url 'dreams' 'proclub' %}" class="dropdown-item">DREAMS Pro Club</a></li>
-                            <li> <a href="{% url 'dreams' 'leadershipnetwork' %}" class="dropdown-item">Leadership
-                                    NetWork (GYLN)</a></li>
+                                <li> <a href="{% url 'dreams' 'program' %}" class="dropdown-item">DREAMS Program</a>
+                                </li>
+                                <li> <a href="{% url 'dreams' 'band' %}" class="dropdown-item">DREAMS Band</a></li>
+                                <li> <a href="{% url 'dreams' 'proclub' %}" class="dropdown-item">DREAMS Pro Club</a>
+                                </li>
+                                <li> <a href="{% url 'dreams' 'leadershipnetwork' %}" class="dropdown-item">Leadership
+                                        NetWork (GYLN)</a></li>
 
-                        </ul>
-                    </li>
+                            </ul>
+                        </li>
 
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" data-bs-auto-close="outside"
-                            href="#">Conferences</a>
-                        <ul class="dropdown-menu shadow">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                                href="#">Conferences</a>
+                            <ul class="dropdown-menu shadow">
 
-                            <li> <a href="{% url 'about-conference' %}" class="dropdown-item">About Conference</a></li>
-                            <li> <a href="{% url 'annual-conference' %}" class="dropdown-item">Annual Conference</a>
-                            </li>
-                            <li> <a href="{% url 'trriennial-conference' %}" class="dropdown-item">Triennial
-                                    Conference</a></li>
+                                <li> <a href="{% url 'about-conference' %}" class="dropdown-item">About Conference</a>
+                                </li>
+                                <li> <a href="{% url 'annual-conference' %}" class="dropdown-item">Annual Conference</a>
+                                </li>
+                                <li> <a href="{% url 'trriennial-conference' %}" class="dropdown-item">Triennial
+                                        Conference</a></li>
 
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" data-bs-auto-close="outside"
-                            href="#">Courses</a>
-                        <ul class="dropdown-menu shadow">
-                            <li> <a href="{% url 'yclp-course' %}" class="dropdown-item">YCLP Course</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" data-bs-auto-close="outside"
-                            href="#">Research</a>
-                        <ul class="dropdown-menu shadow">
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                                href="#">Courses</a>
+                            <ul class="dropdown-menu shadow">
+                                <li> <a href="{% url 'yclp-course' %}" class="dropdown-item">YCLP Course</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                                href="#">Research</a>
+                            <ul class="dropdown-menu shadow">
 
-                            <li> <a href="{% url 'research' %}" class="dropdown-item">Research</a></li>
-                            <li> <a href="{% url 'publications' %}" class="dropdown-item">Publications</a></li>
+                                <li> <a href="{% url 'research' %}" class="dropdown-item">Research</a></li>
+                                <li> <a href="{% url 'publications' %}" class="dropdown-item">Publications</a></li>
 
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" data-bs-auto-close="outside"
-                            href="#">Locations</a>
-                        <ul class="dropdown-menu shadow">
-                            <li class="dropstart">
-                                <a href="" class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown">India</a>
-                                <ul class="dropdown-menu shadow">
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                                href="#">Locations</a>
+                            <ul class="dropdown-menu shadow">
+                                <li class="dropstart">
+                                    <a href="" class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown">India</a>
+                                    <ul class="dropdown-menu shadow">
 
-                                    <li> <a href="{% url 'locations' 'bangalore' %}" class="dropdown-item">Bangalore</a>
-                                    </li>
-                                    <li> <a href="{% url 'locations' 'changancherry' %}"
-                                            class="dropdown-item">Changancherry</a></li>
-                                    <li> <a href="{% url 'locations' 'mannanam' %}" class="dropdown-item">Mannanam</a>
-                                    </li>
-                                    <li> <a href="{% url 'locations' 'thiruvananthapuram' %}"
-                                            class="dropdown-item">Thiruvananthapuram</a></li>
-                                    <li> <a href="{% url 'locations' 'thiruvallam' %}"
-                                            class="dropdown-item">Thiruvallam</a></li>
+                                        <li> <a href="{% url 'locations' 'bangalore' %}"
+                                                class="dropdown-item">Bangalore</a>
+                                        </li>
+                                        <li> <a href="{% url 'locations' 'changancherry' %}"
+                                                class="dropdown-item">Changancherry</a></li>
+                                        <li> <a href="{% url 'locations' 'mannanam' %}"
+                                                class="dropdown-item">Mannanam</a>
+                                        </li>
+                                        <li> <a href="{% url 'locations' 'thiruvananthapuram' %}"
+                                                class="dropdown-item">Thiruvananthapuram</a></li>
+                                        <li> <a href="{% url 'locations' 'thiruvallam' %}"
+                                                class="dropdown-item">Thiruvallam</a></li>
+                                        <li> <a href="{% url 'locations' 'chennai' %}"
+                                                class="dropdown-item">Chennai</a></li>
 
-                                </ul>
-                            </li>
-                            <li class="dropstart">
-                                <a href="" class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown">USA</a>
-                                <ul class="dropdown-menu shadow">
+                                    </ul>
+                                </li>
+                                <li class="dropstart">
+                                    <a href="" class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown">USA</a>
+                                    <ul class="dropdown-menu shadow">
 
-                                    <li> <a href="{% url 'locations' 'bastrope' %}" class="dropdown-item">Bastrope</a>
-                                    </li>
-                                    <li> <a href="{% url 'locations' 'dalias' %}" class="dropdown-item">Dallas</a></li>
-                                    <li> <a href="{% url 'locations' 'lagrande' %}" class="dropdown-item">LaGrande</a>
-                                    </li>
-                                    <li> <a href="{% url 'locations' 'mcallen' %}" class="dropdown-item">McAllen</a>
-                                    </li>
-                                    <li> <a href="{% url 'locations' 'monroe' %}" class="dropdown-item">Monroe</a></li>
+                                        <li> <a href="{% url 'locations' 'bastrope' %}"
+                                                class="dropdown-item">Bastrope</a>
+                                        </li>
+                                        <li> <a href="{% url 'locations' 'dalias' %}" class="dropdown-item">Dallas</a>
+                                        </li>
+                                        <li> <a href="{% url 'locations' 'lagrande' %}"
+                                                class="dropdown-item">LaGrande</a>
+                                        </li>
+                                        <li> <a href="{% url 'locations' 'mcallen' %}" class="dropdown-item">McAllen</a>
+                                        </li>
+                                        <li> <a href="{% url 'locations' 'monroe' %}" class="dropdown-item">Monroe</a>
+                                        </li>
 
-                                </ul>
-                            </li>
-                            <li class="dropstart">
-                                <a href="" class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown">Germany</a>
-                                <ul class="dropdown-menu shadow">
+                                    </ul>
+                                </li>
+                                <li class="dropstart">
+                                    <a href="" class="dropdown-item dropdown-toggle"
+                                        data-bs-toggle="dropdown">Germany</a>
+                                    <ul class="dropdown-menu shadow">
 
-                                    <li> <a href="{% url 'locations' 'cologne' %}" class="dropdown-item">Cologne</a>
-                                    </li>
+                                        <li> <a href="{% url 'locations' 'cologne' %}" class="dropdown-item">Cologne</a>
+                                        </li>
 
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
 
                     </ul>
                 </div>
@@ -168,10 +186,15 @@
             <div class="row">
                 <div class="col-md-12 col-xm-12 col-lg-12">
                     <ul class="social-icons">
-                        <li><a href=""><i class="fab fa-instagram"></i></a></li>
-                        <li><a href=""><i class="fab fa-youtube"></i></a></li>
-                        <li><a href=""><i class="fab fa-facebook"></i></a></li>
-                        <li><a href=""><i class="fab fa-linkedin"></i></a></li>
+                        <li><a href="https://www.instagram.com/letus.dream/"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="https://www.youtube.com/channel/UCNw5z9O3LZ7OJlySigI9dlw/featured"><i
+                                    class="fab fa-youtube"></i></a></li>
+                        <li><a href="https://www.facebook.com/people/Let-Us-Dream/100083580219431/"><i
+                                    class="fab fa-facebook"></i></a></li>
+                        <li><a href="https://www.linkedin.com/company/let-us-dream/"><i class="fab fa-linkedin"></i></a>
+                        </li>
+                        <li><a href="https://twitter.com/LetUsDream5?s=08"><i class="fab fa-twitter"></i></a>
+                        </li>
                     </ul>
                 </div>
 
@@ -193,7 +216,6 @@
     </footer>
 
 </body>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script>
     $(window).on('scroll', function () {
 
@@ -206,8 +228,15 @@
     })
 
 </script>
-<script src="{% static 'js/main.js'%}"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- intsgram feed script -->
+<script src='https://widgets.sociablekit.com/instagram-feed/widget.js' async defer></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
+    integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
+    crossorigin="anonymous"></script>
 
 </html>

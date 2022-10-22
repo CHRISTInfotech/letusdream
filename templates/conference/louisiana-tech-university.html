@@ -6,7 +6,6 @@ Louisiana Tech University
 {% endblock %}
 
 {% block extraStyles %}
-<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
 <link rel="stylesheet" href="{% static 'css/louisiana-tech-university.css' %}">
 
 {% endblock extraStyles %}
@@ -21,18 +20,17 @@ Louisiana Tech University
 <!--  Bootstrap CSS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+
 <!-- Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
 
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
-<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 
 <!-- MDB -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.css" rel="stylesheet"/>
-
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 
 {% endblock links %}
 
@@ -47,21 +45,14 @@ Louisiana Tech University
     </ol>
 </nav>
 
-<h1 class="mb-4  fw-bold text-center fs-1 text-green text-uppercase heading-h3 mt-5">Louisiana Tech University Conference</h1>
-<div class="container conference-date">
-    <div class="row justify-content-center align-items-center">
-        <div class="col-md-12">
-            <p class="h1 text-center fw-bold">Conference Dates</p>
-            <h3 class=" text-center text-black p-3">
-                21 October 2021, 10 AM to 4 PM <br> at Louisiana Tech’s University Hall.
-            </h3>
+<h1 class="fw-bold text-center fs-1 text-green text-uppercase heading-h3 mt-5">Louisiana Tech University Conference</h1>
+<p class="text-center  fs-4">
+ 27 October 2022, 9:30 AM to 4:30 PM at Louisiana Tech University.
+</p>
      
-        </div>
-    </div>
-</div>
 
 
-<div class="container">
+<!-- <div class="container">
     <div class="row align-items-center d-flex">
         <div class="col-lg-4 p-4 d-flex flex-column">
 
@@ -78,141 +69,103 @@ Louisiana Tech University
             <a href="https://community.latech.edu/let-us-dream/unsung-hero/" class="text-center"><button type="button" class="button"><span>Nominate an Unsung Hero</span></button></a>
         </div>
     </div>
+</div> -->
+
+
+<nav class="social">
+          <ul>
+              <li><a href="https://community.latech.edu/let-us-dream/" class="text-decoration-none fs-6 text-white" target="_blank">Program Conference Details <i class="bi bi-people-fill"></i></a></li>
+              <li><a href="{% url 'registration_user' %}"  class="text-decoration-none fs-6 text-white">Register <i class="bi bi-pencil-square"></i></a></li>
+              <li><a href="https://community.latech.edu/let-us-dream/unsung-hero/" target="_blank" class="text-decoration-none fs-6 text-white">Nominate an Unsung Hero<i class="bi bi-person-fill"></i></a></li>
+          </ul>
+</nav>
+       
+
+<div class="container">
+    <p class="pl-4 pr-5">The Let Us Dream community conference was first held in 2017 at Louisiana Tech University. The conference provides a forum for professionals, scholars, researchers, and college and university students to share experiences, challenges, and achievements in their respective efforts towards community improvement.</p>
+    <div class="row py-5">
+        <div class="col-md-12">
+            <div class="main-timeline">
+                <a href="#" class="timeline">
+                    <div class="timeline-icon"><i class="fa-solid fa-globe"></i></div>
+                    <div class="timeline-content">
+                        <h3 class="title">HISTORY</h3>
+                        <p class="description">
+                            Volunteers from the local community including business owners involved in voluntary community developmental projects, non-profit organizations, philanthropists, social workers, educators or educational administrators, retired personnel, students, or anyone interested in contributing to their community development can be a part of the conference and engage in fruitful dialogues with visionaries through the conference.
+                        </p>
+                    </div>
+                </a>
+                <a href="#" class="timeline">
+                    <div class="timeline-icon"><i class="fa-regular fa-lightbulb"></i></div>
+                    <div class="timeline-content">
+                        <h3 class="title pl-5">VISION</h3>
+                        <p class="description pl-5 ">
+                           Our Vision is to Empowered local communities for sustainable impact, improvement, Global Harmony (and Holistic Success).
+                        </p>
+                    </div>
+                </a>
+                <a href="#" class="timeline">
+                    <div class="timeline-icon"><i class="fa-solid fa-rocket"></i></div>
+                    <div class="timeline-content">
+                        <h3 class="title">GOAL</h3>
+                        <p class="description">
+                            The Let Us Dream Conference was established in 2017 for the purpose of providing a forum for sharing experiences with successes and challenges in community improvement organizations and efforts. Broad conference goals are to  
+                            <ul>
+                                <li>Improve networking and collaboration among all those interested in community improvement organizations and programs.</li>
+                                <li>Promote volunteerism and empower all those involved in community improvement organizations and initiatives, including employees, volunteers, post-secondary students, researchers, and practitioners.</li>
+                                <li>Create a professional learning organization dedicated to improving local communities and characterized by a culture of shared researcher and practitioner knowledge, skills, theories, and best practices.</li>
+                            </ul>
+                        </p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
 </div>
 
 
-<section id="testimonial-main">
-    <div class="container">
-        <h1 class="mb-4  fw-bold text-center fs-1 text-green text-uppercase heading-h3 mt-5 pt-5">Our History, Vision, and Goal</h1>
-        <p>The LET US DREAM annual community conference was first conducted in 2017 at Louisiana Tech University. The purpose of this conference was to provide a forum for professionals, scholars, researchers, and post-secondary students to share experiences, challenges, and achievements in their respective efforts towards community improvement. The 2017 conference was a great success, featuring prominent keynote speakers, three separate panel discussions–Education, Health and Social Service—and numerous organizational table presentations. Approximately 200 people attended the conference.</p>
-        <div class="testimonials">
-            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <div class="single-item">
-                      <div class="row">
-                          <div class="col-md-5">
-                            <div class="row text-center">
-                                <div class="bio">
-                                    <h2>HISTORY</h2>
-                                </div>
-                            </div>
-                            <div class="row d-flex justify-content-center">
-                                <div class="img-area h-100 w-100">
-                                    <img src="{% static 'conference/333-3339997_mission-logo-mision-png.png' %}" alt="">
-                                  </div>
-                            </div>
-                          
-                          </div>
-                          <div class="col-md-6">
-                              <div class="content">
-                                  <p class="mb-5"><span><i class="fa fa-quote-left"></i></span>Volunteers from the local community including business owners involved in voluntary community developmental projects, non-profit organizations, philanthropists, social workers, educators or educational administrators, retired personnel, students, or anyone interested in contributing to their community development can be a part of the conference and engage in fruitful dialogues with visionaries through the conference.</p>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-                </div>
-                <div class="carousel-item">
-                  <div class="single-item">
-                      <div class="row">
-                          <div class="col-md-5">
-                            <div class="row text-center">
-                                <div class="bio">
-                                    <h2>VISION</h2>    
-                                </div>
-                            </div>
-                            <div class="row d-flex justify-content-center ">
-                                <div class="img-area h-100 w-100">
-                                    <img src="{% static 'conference/3fc6e9c530ea4dd0837f03d842136973.jpg' %}" alt="">
-                                  </div>
-                            </div>
-                          </div>
-                          <div class="col-md-6">
-                              <div class="content">
-                                  <p class="mb-5"><span><i class="fa fa-quote-left"></i></span>Empowered local communities for sustainable impact and improvement.</p>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-                </div>
-                <div class="carousel-item">
-                  <div class="single-item">
-                      <div class="row">
-                          <div class="col-md-5">
-                            <div class="row text-center">
-                                <div class="bio">
-                                    <h2>GOAL</h2>     
-                                </div>
-                            </div>
-                            <div class="row d-flex justify-content-center ">
-                                <div class="img-area h-100 w-100">
-                                    <img src="{% static 'conference/201148c6005b1c135e7da52226f2e7de.jpg' %}" alt="" class="img-fluid">
-                                  </div>
-                            </div>
-                            
-                          </div>
-                          <div class="col-md-6">
-                              <div class="content">
-                                  <p class="mb-5"><span><i class="fa fa-quote-left"></i>
-                                </span>The Let Us Dream Conference was established in 2017 for the purpose of providing a forum for sharing experiences with successes and challenges in community improvement organizations and efforts. Broad conference goals are to  Improve networking and collaboration among all those interested in community improvement organizations and programs.
-                               
-                              </p>
-                                
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-                </div>
-              </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" ></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-              </button>
-            </div>
-            
-        </div>
-    </div>
-</section>
 
-<section class="home ">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col">
-                <div id="carousel" class="carousel slide" data-ride="carousel">
-                    <div class="carousel-controls">
-                      <ol class="carousel-indicators">
-                        <li data-target="#carousel" data-slide-to="0" class="active" style="background-image:url('ltstatic/conference/DREAMS-BAND-7-1-min-scaled.jpg')"></li>
-                        <li data-target="#carousel" data-slide-to="1" style="background-image:url('ltstatic/conference/DREAMS-Site-Banner-2-1-scaled.jpg')"></li>
-                        <li data-target="#carousel" data-slide-to="2" style="background-image:url('ltstatic/conference/DREAMS-BAND-4-1-min-scaled.jpg')"></li>
-                        
-                      </ol>
-                      <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
-                       <img src="ltstatic/img/left-arrow.svg" alt="Prev"> 
-                    </a>
-                    <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
-                      <img src="ltstatic/img/right-arrow.svg" alt="Next">
-                    </a>
+          
+        <div class="container">
+            <div id="mycarousel" class="carousel slide" data-bs-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-bs-target="#mycarousel" data-bs-slide-to="0" class="active"></li>
+                    <li data-bs-target="#mycarousel" data-bs-slide-to="1"></li>
+                    <li data-bs-target="#mycarousel" data-bs-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <div class="col-lg ">
+                                <img src="ltstatic/conference/DREAMS-BAND-7-1-min-scaled.jpg" class="d-block w-100 h-100" alt="..." >
+                            </div>
+              
+
+                        </div>
                     </div>
-                    <div class="carousel-inner pt-5">
-                      <div class="carousel-item active h-100 w-100" style="background-image:url('ltstatic/conference/DREAMS-BAND-7-1-min-scaled.jpg'); object-fit: cover;"></div>
-                      <div class="carousel-item h-100 w-100" style="background-image:url('ltstatic/conference/DREAMS-Site-Banner-2-1-scaled.jpg'); object-fit: cover;"></div>
-                      <div class="carousel-item h-100 w-100" style="background-image:url('ltstatic/conference/DREAMS-BAND-4-1-min-scaled.jpg')"></div>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-lg">
+                                <img src="ltstatic/conference/DREAMS-Site-Banner-2-1-scaled.jpg" class="d-block w-100 h-100" alt="...">
+                            </div>
+
+                        </div>
                     </div>
-                  </div>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-lg">
+                                <img src="ltstatic/conference/DREAMS-BAND-4-1-min-scaled.jpg" class="d-block w-100" alt="...">
+                            </div>
+                      
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-
-    </div>
-
-   </section>
 
    <div class="container ">
     <div class="row">
-        <div class="col-lg-12 ">
+        <div class="col-lg-12 pt-5">
             <div class="gallery">
               <div>
                 <iframe src="//www.youtube.com/embed/9Q4204GwFNo" allowfullscreen frameborder="0" name="tab"></iframe>
@@ -233,110 +186,330 @@ Louisiana Tech University
     </div>
    </div>
  
-   
-<!-- Gallery -->
+ 
+
+
+
+
 <div class="container">
-    <div class="row">
-        <h1 class="big-heading mt-5 pt-5 text-center">Louisiana Previous Conferences</h1>
-        <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
-            <a href="https://letusdream.org/wp-content/uploads/2021/07/Conference-Brochure_2018-LA-Tech-min.pdf"
-            target="_blank"><img src="/ltstatic/Research/2019.png" class="w-100 shadow-1-strong rounded mb-4" />
-            </a>
+      <h1 class="text-center mt-5 pt-5">LATEST FEEDS</h1>
+      <div class="row d-flex justify-content-center mt-5 ">
+        <!-- Gallery item -->
+        <div class="col-lg-6 col-md-6 mb-4 text-center">
+            <p class="text-center"><i class="far fa-clock" aria-hidden="true"></i> 2019</p>
+            <img src="/ltstatic/Research/2019.png" alt="" class="img-fluid card-img-top feed-area">
+            <h4 class="fw-bold mb-4 h-50">LUD - Community Conference</h4> 
         </div>
-      
-        <div class="col-lg-4 mb-4 mb-lg-0">
-            <a href="https://letusdream.org/wp-content/uploads/2021/07/Conference-Brochure_2019-LA-Tech.pdf"><img src="/ltstatic/Research/2018.png" class="w-100 shadow-1-strong rounded mb-4"/>
-            </a>
+        <div class="col-lg-6 col-md-6 mb-4 text-center">
+            <p class="text-center"><i class="far fa-clock" aria-hidden="true"></i> 2018</p>
+        <img src="/ltstatic/Research/2018.png" alt="" class="img-fluid card-img-top feed-area"></a>
+       
+        <h4 class="fw-bold mb-4">LUD - Triennial International Conference</h4>
+       
+          
         </div>
-      
-        <div class="col-lg-4 mb-4 mb-lg-0">
-          <img src="#" class="w-100 shadow-1-strong rounded mb-4"/>
-      
-        
-        </div>
+        <!-- End -->
       </div>
 </div>
 
-  <!-- Gallery -->
-   
-  <div class="container p-5">
-  
-        <div class="row">
-          <h1 class="big-heading mt-5 pt-5 text-center">Conference Core Committee</h1>
-        <div class="col-lg-3">
 
-            <div class="d-flex justify-content-center align-items-center p-4 rounded-lg flex-column">
-                <div class="person-img">
-                    <img src="{% static 'locations/monroe/default.png' %}" alt=""
-                        class="img-fluid rounded-circle shadow p-1">
+
+<div class="idance">
+    <div class="schedule content-block">
+        <div class="container">
+            <h1 class="text-center mt-5 pt-5 mb-5">SCHEDULE</h1>
+           
+        
+            <div class="timetable">
+        
+              <!-- Schedule Top Navigation -->
+              <nav class="nav nav-tabs">
+                <a class="nav-link ">Mon</a>
+                <a class="nav-link">Tue</a>
+                <a class="nav-link">Wed</a>
+                <a class="nav-link active">Thu</a>
+                <a class="nav-link">Fri</a>
+                <a class="nav-link">Sat</a>
+                <a class="nav-link">Sun</a>
+              </nav>
+        
+              <div class="tab-content">
+                <div class="tab-pane show active">
+                  <div class="row">
+                        <!-- Row 1 -->
+                    <!-- Schedule Item 1 -->
+                    <div class="col-md-4">
+                      <div class="timetable-item">
+                        <div class="timetable-item-img">
+                          <img src="/ltstatic/conference/lud/icons/icon1.png" >
+                        </div>
+                        <div class="timetable-item-main">
+                          <div class="timetable-item-time">9:00am - 9:30am</div>
+                          <div class="timetable-item-name">Registration and Vendor Networking</div>
+                         
+
+                        </div>
+                      </div>
+                    </div>
+        
+                    <!-- Schedule Item 2 -->
+                    <div class="col-md-4">
+                      <div class="timetable-item">
+                        <div class="timetable-item-img">
+                          <img src="/ltstatic/conference/lud/icons/icon2.png" >
+                        </div>
+                        <div class="timetable-item-main">
+                          <div class="timetable-item-time">9:30am - 9:35am</div>
+                          <div class="timetable-item-name">Welcome: Dr. Dickie Crawford</div>
+                         
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="timetable-item">
+                          <div class="timetable-item-img">
+                            <img src="/ltstatic/conference/lud/icons/icon2.png">
+                          </div>
+                          <div class="timetable-item-main">
+                            <div class="timetable-item-time">9:35am - 9:40am</div>
+                            <div class="timetable-item-name">Welcome: Father Lijo</div>
+                          
+                          </div>
+                        </div>
+                      </div>
+
+
+                        <!-- Row 2 -->
+                    <!-- Schedule Item 3 -->
+                    <div class="col-md-4">
+                      <div class="timetable-item">
+                        <div class="timetable-item-img">
+                          <img src="/ltstatic/conference/lud/icons/icon3.png" alt="Street Dance">
+                        </div>
+                        <div class="timetable-item-main">
+                          <div class="timetable-item-time">9:40am - 9:55am</div>
+                          <div class="timetable-item-name">Keynote Speaker – Monroe Mayor Friday Ellis</div>
+                         
+                        </div>
+                      </div>
+                    </div>
+        
+                    <!-- Schedule Item 4 -->
+
+        
+                    <!-- Schedule Item 5 -->
+                    <div class="col-md-4">
+                      <div class="timetable-item">
+                        <div class="timetable-item-img">
+                          <img src="/ltstatic/conference/lud/icons/icon4.png" alt="Stretching">
+                        </div>
+                        <div class="timetable-item-main">
+                          <div class="timetable-item-time">10:00am - 11:00am</div>
+                          <div class="timetable-item-name">Education Panel</div>
+                         
+                        </div>
+                      </div>
+                    </div>
+        
+                        <!-- Row 3 -->
+                    <!-- Schedule Item 6 -->
+                    <div class="col-md-4">
+                      <div class="timetable-item">
+                        <div class="timetable-item-img">
+                          <img src="/ltstatic/conference/lud/icons/icon5.png" alt="Street Dance">
+                        </div>
+                        <div class="timetable-item-main">
+                          <div class="timetable-item-time">11:00am - 12:00pm</div>
+                          <div class="timetable-item-name">Social Panel</div>
+                          
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="timetable-item">
+                          <div class="timetable-item-img">
+                            <img src="/ltstatic/conference/lud/icons/icon6.png" alt="Street Dance">
+                          </div>
+                          <div class="timetable-item-main">
+                            <div class="timetable-item-time">1:00pm - 2:00pm</div>
+                            <div class="timetable-item-name">Health Panel</div>
+                           
+                          </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="timetable-item">
+                          <div class="timetable-item-img">
+                            <img src="/ltstatic/conference/lud/icons/icon3.png" alt="Street Dance">
+                          </div>
+                          <div class="timetable-item-main">
+                            <div class="timetable-item-time">2:00pm - 2:15pm</div>
+                            <div class="timetable-item-name">Keynote Speaker – Dr. Noflin, Jr.</div>
+                         </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="timetable-item">
+                          <div class="timetable-item-img">
+                            <img src="/ltstatic/conference/lud/icons/icon7.png" alt="Yoga">
+                          </div>
+                          <div class="timetable-item-main">
+                            <div class="timetable-item-time">2:15pm - 3:00pm</div>
+                            <div class="timetable-item-name">Unsung Heroes</div>
+                           
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-md-4">
+                        <div class="timetable-item">
+                          <div class="timetable-item-img">
+                            <img src="/ltstatic/conference/lud/icons/icon8.png" alt="Yoga">
+                          </div>
+                          <div class="timetable-item-main">
+                            <div class="timetable-item-time">3:15pm - 4:15pm</div>
+                            <div class="timetable-item-name">Student Panel</div>
+                           
+                          </div>
+                        </div>
+                      </div>
+
+
+                      <div class="col-md-4">
+                        <div class="timetable-item">
+                          <div class="timetable-item-img">
+                            <img src="/ltstatic/conference/lud/icons/icon9.png" alt="Yoga">
+                          </div>
+                          <div class="timetable-item-main">
+                            <div class="timetable-item-time">4:15pm - 4:30pm</div>
+                            <div class="timetable-item-name">Closing Remarks</div>
+                           
+                          </div>
+                        </div>
+                      </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+  </div>
+
+
+  <!-- Gallery -->
+
+  <div class="container p-5">
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <h1 class="big-heading  text-uppercase">Keynote Speakers</h1>
+        </div>
+        <div class="col-lg-4">
+            <div class="d-flex justify-content-center align-items-center p-5 m-2 rounded-lg flex-column">
+                <div class="person-img  d-flex justify-content-center">
+                    <img src="{% static 'conference/lud/image-1.jpg' %}" alt=""
+                        class="img-fluid rounded-circle shadow p-1 w-50 h-50 text-center  ">
                 </div>
                 <div class="person-name my-2">
-                    <h4 class="text-info fw-bolder">Dr Fr Lijo Thomas</h4>
+                    <h6 class="text-info fw-bolder">Dr.Tiffany Bates</h6>
                 </div>
                 <div class="info">
                     <p class="text-dark text-center">
-                        Founder & Director,<br>
-                        Let Us Dream
+                        Conference Planning chair
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="d-flex justify-content-center align-items-center p-5 m-2 rounded-lg flex-column">
+                <div class="person-img  d-flex justify-content-center">
+                    <img src="{% static 'conference/lud/image-2.jpg' %}" alt=""
+                        class="img-fluid rounded-circle shadow p-1 w-50 h-50">
+                </div>
+                <div class="person-name my-2">
+                    <h6 class="text-info fw-bolder">Mrs.Ella Nimmers</h6>
+                </div>
+                <div class="info">
+                    <p class="text-dark text-center">
+                        Conference Co-chair
                     </p>
                 </div>
             </div>
         </div>
-        <div class="col-lg-3">
-            <div class="d-flex justify-content-center align-items-center p-4 rounded-lg flex-column">
-                <div class="person-img">
-                    <img src="{% static 'locations/monroe/default.png' %}" alt=""
-                        class="img-fluid rounded-circle shadow p-1">
-                </div>
-                <div class="person-name my-2">
-                    <h4 class="text-info fw-bolder">Mr David Selvaraj</h4>
-                </div>
-                <div class="info">
-                    <p class="text-dark text-center">
-                        President,<br>
-                        E-Cure Charitable trust (R)
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3">
-            <div class="d-flex justify-content-center align-items-center p-4 rounded-lg flex-column">
-                <div class="person-img">
-                    <img src="{% static 'locations/monroe/default.png' %}" alt=""
-                        class="img-fluid rounded-circle shadow p-1">
-                </div>
-                <div class="person-name my-2">
-                    <h4 class="text-info fw-bolder">Ms Anita Eipe</h4>
-                </div>
-                <div class="info">
-                    <p class="text-dark text-center">
-                        Managing Trustee at Samatha <br> Learning Center
-                    </p>
-                </div>
-            </div>
-        </div>
-       
-        <div class="col-lg-3">
-            <div class="d-flex justify-content-center align-items-center p-4 rounded-lg flex-column">
-                <div class="person-img">
-                    <img src="{% static 'locations/monroe/default.png' %}" alt=""
-                        class="img-fluid rounded-circle shadow p-1">
-                </div>
-                <div class="person-name my-2">
-                    <h4 class="text-info fw-bolder">Ms Uma Krishnan</h4>
-                </div>
-                <div class="info">
-                    <p class="text-dark text-center">
-                        Clinical Psychologist
-                    </p>
-                </div>
-            </div>
-        </div>
- 
+     
+
     </div>
 </div>
-  
- 
-<script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+
+
+
+    <div class="container p-5">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h1 class="big-heading  text-uppercase">Conference Chair</h2>
+            </div>
+            <div class="col-lg-4">
+                <div class="d-flex justify-content-center align-items-center p-5 rounded-lg flex-column">
+                    <div class="person-img d-flex justify-content-center">
+                        <img src="{% static 'locations/bangalore/default.png'%}" alt=""
+                            class="img-fluid rounded-circle shadow p-1 w-50 h-50">
+                    </div>
+                    <div class="person-name my-2">
+                        <h6 class="text-info fw-bolder">Person</h6>
+                    </div>
+                    <div class="info">
+                        <p class="text-dark text-center">
+                            Programmer
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="d-flex justify-content-center align-items-center p-5 rounded-lg flex-column">
+                    <div class="person-img d-flex justify-content-center">
+                        <img src="{% static 'locations/bangalore/default.png'%}" alt=""
+                            class="img-fluid rounded-circle shadow p-1 w-50 h-50">
+                    </div>
+                    <div class="person-name my-2">
+                        <h6 class="text-info fw-bolder">Person</h6>
+                    </div>
+                    <div class="info">
+                        <p class="text-dark text-center">
+                            Programmer
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="d-flex justify-content-center align-items-center p-5 rounded-lg flex-column">
+                    <div class="person-img d-flex justify-content-center">
+                        <img src="{% static 'locations/bangalore/default.png'%}" alt=""
+                            class="img-fluid rounded-circle shadow p-1 w-50 h-50">
+                    </div>
+                    <div class="person-name my-2">
+                        <h6 class="text-info fw-bolder">Person</h6>
+                    </div>
+                    <div class="info">
+                        <p class="text-dark text-center">
+                            Programmer
+                    </div>
+                </div>
+            </div>
+       
+
+        </div>
+    </div>
+
+
+
+<!-- Scheduled Events -->
+
+
+
+
+
+<script src="https://kit.fontawesome.com/f8cd4d7fce.js" crossorigin="anonymous"></script>
 <!-- Louisiana Tech Passing string -->
 <script>
 
@@ -346,6 +519,22 @@ Louisiana Tech University
 // always checking if the element is clicked, if so, do alert('hello')
 element.addEventListener("click", () => {
 sessionStorage.setItem("event",conference);
+});
+
+
+ 
+$(document).ready(function(){
+    $("#testimonial-slider").owlCarousel({
+        items:1,
+        itemsDesktop:[1000,1],
+        itemsDesktopSmall:[979,1],
+        itemsTablet:[768,1],
+        margin:10,
+        pagination:false,
+        navigation:true,
+        navigationText:["",""],
+        autoPlay:true
+    });
 });
 </script>
 </body>
