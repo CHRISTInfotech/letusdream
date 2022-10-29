@@ -18,13 +18,7 @@ HOME
 
 {% block content %}
 <div class="mt-5 mb-5 row"></div>
-<div id="carouselExampleCaptions" class="carousel slide mt-5" data-bs-ride="false">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-      aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-  </div>
+<div id="carouselExampleFade" class="carousel slide carousel-fade mt-5" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
       <img src="{% static 'home/img1.png' %}" class="d-block w-100" alt="...">
@@ -36,11 +30,11 @@ HOME
       <img src="{% static 'home/img3.png' %}" class="d-block w-100" alt="...">
     </div>
   </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Previous</span>
   </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
   </button>
@@ -54,17 +48,17 @@ HOME
 </div>
 
 <div class="container-fluid" id="dreamProgram">
-  <div class="row m-auto mt-5 p-5 " >
+  <div class="row m-auto mt-5 p-5 ">
     <h1 class="text-center text-uppercase">OUR PROGRAM</h1>
     <div class="col-10 offset-1">
-      
+
       <div class="row pt-5 max-auto row-2">
         <div class="col-md-6 col-lg-3 pb-3">
-  
+
           <div class="card card-custom bg-white border-white border-0 card-1">
             <div class="card-custom-img card-img1">
             </div>
-  
+
             <div class="card-body cb-1">
               <h5 class="card-title text-h3 fw-bold fs-4">DREAMS Program</h5>
               <p class="card-text text-h1-cen fw-bold  card-t1 fs-6">The
@@ -73,22 +67,22 @@ HOME
                 personal development, interpersonal skills and leadership skills. The program aims to.</p>
             </div>
             <div class="card-footer text-center bg-white border-0 card-f1">
-  
+
               <a href="{% url 'registration_user' %}"><button type="button" class="btn-2">Join Us</button></a>
               <a href="{% url 'dreams' 'program' %}">
                 <button type="button" class="btn-2">Know more</button>
               </a>
-  
+
             </div>
           </div>
-  
+
         </div>
         <div class="col-md-6 col-lg-3 pb-3">
-  
+
           <div class="card card-custom bg-white border-white border-0 card-1">
             <div class="card-custom-img card-img2">
             </div>
-  
+
             <div class="card-body cb-1">
               <h5 class="card-title fw-bold text-h3 fs-4">DREAMS Pro Club</h5>
               <p class="card-text  text-h1-cen fw-bold fs-6  card-t1 ">DREAMS Pro Club is a
@@ -101,18 +95,18 @@ HOME
                   Us</button></a>
               <a href="{% url 'dreams' 'proclub' %}"><button type="button" id="btn-more" class="btn-2">Know
                   more</button></a>
-  
+
             </div>
           </div>
-  
+
         </div>
-  
+
         <div class="col-md-6 col-lg-3 pb-3">
-  
+
           <div class="card card-custom bg-white border-white border-0 card-1">
             <div class="card-custom-img card-img3">
             </div>
-  
+
             <div class="card-body cb-1">
               <h5 class="card-title text-h3 fs-4 fw-bold">DREAMS Band</h5>
               <p class="card-text text-h1-cen fw-bold  fs-6 card-t1">The DREAMS Band strives
@@ -125,17 +119,17 @@ HOME
                   Us</button></a>
               <a href="{% url 'dreams' 'band' %}"><button type="button" id="btn-more" class="btn-2">Know
                   more</button></a>
-  
+
             </div>
           </div>
-  
+
         </div>
-  
+
         <div class="col-md-6 col-lg-3 pb-3">
-  
+
           <div class="card card-custom bg-white border-white border-0 card-1">
             <div class="card-custom-img card-img4"></div>
-  
+
             <div class="card-body cb-1">
               <h5 class="card-title text-h3 fs-4 fw-bold">Community Conferences</h5>
               <p class="card-text text-h1-cen fs-6 fw-bold  card-t1">Started in 2017, Let Us
@@ -149,12 +143,12 @@ HOME
                   Us</button></a>
               <a href="{% url 'annual-conference' %}"><button type="button" id="btn-more" class="btn-2">Know
                   more</button></a>
-  
+
             </div>
           </div>
-  
+
         </div>
-  
+
       </div>
     </div>
   </div>
@@ -184,8 +178,7 @@ HOME
         <div class="col-md-4 on-hover">
           <div class="card border-0 ">
             <a href="#">
-              <img class="img-fluid card-img-top feed-area" src="/ltstatic/home/event1.webp"
-                alt="wrappixel kit"></a>
+              <img class="img-fluid card-img-top feed-area" src="/ltstatic/home/event1.webp" alt="wrappixel kit"></a>
             <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
               Oct<span class="d-block">23</span></div>
             <h5 class="font-weight-medium mt-3"><a href="#" class="text-decoration-none link">You should have eagle’s
