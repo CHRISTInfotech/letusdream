@@ -23,8 +23,8 @@
     {% block links %}
 
     {% endblock links %}
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link href="{% static  'css/style.css' %}" rel="stylesheet" />
     <link href="{% static  'css/header.css' %}" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
@@ -81,17 +81,95 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" data-bs-auto-close="outside"
                                 href="#">Conferences</a>
-                            <ul class="dropdown-menu shadow">
-
-                                <li> <a href="{% url 'about-conference' %}" class="dropdown-item">About Conference</a>
-                                </li>
-                                <li> <a href="{% url 'annual-conference' %}" class="dropdown-item">Annual Conference</a>
+                                <ul class="dropdown-menu shadow mld" aria-labelledby="MyAccountDDM" id="AppDropDownId">
+                                <li> <a href="{% url 'about-conference' %}" class="dropdown-item">About Conference</a> </li>
+                                <li>
+                                <a class="dropdown-item dropdown-toggle" href="{% url 'annual-conference' %}">Annual Conference </a>
+                                <ul class="dropdown-menu submenu">
+                                    <li><a href="" class="dropdown-item dropdown-toggle">Louisiana USA</a>
+                                        <ul class="dropdown-menu submenu">
+                                            <li>
+                                                <span class="item">
+                                                    <span class="item-left">
+                                                        <img src="data:image/png;base64,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" alt=""/>
+                                                        <span class="item-info">
+                                                            <span><a href="#" class="dropdown-item">Louisiana Tech University, Louisiana</a></span>
+                                                            
+                                                        </span>
+                                                    </span>
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span class="item">
+                                                    <span class="item-left">
+                                                        <img src="https://i.pinimg.com/originals/d5/87/37/d58737e2b8a6db49826eada4a5c0d189.jpg" alt=""/>
+                                                        <span class="item-info">
+                                                            <span><a href="#" class="dropdown-item">Grambling State University, Louisiana</a></span>
+                                                            
+                                                        </span>
+                                                    </span>
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span class="item">
+                                                    <span class="item-left">
+                                                        <img src="https://www.ulm.edu/_resources/images/ulm-academic-logo-circle.png" alt=""/>
+                                                        <span class="item-info">
+                                                            <span><a href="#" class="dropdown-item">University of Louisiana, Monroe</a></span>
+                                                            
+                                                        </span>
+                                                    </span>
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span class="item">
+                                                    <span class="item-left">
+                                                        <img src="https://d201g1c8t1ay3d.cloudfront.net/wp-content/uploads/2019/10/33-Louisiana-State-University.jpg" alt=""/>
+                                                        <span class="item-info">
+                                                            <span><a href="#" class="dropdown-item">Louisiana State University, Shreveport</a></span>
+                                                            
+                                                        </span>
+                                                    </span>
+                                                </span></li>
+                                
+                                        </ul>
+                                    </li>
+                                    <li><a href="" class="dropdown-item dropdown-toggle">Trivandrum India</a>
+                                        <ul class="dropdown-menu submenu">
+                                            <li><a href="#" class="dropdown-item">All Saints College</a></li>
+                                            <li><a href="#" class="dropdown-item">Loyola College </a></li>
+                                            <li><a href="#" class="dropdown-item">Christ University Nodal Center</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                    <li><a href="" class="dropdown-item dropdown-toggle">Binghamton New York</a>
+                                        <ul class="dropdown-menu submenu">
+                                            <li><a href="#" class="dropdown-item">Binghamton University</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="" class="dropdown-item dropdown-toggle">Bangalore India</a>
+                                        <ul class="dropdown-menu submenu">
+                                            <li><a href="#" class="dropdown-item">St. Ann's Degree College </a></li>
+                                            <li><a href="#" class="dropdown-item">Christ University </a></li>
+                                            <li><a href="#" class="dropdown-item">Jyoti Nivas College</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                    <li><a href="" class="dropdown-item dropdown-toggle">Chennai India</a>
+                                        <ul class="dropdown-menu submenu">
+                                            <li><a href="#" class="dropdown-item">Donbosco College of Arts and Science</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                </ul>
+                                   
                                 </li>
                                 <li> <a href="{% url 'trriennial-conference' %}" class="dropdown-item">Triennial
                                         Conference</a></li>
 
                             </ul>
                         </li>
+                        
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" data-bs-auto-close="outside"
                                 href="#">Courses</a>
@@ -226,6 +304,8 @@
             $('#navbar').removeClass('black');
         }
     })
+
+
 
 </script>
 

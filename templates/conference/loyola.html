@@ -2,11 +2,12 @@
 {% load static %}
 
 {% block title %}
-Louisiana Tech University
+Loyola College
 {% endblock %}
 
 {% block extraStyles %}
 <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+<link rel="stylesheet" href="{% static 'css/loyola.css' %}">
 <link rel="stylesheet" href="{% static 'css/louisiana-tech-university.css' %}">
 
 {% endblock extraStyles %}
@@ -17,9 +18,6 @@ Louisiana Tech University
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-
-
-
 
 <!--  Bootstrap CSS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
@@ -36,8 +34,14 @@ Louisiana Tech University
 <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.css" rel="stylesheet"/>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 
-
-
+<!-- Calender CDN -->
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js"></script>  
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/locales-all.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/locales-all.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/fullcalendar@5.11.3/main.min.css,npm/fullcalendar@5.11.3/main.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css">
 
 {% endblock links %}
 
@@ -106,23 +110,6 @@ Louisiana Tech University
         </div>
     </div>
 </div>
-
-
-<!-- <div class="container">
-    <h1 class="text-center mt-5 pt-5">LATEST FEEDS</h1>
-    <div class="row d-flex justify-content-center mt-5 ">
-      
-      <div class="col-lg-6 col-md-6 mb-4 text-center">
-          <p class="text-center"><i class="far fa-clock" aria-hidden="true"></i> 2019</p>
-          <img src="/ltstatic/conference/donbosoco/2022.jpg" alt="" class="img-fluid card-img-top feed-area">
-          <h4 class="fw-bold mb-4 h-50">LUD - Community Conference</h4> 
-      </div>
- 
-     
-    </div>
-</div> -->
-
-
 
   <!-- Gallery -->
 
@@ -237,36 +224,79 @@ Louisiana Tech University
 </div>
 
 
-
+<div id='calendar'></div>
 
 
 <script src="https://kit.fontawesome.com/f8cd4d7fce.js" crossorigin="anonymous"></script>
-<!-- Louisiana Tech Passing string -->
 <script>
+document.addEventListener('DOMContentLoaded', function() {
+  var calendarEl = document.getElementById('calendar');
 
-  
-  const element = document.getElementById('register')
+  var calendar = new FullCalendar.Calendar(calendarEl, {
+    initialView: 'dayGridMonth',
+    initialDate: '2022-08-08',
+    headerToolbar: {
+      left: 'prev,next today',
+      center: 'title',
+      right: 'dayGridMonth,timeGridWeek,timeGridDay'
+    },
+    events: [
+      {
+        title: 'All Day Event',
+        start: '2022-08-01'
+      },
+      {
+        title: 'Long Event',
+        start: '2022-08-07',
+        end: '2022-08-10'
+      },
+      {
+        groupId: '999',
+        title: 'Repeating Event',
+        start: '2022-08-09T16:00:00'
+      },
+      {
+        groupId: '999',
+        title: 'Repeating Event',
+        start: '2022-08-16T16:00:00'
+      },
+      {
+        title: 'Conference',
+        start: '2022-08-11',
+        end: '2022-08-13'
+      },
+      {
+        title: 'Meeting',
+        start: '2022-08-12T10:30:00',
+        end: '2022-08-12T12:30:00'
+      },
+      {
+        title: 'Lunch',
+        start: '2022-08-12T12:00:00'
+      },
+      {
+        title: 'Meeting',
+        start: '2022-08-12T14:30:00'
+      },
+      {
+        title: 'Birthday Party',
+        start: '2022-08-13T07:00:00'
+      },
+      {
+        title: 'Click for Google',
+        url: 'http://google.com/',
+        start: '2022-08-28'
+      },
+      {
+        title: 'Birthday Party',
+        start: '2022-10-08T07:00:00'
+      }
+    ]
+  });
 
-// always checking if the element is clicked, if so, do alert('hello')
-element.addEventListener("click", () => {
-sessionStorage.setItem("event",conference);
+  calendar.render();
 });
 
-
- 
-$(document).ready(function(){
-    $("#testimonial-slider").owlCarousel({
-        items:1,
-        itemsDesktop:[1000,1],
-        itemsDesktopSmall:[979,1],
-        itemsTablet:[768,1],
-        margin:10,
-        pagination:false,
-        navigation:true,
-        navigationText:["",""],
-        autoPlay:true
-    });
-});
 </script>
 </body>
 

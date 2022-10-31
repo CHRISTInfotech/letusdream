@@ -26,6 +26,12 @@ body,p {
     transition: 0.5s;
 }
 
+#calendar {
+  max-width: 1100px !important;
+  margin: 40px auto !important;
+}
+
+
 /* Button */
 
 .button span:after {
@@ -52,10 +58,6 @@ body,p {
     opacity: 1;
     right: 0;
 }
-
-
-/* Vision Mission View */
-
 
 
   /* Video Slider */
@@ -810,7 +812,6 @@ idance .timetable {
 .idance .schedule .tab-pane {
   padding-top: 10px;
 }
-
 
 
 
