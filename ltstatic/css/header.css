@@ -131,9 +131,9 @@ body {
 
 .dropdown-menu .submenu .dropdown-toggle::after {
     position: absolute;
-    right: -25%;
+    right: -0%;
     margin-top: 10px; 
-    margin-right: 200px; 
+    margin-right: 0px; 
 }
 
 .item-left{
@@ -150,12 +150,7 @@ body {
     float:left;
 }
 
-.item-left img{
-    height: 30px;
-    width: 50px;
-    margin: 5px 0px 5px 5px;
-    
-}
+
 
 /* footer */
 footer {
