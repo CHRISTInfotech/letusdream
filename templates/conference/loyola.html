@@ -6,8 +6,8 @@ Loyola College
 {% endblock %}
 
 {% block extraStyles %}
-<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
-<link rel="stylesheet" href="{% static 'css/loyola.css' %}">
+
+<link rel="stylesheet" href="{% static 'css/stannes-college.css' %}">
 <link rel="stylesheet" href="{% static 'css/louisiana-tech-university.css' %}">
 
 {% endblock extraStyles %}
@@ -113,59 +113,43 @@ Loyola College
 
   <!-- Gallery -->
 
-<div class="container p-5">
-    <div class="row">
-        <div class="col-md-12 text-center">
-            <h1 class="big-heading   text-uppercase">Conference Chair</h2>
-        </div>
-        <div class="col-lg-4">
-            <div class="d-flex justify-content-center align-items-center p-5 rounded-lg flex-column">
-                <div class="person-img d-flex justify-content-center">
-                    <img src="{% static 'locations/bangalore/default.png'%}" alt=""
-                        class="img-fluid rounded-circle shadow p-1 w-50 h-50">
-                </div>
-                <div class="person-name my-2">
-                    <h6 class="text-info fw-bolder">Person</h6>
-                </div>
-                <div class="info">
-                    <p class="text-dark text-center">
-                        Programmer
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-4">
-            <div class="d-flex justify-content-center align-items-center p-5 rounded-lg flex-column">
-                <div class="person-img d-flex justify-content-center">
-                    <img src="{% static 'locations/bangalore/default.png'%}" alt=""
-                        class="img-fluid rounded-circle shadow p-1 w-50 h-50">
-                </div>
-                <div class="person-name my-2">
-                    <h6 class="text-info fw-bolder">Person</h6>
-                </div>
-                <div class="info">
-                    <p class="text-dark text-center">
-                        Programmer
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-4">
-            <div class="d-flex justify-content-center align-items-center p-5 rounded-lg flex-column">
-                <div class="person-img d-flex justify-content-center">
-                    <img src="{% static 'locations/bangalore/default.png'%}" alt=""
-                        class="img-fluid rounded-circle shadow p-1 w-50 h-50">
-                </div>
-                <div class="person-name my-2">
-                    <h6 class="text-info fw-bolder">Person</h6>
-                </div>
-                <div class="info">
-                    <p class="text-dark text-center">
-                        Programmer
-                </div>
-            </div>
-        </div>
-   
-
-    </div>
+  <div class="section-member-popup">
+    <div class="container container-member-popup  mb-5 mt-5 pt-5">
+       <div class="col-md-12 text-center mb-5">
+           <h1 class="big-heading text-uppercase mb-5">Conference Chair</h2>
+       </div>
+       <div class="card">
+           <div class="imgBx">
+               <img src="{% static 'locations/bangalore/default.png'%}" alt="" >
+               <h5 class="text-center pt-3 text-info fw-bolder">Person</h5>
+           </div>
+           <div class="content">
+               
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum explicabo, facilis cumque nobis voluptas maxime quod consequatur? Modi exercitationem blanditiis error tenetur, ad, doloribus, adipisci vitae deserunt fugiat sapiente reiciendis? <span class="fw-bold">Read More</span></p>
+           </div>
+       </div>
+       <div class="card">
+           <div class="imgBx">
+               <img src="{% static 'locations/bangalore/default.png'%}" alt="" class="text-center">
+               <h5 class="text-center pt-3 text-info fw-bolder">Person</h5>
+           </div>
+           <div class="content">
+             
+               <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit qui iusto quo sapiente vero quasi similique voluptates, omnis at nihil sequi, debitis, commodi pariatur vitae? Consectetur, nobis suscipit? Dolorem, a! <span class="fw-bold"> Read More</span></p>
+           </div>
+       </div>
+       <div class="card">
+           <div class="imgBx">
+               <img src="{% static 'locations/bangalore/default.png'%}" alt="">
+               <h5 class="text-center pt-3 text-info fw-bolder">Person</h5>
+           </div>
+           <div class="content">
+               
+               <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa assumenda aperiam itaque praesentium, in quisquam, nobis incidunt officiis aliquam sed iusto vel ipsam libero quas quo! Ea doloremque ipsam enim? <span class="fw-bold"> Read More</span></p>
+           </div>
+       </div>
+   </div>
+  
 </div>
 
 <div class="container p-5">
@@ -224,80 +208,6 @@ Loyola College
 </div>
 
 
-<div id='calendar'></div>
-
-
-<script src="https://kit.fontawesome.com/f8cd4d7fce.js" crossorigin="anonymous"></script>
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  var calendarEl = document.getElementById('calendar');
-
-  var calendar = new FullCalendar.Calendar(calendarEl, {
-    initialView: 'dayGridMonth',
-    initialDate: '2022-08-08',
-    headerToolbar: {
-      left: 'prev,next today',
-      center: 'title',
-      right: 'dayGridMonth,timeGridWeek,timeGridDay'
-    },
-    events: [
-      {
-        title: 'All Day Event',
-        start: '2022-08-01'
-      },
-      {
-        title: 'Long Event',
-        start: '2022-08-07',
-        end: '2022-08-10'
-      },
-      {
-        groupId: '999',
-        title: 'Repeating Event',
-        start: '2022-08-09T16:00:00'
-      },
-      {
-        groupId: '999',
-        title: 'Repeating Event',
-        start: '2022-08-16T16:00:00'
-      },
-      {
-        title: 'Conference',
-        start: '2022-08-11',
-        end: '2022-08-13'
-      },
-      {
-        title: 'Meeting',
-        start: '2022-08-12T10:30:00',
-        end: '2022-08-12T12:30:00'
-      },
-      {
-        title: 'Lunch',
-        start: '2022-08-12T12:00:00'
-      },
-      {
-        title: 'Meeting',
-        start: '2022-08-12T14:30:00'
-      },
-      {
-        title: 'Birthday Party',
-        start: '2022-08-13T07:00:00'
-      },
-      {
-        title: 'Click for Google',
-        url: 'http://google.com/',
-        start: '2022-08-28'
-      },
-      {
-        title: 'Birthday Party',
-        start: '2022-10-08T07:00:00'
-      }
-    ]
-  });
-
-  calendar.render();
-});
-
-</script>
 </body>
 
 </html>
