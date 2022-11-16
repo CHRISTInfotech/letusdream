@@ -9,6 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- favicon.icon -->
     <link rel="shortcut icon" href="{% static 'logo/favicon.png' %}" type="image/x-icon">
+
     <title>LET US DREAM | {% block title %}{% endblock title %}</title>
 
     <!--Google font-->
@@ -23,6 +24,7 @@
     {% block links %}
 
     {% endblock links %}
+    <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link href="{% static  'css/style.css' %}" rel="stylesheet" />
@@ -80,18 +82,27 @@
 
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" data-bs-auto-close="outside"
-                                href="#">Conferences</a>
-                            <ul class="dropdown-menu shadow">
-
-                                <li> <a href="{% url 'about-conference' %}" class="dropdown-item">About Conference</a>
+                                href="#">
+                                Conferences
+                            </a>
+                            <ul class="dropdown-menu shadow mld" aria-labelledby="MyAccountDDM" id="AppDropDownId">
+                                <li>
+                                    <a href="{% url 'about-conference' %}" class="dropdown-item">About Conference</a>
                                 </li>
-                                <li> <a href="{% url 'annual-conference' %}" class="dropdown-item">Annual Conference</a>
+                                <li>
+                                    <a class="dropdown-item" href="{% url 'annual-conference' %}">
+                                        Annual Conference
+                                    </a>
                                 </li>
-                                <li> <a href="{% url 'trriennial-conference' %}" class="dropdown-item">Triennial
-                                        Conference</a></li>
+                                <li>
+                                    <a href="{% url 'trriennial-conference' %}" class="dropdown-item">
+                                        Triennial Conference
+                                    </a>
+                                </li>
 
                             </ul>
                         </li>
+
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" data-bs-auto-close="outside"
                                 href="#">Courses</a>
@@ -129,8 +140,8 @@
                                                 class="dropdown-item">Thiruvananthapuram</a></li>
                                         <li> <a href="{% url 'locations' 'thiruvallam' %}"
                                                 class="dropdown-item">Thiruvallam</a></li>
-                                        <li> <a href="{% url 'locations' 'chennai' %}"
-                                                class="dropdown-item">Chennai</a></li>
+                                        <li> <a href="{% url 'locations' 'chennai' %}" class="dropdown-item">Chennai</a>
+                                        </li>
 
                                     </ul>
                                 </li>
@@ -226,6 +237,8 @@
             $('#navbar').removeClass('black');
         }
     })
+
+
 
 </script>
 

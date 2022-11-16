@@ -26,6 +26,12 @@ body,p {
     transition: 0.5s;
 }
 
+#calendar {
+  max-width: 1100px !important;
+  margin: 40px auto !important;
+}
+
+
 /* Button */
 
 .button span:after {
@@ -52,10 +58,6 @@ body,p {
     opacity: 1;
     right: 0;
 }
-
-
-/* Vision Mission View */
-
 
 
   /* Video Slider */
@@ -812,5 +814,81 @@ idance .timetable {
 }
 
 
+/* Previous Conference Image */
+.timeline-wrapper {
+  position: relative;
+  width: 90%;
+  margin: auto;
+  height: 300px;
+}
 
+.timeline-wrapper .middle-line {
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  top: 70%;
+  transform: translateY(-50%);
+  background: #d9d9d9;
+}
 
+.box {
+  width: 17%;
+  position: relative;
+  min-height: 300px;
+  float: right;
+}
+
+.box .date {
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  transform: translateY(-50%);
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+  background: #fff;
+  border: 2px solid #d9d9d9;
+}
+
+.date p {
+  text-align: center;
+  margin-top: 25px;
+  margin-bottom: 0px;
+}
+
+.box .box-content {
+  border-radius: 5px;
+  background-color: #A9A9A9;
+  width: 180px;
+  position: absolute;
+  left: -50px;
+  padding: 2px;
+  top:-43%;
+}
+
+.box-content p {
+  margin: 0;
+  color: white;
+}
+
+.box-bottom .box-content {
+  top: 65%;
+}
+
+.box-content::before {
+  content: " ";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 10px solid transparent;
+}
+
+.box-bottom .box-content::before {
+  border-bottom-color: #A9A9A9;
+  top: -20px;
+}
+
+.box-top .box-content::before {
+  border-top-color: #A9A9A9;
+  bottom: -20px;
+}
