@@ -34,7 +34,7 @@ def aboutConference(request):
     return render(request, 'conference/aboutConference.html')
 
 
-def annualConference(request):
+def allConferences(request):
     return render(request, 'conference/annualConference.html')
 
 

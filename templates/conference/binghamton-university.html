@@ -10,38 +10,12 @@ Binghamton University Newyork
 <link rel="stylesheet" href="{% static 'css/stannes-college.css' %}">
 {% endblock extraStyles %}
 
-
-{% block links %}
-<!--Google font-->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-
-<!--  Bootstrap CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
-<!-- Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
-
-
-<!-- MDB -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.css" rel="stylesheet"/>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-
-
-
-{% endblock links %}
-
-
 {% block content %}
 
 <nav aria-label="breadcrumb animated slideInDown" class="cus-breadcrumb">
     <ol class="breadcrumb text-uppercase mb-0 bg-white">
         <li class="breadcrumb-item"><a class="text-black text-decoration-none" href="{% url 'main' %}">Home</a></li>
-        <li class="breadcrumb-item"><a class="text-black text-decoration-none" href="{% url 'annual-conference' %}">Annual Conference</a></li>
+        <li class="breadcrumb-item"><a class="text-black text-decoration-none" href="{% url 'annualConference' %}">Annual Conference</a></li>
         <li class="breadcrumb-item  active" aria-current="page">Binghamton University Newyork</li>
     </ol>
 </nav>
