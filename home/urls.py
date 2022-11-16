@@ -12,7 +12,7 @@ urlpatterns = [
     path('press-release/', pressRelease, name="press-release"),
     path('photo-gallery/', photoGallery, name="photo-gallery"),
     path('about-conference', aboutConference, name='about-conference'),
-    path('annual-conference', annualConference, name='annual-conference'),
+    path('annualConference', allConferences, name='annualConference'),
     path('trriennial-conference', trriennialConference,
          name='trriennial-conference'),
     path('yclpCourse', yclpCourse, name='yclp-course'),
