@@ -6,7 +6,7 @@ Louisiana Tech University
 {% endblock %}
 
 {% block extraStyles %}
-<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+<link rel="stylesheet" href="{% static 'css/stannes-college.css' %}">
 <link rel="stylesheet" href="{% static 'css/louisiana-tech-university.css' %}">
 
 {% endblock extraStyles %}
@@ -108,80 +108,114 @@ Louisiana Tech University
 </div>
 
 
-<div class="container">
+<!-- <div class="container">
     <h1 class="text-center mt-5 pt-5">LATEST FEEDS</h1>
     <div class="row d-flex justify-content-center mt-5 ">
-      <!-- Gallery item -->
+      
       <div class="col-lg-6 col-md-6 mb-4 text-center">
           <p class="text-center"><i class="far fa-clock" aria-hidden="true"></i> 2019</p>
           <img src="/ltstatic/conference/donbosoco/2022.jpg" alt="" class="img-fluid card-img-top feed-area">
           <h4 class="fw-bold mb-4 h-50">LUD - Community Conference</h4> 
       </div>
- 
-      <!-- End -->
+    </div>
+</div> -->
+
+
+<!-- Previous Conferences -->
+<div class="container mt-5 pt-5 pb-5">
+    <div class="row text-center">
+        <h1 class="text-green text-center my-5 text-uppercase fw-bold">
+            Conference Core Committee
+        </h1>
     </div>
 </div>
-
-
+<div class="previous-conference  pt-5 mb-5 pb-5">
+    
+    <section class="timeline-wrapper mt-5 pt-5 mb-5 pb-5">
+        <div class="middle-line"></div>
+    
+        <div class="box box-top">
+            <div class="date">
+                <p>2017</p>      
+            </div>
+            <div class="box-content">
+                <img src="/ltstatic/conference/bangalore/poster.png" class="w-100 h-100 rounded " />
+            </div>
+        </div>
+    
+        <div class="box box-bottom">
+            <div class="date">
+                <p>2018</p>
+                
+            </div>
+            <div class="box-content">
+                <img src="/ltstatic/conference/bangalore/poster.png" class="w-100 h-100 rounded " />
+            </div>
+        </div>
+    
+        <div class="box box-top">
+            <div class="date">
+                <p>2020</p>
+                
+            </div>
+            <div class="box-content">
+                <img src="/ltstatic/conference/bangalore/poster.png" class="w-100 rounded" />
+                
+            </div>
+        </div>
+    
+        <div class="box box-bottom">
+            <div class="date">
+                <p>2021</p>
+                
+            </div>
+            <div class="box-content">
+                <img src="/ltstatic/conference/bangalore/poster.png" class="w-100  rounded " />
+                
+            </div>
+        </div>
+    
+        <div class="box box-top">
+            <div class="date">
+                <p>2022</p>
+                
+            </div>
+            <div class="box-content">
+                <img src="/ltstatic/conference/donbosoco/2022.jpg" class="w-100 h-100 rounded " />
+            </div>
+        </div>
+    </section>
+</div>
 
   <!-- Gallery -->
-
-    <div class="container p-5">
-        <div class="row">
-            <div class="col-md-12 text-center">
-                <h1 class="big-heading text-uppercase">Conference Chairs</h2>
-            </div>
-            <div class="col-lg-4">
-                <div class="d-flex justify-content-center align-items-center p-4 rounded-lg flex-column">
-                    <div class="person-img d-flex justify-content-center">
-                        <img src="{% static 'conference/donbosoco/image-104.jpg'%}" alt=""
-                            class="img-fluid rounded-circle shadow p-1 mb-1 img-thumbnail w-50 h-50">
-                    </div>
-                    <div class="person-name my-2">
-                        <h6 class="text-info fw-bolder">Micky Joseph</h6>
-                    </div>
-                    <div class="info">
-                        <p class="text-dark text-center">
-                            Manager & Trustee
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="d-flex justify-content-center align-items-center p-4 rounded-lg flex-column">
-                    <div class="person-img d-flex justify-content-center">
-                        <img src="{% static 'conference/donbosoco/image-089.jpg'%}" alt=""
-                            class="img-fluid rounded-circle shadow p-1 mb-3 img-thumbnail  w-50 h-50">
-                    </div>
-                    <div class="person-name my-2">
-                        <h6 class="text-info fw-bolder">Rev. Dr. Joseph Jeyaraj SDB</h6>
-                    </div>
-                    <div class="info">
-                        <p class="text-dark text-center">
-                            Director - Niraivagam
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="d-flex justify-content-center align-items-center p-4 rounded-lg flex-column">
-                    <div class="person-img d-flex justify-content-center">
-                        <img src="{% static 'conference/donbosoco/image-105.jpg'%}" alt=""
-                            class="img-fluid rounded-circle shadow p-1 img-thumbnail  w-50 h-50">
-                    </div>
-                    <div class="person-name my-2">
-                        <h6 class="text-info fw-bolder">Mr. Arun Fernandez</h6>
-                    </div>
-                    <div class="info">
-                        <p class="text-dark text-center">
-                            Founder - Managing Director
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
+  <div class="section-member-popup mt-5 pt-5">
+    <div class="container container-member-popup  mb-5 mt-5 pt-5">
+       <div class="col-md-12 text-center mb-5">
+           <h1 class="big-heading text-uppercase mb-5">KEYNOTE SPEAKER</h2>
+       </div>
+       <div class="card">
+           <div class="imgBx">
+               <img src="{% static 'conference/donbosoco/img1.jpg' %}" alt="" >
+               <h5 class="text-center pt-3 text-info fw-bolder">Fr. Francis Xavier, SJ</h5>
+           </div>
+           <div class="content">
+               
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum explicabo, facilis cumque nobis voluptas maxime quod consequatur? Modi exercitationem blanditiis error tenetur, ad, doloribus, adipisci vitae deserunt fugiat sapiente reiciendis? <span class="fw-bold">Read More</span></p>
+           </div>
+       </div>
+       <div class="card">
+           <div class="imgBx">
+               <img src="{% static 'conference/donbosoco/img2.png' %}" alt="" class="text-center">
+               <h5 class="text-center pt-3 text-info fw-bolder">Dr. Christodas Gandhi IAS</h5>
+           </div>
+           <div class="content">
+             
+               <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit qui iusto quo sapiente vero quasi similique voluptates, omnis at nihil sequi, debitis, commodi pariatur vitae? Consectetur, nobis suscipit? Dolorem, a! <span class="fw-bold"> Read More</span></p>
+           </div>
+       </div>
+   </div>
+  
+</div>
 
     <div class="container p-5">
         <div class="row">
@@ -256,33 +290,6 @@ Louisiana Tech University
 
 
 
-<script src="https://kit.fontawesome.com/f8cd4d7fce.js" crossorigin="anonymous"></script>
-<!-- Louisiana Tech Passing string -->
-<script>
-
-  
-  const element = document.getElementById('register')
-
-// always checking if the element is clicked, if so, do alert('hello')
-element.addEventListener("click", () => {
-sessionStorage.setItem("event",conference);
-});
-
-
- 
-$(document).ready(function(){
-    $("#testimonial-slider").owlCarousel({
-        items:1,
-        itemsDesktop:[1000,1],
-        itemsDesktopSmall:[979,1],
-        itemsTablet:[768,1],
-        margin:10,
-        pagination:false,
-        navigation:true,
-        navigationText:["",""],
-        autoPlay:true
-    });
-});
 </script>
 </body>
 
