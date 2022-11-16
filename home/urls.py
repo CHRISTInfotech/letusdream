@@ -29,7 +29,7 @@ urlpatterns = [
     path('louisiana-tech-university', louisianatechuniversity,
          name='louisiana-tech-university'),
     path('donboscocollege', donboscocollege, name='donboscocollege'),
-    path('loyolacollege', loyolacollege, name='loyolacollege'),
+    path('loyolacollegeConference', loyolacollege, name='loyolacollegeConference'),
     path('stannescollege', stannescollege, name='stannescollege'),
     path('universityofLouisianaMonroe', universityofLouisianaMonroe,
          name='universityofLouisianaMonroe'),
