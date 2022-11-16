@@ -70,7 +70,7 @@ def stannescollege(request):
     return render(request, 'conference/stannes-college.html')
 
 
-def loyolacollege(request):
+def loyolacollegeConference(request):
     return render(request, 'conference/loyola.html')
 
 
