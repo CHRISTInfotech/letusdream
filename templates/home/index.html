@@ -1,6 +1,5 @@
 {% extends 'base.html' %}
 {% load static %}
-<!-- Load the static folder -->
 
 {% block title %}
 HOME
@@ -11,8 +10,6 @@ HOME
 {% endblock extraStyles %}
 
 {% block links %}
-
-
 
 {% endblock links %}
 
@@ -40,16 +37,16 @@ HOME
   </button>
 </div>
 
-<div class="content-div fs-5">
+<!-- <div class="content-div fs-5">
   <div class="p-5">
     Register for 2022 Annual Conferences <a href="{% url 'registration_user' %}"><button
         class="content-button fs-6">Register Now</button></a>
   </div>
-</div>
+</div> -->
 
 <div class="container-fluid" id="dreamProgram">
   <div class="row m-auto mt-5 p-5 ">
-    <h1 class="text-center text-uppercase">OUR PROGRAM</h1>
+    <h1 class="text-center text-uppercase">OUR PROGRAMS</h1>
     <div class="col-10 offset-1">
 
       <div class="row pt-5 max-auto row-2">
@@ -170,12 +167,122 @@ HOME
           <h5 class="font-weight-medium mt-3 text-h3">You can relay on our amazing features list and also our customer
             services will be great experience for you without doubt</h5>
         </div>
-        <!-- Column -->
+        
         <!-- Column -->
       </div>
       <div class="row mt-4">
-        <!-- Column -->
-        <div class="col-md-4 on-hover">
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="row">
+                <div class="col-md-4 on-hover">
+                  <div class="card border-0 ">
+                    <a href="#">
+                      <img class="img-fluid card-img-top feed-area" src="/ltstatic/home/event1.webp" alt="wrappixel kit"></a>
+                    <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
+                      Oct<span class="d-block">23</span></div>
+                    <h5 class="font-weight-medium mt-3"><a href="#" class="text-decoration-none link">You should have eagle’s
+                        eye on new trends and techonogies</a></h5>
+        
+                    <a href="#" class="text-decoration-none linking text-themecolor mt-2">Read More</a>
+                  </div>
+                </div>
+                <div class="col-md-4 on-hover">
+                  <div class="card border-0 ">
+                    <a href="#">
+                      <img class="img-fluid card-img-top feed-area" src="/ltstatic/home/event1.webp" alt="wrappixel kit"></a>
+                    <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
+                      Oct<span class="d-block">23</span></div>
+                    <h5 class="font-weight-medium mt-3"><a href="#" class="text-decoration-none link">You should have eagle’s
+                        eye on new trends and techonogies</a></h5>
+        
+                    <a href="#" class="text-decoration-none linking text-themecolor mt-2">Read More</a>
+                  </div>
+                </div>
+                <div class="col-md-4 on-hover">
+                  <div class="card border-0 ">
+                    <a href="#">
+                      <img class="img-fluid card-img-top feed-area" src="/ltstatic/home/event1.webp" alt="wrappixel kit"></a>
+                    <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
+                      Oct<span class="d-block">23</span></div>
+                    <h5 class="font-weight-medium mt-3"><a href="#" class="text-decoration-none link">You should have eagle’s
+                        eye on new trends and techonogies</a></h5>
+        
+                    <a href="#" class="text-decoration-none linking text-themecolor mt-2">Read More</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row">
+                <div class="col-md-6 on-hover">
+                  <div class="card border-0 ">
+                    <a href="#">
+                      <img class="img-fluid card-img-top feed-area" src="/ltstatic/home/event2.webp" alt="wrappixel kit"></a>
+                    <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
+                      Oct<span class="d-block">23</span></div>
+                    <h5 class="font-weight-medium mt-3"><a href="#" class="text-decoration-none link">You should have eagle’s
+                        eye on new trends and techonogies</a></h5>
+        
+                    <a href="#" class="text-decoration-none linking text-themecolor mt-2">Learn More</a>
+                  </div>
+                </div>
+                <div class="col-md-6 on-hover">
+                  <div class="card border-0 ">
+                    <a href="#">
+                      <img class="img-fluid card-img-top feed-area" src="/ltstatic/home/event2.webp" alt="wrappixel kit"></a>
+                    <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
+                      Oct<span class="d-block">23</span></div>
+                    <h5 class="font-weight-medium mt-3"><a href="#" class="text-decoration-none link">You should have eagle’s
+                        eye on new trends and techonogies</a></h5>
+        
+                    <a href="#" class="text-decoration-none linking text-themecolor mt-2">Learn More</a>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row">
+                <div class="col-md-6 on-hover">
+                  <div class="card border-0 ">
+                    <a href="#">
+                      <img class="img-fluid card-img-top feed-area" src="/ltstatic/home/event3.webp" alt="wrappixel kit"></a>
+                    <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
+                      Oct<span class="d-block">23</span></div>
+                    <h5 class="font-weight-medium mt-3"><a href="#" class="text-decoration-none link">You should have eagle’s
+                        eye on new trends and techonogies</a></h5>
+        
+                    <a href="#" class="text-decoration-none linking text-themecolor mt-2">Learn More</a>
+                  </div>
+                </div>
+                <div class="col-md-6 on-hover">
+                  <div class="card border-0 ">
+                    <a href="#">
+                      <img class="img-fluid card-img-top feed-area" src="/ltstatic/home/event3.webp" alt="wrappixel kit"></a>
+                    <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
+                      Oct<span class="d-block">23</span></div>
+                    <h5 class="font-weight-medium mt-3"><a href="#" class="text-decoration-none link">You should have eagle’s
+                        eye on new trends and techonogies</a></h5>
+        
+                    <a href="#" class="text-decoration-none linking text-themecolor mt-2">Learn More</a>
+                  </div>
+                </div>
+              
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+       
+        <!-- <div class="col-md-4 on-hover">
           <div class="card border-0 ">
             <a href="#">
               <img class="img-fluid card-img-top feed-area" src="/ltstatic/home/event1.webp" alt="wrappixel kit"></a>
@@ -187,7 +294,7 @@ HOME
             <a href="#" class="text-decoration-none linking text-themecolor mt-2">Learn More</a>
           </div>
         </div>
-        <!-- Column -->
+        
         <div class="col-md-4 on-hover">
           <div class="card border-0 ">
             <a href="#"><img class="img-fluid card-img-top feed-area" src="/ltstatic/home/event2.webp"
@@ -200,7 +307,7 @@ HOME
             <a href="#" class="text-decoration-none linking text-themecolor mt-2">Learn More</a>
           </div>
         </div>
-        <!-- Column -->
+      
         <div class="col-md-4 on-hover">
           <div class="card border-0 ">
             <a href="#"><img class="img-fluid card-img-top feed-area" src="/ltstatic/home/event3.webp"
@@ -213,6 +320,8 @@ HOME
             <a href="#" class="text-decoration-none linking text-themecolor mt-2">Learn More</a>
           </div>
         </div>
+        -->
+
       </div>
     </div>
   </div>
