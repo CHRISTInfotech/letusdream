@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.urls import path, include
 
-from home.views import bangalorechristuniversity, allsaintssollege, gramblingstateuniversitylouisiana,  louisianastateuniversityshreveport, universityofLouisianaMonroe, donboscocollege, stannescollege, loyolacollege, binghamtonUniversity, calender, downloadcsv, index, locations, aboutUs, louisianatechuniversity, media, aboutConference, newsletter, pressRelease, photoGallery,  registration_user, trriennialConference,  cuT, jncaB, dreams, annualConference, yclpCourse, research, publications, testimonials
+from home.views import bangalorechristuniversity, allsaintssollege, gramblingstateuniversitylouisiana,  louisianastateuniversityshreveport, universityofLouisianaMonroe, donboscocollege, stannescollege, loyolacollegeConference, binghamtonUniversity, calender, downloadcsv, index, locations, aboutUs, louisianatechuniversity, media, aboutConference, newsletter, pressRelease, photoGallery,  registration_user, trriennialConference,  cuT, jncaB, dreams, annualConference, yclpCourse, research, publications, testimonials
 
 urlpatterns = [
     path('', index, name='main'),
@@ -29,7 +29,7 @@ urlpatterns = [
     path('louisiana-tech-university', louisianatechuniversity,
          name='louisiana-tech-university'),
     path('donboscocollege', donboscocollege, name='donboscocollege'),
-    path('loyolacollegeConference', loyolacollege, name='loyolacollegeConference'),
+    path('loyolacollegeConference', loyolacollegeConference, name='loyolacollegeConference'),
     path('stannescollege', stannescollege, name='stannescollege'),
     path('universityofLouisianaMonroe', universityofLouisianaMonroe,
          name='universityofLouisianaMonroe'),
