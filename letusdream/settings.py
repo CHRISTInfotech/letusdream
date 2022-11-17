@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,7 +26,7 @@ SECRET_KEY = 'django-insecure-)ij8yr40t__zu2z_$ve9@_#7x7183^v-ki9b(0i_7l60ndhz6!
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['10.5.5.31','letusdream.org','*']
+ALLOWED_HOSTS = ['10.5.5.31', 'letusdream.org', '*']
 
 
 # Application definition
@@ -56,8 +57,7 @@ ROOT_URLCONF = 'letusdream.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates']
-        ,
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -119,14 +119,15 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = '/ltstatic/'
-import os
-STATIC_ROOT = os.path.join(BASE_DIR, 'ltstatic/')
-#STATICFILES_DIRS = [
-#                   BASE_DIR / "ltstatic",
-#                    ]
+
+STATIC_ROOT = '/home/administrator/letusdream/ltstatic'
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'ltstatic')
+]
 
 MEDIA_URL = '/ltmedia/'
-MEDIA_ROOT = '/home/u1r60cp6vyvs/public_html/letusdream/ltmedia/'
+MEDIA_ROOT = '/home/administrator/letusdream/ltmedia/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
