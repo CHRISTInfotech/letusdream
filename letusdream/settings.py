@@ -28,7 +28,6 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['10.5.5.31', 'letusdream.org', '*']
 
-
 # Application definition
 
 INSTALLED_APPS = [
