@@ -30,6 +30,10 @@ def photoGallery(request):
     return render(request, 'aboutUs/photo-gallery.html')
 
 
+def youtubeMedia(request):
+    return render(request, 'aboutUs/media-yt.html')
+
+
 def aboutConference(request):
     return render(request, 'conference/aboutConference.html')
 
