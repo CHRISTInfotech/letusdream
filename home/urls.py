@@ -11,6 +11,7 @@ urlpatterns = [
     path('newsletter', newsletter, name='newsletter'),
     path('press-release/', pressRelease, name="press-release"),
     path('photo-gallery/', photoGallery, name="photo-gallery"),
+    path('youtube-media/', youtubeMedia, name="youtube-media"),
     path('about-conference', aboutConference, name='about-conference'),
     path('annualConference', allConferences, name='annualConference'),
     path('trriennial-conference', trriennialConference,
