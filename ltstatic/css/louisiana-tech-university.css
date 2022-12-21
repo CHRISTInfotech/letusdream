@@ -830,7 +830,7 @@ idance .timetable {
   position: absolute;
   left: -50px;
   padding: 2px;
-  top: 23%;
+  top: -46%;
 }
 .box-top .box-content {
   border-radius: 5px;
@@ -839,7 +839,7 @@ idance .timetable {
   position: absolute;
   left: -50px;
   padding: 2px;
-  top: 23%;
+  top: -46%;
 }
 
 .box-content p {
@@ -869,13 +869,20 @@ idance .timetable {
   bottom: -20px;
 }
 
-
-.card{
+.card {
   margin: 5% 0%;
 }
 
-.card-body{
+.card-body {
   margin: 0% 0% 0% 3%;
   padding: 6% 0%;
 }
 
+.card-deck .card {
+  min-height: 1222px;
+}
+.card-img,
+.view-overlay,
+.card-img-top {
+  max-height: 360px;
+}
