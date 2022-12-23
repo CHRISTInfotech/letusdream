@@ -1,0 +1,259 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+Annual Conferences
+{% endblock %}
+
+
+{% block extraStyles %}
+<link rel="stylesheet" href="{% static 'css/annualConference.css' %}">
+{% endblock extraStyles %}
+
+{% block links %}
+{% endblock links %}
+
+{% block content %}
+<nav aria-label="breadcrumb animated slideInDown" class="cus-breadcrumb">
+    <ol class="breadcrumb text-uppercase mb-0 bg-white">
+        <li class="breadcrumb-item"><a class="text-black text-decoration-none" href="{% url 'main' %}">Home</a></li>
+        <li class="breadcrumb-item"><a class="text-black text-decoration-none"
+                href="{% url 'main' %}#conference">Conference</a></li>
+        <li class="breadcrumb-item  active" aria-current="page">Annual Conferences</li>
+    </ol>
+</nav>
+<br>
+<div class="container">
+    <div class="row p-5">
+        <h1>Annual Conferences</h1>
+        <h5 class="text-center mt-3 mb-3">
+            "The chance to reconnect with people in person, talk over key topics, and go
+            to some great sessions was invaluable."
+        </h5>
+    </div>
+</div>
+
+
+<div class="container">
+
+    <div class="row cus-row">
+
+        <div class="col-lg-4 col-md-6 col-sm-6">
+            <a href="{% url 'allsaintssollege' %}">
+                <div class="card">
+                    <img src="{% static 'conference/allsaints.jpg' %}" class="img1">
+                    <div
+                        class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
+                        Dec<span class="d-block">03</span>2022
+                    </div>
+                    <div class="card-text">
+                        <h3 class="text-green">All Saints College</h3>
+                        <h5>Trivandrum</h5>
+                    </div>
+                </div>
+            </a>
+
+            <h5 class="text-center mt-3">All Saints College, Trivandrum</h5>
+
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-sm-6">
+            <a href="{% url 'stannescollege' %}">
+                <div class="card">
+                    <img src="{% static 'conference/stanne.png' %}" class="img1">
+                    <div
+                        class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
+                        Nov<span class="d-block">19</span>2022
+                    </div>
+                    <div class="card-text">
+                        <h3 class="text-green">St. Annes Degree College for Women</h3>
+                        <h5>Bangalore</h5>
+                    </div>
+                </div>
+            </a>
+
+            <h5 class="text-center mt-3">St. Annes Degree College for Women Bangalore</h5>
+
+        </div>
+
+
+        <div class="col-lg-4 col-md-6 col-sm-6">
+            <a href="{% url 'binghamton-university-new-york' %}">
+                <div class="card">
+                    <img src="{% static 'conference/BinghamtonUniversity.jpeg' %}" class="img1">
+                    <div
+                        class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
+                        Nov<span class="d-block">18</span>2022
+                    </div>
+                    <div class="card-text">
+                        <h3 class="text-green">Binghamton <br> University</h3>
+                        <h5>New York</h5>
+                    </div>
+                </div>
+            </a>
+
+            <h5 class="text-center mt-3">Binghamton University, New York</h5>
+        </div>
+
+
+    </div>
+
+    <div class="row cus-row">
+
+        <div class="col-lg-4 col-md-6 col-sm-6">
+            <a href="{% url 'louisiana-tech-university' %}">
+                <div class="card ">
+                    <img src="{% static 'conference/LouisianaTechUniversity.jpg' %}"
+                        class="img-fluid card-img-top feed-area">
+                    <div
+                        class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
+                        Oct<span class="d-block">27</span>2022</div>
+                    <div class="card-text">
+                        <h3 class="text-green">Louisiana Tech <br> University</h3>
+                        <h5>Louisiana</h5>
+                    </div>
+                </div>
+            </a>
+
+            <h5 class="text-center mt-3">Louisiana Tech University, Louisiana</h5>
+
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-sm-6">
+            <a href="{% url 'donboscocollege' %}">
+                <div class="card">
+                    <img src="{% static 'conference/bosco.jpg' %}" class="img-fluid card-img-top feed-area">
+                    <div
+                        class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
+                        Oct<span class="d-block">15</span>2022</div>
+                    <div class="card-text">
+                        <h3 class="text-green">Donbosco College <h5>Chennai</h5>
+                    </div>
+                </div>
+            </a>
+            <h5 class="text-center mt-3">Donbosco College, Chennai</h5>
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-sm-6">
+           
+                <div class="card">
+                    <img src="{% static 'conference/christ-university-bangalore.jpg' %}" class="img1">
+                    <div class="card-text">
+                        <h3 class="text-green">Christ
+                            <br>
+                            University
+                        </h3>
+                        <h5> Bangalore</h5>
+                    </div>
+                </div>
+            </a>
+
+            <h5 class="text-center mt-3">Christ University, Bangalore</h5>
+
+        </div>
+
+    </div>
+
+    <div class="row cus-row">
+
+        <div class="col-lg-4 col-md-6 col-sm-6">
+            <a href="{% url 'jyoti-nivas-college-autonomous' %}">
+                <div class="card">
+                    <img src="{% static 'conference/JyotiNivasCollege.jpg' %}" class="img1">
+                    <div class="card-text">
+                        <h3 class="text-green">Jyoti Nivas College Autonomous</h3>
+                        <h5>Bangalore</h5>
+                    </div>
+                </div>
+            </a>
+
+            <h5 class="text-center mt-3">Jyoti Nivas College Autonomous Bangalore</h5>
+
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-sm-6">
+            <a href="{% url 'universityofLouisianaMonroe' %}">
+                <div class="card ">
+                    <img src="{% static 'conference/Monroe.jpg' %}" class="img-fluid card-img-top feed-area">
+                    <div class="card-text">
+                        <h3 class="text-green">University of <br> Louisiana </h3>
+                        <h5>Monroe</h5>
+                    </div>
+                </div>
+            </a>
+
+            <h5 class="text-center mt-3">University of Louisiana, Monroe</h5>
+
+        </div>
+
+
+        <div class="col-lg-4 col-md-6 col-sm-6">
+            <a href="{% url 'christ-university-thiruvananthapuram' %}">
+                <div class="card">
+                    <img src="{% static 'conference/Christ-thrivandrum.jpg' %}" class="img1">
+                    <div class="card-text">
+                        <h3 class="text-green">CHRIST <br> University</h3>
+                        <h5>Thiruvananthapuram</h5>
+                    </div>
+                </div>
+            </a>
+            <h5 class="text-center mt-3">CHRIST University Thiruvananthapuram</h5>
+        </div>
+
+    </div>
+
+    <div class="row cus-row">
+
+        <div class="col-lg-4 col-md-6 col-sm-6">
+            <a href="{% url 'allsaintssollege' %}">
+                <div class="card">
+                    <img src="{% static 'conference/allsaints.jpg' %}" class="img1">
+                    <div class="card-text">
+                        <h3 class="text-green">All Saints College</h3>
+                        <h5>Trivandrum</h5>
+                    </div>
+                </div>
+            </a>
+
+            <h5 class="text-center mt-3">All Saints College, Trivandrum</h5>
+
+        </div>
+
+
+        <div class="col-lg-4 col-md-6 col-sm-6">
+            <a href="{% url 'louisiana-state-university-shreveport' %}">
+                <div class="card">
+                    <img src="{% static 'conference/Shreveport.jpg' %}" class="img1">
+
+                    <div class="card-text">
+                        <h3 class="text-green">Louisiana State <br> University</h3>
+                        <h5> Shreveport</h5>
+                    </div>
+                </div>
+            </a>
+
+            <h5 class="text-center mt-3">Louisiana State University, Shreveport</h5>
+
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-sm-6">
+            <a href="{% url 'grambling-state-university-louisiana' %}">
+                <div class="card ">
+                    <img src="{% static 'conference/Grambling State University.jpg' %}"
+                        class="img-fluid card-img-top feed-area">
+                    <div class="card-text">
+                        <h3 class="text-green">Grambling State University</h3>
+                        <h5>Louisiana</h5>
+                    </div>
+                </div>
+            </a>
+
+            <h5 class="text-center mt-3">Grambling State University, Louisiana</h5>
+
+        </div>
+
+    </div>
+
+    <div class="m-5"></div>
+</div>
+{% endblock %}
