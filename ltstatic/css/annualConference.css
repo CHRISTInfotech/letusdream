@@ -18,7 +18,7 @@ h1 {
     overflow: hidden;
 }
 
-.card::before {
+/* .card::before {
     position: absolute;
     content: '';
     width: 80%;
@@ -30,11 +30,11 @@ h1 {
     transform: rotate(25deg);
     transform-origin: center top 0;
     transition: 0.5s;
-}
+} */
 
-.card:hover:before {
+/* .card:hover:before {
     left: 10%;
-}
+} */
 
 .card img {
     width: 100%;
@@ -52,9 +52,9 @@ h1 {
     transition: 1.1s;
 }
 
-.card:hover .card-text {
+/* .card:hover .card-text {
     top: 80px;
-}
+} */
 
 .row {
     padding-bottom: 2% !important;
@@ -105,7 +105,7 @@ h5 {
     color: #316ce8;
   }
   
- .on-hover {
+ /* .on-hover {
     -webkit-transition: 0.2s ease-in;
     -o-transition: 0.2s ease-in;
     transition: 0.2s ease-in;
@@ -115,7 +115,7 @@ h5 {
     -webkit-transform: translateY(-10px);
     -ms-transform: translateY(-10px);
     transform: translateY(-10px);
-  }
+  } */
   
 .date-pos {
     right: 10px;
