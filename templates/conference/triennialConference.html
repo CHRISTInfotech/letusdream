@@ -104,13 +104,13 @@ Triennial Conference
 
     <div class="row ">
         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-center align-self-center d-flex justify-content-end">
-            <div class="container-btn align-self-center d-flex justify-content-end">
-                <a href="#"></a><button><span>Download Brochure</span></button></a>
+            <div>
+                <a href="#"></a><button class="btn-2 m-1"><span>Download Brochure</span></button></a>
             </div>
         </div>
         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-center align-self-center d-flex justify-content-start">
-            <div class="container-btn align-self-center d-flex justify-content-end">
-                <a href="{% url 'registration_user' %}"></a><button><span>Register Now</span></button></a>
+            <div>
+                <a href="{% url 'registration_user' %}"></a><button class="btn-2 m-1"><span>Register Now</span></button></a>
             </div>
         </div>
     </div>
@@ -517,7 +517,7 @@ Triennial Conference
                 <p class="text-center fs-5">9.10 PM – Closing remarks</p>
                 <p class="text-center fs-5">9.20 PM – Virtual Music Band</p>
                 <div class="text-center">
-                    <button type="button" class="button3 btn-primary text-center cus-but-1">Download Schedule
+                    <button type="button" class="button3 text-center cus-but-1">Download Schedule
                     </button>
                 </div>
                 <p class="text-center fs-6 col-green"><b>All conference program times are in
@@ -525,8 +525,8 @@ Triennial Conference
                         Standard Time (IST). We are providing a time zone converter to assist you in converting IST to
                         your local time:</b></p>
                 <div class="text-center m-3">
-                    <button type="button" class="button3 text-center cus-but-2 "><a
-                            class="text-decoration-none text-white"
+                    <button type="button" class="button3 text-center cus-but-2"><a
+                            class="text-decoration-none "
                             href="https://www.timeanddate.com/worldclock/converter.html" target="_blank">Time Zone
                             Converter</a></button>
                 </div>
@@ -544,7 +544,7 @@ Triennial Conference
         <div class="row">
             <div class="col-md-12">
                 <h1 class="text-green text-center">UNIQUE FEATURES</h1>
-                <h4 class="justify-content-center text-info">Panel Breakouts</h4>
+                <h4 class="justify-content-center text-center">Panel Breakouts</h4>
 
                 <div id="carouselExampleIndicators1" class="carousel slide" data-ride="carousel">
                     <ol class="carousel-indicators">
@@ -633,8 +633,8 @@ Triennial Conference
                 class="img-fluid rounded mx-auto d-block cus-img" alt="Responsive image">
         </div>
         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-center align-self-center d-flex justify-content-start">
-            <div class="container-btn align-self-center d-flex justify-content-end">
-                <a href="{% url 'registration_user' %}"></a><button><span>Register Now</span></button></a>
+            <div>
+                <a href="{% url 'registration_user' %}"></a><button class="btn-2 m-1"><span>Register Now</span></button></a>
             </div>
         </div>
         <div class="col-md-6 mt-5">
@@ -664,6 +664,17 @@ Triennial Conference
             <h1 class="text-green text-center">
                 PROMOTIONAL VIDEOS
             </h1>
+            <div class="gallery">
+                <div class="video-box cus-he">
+                    <iframe src="https://www.youtube.com/embed/4VOVmsmwmXY" class="cus-he"></iframe>
+                </div>
+                <div class="video-box active cus-he">
+                    <iframe src="https://www.youtube.com/embed/6JtTLQfcZw8" class="cus-he"></iframe>
+                </div>
+                <div class="video-box  cus-he">
+                    <iframe src="https://www.youtube.com/embed/_yrdXi2qqRE" class="cus-he"></iframe>
+                </div>               
+            </div>
             <!-- <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
                     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
