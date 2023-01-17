@@ -94,6 +94,23 @@ body {
   right: 0;
 }
 
+.btn-2 {
+  background: transparent;
+  border: 2px solid #0a7b79;
+  width: 200px;
+  padding: 15px 0;
+  text-align: center;
+  border-radius: 25px;
+  font-weight: bold;
+  color: #0a7b79;
+}
+
+.btn-2:hover {
+  border: 2px solid #d3f2e9;
+  background: #d3f2e9;
+}
+
+
 .container-btn button {
   height: 50px;
   width: 200px;
@@ -414,19 +431,38 @@ h2 {
 }
 
 .cus-but-1 {
+  color: #ffffff ;
+  border-radius: 100px;
   background-color: #0c71c3;
+  border: #000000;
   width: 250px;
-  height: 30px;
+  height: 50px;
   font-size: 18px;
 }
 
-.cus-but-2 {
-  color: #ffffff !important;
+.cus-but-1:hover {
+  background: transparent;
+  color: black;
+  border: 2px solid #0c71c3;  
+}
+
+
+.cus-but-2 {  
+  text-decoration:rgb(0, 0, 0);
   border-radius: 11px;
   background-color: #3ec922;
-  width: 240px;
+  color: black !important;  
+  border: #000000;
+  width: 240px; 
   height: 50px;
   font-size: 16px;
+}
+
+.cus-but-2:hover {
+  background: transparent;
+  text-decoration:rgb(0, 0, 0);
+  color: black !important;
+  border: 2px solid #3ec922;  
 }
 
 .col-green {
@@ -436,6 +472,17 @@ h2 {
   height: 400px !important;
 }
 
+.carousel-item {
+  position: relative;
+  display: none;
+  float: left;
+  width: 100%;
+  margin-right: -100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transition: transform .6s ease-in-out;
+  border: rgba(5,109,193,0.49) 4px solid;
+}
 h4:after {
   content: "";
   display: block;
@@ -450,4 +497,54 @@ h4:after {
     rgb(255, 255, 255)
   );
   border-image-slice: 1;
+}
+
+.cus-he {
+  height: 500px;
+}
+.gallery {
+  height: auto;
+  width: 100%;
+  display: flex;
+  margin: 1% auto 0;
+  box-sizing: border-box;
+}
+
+.video-box {
+  margin: 0 1%;
+  flex-grow: 1;
+  flex-basis: 0;
+  transition: .5s;
+}
+
+.video-box iframe {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: .5s;
+}
+
+.video-box:hover {
+  flex-basis: 50%;
+}
+
+.active {
+  flex-basis: 50%;
+}
+
+.gallery:hover .active {
+  flex-basis: 0;
+}
+
+.video-box:nth-child(1):hover {
+  flex-basis: 50%;
+}
+
+.container-fluid {
+  padding: 4% 15%;
+}
+
+.colored-section {
+
+  color: #7ca8a1;
 }
