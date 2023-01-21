@@ -30,12 +30,16 @@ def photoGallery(request):
     return render(request, 'aboutUs/photo-gallery.html')
 
 
+def youtubeMedia(request):
+    return render(request, 'aboutUs/media-yt.html')
+
+
 def aboutConference(request):
     return render(request, 'conference/aboutConference.html')
 
 
-def annualConference(request):
-    return render(request, 'conference/annual-conference.html')
+def allConferences(request):
+    return render(request, 'conference/annualConference.html')
 
 
 def trriennialConference(request):
@@ -61,27 +65,35 @@ def jncaB(request):
 def louisianatechuniversity(request):
     return render(request, 'conference/louisiana-tech-university.html')
 
-def donboscocollege(request):
-    return render(request,'conference/donbosco-college-of-arts-and-science.html')
 
-def loyola(request):
-    return render(request,'conference/loyola.html')  
+def donboscocollege(request):
+    return render(request, 'conference/donbosco-college-of-arts-and-science.html')
+
 
 def stannescollege(request):
-    return render(request,'conference/stannes-college.html')   
+    return render(request, 'conference/stannes-college.html')
+
+
+def loyolacollegeConference(request):
+    return render(request, 'conference/loyola.html')
+
 
 def universityofLouisianaMonroe(request):
-    return render(request,'conference/universityofLouisianaMonroe.html') 
+    return render(request, 'conference/universityofLouisianaMonroe.html')
+
 
 def allsaintssollege(request):
-    return render(request,'conference/allsaintssollege.html')
+    return render(request, 'conference/allsaintssollege.html')
+
 
 def louisianastateuniversityshreveport(request):
-    return render(request,'conference/louisianastateuniversityshreveport.html')  
+    return render(request, 'conference/louisianastateuniversityshreveport.html')
+
 
 def gramblingstateuniversitylouisiana(request):
-    return render(request,'conference/grambling-state-university-louisiana.html')  
-    
+    return render(request, 'conference/grambling-state-university-louisiana.html')
+
+
 def yclpCourse(request):
     return render(request, 'courses/yclpCourse.html')
 
@@ -135,37 +147,43 @@ def publications(request):
 def registration_user(request):
 
     if request.method == "POST":
-        name=request.POST.get('name')
-        email=request.POST.get('email')
-        aboutme=request.POST.get('aboutme')
-        aboutother=request.POST.get('aboutother')
-        orgaff=request.POST.get('orgaff')
-        orgname=request.POST.get('orgname')
-        phone=request.POST.get('phone')
-        confdate=request.POST.getlist('confdate')
-        prevconf=request.POST.getlist('prevconf')
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        aboutme = request.POST.get('aboutme')
+        aboutother = request.POST.get('aboutother')
+        orgaff = request.POST.get('orgaff')
+        orgname = request.POST.get('orgname')
+        phone = request.POST.get('phone')
+        confdate = request.POST.getlist('confdate')
+        prevconf = request.POST.getlist('prevconf')
 
-        confreg=ConferenceRegistration.objects.create(name=name,email=email,aboutme=aboutme,aboutother=aboutother,orgaff=orgaff,orgname=orgname,phone=phone,confdate=confdate,prevconf=prevconf)
+        confreg = ConferenceRegistration.objects.create(
+            name=name, email=email, aboutme=aboutme, aboutother=aboutother, orgaff=orgaff, orgname=orgname, phone=phone, confdate=confdate, prevconf=prevconf)
         confreg.save()
         print(confreg)
         return redirect('registration_user')
-    else :
-        return render(request,'registration.html')
+    else:
+        return render(request, 'registration.html')
 #    return render(request, 'registration.html')
 
+
 def calender(request):
-    return render(request,'home/calender.html')
+    return render(request, 'home/calender.html')
+
 
 def downloadcsv(request):
-    response = HttpResponse(content_type='text/csv')    
-    response['Content-Disposition'] = 'attachment; filename="file.csv"'  
-    confreg = ConferenceRegistration.objects.all()  
-    writer = csv.writer(response)  
+    response = HttpResponse(content_type='text/csv')
+    response['Content-Disposition'] = 'attachment; filename="file.csv"'
+    confreg = ConferenceRegistration.objects.all()
+    writer = csv.writer(response)
 
-    writer.writerow(['Name','Email ID','About me','if other','Organisation Affilation','Organisation Name','Phone No','Conference Date','Previous Conference'])
+    writer.writerow(['Name', 'Email ID', 'About me', 'if other', 'Organisation Affilation',
+                    'Organisation Name', 'Phone No', 'Conference Date', 'Previous Conference'])
     for i in confreg:
-        writer.writerow([i.name,i.email,i.aboutme,i.aboutother,i.orgaff,i.orgname,i.phone,i.confdate,i.prevconf])
+        writer.writerow([i.name, i.email, i.aboutme, i.aboutother,
+                        i.orgaff, i.orgname, i.phone, i.confdate, i.prevconf])
     return response
 
+
 def testimonials(request):
-    return render(request,'home/view_testimonials.html')
+    return render(request, 'home/view_testimonials.html')

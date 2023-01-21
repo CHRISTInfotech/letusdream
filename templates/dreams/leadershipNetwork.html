@@ -34,7 +34,7 @@ YCLP
             <h1 class="site-heading text-center text-faded  d-lg-block mb-0 site-heading-upper">
                 <span>DREAMS GYLN: Project Outline</span>
             </h1>
-           
+
             <p class="h1 text-center fw-bold text-green fs-3">Global Youth Leadership Network</p>
         </div>
 
@@ -50,7 +50,7 @@ YCLP
 
 <div class="conatainer-fluid my-2 d-flex justify-content-center">
     <a href="{% url 'registration_user' %}"><button type="button" class="button"><span>Join Us</span></button>
-    </div></a>
+</div></a>
 <section class="page-section">
     <div class="container">
         <div class="product-item">
@@ -202,12 +202,37 @@ YCLP
 
 </section>
 <br><br>
+<div class="container mt-3">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="text-green text-center">Learn More About our Interventions</h1>
+            <p class="justify-content-center">
+                <span class="fw-bold">Conflict management</span> is the ability to recognize and resolve problems in a
+                rational, fair, and efficient manner. Conflicts are an unavoidable part of our lives. It's critical to
+                have individuals who understand conflicts and ways to resolve them. Conflict management is crucial in
+                leadership, preventing and resolving disagreements is difficult. It's important to understand various
+                perspectives to accept and comprehend that individuals have different realities. The team leaders must
+                make sure that individual tasks and responsibilities are communicated efficiently.
+            </p>
+            <p class="justify-content-center">
+                <span class="fw-bold">Self-expression</span> is the expression of one's thoughts through words,
+                choices, or actions. Self expression, comprises our choices and actions of daily life. our creative
+                expressions, and our choices of words. Expressing creative and emotional self facilitates personal
+                growth and subjective well-being. Improving our ways of self-expression is important for an individual
+                to make a good impression on others Making an impression on others will help us defines who we are.
+            </p>
+
+            <p class="justify-content-center"> Reach us : <a class="text-decoration-none text-info"
+                    href="mailto:gyln@pletusdream.org">gyln@pletusdream.org</a></p>
+        </div>
+    </div>
+</div>
 <!-- Speaker -->
-<div class="container">
+<div class="container mt-3">
 
     <h1 class="text-center">OUR TEAM</h1>
 
-    <div class="row text-center">
+    <div class="row text-center mt-3 py-3">
 
 
 
@@ -300,7 +325,52 @@ YCLP
 
 
 </div>
-{% include 'partials/_testimonials.html' %}
+<div class=" py-5 bg-greenlight"> 
+    <div class="container py-5">
+        <h1 class="text-green text-center my-5 text-uppercase fw-bold">
+            Participants Speak
+        </h1>
+                <div class="testimonial">
+                    
+                <blockquote>
+                    GYLN is one of the best things that happened to me this year. I started as a regular mentor in a small chapter of Dreams, from there I became the coordinator of Dreams media and finally to GYLN.  In GYLN, we have people coming from different walks of life, countries,  cultures, languages, and qualifications. At GYLN I have an opportunity to show my talents, learn about new experiences and cultures.  At times the team identifies my problems and tries to give me a better solution. I am really happy and proud to be a member of GYLN. The only suggestion I have is to bring up more activities and participants in the coming future.
+                </blockquote>
+                <div></div><img
+                src="{% static 'locations/bangalore/default.png'%}" alt="" width="100"
+                class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+                <p>
+                    Jo Anto Nadamukath
+                </p>
+                </div>
+                <div class="testimonial">
+                    <blockquote>
+                        I love the platform and I feel the platform provides a lot of opportunities to talk and grow. I’m comfortable speaking during each meeting and your team made us comfortable to interact with the participants. I truly enjoy the experience. I think each meeting is always fun because we discuss different topics and it gives us chance to bring new perspectives to situations.
+                    </blockquote>
+                    <div></div>
+                    <img
+                    src="{% static 'locations/bangalore/default.png'%}" alt="" width="100"
+                    class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+                    <p>
+                        Kaici G
+                    </p>
+                    </div>
+                    <div class="testimonial">
+                        <blockquote>
+                            As a whole, I think the GLYN platform is amazing. It gets young leaders to interact with one another on an international level. Can never have too much of that. It’s very great to have engaging discussions with each one of them. 
+                        </blockquote>
+                        <div></div>
+                        <img
+                    src="{% static 'locations/bangalore/default.png'%}" alt="" width="100"
+                    class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+                        <p>
+                            Samuel
+                        </p>
+        </div>
+
+    </div>
+
+</div>
+{% comment %} {% include 'partials/_testimonials.html' %}  {% endcomment %}
 <br><br>
 </body>
 
