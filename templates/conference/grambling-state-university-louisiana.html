@@ -47,7 +47,7 @@ Louisiana Tech University
 <nav aria-label="breadcrumb animated slideInDown" class="cus-breadcrumb">
     <ol class="breadcrumb text-uppercase mb-0 bg-white">
         <li class="breadcrumb-item"><a class="text-black text-decoration-none" href="{% url 'main' %}">Home</a></li>
-        <li class="breadcrumb-item"><a class="text-black text-decoration-none" href="{% url 'annual-conference' %}">Annual Conference</a></li>
+        <li class="breadcrumb-item"><a class="text-black text-decoration-none" href="{% url 'annualConference' %}">Annual Conference</a></li>
         <li class="breadcrumb-item  active" aria-current="page">Grambling State University, Louisiana</li>
     </ol>
 </nav>
@@ -113,7 +113,7 @@ Louisiana Tech University
 
 
   <!-- Gallery -->
-  <div class="section-member-popup mt-5 pt-5">
+  {% comment %} <div class="section-member-popup mt-5 pt-5">
     <div class="container container-member-popup  mb-5 mt-5 pt-5">
        <div class="col-md-12 text-center mb-5 mt-5 pt-5">
            <h1 class="big-heading text-uppercase mb-5">Conference Chair</h2>
@@ -205,7 +205,7 @@ Louisiana Tech University
    
 
     </div>
-</div>
+</div> {% endcomment %}
 
 
 

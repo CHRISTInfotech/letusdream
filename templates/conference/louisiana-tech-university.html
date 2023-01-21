@@ -30,15 +30,16 @@ Louisiana Tech University
 
 
 <!-- MDB -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.css" rel="stylesheet" />
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 
 <!-- Calender CDN -->
-<script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js"></script>  
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/locales-all.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/locales-all.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/fullcalendar@5.11.3/main.min.css,npm/fullcalendar@5.11.3/main.min.css">
+<link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/combine/npm/fullcalendar@5.11.3/main.min.css,npm/fullcalendar@5.11.3/main.min.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css">
 
@@ -48,492 +49,1370 @@ Louisiana Tech University
 {% block content %}
 
 <nav aria-label="breadcrumb animated slideInDown" class="cus-breadcrumb">
-    <ol class="breadcrumb text-uppercase mb-0 bg-white">
-        <li class="breadcrumb-item"><a class="text-black text-decoration-none" href="{% url 'main' %}">Home</a></li>
-        <li class="breadcrumb-item"><a class="text-black text-decoration-none" href="{% url 'annual-conference' %}">Annual Conference</a></li>
-        <li class="breadcrumb-item  active" aria-current="page">Louisiana Tech University</li>
-    </ol>
+  <ol class="breadcrumb text-uppercase mb-0 bg-white">
+    <li class="breadcrumb-item"><a class="text-black text-decoration-none" href="{% url 'main' %}">Home</a></li>
+    <li class="breadcrumb-item"><a class="text-black text-decoration-none" href="{% url 'annualConference' %}">Annual
+        Conference</a></li>
+    <li class="breadcrumb-item  active" aria-current="page">Louisiana Tech University</li>
+  </ol>
 </nav>
 
 <h1 class="fw-bold text-center fs-1 text-green text-uppercase heading-h3 mt-5">Louisiana Tech University Conference</h1>
 <p class="text-center  fs-4">
- 27 October 2022, 9:30 AM to 4:30 PM at Louisiana Tech University.
+  27 October 2022, 9:30 AM to 4:30 PM at Louisiana Tech University.
 </p>
-     
 
-
-<nav class="social">
-          <ul>
-              <li><a href="https://community.latech.edu/let-us-dream/" class="text-decoration-none fs-6 text-white" target="_blank">Program Conference Details <i class="bi bi-people-fill"></i></a></li>
-              <li><a href="{% url 'registration_user' %}"  class="text-decoration-none fs-6 text-white">Register <i class="bi bi-pencil-square"></i></a></li>
-              <li><a href="https://community.latech.edu/let-us-dream/unsung-hero/" target="_blank" class="text-decoration-none fs-6 text-white">Nominate an Unsung Hero<i class="bi bi-person-fill"></i></a></li>
-          </ul>
-</nav>
-       
+<div class="conainer text-center m-5">
+  <a href="{% static 'conference\broshures\LousianaTech_27Oct22.pdf' %}" class="btn btn-outline-success" download>Event
+    Details</a>
+</div>
 
 <div class="container">
-    <p class="pl-4 pr-5">The Let Us Dream community conference was first held in 2017 at Louisiana Tech University. The conference provides a forum for professionals, scholars, researchers, and college and university students to share experiences, challenges, and achievements in their respective efforts towards community improvement.</p>
-    <div class="row py-5">
-        <div class="col-md-12">
-            <div class="main-timeline">
-                <a href="#" class="timeline">
-                    <div class="timeline-icon"><i class="fa-solid fa-globe"></i></div>
-                    <div class="timeline-content">
-                        <h3 class="title">HISTORY</h3>
-                        <p class="description">
-                            Volunteers from the local community including business owners involved in voluntary community developmental projects, non-profit organizations, philanthropists, social workers, educators or educational administrators, retired personnel, students, or anyone interested in contributing to their community development can be a part of the conference and engage in fruitful dialogues with visionaries through the conference.
-                        </p>
-                    </div>
-                </a>
-                <a href="#" class="timeline">
-                    <div class="timeline-icon"><i class="fa-regular fa-lightbulb"></i></div>
-                    <div class="timeline-content">
-                        <h3 class="title pl-5">VISION</h3>
-                        <p class="description pl-5 ">
-                           Our Vision is to Empowered local communities for sustainable impact, improvement, Global Harmony (and Holistic Success).
-                        </p>
-                    </div>
-                </a>
-                <a href="#" class="timeline">
-                    <div class="timeline-icon"><i class="fa-solid fa-rocket"></i></div>
-                    <div class="timeline-content">
-                        <h3 class="title">GOAL</h3>
-                        <p class="description">
-                            The Let Us Dream Conference was established in 2017 for the purpose of providing a forum for sharing experiences with successes and challenges in community improvement organizations and efforts. Broad conference goals are to  
-                            <ul>
-                                <li>Improve networking and collaboration among all those interested in community improvement organizations and programs.</li>
-                                <li>Promote volunteerism and empower all those involved in community improvement organizations and initiatives, including employees, volunteers, post-secondary students, researchers, and practitioners.</li>
-                                <li>Create a professional learning organization dedicated to improving local communities and characterized by a culture of shared researcher and practitioner knowledge, skills, theories, and best practices.</li>
-                            </ul>
-                        </p>
-                    </div>
-                </a>
-            </div>
-        </div>
+  <p class="pl-4 pr-5">The Let Us Dream community conference was first held in 2017 at Louisiana Tech University. The
+    conference provides a forum for professionals, scholars, researchers, and college and university students to share
+    experiences, challenges, and achievements in their respective efforts towards community improvement.</p>
+  <div class="row py-5">
+    <div class="col-md-12">
+      <div class="main-timeline">
+        <a href="#" class="timeline">
+          <div class="timeline-icon"><i class="fa-solid fa-globe"></i></div>
+          <div class="timeline-content">
+            <h3 class="title">HISTORY</h3>
+            <p class="description">
+              Volunteers from the local community including business owners involved in voluntary community
+              developmental projects, non-profit organizations, philanthropists, social workers, educators or
+              educational administrators, retired personnel, students, or anyone interested in contributing to their
+              community development can be a part of the conference and engage in fruitful dialogues with visionaries
+              through the conference.
+            </p>
+          </div>
+        </a>
+        <a href="#" class="timeline">
+          <div class="timeline-icon"><i class="fa-regular fa-lightbulb"></i></div>
+          <div class="timeline-content">
+            <h3 class="title pl-5">VISION</h3>
+            <p class="description pl-5 ">
+              Our Vision is to Empowered local communities for sustainable impact, improvement, Global Harmony (and
+              Holistic Success).
+            </p>
+          </div>
+        </a>
+        <a href="#" class="timeline">
+          <div class="timeline-icon"><i class="fa-solid fa-rocket"></i></div>
+          <div class="timeline-content">
+            <h3 class="title">GOAL</h3>
+            <p class="description">
+              The Let Us Dream Conference was established in 2017 for the purpose of providing a forum for sharing
+              experiences with successes and challenges in community improvement organizations and efforts. Broad
+              conference goals are to
+            <ul>
+              <li>Improve networking and collaboration among all those interested in community improvement organizations
+                and programs.</li>
+              <li>Promote volunteerism and empower all those involved in community improvement organizations and
+                initiatives, including employees, volunteers, post-secondary students, researchers, and practitioners.
+              </li>
+              <li>Create a professional learning organization dedicated to improving local communities and characterized
+                by a culture of shared researcher and practitioner knowledge, skills, theories, and best practices.</li>
+            </ul>
+            </p>
+          </div>
+        </a>
+      </div>
     </div>
+  </div>
 </div>
 
 
 
-          
-        <div class="container">
-            <div id="mycarousel" class="carousel slide" data-bs-ride="carousel">
-                <ol class="carousel-indicators">
-                    <li data-bs-target="#mycarousel" data-bs-slide-to="0" class="active"></li>
-                    <li data-bs-target="#mycarousel" data-bs-slide-to="1"></li>
-                    <li data-bs-target="#mycarousel" data-bs-slide-to="2"></li>
-                </ol>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="row">
-                            <div class="col-lg ">
-                                <img src="ltstatic/conference/DREAMS-BAND-7-1-min-scaled.jpg" class="d-block w-100 h-100" alt="..." >
-                            </div>
-              
 
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="row">
-                            <div class="col-lg">
-                                <img src="ltstatic/conference/DREAMS-Site-Banner-2-1-scaled.jpg" class="d-block w-100 h-100" alt="...">
-                            </div>
+<div class="container">
+  <div id="mycarousel" class="carousel slide" data-bs-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-bs-target="#mycarousel" data-bs-slide-to="0" class="active"></li>
+      <li data-bs-target="#mycarousel" data-bs-slide-to="1"></li>
+      <li data-bs-target="#mycarousel" data-bs-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="row">
+          <div class="col-lg ">
+            <img src="ltstatic/conference/DREAMS-BAND-7-1-min-scaled.jpg" class="d-block w-100 h-100" alt="...">
+          </div>
 
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="row">
-                            <div class="col-lg">
-                                <img src="ltstatic/conference/DREAMS-BAND-4-1-min-scaled.jpg" class="d-block w-100" alt="...">
-                            </div>
-                      
-                        </div>
-                    </div>
-                </div>
-            </div>
+
         </div>
+      </div>
+      <div class="carousel-item">
+        <div class="row">
+          <div class="col-lg">
+            <img src="ltstatic/conference/DREAMS-Site-Banner-2-1-scaled.jpg" class="d-block w-100 h-100" alt="...">
+          </div>
 
-   <div class="container ">
-    <div class="row">
-        <div class="col-lg-12 pt-5">
-            <div class="gallery">
-              <div>
-                <iframe src="//www.youtube.com/embed/9Q4204GwFNo" allowfullscreen frameborder="0" name="tab"></iframe>
-              </div>
-              <div>
-                <span>
-                <a href="//www.youtube.com/embed/9Q4204GwFNo" target="tab"><img src="//img.youtube.com/vi/9Q4204GwFNo/default.jpg"></a>
-                <a href="//www.youtube.com/embed/pYnXrWivy1Y" target="tab"><img src="//img.youtube.com/vi/pYnXrWivy1Y/default.jpg"></a>
-                <a href="//www.youtube.com/embed/SKkELb8FANg" target="tab"><img src="//img.youtube.com/vi/SKkELb8FANg/default.jpg"></a>
-                <a href="//www.youtube.com/embed/9h5J8ZufTu0" target="tab"><img src="//img.youtube.com/vi/9h5J8ZufTu0/default.jpg"></a>
-                <a href="//www.youtube.com/embed/dwPl0X-yU1k" target="tab"><img src="//img.youtube.com/vi/dwPl0X-yU1k/default.jpg"></a>
-                <a href="//www.youtube.com/embed/YayLbO0K9Zc" target="tab"><img src="//img.youtube.com/vi/YayLbO0K9Zc/default.jpg"></a>
-              </span>
-              </div>
-            </div>
-                 
-            </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="row">
+          <div class="col-lg">
+            <img src="ltstatic/conference/DREAMS-BAND-4-1-min-scaled.jpg" class="d-block w-100" alt="...">
+          </div>
+
+        </div>
+      </div>
     </div>
-   </div>
- 
+  </div>
+</div>
 
-   <div class="container">
-    <h1 class="text-center mt-5 pt-5">PREVIOUS CONFERENCE</h1>
-   </div>
+<div class="container ">
+  <div class="row">
+    <div class="col-lg-12 pt-5">
+      <div class="gallery">
+        <div>
+          <iframe src="//www.youtube.com/embed/9Q4204GwFNo" allowfullscreen frameborder="0" name="tab"></iframe>
+        </div>
+        <div>
+          <span>
+            <a href="//www.youtube.com/embed/9Q4204GwFNo" target="tab"><img
+                src="//img.youtube.com/vi/9Q4204GwFNo/default.jpg"></a>
+            <a href="//www.youtube.com/embed/pYnXrWivy1Y" target="tab"><img
+                src="//img.youtube.com/vi/pYnXrWivy1Y/default.jpg"></a>
+            <a href="//www.youtube.com/embed/SKkELb8FANg" target="tab"><img
+                src="//img.youtube.com/vi/SKkELb8FANg/default.jpg"></a>
+            <a href="//www.youtube.com/embed/9h5J8ZufTu0" target="tab"><img
+                src="//img.youtube.com/vi/9h5J8ZufTu0/default.jpg"></a>
+            <a href="//www.youtube.com/embed/dwPl0X-yU1k" target="tab"><img
+                src="//img.youtube.com/vi/dwPl0X-yU1k/default.jpg"></a>
+            <a href="//www.youtube.com/embed/YayLbO0K9Zc" target="tab"><img
+                src="//img.youtube.com/vi/YayLbO0K9Zc/default.jpg"></a>
+          </span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+  <h1 class="text-center mt-5 pt-5">PAST CONFERENCES</h1>
+</div>
 
 <div class="container mt-5 pt-5 mb-5 pb-5">
-     
-      <section class="timeline-wrapper  mt-5 pt-5 mb-5 pb-5">
-        <div class="middle-line"></div>
-    
-        <div class="box box-top">
-            <div class="date">
-                <p>2017</p>      
-            </div>
-            <div class="box-content">
-                <img src="/ltstatic/conference/bangalore/poster.png" class="w-100 h-100 rounded " />
-            </div>
-        </div>
-    
-        <div class="box box-bottom">
-            <div class="date">
-                <p>2018</p>
-                
-            </div>
-            <div class="box-content">
-                <img src="/ltstatic/conference/lud/2018.png" class="w-100 h-100 rounded " />
-            </div>
-        </div>
-    
-        <div class="box box-top">
-            <div class="date">
-                <p>2019</p>
-                
-            </div>
-            <div class="box-content">
-                <img src="/ltstatic/conference/lud/2019.png" class="w-100 rounded" />
-                
-            </div>
-        </div>
-    
-        <div class="box box-bottom">
-            <div class="date">
-                <p>2020</p>
-                
-            </div>
-            <div class="box-content">
-                <img src="/ltstatic/conference/bangalore/poster.png" class="w-100  rounded " />
-                
-            </div>
-        </div>
-    
-        <div class="box box-top">
-            <div class="date">
-                <p>2021</p>
-                
-            </div>
-            <div class="box-content">
-                <img src="/ltstatic/conference/bangalore/poster.png" class="w-100 h-100 rounded " />
-            </div>
-        </div>
-    </section>
+
+  <section class="timeline-wrapper  mt-5 pt-5 mb-5 pb-5">
+    <div class="middle-line"></div>
+
+    <div class="box box-top">
+      <div class="date">
+        <p>2017</p>
+      </div>
+      <div class="box-content">
+        <img src="/ltstatic/conference/lud/2019.png" class="w-100 h-100 rounded " />
+      </div>
+    </div>
+
+    <div class="box box-bottom">
+      <div class="date">
+        <p>2018</p>
+
+      </div>
+      <div class="box-content">
+        <img src="/ltstatic/conference/lud/2018.png" class="w-100 h-100 rounded " />
+      </div>
+    </div>
+
+    <div class="box box-top">
+      <div class="date">
+        <p>2019</p>
+
+      </div>
+      <div class="box-content">
+        <img src="/ltstatic/conference/lud/2019.png" class="w-100 rounded" />
+
+      </div>
+    </div>
+
+    <div class="box box-bottom">
+      <div class="date">
+        <p>2020</p>
+
+      </div>
+      <div class="box-content">
+        <img src="/ltstatic/conference/lud/2019.png" class="w-100  rounded " />
+
+      </div>
+    </div>
+
+    <div class="box box-top">
+      <div class="date">
+        <p>2021</p>
+
+      </div>
+      <div class="box-content">
+        <img src="/ltstatic/conference/lud/2019.png" class="w-100 h-100 rounded " />
+      </div>
+    </div>
+  </section>
 </div>
 
 
 
 <div class="idance ">
-    <div class="schedule content-block">
-        <div class="container  mt-5 pt-5">
-            <h1 class="text-center mt-5 pt-5 mb-5">SCHEDULE</h1>
-           
-        
-            <div class="timetable ">
-        
-              <!-- Schedule Top Navigation -->
-              <nav class="nav nav-tabs">
-                <a class="nav-link ">Mon</a>
-                <a class="nav-link">Tue</a>
-                <a class="nav-link">Wed</a>
-                <a class="nav-link active">Thu</a>
-                <a class="nav-link">Fri</a>
-                <a class="nav-link">Sat</a>
-                <a class="nav-link">Sun</a>
-              </nav>
-        
-              <div class="tab-content">
-                <div class="tab-pane show active">
-                  <div class="row">
-                        <!-- Row 1 -->
-                    <!-- Schedule Item 1 -->
-                    <div class="col-md-4">
-                      <div class="timetable-item">
-                        <div class="timetable-item-img">
-                          <img src="/ltstatic/conference/lud/icons/icon1.png" >
-                        </div>
-                        <div class="timetable-item-main">
-                          <div class="timetable-item-time">9:00am - 9:30am</div>
-                          <div class="timetable-item-name">Registration and Vendor Networking</div>
-                         
-
-                        </div>
-                      </div>
-                    </div>
-        
-                    <!-- Schedule Item 2 -->
-                    <div class="col-md-4">
-                      <div class="timetable-item">
-                        <div class="timetable-item-img">
-                          <img src="/ltstatic/conference/lud/icons/icon2.png" >
-                        </div>
-                        <div class="timetable-item-main">
-                          <div class="timetable-item-time">9:30am - 9:35am</div>
-                          <div class="timetable-item-name">Welcome: Dr. Dickie Crawford</div>
-                         
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="timetable-item">
-                          <div class="timetable-item-img">
-                            <img src="/ltstatic/conference/lud/icons/icon2.png">
-                          </div>
-                          <div class="timetable-item-main">
-                            <div class="timetable-item-time">9:35am - 9:40am</div>
-                            <div class="timetable-item-name">Welcome: Father Lijo</div>
-                          
-                          </div>
-                        </div>
-                      </div>
+  <div class="schedule content-block">
+    <div class="container  mt-5 pt-5">
+      <h1 class="text-center mt-5 pt-5 mb-5">SCHEDULE</h1>
 
 
-                        <!-- Row 2 -->
-                    <!-- Schedule Item 3 -->
-                    <div class="col-md-4">
-                      <div class="timetable-item">
-                        <div class="timetable-item-img">
-                          <img src="/ltstatic/conference/lud/icons/icon3.png" alt="Street Dance">
-                        </div>
-                        <div class="timetable-item-main">
-                          <div class="timetable-item-time">9:40am - 9:55am</div>
-                          <div class="timetable-item-name">Keynote Speaker – Monroe Mayor Friday Ellis</div>
-                         
-                        </div>
-                      </div>
-                    </div>
-        
-                    <!-- Schedule Item 4 -->
+      <div class="timetable ">
 
-        
-                    <!-- Schedule Item 5 -->
-                    <div class="col-md-4">
-                      <div class="timetable-item">
-                        <div class="timetable-item-img">
-                          <img src="/ltstatic/conference/lud/icons/icon4.png" alt="Stretching">
-                        </div>
-                        <div class="timetable-item-main">
-                          <div class="timetable-item-time">10:00am - 11:00am</div>
-                          <div class="timetable-item-name">Education Panel</div>
-                         
-                        </div>
-                      </div>
-                    </div>
-        
-                        <!-- Row 3 -->
-                    <!-- Schedule Item 6 -->
-                    <div class="col-md-4">
-                      <div class="timetable-item">
-                        <div class="timetable-item-img">
-                          <img src="/ltstatic/conference/lud/icons/icon5.png" alt="Street Dance">
-                        </div>
-                        <div class="timetable-item-main">
-                          <div class="timetable-item-time">11:00am - 12:00pm</div>
-                          <div class="timetable-item-name">Social Panel</div>
-                          
-                        </div>
-                      </div>
-                    </div>
+        <!-- Schedule Top Navigation -->
+        <nav class="nav nav-tabs">
+          <a class="nav-link ">Mon</a>
+          <a class="nav-link">Tue</a>
+          <a class="nav-link">Wed</a>
+          <a class="nav-link active">Thu</a>
+          <a class="nav-link">Fri</a>
+          <a class="nav-link">Sat</a>
+          <a class="nav-link">Sun</a>
+        </nav>
 
-                    <div class="col-md-4">
-                        <div class="timetable-item">
-                          <div class="timetable-item-img">
-                            <img src="/ltstatic/conference/lud/icons/icon6.png" alt="Street Dance">
-                          </div>
-                          <div class="timetable-item-main">
-                            <div class="timetable-item-time">1:00pm - 2:00pm</div>
-                            <div class="timetable-item-name">Health Panel</div>
-                           
-                          </div>
-                        </div>
-                    </div>
+        <div class="tab-content">
+          <div class="tab-pane show active">
+            <div class="row">
+              <!-- Row 1 -->
+              <!-- Schedule Item 1 -->
+              <div class="col-md-4">
+                <div class="timetable-item">
+                  <div class="timetable-item-img">
+                    <img src="/ltstatic/conference/lud/icons/icon1.png">
+                  </div>
+                  <div class="timetable-item-main">
+                    <div class="timetable-item-time">9:00am - 9:30am</div>
+                    <div class="timetable-item-name">Registration and Vendor Networking</div>
 
-                    <div class="col-md-4">
-                        <div class="timetable-item">
-                          <div class="timetable-item-img">
-                            <img src="/ltstatic/conference/lud/icons/icon3.png" alt="Street Dance">
-                          </div>
-                          <div class="timetable-item-main">
-                            <div class="timetable-item-time">2:00pm - 2:15pm</div>
-                            <div class="timetable-item-name">Keynote Speaker – Dr. Noflin, Jr.</div>
-                         </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="timetable-item">
-                          <div class="timetable-item-img">
-                            <img src="/ltstatic/conference/lud/icons/icon7.png" alt="Yoga">
-                          </div>
-                          <div class="timetable-item-main">
-                            <div class="timetable-item-time">2:15pm - 3:00pm</div>
-                            <div class="timetable-item-name">Unsung Heroes</div>
-                           
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="col-md-4">
-                        <div class="timetable-item">
-                          <div class="timetable-item-img">
-                            <img src="/ltstatic/conference/lud/icons/icon8.png" alt="Yoga">
-                          </div>
-                          <div class="timetable-item-main">
-                            <div class="timetable-item-time">3:15pm - 4:15pm</div>
-                            <div class="timetable-item-name">Student Panel</div>
-                           
-                          </div>
-                        </div>
-                      </div>
-
-
-                      <div class="col-md-4">
-                        <div class="timetable-item">
-                          <div class="timetable-item-img">
-                            <img src="/ltstatic/conference/lud/icons/icon9.png" alt="Yoga">
-                          </div>
-                          <div class="timetable-item-main">
-                            <div class="timetable-item-time">4:15pm - 4:30pm</div>
-                            <div class="timetable-item-name">Closing Remarks</div>
-                           
-                          </div>
-                        </div>
-                      </div>
 
                   </div>
                 </div>
               </div>
+
+              <!-- Schedule Item 2 -->
+              <div class="col-md-4">
+                <div class="timetable-item">
+                  <div class="timetable-item-img">
+                    <img src="/ltstatic/conference/lud/icons/icon2.png">
+                  </div>
+                  <div class="timetable-item-main">
+                    <div class="timetable-item-time">9:30am - 9:35am</div>
+                    <div class="timetable-item-name">Welcome: Dr. Dickie Crawford</div>
+
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="timetable-item">
+                  <div class="timetable-item-img">
+                    <img src="/ltstatic/conference/lud/icons/icon2.png">
+                  </div>
+                  <div class="timetable-item-main">
+                    <div class="timetable-item-time">9:35am - 9:40am</div>
+                    <div class="timetable-item-name">Welcome: Father Lijo</div>
+
+                  </div>
+                </div>
+              </div>
+
+
+              <!-- Row 2 -->
+              <!-- Schedule Item 3 -->
+              <div class="col-md-4">
+                <div class="timetable-item">
+                  <div class="timetable-item-img">
+                    <img src="/ltstatic/conference/lud/icons/icon3.png" alt="Street Dance">
+                  </div>
+                  <div class="timetable-item-main">
+                    <div class="timetable-item-time">9:40am - 9:55am</div>
+                    <div class="timetable-item-name">Keynote Speaker – Monroe Mayor Friday Ellis</div>
+
+                  </div>
+                </div>
+              </div>
+
+              <!-- Schedule Item 4 -->
+
+
+              <!-- Schedule Item 5 -->
+              <div class="col-md-4">
+                <div class="timetable-item">
+                  <div class="timetable-item-img">
+                    <img src="/ltstatic/conference/lud/icons/icon4.png" alt="Stretching">
+                  </div>
+                  <div class="timetable-item-main">
+                    <div class="timetable-item-time">10:00am - 11:00am</div>
+                    <div class="timetable-item-name">Education Panel</div>
+
+                  </div>
+                </div>
+              </div>
+
+              <!-- Row 3 -->
+              <!-- Schedule Item 6 -->
+              <div class="col-md-4">
+                <div class="timetable-item">
+                  <div class="timetable-item-img">
+                    <img src="/ltstatic/conference/lud/icons/icon5.png" alt="Street Dance">
+                  </div>
+                  <div class="timetable-item-main">
+                    <div class="timetable-item-time">11:00am - 12:00pm</div>
+                    <div class="timetable-item-name">Social Panel</div>
+
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="timetable-item">
+                  <div class="timetable-item-img">
+                    <img src="/ltstatic/conference/lud/icons/icon6.png" alt="Street Dance">
+                  </div>
+                  <div class="timetable-item-main">
+                    <div class="timetable-item-time">1:00pm - 2:00pm</div>
+                    <div class="timetable-item-name">Health Panel</div>
+
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="timetable-item">
+                  <div class="timetable-item-img">
+                    <img src="/ltstatic/conference/lud/icons/icon3.png" alt="Street Dance">
+                  </div>
+                  <div class="timetable-item-main">
+                    <div class="timetable-item-time">2:00pm - 2:15pm</div>
+                    <div class="timetable-item-name">Keynote Speaker – Dr. Noflin, Jr.</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="timetable-item">
+                  <div class="timetable-item-img">
+                    <img src="/ltstatic/conference/lud/icons/icon7.png" alt="Yoga">
+                  </div>
+                  <div class="timetable-item-main">
+                    <div class="timetable-item-time">2:15pm - 3:00pm</div>
+                    <div class="timetable-item-name">Unsung Heroes</div>
+
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="timetable-item">
+                  <div class="timetable-item-img">
+                    <img src="/ltstatic/conference/lud/icons/icon8.png" alt="Yoga">
+                  </div>
+                  <div class="timetable-item-main">
+                    <div class="timetable-item-time">3:15pm - 4:15pm</div>
+                    <div class="timetable-item-name">Student Panel</div>
+
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="col-md-4">
+                <div class="timetable-item">
+                  <div class="timetable-item-img">
+                    <img src="/ltstatic/conference/lud/icons/icon9.png" alt="Yoga">
+                  </div>
+                  <div class="timetable-item-main">
+                    <div class="timetable-item-time">4:15pm - 4:30pm</div>
+                    <div class="timetable-item-name">Closing Remarks</div>
+
+                  </div>
+                </div>
+              </div>
+
             </div>
           </div>
+        </div>
       </div>
+    </div>
   </div>
+</div>
 
 
-  <!-- Gallery -->
+<!-- Gallery -->
 
 
 
 <div class="section-member-popup ">
   <div class="container container-member-popup  mb-5 ">
-     <div class="col-md-12 text-center mb-5 mt-5 pt-5">
-         <h1 class="big-heading text-uppercase mb-5">KEYNOTE SPEAKER</h2>
-     </div>
-     <div class="card">
-         <div class="imgBx">
-             <img src="{% static 'conference/lud/img1.jpg' %}" alt="" >
-             <h5 class="text-center pt-3 text-info fw-bolder">Mayor Friday Ellis</h5>
-         </div>
-         <div class="content">
-             
-             <p>Mayor Friday Ellis was born in rural Rayville, Louisiana. . Mayor Ellis is an advocate of entrepreneurship 
-              and business growth. He encourages community and civic development and 
-              involvement at local and state levels. In 2019, he was named Free Enterprise 
-              Champion by the Louisiana Business and Industry. <span class="fw-bold">Read More</span></p>
-         </div>
-     </div>
-     <div class="card">
-         <div class="imgBx">
-             <img src="{% static 'conference/lud/img2.jpg' %}" alt="" class="text-center">
-             <h5 class="text-center pt-3 text-info fw-bolder">Dr.George Nofin</h5>
-         </div>
-         <div class="content">
-           
-             <p>Dr. George Noflin, Jr., is a native of Jackson, Louisiana. Over the past thirty-plus years, Dr. 
-              Noflin has become a knowledgeable administrator who is diligent, conscientious, and hardworking. He has served in the United States Marine Corps for a number of years where he 
-              received the United States Marine Corps Meritorious Award while serving his country. <span class="fw-bold"> Read More</span></p>
-         </div>
-     </div>
+    <div class="col-md-12 text-center mb-5 mt-5 pt-5">
+      <h1 class="big-heading text-uppercase mb-5">KEYNOTE SPEAKER</h2>
+    </div>
+    <div class="card">
+      <div class="imgBx">
+        <img src="{% static 'conference/lud/img1.jpg' %}" alt="">
+        <h5 class="text-center pt-3 text-info fw-bolder">Mayor Friday Ellis</h5>
+      </div>
+      <div class="content">
 
- </div>
+        <p>Mayor Friday Ellis was born in rural Rayville, Louisiana. . Mayor Ellis is an advocate of entrepreneurship
+          and business growth. He encourages community and civic development and
+          involvement at local and state levels. In 2019, he was named Free Enterprise
+          Champion by the Louisiana Business and Industry.
+      </div>
+    </div>
+    <div class="card">
+      <div class="imgBx">
+        <img src="{% static 'conference/lud/img2.jpg' %}" alt="" class="text-center">
+        <h5 class="text-center pt-3 text-info fw-bolder">Dr.George Nofin</h5>
+      </div>
+      <div class="content">
+
+        <p>Dr. George Noflin, Jr., is a native of Jackson, Louisiana. Over the past thirty-plus years, Dr.
+          Noflin has become a knowledgeable administrator who is diligent, conscientious, and hardworking. He has served
+          in the United States Marine Corps for a number of years where he
+          received the United States Marine Corps Meritorious Award while serving his country.
+      </div>
+    </div>
+
+  </div>
 
 </div>
 
-    <div class="container p-5">
-        <div class="row">
-            <div class="col-md-12 text-center">
-                <h1 class="big-heading  text-uppercase">Conference Chair</h2>
-            </div>
-            <div class="col-lg-4">
-                <div class="d-flex justify-content-center align-items-center p-5 rounded-lg flex-column">
-                    <div class="person-img d-flex justify-content-center">
-                        <img src="{% static 'locations/bangalore/default.png'%}" alt=""
-                            class="img-fluid rounded-circle shadow p-1 w-50 h-50">
-                    </div>
-                    <div class="person-name my-2">
-                        <h6 class="text-info fw-bolder">Person</h6>
-                    </div>
-                    <div class="info">
-                        <p class="text-dark text-center">
-                            Programmer
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="d-flex justify-content-center align-items-center p-5 rounded-lg flex-column">
-                    <div class="person-img d-flex justify-content-center">
-                        <img src="{% static 'locations/bangalore/default.png'%}" alt=""
-                            class="img-fluid rounded-circle shadow p-1 w-50 h-50">
-                    </div>
-                    <div class="person-name my-2">
-                        <h6 class="text-info fw-bolder">Person</h6>
-                    </div>
-                    <div class="info">
-                        <p class="text-dark text-center">
-                            Programmer
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="d-flex justify-content-center align-items-center p-5 rounded-lg flex-column">
-                    <div class="person-img d-flex justify-content-center">
-                        <img src="{% static 'locations/bangalore/default.png'%}" alt=""
-                            class="img-fluid rounded-circle shadow p-1 w-50 h-50">
-                    </div>
-                    <div class="person-name my-2">
-                        <h6 class="text-info fw-bolder">Person</h6>
-                    </div>
-                    <div class="info">
-                        <p class="text-dark text-center">
-                            Programmer
-                    </div>
-                </div>
-            </div>
-       
-
+<div class="container p-5">
+  <div class="row">
+    <div class="col-md-12 text-center">
+      <h1 class="big-heading text-uppercase">Conference core leadership team</h2>
+    </div>
+    <div class="col-lg-6">
+      <div class="d-flex justify-content-center align-items-center p-5 rounded-lg flex-column">
+        <div class="person-img d-flex justify-content-center">
+          <img src="{% static 'locations/bangalore/default.png'%}" alt=""
+            class="img-fluid rounded-circle shadow p-1 w-50 h-50">
         </div>
+        <div class="person-name my-2">
+          <h6 class="text-info fw-bolder">Dr. Pauline Leonard</h6>
+        </div>
+        <!-- <div class="info">
+          <p class="text-dark text-center">
+            Programmer
+        </div> -->
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <div class="d-flex justify-content-center align-items-center p-5 rounded-lg flex-column">
+        <div class="person-img d-flex justify-content-center">
+          <img src="{% static 'locations/bangalore/default.png'%}" alt=""
+            class="img-fluid rounded-circle shadow p-1 w-50 h-50">
+        </div>
+        <div class="person-name my-2">
+          <h6 class="text-info fw-bolder">Dr. Suzanne Mayo</h6>
+        </div>
+        <!-- <div class="info">
+          <p class="text-dark text-center">
+            Programmer
+        </div> -->
+      </div>
+    </div>
+    <!-- <div class="col-lg-4">
+      <div class="d-flex justify-content-center align-items-center p-5 rounded-lg flex-column">
+        <div class="person-img d-flex justify-content-center">
+          <img src="{% static 'locations/bangalore/default.png'%}" alt=""
+            class="img-fluid rounded-circle shadow p-1 w-50 h-50">
+        </div>
+        <div class="person-name my-2">
+          <h6 class="text-info fw-bolder">Person</h6>
+        </div>
+        <div class="info">
+          <p class="text-dark text-center">
+            Programmer
+        </div>
+      </div>
+    </div> -->
+
+
+  </div>
+</div>
+
+
+<section class="light">
+  <div class="container py-5 mt-4">
+    <div class="col-md-12 text-center">
+
+      <h1 class="big-heading text-uppercase">Health Panel</h2>
     </div>
 
+    <article class="postcard light blue">
+      <a class="postcard__img_link" href="#">
+        <img class="postcard__img" src="{% static 'conference/McMurry.jpg'%}" alt="Image Title" />
+      </a>
+      <div class="postcard__text t-dark">
+        <h1 class="postcard__title blue"><a href="#">Kendra McMurry</a></h1>
+        <div class="postcard__subtitle small">
+          <!-- <time datetime="2020-05-25 12:00:00">
+                      <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
+                  </time> -->
+        </div>
+        <div class="postcard__bar"></div>
+        <div class="postcard__preview-txt">Kendra D. McMurry, MSN, RN is an Assistant Professor in the School of Nursing
+          at
+          Grambling State University. She is a Ruston native and 2009 graduate from Grambling State University with a
+          Bachelor of Science in Nursing. She received her MSN from Walden University. McMurry’s research interests
+          consist of strategies to improve health literacy in minority communities, de-stigmatization of mental
+          illness, and journaling as a form of self-care to improve mental health. McMurry has a passion for
+          educating, empowering, and encouraging others to strive for their greatest potential.</div>
+        <!-- <ul class="postcard__tagbox">
+                  <li class="tag__item"><i class="fas fa-tag mr-2"></i>Podcast</li>
+                  <li class="tag__item"><i class="fas fa-clock mr-2"></i>55 mins.</li>
+                  <li class="tag__item play blue">
+                      <a href="#"><i class="fas fa-play mr-2"></i>Play Episode</a>
+                  </li>
+              </ul> -->
+      </div>
+    </article>
+    <article class="postcard light red">
+      <a class="postcard__img_link" href="#">
+        <img class="postcard__img" src="{% static 'conference/Tori-Davis.jpg'%}" alt="Image Title" />
+      </a>
+      <div class="postcard__text t-dark">
+        <h1 class="postcard__title red"><a href="#">Tori Davis</a></h1>
+        <div class="postcard__subtitle small">
+          <!-- <time datetime="2020-05-25 12:00:00">
+                      <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
+                  </time> -->
+        </div>
+        <div class="postcard__bar"></div>
+        <div class="postcard__preview-txt">Tori Davis serves as the Chief Communications Officer for Green Clinic Health
+          System in
+          Ruston. Davis is a Shreveport native who received her bachelor’s degree in mass communication from Louisiana
+          State University and a master’s degree in business administration from Louisiana Tech University. Prior to
+          joining Green Clinic, Davis gained experience in marketing, public relations, social media, and strategic
+          planning while working in the travel and tourism industry. Davis is passionate about the Ruston community
+          and doing her part to ensure the best quality of life for residents and students who call the area home.</div>
+        <!-- <ul class="postcard__tagbox">
+                  <li class="tag__item"><i class="fas fa-tag mr-2"></i>Podcast</li>
+                  <li class="tag__item"><i class="fas fa-clock mr-2"></i>55 mins.</li>
+                  <li class="tag__item play red">
+                      <a href="#"><i class="fas fa-play mr-2"></i>Play Episode</a>
+                  </li>
+              </ul> -->
+      </div>
+    </article>
+    <article class="postcard light green">
+      <a class="postcard__img_link" href="#">
+        <img class="postcard__img" src="{% static 'conference/B-Gray.jpg'%}" alt="Image Title" />
+      </a>
+      <div class="postcard__text t-dark">
+        <h1 class="postcard__title green"><a href="#">Baylee Gray</a></h1>
+        <div class="postcard__subtitle small">
+          <!-- <time datetime="2020-05-25 12:00:00">
+                      <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
+                  </time> -->
+        </div>
+        <div class="postcard__bar"></div>
+        <div class="postcard__preview-txt">Baylee Gray is the ER Director at Northern Louisiana Medical Center in
+          Ruston, Louisiana.
+          She is originally from Mansfield, Texas and received her BS in biology from Northwestern State University
+          and BSN from Texas Christian University. Following a nursing travel assignment, she fell in love with the
+          Ruston community and what it has to offer. Her goal is to continue to assist in giving quality care to the
+          city of Ruston and surrounding communities.</div>
+        <!-- <ul class="postcard__tagbox">
+                  <li class="tag__item"><i class="fas fa-tag mr-2"></i>Podcast</li>
+                  <li class="tag__item"><i class="fas fa-clock mr-2"></i>55 mins.</li>
+                  <li class="tag__item play green">
+                      <a href="#"><i class="fas fa-play mr-2"></i>Play Episode</a>
+                  </li>
+              </ul> -->
+      </div>
+    </article>
+    <article class="postcard light yellow">
+      <a class="postcard__img_link" href="#">
+        <img class="postcard__img" src="{% static 'conference/Ashley-Owen-2048x1162.jpg'%}" alt="Image Title" />
+      </a>
+      <div class="postcard__text t-dark">
+        <h1 class="postcard__title yellow"><a href="#">Dr. Ashley Owen</a></h1>
+        <div class="postcard__subtitle small">
+          <!-- <time datetime="2020-05-25 12:00:00">
+                      <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
+                  </time> -->
+        </div>
+        <div class="postcard__bar"></div>
+        <div class="postcard__preview-txt">Dr. Ashley Owen is a National Board Certified Counselor, Licensed
+          Professional
+          Counselor-Supervisor, and a QPR Suicide Prevention Gatekeeper Instructor. In 2009, Owen received her
+          Bachelor of Arts in Sociology from Louisiana Tech University. She returned to Louisiana Tech University to
+          receive a Master of Counseling and Guidance in 2013, and completed her PhD in Marriage and Family Therapy at
+          the University of Louisiana Monroe in 2021. Owen’s clinical interests include anxiety disorders, suicidal
+          ideation, self-harm, disordered eating, and personal growth and development. Her research interest are
+          issues in suicidal bereavement specific to existential regret, sense-making, meaning-making, relational
+          aspects, and the impact of physical exercise on mental health. In her free time, Owen can often be found
+          cheering on the Bulldogs and Lady Techsters, spending time with family, and volunteering.</div>
+        <!-- <ul class="postcard__tagbox">
+                  <li class="tag__item"><i class="fas fa-tag mr-2"></i>Podcast</li>
+                  <li class="tag__item"><i class="fas fa-clock mr-2"></i>55 mins.</li>
+                  <li class="tag__item play yellow">
+                      <a href="#"><i class="fas fa-play mr-2"></i>Play Episode</a>
+                  </li>
+              </ul> -->
+      </div>
+    </article>
+    <article class="postcard light blue">
+      <a class="postcard__img_link" href="#">
+        <img class="postcard__img" src="{% static 'conference/Meleah-Pea.jpeg'%}" alt="Image Title" />
+      </a>
+      <div class="postcard__text t-dark">
+        <h1 class="postcard__title blue"><a href="#">Meleah Pea</a></h1>
+        <div class="postcard__subtitle small">
+          <!-- <time datetime="2020-05-25 12:00:00">
+                      <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
+                  </time> -->
+        </div>
+        <div class="postcard__bar"></div>
+        <div class="postcard__preview-txt">Meleah Pea is a native of the Strawberry City, Ponchatoula, and graduated
+          from
+          Ponchatoula High School in 2019. In high school, she was involved in an array of organizations and sports
+          that influenced her desire to be involved. Pea is now a senior Biology major and psychology minor that
+          continues to serve her campus and community. Pea serves in various positions on campus, such as the
+          President of the Alpha Theta Chapter of Alpha Kappa Alpha Sorority, Incorporated, President of the
+          President’s Student Leadership Initiative, GRAMbassador, Health Equity Intern for ASPHN, amongst many other
+          things. Off-campus, Pea serves her country as a Munition Systems Reservist in the United States Air Force
+          and her community as a sickle cell disease awareness advocate providing informational events and
+          scholarships for students and citizens. Pea enjoys shopping, reading, and playing sports outside of school.
+          After graduation, Pea is looking to attend medical school to become a physician and work in underserved
+          populations.</div>
+        <!-- <ul class="postcard__tagbox">
+                  <li class="tag__item"><i class="fas fa-tag mr-2"></i>Podcast</li>
+                  <li class="tag__item"><i class="fas fa-clock mr-2"></i>55 mins.</li>
+                  <li class="tag__item play blue">
+                      <a href="#"><i class="fas fa-play mr-2"></i>Play Episode</a>
+                  </li>
+              </ul> -->
+      </div>
+    </article>
+
+    <article class="postcard light red">
+      <a class="postcard__img_link" href="#">
+        <img class="postcard__img" src="{% static 'conference/Spencer-Stelly.jpg'%}" alt="Image Title" />
+      </a>
+      <div class="postcard__text t-dark">
+        <h1 class="postcard__title red"><a href="#">Spencer Stelly</a></h1>
+        <div class="postcard__subtitle small">
+          <!-- <time datetime="2020-05-25 12:00:00">
+                      <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
+                  </time> -->
+        </div>
+        <div class="postcard__bar"></div>
+        <div class="postcard__preview-txt">Spencer Stelly is a third-year student majoring in Chemistry and minoring in
+          Spanish. He
+          will be graduating in the Spring and plans to continue his studies in Veterinary Medicine School. Stelly
+          currently serves as the President of the Peer Leadership Council (PLC) with Louisiana Tech University’s
+          Counseling Services, and is involved in other organizations such as Student Recruiters, Union Board,
+          American Chemical Society, Pre-Veterinary Medicine Club, College of Engineering and Science Ambassadors,
+          Agriculture and Veterinary Medicine Alliance through Equity and Diversity, and three research groups.
+          Spencer’s favorite part of PLC is giving presentations to incoming freshman classes to raise mental health
+          awareness and assist students in their transition to their undergraduate education.</div>
+        <!-- <ul class="postcard__tagbox">
+                  <li class="tag__item"><i class="fas fa-tag mr-2"></i>Podcast</li>
+                  <li class="tag__item"><i class="fas fa-clock mr-2"></i>55 mins.</li>
+                  <li class="tag__item play red">
+                      <a href="#"><i class="fas fa-play mr-2"></i>Play Episode</a>
+                  </li>
+              </ul> -->
+      </div>
+    </article>
+    <article class="postcard light green">
+      <a class="postcard__img_link" href="#">
+        <img class="postcard__img" src="{% static 'conference/Becky-Stutzman.jpg'%}" alt="Image Title" />
+      </a>
+      <div class="postcard__text t-dark">
+        <h1 class="postcard__title green"><a href="#">Becky Stutzman</a></h1>
+        <div class="postcard__subtitle small">
+          <!-- <time datetime="2020-05-25 12:00:00">
+                      <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
+                  </time> -->
+        </div>
+        <div class="postcard__bar"></div>
+        <div class="postcard__preview-txt">Becky Stutzman, LCSW-BACS, C-SSWS, has been a social worker for more than 25
+          years and
+          she has worked in the school setting for 22 of those years. She graduated from McNeese State University with
+          her BA degree in sociology and Louisiana State University with her master’s degree in Social Work. She is a
+          Licensed Clinical Social Worker, Board Approved Clinical Supervisor, and Nationally Certified School Social
+          Work Specialist. Stutzman is currently the Coordinator of Pupil Appraisal Services and Mental Health
+          Services for the Lincoln Parish School Board. She has worked for Lincoln Parish Schools since 2005 and
+          currently oversees testing and evaluation services for students with potential disabilities and learning
+          challenges and has had the opportunity to assist in expanding mental health services and social-emotional
+          learning opportunities for the students of Lincoln Parish.</div>
+        <!-- <ul class="postcard__tagbox">
+                  <li class="tag__item"><i class="fas fa-tag mr-2"></i>Podcast</li>
+                  <li class="tag__item"><i class="fas fa-clock mr-2"></i>55 mins.</li>
+                  <li class="tag__item play green">
+                      <a href="#"><i class="fas fa-play mr-2"></i>Play Episode</a>
+                  </li>
+              </ul> -->
+      </div>
+    </article>
+    <article class="postcard light yellow">
+      <a class="postcard__img_link" href="#">
+        <img class="postcard__img" src="{% static 'conference/Jerrilyn-Washington.jpg'%}" alt="Image Title" />
+      </a>
+      <div class="postcard__text t-dark">
+        <h1 class="postcard__title yellow"><a href="#">Jerrilyn Washington</a></h1>
+        <div class="postcard__subtitle small">
+          <!-- <time datetime="2020-05-25 12:00:00">
+                      <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
+                  </time> -->
+        </div>
+        <div class="postcard__bar"></div>
+        <div class="postcard__preview-txt">Jerrilene Washington, EdD, is Executive Director, National Alliance on Mental
+          Illness
+          (NAMI) – Ruston Chapter. NAMI Ruston is a 36-year-old, nonprofit mental health organization, which serves
+          communities in north and central Louisiana. Dr. Washington serves as a volunteer columnist for the Ruston
+          Daily Leader with a bi-monthly column focusing on mental health issues. She retired after 44 years of
+          service in education in school systems and universities in north and south Louisiana, Maryland, and
+          Washington, D.C.</div>
+        <!-- <ul class="postcard__tagbox">
+                  <li class="tag__item"><i class="fas fa-tag mr-2"></i>Podcast</li>
+                  <li class="tag__item"><i class="fas fa-clock mr-2"></i>55 mins.</li>
+                  <li class="tag__item play yellow">
+                      <a href="#"><i class="fas fa-play mr-2"></i>Play Episode</a>
+                  </li>
+              </ul> -->
+      </div>
+    </article>
+
+    <article class="postcard light blue">
+      <a class="postcard__img_link" href="#">
+        <img class="postcard__img" src="{% static 'conference/David-Wells.jpg'%}" alt="Image Title" />
+      </a>
+      <div class="postcard__text t-dark">
+        <h1 class="postcard__title blue"><a href="#">David Wells</a></h1>
+        <div class="postcard__subtitle small">
+          <!-- <time datetime="2020-05-25 12:00:00">
+                      <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
+                  </time> -->
+        </div>
+        <div class="postcard__bar"></div>
+        <div class="postcard__preview-txt">David Wells is the Director of Emergency Medical Services for the Ruston Fire
+          Department.
+          He received his degree in Fire Science from Columbia Southern University and holds multiple certifications
+          including International Critical Incident Stress Foundation: Assisting Individuals in Crisis and
+          International Critical Incident Stress Foundation: Group Crisis Intervention. He serves as a board member
+          for the Louisiana Emergency Response Network Region 8 and is chairman of the Louisiana Delta Community
+          College Paramedic Education Board.</div>
+        <!-- <ul class="postcard__tagbox">
+                  <li class="tag__item"><i class="fas fa-tag mr-2"></i>Podcast</li>
+                  <li class="tag__item"><i class="fas fa-clock mr-2"></i>55 mins.</li>
+                  <li class="tag__item play blue">
+                      <a href="#"><i class="fas fa-play mr-2"></i>Play Episode</a>
+                  </li>
+              </ul> -->
+      </div>
+    </article>
+    <article class="postcard light red">
+      <a class="postcard__img_link" href="#">
+        <img class="postcard__img" src="{% static 'conference/Calvin-C-Williams.jpg'%}" alt="Image Title" />
+      </a>
+      <div class="postcard__text t-dark">
+        <h1 class="postcard__title red"><a href="#">Calvin C. Williams</a></h1>
+        <div class="postcard__subtitle small">
+          <!-- <time datetime="2020-05-25 12:00:00">
+                      <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
+                  </time> -->
+        </div>
+        <div class="postcard__bar"></div>
+        <div class="postcard__preview-txt">Calvin C. Williams is a Licensed Professional Counselor with over 25 years of
+          experience.
+          He has a private mental health practice in Monroe and provides counseling to patients of The Health Hut, a
+          mobile healthcare unit providing services to Lincoln Parish residents. Williams served as a clinical
+          consultant in the healthcare industry, Director of an Intensive Outpatient Chemical Dependency Program, and
+          provided direct care for inpatient and outpatient psychiatric programs serving adolescents, adults and
+          geriatric patients. He was presented with a LCA Presidential Award for recognition of his exemplary service
+          to the counseling profession and the Louisiana Counseling Association.</div>
+        <!-- <ul class="postcard__tagbox">
+                  <li class="tag__item"><i class="fas fa-tag mr-2"></i>Podcast</li>
+                  <li class="tag__item"><i class="fas fa-clock mr-2"></i>55 mins.</li>
+                  <li class="tag__item play red">
+                      <a href="#"><i class="fas fa-play mr-2"></i>Play Episode</a>
+                  </li>
+              </ul> -->
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="light">
+  <div class="container py-5 mt-4">
+    <div class="col-md-12 text-center">
+
+      <h1 class="big-heading text-uppercase">Education Panel</h2>
+    </div>
+
+    <article class="postcard light blue">
+      <a class="postcard__img_link" href="#">
+        <img class="postcard__img" src="{% static 'conference/EnsleyC.jpg'%}" alt="Image Title" />
+      </a>
+      <div class="postcard__text t-dark">
+        <h1 class="postcard__title blue"><a href="#">Dr. Cheyrl Mansfield Ensley</a></h1>
+        <div class="postcard__subtitle small">
+          <!-- <time datetime="2020-05-25 12:00:00">
+                      <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
+                  </time> -->
+        </div>
+        <div class="postcard__bar"></div>
+        <div class="postcard__preview-txt">Dr. Cheyrl Mansfield Ensley currently serves as an Associate Professor and
+          the Interim
+          Head of the Departments of Curriculum and Instruction and Developmental and Higher Education Studies at her
+          alma mater – Grambling State University. She received her master’s from Louisiana Tech and earned her
+          doctorate from Texas A&M Commerce. Ensley is an advocate for providing access and opportunity for all
+          students with over 30 years of experience in education. She is an experienced educator, dedicated to
+          leveling the playing field for all children. Prior to joining the GRAMFAM in August 2018, Ensley had
+          previous experience teaching at the college level and served in the PreK-12 setting as a teacher, assistant
+          principal, principal, director, executive director, and assistant superintendent. She is an outcomes-based
+          educator with a laser focus on obtaining results based on data.</div>
+        <!-- <ul class="postcard__tagbox">
+                  <li class="tag__item"><i class="fas fa-tag mr-2"></i>Podcast</li>
+                  <li class="tag__item"><i class="fas fa-clock mr-2"></i>55 mins.</li>
+                  <li class="tag__item play blue">
+                      <a href="#"><i class="fas fa-play mr-2"></i>Play Episode</a>
+                  </li>
+              </ul> -->
+      </div>
+    </article>
+    <article class="postcard light red">
+      <a class="postcard__img_link" href="#">
+        <img class="postcard__img" src="{% static 'conference/Lanecia-Deshund-Clinton.jpeg'%}" alt="Image Title" />
+      </a>
+      <div class="postcard__text t-dark">
+        <h1 class="postcard__title red"><a href="#">Lanecia Deshund Clinton</a></h1>
+        <div class="postcard__subtitle small">
+          <!-- <time datetime="2020-05-25 12:00:00">
+                      <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
+                  </time> -->
+        </div>
+        <div class="postcard__bar"></div>
+        <div class="postcard__preview-txt">Lanecia Deshund Clinton, a native of Ruston, is the oldest of six children.
+          She earned
+          her bachelor’s degree in criminal justice in 2018 and is currently pursuing her master’s degree in education
+          at Grambling State University. Clinton is a member of Alpha Kappa Alpha Sorority Incorporated and serves as
+          a second-grade teacher at Lincoln Preparatory School.</div>
+        <!-- <ul class="postcard__tagbox">
+                  <li class="tag__item"><i class="fas fa-tag mr-2"></i>Podcast</li>
+                  <li class="tag__item"><i class="fas fa-clock mr-2"></i>55 mins.</li>
+                  <li class="tag__item play red">
+                      <a href="#"><i class="fas fa-play mr-2"></i>Play Episode</a>
+                  </li>
+              </ul> -->
+      </div>
+    </article>
+    <article class="postcard light green">
+      <a class="postcard__img_link" href="#">
+        <img class="postcard__img" src="{% static 'conference/Dr-Patsy-Hughey.jpg'%}" alt="Image Title" />
+      </a>
+      <div class="postcard__text t-dark">
+        <h1 class="postcard__title green"><a href="#">Dr. Patsy Hughey</a></h1>
+        <div class="postcard__subtitle small">
+          <!-- <time datetime="2020-05-25 12:00:00">
+                      <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
+                  </time> -->
+        </div>
+        <div class="postcard__bar"></div>
+        <div class="postcard__preview-txt">Dr. Patsy A Hughey began her career at Louisiana Tech University in March
+          2018. Before
+          transitioning to higher education, she has 29 years of experience working in K-12 public school education.
+          She has been a teacher, principal, central office administrator, district school superintendent, and
+          educational consultant. Hughey graduated from Southern Arkansas University with a bachelor’s degree in
+          Elementary and Early Childhood Education and a master’s degree in School Administration. She obtained an
+          Educational Specialist degree and was a member of the first cohort group to graduate from Arkansas Tech
+          University, Russellville, Arkansas, with an Educational Doctorate in School Leadership.</div>
+        <!-- <ul class="postcard__tagbox">
+                  <li class="tag__item"><i class="fas fa-tag mr-2"></i>Podcast</li>
+                  <li class="tag__item"><i class="fas fa-clock mr-2"></i>55 mins.</li>
+                  <li class="tag__item play green">
+                      <a href="#"><i class="fas fa-play mr-2"></i>Play Episode</a>
+                  </li>
+              </ul> -->
+      </div>
+    </article>
+    <article class="postcard light yellow">
+      <a class="postcard__img_link" href="#">
+        <img class="postcard__img" src="{% static 'conference/George-Noflin.jpg'%}" alt="Image Title" />
+      </a>
+      <div class="postcard__text t-dark">
+        <h1 class="postcard__title yellow"><a href="#">Dr. George Noflin Jr.</a></h1>
+        <div class="postcard__subtitle small">
+          <!-- <time datetime="2020-05-25 12:00:00">
+                      <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
+                  </time> -->
+        </div>
+        <div class="postcard__bar"></div>
+        <div class="postcard__preview-txt">Dr. George Noflin Jr. is a native of Jackson. He and his wife Valerie are the
+          proud
+          parents of five children.
+
+          Over the past 30 years, Noflin has become a knowledgeable administrator who is diligent, conscientious, and
+          hard working. He served in the United States Marine Corps for a number of years where he received the United
+          States Marine Corps Meritorious Award while serving his country.
+
+          He received an Associate of Arts degree from Southwest Mississippi Community College, his Bachelor of
+          Science in Education degree from Millsaps College, and master’s and doctoral degrees in Education from
+          Mississippi State University.
+          Noflin has been a teacher, coach, athletic director, assistant principal, director of an alternative school,
+          principal, assistant superintendent, and superintendent of schools in Morehouse Parish. He has also served
+          as Assistant Professor at Louisiana Tech University and Associate Professor at Grambling State University.
+          He is currently the Director of the Call Me MiSTER Program.
+          These experiences have given him the knowledge
+          and expertise to properly supervise, manage, and motivate othersto excel in the areas of academics,
+          athletics, and leadership.
+          Noflin is a member at the New Living Word Fellowship Church in Ruston, and he was a past-president of the
+          Sunrise Kiwanis Club in Ruston.
+        </div>
+        <!-- <ul class="postcard__tagbox">
+                  <li class="tag__item"><i class="fas fa-tag mr-2"></i>Podcast</li>
+                  <li class="tag__item"><i class="fas fa-clock mr-2"></i>55 mins.</li>
+                  <li class="tag__item play yellow">
+                      <a href="#"><i class="fas fa-play mr-2"></i>Play Episode</a>
+                  </li>
+              </ul> -->
+      </div>
+    </article>
+    <article class="postcard light blue">
+      <a class="postcard__img_link" href="#">
+        <img class="postcard__img" src="{% static 'conference/Dr-Dustin-Whitlock.jpg'%}" alt="Image Title" />
+      </a>
+      <div class="postcard__text t-dark">
+        <h1 class="postcard__title blue"><a href="#">Dr. Dustin Whitlock</a></h1>
+        <div class="postcard__subtitle small">
+          <!-- <time datetime="2020-05-25 12:00:00">
+                      <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
+                  </time> -->
+        </div>
+        <div class="postcard__bar"></div>
+        <div class="postcard__preview-txt">Dustin S. Whitlock, EdD, is an Assistant Professor at Louisiana Tech
+          University. He
+          completed his doctorate from Johns Hopkins University with an emphasis in 21st Century Learning, as well as
+          a MA in Teaching and MA in Counseling and Guidance from Louisiana Tech University. His research interests
+          include 21st century learning, learning science, educator preparation, teacher professional development, and
+          teacher efficacy. In his role as an assistant professor, Whitlock teaches undergraduate courses in Learning
+          and Development and Secondary Teaching Methods. He also teaches courses within the MA Education, Curriculum
+          and Instruction program.</div>
+        <!-- <ul class="postcard__tagbox">
+                  <li class="tag__item"><i class="fas fa-tag mr-2"></i>Podcast</li>
+                  <li class="tag__item"><i class="fas fa-clock mr-2"></i>55 mins.</li>
+                  <li class="tag__item play blue">
+                      <a href="#"><i class="fas fa-play mr-2"></i>Play Episode</a>
+                  </li>
+              </ul> -->
+      </div>
+    </article>
+
+    <article class="postcard light red">
+      <a class="postcard__img_link" href="#">
+        <img class="postcard__img" src="{% static 'locations/bangalore/default.png'%}" alt="Image Title" />
+      </a>
+      <div class="postcard__text t-dark">
+        <h1 class="postcard__title red"><a href="#">Chase Willis</a></h1>
+        <div class="postcard__subtitle small">
+          <!-- <time datetime="2020-05-25 12:00:00">
+                      <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
+                  </time> -->
+        </div>
+        <div class="postcard__bar"></div>
+        <div class="postcard__preview-txt">Chase Kylen Willis, a native of Shreveport, is a rising senior at Grambling
+          State
+          University, majoring in Elementary and Special Education with a certification endorsement in Early Childhood
+          Education. He is currently completing his teaching practicum at Queensborough Elementary in the Caddo Parish
+          Public school system. Willis is a member of various professional organizations for educators, including the
+          Louisiana Associations of Math and Reading, the Iota Tau Chapter of Kappa Delta Pi International Honor
+          Society in Education, and the Aspiring Educators Club. Upon graduation, Willis plans to attend graduate
+          school to obtain his master’s degree in Educational Leadership and Social Work.</div>
+        <!-- <ul class="postcard__tagbox">
+                  <li class="tag__item"><i class="fas fa-tag mr-2"></i>Podcast</li>
+                  <li class="tag__item"><i class="fas fa-clock mr-2"></i>55 mins.</li>
+                  <li class="tag__item play red">
+                      <a href="#"><i class="fas fa-play mr-2"></i>Play Episode</a>
+                  </li>
+              </ul> -->
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<section class="light">
+  <div class="container py-5 mt-4">
+    <div class="col-md-12 text-center">
+
+      <h1 class="big-heading text-uppercase">Social Panel</h2>
+    </div>
+
+    <article class="postcard light blue">
+      <a class="postcard__img_link" href="#">
+        <img class="postcard__img" src="{% static 'conference/Will-Dearmon.jpg'%}" alt="Image Title" />
+      </a>
+      <div class="postcard__text t-dark">
+        <h1 class="postcard__title blue"><a href="#">Will Dearmon</a></h1>
+        <div class="postcard__subtitle small">
+          <!-- <time datetime="2020-05-25 12:00:00">
+                      <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
+                  </time> -->
+        </div>
+        <div class="postcard__bar"></div>
+        <div class="postcard__preview-txt">Will Dearmon earned his bachelor’s degree in Political Science at Louisiana
+          Tech in 2013
+          and his master’s degree in Public Service and Administration with a Higher Education concentration at Texas
+          A&M University in 2016. He has a background in higher education policy and administration as well as
+          political and communications consulting. In March 2022 he returned to Ruston as the new President and CEO of
+          the Ruston-Lincoln Chamber of Commerce.
+          <br>
+
+          Dearmon also currently serves as the President of the Louisiana Tech University Alumni Association National
+          Board of Directors. He and his wife, Kelsey, have been happily married for almost five years and are the
+          proud parents of a very active 13-month-old baby girl.
+        </div>
+        <!-- <ul class="postcard__tagbox">
+                  <li class="tag__item"><i class="fas fa-tag mr-2"></i>Podcast</li>
+                  <li class="tag__item"><i class="fas fa-clock mr-2"></i>55 mins.</li>
+                  <li class="tag__item play blue">
+                      <a href="#"><i class="fas fa-play mr-2"></i>Play Episode</a>
+                  </li>
+              </ul> -->
+      </div>
+    </article>
+    <article class="postcard light red">
+      <a class="postcard__img_link" href="#">
+        <img class="postcard__img" src="{% static 'conference/Janet-Durden.jpg'%}" alt="Image Title" />
+      </a>
+      <div class="postcard__text t-dark">
+        <h1 class="postcard__title red"><a href="#">Janet Durden</a></h1>
+        <div class="postcard__subtitle small">
+          <!-- <time datetime="2020-05-25 12:00:00">
+                      <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
+                  </time> -->
+        </div>
+        <div class="postcard__bar"></div>
+        <div class="postcard__preview-txt">A native of Mississippi, Janet S. Durden has been President of United Way of
+          Northeast
+          Louisiana since 1985 and with United Way for a total of 40 years. Under Durden’s leadership, United Way of
+          Northeast Louisiana has adopted a Strategic Community Impact Plan that is tackling the region’s greatest
+          challenges.
+          <br>
+          In 2020, ULM Women’s Symposium awarded Durden with their Legacy Award. In February 2017, Monroe Chamber of
+          Commerce bestowed their highest recognition, the prestigious Rambin Silverstein Award to Durden. She
+          received the Kitty Degree Humanitarian Award in 2016. In 2015, she was recognized with Grambling State
+          University’s Martin Luther King Jr. Distinguished Leadership Award for Community Service and Leadership.
+          Durden received her Master of Arts from Mississippi State College for Women.
+          <br>
+          She has served on numerous state and local board of directors and is currently on St. Francis Medical Center
+          Board of Directors, Ouachita Business Alliance, and Louisiana Association of United Ways.
+          <br>
+          Janet and Bob Durden have been married for 27 years. Her daughter is a non-profit professional and lives
+          with her husband and their two daughters in Kansas City. Bob has three children, and they enjoy their four
+          grandchildren. Janet and Bob are active members at First Baptist Church in West Monroe.
+        </div>
+        <!-- <ul class="postcard__tagbox">
+                  <li class="tag__item"><i class="fas fa-tag mr-2"></i>Podcast</li>
+                  <li class="tag__item"><i class="fas fa-clock mr-2"></i>55 mins.</li>
+                  <li class="tag__item play red">
+                      <a href="#"><i class="fas fa-play mr-2"></i>Play Episode</a>
+                  </li>
+              </ul> -->
+      </div>
+    </article>
+    <article class="postcard light green">
+      <a class="postcard__img_link" href="#">
+        <img class="postcard__img" src="{% static 'conference/Kristopher-Kelley.jpg'%}" alt="Image Title" />
+      </a>
+      <div class="postcard__text t-dark">
+        <h1 class="postcard__title green"><a href="#">Kristopher Kelley</a></h1>
+        <div class="postcard__subtitle small">
+          <!-- <time datetime="2020-05-25 12:00:00">
+                      <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
+                  </time> -->
+        </div>
+        <div class="postcard__bar"></div>
+        <div class="postcard__preview-txt">Kristopher Kelley serves as the Executive Director for the West Monroe-West
+          Ouachita
+          Chamber of Commerce, Main Street Assistant Manager for Columbia, and is a small business owner. He is a
+          local naturalist entrepreneur with over two decades of experience as a non-profit consultant, biology
+          instructor, and environmental chemist. Kelley has worked not only for business development and promotional
+          initiatives with local and regional government organizations; but also, with US Fish and Wildlife, US Army
+          Corps of Engineers, USDA, and the just to name a few. He works tirelessly as promoter of our local
+          businesses, as an environmental educator, as the regional past chair for American Chemical Society all while
+          serving on the boards of 12 non-profits fully committed to advancing the mission of many arts organizations
+          in our region. Kelley is passionate about workforce development for our region, the role the arts play in
+          developing quality citizens, historic preservation, and celebrating the natural diversity of Louisiana.</div>
+        <!-- <ul class="postcard__tagbox">
+                  <li class="tag__item"><i class="fas fa-tag mr-2"></i>Podcast</li>
+                  <li class="tag__item"><i class="fas fa-clock mr-2"></i>55 mins.</li>
+                  <li class="tag__item play green">
+                      <a href="#"><i class="fas fa-play mr-2"></i>Play Episode</a>
+                  </li>
+              </ul> -->
+      </div>
+    </article>
+    <article class="postcard light yellow">
+      <a class="postcard__img_link" href="#">
+        <img class="postcard__img" src="{% static 'conference/Reginald-Owens.jpg'%}" alt="Image Title" />
+      </a>
+      <div class="postcard__text t-dark">
+        <h1 class="postcard__title yellow"><a href="#">Dr. Reginald Owens</a></h1>
+        <div class="postcard__subtitle small">
+          <!-- <time datetime="2020-05-25 12:00:00">
+                      <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
+                  </time> -->
+        </div>
+        <div class="postcard__bar"></div>
+        <div class="postcard__preview-txt">Dr. Reginald Owens is the retired chairman of the department of journalism at
+          Louisiana
+          Tech University where he held the F. Jay Taylor Endowed Chair of Journalism.
+          <br>
+          As a student at Tech in the late 1960s, he was one of the founders of the university’s first African
+          American student organization, Soul Tech, and served as its first president. He also initiated the
+          application in 1969 to bring to campus in 1971 the first black Greek letter organization, Alpha Phi Alpha.
+          <br>
+          Owens began his professional career as a police reporter at the Houston Post. He later worked in Houston at
+          Southwestern Bell Telephone Co. editing publications and as an advertising assistant; managing editor of The
+          (Houston) Informer; and associate professor of journalism at Texas Southern University. He has also taught
+          at Grambling State University and in Austin, Texas at Huston-Tillotson University, Austin Community College
+          and the University of Texas.
+        </div>
+        <!-- <ul class="postcard__tagbox">
+                  <li class="tag__item"><i class="fas fa-tag mr-2"></i>Podcast</li>
+                  <li class="tag__item"><i class="fas fa-clock mr-2"></i>55 mins.</li>
+                  <li class="tag__item play yellow">
+                      <a href="#"><i class="fas fa-play mr-2"></i>Play Episode</a>
+                  </li>
+              </ul> -->
+      </div>
+    </article>
+    <article class="postcard light blue">
+      <a class="postcard__img_link" href="#">
+        <img class="postcard__img" src="{% static 'conference/Tory-Smith.jpg'%}" alt="Image Title" />
+      </a>
+      <div class="postcard__text t-dark">
+        <h1 class="postcard__title blue"><a href="#">Tory Smith</a></h1>
+        <div class="postcard__subtitle small">
+          <!-- <time datetime="2020-05-25 12:00:00">
+                      <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
+                  </time> -->
+        </div>
+        <div class="postcard__bar"></div>
+        <div class="postcard__preview-txt">Tory Smith is an Onboarding/Delivery Manager at IBM Monroe Client Innovation
+          Center
+          located in Monroe. She is a native Shreveport. Throughout her career, she has dedicated time, energy, love,
+          and creativity to community involvement and giveback.
+          <br>
+          At IBM, she is a member of the Diversity & Inclusion council for her business unit to help foster inclusive
+          environments and champion diversity of thought and voices. She is also the Engagement Champion for the
+          Monroe office serving as executive advisor to the center’s business resource groups and supporting employee
+          engagement endeavors which include community action and volunteering as IBM believes in giving back to the
+          communities in which they reside.
+        </div>
+        <!-- <ul class="postcard__tagbox">
+                  <li class="tag__item"><i class="fas fa-tag mr-2"></i>Podcast</li>
+                  <li class="tag__item"><i class="fas fa-clock mr-2"></i>55 mins.</li>
+                  <li class="tag__item play blue">
+                      <a href="#"><i class="fas fa-play mr-2"></i>Play Episode</a>
+                  </li>
+              </ul> -->
+      </div>
+    </article>
 
 
-<!-- Scheduled Events -->
+
+  </div>
+</section>
 
 
+
+
+
+
+
+<section class="light">
+  <div class="container py-5 mt-4">
+    <div class="col-md-12 text-center">
+
+      <h1 class="big-heading text-uppercase">UNSUNG HEROS</h2>
+    </div>
+
+    <article class="postcard light blue">
+      <a class="postcard__img_link" href="#">
+        <img class="postcard__img" src="{% static 'conference/Brenda-Dupree.jpg'%}" alt="Image Title" />
+      </a>
+      <div class="postcard__text t-dark">
+        <h1 class="postcard__title blue"><a href="#">Brenda Dupree</a></h1>
+        <div class="postcard__subtitle small">
+          <!-- <time datetime="2020-05-25 12:00:00">
+                      <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
+                  </time> -->
+        </div>
+        <div class="postcard__bar"></div>
+        <div class="postcard__preview-txt">In her nomination, Brenda Dupree is described as one of the hidden treasures
+          of North Central Louisiana. An active member of her church, sorority, and the NAACP, she leads the charge in
+          several parishes for completing and providing accurate information for census reports. She understands the
+          importance of an informed voter and therefore during each cycle, she leads the efforts to organize candidate
+          forums. At over 70 years of age, she has more than tripled her load this election season and will stop
+          whatever she is doing if someone has a question about voting or registration. Dupree wants to be sure that
+          everyone understands their rights and knows exactly who to contact in their district regarding voting. Well
+          known for her kindness, organization skills, relationship building and selflessness, she lives the motto
+          “Intelligence is the torch of wisdom.” Her diligence has inspired our youth to become more active and she
+          guides community leaders on the best ways to merge their generational gaps by developing programming or simply
+          serving as a mentor. A force of nature, Dupree lives a life committed to advocacy and service for those around
+          her.</div>
+        <!-- <ul class="postcard__tagbox">
+                  <li class="tag__item"><i class="fas fa-tag mr-2"></i>Podcast</li>
+                  <li class="tag__item"><i class="fas fa-clock mr-2"></i>55 mins.</li>
+                  <li class="tag__item play blue">
+                      <a href="#"><i class="fas fa-play mr-2"></i>Play Episode</a>
+                  </li>
+              </ul> -->
+      </div>
+    </article>
+    <article class="postcard light red">
+      <a class="postcard__img_link" href="#">
+        <img class="postcard__img" src="{% static 'conference/Bobby-Mounts-headshot.jpg'%}" alt="Image Title" />
+      </a>
+      <div class="postcard__text t-dark">
+        <h1 class="postcard__title red"><a href="#">Bobby Mounts</a></h1>
+        <div class="postcard__subtitle small">
+          <!-- <time datetime="2020-05-25 12:00:00">
+                      <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
+                  </time> -->
+        </div>
+        <div class="postcard__bar"></div>
+        <div class="postcard__preview-txt">While you could start with the fact that valiantly Bobby Mounts served his
+          country as a Marine, he is recognized today for how he has chosen to live his life as a civilian and
+          businessman. Each year, PJ’s Coffee hosts a contest that allows a veteran the opportunity to win a franchise.
+          Upon the urging of his wife, Mounts entered and became the second franchise winner. He chose to open his
+          business in Ruston but as he opened his doors, he made a commitment to make a difference through his work.
+          Beyond his ongoing support for veterans and veteran causes, Mounts dedicates one day each month where a
+          portion of his proceeds goes to support non-profits and various needs throughout the community. At his own
+          expense, he advertises and promotes these efforts, welcomes representatives from the benefitting group, and
+          hosts special events to bring awareness to the cause. Yet Mounts does this quietly and without fanfare because
+          he wants no credit; instead, he prefers the spotlight shine on those he is serving. He operates with the
+          purest servant’s heart and with a desire to truly leave this world better than he found it through his steady,
+          consistent gift. Whether mentoring college students or volunteering with 4-H, Mounts is a warrior with a
+          sterling heart for service that represents “paying it forward” in the finest sense of the expression. </div>
+        <!-- <ul class="postcard__tagbox">
+                  <li class="tag__item"><i class="fas fa-tag mr-2"></i>Podcast</li>
+                  <li class="tag__item"><i class="fas fa-clock mr-2"></i>55 mins.</li>
+                  <li class="tag__item play red">
+                      <a href="#"><i class="fas fa-play mr-2"></i>Play Episode</a>
+                  </li>
+              </ul> -->
+      </div>
+    </article>
+    <article class="postcard light green">
+      <a class="postcard__img_link" href="#">
+        <img class="postcard__img" src="{% static 'conference/Michelle-Tarpley.jpeg'%}" alt="Image Title" />
+      </a>
+      <div class="postcard__text t-dark">
+        <h1 class="postcard__title green"><a href="#">Michelle Tarpley</a></h1>
+        <div class="postcard__subtitle small">
+          <!-- <time datetime="2020-05-25 12:00:00">
+                      <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
+                  </time> -->
+        </div>
+        <div class="postcard__bar"></div>
+        <div class="postcard__preview-txt">When the unthinkable happened on April 25, 2019, Michelle Tarpley transformed
+          into an angel for countless individuals throughout the community. As the sun came up the very next day, she
+          became a tireless volunteer, checking on neighbors and senior citizens in her community where the F3 tornado
+          had severely ravaged the area just two streets over from her home. Throughout the neighborhood, she
+          consistently helped family after family with hot meals, water, and much needed supplies. But she wasn’t
+          finished. Even after the tornado recovery began to subside, she chose to continue her service, passing out
+          homemade soup once a week during the winter months to shut-ins as well as those individuals who were sick
+          during their wellness checks. Furthermore, Tarpley teaches diabetes awareness as a licensed life coach to help
+          individuals become better informed about how to live with the disease and also volunteers with the TAPS
+          program which provide comfort, care and resources to those grieving the death of a military loved one. A
+          resident of Ruston, Tarpley is known as a true caregiver who never meets a stranger and lives her life daily
+          with the goal of making someone else’s life better.</div>
+        <!-- <ul class="postcard__tagbox">
+                  <li class="tag__item"><i class="fas fa-tag mr-2"></i>Podcast</li>
+                  <li class="tag__item"><i class="fas fa-clock mr-2"></i>55 mins.</li>
+                  <li class="tag__item play green">
+                      <a href="#"><i class="fas fa-play mr-2"></i>Play Episode</a>
+                  </li>
+              </ul> -->
+      </div>
+    </article>
+    <article class="postcard light yellow">
+      <a class="postcard__img_link" href="#">
+        <img class="postcard__img" src="{% static 'conference/Jackie-White.png'%}" alt="Image Title" />
+      </a>
+      <div class="postcard__text t-dark">
+        <h1 class="postcard__title yellow"><a href="#">Jackie White</a></h1>
+        <div class="postcard__subtitle small">
+          <!-- <time datetime="2020-05-25 12:00:00">
+                      <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
+                  </time> -->
+        </div>
+        <div class="postcard__bar"></div>
+        <div class="postcard__preview-txt">Jackie White works tirelessly for the community as director of the Lincoln
+          Parish Health Hut where she strives daily to bring the very best health care to those who may be struggling
+          with how to pay for their care. She has established school-based health care programs throughout the Lincoln
+          Parish School District, advocating for telemedicine protocols that will help keep students from having to
+          leave school and their instructional time. White also gives of her time to the students of Louisiana Tech
+          University, allowing them to shadow her and her staff. White readily engages with community partners as well
+          as the university to improve the health of those who live throughout the parish. She has been recognized as an
+          outstanding volunteer in various capacities, honored for her advocacy around better health care for all.
+          However, she is quick to allow others to have the spotlight, demurely declining opportunities so that others
+          can have their moment to shine. Jackie White is a role model and inspiration to many, especially young women
+          who want to have careers in medicine while also having a family and living a life of purpose while practicing
+          selflessness through service.</div>
+        <!-- <ul class="postcard__tagbox">
+                  <li class="tag__item"><i class="fas fa-tag mr-2"></i>Podcast</li>
+                  <li class="tag__item"><i class="fas fa-clock mr-2"></i>55 mins.</li>
+                  <li class="tag__item play yellow">
+                      <a href="#"><i class="fas fa-play mr-2"></i>Play Episode</a>
+                  </li>
+              </ul> -->
+      </div>
+    </article>
+    <article class="postcard light blue">
+      <a class="postcard__img_link" href="#">
+        <img class="postcard__img" src="{% static 'conference/Adarian-Williams-headshot.jpg'%}" alt="Image Title" />
+      </a>
+      <div class="postcard__text t-dark">
+        <h1 class="postcard__title blue"><a href="#">Adarian Williams</a></h1>
+        <div class="postcard__subtitle small">
+          <!-- <time datetime="2020-05-25 12:00:00">
+                      <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
+                  </time> -->
+        </div>
+        <div class="postcard__bar"></div>
+        <div class="postcard__preview-txt">While a student at Grambling State University, Adarian Williams distinguished
+          himself through his active role in various organizations before going on to serve in various capacities in
+          Washington DC, including as an Organizing Fellow for the Campaign of President Joe Biden. He later worked in
+          the office of former Congressman Cedric Richmond and went on to work as the Senior Manager of Congressional
+          Relations for the Congressional Black Caucus Foundation Inc. During summer 2020, Williams led an effort that
+          brought together elected officials, law enforcement officers, religious leaders, and most importantly,
+          families, students and citizens in a Week of Action to discuss the racial unrest across our country and take
+          united action in growing a thriving community for future generations. Shortly after that effort, he hosted and
+          engaged more than 4,000 citizens in a virtual candidate forum for Louisiana’s Fifth Congressional District. He
+          currently serves as the Deputy Chief of Staff in the office of GSU President Rick Gallot where his commitment
+          to service is evident. Williams is said to possess resilience, integrity and the ability to collaborate with
+          others to achieve a shared vision while remaining fully committed to giving back to this community he calls
+          home.</div>
+        <!-- <ul class="postcard__tagbox">
+                  <li class="tag__item"><i class="fas fa-tag mr-2"></i>Podcast</li>
+                  <li class="tag__item"><i class="fas fa-clock mr-2"></i>55 mins.</li>
+                  <li class="tag__item play blue">
+                      <a href="#"><i class="fas fa-play mr-2"></i>Play Episode</a>
+                  </li>
+              </ul> -->
+      </div>
+    </article>
+  </div>
+</section>
 
 
 
 <script src="https://kit.fontawesome.com/f8cd4d7fce.js" crossorigin="anonymous"></script>
 
-</body>
-
-</html>
 
 {% endblock %}

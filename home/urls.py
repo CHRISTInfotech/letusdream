@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.urls import path, include
 
-from home.views import bangalorechristuniversity, allsaintssollege, gramblingstateuniversitylouisiana,  louisianastateuniversityshreveport, universityofLouisianaMonroe, donboscocollege, stannescollege, loyola, binghamtonUniversity, calender, downloadcsv, index, locations, aboutUs, louisianatechuniversity, media, aboutConference, newsletter, pressRelease, photoGallery,  registration_user, trriennialConference,  cuT, jncaB, dreams, annualConference, yclpCourse, research, publications, testimonials
+from .views import *
 
 urlpatterns = [
     path('', index, name='main'),
@@ -11,8 +11,9 @@ urlpatterns = [
     path('newsletter', newsletter, name='newsletter'),
     path('press-release/', pressRelease, name="press-release"),
     path('photo-gallery/', photoGallery, name="photo-gallery"),
+    path('youtube-media/', youtubeMedia, name="youtube-media"),
     path('about-conference', aboutConference, name='about-conference'),
-    path('annual-conference', annualConference, name='annual-conference'),
+    path('annualConference', allConferences, name='annualConference'),
     path('trriennial-conference', trriennialConference,
          name='trriennial-conference'),
     path('yclpCourse', yclpCourse, name='yclp-course'),
@@ -28,18 +29,21 @@ urlpatterns = [
          name='jyoti-nivas-college-autonomous'),
     path('louisiana-tech-university', louisianatechuniversity,
          name='louisiana-tech-university'),
-    path('donboscocollege',donboscocollege,name='donboscocollege'),
-    path('loyola-college',loyola,name='loyola-college'),
-    path('stannescollege',stannescollege,name='stannescollege'),
-    path('universityofLouisianaMonroe',universityofLouisianaMonroe,name='universityofLouisianaMonroe'),
-    path('allsaintssollege',allsaintssollege,name='allsaintssollege'),
-    path('gramblingstateuniversitylouisiana',gramblingstateuniversitylouisiana,name='grambling-state-university-louisiana'),
-    path('louisianastateuniversityshreveport',louisianastateuniversityshreveport,name='louisiana-state-university-shreveport'),
+    path('donboscocollege', donboscocollege, name='donboscocollege'),
+    path('loyolacollegeConference', loyolacollegeConference, name='loyolacollegeConference'),
+    path('stannescollege', stannescollege, name='stannescollege'),
+    path('universityofLouisianaMonroe', universityofLouisianaMonroe,
+         name='universityofLouisianaMonroe'),
+    path('allsaintssollege', allsaintssollege, name='allsaintssollege'),
+    path('gramblingstateuniversitylouisiana', gramblingstateuniversitylouisiana,
+         name='grambling-state-university-louisiana'),
+    path('louisianastateuniversityshreveport', louisianastateuniversityshreveport,
+         name='louisiana-state-university-shreveport'),
     path('dreams/<str:drm>', dreams, name='dreams'),
     path('locations/<str:loc>', locations, name='locations'),
     path('registration_user', registration_user, name='registration_user'),
     path('calender', calender, name='calender'),
     path('downloadcsv', downloadcsv, name='downloadcsv'),
-    path('testimonials',testimonials,name='testimonials'),
-    
+    path('testimonials', testimonials, name='testimonials'),
+
 ]
