@@ -6,7 +6,7 @@ About Conference
 {% endblock %}
 
 {% block extraStyles %}
-<link rel="stylesheet" src="{% static 'css/aboutConference.css' %}">
+<link rel="stylesheet" src="{% static 'css/aboutConference.css' %}" type="text/css">
 {% endblock extraStyles %}
 
 {% block links %}
@@ -26,14 +26,14 @@ About Conference
         <div class="row  p-2">
             <div class="col-lg-6 hover-zoomin pt-0 p-5">
                 <a href="{% url 'annualConference' %}" title="" target="_blank">
-                    <img src="{% static 'conference/annual.jpg' %}" alt="" />
+                    <img src="{% static 'conference/annual.jpg' %}" alt="" class="img-fluid" />
                 </a>
                 <h4 class="text-center mt-3 text-green">Annual Conference</h4>
             </div>
 
             <div class="col-lg-6 hover-zoomin pt-0 p-5">
                 <a href="{% url 'trriennial-conference' %}" title="">
-                    <img src="{% static 'conference/Triennial.jpg' %}" alt="" />
+                    <img src="{% static 'conference/Triennial.jpg' %}" alt=""  class="img-fluid"/>
                 </a>
                 <h4 class="text-center mt-3 text-green">Triennial Conference</h4>
             </div>
