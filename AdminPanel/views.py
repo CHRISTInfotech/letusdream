@@ -20,6 +20,9 @@ def registration(request):
     print(query_results)
     return render(request, "AdminPanel/registration.html",{'query_results':query_results})
 
+def login(request):
+    if request.method == "POST":
+        return render(request, "AdminPanel/home.html")
 
 def view_dt(request):
     return render(request, "AdminPanel/view-dt.html")
@@ -52,7 +55,8 @@ def signup(request):
             return redirect("dashboard")
 
         else:
-            return redirect("signup")
+            # return redirect("signup")
+            return render(request, "AdminPanel/home.html")
 
 
     else :

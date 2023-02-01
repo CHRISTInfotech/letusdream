@@ -1,6 +1,9 @@
 .section {
     margin-top: 150px;
 }
+.img {
+    width: -webkit-fill-available !important;
+}
 
 /*ZoomIn Hover Effect*/
 .hover-zoomin a {

@@ -10,7 +10,7 @@ About Conference
 {% endblock extraStyles %}
 
 {% block links %}
-{% endblock links %}
+{% endblock links %}    
 
 {% block content %}
 <section class="section">
@@ -25,15 +25,15 @@ About Conference
     <div class="container">
         <div class="row  p-2">
             <div class="col-lg-6 hover-zoomin pt-0 p-5">
-                <a href="{% url 'annualConference' %}" title="" target="_blank">
-                    <img src="{% static 'conference/annual.jpg' %}" alt="" />
+                <a href="{% url 'annualConference' %}" title="" >
+                    <img style="width: -webkit-fill-available" src="{% static 'conference/annual.jpg' %}" alt="" />
                 </a>
                 <h4 class="text-center mt-3 text-green">Annual Conference</h4>
             </div>
 
             <div class="col-lg-6 hover-zoomin pt-0 p-5">
                 <a href="{% url 'trriennial-conference' %}" title="">
-                    <img src="{% static 'conference/Triennial.jpg' %}" alt="" />
+                    <img style="width: -webkit-fill-available" src="{% static 'conference/Triennial.jpg' %}" alt="" />
                 </a>
                 <h4 class="text-center mt-3 text-green">Triennial Conference</h4>
             </div>
@@ -163,7 +163,7 @@ About Conference
                         <div class="card ">
                             <div class="col-md-12 text-center align-self-center">
                                 <div class="col-md-12">
-                                    <h1 class="text-center mb-2">IMPLEMENTATION</h2>
+                                    <h1 class="text-center mb-2" style="font-size:35px !important;padding-top:15px;">IMPLEMENTATION</h2>
                                 </div>
                                 <div class="fs-6 text-right p-5">
                                     <p>The LET US DREAM Conference is implemented at three
