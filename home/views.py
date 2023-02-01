@@ -13,7 +13,10 @@ def index(request):
 def aboutUs(request):
     return render(request, 'aboutUs/aboutUs.html')
 
-
+def login(request):
+    if request.method == "POST":
+        return render(request, "AdminPanel/home.html")
+    
 def media(request):
     return render(request, 'aboutUs/media.html')
 
