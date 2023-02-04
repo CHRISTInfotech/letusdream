@@ -8,6 +8,12 @@ Triennial Conference
 {% block extraStyles %}
 <link rel="stylesheet" href="{% static 'css/triennialConference.css' %}" type="text/css">
 {% endblock extraStyles %}
+{% block links %}
+
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css' type="text/css">
+<!-- Font Awesome -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" type="text/css"/>
+{% endblock links %}
 
 {% block content %}
 <nav aria-label="breadcrumb animated slideInDown" class="cus-breadcrumb">
@@ -26,7 +32,7 @@ Triennial Conference
     <h3>Triennial International Virtual Conference</h2>
 </div>
 <div class="row text-center">
-    <h4>Connecting Local Communities and Service Initiatives Through Global Networking</h3>
+    <h4>Connecting Local Communities and Service Initiatives Through Global Networking</h4>
 </div>
 
 <br>
@@ -83,16 +89,15 @@ Triennial Conference
     <br><br><br><br>
 
     <div class="row ">
-        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-center align-self-center d-flex justify-content-end">
+        <div class="col-lg-12 col-md-12 col-sm-6 col-xs-6  text-center align-self-center d-flex justify-content-center">
             <div>
                 <a href="#"></a><button class="btn-2 m-1"><span>Download Brochure</span></button></a>
-            </div>
-        </div>
-        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-center align-self-center d-flex justify-content-start">
-            <div>
                 <a href="{% url 'registration_user' %}"></a><button class="btn-2 m-1"><span>Register Now</span></button></a>
             </div>
         </div>
+        {% comment %} <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-center align-self-center d-flex justify-content-start"> {% endcomment %}
+           
+        {% comment %} </div> {% endcomment %}
     </div>
 
     <br>
@@ -609,15 +614,17 @@ Triennial Conference
                 message of local and global shared communities.</p>
         </div>
 
-        <div class="col-md-6 mt-5">
+        <div class="col-md-12 mt-5">
             <img src="{% static 'conference/TRIENNIAL-CONFERENCE-POSTER2.jpg' %}"
                 class="img-fluid rounded mx-auto d-block cus-img" alt="Responsive image">
+                <div class="col-lg-12 col-md-12 col-sm-6 col-xs-6 text-center align-self-center d-flex justify-content-center">
+                    <div>
+                        <a href="{% url 'registration_user' %}"></a><button class="btn-2 m-1"><span>Register Now</span></button></a>
+                    </div>
+                </div>
+                
         </div>
-        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-center align-self-center d-flex justify-content-start">
-            <div>
-                <a href="{% url 'registration_user' %}"></a><button class="btn-2 m-1"><span>Register Now</span></button></a>
-            </div>
-        </div>
+        
                 <div class="col-md-6 mt-5">
                     <h4 class="text-green text-center">Host Conference Chairs</h4>
                     <p class="text-center">Dr. Dhanajeyan Jayavel </p>

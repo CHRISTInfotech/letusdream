@@ -5,27 +5,23 @@
 Dream Pro Club
 {% endblock %}
 
-{% block content %}
-<!DOCTYPE html>
-<html lang="en">
+{% block extraStyles %}
+<link rel="stylesheet" href="{% static 'css/dreamsProClub.css' %}" type="text/css">
+{% endblock extraStyles %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dream Pro Club</title>
-    {% block links %}
-    <!--Google font-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+{% block links %}
+<!--Google font-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 
+<!--  Bootstrap CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" type="text/css">
 
-    <!--  Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" >
-
-    <!-- Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+<!-- Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
     integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
     crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
@@ -34,81 +30,20 @@ Dream Pro Club
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
-    {% endblock links %}
-</head>
-<style>
-    body {
-        font-family: 'Montserrat', sans-serif;
-    }
 
-    .about-dream {
-        text-align: left !important;
-        margin: 5% 5% 0 2%;
-    }
+<script src="https://kit.fontawesome.com/f8cd4d7fce.js" crossorigin="anonymous"></script>
 
-    .about-dream p span {
-        text-align: left !important;
-        color: #0a7b79;
-        font-weight: 900;
-    }
+{% endblock links %}
 
-
-
-    .big-heading {
-        font-weight: bolder;
-    }
-
-    .btn-2 {
-        background: transparent;
-        border: 2px solid #0a7b79;
-        width: 200px;
-        padding: 15px 0;
-        text-align: center;
-        border-radius: 25px;
-        font-weight: bold;
-        color: #0a7b79;
-    }
-
-    .btn-2:hover {
-        border: 2px solid #d3f2e9;
-        background: #d3f2e9;
-    }
-
-    .carousel-img {
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: cover;
-    }
-
-    .carousel-video-inner {
-        text-align: center;
-    }
-
-    .cover {
-        object-fit: cover;
-        width: 100%;
-    }
-
-    .img1 {
-        height: 100%;
-        width: 100%;
-    }
-
-    .text-black {
-        text-decoration: none !important;
-    }
-</style>
-
-<body>
-
-    <nav aria-label="breadcrumb animated slideInDown" class="cus-breadcrumb">
-        <ol class="breadcrumb text-uppercase mb-0 bg-white">
-            <li class="breadcrumb-item"><a class="text-black text-decoration-none" href="{% url 'main' %}">Home</a></li>
-            <li class="breadcrumb-item"><a class="text-black text-decoration-none"
-                    href="{% url 'main' %}#dreamProgram">Dreams</a></li>
-            <li class="breadcrumb-item  active" aria-current="page">Dreams Pro Club</li>
-        </ol>
-    </nav>
+{% block content %}
+<nav aria-label="breadcrumb animated slideInDown" class="cus-breadcrumb">
+    <ol class="breadcrumb text-uppercase mb-0 bg-white">
+        <li class="breadcrumb-item"><a class="text-black text-decoration-none" href="{% url 'main' %}">Home</a></li>
+        <li class="breadcrumb-item"><a class="text-black text-decoration-none"
+                href="{% url 'main' %}#dreamProgram">Dreams</a></li>
+        <li class="breadcrumb-item  active" aria-current="page">Dreams Pro Club</li>
+    </ol>
+</nav>
     <div class="container">
         <div class="row p-5">
             <div class="col-md-7 col-sm-12 ">
