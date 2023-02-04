@@ -1,0 +1,67 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.about-dream {
+    text-align: left !important;
+    margin: 5% 5% 0 2%;
+}
+
+.about-dream p span {
+    text-align: left !important;
+    color: #0a7b79;
+    font-weight: 900;
+}
+
+
+
+.big-heading {
+    font-weight: bolder;
+}
+
+.btn-2 {
+    background: transparent;
+    border: 2px solid #0a7b79;
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    border-radius: 25px;
+    font-weight: bold;
+    color: #0a7b79;
+}
+
+.btn-2:hover {
+    border: 2px solid #d3f2e9;
+    background: #d3f2e9;
+}
+
+.carousel-img {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.carousel-video-inner {
+    text-align: center;
+}
+
+.cover {
+    object-fit: cover;
+    width: 100%;
+}
+
+.img1 {
+    height: 100%;
+    width: 100%;
+}
+
+.text-black {
+    text-decoration: none !important;
+}
+
+@keyframes slide {
+    to {
+        -webkit-transform: translateY(var(--direction, -50%));
+        transform: translateY(var(--direction, -50%));
+    }
+}
