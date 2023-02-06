@@ -88,7 +88,10 @@ h5 {
     object-fit: cover !important;
   }
 
-
+  .anualcon-cus-img{
+    margin-top: auto;
+    /* padding-bottom: 40px; */
+}
 
    .font-weight-medium {
     font-weight: 500;
@@ -117,7 +120,7 @@ h5 {
     transform: translateY(-10px);
   } */
   
-.date-pos {
+/* .date-pos {
     right: 10px;
     top: 10px;
   }
@@ -125,7 +128,7 @@ h5 {
   .date-pos span {
     font-size: 30px;
     line-height: 30px;
-  }
+  } */
   .bg-info-gradiant {
       background: #188ef4;
       background: -webkit-linear-gradient(legacy-direction(to right), #188ef4 0%, #316ce8 100%);
@@ -133,4 +136,12 @@ h5 {
       background: -webkit-linear-gradient(left, #188ef4 0%, #316ce8 100%);
       background: -o-linear-gradient(left, #188ef4 0%, #316ce8 100%);
       background: linear-gradient(to right, #188ef4 0%, #316ce8 100%);
+  }
+
+  @media  (max-width:424px) {
+    .anualcon-cus-img{
+        margin-top: auto;
+        padding-top: 30px;
+        /* padding-bottom: 50px; */
+    }
   }

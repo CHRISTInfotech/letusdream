@@ -5,6 +5,81 @@
     width: 100%;
 }
 
+.button {
+    display: inline-block;
+    border-radius: 100px;
+    background-color: #d3f2e9;
+    font-weight: bold;
+    border: 1px solid #d3f2e9;
+    color: #0a7b79;
+    text-align: center;
+    font-size: 20px;
+    padding: 10px 20px;
+    width: 250px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .button span:after {
+    content: "\00bb";
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .button:hover {
+    background-color: transparent;
+    color: #0a7b79;
+    border: 1px solid #0a7b79;
+  }
+  
+  .button:hover span {
+    padding-right: 25px;
+  }
+  
+  .button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+  
+  .btn-2 {
+    background: transparent;
+    border: 2px solid #0a7b79;
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    border-radius: 25px;
+    font-weight: bold;
+    color: #0a7b79;
+  }
+  
+  .btn-2:hover {
+    border: 2px solid #d3f2e9;
+    background: #d3f2e9;
+  }
+
+  .reg-btn{
+    justify-content:right !important
+  }
+  
+  @media (max-width:424px){
+    .reg-btn{
+        justify-content:center !important
+      }
+  }
+  
 @keyframes zoomIn {
     0% {
         opacity: 0;
