@@ -95,3 +95,9 @@ h1 {
       background: linear-gradient(to right, #188ef4 0%, #316ce8 100%);
   }
   
+  @media (max-width:424px){
+    .blog-home2 .date-pos {
+        right: 10px;
+        top: 70px !important;
+      }
+  }
