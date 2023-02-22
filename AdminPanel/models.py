@@ -12,6 +12,7 @@ class Registration(models.Model):
     dreamsOption=models.CharField(max_length=20)
 
 
+
 # class DreamsEvent(models.Model):
 #     events=models.CharField(max_length=20)
 
