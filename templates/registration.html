@@ -22,7 +22,8 @@ REGISTRATION
 <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 {% block links %}
 <!-- Font Awesome kit -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+    type="text/css">
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 {% endblock links %}
 
@@ -37,22 +38,19 @@ REGISTRATION
 
 <section class="registration-section">
 
-    <form action="" class="needs-validation" novalidate method="post">
-        {% csrf_token %}
 
-        <div class="container">
-            <div class="row py-5 mt-4 align-items-center">
-                <!-- For Demo Purpose -->
-                <div class="col-md-6 pr-lg-5 mb-5 mb-md-0">
-                    <img src="https://bootstrapious.com/i/snippets/sn-registeration/illustration.svg" alt=""
-                        class="img-fluid mb-3 d-md-block ">
-                    <h2>Register with Let Us Dream</h2>
-                    <!-- <p class="font-italic text-muted mb-0">Register for Let Us Dream Event</p> -->
+    <div class="container">
+        <div class="row py-5 mt-4 align-items-center">
+            <!-- For Demo Purpose -->
+            <div class="col-md-6 pr-lg-5 mb-5 mb-md-0">
+                <img src="https://bootstrapious.com/i/snippets/sn-registeration/illustration.svg" alt=""
+                    class="img-fluid mb-3 d-md-block ">
+                <h2>Register with Let Us Dream</h2>
+                <!-- <p class="font-italic text-muted mb-0">Register for Let Us Dream Event</p> -->
 
-                    </p>
-                </div>
-                
-                 <!-- Registeration Form -->
+                </p>
+            </div>
+                <!-- Registeration Form -->
                 <div class="col-md-7 col-lg-6 ml-auto">
                     <form action="" class="row needs-validation" novalidate method="post">
                         {% csrf_token %}
@@ -64,14 +62,15 @@ REGISTRATION
                                         <i class="bi bi-person-fill"></i>
                                     </span>
                                 </div>
-                                <input type="text" class="form-control" type="text" id="validationCustom01" required="" name="name"/>
+                                <input type="text" class="form-control" type="text" id="validationCustom01" required=""
+                                    name="name" />
                                 <div class="valid-feedback">
                                     Looks good!
                                 </div>
                                 <div class="invalid-feedback">
-                                    Name is required 
-                              </div>
-                            </div>   
+                                    Name is required
+                                </div>
+                            </div>
                         </div>
 
                         <div class="col-lg-10">
@@ -82,11 +81,11 @@ REGISTRATION
                                         <i class="bi bi-telephone-inbound-fill"></i>
                                     </span>
                                 </div>
-                                <input type="number" class="form-control" id="validationCustom01" name="phone"/>
+                                <input type="number" class="form-control" id="validationCustom01" name="phone" />
                                 <div class="invalid-feedback">
                                     Please provide phone number.
                                 </div>
-                            </div>   
+                            </div>
                         </div>
 
                         <div class="col-lg-10">
@@ -95,23 +94,26 @@ REGISTRATION
                                 <div class="input-group-prepend">
                                     <span class="input-group-text" id="inputGroupPrepend">@</span>
                                 </div>
-                                <input type="text" class="form-control " type="email" id="validationCustomUsername" name="email" aria-describedby="inputGroupPrepend" required>
+                                <input type="text" class="form-control " type="email" id="validationCustomUsername"
+                                    name="email" aria-describedby="inputGroupPrepend" required>
                                 <div class="invalid-feedback">
                                     Please enter Email ID.
                                 </div>
-                            </div>   
+                            </div>
                         </div>
 
 
                         <div class="col-lg-10">
-                            <label for="validationCustom04" class="form-label required">Select the batch you are intrested in</label>
+                            <label for="validationCustom01" class="form-label required">Select the batch you are
+                                intrested
+                                in</label>
                             <div class="input-group col-lg-6 mb-3">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text bg-white px-3 border-md border-right-0 py-2">
                                         <i class="bi bi-person-check-fill"></i>
                                     </span>
                                 </div>
-                                <select id="validationCustom04" name="aboutme" class="form-select" required>
+                                <select id="validationCustom01" name="inter" class="form-select" required>
                                     <option disabled selected value="">Select Interest</option>
                                     <option value="dreamProgram">DREAMS Program</option>
                                     <option value="dreamsBand">DREAMS Band</option>
@@ -121,267 +123,235 @@ REGISTRATION
                                 <div class="invalid-feedback">
                                     Please select valid option.
                                 </div>
-                            </div>   
+                            </div>
                         </div>
-            
+
                         <div class="col-lg-10">
-                            <label for="validationCustom04" class="form-label required">Select type</label>
+                            <label for="validationCustom01" class="form-label required">Select type</label>
                             <div class="input-group col-lg-6 mb-3">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text bg-white px-3 border-md border-right-0 py-2">
                                         <i class="bi bi-person-check-fill"></i>
                                     </span>
                                 </div>
-                                <select id="typeSel" name="aboutme" class="form-select" required onchange="check_type();">
+                                <select id="typeSel" name="utype" class="form-select" required onchange="check_type();">
                                     <option disabled selected value="">Select Option</option>
                                     <option value="Paticipant">Paticipant</option>
                                     <option value="Volunteer">Volunteer</option>
                                     <option value="Partner">Partner</option>
-                                    <option value="AnnualPart">Annual Conference Participant</option>
                                 </select>
                                 <div class="invalid-feedback">
                                     Please select valid option.
                                 </div>
-                            </div>   
-                        </div>          
+                            </div>
+                        </div>
 
-                        <!-- Participant Form -->       
+                        <!-- Participant Form -->
 
-                    <div id="parti" style="display:none;">
-                        <div class="col-lg-10">
-                            <label for="validationCustom01" class="form-label required">Student's Address</label>
-                            <div class="input-group col-lg-6 mb-3">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text bg-white px-3 border-md border-right-0 ">
-                                        <i class="bi bi-geo-alt"></i>
-                                    </span>
+                        <div id="parti" style="display:none;">
+                            <div class="col-lg-10">
+                                <label for="validationCustom02" class="form-label required">Student's Address</label>
+                                <div class="input-group col-lg-6 mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text bg-white px-3 border-md border-right-0 ">
+                                            <i class="bi bi-geo-alt"></i>
+                                        </span>
+                                    </div>
+                                    <input type="text" class="form-control" type="text" id="validationCustom11"
+                                        required="" name="staddr" />
+                                    <div class="invalid-feedback">
+                                        Address is required
+                                    </div>
                                 </div>
-                                <input type="text" class="form-control" type="text" id="validationCustom01" required="" name="name"/>
-                                <div class="invalid-feedback">
-                                    Address is required 
-                              </div>
-                            </div>   
+                            </div>
+                            <div class="col-lg-10">
+                                <label for="validationCustom02" class="form-label required">Student's Grade</label>
+                                <div class="input-group col-lg-6 mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text bg-white px-3 border-md border-right-0 ">
+                                            <i class="bi bi-list-ol"></i>
+                                        </span>
+                                    </div>
+                                    <input type="text" class="form-control" type="text" id="validationCustom12"
+                                        required="" name="stgrade" />
+                                    <div class="invalid-feedback">
+                                        Grade is required
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-10">
+                                <label for="validationCustom02" class="form-label required">Parent Name</label>
+                                <div class="input-group col-lg-6 mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text bg-white px-3 border-md border-right-0 ">
+                                            <i class="bi bi-person-fill"></i>
+                                        </span>
+                                    </div>
+                                    <input type="text" class="form-control" type="text" id="validationCustom13"
+                                        required="" name="ptname" />
+                                    <div class="invalid-feedback">
+                                        Name is required
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-10">
+                                <label for="validationCustom02" class="form-label">Parent Phone Number</label>
+                                <div class="input-group col-lg-6 mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text bg-white px-3 border-md border-right-0 ">
+                                            <i class="bi bi-telephone-inbound-fill"></i>
+                                        </span>
+                                    </div>
+                                    <input type="number" class="form-control" id="validationCustom02" name="ptphone" />
+                                    <div class="invalid-feedback">
+                                        Please provide phone number.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-10">
+                                <label for="validationCustom02" class="form-label required">Parent Email</label>
+                                <div class="input-group col-lg-6 mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="inputGroupPrepend">@</span>
+                                    </div>
+                                    <input type="text" class="form-control " type="email" id="validationCustom14"
+                                        name="ptemail" aria-describedby="inputGroupPrepend" required>
+                                    <div class="invalid-feedback">
+                                        Please enter Email ID.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-10">
+                                <label for="validationCustom02" class="form-label required">Parent Address</label>
+                                <div class="input-group col-lg-6 mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text bg-white px-3 border-md border-right-0 ">
+                                            <i class="bi bi-geo-alt"></i>
+                                        </span>
+                                    </div>
+                                    <input type="text" class="form-control" type="text" id="validationCustom15"
+                                        required="" name="ptaddr" />
+                                    <div class="invalid-feedback">
+                                        Address is required
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-lg-10">
-                            <label for="validationCustom01" class="form-label">Student's Phone Number</label>
-                            <div class="input-group col-lg-6 mb-3">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text bg-white px-3 border-md border-right-0 ">
-                                        <i class="bi bi-telephone-inbound-fill"></i>
-                                    </span>
-                                </div>
-                                <input type="number" class="form-control" id="validationCustom01" name="phone"/>
-                                <div class="invalid-feedback">
-                                    Please provide phone number.
-                                </div>
-                            </div>   
-                        </div>
-                        <div class="col-lg-10">
-                            <label for="validationCustom01" class="form-label required">Student's Grade</label>
-                            <div class="input-group col-lg-6 mb-3">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text bg-white px-3 border-md border-right-0 ">
-                                        <i class="bi bi-list-ol"></i>
-                                    </span>
-                                </div>
-                                <input type="text" class="form-control" type="text" id="validationCustom01" required="" name="name"/>
-                                <div class="invalid-feedback">
-                                    Grade is required 
-                              </div>
-                            </div>   
-                        </div>
-                        <div class="col-lg-10">
-                            <label for="validationCustom01" class="form-label required">Parent Name</label>
-                            <div class="input-group col-lg-6 mb-3">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text bg-white px-3 border-md border-right-0 ">
-                                        <i class="bi bi-person-fill"></i>
-                                    </span>
-                                </div>
-                                <input type="text" class="form-control" type="text" id="validationCustom01" required="" name="name"/>
-                                <div class="invalid-feedback">
-                                    Name is required 
-                              </div>
-                            </div>   
-                        </div>
-                        <div class="col-lg-10">
-                            <label for="validationCustom01" class="form-label">Parent Phone Number</label>
-                            <div class="input-group col-lg-6 mb-3">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text bg-white px-3 border-md border-right-0 ">
-                                        <i class="bi bi-telephone-inbound-fill"></i>
-                                    </span>
-                                </div>
-                                <input type="number" class="form-control" id="validationCustom01" name="phone"/>
-                                <div class="invalid-feedback">
-                                    Please provide phone number.
-                                </div>
-                            </div>   
-                        </div>
-                        <div class="col-lg-10">
-                            <label for="validationCustom01" class="form-label required">Parent Email</label>
-                            <div class="input-group col-lg-6 mb-3">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text" id="inputGroupPrepend">@</span>
-                                </div>
-                                <input type="text" class="form-control " type="email" id="validationCustomUsername" name="email" aria-describedby="inputGroupPrepend" required>
-                                <div class="invalid-feedback">
-                                    Please enter Email ID.
-                                </div>
-                            </div>   
-                        </div>
-                        <div class="col-lg-10">
-                            <label for="validationCustom01" class="form-label required">Parent Address</label>
-                            <div class="input-group col-lg-6 mb-3">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text bg-white px-3 border-md border-right-0 ">
-                                        <i class="bi bi-geo-alt"></i>
-                                    </span>
-                                </div>
-                                <input type="text" class="form-control" type="text" id="validationCustom01" required="" name="name"/>
-                                <div class="invalid-feedback">
-                                    Address is required 
-                              </div>
-                            </div>   
-                        </div>
-                    </div>
                         <!--Participant form end -->
 
-                        <!-- Volunteer Form -->       
+                        <!-- Volunteer Form -->
 
-                    <div id="Volnt" style="display:none;">
-                        <div class="col-lg-10">
-                            <label for="validationCustom04" class="form-label required">How would you like to Volunteer</label>
-                            <div class="input-group col-lg-6 mb-3">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text bg-white px-3 border-md border-right-0 py-2">
-                                        <i class="bi bi-person-check-fill"></i>
-                                    </span>
+                        <div id="Volnt" style="display:none;">
+                            <div class="col-lg-10">
+                                <label for="validationCustom03" class="form-label required">How would you like to
+                                    Volunteer</label>
+                                <div class="input-group col-lg-6 mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text bg-white px-3 border-md border-right-0 py-2">
+                                            <i class="bi bi-person-check-fill"></i>
+                                        </span>
+                                    </div>
+                                    <select id="typeSel1" name="volt" class="form-select" required>
+                                        <option disabled selected value="">Select Option</option>
+                                        <option value="Facilitator">Facilitator</option>
+                                        <option value="Coordinator">Coordinator</option>
+                                    </select>
+                                    <div class="invalid-feedback">
+                                        Please select valid option.
+                                    </div>
                                 </div>
-                                <select id="typeSel" name="aboutme" class="form-select" required>
-                                    <option disabled selected value="">Select Option</option>
-                                    <option value="Facilitator">Facilitator</option>
-                                    <option value="Coordinator">Coordinator</option>
-                                </select>
-                                <div class="invalid-feedback">
-                                    Please select valid option.
+                            </div>
+                            <div class="col-lg-10">
+                                <label for="validationCustom03" class="form-label ">Short intro about yourself</label>
+                                <div class="input-group col-lg-6 mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text bg-white px-3 border-md border-right-0 ">
+                                            <i class="bi bi-file-earmark-person"></i>
+                                        </span>
+                                    </div>
+                                    <input type="text" class="form-control" type="text" id="validationCustom03"
+                                        name="intro" />
                                 </div>
-                            </div>   
-                        </div> 
-                        <div class="col-lg-10">
-                            <label for="validationCustom01" class="form-label ">Short intro about yourself</label>
-                            <div class="input-group col-lg-6 mb-3">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text bg-white px-3 border-md border-right-0 ">
-                                        <i class="bi bi-file-earmark-person"></i>
-                                    </span>
+                            </div>
+                            <div class="col-lg-10">
+                                <label for="validationCustom03" class="form-label ">Areas of expertise</label>
+                                <div class="input-group col-lg-6 mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text bg-white px-3 border-md border-right-0 ">
+                                            <i class="bi bi-list-stars"></i>
+                                        </span>
+                                    </div>
+                                    <input type="text" class="form-control" type="text" id="validationCustom03"
+                                        name="expertise" />
                                 </div>
-                                <input type="text" class="form-control" type="text" id="validationCustom01" name="intro"/>
-                            </div>   
+                            </div>
                         </div>
-                        <div class="col-lg-10">
-                            <label for="validationCustom01" class="form-label ">Areas of expertise</label>
-                            <div class="input-group col-lg-6 mb-3">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text bg-white px-3 border-md border-right-0 ">
-                                        <i class="bi bi-list-stars"></i>
-                                    </span>
-                                </div>
-                                <input type="text" class="form-control" type="text" id="validationCustom01" name="expertise"/>                                
-                            </div>   
-                        </div>
-                        <div class="col-lg-10">
-                            <label for="validationCustom01" class="form-label">Phone Number</label>
-                            <div class="input-group col-lg-6 mb-3">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text bg-white px-3 border-md border-right-0 ">
-                                        <i class="bi bi-telephone-inbound-fill"></i>
-                                    </span>
-                                </div>
-                                <input type="number" class="form-control" id="validationCustom01" name="phone"/>
-                                <div class="invalid-feedback">
-                                    Please provide phone number.
-                                </div>
-                            </div>   
-                        </div>                     
-                    </div>
                         <!--Volunteer form end -->
 
-                        <!-- Partner Form -->       
+                        <!-- Partner Form -->
 
-                    <div id="partn" style="display:none;">
-                        
-                        <div class="col-lg-10">
-                            <label for="validationCustom01" class="form-label ">Address</label>
-                            <div class="input-group col-lg-6 mb-3">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text bg-white px-3 border-md border-right-0 ">
-                                        <i class="bi bi-geo-alt"></i>
-                                    </span>
+                        <div id="partn" style="display:none;">
+
+                            <div class="col-lg-10">
+                                <label for="validationCustom04" class="form-label ">Address</label>
+                                <div class="input-group col-lg-6 mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text bg-white px-3 border-md border-right-0 ">
+                                            <i class="bi bi-geo-alt"></i>
+                                        </span>
+                                    </div>
+                                    <input type="text" class="form-control" type="text" id="validationCustom04"
+                                        name="partaddr" />
                                 </div>
-                                <input type="text" class="form-control" type="text" id="validationCustom01" name="name"/>
-                            </div>   
+                            </div>
+                            <div class="col-lg-10">
+                                <label for="validationCustom04" class="form-label ">Message</label>
+                                <div class="input-group col-lg-6 mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text bg-white px-3 border-md border-right-0 ">
+                                            <i class="bi bi-chat-right-text"></i>
+                                        </span>
+                                    </div>
+                                    <input type="text" class="form-control" type="text" id="validationCustom04"
+                                        name="partmsg" />
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-lg-10">
-                            <label for="validationCustom01" class="form-label">Phone Number</label>
-                            <div class="input-group col-lg-6 mb-3">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text bg-white px-3 border-md border-right-0 ">
-                                        <i class="bi bi-telephone-inbound-fill"></i>
-                                    </span>
-                                </div>
-                                <input type="number" class="form-control" id="validationCustom01" name="phone"/>
-                                <div class="invalid-feedback">
-                                    Please provide phone number.
-                                </div>
-                            </div>   
-                        </div> 
-                        <div class="col-lg-10">
-                            <label for="validationCustom01" class="form-label ">Message</label>
-                            <div class="input-group col-lg-6 mb-3">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text bg-white px-3 border-md border-right-0 ">
-                                        <i class="bi bi-chat-right-text"></i>
-                                    </span>
-                                </div>
-                                <input type="text" class="form-control" type="text" id="validationCustom01" name="name"/>                                
-                            </div>   
-                        </div>                                            
-                    </div>
                         <!--Partner form end -->
 
 
-                        <div class="col-lg-12  mb-3">                            
+                        <div class="col-lg-12  mb-3">
                             <div class="form-check ">
-                                    <input class="form-check-input " type="checkbox" value="louisiana" id="invalidCheck"  name="prevconf">
-                                    <label class="form-check-label required" for="invalidCheck">
-                                        Agree Terms &conditions
-                                    </label>    
-                            </div>           
-                        </div>   
-                        
+                                <input class="form-check-input " type="checkbox" value="louisiana" id="invalidCheck"
+                                    name="prevconf" required="">
+                                <label class="form-check-label required" for="invalidCheck">
+                                    Agree Terms &conditions
+                                </label>
+                            </div>
+                        </div>
+
 
                         <div class="d-grid gap-2 col-10">
                             <button class="btn btn-primary  btn-block" type="submit">Register to Event</button>
                         </div>
-                        
+
                     </form>
                 </div>
-                 
+
             </div>
         </div>
-    </form>
 
-    <!-- <a href="{% url 'downloadcsv' %}" class="btn btn-primary">Download</a> -->
+
+        <!-- <a href="{% url 'downloadcsv' %}" class="btn btn-primary">Download</a> -->
 </section>
 <script type="text/javascript">
     // Example starter JavaScript for disabling form submissions if there are invalid fields
     (function () {
         'use strict'
-
+        
         // Fetch all the forms we want to apply custom Bootstrap validation styles to
         var forms = document.querySelectorAll('.needs-validation')
-
+        
         // Loop over them and prevent submission
         Array.prototype.slice.call(forms)
             .forEach(function (form) {
@@ -392,47 +362,78 @@ REGISTRATION
                     }
 
                     form.classList.add('was-validated')
-                   // alert('Successfully registered')
+                    // alert('Successfully registered')
                 }, false)
             })
 
-            
+
     })()
 
-    $(document).ready(function() {
-       
-        $('#validationCustom04').change(function() {
-            
-            if( $(this).val() == 'other') {
-            $('#AboutOther').prop( "disabled", false );
-            
-            } else {       
-            $('#AboutOther').prop( "disabled", true );
+    $(document).ready(function () {
+        
+        $('#typeSel').change(function () {
+
+            if ($(this).val() == 'Paticipant') {
+                
+                document.getElementById("typeSel1").required = false;
+                // $('#validationCustom02').prop("disabled", true);
+
+            } else {
+                // $('#validationCustom01').prop("disabled", true);
+                // document.getElementById("typeSel1").required = true;
+                
             }
-            });
-});
+            if ($(this).val() == 'Volunteer'){
+                document.getElementById("validationCustom11").required = false;
+                document.getElementById("validationCustom12").required = false;
+                document.getElementById("validationCustom13").required = false;
+                document.getElementById("validationCustom14").required = false;
+                document.getElementById("validationCustom15").required = false;
+            } else{
+                // document.getElementById("validationCustom11").required = true;
+                // document.getElementById("validationCustom12").required = true;
+                // document.getElementById("validationCustom13").required = true;
+                // document.getElementById("validationCustom14").required = true;
+                // document.getElementById("validationCustom15").required = true;
+            }
+
+            if ($(this).val() == 'Partner'){
+                document.getElementById("validationCustom11").required = false;
+                document.getElementById("validationCustom12").required = false;
+                document.getElementById("validationCustom13").required = false;
+                document.getElementById("validationCustom14").required = false;
+                document.getElementById("validationCustom15").required = false;
+                document.getElementById("typeSel1").required = false;
+            } else{
+                // document.getElementById("typeSel1").required = true;
+            }
+
+        });
+    });
+
+    
 </script>
 
 <script type="text/javascript">
- function check_type(){
-    var type = document.getElementById("typeSel").value ;
-    if (type == "Paticipant"){
-        document.getElementById("parti").style.display = "block";
-        document.getElementById("Volnt").style.display = "none";
-        document.getElementById("partn").style.display = "none";
-    } else if (type == "Volunteer"){ 
-        document.getElementById("Volnt").style.display = "block";
-        document.getElementById("parti").style.display = "none";
-        document.getElementById("partn").style.display = "none";
-    } else if (type == "Partner"){
-        document.getElementById("partn").style.display = "block";
-        document.getElementById("parti").style.display = "none";
-        document.getElementById("Volnt").style.display = "none";
-    } else {
-        document.getElementById("parti").style.display = "none";
-        document.getElementById("Volnt").style.display = "none";
-        document.getElementById("partn").style.display = "none";
+    function check_type() {
+        var type = document.getElementById("typeSel").value;
+        if (type == "Paticipant") {
+            document.getElementById("parti").style.display = "block";
+            document.getElementById("Volnt").style.display = "none";
+            document.getElementById("partn").style.display = "none";
+        } else if (type == "Volunteer") {
+            document.getElementById("Volnt").style.display = "block";
+            document.getElementById("parti").style.display = "none";
+            document.getElementById("partn").style.display = "none";
+        } else if (type == "Partner") {
+            document.getElementById("partn").style.display = "block";
+            document.getElementById("parti").style.display = "none";
+            document.getElementById("Volnt").style.display = "none";
+        } else {
+            document.getElementById("parti").style.display = "none";
+            document.getElementById("Volnt").style.display = "none";
+            document.getElementById("partn").style.display = "none";
+        }
     }
- }
 </script>
 {% endblock %}

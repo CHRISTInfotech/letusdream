@@ -132,13 +132,15 @@ Registration
                             <tr>
                                 <th scope="col">Name</th>
                                 <th scope="col">Email ID</th>
-                                <th scope="col">About me</th>
-                                <th scope="col">if other</th>
-                                <th scope="col">Organisation Affilation</th>
-                                <th scope="col">Organisation Name</th> 
-                                <th scope="col">Phone No</th>           
-                                <th scope="col">Conference Date</th>
-                                <th scope="col">Previous Conference</th>
+                                <th scope="col">Phone No</th>
+                                <th scope="col">Interest</th>
+                                <th scope="col">Student Address</th>
+                                <th scope="col">Student Grade</th> 
+                                <th scope="col">Parent Name</th>           
+                                <th scope="col">Parent Mobile</th>
+                                <th scope="col">Parent Email ID</th>
+                                <th scope="col">Parent Address</th>
+                                <th scope="col">User Type</th>
 
                             </tr>
                         </thead>
@@ -147,14 +149,15 @@ Registration
                             <tr>
                                 <th scope="row">{{ item.name }}</th>
                                 <td>{{ item.email }}</td>
-                                <td>{{ item.aboutme }}</td>
-                                <td>{{ item.aboutother }}</td>
-                                <td>{{ item.orgaff }}</td>
-                                <td>{{ item.orgname }}</td>
                                 <td>{{ item.phone }}</td>
-                                <td>{{ item.confdate }}</td>
-                                <td>{{ item.prevconf }}</td>
-                                
+                                <td>{{ item.interest }}</td>
+                                <td>{{ item.st_addr }}</td>
+                                <td>{{ item.st_grade }}</td>
+                                <td>{{ item.st_Pname }}</td>
+                                <td>{{ item.st_Pnum }}</td>
+                                <td>{{ item.st_Pemail }}</td>
+                                <td>{{ item.st_Paddr }}</td>
+                                <td>{{ item.user_type }}</td>
                             </tr>
                             
                         </tbody>

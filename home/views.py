@@ -148,24 +148,53 @@ def publications(request):
 
 
 def registration_user(request):
-
+    
     if request.method == "POST":
         name = request.POST.get('name')
         email = request.POST.get('email')
-        aboutme = request.POST.get('aboutme')
-        aboutother = request.POST.get('aboutother')
-        orgaff = request.POST.get('orgaff')
-        orgname = request.POST.get('orgname')
         phone = request.POST.get('phone')
-        confdate = request.POST.getlist('confdate')
-        prevconf = request.POST.getlist('prevconf')
+        inter = request.POST.get('inter')
+        utype = request.POST.get('utype')
+        staddr = request.POST.get('staddr')
+        # stphone = request.POST.get('st_phone')
+        stgrade = request.POST.get('stgrade')
+        ptname = request.POST.get('ptname')
+        ptphone = request.POST.get('ptphone')
+        ptemail = request.POST.get('ptemail')
+        ptaddr = request.POST.get('ptaddr')
+        volt = request.POST.get('volt')
+        intro = request.POST.get('intro')
+        expertise = request.POST.get('expertise')
+        # vlphone = request.POST.get('vl_phone')
+        partaddr = request.POST.get('partaddr')
+        # partphone= request.POST.get('ptr_phone')
+        partmsg = request.POST.get('partmsg')
 
         confreg = ConferenceRegistration.objects.create(
-            name=name, email=email, aboutme=aboutme, aboutother=aboutother, orgaff=orgaff, orgname=orgname, phone=phone, confdate=confdate, prevconf=prevconf)
+        name = name ,
+        email = email , 
+        phone = phone , 
+        interest = inter , 
+        user_type = utype , 
+        st_addr = staddr , 
+        # st_phone = stphone , 
+        st_grade = stgrade , 
+        st_Pname = ptname , 
+        st_Pnum = ptphone , 
+        st_Pemail = ptemail , 
+        st_Paddr = ptaddr , 
+        vl_type = volt , 
+        vl_about = intro , 
+        vl_expert = expertise , 
+        # vl_phone = vlphone , 
+        ptr_addr = partaddr , 
+        # ptr_phone= partphone , 
+        ptr_msg = partmsg)
         confreg.save()
         print(confreg)
         return redirect('registration_user')
     else:
+        print("Failed")
         return render(request, 'registration.html')
 #    return render(request, 'registration.html')
 
@@ -180,11 +209,12 @@ def downloadcsv(request):
     confreg = ConferenceRegistration.objects.all()
     writer = csv.writer(response)
 
-    writer.writerow(['Name', 'Email ID', 'About me', 'if other', 'Organisation Affilation',
-                    'Organisation Name', 'Phone No', 'Conference Date', 'Previous Conference'])
+    writer.writerow(['Name', 'Email ID', 'Phone No', 'Interest', 'Student Address',
+                    'Student Grade', 'Parent Name', 'Parent Mobile', 'Parent Email ID',
+                    'Parent Address', 'User Type'])
     for i in confreg:
-        writer.writerow([i.name, i.email, i.aboutme, i.aboutother,
-                        i.orgaff, i.orgname, i.phone, i.confdate, i.prevconf])
+        writer.writerow([i.name, i.email, i.phone, i.interest, i.st_addr, i.st_grade,
+                         i.st_Pname, i.st_Pnum, i.st_Pemail, i.st_Paddr, i.user_type])
     return response
 
 
