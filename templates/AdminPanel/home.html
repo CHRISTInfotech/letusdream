@@ -14,11 +14,9 @@ ADMIN
         <div class="card">
             <h5 class="card-header">Particpants</h5>
             <div class="card-body">
-                {% for item in query_results %}
-                <h5 class="card-title">{{ item.name }}</h5>
-                <p class="card-text">Feb 1 - Apr 1, United States</p>
-                <p class="card-text text-success">18.2% increase since last month</p>
-                {% endfor %}
+                <h5 class="card-title">{{ r1.count }} </h5>
+                <p class="card-text">Total Applications</p>
+                <!-- <p class="card-text text-success">18.2% increase since last month</p> -->
             </div>
         </div>
     </div>
@@ -26,9 +24,9 @@ ADMIN
         <div class="card">
             <h5 class="card-header">Volunteers</h5>
             <div class="card-body">
-                <h5 class="card-title">$2.4k</h5>
-                <p class="card-text">Feb 1 - Apr 1, United States</p>
-                <p class="card-text text-success">4.6% increase since last month</p>
+                <h5 class="card-title">{{ r2.count }}</h5>
+                <p class="card-text">Total Applications</p>
+                <!-- <p class="card-text text-success">4.6% increase since last month</p> -->
             </div>
         </div>
     </div>
@@ -36,13 +34,13 @@ ADMIN
         <div class="card">
             <h5 class="card-header">Partners</h5>
             <div class="card-body">
-                <h5 class="card-title">43</h5>
-                <p class="card-text">Feb 1 - Apr 1, United States</p>
-                <p class="card-text text-danger">2.6% decrease since last month</p>
+                <h5 class="card-title">{{ r3.count }}</h5>
+                <p class="card-text">Total Applications</p>
+                <!-- <p class="card-text text-danger">2.6% decrease since last month</p> -->
             </div>
         </div>
     </div>
-    <div class="col-12 col-md-6 mb-4 mb-lg-0 col-lg-3">
+    <!-- <div class="col-12 col-md-6 mb-4 mb-lg-0 col-lg-3">
         <div class="card">
             <h5 class="card-header">Traffic</h5>
             <div class="card-body">
@@ -51,10 +49,10 @@ ADMIN
                 <p class="card-text text-success">2.5% increase since last month</p>
             </div>
         </div>
-    </div>
+    </div> -->
 </div>
 
-<div class="row">
+<!-- <div class="row">
     <div class="col-12 col-xl-8 mb-4 mb-lg-0">
         <div class="card">
             <h5 class="card-header">Latest transactions</h5>
@@ -145,7 +143,7 @@ ADMIN
         </div>
     </div>
 
-</div>
+</div> -->
 
 
 <script src="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>

@@ -1,6 +1,6 @@
 from django.urls import path, include
 
-from AdminPanel.views import  dashboard, events, modify_statistics, registration, reports, signup, view_dt
+from AdminPanel.views import  dashboard, events, modify_statistics, registration, reports, signup, view_dt, logout_request
 
 
 urlpatterns = [
@@ -12,6 +12,7 @@ urlpatterns = [
     path('reports',reports,name="reports"),
     path('events',events,name="events"),
     path('modify_statistics',modify_statistics,name="modify_statistics"),
+    path('logout', logout_request, name="logout"),
     
 ]
 
