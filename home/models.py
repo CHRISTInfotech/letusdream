@@ -19,3 +19,5 @@ class ConferenceRegistration(models.Model):
     vl_expert=models.CharField(max_length=50,null=True)
     ptr_addr=models.CharField(max_length=50,null=True)
     ptr_msg=models.CharField(max_length=50,null=True)
+    # date = models.DateField(auto_now_add = True)   
+    date = models.DateField(("DDMMYY"), auto_now_add=True)

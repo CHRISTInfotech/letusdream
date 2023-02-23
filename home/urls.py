@@ -44,6 +44,8 @@ urlpatterns = [
     path('registration_user', registration_user, name='registration_user'),
     path('calender', calender, name='calender'),
     path('downloadcsv', downloadcsv, name='downloadcsv'),
+    path('downloadvoltcsv',downloadvoltcsv, name='downloadvoltcsv'),
+    path('downloadpartcsv',downloadpartcsv, name='downloadpartcsv'),
     path('testimonials', testimonials, name='testimonials'),
 
 ]
