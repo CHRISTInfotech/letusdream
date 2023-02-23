@@ -88,18 +88,18 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
         </div>
-        <div class="col-12 col-md-4 col-lg-2">
+        <!-- <div class="col-12 col-md-4 col-lg-2">
             <input class="form-control form-control-dark" type="text" placeholder="Search" aria-label="Search">
-        </div>
+        </div> -->
         <div class="col-12 col-md-5 col-lg-8 d-flex align-items-center justify-content-md-end mt-3 mt-md-0">
 
             <div class="dropdown">
                 <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
                     data-toggle="dropdown" aria-expanded="false">
-                    Welcome, User
+                    Welcome, {{user.username}}
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <li><a class="dropdown-item" href="#" target="_blank">Sign out</a></li>
+                    <li><a class="dropdown-item" href="logout">Sign out</a></li>
                     <li><a class="dropdown-item" href="{% url 'main' %}" target="_blank">Let us Dream</a></li>
                 </ul>
             </div>
@@ -134,7 +134,7 @@
                                 <span class="ml-2">Registration</span>
                             </a>
                         </li>
-                        <li class="nav-item">
+                        <!-- <li class="nav-item">
                             <a class="nav-link" href="{% url 'reports' %}">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                     fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -145,8 +145,8 @@
                                 </svg>
                                 <span class="ml-2">Reports</span>
                             </a>
-                        </li>
-                        <li class="nav-item has-submenu">
+                        </li> -->
+                        <!-- <li class="nav-item has-submenu">
                             <a class="nav-link" href="{% url 'events' %}">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                     fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -157,18 +157,18 @@
                                     </path>
                                 </svg>
                                 <span class="ml-2">Settings</span></a>
-                                    <!-- <ul class="submenu collapse">
+                                    <ul class="submenu collapse">
                                         <li><a class="nav-link" href="{% url 'events' %}#events">Events </a></li>
                                         
                                         <li><a class="nav-link" href="{% url 'events' %}#country">Country </a></li>
-                                    </ul> -->
-                        </li>
-                        <li class="nav-item">
+                                    </ul>
+                        </li> -->
+                        <!-- <li class="nav-item">
                             <a class="nav-link" href="{% url 'modify_statistics' %}">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-graph-up-arrow" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M0 0h1v15h15v1H0V0Zm10 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V4.9l-3.613 4.417a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61L13.445 4H10.5a.5.5 0 0 1-.5-.5Z"/> </svg>
                                 <span class="ml-2">Modify Statistics</span>
                             </a>
-                        </li>
+                        </li> -->
 
                     </ul>
                 </div>

@@ -29,22 +29,22 @@
 
     <section class="login-section">
         <div class="login">
-
-            <img src="{% static 'logo/let-us-dream-Empowering-Communities-01.png' %}" alt="" class="w-50 h-50 rounded mx-auto d-block">
+            <a href="{% url 'main' %}" >
+            <img src="{% static 'logo/let-us-dream-Empowering-Communities-01.png' %}" alt="" class="w-50 h-50 rounded mx-auto d-block"> </a>
             <!-- <h1 class="text-center fw-bold">Admin Panel</h1> -->
             <p class="text-secondary fs-4 text-center">Welcome to Let us Dream Admin Panel</p>
 
             <form action="" method="post" class="needs-validation requires-validation " novalidate >
                 {% csrf_token %}
                 <div class="form-group input-icons">
-                    <label class="form-label" for="email">Email address</label>
+                    <label class="form-label" for="email">Username</label>
                     <div class="wrapper">
                         <i class="fa-solid fa-envelope"></i>
-                        <input class="form-control input-field"  type="email" id="email"  name="username" required>
+                        <input class="form-control input-field"  type="text" id="username"  name="username" required>
                     </div>
                     
                     <div class="invalid-feedback">
-                        Please enter your email address
+                        Please enter your Username
                     </div>
 
                 </div>
