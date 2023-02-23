@@ -20,133 +20,45 @@ Registration
 
 <style>
     .required:after {
-      content:" *";
-      color: red;
+        content: " *";
+        color: red;
     }
-    </style>
+</style>
 
 <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a class="text-black text-decoration-none" >Home</a></li>
+        <li class="breadcrumb-item"><a class="text-black text-decoration-none" href="/Admin/dashboard">Home</a></li>
         <li class="breadcrumb-item active" aria-current="page">Registration</li>
     </ol>
 </nav>
-
-<!-- <section class="registration-section">
-
-    <div class="registration">
-        <h1 class="text-center fw-bold mb-3">Registration</h1>
-        <form action="" class="row g-3 needs-validation" novalidate method="post">
-            {% csrf_token %}
-            <div class="col-md-6">
-                <label for="validationCustom01" class="form-label required">First name</label>
-                <input type="text" class="form-control" type="text" id="validationCustom01" required="" name="fname"/>
-                <div class="valid-feedback">
-                    Looks good!
-                </div>
-            </div>
-            <div class="col-md-6">
-                <label for="validationCustom02" class="form-label required">Last name</label>
-                <input type="text" class="form-control" type="text" id="validationCustom02" required name="lname">
-                <div class="valid-feedback">
-                    Looks good!
-                </div>
-            </div>
-
-            <div class="col-md-12">
-                <label for="validationCustom01" class="form-label ">Phone </label>
-                <input type="text" class="form-control" type="number" placeholder="888 888 8888" maxlength="10" id="validationCustom01" required name="phone">
-                <div class="valid-feedback">
-                    Looks good!
-                </div>
-            </div>
-            <div class="col-md-12">
-                <label for="validationCustomUsername" class="form-label required">Email</label>
-                <div class="input-group has-validation">
-                    <span class="input-group-text" id="inputGroupPrepend">@</span>
-                    <input type="text" class="form-control " type="email" id="validationCustomUsername" name="email" aria-describedby="inputGroupPrepend" required>
-                    <div class="invalid-feedback">
-                        Please enter Email ID.
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="col-md-12">
-                <label class="form-label required">Select the batch you are interested in </label>
-                <select class="form-select" id="optionMenuInterest" onchange = "populate(this.id,'MenuDreamsProgram')" name="dreams">
-                    <option>Select Interest</option>
-                    <option value="dreamsProgram">DREAMS Program</option>
-                    <option value="dreamsBand">DREAMS Band</option>
-                    <option value="dreamProClub">DREAMS Pro Club</option>
-                    <option value="conference">Conference</option>
-                </select>
-                <div class="invalid-feedback">
-                    Please select a valid state.
-                </div>
-            </div>
-
-            <div class="col-md-12" id="optionMenuDreamsProgram">
-                <label class="form-label required">DREAMS Program</label>
-                <select class="form-select" id="MenuDreamsProgram" name="dreamsOption">
-                    <option>Select Interest</option>
-                </select>
-                <div class="invalid-feedback">
-                    Please select a valid state.
-                </div>
-            </div>
-
-            <div class="col-12" >
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-                    <label class="form-check-label" for="invalidCheck">
-                        Agree to terms and conditions
-                    </label>
-                    <div class="invalid-feedback">
-                        You must agree before submitting.
-                    </div>
-                </div>
-            </div>
-            <div class="col-12">
-                <button class="btn btn-primary" type="submit">Submit form</button>
-            </div>
-        </form>
-        
-    </div>
-
-    
-
-    
-</section> -->
-
 <h1 class="h2">Summary</h1>
 
 <div class="row">
     <div class="col-12 col-xl-12 mb-4 mb-lg-0">
         <div class="card">
-            <h5 class="card-header">Latest registration</h5>
+            <h5 class="card-header">Latest Participant registration</h5>
             <div class="card-body">
                 <div class="table-responsive">
                     <table class="table">
                         <thead>
                             <tr>
+                                <th scope="col">Date</th>
                                 <th scope="col">Name</th>
                                 <th scope="col">Email ID</th>
                                 <th scope="col">Phone No</th>
                                 <th scope="col">Interest</th>
                                 <th scope="col">Student Address</th>
-                                <th scope="col">Student Grade</th> 
-                                <th scope="col">Parent Name</th>           
+                                <th scope="col">Student Grade</th>
+                                <th scope="col">Parent Name</th>
                                 <th scope="col">Parent Mobile</th>
                                 <th scope="col">Parent Email ID</th>
-                                <th scope="col">Parent Address</th>
-                                <th scope="col">User Type</th>
-
+                                <th scope="col">Parent Address</th>                               
                             </tr>
                         </thead>
                         {% for item in query_results %}
                         <tbody>
                             <tr>
+                                <td>{{ item.date|date:"d-M-Y" }}</td>
                                 <th scope="row">{{ item.name }}</th>
                                 <td>{{ item.email }}</td>
                                 <td>{{ item.phone }}</td>
@@ -156,24 +68,104 @@ Registration
                                 <td>{{ item.st_Pname }}</td>
                                 <td>{{ item.st_Pnum }}</td>
                                 <td>{{ item.st_Pemail }}</td>
-                                <td>{{ item.st_Paddr }}</td>
-                                <td>{{ item.user_type }}</td>
+                                <td>{{ item.st_Paddr }}</td>                                
                             </tr>
-                            
+
                         </tbody>
                         {% endfor %}
                     </table>
                 </div>
-                
+
                 <a href="{% url 'downloadcsv' %}" class="btn btn-block btn-light">Export as CSV</a>
             </div>
         </div>
     </div>
-
-
 </div>
 
+<div class="row">
+    <div class="col-12 col-xl-12 mb-4 mb-lg-0">
+        <div class="card">
+            <h5 class="card-header">Latest Volunteer registration</h5>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Date</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Email ID</th>
+                                <th scope="col">Phone No</th>
+                                <th scope="col">Interest</th>
+                                <th scope="col">Volunteer Type</th>
+                                <th scope="col">Introduction</th>
+                                <th scope="col">Areas of expertise</th>      
+                            </tr>
+                        </thead>
+                        {% for item in r2 %}
+                        <tbody>
+                            <tr>
+                                <td>{{ item.date|date:"d-M-Y" }}</td>
+                                <th scope="row">{{ item.name }}</th>
+                                <td>{{ item.email }}</td>
+                                <td>{{ item.phone }}</td>
+                                <td>{{ item.interest }}</td>
+                                <td>{{ item.vl_type }}</td>
+                                <td>{{ item.vl_about }}</td>
+                                <td>{{ item.vl_expert }}</td>                             
+                            </tr>
 
+                        </tbody>
+                        {% endfor %}
+                    </table>
+                </div>
+
+                <a href="{% url 'downloadvoltcsv' %}" class="btn btn-block btn-light">Export as CSV</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12 col-xl-12 mb-4 mb-lg-0">
+        <div class="card">
+            <h5 class="card-header">Latest Partner registration</h5>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Date</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Email ID</th>
+                                <th scope="col">Phone No</th>
+                                <th scope="col">Interest</th>
+                                <th scope="col">Address</th>
+                                <th scope="col">Message</th>
+
+                            </tr>
+                        </thead>
+                        {% for item in r3 %}
+                        <tbody>
+                            <tr>
+                                <td>{{ item.date|date:"d-M-Y" }}</td>
+                                <th scope="row">{{ item.name }}</th>
+                                <td>{{ item.email }}</td>
+                                <td>{{ item.phone }}</td>
+                                <td>{{ item.interest }}</td>
+                                <td>{{ item.ptr_addr }}</td>
+                                <td>{{ item.ptr_msg }}</td>
+                            </tr>
+
+                        </tbody>
+                        {% endfor %}
+                    </table>
+                </div>
+
+                <a href="{% url 'downloadpartcsv' %}" class="btn btn-block btn-light">Export as CSV</a>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 <script type="text/javascript">
@@ -200,42 +192,36 @@ Registration
 
 
 
-    function populate(s1,s2) 
-    {
+    function populate(s1, s2) {
         var s1 = document.getElementById(s1);
         var s2 = document.getElementById(s2);
 
-        console.log(s1,s2);
+        console.log(s1, s2);
 
         s2.innerHTML = "";
 
-        if(s1.value == "dreamsProgram")
-        {
-            var optionArray=['participant|Participant','volunteer|Volunteer','partner|Partner'];   
+        if (s1.value == "dreamsProgram") {
+            var optionArray = ['participant|Participant', 'volunteer|Volunteer', 'partner|Partner'];
         }
-        else if(s1.value == "dreamsBand")
-        {
-            var optionArray=['volunteer|Volunteer','partner|Partner']; 
+        else if (s1.value == "dreamsBand") {
+            var optionArray = ['volunteer|Volunteer', 'partner|Partner'];
         }
-        else if(s1.value == "dreamProClub")
-        {
-            var optionArray=['volunteer|Volunteer','partner|Partner']; 
+        else if (s1.value == "dreamProClub") {
+            var optionArray = ['volunteer|Volunteer', 'partner|Partner'];
         }
-        else
-        {
-            var optionArray=['none|None'];
+        else {
+            var optionArray = ['none|None'];
         }
 
-        for (var option in optionArray)
-        {
-            var pair=optionArray[option].split("|");
-            var newoption=document.createElement("option");
+        for (var option in optionArray) {
+            var pair = optionArray[option].split("|");
+            var newoption = document.createElement("option");
 
             newoption.value = pair[0];
-            newoption.innerHTML=pair[1];
+            newoption.innerHTML = pair[1];
             s2.options.add(newoption);
         }
-      
+
     }
 </script>
 

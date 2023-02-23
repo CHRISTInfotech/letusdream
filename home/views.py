@@ -205,18 +205,47 @@ def calender(request):
 
 def downloadcsv(request):
     response = HttpResponse(content_type='text/csv')
-    response['Content-Disposition'] = 'attachment; filename="file.csv"'
-    confreg = ConferenceRegistration.objects.all()
+    response['Content-Disposition'] = 'attachment; filename="participant_list.csv"'
+    confreg = ConferenceRegistration.objects.filter(user_type='Paticipant').all()
+    # confreg = ConferenceRegistration.objects.all()
+
+    print(confreg)
     writer = csv.writer(response)
 
-    writer.writerow(['Name', 'Email ID', 'Phone No', 'Interest', 'Student Address',
+    writer.writerow(['Date','Name', 'Email ID', 'Phone No', 'Interest', 'Student Address',
                     'Student Grade', 'Parent Name', 'Parent Mobile', 'Parent Email ID',
                     'Parent Address', 'User Type'])
     for i in confreg:
-        writer.writerow([i.name, i.email, i.phone, i.interest, i.st_addr, i.st_grade,
+        writer.writerow([i.date, i.name, i.email, i.phone, i.interest, i.st_addr, i.st_grade,
                          i.st_Pname, i.st_Pnum, i.st_Pemail, i.st_Paddr, i.user_type])
     return response
 
+def downloadvoltcsv(request):
+    response = HttpResponse(content_type='text/csv')
+    response['Content-Disposition'] = 'attachment; filename="vounteer_list.csv"'
+    confreg = ConferenceRegistration.objects.filter(user_type='Volunteer').all()
+
+    writer = csv.writer(response)
+
+    writer.writerow(['Date', 'Name', 'Email ID', 'Phone No', 'Interest', 'Volunteer Type',
+                    'Intro', 'Areas of expertise',  'User Type'])
+    for i in confreg:
+        writer.writerow([i.date, i.name, i.email, i.phone, i.interest, i.vl_type,
+                         i.vl_about, i.vl_expert, i.user_type])
+    return response
+
+def downloadpartcsv(request):
+    response = HttpResponse(content_type='text/csv')
+    response['Content-Disposition'] = 'attachment; filename="partner_list.csv"'
+    confreg = ConferenceRegistration.objects.filter(user_type='Partner').all()
+
+    writer = csv.writer(response)
+
+    writer.writerow(['Date', 'Name', 'Email ID', 'Phone No', 'Interest', 'Address',
+                    'Message', 'User Type'])
+    for i in confreg:
+        writer.writerow([i.date, i.name, i.email, i.phone, i.interest, i.ptr_addr, i.ptr_msg, i.user_type])
+    return response
 
 def testimonials(request):
     return render(request, 'home/view_testimonials.html')
