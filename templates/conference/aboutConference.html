@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block title %}
-About Conference
+Conferences
 {% endblock %}
 
 {% block extraStyles %}
@@ -16,26 +16,32 @@ About Conference
 <section class="section">
     <nav aria-label="breadcrumb animated slideInDown" class="cus-breadcrumb">
         <ol class="breadcrumb text-uppercase mb-0 bg-white">
-            <li class="breadcrumb-item"><a class="text-black text-decoration-none" href="{% url 'main' %}">Home</a></li>
-            <!-- <li class="breadcrumb-item"><a class="text-black text-decoration-none" href="{% url 'main' %}#location">Location</a></li> -->
-            <li class="breadcrumb-item  active" aria-current="page">About Conference</li>
+            <li class="breadcrumb-item"><a class="text-black text-decoration-none" href="/">Home</a></li>
+            <!-- <li class="breadcrumb-item"><a class="text-black text-decoration-none" href="/#location">Location</a></li> -->
+            <li class="breadcrumb-item  active" aria-current="page">Conferences</li>
         </ol>
     </nav>
-    <h1 class="  fw-bold text-center fs-1 text-green text-uppercase heading-h3">About Conference</h1>
+    <h1 class="  fw-bold text-center fs-1 text-green text-uppercase heading-h3">LUD Conferences</h1>
     <div class="container">
         <div class="row  p-2">
             <div class="col-lg-6 hover-zoomin pt-0 p-5">
-                <a href="{% url 'annualConference' %}" title="" >
-                    <img style="width: -webkit-fill-available" src="{% static 'conference/annual.jpg' %}" alt="" class="img-fluid" />
+                <a href="/annualConference" title="" >
+                    <img src="/ltstatic/conference/annual.jpg" alt="" class="img-fluid" />
                 </a>
-                <h4 class="text-center mt-3 text-green">Annual Conference</h4>
+                <h3 class="text-center fw-bold mt-3 text-dark-green">Annual Conferences</h3>
+                <p class="text-justify">“Aims to promote voluntary community initiatives, facilitate networking opportunities, and foster a community of practice.”
+                    <p class="pl-5" style=" text-align: right;font-size: 20px;" ;=""><a href="/annualConference" class="fw-bold text-h3">Know more</a></p>
+            </p>
             </div>
 
             <div class="col-lg-6 hover-zoomin pt-0 p-5">
-                <a href="{% url 'trriennial-conference' %}" title="">
-                    <img src="{% static 'conference/Triennial.jpg' %}" alt="" />
+                <a href="/trriennial-conference" title="">
+                    <img src="/ltstatic/conference/Triennial.jpg" alt=""  class="img-fluid"/>
                 </a>
-                <h4 class="text-center mt-3 text-green">Triennial Conference</h4>
+                <h3 class="text-center fw-bold mt-3 text-dark-green">Triennial Conferences</h3>
+                <p class="text-justify">“Platform connects local service initiatives globally, empowers glocal communities, and fosters collaborative knowledge sharing.”
+                    <p class="pl-5" style=" text-align: right;font-size: 20px;" ;=""><a href="/trriennial-conference" class="fw-bold text-h3">Know more</a></p>
+            </p>
             </div>
         </div>
     </div>
@@ -53,15 +59,25 @@ About Conference
                         2017, conferences have reflected on positive recommendations for community development.</p>
 
                 </div>
-                <div class="col-lg-6 d-none ml-5 pl-5 mt-5 pt-5 pl-5 d-lg-flex justify-content-center">
-                    <iframe width="510" height="287" class="ml-5 pl-5" src="https://www.youtube.com/embed/YayLbO0K9Zc"
-                        title="Let Us Dream Conference 2018" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
+                <div class="col-md-6">
+                        <div class="gallery">
+                            <div class="video-box cus-he">
+                                <iframe src="https://www.youtube.com/embed/YayLbO0K9Zc" class="cus-he"></iframe>
+                            </div>
+                            <div class="video-box active cus-he">
+                                <iframe src="https://www.youtube.com/embed/YayLbO0K9Zc" class="cus-he"></iframe>
+                            </div>
+                            <div class="video-box  cus-he">
+                                <iframe src="https://www.youtube.com/embed/YayLbO0K9Zc" class="cus-he"></iframe>
+                            </div>               
+                        </div>
                 </div>
             </div>
         </div>
     </div>
+
+               
+            
     <div class="container">
         <div class="row">
             <div class="col-lg-12 align-items-center">
