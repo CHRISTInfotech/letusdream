@@ -80,23 +80,23 @@
                             </ul>
                         </li>
 
-                        <li class="nav-item dropdown">
+                        <li class="nav-item dropdown active">
                             <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" data-bs-auto-close="outside"
                                 href="#">
                                 Conferences
                             </a>
                             <ul class="dropdown-menu shadow mld" aria-labelledby="MyAccountDDM" id="AppDropDownId">
                                 <li>
-                                    <a href="{% url 'about-conference' %}" class="dropdown-item">About Conference</a>
+                                    <a href="{% url 'Conferences' %}" class="dropdown-item">About Conference</a>
                                 </li>
                                 <li>
                                     <a  href="{% url 'annualConference' %}" class="dropdown-item">
-                                        Annual Conference
+                                        Annual Conferences
                                     </a>
                                 </li>
                                 <li>
                                     <a href="{% url 'trriennial-conference' %}" class="dropdown-item">
-                                        Triennial Conference
+                                        Triennial Conferences
                                     </a>
                                 </li>
 
@@ -214,7 +214,7 @@
         <ul class="menu">
             <li><a href="{% url 'main' %}">Home</a></li>
             <li><a href="{% url 'about-us' %}">About Us</a></li>
-            <li><a href="{% url 'about-conference' %}">Conferences</a></li>
+            <li><a href="{% url 'Conferences' %}">Conferences</a></li>
             <li><a href="{% url 'yclp-course' %}">Courses</a></li>
             <li><a href="">Contact</a></li>
             <li><a href="{% url 'signup' %}">Login</a></li>

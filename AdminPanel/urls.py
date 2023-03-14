@@ -12,7 +12,6 @@ urlpatterns = [
     path('reports',reports,name="reports"),
     path('events',events,name="events"),
     path('modify_statistics',modify_statistics,name="modify_statistics"),
-    path('logout', logout_request, name="logout"),
-    
+    path('logout', logout_request, name="logout"),    
 ]
 
