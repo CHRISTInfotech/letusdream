@@ -18,6 +18,8 @@ urlpatterns = [
          name='trriennial-conference'),
     path('triennial-conference-2020', triennialConference2020,
          name='tc-2020'),
+    path('conference-2023', conference2023,
+         name='conference-2023'),
     path('yclpCourse', yclpCourse, name='yclp-course'),
     path('research', research, name='research'),
     path('publications', publications, name='publications'),
