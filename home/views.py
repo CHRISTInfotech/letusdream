@@ -49,7 +49,10 @@ def triennialConference(request):
     return render(request, 'conference/triennialConference.html')
 
 def triennialConference2020(request):
-    return render(request, 'conference/triennialConference/triennialConference2020.html')
+    return render(request, 'conference/triennialConference/triennialConference2020.html') 
+
+def conference2023(request):
+    return render(request, 'conference/conference2023.html')
 
 def bangalorechristuniversity(request):
     return render(request, 'conference/christ-university-bangalore.html')
