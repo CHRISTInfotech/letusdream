@@ -254,3 +254,9 @@ def downloadpartcsv(request):
 
 def testimonials(request):
     return render(request, 'home/view_testimonials.html')
+
+def announcement(request):
+    return render(request, 'aboutUs/announcement.html')
+
+def llfp(request):
+    return render(request, 'aboutUs/llfp.html')

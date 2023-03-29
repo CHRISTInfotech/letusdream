@@ -50,6 +50,9 @@ urlpatterns = [
     path('downloadcsv', downloadcsv, name='downloadcsv'),
     path('downloadvoltcsv',downloadvoltcsv, name='downloadvoltcsv'),
     path('downloadpartcsv',downloadpartcsv, name='downloadpartcsv'),
-    path('testimonials', testimonials, name='testimonials'),
+    path('testimonials', testimonials, name='testimonials'), 
+    path('announcement', announcement, name='announcement'), 
+    path('llfp', llfp, name='llfp'), 
+
 
 ]
