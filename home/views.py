@@ -259,4 +259,4 @@ def announcement(request):
     return render(request, 'aboutUs/announcement.html')
 
 def llfp(request):
-    return render(request, 'aboutUs/LLFP.html')
+    return render(request, 'aboutUs/llfp.html')
