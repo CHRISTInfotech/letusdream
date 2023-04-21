@@ -816,7 +816,15 @@ idance .timetable {
   background: #fff;
   border: 2px solid #d9d9d9;
 }
-
+.box-top .smal{
+  border-radius: 5px;
+  background-color: #a9a9a9;
+  width: 180px;
+  position: absolute;
+  left: -50px;
+  padding: 2px;
+  top: 0% !important;
+}
 .date p {
   text-align: center;
   margin-top: 25px;
@@ -841,6 +849,7 @@ idance .timetable {
   padding: 2px;
   top: -46%;
 }
+
 
 .box-content p {
   margin: 0;
