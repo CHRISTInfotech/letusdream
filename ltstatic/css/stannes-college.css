@@ -871,3 +871,52 @@ ul {
   -ms-transition: all 0.4s ease;
   border-color: transparent #7ca8a1 transparent transparent;
 }
+
+.box .box-content {
+  border-radius: 5px;
+  background-color: #a9a9a9;
+  width: 180px;
+  position: absolute;
+  left: -50px;
+  padding: 2px;
+  top: -46%;
+}
+.box-top .box-content {
+  border-radius: 5px;
+  background-color: #a9a9a9;
+  width: 180px;
+  position: absolute;
+  left: -50px;
+  padding: 2px;
+  top: -46%;
+}
+.box-top .box-content .smal{
+  
+  top: 0% !important;
+}
+.box-content p {
+  margin: 0;
+  color: white;
+}
+
+.box-bottom .box-content {
+  top: 67%;
+}
+
+.box-content::before {
+  content: " ";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 10px solid transparent;
+}
+
+.box-bottom .box-content::before {
+  border-bottom-color: #a9a9a9;
+  top: -20px;
+}
+
+.box-top .box-content::before {
+  border-top-color: #a9a9a9;
+  bottom: -20px;
+}
