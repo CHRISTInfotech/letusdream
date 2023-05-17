@@ -52,7 +52,9 @@ urlpatterns = [
     path('downloadpartcsv',downloadpartcsv, name='downloadpartcsv'),
     path('testimonials', testimonials, name='testimonials'), 
     path('announcement', announcement, name='announcement'), 
-    path('llfp', llfp, name='llfp'), 
+    path('llfp', llfp, name='llfp'),
+    path('triennial-conference-2023', triennialConference2023,
+         name='tc-2023'), 
 
 
 ]
