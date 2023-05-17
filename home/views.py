@@ -260,3 +260,7 @@ def announcement(request):
 
 def llfp(request):
     return render(request, 'aboutUs/llfp.html')
+
+
+def triennialConference2023(request):
+    return render(request, 'conference/triennialConference/triennialConference2023.html') 
