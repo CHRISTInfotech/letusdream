@@ -69,6 +69,9 @@ def cuT(request):
 def jncaB(request):
     return render(request, 'conference/jncaB.html')
 
+def withoutdata_2023(request):
+    return render(request, 'conference/triennialConference/withoutdata.html')
+
 
 def louisianatechuniversity(request):
     return render(request, 'conference/louisiana-tech-university.html')

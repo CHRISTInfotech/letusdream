@@ -55,6 +55,8 @@ urlpatterns = [
     path('llfp', llfp, name='llfp'),
     path('triennial-conference-2023', triennialConference2023,
          name='tc-2023'), 
+    path('triennial-conference-withoutdata-2023', withoutdata_2023,
+         name='tc-without-2023'), 
 
 
 ]
