@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load countries %}
 
 {% block title %}
 HOME
@@ -7,6 +8,11 @@ HOME
 
 {% block extraStyles %}
 <link rel="stylesheet" href="{% static 'css/index.css' %}" type="text/css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.6.6/css/flag-icons.min.css" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 {% endblock extraStyles %}
 
 {% block links %}
@@ -153,7 +159,7 @@ HOME
 
 
 
-{% comment %} <div class="container-fluid cf-2 text-h3" id="conference"> 
+{% comment %} <div class="container-fluid cf-2 text-h3" id="conference">
   <h1 class="text-center text-uppercase">Upcoming Events</h1>
 
   <div class="blog-home2">
@@ -165,7 +171,7 @@ HOME
           <h5 class="font-weight-medium mt-3 text-h3">You can relay on our amazing features list and also our customer
             services will be great experience for you without doubt</h5>
         </div>
-        
+
         <!-- Column -->
       </div>
       <div class="row mt-4">
@@ -176,36 +182,45 @@ HOME
                 <div class="col-md-4 on-hover">
                   <div class="card border-0 ">
                     <a href="#">
-                      <img class="img-fluid card-img-top feed-area" src="/ltstatic/home/event1.webp" alt="wrappixel kit"></a>
-                    <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
+                      <img class="img-fluid card-img-top feed-area" src="/ltstatic/home/event1.webp"
+                        alt="wrappixel kit"></a>
+                    <div
+                      class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
                       Oct<span class="d-block">23</span></div>
-                    <h5 class="font-weight-medium mt-3"><a href="#" class="text-decoration-none link">You should have eagle’s
+                    <h5 class="font-weight-medium mt-3"><a href="#" class="text-decoration-none link">You should have
+                        eagle’s
                         eye on new trends and techonogies</a></h5>
-        
+
                     <a href="#" class="text-decoration-none linking text-themecolor mt-2">Read More</a>
                   </div>
                 </div>
                 <div class="col-md-4 on-hover">
                   <div class="card border-0 ">
                     <a href="#">
-                      <img class="img-fluid card-img-top feed-area" src="/ltstatic/home/event1.webp" alt="wrappixel kit"></a>
-                    <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
+                      <img class="img-fluid card-img-top feed-area" src="/ltstatic/home/event1.webp"
+                        alt="wrappixel kit"></a>
+                    <div
+                      class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
                       Oct<span class="d-block">23</span></div>
-                    <h5 class="font-weight-medium mt-3"><a href="#" class="text-decoration-none link">You should have eagle’s
+                    <h5 class="font-weight-medium mt-3"><a href="#" class="text-decoration-none link">You should have
+                        eagle’s
                         eye on new trends and techonogies</a></h5>
-        
+
                     <a href="#" class="text-decoration-none linking text-themecolor mt-2">Read More</a>
                   </div>
                 </div>
                 <div class="col-md-4 on-hover">
                   <div class="card border-0 ">
                     <a href="#">
-                      <img class="img-fluid card-img-top feed-area" src="/ltstatic/home/event1.webp" alt="wrappixel kit"></a>
-                    <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
+                      <img class="img-fluid card-img-top feed-area" src="/ltstatic/home/event1.webp"
+                        alt="wrappixel kit"></a>
+                    <div
+                      class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
                       Oct<span class="d-block">23</span></div>
-                    <h5 class="font-weight-medium mt-3"><a href="#" class="text-decoration-none link">You should have eagle’s
+                    <h5 class="font-weight-medium mt-3"><a href="#" class="text-decoration-none link">You should have
+                        eagle’s
                         eye on new trends and techonogies</a></h5>
-        
+
                     <a href="#" class="text-decoration-none linking text-themecolor mt-2">Read More</a>
                   </div>
                 </div>
@@ -216,28 +231,34 @@ HOME
                 <div class="col-md-6 on-hover">
                   <div class="card border-0 ">
                     <a href="#">
-                      <img class="img-fluid card-img-top feed-area" src="/ltstatic/home/event2.webp" alt="wrappixel kit"></a>
-                    <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
+                      <img class="img-fluid card-img-top feed-area" src="/ltstatic/home/event2.webp"
+                        alt="wrappixel kit"></a>
+                    <div
+                      class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
                       Oct<span class="d-block">23</span></div>
-                    <h5 class="font-weight-medium mt-3"><a href="#" class="text-decoration-none link">You should have eagle’s
+                    <h5 class="font-weight-medium mt-3"><a href="#" class="text-decoration-none link">You should have
+                        eagle’s
                         eye on new trends and techonogies</a></h5>
-        
+
                     <a href="#" class="text-decoration-none linking text-themecolor mt-2">Learn More</a>
                   </div>
                 </div>
                 <div class="col-md-6 on-hover">
                   <div class="card border-0 ">
                     <a href="#">
-                      <img class="img-fluid card-img-top feed-area" src="/ltstatic/home/event2.webp" alt="wrappixel kit"></a>
-                    <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
+                      <img class="img-fluid card-img-top feed-area" src="/ltstatic/home/event2.webp"
+                        alt="wrappixel kit"></a>
+                    <div
+                      class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
                       Oct<span class="d-block">23</span></div>
-                    <h5 class="font-weight-medium mt-3"><a href="#" class="text-decoration-none link">You should have eagle’s
+                    <h5 class="font-weight-medium mt-3"><a href="#" class="text-decoration-none link">You should have
+                        eagle’s
                         eye on new trends and techonogies</a></h5>
-        
+
                     <a href="#" class="text-decoration-none linking text-themecolor mt-2">Learn More</a>
                   </div>
                 </div>
-                
+
               </div>
             </div>
             <div class="carousel-item">
@@ -245,42 +266,50 @@ HOME
                 <div class="col-md-6 on-hover">
                   <div class="card border-0 ">
                     <a href="#">
-                      <img class="img-fluid card-img-top feed-area" src="/ltstatic/home/event3.webp" alt="wrappixel kit"></a>
-                    <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
+                      <img class="img-fluid card-img-top feed-area" src="/ltstatic/home/event3.webp"
+                        alt="wrappixel kit"></a>
+                    <div
+                      class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
                       Oct<span class="d-block">23</span></div>
-                    <h5 class="font-weight-medium mt-3"><a href="#" class="text-decoration-none link">You should have eagle’s
+                    <h5 class="font-weight-medium mt-3"><a href="#" class="text-decoration-none link">You should have
+                        eagle’s
                         eye on new trends and techonogies</a></h5>
-        
+
                     <a href="#" class="text-decoration-none linking text-themecolor mt-2">Learn More</a>
                   </div>
                 </div>
                 <div class="col-md-6 on-hover">
                   <div class="card border-0 ">
                     <a href="#">
-                      <img class="img-fluid card-img-top feed-area" src="/ltstatic/home/event3.webp" alt="wrappixel kit"></a>
-                    <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
+                      <img class="img-fluid card-img-top feed-area" src="/ltstatic/home/event3.webp"
+                        alt="wrappixel kit"></a>
+                    <div
+                      class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
                       Oct<span class="d-block">23</span></div>
-                    <h5 class="font-weight-medium mt-3"><a href="#" class="text-decoration-none link">You should have eagle’s
+                    <h5 class="font-weight-medium mt-3"><a href="#" class="text-decoration-none link">You should have
+                        eagle’s
                         eye on new trends and techonogies</a></h5>
-        
+
                     <a href="#" class="text-decoration-none linking text-themecolor mt-2">Learn More</a>
                   </div>
                 </div>
-              
+
               </div>
             </div>
           </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+            data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
           </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+            data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
           </button>
         </div>
-       
-      <div class="col-md-4 on-hover">
+
+        <div class="col-md-4 on-hover">
           <div class="card border-0 ">
             <a href="#">
               <img class="img-fluid card-img-top feed-area" src="/ltstatic/home/event1.webp" alt="wrappixel kit"></a>
@@ -292,7 +321,7 @@ HOME
             <a href="#" class="text-decoration-none linking text-themecolor mt-2">Learn More</a>
           </div>
         </div>
-        
+
         <div class="col-md-4 on-hover">
           <div class="card border-0 ">
             <a href="#"><img class="img-fluid card-img-top feed-area" src="/ltstatic/home/event2.webp"
@@ -305,7 +334,7 @@ HOME
             <a href="#" class="text-decoration-none linking text-themecolor mt-2">Learn More</a>
           </div>
         </div>
-      
+
         <div class="col-md-4 on-hover">
           <div class="card border-0 ">
             <a href="#"><img class="img-fluid card-img-top feed-area" src="/ltstatic/home/event3.webp"
@@ -318,7 +347,7 @@ HOME
             <a href="#" class="text-decoration-none linking text-themecolor mt-2">Learn More</a>
           </div>
         </div>
-     
+
 
       </div>
     </div>
@@ -333,7 +362,7 @@ HOME
 
 <!-- instagram feed -->
 
-<div class="container-fluid cf-2 text-h3" id="conference" style="padding-bottom: 1%; margin-bottom: 0%;"> 
+<div class="container-fluid cf-2 text-h3" id="conference" style="padding-bottom: 1%; margin-bottom: 0%;">
   <h1 class="text-center text-uppercase">NEWSLETTERs</h1>
 
   <div class="blog-home2">
@@ -342,49 +371,72 @@ HOME
       <div class="row justify-content-center">
 
       </div>
-      <div class="row mt-4">            
-      <div class="col-lg-3 col-md-3 p-3 on-hover" >
+      <div class="row mt-4">
+        <div class="col-lg-3 col-md-3 p-3 on-hover">
           <div class="card border-0 ">
             <a href="{% url 'newsletter' %}">
-              <img class="img1 m-3" src="{% static 'Aboutus/Newsletter/lead_team.png' %}" alt="wrappixel kit" style="margin: 0rem !important"></a>
+              <img class="img1 m-3" src="{% static 'Aboutus/Newsletter/lead_team.png' %}" alt="wrappixel kit"
+                style="margin: 0rem !important"></a>
             <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
-              June<span class="d-block">03</span>2023</div>       
+              June<span class="d-block">03</span>2023</div>
           </div>
         </div>
-        
+
         <div class="col-lg-3 col-md-3 p-3 on-hover">
           <div class="card border-0 ">
             <a href="{% url 'newsletter' %}"><img class="img1 m-3" src="{% static 'Aboutus/Media/Newsletter-2.jpg' %}"
                 alt="wrappixel kit" style="margin: 0rem !important"></a>
             <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
-              Oct<span class="d-block">21</span>2020  </div>
+              Oct<span class="d-block">21</span>2020 </div>
           </div>
         </div>
-      
+
         <div class="col-lg-3 col-md-3 p-3 on-hover">
           <div class="card border-0 ">
             <a href="{% url 'newsletter' %}"><img class="img1 m-3" src="{% static 'Aboutus/Media/Newsletter-3.jpg' %}"
                 alt="wrappixel kit" style="margin: 0rem !important"></a>
             <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
               Nov<span class="d-block">10</span>2020</div>
-            {% comment %} <h5 class="font-weight-medium mt-3"><a href="#" class="text-decoration-none link">Learn from small things
+            {% comment %} <h5 class="font-weight-medium mt-3"><a href="#" class="text-decoration-none link">Learn from
+                small things
                 to create something bigger.</a></h5> {% endcomment %}
 
-            {% comment %} <a href="{% url 'newsletter' %}" class="text-decoration-none linking text-themecolor mt-2">Read More</a> {% endcomment %}
+            {% comment %} <a href="{% url 'newsletter' %}"
+              class="text-decoration-none linking text-themecolor mt-2">Read More</a> {% endcomment %}
           </div>
-        </div>  
+        </div>
         <div class="col-lg-3 col-md-3 p-3 on-hover">
           <div class="card border-0 ">
             <a href="{% url 'newsletter' %}"><img class="img1 m-3" src="{% static 'Aboutus/Media/Newsletter-4.jpg' %}"
                 alt="wrappixel kit" style="margin: 0rem !important"></a>
             <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
-              Nov<span class="d-block">20</span>2020  </div>
+              Nov<span class="d-block">20</span>2020 </div>
           </div>
-        </div>     
+        </div>
 
-      </div> 
-      <p class="pl-2" style=" text-align: right;font-size: 15px;"><a href="{% url 'newsletter' %}" class="fw-bold text-h3 text-decoration-none" >Read more</a></p>
+      </div>
+      <p class="pl-2" style=" text-align: right;font-size: 15px;"><a href="{% url 'newsletter' %}"
+          class="fw-bold text-h3 text-decoration-none">Read more</a></p>
     </div>
+  </div>
+</div>
+
+<!-- vistor -->
+
+<div class="container mt-5">
+  <h5 class="text-center text-uppercase">Vistors count</h5>
+  <div class="row">
+    {% for visitor in visitor %}
+
+    <div class="four col-md-1">
+      <div class="counter-box p-2">
+        <span class="counter1 mb-1 pt-2"> {{ visitor.count }}</span>
+        <i class="fi fi-{{ visitor.code|lower }}"></i>
+
+        <p class="text-center text-dark mb-2">{{ visitor.country }}</p>
+      </div>
+    </div>
+    {% endfor %}
   </div>
 </div>
 

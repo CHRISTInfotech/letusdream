@@ -1,4 +1,5 @@
 from django.db import models
+from django_countries.fields import CountryField
 
 # Create your models here.
 class ConferenceRegistration(models.Model):
@@ -21,3 +22,10 @@ class ConferenceRegistration(models.Model):
     ptr_msg=models.CharField(max_length=50,null=True)
     # date = models.DateField(auto_now_add = True)   
     date = models.DateField(("DDMMYY"), auto_now_add=True)
+
+
+class Visitor(models.Model):
+    country = CountryField()
+    code = CountryField()
+    count = models.IntegerField()
+

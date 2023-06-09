@@ -1,14 +1,67 @@
 import csv
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
+from django_countries import Countries
+from django_countries import countries
+import requests
 
-from home.models import ConferenceRegistration
+import os
+import geoip2.database
+from letusdream.settings import BASE_DIR
+
+from home.models import ConferenceRegistration, Visitor
 
 
 # Create your views here.
-def index(request):
-    return render(request, 'home/index.html')
 
+
+
+
+
+def index(request):
+
+    try:
+        visitorObj=Visitor.objects.all()
+
+        visitor_country=get_visitor_country(request)
+        # print(visitor_country)
+        country_name = dict(countries)[visitor_country]
+        # print(country_name)
+        try:
+            visitor = Visitor.objects.get(country=country_name)
+            visitor.count += 1
+            visitor.save()
+        except Visitor.DoesNotExist:
+            # If the visitor's country does not exist in the database, create a new entry
+            visitor = Visitor(country=country_name, count=1,code=visitor_country)
+        visitor.save()
+        return render(request, 'home/index.html',{"visitor":visitorObj})
+
+    except:
+
+        return render(request, 'home/index.html',{"visitor":visitorObj})
+
+
+
+def get_visitor_country(request):
+    # Specify the path to the GeoIP2 database file
+
+    ip_address = request.META.get('REMOTE_ADDR')
+    api_key = 'at_SjzTo0u3XOvJceUDT6klhGk7TRUCN'  # Replace with your GeoIPify API key
+
+    url = f'https://geoipify.whoisxmlapi.com/api/v1?apiKey={api_key}&ip={ip_address}'
+
+
+    url = f'https://geoipify.whoisxmlapi.com/api/v1?apiKey={api_key}&ip={ip_address}'
+
+    try:
+        response = requests.get(url)
+        data = response.json()
+        country = data['location']['country']
+    except requests.exceptions.RequestException:
+        country = 'Unknown'
+
+    return country
 
 def aboutUs(request):
     return render(request, 'aboutUs/aboutUs.html')
