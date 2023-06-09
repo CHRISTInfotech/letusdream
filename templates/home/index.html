@@ -428,12 +428,10 @@ HOME
   <div class="row mb-5">
     {% for visitor in visitor %}
 
-    <div class="four col-md-1">
-      <div class=" p-2">
-        <i class="fi fi-{{ visitor.code|lower }}"></i>
-        <span class="mb-1 pt-2"> {{ visitor.count }}</span>
-        <!-- <p class="text-center text-dark mb-2">{{ visitor.country }}</p> -->
-      </div>
+    <div class="col-1">
+      <small class="text-center text-dark">{{ visitor.country }}</small>
+      <i class="fi fi-{{ visitor.code|lower }}"></i>
+      <span class="ml-1"> {{ visitor.count }}</span>
     </div>
     {% endfor %}
   </div>
