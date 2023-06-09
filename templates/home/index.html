@@ -425,15 +425,14 @@ HOME
 
 <div class="container mt-5">
   <h5 class="text-center text-uppercase">Vistors count</h5>
-  <div class="row">
+  <div class="row mb-5">
     {% for visitor in visitor %}
 
     <div class="four col-md-1">
-      <div class="counter-box p-2">
-        <span class="counter1 mb-1 pt-2"> {{ visitor.count }}</span>
+      <div class=" p-2">
         <i class="fi fi-{{ visitor.code|lower }}"></i>
-
-        <p class="text-center text-dark mb-2">{{ visitor.country }}</p>
+        <span class="mb-1 pt-2"> {{ visitor.count }}</span>
+        <!-- <p class="text-center text-dark mb-2">{{ visitor.country }}</p> -->
       </div>
     </div>
     {% endfor %}
