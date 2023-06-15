@@ -7,6 +7,8 @@ Triennial Conference 2020
 
 {% block extraStyles %}
 <link rel="stylesheet" href="{% static 'css/triennialConference.css' %}" type="text/css">
+<link rel="stylesheet" href="{% static 'css/triennialConference2023.css' %}" type="text/css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
 <link rel="stylesheet" href="{% static 'css/stannes-college.css' %}" type="text/css">
 
 {% endblock extraStyles %}
@@ -393,7 +395,54 @@ Triennial Conference 2020
 
             <h1 class="big-heading text-uppercase">Profile Education Team</h2>
         </div>
-
+        <div class="main">
+            <div class="profile-card">
+                <div class="img">
+                    <img
+                        src="{% static 'conference\stannescollege\Jimmy C.jpg' %}">
+                </div>
+                <div class="caption">
+                    <h3>Jimmy Cherian</h3>
+                    <p>Chair</p>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/jimmy-cherian-a3087316/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="profile-card">
+                <div class="img">
+                    <img
+                        src="{% static 'conference\triennial\2023\Cheyrl.jpg' %}">
+                </div>
+                <div class="caption">
+                    <h3>Dr. Cheyrl </h3>
+                    <p>Co-Chair</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="profile-card">
+                <div class="img">
+                    <img
+                        src="{% static 'conference\triennial\2023\Shinto.png' %}">
+                </div>
+                <div class="caption">
+                    <h3>Mr. Shinto Joseph</h3>
+                    <p>Co-Chair</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 
         <article class="postcard light blue">
             <a class="postcard__img_link" href="#">
                 <img class="postcard__img" src="{% static 'conference\stannescollege\Jimmy C.jpg' %}"
@@ -402,9 +451,6 @@ Triennial Conference 2020
             <div class="postcard__text t-dark">
                 <h1 class="postcard__title blue"><a href="#">Jimmy Cherian</a></h1>
                 <div class="postcard__subtitle small">
-                    <!-- <time datetime="2020-05-25 12:00:00">
-                        <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
-                    </time> -->
                 </div>
                 <div class="postcard__bar"></div>
                 <div class="postcard__preview-txt">Jimmy Cherian is the President and Managing Trustee of Creating
@@ -429,13 +475,7 @@ Triennial Conference 2020
 
 
                 </div>
-                <!-- <ul class="postcard__tagbox">
-                    <li class="tag__item"><i class="fas fa-tag mr-2"></i>Podcast</li>
-                    <li class="tag__item"><i class="fas fa-clock mr-2"></i>55 mins.</li>
-                    <li class="tag__item play blue">
-                        <a href="#"><i class="fas fa-play mr-2"></i>Play Episode</a>
-                    </li>
-                </ul> -->
+
             </div>
         </article>
         <article class="postcard light red">
@@ -446,9 +486,7 @@ Triennial Conference 2020
             <div class="postcard__text t-dark">
                 <h1 class="postcard__title red"><a href="#">Dr. Cheyrl Mansfield Ensley</a></h1>
                 <div class="postcard__subtitle small">
-                    <!-- <time datetime="2020-05-25 12:00:00">
-                        <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
-                    </time> -->
+
                 </div>
                 <div class="postcard__bar"></div>
                 <div class="postcard__preview-txt">Dr. Cheryl Mansfield Ensley currently serves as an Associate
@@ -462,13 +500,7 @@ Triennial Conference 2020
                     executive director, and assistant superintendent. She is an outcomes-based educator with a laser
                     focus on obtaining results based on data.
                 </div>
-                <!-- <ul class="postcard__tagbox">
-                    <li class="tag__item"><i class="fas fa-tag mr-2"></i>Podcast</li>
-                    <li class="tag__item"><i class="fas fa-clock mr-2"></i>55 mins.</li>
-                    <li class="tag__item play red">
-                        <a href="#"><i class="fas fa-play mr-2"></i>Play Episode</a>
-                    </li>
-                </ul> -->
+
             </div>
         </article>
         <article class="postcard light green">
@@ -478,9 +510,7 @@ Triennial Conference 2020
             <div class="postcard__text t-dark">
                 <h1 class="postcard__title green"><a href="#">Anupa Gnanakan</a></h1>
                 <div class="postcard__subtitle small">
-                    <!-- <time datetime="2020-05-25 12:00:00">
-                        <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
-                    </time> -->
+      
                 </div>
                 <div class="postcard__bar"></div>
                 <div class="postcard__preview-txt"> A teacher by profession, Anupa Gnanakan has a passion for quality,
@@ -500,13 +530,6 @@ Triennial Conference 2020
                     Anupa lives with her mum, husband, kids and pets in Bengaluru, India.
 
                 </div>
-                <!-- <ul class="postcard__tagbox">
-                    <li class="tag__item"><i class="fas fa-tag mr-2"></i>Podcast</li>
-                    <li class="tag__item"><i class="fas fa-clock mr-2"></i>55 mins.</li>
-                    <li class="tag__item play green">
-                        <a href="#"><i class="fas fa-play mr-2"></i>Play Episode</a>
-                    </li>
-                </ul> -->
             </div>
         </article>
 
@@ -518,9 +541,6 @@ Triennial Conference 2020
             <div class="postcard__text t-dark">
                 <h1 class="postcard__title red"><a href="#">Mr. Shinto Joseph</a></h1>
                 <div class="postcard__subtitle small">
-                    <!-- <time datetime="2020-05-25 12:00:00">
-                        <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
-                    </time> -->
                 </div>
                 <div class="postcard__bar"></div>
                 <div class="postcard__preview-txt">Shinto Joseph, Director - South East Asia Operations, LDRA India
@@ -542,46 +562,9 @@ Triennial Conference 2020
                     of technology and business.
 
                 </div>
-                <!-- <ul class="postcard__tagbox">
-                    <li class="tag__item"><i class="fas fa-tag mr-2"></i>Podcast</li>
-                    <li class="tag__item"><i class="fas fa-clock mr-2"></i>55 mins.</li>
-                    <li class="tag__item play red">
-                        <a href="#"><i class="fas fa-play mr-2"></i>Play Episode</a>
-                    </li>
-                </ul> -->
             </div>
-        </article>
-        <article class="postcard light green">
-            <a class="postcard__img_link" href="#">
-                <img class="postcard__img" src="{% static 'conference\triennial\2023\Anupa.png' %}" alt="Image Title" />
-            </a>
-            <div class="postcard__text t-dark">
-                <h1 class="postcard__title green"><a href="#">Anupa Gnanakan</a></h1>
-                <div class="postcard__subtitle small">
-                    <!-- <time datetime="2020-05-25 12:00:00">
-                        <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
-                    </time> -->
-                </div>
-                <div class="postcard__bar"></div>
-                <div class="postcard__preview-txt"> A teacher by profession, Anupa Gnanakan has a passion for quality,
-                    meaningful, relevant and
-                    student centered education to children from all backgrounds, with a focus on turning schools
-                    into places where children feel safe, happy and excited, by inculcating a curiosity to learn
-                    and discover.
-                    With a BA in Psychology, Anupa Gnanakan is a trained Montessori teacher who later pursued
-                    a Post Graduate Diploma in The Comprehensive Management of Teaching Children with
-                    Learning Difficulties, and an MA in Special and Inclusive Education from the University of
-                    Northampton. After 15 years of teaching in various schools across Bangalore, she is now the
-                    Director – Education at the ACTS Group of Institutions, a NGO that is dedicated to providing
-                    quality and accessible education to the community.
-                    On her journey, Anupa has met many interesting people on the way, which inspired her to
-                    start a YouTube channel called Breaktime Conversations, in October 2021. This channel
-                    features short conversations with educators and learning specialists.
-                    Anupa lives with her mum, husband, kids and pets in Bengaluru, India.
+        </article> -->
 
-                </div>
-            </div>
-        </article>
 
 
 
