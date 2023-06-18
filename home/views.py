@@ -174,7 +174,7 @@ def dreams(request, drm):
 
 
 def locations(request, loc):
-    if loc == 'bangalore':
+    if loc == 'ChristBangalore':
         return render(request, 'location/india/bangalore.html')
     elif loc == 'changancherry':
         return render(request, 'location/india/changancherry.html')
@@ -319,4 +319,5 @@ def llfp(request):
 
 
 def triennialConference2023(request):
-    return render(request, 'conference/triennialConference/triennialConference2023.html') 
+    return render(request,
+                  'conference/triennialConference/../ltstatic/conference/triennial/2020/triennialConference2023.html')
