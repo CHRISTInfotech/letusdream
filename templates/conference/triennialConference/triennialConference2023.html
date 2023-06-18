@@ -10,18 +10,15 @@ Triennial Conference 2023
 <link rel="stylesheet" href="{% static 'css/triennialConference2023.css' %}" type="text/css">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
 <link rel="stylesheet" href="{% static 'css/stannes-college.css' %}" type="text/css">
-
+<style>
+    .cardBorder{
+  border-left: 3px solid #0c52a1 !important;
+  padding-left: 8px;
+}
+  /* transition-duration: 0.5s, 0.5s; */
+</style>
 {% endblock extraStyles %}
-{% block links %}
 
-<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css'
-    type="text/css">
-<!-- Font Awesome -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"
-    type="text/css" />
-
-
-{% endblock links %}
 
 {% block content %}
 <nav aria-label="breadcrumb animated slideInDown" class="cus-breadcrumb">
@@ -34,18 +31,20 @@ Triennial Conference 2023
         <li class="breadcrumb-item  active" aria-current="page">2023 Conference</li>
     </ol>
 </nav>
-<br><br>
-<div class="row text-center">
-    <div class="display-4 fw-bolder text-h3" style="font-size: xxx-large;">LET US DREAM 2023</div>
-    <h2 class="fw-bold">Triennial International Conference</h2>
-    <h5 class="mt-2">Connecting Local Communities and Service Initiatives Through Global Networking</h5>
+
+<div class="container mt-5 text-center">
+    <div class="display-4 fw-bolder text-h3">
+        Empowered Communities: Strengthening Connections For a Sustainable Future
+    </div>
+    <div class="fs-3 fw-bold mt-2">LET US DREAM 2023 Triennial International Conference</div>
+    <div class="fs-4 mt-2">CHRIST University, Banglore | November 17 to November 19, 2023</div>
     <h4></h4>
 </div>
 
 
 <div class="container mt-5 ">
     <div class="row g-5 ">
-        <div class="col-6">
+        <div class="col-sm-12 col-md-6">
             <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
@@ -87,37 +86,53 @@ Triennial Conference 2023
                 </button>
             </div>
         </div>
-        <div class="col-6 text-center">
+        <div class="col-sm-12 col-md-6 text-center">
             <div class="col-lg-12">
-                <h1 class="big-heading text-uppercase ">Conference 2023</h1>
+                <div class="fw-bolder fs-2 mb-4">
+                    Empowered Communities: Strengthening Connections For a Sustainable Future
+                </div>
 
-                <p class="mb-4 fw-semibold">The DREAMS Program is a three-year curriculum based community
-                    mentoring
-                    project for
-                    schools and colleges. It started as a motivational music band at UC College, Aluva, India in
-                    1998 and in 2003 at Dharmarama College, Bangalore. The program later evolved as a summer
-                    camp
-                    for the high school students of Changanacherry, Kerala.</p>
-                <p class="mb-4 fw-semibold ">In 2012 it established itself as a one-year program with a few
-                    follow
-                    up
-                    sessions in
-                    Monroe, Louisiana, USA. In the subsequent years, the program design was developed into a
-                    three-year after-school program with nine credit hours (eight days/year) for the middle
-                    school
-                    underperforming/under-serving teenagers.
+                <p class="mb-4 fw-semibold">
+                    With the theme of Empowered Communities, the Let Us Dream conference brings together individuals
+                    with transformative stories of social intervention. Driven by a shared commitment of establishing a
+                    sustainable community, we invite people who have adopted responsible practices in the social,
+                    educational, health, environmental, and economic sectors. Contemporary narratives about
+                    transitioning aspirations of upliftment to actions of volunteerism will contribute to new
+                    perspectives
+                    in community building and service learning.
+
+                </p>
+                <p class="mb-4 fw-semibold ">
+                    The ultimate objective is to empower all sectors of society, which necessitates involving a broad
+                    ecosystem comprising NGOs, educational institutions, post-secondary institutions, service
+                    organizations, corporations, and volunteers. Let Us Dream 2023 aims to provide opportunities for
+                    sharing authentic stories of inspiring pursuits and discover ways to improve the quality of life in
+                    diverse communities. Let us dream a better reality and come together to establish and strengthen
+                    connections while working collectively to better ourselves and future generations.
                 </p>
 
-
             </div>
-            <div class="fw-bolder fs-4 mb-4">Event Details</div>
-            <a href="{% static 'conference/triennial/2023/LUD2023.pdf' %}" class="btn btn-outline-success">Brochure </a>
-            <a href="" class="btn btn-outline-success">Schedule </a>
-            <br>
-            <br>
-            <a href="https://www.dlearners.in/letusdream/" target="_blank"><button class="btn-2 m-1"><span>Participate
-                    </span></button></a>
-            <br>
+            <div class="fw-bolder fs-5 mb-4" style="text-align: left;">More Details</div>
+
+            <div class="row m-auto">
+                <div class="col">
+                    <a href="{% static 'conference/triennial/2023/LUD2023.pdf' %}" class="btn btn-outline-success">
+                        Event Brochure
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="" class="btn btn-outline-success">
+                        Event Schedule
+                    </a>
+                </div>
+            </div>
+
+            <div class="mt-5">
+                <a href="https://www.dlearners.in/letusdream/" target="_blank"><button
+                        class="btn-2 m-1"><span>Participate
+                        </span></button></a>
+            </div>
+
             <!-- Scoail Media -->
             <div class="container body-icons-container justify-content-center mt-5">
                 <!-- Whatsapp -->
@@ -154,428 +169,543 @@ Triennial Conference 2023
     </div>
 </div>
 
+<div class="container">
 
-<br>
-
-
-<!-- buttons section -->
-<!-- <div class="container">
-    <div class="row">
-        <img src="{% static 'conference/inf-pic1.jpg' %}" alt="">
+    <nav class="mt-5">
+        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+            <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home"
+                type="button" role="tab" aria-controls="nav-home" aria-selected="true">
+                <div class="col-12 fw-bold fs-4">
+                    Conference Chairs
+                </div>
+            </button>
+            <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile"
+                type="button" role="tab" aria-controls="nav-profile" aria-selected="false">
+                <div class="col-12 fw-bold fs-4">
+                    Core Team
+                </div>
+            </button>
+            <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact"
+                type="button" role="tab" aria-controls="nav-contact" aria-selected="false">
+                <div class="col-12 fw-bold fs-4">
+                    Youth Leadership
+                </div>
+            </button>
+        </div>
+    </nav>
+    <div class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab"
+            tabindex="0">
+            <!-- Conference Chairs -->
+            <div class="row mt-3">
+                <div class="col-12 mt-4 table-responsive">
+                    <table class="table align-middle">
+                        <thead>
+                            <tr>
+                                <th>
+                                    Tracks
+                                </th>
+                                <th class="text-center">
+                                    Chairs
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="fw-bold">
+                                    Education
+                                </td>
+                                <td class="row m-auto">
+                                    <div class="col">
+                                        <div class="d-flex justify-content-center fw-bold mb-2 mt-1">
+                                            Chair
+                                        </div>
+                                        <div class="d-flex justify-content-center">
+                                            <img class="border border-info-subtle rounded" height="100px"
+                                                src="{% static 'conference/triennial/2023/Profiles/Jimmy.jpeg' %}">
+                                        </div>
+                                        <div class="d-flex justify-content-center fw-bold mt-3">
+                                            Jimmy Cherian
+                                        </div>
+                                        <div class="text-center">
+                                            Founder & President<br />
+                                            Creating Futures<br />
+                                            Banglore, India
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="d-flex justify-content-center fw-bold mb-2 mt-1">
+                                            Co Chair
+                                        </div>
+                                        <div class="d-flex justify-content-center">
+                                            <img class="border border-info-subtle rounded" height="100px"
+                                                src="{% static 'conference/triennial/2023/Profiles/Cheyrl.jpg' %}">
+                                        </div>
+                                        <div class="d-flex justify-content-center fw-bold mt-3">
+                                            Dr. Cheyrl Mansfield Ensley
+                                        </div>
+                                        <div class="text-center">
+                                            Head & Associate Professor<br />
+                                            Grambling State University<br />
+                                            Grambling, Louisiana
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="d-flex justify-content-center fw-bold mb-2 mt-1">
+                                            Co Chair
+                                        </div>
+                                        <div class="d-flex justify-content-center">
+                                            <img class="border border-info-subtle rounded" height="100px"
+                                                src="https://th.bing.com/th/id/R.e5c95af14dfd03878d0bcc7344230389?rik=H5IqelV0wvfpfw&riu=http%3a%2f%2fgetdrawings.com%2fimg%2fman-silhouette-profile-17.jpg&ehk=pu%2fT%2bDN0bWum6YpgucHvjGlETMDdmmkpf6X7McLED4I%3d&risl=&pid=ImgRaw&r=0">
+                                        </div>
+                                        <div class="d-flex justify-content-center fw-bold mt-3">
+                                            Dr Jimmy Cheriyan
+                                        </div>
+                                        <div class="text-center">
+                                            Associate Professor<br />
+                                            CHRIST (Deemed to be University)<br />
+                                            Banglore, India
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="fw-bold">
+                                    Health
+                                </td>
+                                <td class="row m-auto">
+                                    <div class="col">
+                                        <div class="d-flex justify-content-center fw-bold mb-2 mt-1">
+                                            Chair
+                                        </div>
+                                        <div class="d-flex justify-content-center">
+                                            <img class="border border-info-subtle rounded" height="100px"
+                                                src="https://th.bing.com/th/id/R.e5c95af14dfd03878d0bcc7344230389?rik=H5IqelV0wvfpfw&riu=http%3a%2f%2fgetdrawings.com%2fimg%2fman-silhouette-profile-17.jpg&ehk=pu%2fT%2bDN0bWum6YpgucHvjGlETMDdmmkpf6X7McLED4I%3d&risl=&pid=ImgRaw&r=0">
+                                        </div>
+                                        <div class="d-flex justify-content-center fw-bold mt-3">
+                                            Ms. Aparna Singh
+                                        </div>
+                                        <div class="text-center">
+                                            Associate Professor<br />
+                                            CHRIST (Deemed to be University)<br />
+                                            Banglore, India
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="d-flex justify-content-center fw-bold mb-2 mt-1">
+                                            Co Chair
+                                        </div>
+                                        <div class="d-flex justify-content-center">
+                                            <img class="border border-info-subtle rounded" height="100px"
+                                                src="https://th.bing.com/th/id/R.e5c95af14dfd03878d0bcc7344230389?rik=H5IqelV0wvfpfw&riu=http%3a%2f%2fgetdrawings.com%2fimg%2fman-silhouette-profile-17.jpg&ehk=pu%2fT%2bDN0bWum6YpgucHvjGlETMDdmmkpf6X7McLED4I%3d&risl=&pid=ImgRaw&r=0">
+                                        </div>
+                                        <div class="d-flex justify-content-center fw-bold mt-3">
+                                            Tracy Lyman
+                                        </div>
+                                        <div class="text-center">
+                                            Associate Professor<br />
+                                            Binghamton University<br />
+                                            Binghamton, United States
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="d-flex justify-content-center fw-bold mb-2 mt-1">
+                                            Co Chair
+                                        </div>
+                                        <div class="d-flex justify-content-center">
+                                            <img class="border border-info-subtle rounded" height="100px"
+                                                src="https://th.bing.com/th/id/R.e5c95af14dfd03878d0bcc7344230389?rik=H5IqelV0wvfpfw&riu=http%3a%2f%2fgetdrawings.com%2fimg%2fman-silhouette-profile-17.jpg&ehk=pu%2fT%2bDN0bWum6YpgucHvjGlETMDdmmkpf6X7McLED4I%3d&risl=&pid=ImgRaw&r=0">
+                                        </div>
+                                        <div class="d-flex justify-content-center fw-bold mt-3">
+                                            Dr Jimmy Cheriyan
+                                        </div>
+                                        <div class="text-center">
+                                            Associate Professor<br />
+                                            CHRIST (Deemed to be University)<br />
+                                            Banglore, India
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="fw-bold">
+                                    Social
+                                </td>
+                                <td class="row m-auto">
+                                    <div class="col">
+                                        <div class="d-flex justify-content-center fw-bold mb-2 mt-1">
+                                            Chair
+                                        </div>
+                                        <div class="d-flex justify-content-center">
+                                            <img class="border border-info-subtle rounded" height="100px"
+                                                src="{% static 'conference/triennial/2023/Profiles/Anupa.png' %}">
+                                        </div>
+                                        <div class="d-flex justify-content-center fw-bold mt-3">
+                                            Anupa Gnanakan
+                                        </div>
+                                        <div class="text-center">
+                                            Director – Education<br />
+                                            ACTS Group of Institutions<br />
+                                            Banglore, India
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="d-flex justify-content-center fw-bold mb-2 mt-1">
+                                            Co Chair
+                                        </div>
+                                        <div class="d-flex justify-content-center">
+                                            <img class="border border-info-subtle rounded" height="100px"
+                                                src="{% static 'conference/triennial/2023/Profiles/Michael.png' %}">
+                                        </div>
+                                        <div class="d-flex justify-content-center fw-bold mt-3">
+                                            Mr Michael Kaufmann
+                                        </div>
+                                        <div class="text-center">
+                                            Director, Sam and Myra Ross Institute<br />
+                                            Green Chimneys Children’s Services<br />
+                                            New York, United States
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="d-flex justify-content-center fw-bold mb-2 mt-1">
+                                            Co Chair
+                                        </div>
+                                        <div class="d-flex justify-content-center">
+                                            <img class="border border-info-subtle rounded" height="100px"
+                                                src="{% static 'conference/triennial/2023/Profiles/Shinto.png' %}">
+                                        </div>
+                                        <div class="d-flex justify-content-center fw-bold mt-3">
+                                            Shinto Joseph
+                                        </div>
+                                        <div class="text-center">
+                                            Director - South East Asia Operations<br />
+                                            LDRA India<br />
+                                            Banglore, India
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="fw-bold">
+                                    Host University
+                                </td>
+                                <td class="row m-auto">
+                                    <div class="col">
+                                        <div class="d-flex justify-content-center fw-bold mb-2 mt-1">
+                                            Chair
+                                        </div>
+                                        <div class="d-flex justify-content-center">
+                                            <img class="border border-info-subtle rounded" height="100px"
+                                                src="https://th.bing.com/th/id/R.e5c95af14dfd03878d0bcc7344230389?rik=H5IqelV0wvfpfw&riu=http%3a%2f%2fgetdrawings.com%2fimg%2fman-silhouette-profile-17.jpg&ehk=pu%2fT%2bDN0bWum6YpgucHvjGlETMDdmmkpf6X7McLED4I%3d&risl=&pid=ImgRaw&r=0">
+                                        </div>
+                                        <div class="d-flex justify-content-center fw-bold mt-3">
+                                            Nijumon K John
+                                        </div>
+                                        <div class="text-center">
+                                            Associate Professor<br />
+                                            CHRIST (Deemed to be University)<br />
+                                            Banglore, India
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="d-flex justify-content-center fw-bold mb-2 mt-1">
+                                            Co Chair
+                                        </div>
+                                        <div class="d-flex justify-content-center">
+                                            <img class="border border-info-subtle rounded" height="100px"
+                                                src="https://th.bing.com/th/id/R.e5c95af14dfd03878d0bcc7344230389?rik=H5IqelV0wvfpfw&riu=http%3a%2f%2fgetdrawings.com%2fimg%2fman-silhouette-profile-17.jpg&ehk=pu%2fT%2bDN0bWum6YpgucHvjGlETMDdmmkpf6X7McLED4I%3d&risl=&pid=ImgRaw&r=0">
+                                        </div>
+                                        <div class="d-flex justify-content-center fw-bold mt-3">
+                                            Nikhil pai
+                                        </div>
+                                        <div class="text-center">
+                                            Associate Professor<br />
+                                            CHRIST (Deemed to be University)<br />
+                                            Banglore, India
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="d-flex justify-content-center fw-bold mb-2 mt-1">
+                                            Co Chair
+                                        </div>
+                                        <div class="d-flex justify-content-center">
+                                            <img class="border border-info-subtle rounded" height="100px"
+                                                src="https://th.bing.com/th/id/R.e5c95af14dfd03878d0bcc7344230389?rik=H5IqelV0wvfpfw&riu=http%3a%2f%2fgetdrawings.com%2fimg%2fman-silhouette-profile-17.jpg&ehk=pu%2fT%2bDN0bWum6YpgucHvjGlETMDdmmkpf6X7McLED4I%3d&risl=&pid=ImgRaw&r=0">
+                                        </div>
+                                        <div class="d-flex justify-content-center fw-bold mt-3">
+                                            Fr Jeff Shown
+                                        </div>
+                                        <div class="text-center">
+                                            Associate Professor<br />
+                                            CHRIST (Deemed to be University)<br />
+                                            Banglore, India
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">
+            <!-- Core Team -->
+            <div class="row mt-3">
+                <div class="col-12">
+                    <div class="col-12 mt-4 table-responsive">
+                        <table class="table align-middle">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="cardBorder">
+                                            <div class="fw-bold">Dr. Fr. Lijo Thomas</div>
+                                            <div class="">Director & Dean</div>
+                                            <div class="">CHRIST (Deemed to be University) Pune Lavasa</div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="cardBorder">
+                                        <div class="fw-bold">Dr. Fr. Lijo Thomas</div>
+                                        <div class="">Director & Dean</div>
+                                        <div class="">CHRIST (Deemed to be University) Pune Lavasa</div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="cardBorder">
+                                        <div class="fw-bold">Dr. Fr. Lijo Thomas</div>
+                                        <div class="">Director & Dean</div>
+                                        <div class="">CHRIST (Deemed to be University) Pune Lavasa</div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="cardBorder">
+                                        <div class="fw-bold">Dr. Fr. Lijo Thomas</div>
+                                        <div class="">Director & Dean</div>
+                                        <div class="">CHRIST (Deemed to be University) Pune Lavasa</div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="fw-bold">Dr. Fr. Lijo Thomas</div>
+                                        <div class="">Director & Dean</div>
+                                        <div class="">CHRIST (Deemed to be University) Pune Lavasa</div>
+                                    </td>
+                                    <td>
+                                        <div class="fw-bold">Dr. Fr. Lijo Thomas</div>
+                                        <div class="">Director & Dean</div>
+                                        <div class="">CHRIST (Deemed to be University) Pune Lavasa</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="fw-bold">Dr. Fr. Lijo Thomas</div>
+                                        <div class="">Director & Dean</div>
+                                        <div class="">CHRIST (Deemed to be University) Pune Lavasa</div>
+                                    </td>
+                                    <td>
+                                        <div class="fw-bold">Dr. Fr. Lijo Thomas</div>
+                                        <div class="">Director & Dean</div>
+                                        <div class="">CHRIST (Deemed to be University) Pune Lavasa</div>
+                                    </td>
+                                    <td>
+                                        <div class="fw-bold">Dr. Fr. Lijo Thomas</div>
+                                        <div class="">Director & Dean</div>
+                                        <div class="">CHRIST (Deemed to be University) Pune Lavasa</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="fw-bold">Dr. Fr. Lijo Thomas</div>
+                                        <div class="">Director & Dean</div>
+                                        <div class="">CHRIST (Deemed to be University) Pune Lavasa</div>
+                                    </td>
+                                    <td>
+                                        <div class="fw-bold">Dr. Fr. Lijo Thomas</div>
+                                        <div class="">Director & Dean</div>
+                                        <div class="">CHRIST (Deemed to be University) Pune Lavasa</div>
+                                    </td>
+                                    <td>
+                                        <div class="fw-bold">Dr. Fr. Lijo Thomas</div>
+                                        <div class="">Director & Dean</div>
+                                        <div class="">CHRIST (Deemed to be University) Pune Lavasa</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="fw-bold">Dr. Fr. Lijo Thomas</div>
+                                        <div class="">Director & Dean</div>
+                                        <div class="">CHRIST (Deemed to be University) Pune Lavasa</div>
+                                    </td>
+                                    <td>
+                                        <div class="fw-bold">Dr. Fr. Lijo Thomas</div>
+                                        <div class="">Director & Dean</div>
+                                        <div class="">CHRIST (Deemed to be University) Pune Lavasa</div>
+                                    </td>
+                                    <td>
+                                        <div class="fw-bold">Dr. Fr. Lijo Thomas</div>
+                                        <div class="">Director & Dean</div>
+                                        <div class="">CHRIST (Deemed to be University) Pune Lavasa</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="fw-bold">Dr. Fr. Lijo Thomas</div>
+                                        <div class="">Director & Dean</div>
+                                        <div class="">CHRIST (Deemed to be University) Pune Lavasa</div>
+                                    </td>
+                                    <td>
+                                        <div class="fw-bold">Dr. Fr. Lijo Thomas</div>
+                                        <div class="">Director & Dean</div>
+                                        <div class="">CHRIST (Deemed to be University) Pune Lavasa</div>
+                                    </td>
+                                    <td>
+                                        <div class="fw-bold">Dr. Fr. Lijo Thomas</div>
+                                        <div class="">Director & Dean</div>
+                                        <div class="">CHRIST (Deemed to be University) Pune Lavasa</div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab" tabindex="0">
+            <!-- Youth Leadership -->
+            <div class="row mt-3">
+                <div class="col-12">
+                    <div class="col-12 mt-4 table-responsive">
+                        <table class="table align-middle">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="fw-bold">Dr. Fr. Lijo Thomas</div>
+                                        <div class="">Director & Dean</div>
+                                        <div class="">CHRIST (Deemed to be University) Pune Lavasa</div>
+                                    </td>
+                                    <td>
+                                        <div class="fw-bold">Dr. Fr. Lijo Thomas</div>
+                                        <div class="">Director & Dean</div>
+                                        <div class="">CHRIST (Deemed to be University) Pune Lavasa</div>
+                                    </td>
+                                    <td>
+                                        <div class="fw-bold">Dr. Fr. Lijo Thomas</div>
+                                        <div class="">Director & Dean</div>
+                                        <div class="">CHRIST (Deemed to be University) Pune Lavasa</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="fw-bold">Dr. Fr. Lijo Thomas</div>
+                                        <div class="">Director & Dean</div>
+                                        <div class="">CHRIST (Deemed to be University) Pune Lavasa</div>
+                                    </td>
+                                    <td>
+                                        <div class="fw-bold">Dr. Fr. Lijo Thomas</div>
+                                        <div class="">Director & Dean</div>
+                                        <div class="">CHRIST (Deemed to be University) Pune Lavasa</div>
+                                    </td>
+                                    <td>
+                                        <div class="fw-bold">Dr. Fr. Lijo Thomas</div>
+                                        <div class="">Director & Dean</div>
+                                        <div class="">CHRIST (Deemed to be University) Pune Lavasa</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="fw-bold">Dr. Fr. Lijo Thomas</div>
+                                        <div class="">Director & Dean</div>
+                                        <div class="">CHRIST (Deemed to be University) Pune Lavasa</div>
+                                    </td>
+                                    <td>
+                                        <div class="fw-bold">Dr. Fr. Lijo Thomas</div>
+                                        <div class="">Director & Dean</div>
+                                        <div class="">CHRIST (Deemed to be University) Pune Lavasa</div>
+                                    </td>
+                                    <td>
+                                        <div class="fw-bold">Dr. Fr. Lijo Thomas</div>
+                                        <div class="">Director & Dean</div>
+                                        <div class="">CHRIST (Deemed to be University) Pune Lavasa</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="fw-bold">Dr. Fr. Lijo Thomas</div>
+                                        <div class="">Director & Dean</div>
+                                        <div class="">CHRIST (Deemed to be University) Pune Lavasa</div>
+                                    </td>
+                                    <td>
+                                        <div class="fw-bold">Dr. Fr. Lijo Thomas</div>
+                                        <div class="">Director & Dean</div>
+                                        <div class="">CHRIST (Deemed to be University) Pune Lavasa</div>
+                                    </td>
+                                    <td>
+                                        <div class="fw-bold">Dr. Fr. Lijo Thomas</div>
+                                        <div class="">Director & Dean</div>
+                                        <div class="">CHRIST (Deemed to be University) Pune Lavasa</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="fw-bold">Dr. Fr. Lijo Thomas</div>
+                                        <div class="">Director & Dean</div>
+                                        <div class="">CHRIST (Deemed to be University) Pune Lavasa</div>
+                                    </td>
+                                    <td>
+                                        <div class="fw-bold">Dr. Fr. Lijo Thomas</div>
+                                        <div class="">Director & Dean</div>
+                                        <div class="">CHRIST (Deemed to be University) Pune Lavasa</div>
+                                    </td>
+                                    <td>
+                                        <div class="fw-bold">Dr. Fr. Lijo Thomas</div>
+                                        <div class="">Director & Dean</div>
+                                        <div class="">CHRIST (Deemed to be University) Pune Lavasa</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="fw-bold">Dr. Fr. Lijo Thomas</div>
+                                        <div class="">Director & Dean</div>
+                                        <div class="">CHRIST (Deemed to be University) Pune Lavasa</div>
+                                    </td>
+                                    <td>
+                                        <div class="fw-bold">Dr. Fr. Lijo Thomas</div>
+                                        <div class="">Director & Dean</div>
+                                        <div class="">CHRIST (Deemed to be University) Pune Lavasa</div>
+                                    </td>
+                                    <td>
+                                        <div class="fw-bold">Dr. Fr. Lijo Thomas</div>
+                                        <div class="">Director & Dean</div>
+                                        <div class="">CHRIST (Deemed to be University) Pune Lavasa</div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <br>
+</div>
 
-
-
-    <div class="row">
-        <div class="col-lg-12 d-flex justify-content-center live-stream-btn">
-            <a class="text-decoration-none" href="https://www.youtube.com/channel/UCNw5z9O3LZ7OJlySigI9dlw/featured">
-                <svg>
-                    <rect></rect>
-                </svg>
-                Live Streaming
+<div class="container mt-5">
+    <div class="row m-auto">
+        <div class="col-12 d-flex justify-content-center">
+            <a href="https://www.dlearners.in/letusdream/" target="_blank">
+                <button class="btn-2 m-1">
+                    <span>Participate </span>
+                </button>
             </a>
         </div>
-    </div>
-    <br><br><br><br>
 
-    <div class="row ">
-        <div class="col-lg-12 col-md-12 col-sm-6 col-xs-6  text-center align-self-center d-flex justify-content-center">
-            <div>
-                <a href="{% static 'conference/triennial/2023/triennial2023.jpg' %}" download><button
-                        class="btn-2 m-1"><span>Download Brochure</span></button></a>
-                <a href="https://www.dlearners.in/letusdream/" target="_blank"><button class="btn-2 m-1"><span>Register
-                            Now</span></button></a>
-            </div>
+        <div class="col-12 mt-5 fw-bold fs-3 text-center">
+            Partner Organizations
         </div>
-        {% comment %} <div
-            class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-center align-self-center d-flex justify-content-start"> {%
-            endcomment %}
-
-            {% comment %} </div> {% endcomment %}
-    </div>
-
-    <br>
-
-    <div class="row align-self-center">
-        <div class="col-lg-4 text-center align-self-center">
-            <a href="#schedule"><button type="button" class="button"><span>Schedule</span></button></a>
-        </div>
-        <div class="col-lg-4 text-center align-self-center">
-            <a href="#panel"> <button type="button" class="button"><span>Panel Discussion</span></button></a>
-        </div>
-        <div class="col-lg-4 text-center align-self-center">
-            <a href="#promos"> <button type="button" class="button"><span>Promos</span></button></a>
-        </div>
-    </div>
-
-    <br>
-    <div class="row ">
-        <div class="col-lg-3 text-center align-self-center">
-            <a href="#keynote"><button type="button" class="button"><span>Keynote Speaker</span></button></a>
-        </div>
-        <div class="col-lg-3 text-center align-self-center">
-            <a href="#heroes"> <button type="button" class="button"><span>Unsung Heroes</span></button></a>
-        </div>
-        <div class="col-lg-3 text-center align-self-center">
-            <a href="{% url 'newsletter' %}"> <button type="button" class="button"><span>Newsletters</span></button></a>
-        </div>
-        <div class="col-lg-3 text-center align-self-center">
-            <a href="#virtualband"> <button type="button" class="button"><span>Cultural Program</span></button></a>
-        </div>
-    </div>
-
-</div> -->
-
-<br><br><br>
-<!-- Empowering Community -->
-<div class="py-3">
-    <div class="container py-2">
-        <div class="row align-items-center mb-5">
-            <div class="col-lg-6 order-2 order-lg-1">
-                <div class="product-item-description d-flex me-auto">
-                    <div class="bg-faded p-4 rounded">
-                        <p class="mb-0">
-                            This year will mark the Second Triennial International LET US DREAM Conference.
-                            The international conference offers an opportunity to explore and share the many
-                            and varied community-service possibilities and intervention models, as well as
-                            volunteer opportunities for younger and older generations. The primary intent
-                            is to create an inclusive, diverse, cross-cultural environment for sharing and
-                            growth through community improvement discourse among scholars, practitioners, and volunteers
-                            of all ages.
-                        </p>
-                    </div>
-                </div>
-
-            </div>
-            <div class="col-lg-5 mx-auto order-1 order-lg-2"><img src="{% static 'conference/history.png' %}" alt=""
-                    class="img-fluid mb-lg-0 w-100 h-100"></div>
-        </div>
-        <div class="row align-items-center">
-            <div class="col-lg-5  mx-auto"><img src="{% static 'conference/vision.png' %}" alt=""
-                    class="img-fluid  mb-lg-0  w-100 mh-100 "></div>
-            <div class="col-lg-6">
-                <div class="product-item-description d-flex ms-auto">
-                    <div class="bg-faded p-4 rounded">
-                        <p class="mb-0"> Empowering local communities for sustainable global impact and improvement.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row align-items-center mb-5">
-            <div class="col-lg-6 order-2 order-lg-1">
-                <div class="product-item-description d-flex me-auto">
-                    <div class="bg-faded p-4 rounded">
-                        <p class="mb-0">
-                            The Let Us Dream Conference was established in 2017 for the purpose of providing a forum for
-                            sharing experiences with successes and challenges in community improvement organizations and
-                            efforts.
-                            <br>
-                            Broad conference goals are to:
-                        <ol>
-                            <li>Improve networking and collaboration among all those interested in community improvement
-                                organizations and programs;</li>
-                            <li>Promote volunteerism and empower all those involved in community improvement
-                                organizations and initiatives, including employees, volunteers, post-secondary students,
-                                researchers, and practitioners;</li>
-                            <li>Create a professional learning organization dedicated to improving local communities and
-                                characterized by a culture of shared researcher and practitioner knowledge, skills,
-                                theories, and best practices. </li>
-                        </ol>
-
-                        </p>
-                    </div>
-                </div>
-
-            </div>
-            <div class="col-lg-5 mx-auto order-1 order-lg-2"><img src="{% static 'conference/mission.png' %}" alt=""
-                    class="img-fluid mb-lg-0 w-100 h-100"></div>
+        <div class="col-12">
+            <img src="{% static 'conference/Conference-Logos1.png' %}" class="img-fluid">
         </div>
     </div>
 </div>
 
-<div class="container">
-    <div class="row">
-        <div class="col-md-6">
-            <h2 class="m-5">
-                <span class="site-heading-upper text-green d-flex justify-content-center font-weight-bold">Target
-                    Audience</span>
-            </h2>
-            <div class="container">
-                <div class="row">
-                    <div class="col ml-5 mr-5 mt-5">
-                        <span class="d-flex justify-content-center">
-                            Adult and young adult volunteers, Business owners involved in voluntary community
-                            development projects, Not- for-profit organizations, philanthropists, board members, social
-                            workers, educators,
-                            and educational administrators interested in community collaborative initiatives;
-                            Post-secondary
-                            student leaders, instructors, and professors; Retirees willing to share expertise and time
-                            for the
-                            betterment of community; All who dream of a better future and desire to make a positive
-                            community impact
-                            for generations to come.
-                        </span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-6">
-            <h2 class="m-5">
-                <span class="site-heading-upper text-green d-flex justify-content-center font-weight-bold">The Let Us
-                    Dream
-                    Conference is Presented to:</span>
-            </h2>
-            <div class="container">
-                <div class="row">
-                    <div class="col ml-5 mr-5 ">
-                        <span class="d-flex justify-content-center">
-                            <ul>
-                                <li>Empower people of diverse age groups and backgrounds working in a myriad of
-                                    community
-                                    improvement programs aiming at a better tomorrow.
-                                </li>
-                                <li>Consider the concepts and findings of researchers with the real-world experiences of
-                                    practitioners, providing relevance to and synergizing combined knowledge.</li>
-                                <li>Promote community service and learning among students by introducing diverse
-                                    community
-                                    improvement interventions.
-                                </li>
-                            </ul>
-                        </span>
-                    </div>
-                </div>
-            </div>
-        </div>
-      
-    </div>
-</div>
-<!-- Gallery -->
-<div class="section-member-popup pt-5">
-    <div class="container container-member-popup  mb-5 pt-5">
-        <div class="col-md-12 text-center mb-5">
-            <h1 class="big-heading text-uppercase">Keynote Speaker</h2>
-        </div>
-        <div class="card">
-            <div class="imgBx">
-                <img src="{% static 'conference/triennial/2023/Hope_LeNoir.jpg' %}" alt="">
-                <h3 class="text-center pt-3 fw-bolder">Hope LeNoir</h3>
-            </div>
-            <div class="content">
-                <p>
-                    Hope LeNoir is the owner and founder of Rise and Fly LLC, with more than 20 years of industry
-                    experience. She serves as a global talent consultant, inspirational speaker, and award-winning
-                    author of Workday Catalyst. All of her (3) books are filled with professional tips, inspiration, and
-                    real-life career stories that professionals use and see results.
-                </p>
-                <div class="container body-icons-container justify-content-center mt-5">
-                    <a class="text-decoration-none" href="https://www.linkedin.com/in/hopelenoir/" target="_blank">
-                        <div class="icon">
-                            <i class="fab fa-linkedin"></i>
-                        </div>
-                    </a>
-                    <a class="text-decoration-none" href="https://www.hopelenoir.com/" target="_blank">
-                        <div class="icon">
-                            <i class="fab fa-blogger-b"></i>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<section class="">
-    <div class="container py-5 mt-4">
-        <div class="col-md-12 text-center">
-
-            <h1 class="big-heading text-uppercase">Profile Education Team</h2>
-        </div>
-        <div class="main">
-            <div class="profile-card">
-                <div class="img">
-                    <img src="{% static 'conference\stannescollege\Jimmy C.jpg' %}" onclick="openModal()">
-                </div>
-                <div class="caption">
-                    <h3>Jimmy Cherian</h3>
-                    <p>Chair</p>
-                    <div class="social-links">
-                        <a href="https://www.linkedin.com/in/jimmy-cherian-a3087316/" target="_blank"><i
-                                class="fab fa-linkedin"></i></a>
-                        <!-- <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a> -->
-                    </div>
-                </div>
-                <!-- The modal Add  JavaScript for modal open and close in base.html file-->
-                <div id="myModal" class="modal">
-                    <div class="modal-content">
-                        <span class="close" onclick="closeModal()">&times;</span>
-                        <h2>Jimmy Cherian</h2>
-                        <p>Jimmy Cherian is the President and Managing Trustee of Creating
-                            Futures, an NGO
-                            focused on skills development. He has been instrumental in the conceptualization and setting
-                            up of
-                            Creating Futures.
-                            <br>
-                            Prior to devoting his time completely to Creating Futures, Jimmy held various leadership
-                            roles in
-                            companies such as Volvo Group, Ciber, CapGemini, HP, and so on. His last position was as
-                            Global
-                            Head and Global Director of Emerging Technologies at Volvo IT. <br>
-                            He is a leadership and life skills coach, corporate trainer, and facilitator. He has been
-                            actively
-                            involved in the social development sector in the areas of Education, Child Welfare, Tribal
-                            Development, Rural Development, Skill Development, etc. 
-                            <br>
-                            Creating Futures was born from his vision to ensure meaningful and sustainable employment
-                            for all -
-                            through the development of right skills. Under his leadership, Creating Futures has been
-                            able to
-                            make a difference in the lives of many students.
-                        </p>
-                    </div>
-                </div>
-                <!-- End modal -->
-            </div>
-            <div class="profile-card">
-                <div class="img">
-                    <img src="{% static 'conference\triennial\2023\Cheyrl.jpg' %}" onclick="openModal1()">
-                </div>
-                <div class="caption">
-                    <h3>Dr. Cheyrl </h3>
-                    <p>Co-Chair</p>
-                </div>
-                <!-- The modal -->
-                <div id="myModal1" class="modal">
-                    <div class="modal-content">
-                        <span class="close" onclick="closeModal1()">&times;</span>
-                        <h2>Dr. Cheyrl Mansfield Ensley</h2>
-                        <p>Dr. Cheryl Mansfield Ensley currently serves as an Associate
-                            Professor and the Interim Head of the Departments of Curriculum & Instruction and
-                            Developmental and
-                            Higher Education Studies at her alma mater - Grambling State University. She received her
-                            master's
-                            from LA Tech and earned her doctorate from Texas A&M Commerce. Dr. Ensley is an advocate for
-                            providing access and opportunity for all students with over 30 years of experience in
-                            education. She
-                            is an experienced educator, dedicated to leveling the playing field for all children. Prior
-                            to
-                            joining the GRAMFAM in August of 2018, Dr. Ensley has previous experience teaching at the
-                            college
-                            level and has served in the Pre-K-12 setting as a teacher, assistant principal, principal,
-                            director,
-                            executive director, and assistant superintendent. She is an outcomes-based educator with a
-                            laser
-                            focus on obtaining results based on data.
-                        </p>
-                    </div>
-                </div>
-                <!-- End modal -->
-            </div>
-            <div class="profile-card">
-                <div class="img">
-                    <img src="{% static 'conference\triennial\2023\Shinto.png' %}" onclick="openModal2()">
-                </div>
-                <div class="caption">
-                    <h3>Mr. Shinto Joseph</h3>
-                    <p>Co-Chair</p>
-                </div>
-                <!-- The modal -->
-            <div id="myModal2" class="modal">
-                <div class="modal-content">
-                    <span class="close" onclick="closeModal2()">&times;</span>
-                    <h2>Mr. Shinto Joseph</h2>
-                    <p>Shinto Joseph, Director - South East Asia Operations, LDRA India
-                        Shinto Joseph currently serves as the Director of South East Asia Operations at LDRA India, an
-                        associate of LDRA Ltd UK. He holds a B.Tech in Computer Science from TKM College of
-                        Engineering, Kerala, and an MBA in Marketing from CHRIST Deemed University Bengaluru. He holds
-                        the position of MBA Alumni Association President at CHRIST and is a recipient of the
-                        Distinguished
-                        Alumnus award from the prestigious institution.
-                        Shinto Joseph possesses an extensive track record of over 26 years in spearheading Embedded
-                        <br>
-                        Software Life Cycle solutions and leading Safety and Security critical industries. His visionary
-                        leadership has led to the establishment and success of numerous teams and companies in the
-                        Embedded Systems domain.
-                        Driven by a passion for skilling, mentoring, innovation, and advocacy for technology regulation
-                        and
-                        public policy matters, Shinto Joseph maintains active affiliations with various prominent
-                        organisations
-                        in the industry, academia, technology, government, and social sectors. His exceptional
-                        professional
-                        journey reflects his unwavering commitment to excellence and his dedication to advancing the
-                        fields
-                        of technology and business.
-                    </p>
-                </div>
-            </div>
-            <!-- End modal -->
-            </div>
-            <div class="profile-card">
-                <div class="img">
-                    <img src="{% static 'conference\triennial\2023\Anupa.png' %}" onclick="openModal3()">
-                </div>
-                <div class="caption">
-                    <h3>Anupa Gnanakan</h3>
-                    <p>Chair</p>
-                </div>
-                <!-- The modal -->
-                <div id="myModal3" class="modal">
-                    <div class="modal-content">
-                        <span class="close" onclick="closeModal3()">&times;</span>
-                        <h2>Anupa Gnanakan</h2>
-                        <p>A teacher by profession, Anupa Gnanakan has a passion for quality,
-                            meaningful, relevant and
-                            student centered education to children from all backgrounds, with a focus on turning schools
-                            into places where children feel safe, happy and excited, by inculcating a curiosity to learn
-                            and discover.<br>
-                            With a BA in Psychology, Anupa Gnanakan is a trained Montessori teacher who later pursued
-                            a Post Graduate Diploma in The Comprehensive Management of Teaching Children with
-                            Learning Difficulties, and an MA in Special and Inclusive Education from the University of
-                            Northampton. After 15 years of teaching in various schools across Bangalore, she is now the
-                            Director – Education at the ACTS Group of Institutions, a NGO that is dedicated to providing
-                            quality and accessible education to the community.<br>
-                            On her journey, Anupa has met many interesting people on the way, which inspired her to
-                            start a YouTube channel called Breaktime Conversations, in October 2021. This channel
-                            features short conversations with educators and learning specialists.
-                            Anupa lives with her mum, husband, kids and pets in Bengaluru, India.
-                    </div>
-                </div>
-                <!-- End modal -->
-            </div>
-        </div>
-    </div>
-</section>
-
-<div class="container mt-5" id="virtualband">
-    <div class="row">
-        <div class="col-md-12 mt-5">
-            <div
-                class="col-lg-12 col-md-12 col-sm-6 col-xs-6 text-center align-self-center d-flex justify-content-center">
-                <div>
-                    <a href="https://www.dlearners.in/letusdream/" target="_blank"><button
-                            class="btn-2 m-1"><span>Participate
-                            </span></button></a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<br>
-<br>
-<br>
-<div class="container">
-    <div class="row testi-row">
-        <div class="col-md-12">
-            <h1 class="text-green text-center">
-                Partner Organizations
-            </h1>
-            <div class="col d-flex justify-content-center  mb-5">
-
-                <img src="{% static 'conference/Conference-Logos1.png' %}" class="partnership-img mt-auto">
-            </div>
-        </div>
-    </div>
-</div>
 {% endblock %}

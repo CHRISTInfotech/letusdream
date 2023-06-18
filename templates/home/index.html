@@ -62,17 +62,19 @@ HOME
             <div class="card-custom-img card-img1">
             </div>
 
-            <div class="card-body cb-1">
+            <div class="card-body cb-1 p-4">
               <h5 class="card-title text-h3 fw-bold fs-4">DREAMS Program</h5>
-              <p class="card-text text-h1-cen fw-bold  card-t1 fs-6">The
+              <p class="card-text text-h1-cen mt-3 card-t1 fs-6">The
                 DREAMS Program is a
                 three-year curriculum-based community mentoring project for schools and colleges, each year focusing on
                 personal development, interpersonal skills and leadership skills. The program aims to.</p>
             </div>
             <div class="card-footer text-center bg-white border-0 card-f1">
 
-              <a href="{% url 'registration_user' %}"><button type="button" class="btn-2">Join Us</button></a>
-              <a href="{% url 'dreams' 'program' %}">
+              <a href="{% url 'registration_user' %}" class="add-boder">
+                <button type="button" class="btn-2">Join Us</button>
+              </a>
+              <a href="{% url 'dreams' 'program' %}" class="add-boder">
                 <button type="button" class="btn-2">Know more</button>
               </a>
 
@@ -86,17 +88,18 @@ HOME
             <div class="card-custom-img card-img2">
             </div>
 
-            <div class="card-body cb-1">
+            <div class="card-body cb-1 p-4">
               <h5 class="card-title fw-bold text-h3 fs-4">DREAMS Pro Club</h5>
-              <p class="card-text  text-h1-cen fw-bold fs-6  card-t1 ">DREAMS Pro Club is a
+              <p class="card-text  text-h1-cen mt-3  card-t1 ">DREAMS Pro Club is a
                 support group for the personal and professional development of young professionals. Small groups of
                 10-12
                 working professionals meet once every month to discuss and implement.</p>
             </div>
             <div class="card-footer text-center bg-white border-0 card-f1">
-              <a href="{% url 'registration_user' %}"> <button type="button" id="btn-join" class="btn-2">Join
+              <a href="{% url 'registration_user' %}" class="mb-2"> <button type="button" id="btn-join"
+                  class="btn-2">Join
                   Us</button></a>
-              <a href="{% url 'dreams' 'proclub' %}"><button type="button" id="btn-more" class="btn-2">Know
+              <a href="{% url 'dreams' 'proclub' %}" class="mb-2"><button type="button" id="btn-more" class="btn-2">Know
                   more</button></a>
 
             </div>
@@ -110,17 +113,18 @@ HOME
             <div class="card-custom-img card-img3">
             </div>
 
-            <div class="card-body cb-1">
+            <div class="card-body cb-1 p-4">
               <h5 class="card-title text-h3 fs-4 fw-bold">DREAMS Band</h5>
-              <p class="card-text text-h1-cen fw-bold  fs-6 card-t1">The DREAMS Band strives
+              <p class="card-text text-h1-cen mt-3 card-t1">The DREAMS Band strives
                 towards making a positive difference in the community by utilizing their musical skills. DREAMS Band is
                 not only an opportunity to sing and motivate the audience but also uses music as a platform to empower
                 communities.</p>
             </div>
             <div class="card-footer text-center bg-white border-0 card-f1">
-              <a href="{% url 'registration_user' %}"><button type="button" id="btn-join" class="btn-2">Join
+              <a href="{% url 'registration_user' %}" class="mb-2"><button type="button" id="btn-join"
+                  class="btn-2">Join
                   Us</button></a>
-              <a href="{% url 'dreams' 'band' %}"><button type="button" id="btn-more" class="btn-2">Know
+              <a href="{% url 'dreams' 'band' %}" class="mb-2"><button type="button" id="btn-more" class="btn-2">Know
                   more</button></a>
 
             </div>
@@ -133,18 +137,19 @@ HOME
           <div class="card card-custom bg-white border-white border-0 card-1">
             <div class="card-custom-img card-img4"></div>
 
-            <div class="card-body cb-1">
+            <div class="card-body cb-1 p-4">
               <h5 class="card-title text-h3 fs-4 fw-bold">Community Conferences</h5>
-              <p class="card-text text-h1-cen fs-6 fw-bold  card-t1">Started in 2017, Let Us
+              <p class="card-text text-h1-cen mt-3 card-t1">Started in 2017, Let Us
                 Dream Conference provides a platform for researchers, practitioners and volunteers to discuss various
                 possibilities of promoting community volunteerism among students, sharing their experiences and
                 challenges
               </p>
             </div>
             <div class="card-footer text-center bg-white border-0 card-f1">
-              <a href="{% url 'registration_user' %}"> <button type="button" id="btn-join" class="btn-2">Join
+              <a href="{% url 'registration_user' %}" class="mb-2"> <button type="button" id="btn-join"
+                  class="btn-2">Join
                   Us</button></a>
-              <a href="{% url 'annualConference' %}"><button type="button" id="btn-more" class="btn-2">Know
+              <a href="{% url 'annualConference' %}" class="mb-2"><button type="button" id="btn-more" class="btn-2">Know
                   more</button></a>
 
             </div>
@@ -362,15 +367,12 @@ HOME
 
 <!-- instagram feed -->
 
-<div class="container-fluid cf-2 text-h3" id="conference" style="padding-bottom: 1%; margin-bottom: 0%;">
+<div class="container-fluid cf-2 text-h3" id="conference">
   <h1 class="text-center text-uppercase">NEWSLETTERs</h1>
 
   <div class="blog-home2">
     <div class="container">
-      <!-- Row  -->
-      <div class="row justify-content-center">
 
-      </div>
       <div class="row mt-4">
         <div class="col-lg-3 col-md-3 p-3 on-hover">
           <div class="card border-0 ">
@@ -415,23 +417,26 @@ HOME
         </div>
 
       </div>
-      <p class="pl-2" style=" text-align: right;font-size: 15px;"><a href="{% url 'newsletter' %}"
-          class="fw-bold text-h3 text-decoration-none">Read more</a></p>
+      <div class=" mb-3 float-end">
+        <a href="{% url 'newsletter' %}" class="fw-bold text-h3 text-decoration-none">
+          Read more
+        </a>
+      </div>
     </div>
   </div>
 </div>
 
 <!-- vistor -->
 
-<div class="container mt-5">
-  <h5 class="text-center text-uppercase">Vistors count</h5>
-  <div class="row mb-5">
+<div class="container mt-5 mb-5">
+  <h5 class="fw-bold text-uppercase">Vistors</h5>
+  <div class="row mb-5 mt-3">
     {% for visitor in visitor %}
 
-    <div class="col-1">
-      <small class="text-center text-dark">{{ visitor.country }}</small>
+    <div class="col-2 p-3 m-1 d-flex justify-content-center border">
       <i class="fi fi-{{ visitor.code|lower }}"></i>
-      <span class="ml-1"> {{ visitor.count }}</span>
+      <small class="ml-2 text-center text-dark">{{ visitor.country }}</small>
+      <span class="ml-2"> {{ visitor.count }}</span>
     </div>
     {% endfor %}
   </div>

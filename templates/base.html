@@ -220,17 +220,36 @@
             </div>
         </div>
         <ul class="menu">
-            <li><a href="{% url 'main' %}">Home</a></li>
-            <li><a href="{% url 'about-us' %}">About Us</a></li>
-            <li><a href="{% url 'Conferences' %}">Conferences</a></li>
-            <li><a href="{% url 'yclp-course' %}">Courses</a></li>
-            <li><a href="">Contact</a></li>
-            <li><a href="{% url 'signup' %}">Login</a></li>
+            <li>
+                <a class="text-decoration-none" href="{% url 'main' %}">Home</a>
+            </li>
+            <li>
+                <a class="text-decoration-none" href="{% url 'about-us' %}">About Us</a>
+            </li>
+            <li>
+                <a class="text-decoration-none" href="{% url 'Conferences' %}">Conferences</a>
+            </li>
+            <li>
+                <a class="text-decoration-none" href="{% url 'yclp-course' %}">Courses</a>
+            </li>
+            <li>
+                <a class="text-decoration-none" href="">Contact</a>
+            </li>
+            <!-- <li>
+                <a class="text-decoration-none" href="{% url 'signup' %}">Login</a>
+            </li> -->
         </ul>
 
         <div class="md-12 xm-6">
-            <a href="">Terms&Conditions</a> | <a href="">Privacy Policy</a> | <a href="">API Policy</a> | <a
-                href="">Cookies</a>
+            <a class="text-decoration-none text-white" href="">Terms&Conditions</a> | <a
+                class="text-decoration-none text-white" href="">Privacy Policy</a> | <a
+                class="text-decoration-none text-white" href="">API Policy</a> | <a
+                class="text-decoration-none text-white" href="">Cookies</a>
+        </div>
+
+        <div class="md-12 xm-6">
+            Designed, Developed and Manintained by <a class="text-decoration-none text-white"
+                href="https://christinfotech.org/" target="_blank">CHRIST Infotech</a>
         </div>
     </footer>
 
@@ -245,41 +264,41 @@
             $('#navbar').removeClass('black');
         }
     })
-// JavaScript functions to open and close the modal
-function openModal() {
-    var modal = document.getElementById("myModal");
-    modal.style.display = "block";
-}
+    // JavaScript functions to open and close the modal
+    function openModal() {
+        var modal = document.getElementById("myModal");
+        modal.style.display = "block";
+    }
 
-function openModal1() {
-    var modal = document.getElementById("myModal1");
-    modal.style.display = "block";
-}
-function openModal2() {
-    var modal = document.getElementById("myModal2");
-    modal.style.display = "block";
-}
-function openModal3() {
-    var modal = document.getElementById("myModal3");
-    modal.style.display = "block";
-}
+    function openModal1() {
+        var modal = document.getElementById("myModal1");
+        modal.style.display = "block";
+    }
+    function openModal2() {
+        var modal = document.getElementById("myModal2");
+        modal.style.display = "block";
+    }
+    function openModal3() {
+        var modal = document.getElementById("myModal3");
+        modal.style.display = "block";
+    }
 
-function closeModal() {
-    var modal = document.getElementById("myModal");
-    modal.style.display = "none";
-}
-function closeModal1() {
-    var modal = document.getElementById("myModal1");
-    modal.style.display = "none";
-}
-function closeModal2() {
-    var modal = document.getElementById("myModal2");
-    modal.style.display = "none";
-}
-function closeModal3() {
-    var modal = document.getElementById("myModal3");
-    modal.style.display = "none";
-}
+    function closeModal() {
+        var modal = document.getElementById("myModal");
+        modal.style.display = "none";
+    }
+    function closeModal1() {
+        var modal = document.getElementById("myModal1");
+        modal.style.display = "none";
+    }
+    function closeModal2() {
+        var modal = document.getElementById("myModal2");
+        modal.style.display = "none";
+    }
+    function closeModal3() {
+        var modal = document.getElementById("myModal3");
+        modal.style.display = "none";
+    }
 
 
 
