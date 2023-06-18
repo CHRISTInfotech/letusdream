@@ -320,4 +320,4 @@ def llfp(request):
 
 def triennialConference2023(request):
     return render(request,
-                  'conference/triennialConference/../ltstatic/conference/triennial/2020/triennialConference2023.html')
+                  'conference/triennialConference/triennialConference2023.html')
