@@ -63,25 +63,37 @@ Triennial Conferences
 
     <div class="row">
 
-        <div class="col-md-6 mt-5">
-            <a href="{% url 'tc-2023' %}">
-                <img src="{% static 'conference/triennial/2023/triennial2023.png' %}"
-                    class="img-fluid rounded mx-auto d-block cus-img" alt="Responsive image">
-            </a>
-            <div
-                class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center align-self-center d-flex justify-content-center">
-                <div>
-                    <p class="pl-5 mt-4"><a href="{% url 'tc-2023' %}"
-                            class="fw-bold text-h3 text-decoration-none">Conference
-                            2023</a></p>
-                    </p>
+        <div class="col-6 mt-5 d-flex justify-content-center">
+            <div>
+                <a href="{% url 'tc-2023' %}" class="position-relative d-inline-block">
+                    <img src="{% static 'conference/triennial/2023/triennial2023.png' %}"
+                        class="img-fluid rounded mx-auto d-block cus-img" alt="Responsive image">
+                    <div
+                        class="bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute top-0 end-0">
+                        Nov<span class="d-block">17 - 19</span>2023</div>
+                </a>
+                <div
+                    class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center align-self-center d-flex justify-content-center">
+                    <div>
+                        <p class="pl-5 mt-4"><a href="{% url 'tc-2023' %}"
+                                class="fw-bold text-h3 text-decoration-none">Conference
+                                2023</a></p>
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <div class="col-md-6 mt-5"><a href="{% url 'tc-2020' %}">
+        <div class="col-md-6 mt-5 d-flex justify-content-center">
+            
+           <div>
+            <a href="{% url 'tc-2020' %}" class="position-relative d-inline-block">
                 <img src="{% static 'conference/triennial/TRIENNIAL-CONFERENCE-POSTER2.jpg' %}"
-                    class="img-fluid rounded mx-auto d-block cus-img" alt="Responsive image"></a>
+                    class="img-fluid rounded mx-auto d-block cus-img" alt="Responsive image">
+                    <div
+                    class="bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute top-0 end-0">
+                    Nov<span class="d-block">20 - 22</span>2020</div>
+                </a>
             <div
                 class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center align-self-center d-flex justify-content-center">
                 <div>
@@ -91,6 +103,7 @@ Triennial Conferences
                     </p>
                 </div>
             </div>
+           </div>
         </div>
     </div>
 
