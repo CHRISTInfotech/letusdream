@@ -174,7 +174,7 @@ def dreams(request, drm):
 
 
 def locations(request, loc):
-    if loc == 'ChristBangalore':
+    if loc == 'bangalore':
         return render(request, 'location/india/bangalore.html')
     elif loc == 'changancherry':
         return render(request, 'location/india/changancherry.html')
