@@ -2,22 +2,15 @@
 {% load static %}
 
 {% block title %}
-Triennial Conference 2020
+Triennial Conferences
 {% endblock %}
 
 {% block extraStyles %}
 <link rel="stylesheet" href="{% static 'css/triennialConference.css' %}" type="text/css">
 <link rel="stylesheet" href="{% static 'css/annualConference.css' %}" type="text/css">
-
+<!-- <link rel="stylesheet" href="{% static 'css/louisiana-tech-university.css' %}" type="text/css"> -->
+<link rel="stylesheet" href="{% static 'css/media.css' %}" type="text/css">
 {% endblock extraStyles %}
-{% block links %}
-
-<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css'
-    type="text/css">
-<!-- Font Awesome -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"
-    type="text/css" />
-{% endblock links %}
 
 {% block content %}
 <nav aria-label="breadcrumb animated slideInDown" class="cus-breadcrumb">
@@ -70,9 +63,11 @@ Triennial Conference 2020
 
     <div class="row">
 
-        <div class="col-md-6 mt-5"><a href="{% url 'tc-2023' %}">
+        <div class="col-md-6 mt-5">
+            <a href="{% url 'tc-2023' %}">
                 <img src="{% static 'conference/triennial/2023/triennial2023.png' %}"
-                    class="img-fluid rounded mx-auto d-block cus-img" alt="Responsive image"></a>
+                    class="img-fluid rounded mx-auto d-block cus-img" alt="Responsive image">
+            </a>
             <div
                 class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center align-self-center d-flex justify-content-center">
                 <div>
@@ -152,7 +147,8 @@ Triennial Conference 2020
                         theories, and best practices. </li>
                 </ol>
             </div>
-            <div class="col-6 p-4"><img src="{% static 'conference/triennial/mission.png' %}" alt="" class="img-fluid"></div>
+            <div class="col-6 p-4"><img src="{% static 'conference/triennial/mission.png' %}" alt="" class="img-fluid">
+            </div>
         </div>
     </div>
 
