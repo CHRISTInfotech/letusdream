@@ -22,7 +22,7 @@
     {% endblock extraStyles %}
 
     {% block links %}
-
+   
     {% endblock links %}
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -33,11 +33,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
         type="text/css" />
-
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet"
         type="text/css" />
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+ 
 </head>
 
 <body ondragstart="return false">
@@ -63,9 +63,10 @@
                             <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" data-bs-auto-close="outside"
                                 href="#">About Us</a>
                             <ul class="dropdown-menu shadow">
-                                <li> <a href="{% url 'about-us' %}" class="dropdown-item">About Us</a></li>
-                                <li> <a href="{% url 'media' %}" class="dropdown-item">Media</a></li>
-                                <!-- <li> <a href="{% url 'announcement' %}" class="dropdown-item">Announcements</a></li> -->
+                                <li> <a href="{% url 'about-us' %}" class="dropdown-item">Overview</a></li>
+                                <li> <a href="{% url 'announcement' %}" class="dropdown-item">Sustainability</a></li>
+                                <li> <a href="{% url 'media' %}" class="dropdown-item">Media</a></li>                                
+                                <li> <a href="{% url 'announcement' %}" class="dropdown-item">Contact Us</a></li>
 
                             </ul>
                         </li>
@@ -84,6 +85,25 @@
 
                             </ul>
                         </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                                href="#">CLUBS</a>
+                            <ul class="dropdown-menu shadow">
+
+
+
+                                <li>
+                                    <a href="{% url 'dreams' 'proclub' %}" class="dropdown-item">Professional Club</a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'dreams' 'leadershipnetwork' %}" class="dropdown-item">Global Youth
+                                        Leadership Network</a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'dreams' 'proclub' %}" class="dropdown-item">Conversation Club</a>
+                                </li>
+                            </ul>
+                        </li>
 
                         <li class="nav-item dropdown active">
                             <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" data-bs-auto-close="outside"
@@ -92,7 +112,7 @@
                             </a>
                             <ul class="dropdown-menu shadow mld" aria-labelledby="MyAccountDDM" id="AppDropDownId">
                                 <li>
-                                    <a href="{% url 'Conferences' %}" class="dropdown-item">LUD Conference</a>
+                                    <a href="{% url 'Conferences' %}" class="dropdown-item">Overview</a>
                                 </li>
                                 <li>
                                     <a href="{% url 'annualConference' %}" class="dropdown-item">
@@ -107,7 +127,16 @@
 
                             </ul>
                         </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                                href="#">PRODUCTIONS</a>
+                            <ul class="dropdown-menu shadow">
 
+
+                                <li> <a href="{% url 'dreams' 'band' %}" class="dropdown-item">DREAMS Band</a></li>
+
+                            </ul>
+                        </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" data-bs-auto-close="outside"
                                 href="#">Courses</a>
@@ -255,6 +284,15 @@
 
 </body>
 <script>
+
+    $(document).ready(function () {
+        $('.dropdown-submenu a.dropdown-toggle').on("click", function (e) {
+            $(this).next('ul').toggle();
+            e.stopPropagation();
+            e.preventDefault();
+        });
+    });
+
     $(window).on('scroll', function () {
 
         if ($(window).scrollTop()) {
@@ -303,7 +341,6 @@
 
 
 </script>
-
 <!-- intsgram feed script -->
 <script src='https://widgets.sociablekit.com/instagram-feed/widget.js' async defer></script>
 

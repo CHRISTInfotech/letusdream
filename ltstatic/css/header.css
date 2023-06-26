@@ -39,8 +39,8 @@ body {
 }
 
 .menu-wrapper .navbar-brand img {
-    height: 100px;
-    width: 134px;
+    height: 110px;
+    width: auto;
     transition: .5s ease-in-out;
 }
 
@@ -241,14 +241,14 @@ footer div a:hover {
     }
 
     nav.black {
-        height: 80px;
-        padding: 10px 50px;
+        height: 90px;
+        padding: 20px 50px;
         transition: .5s ease;
     }
 
     .menu-wrapper nav.black .navbar-brand img {
-        height: 70px;
-        width: 92px;
+        height: 90px;
+        width: auto;
         margin-top: -10px;
     }
 
@@ -267,7 +267,7 @@ footer div a:hover {
         z-index: 99999;
         width: 100%;
         padding: 10px 20px;
-        margin: 0px 10px 25px 0px;
+        margin: 0px 15px 25px 0px;
         background-color: #fff;
 
     }
