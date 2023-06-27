@@ -29,6 +29,7 @@
         integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous"
         type="text/css">
     <link href="{% static  'css/style.css' %}" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="{% static 'css/view_testimonials.css' %}" type="text/css">
     <link href="{% static  'css/header.css' %}" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
@@ -100,7 +101,7 @@
                                         Leadership Network</a>
                                 </li>
                                 <li>
-                                    <a href="{% url 'dreams' 'proclub' %}" class="dropdown-item">Conversation Club</a>
+                                    <a href="{% url 'conversation_club' %}" class="dropdown-item">Conversation Club</a>
                                 </li>
                             </ul>
                         </li>

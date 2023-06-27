@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+Contact US
+{% endblock %}
+
+{% block extraStyles %}
+<link rel="stylesheet" href="{% static 'css/contactUs.css' %}" type="text/css">
+{% endblock extraStyles %}
+
+{% block content %}
+<nav class="cus-breadcrumb" aria-label="breadcrumb animated slideInDown ">
+    <ol class="breadcrumb text-uppercase mb-0 bg-white">
+        <li class="breadcrumb-item"><a class="text-black text-decoration-none" href="{% url 'main' %}">Home</a></li>
+   
+        <li class="breadcrumb-item  active " aria-current="page">Contact Us</li>
+    </ol>
+</nav>
+<div class="container mt-5 mb-5 p-5">
+<h1 class="text-center text-green">Connect With LET US DREAM</h1>
+    
+    <section class="page-section clearfix">
+        <div class="container">
+            <div class="intro">
+                <iframe class="intro-img img-fluid mb-3 mb-lg-0 rounded"
+               src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d182377.38723339717!2d77.61630833403241!3d12.994592804847882!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae15b277a93807%3A0x88518f37b39dabd0!2sChrist%20University!5e0!3m2!1sen!2sin!4v1687845812683!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                <div class="intro-text left-0 text-center bg-info p-5 rounded">
+                    <h2 class="section-heading mb-4">
+                        <span class="section-heading-upper">Contact Us</span>
+                        <span class="section-heading-lower"></span>
+                    </h2>
+                    <p class=" mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione a vel cum? Quam
+                        quibusdam pariatur repudiandae quasi facere, consequuntur veritatis accusamus unde incidunt
+                        aperiam, exercitationem fugit, dolore aliquam natus! Ipsum praesentium quo delectus sint
+                        architecto. Quo veritatis neque velit perferendis!</p>
+                    <!-- <div class="intro-button mx-auto"><a class="btn btn-primary btn-xl" href="#!">Visit Us Today!</a> 
+                    </div>-->
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<div class="container" id="contact">
+    <div class="row ">
+        <div class="col-sm-12 col-md-6 col-lg-3 my-5">
+            <div class="card border-0">
+                <div class="card-body text-center">
+                    <i class="fa fa-phone fa-1x mb-3" aria-hidden="true"></i>
+                    <h4 class="text-uppercase mb-5">call us</h4>
+                    <p class="text-center">9447908235</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-3 my-5">
+            <div class="card border-0">
+                <div class="card-body text-center">
+                    <i class="fa fa-globe fa-1x mb-3" aria-hidden="true"></i>
+                    <h4 class="text-uppercase mb-5">website</h4>
+                    <address class="text-center"><a href="http://letusdream.org" class="text-decoration-none text-black">letusdream.org</a></address>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-3 my-5">
+            <div class="card border-0">
+                <div class="card-body text-center">
+                    <i class="fa fa-map-marker fa-1x mb-3" aria-hidden="true"></i>
+                    <h4 class="text-uppercase mb-5">loaction</h4>
+                    <address class="text-center">Bangalore </address>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-3 my-5">
+            <div class="card border-0">
+                <div class="card-body text-center">
+                    <i class="fa fa-envelope fa-1x mb-3" aria-hidden="true"></i>
+                    <h4 class="text-uppercase mb-5">email</h4>
+                    <p class="text-center"><a href="mailto:letusdream@letusdream.org" class="text-decoration-none text-black">letusdream@letusdream.org</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

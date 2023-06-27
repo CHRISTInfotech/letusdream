@@ -321,3 +321,9 @@ def llfp(request):
 def triennialConference2023(request):
     return render(request,
                   'conference/triennialConference/triennialConference2023.html')
+
+def contactUs(request):
+    return render(request,'aboutUs/contactus.html')
+
+def conversation_club(request):
+    return render(request,'clubs/conversation_club.html')
