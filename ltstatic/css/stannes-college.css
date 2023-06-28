@@ -261,12 +261,16 @@ a:hover {
   transition: width 0.2s ease;
 }
 .postcard .postcard__text {
+
+  font-family: "Baskervville", serif;
   padding: 1.5rem;
   position: relative;
   display: flex;
   flex-direction: column;
 }
 .postcard .postcard__preview-txt {
+
+  font-family: "Baskervville", serif;
   overflow: hidden;
   text-overflow: ellipsis;
   text-align: justify;
