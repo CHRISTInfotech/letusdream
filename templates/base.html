@@ -67,7 +67,7 @@
                                 <li> <a href="{% url 'about-us' %}" class="dropdown-item">Overview</a></li>
                                 <li> <a href="{% url 'announcement' %}" class="dropdown-item">Sustainability</a></li>
                                 <li> <a href="{% url 'media' %}" class="dropdown-item">Media</a></li>                                
-                                <li> <a href="{% url 'announcement' %}" class="dropdown-item">Contact Us</a></li>
+                                <li> <a href="{% url 'conatctUs' %}" class="dropdown-item">Contact Us</a></li>
 
                             </ul>
                         </li>
@@ -78,12 +78,6 @@
 
                                 <li> <a href="{% url 'dreams' 'program' %}" class="dropdown-item">DREAMS Program</a>
                                 </li>
-                                <li> <a href="{% url 'dreams' 'band' %}" class="dropdown-item">DREAMS Band</a></li>
-                                <li> <a href="{% url 'dreams' 'proclub' %}" class="dropdown-item">DREAMS Pro Club</a>
-                                </li>
-                                <li> <a href="{% url 'dreams' 'leadershipnetwork' %}" class="dropdown-item">Leadership
-                                        NetWork (GYLN)</a></li>
-
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
@@ -263,7 +257,7 @@
                 <a class="text-decoration-none" href="{% url 'yclp-course' %}">Courses</a>
             </li>
             <li>
-                <a class="text-decoration-none" href="">Contact</a>
+                <a class="text-decoration-none" href="{% url 'conatctUs' %}">Contact</a>
             </li>
             <!-- <li>
                 <a class="text-decoration-none" href="{% url 'signup' %}">Login</a>
