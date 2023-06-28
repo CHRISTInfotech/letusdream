@@ -12,19 +12,6 @@ Newsletter
 
 {% block links %}
 
-<!--Google font-->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-
-<!--  Bootstrap CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" type="text/css">
-
-<!-- Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
-
 
 {% endblock links %}
 {% block content %}
@@ -32,7 +19,7 @@ Newsletter
     <ol class="breadcrumb text-uppercase mb-0 bg-white">
         <li class="breadcrumb-item"><a class="text-black text-decoration-none" href="{% url 'main' %}">Home</a></li>
         </li>
-        <li class="breadcrumb-item  active " aria-current="page">announcements</li>
+        <li class="breadcrumb-item  active " aria-current="page">Sustainability</li>
     </ol>
 </nav>
 
@@ -40,19 +27,9 @@ Newsletter
 
 
 <div class="container view-container blog-home2">
-    <h1>Announcements</h1>
-    <div class="image-container">
-        <div class="card">
-            <div class="image h-100"><a href="{% url 'llfp' %}" ><img src="{% static 'Aboutus/announcement/llfp/llfp.png' %}"></a></div>
-            <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
-                Apr<span class="d-block">10</span>2023</div>
-        </div>
-        
-    </div>
+    <h1>Comming Soon</h1>
+    
     
 </div>
 
-</body>
-
-</html>
 {% endblock %}
