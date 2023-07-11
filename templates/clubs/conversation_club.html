@@ -50,7 +50,7 @@ Dream Pro Club
                             <img src="{% static 'testimonial\MichaelKaufmann.png' %}" alt="">
                         </div>
 
-                        <div class="t-bq-quote-jasper-base">
+                        <div class="t-bq-quote-jasper-base" id="testimonial">
 
                             <blockquote class="t-bq-quote-jasper-text" cite="Strugatsky Brothers">
                                 Isolated by COVID restrictions in 2021 and limited in social contacts, stressed at the
@@ -95,7 +95,7 @@ Dream Pro Club
                             <img src="{% static 'testimonial\PatsyAHughey.jpg' %}" alt="">
                         </div>
 
-                        <div class="t-bq-quote-jasper-base">
+                        <div class="t-bq-quote-jasper-base" id="testimonial">
 
                             <blockquote class="t-bq-quote-jasper-text" cite="Strugatsky Brothers">
                                 I am excited to be a part of the DREAM Conversation Club. This experience allows a
@@ -130,10 +130,23 @@ Dream Pro Club
 {% include 'partials/_globalPresence.html' %}
 
 <script>
+    $(document).ready(function() {
+        var maxLength = 250;
 
+        $('#testimonial blockquote').each(function() {
+            var content = $(this).text();
+            if (content.length > maxLength) {
+                var truncatedContent = content.substring(0, maxLength) + '...';
+                $(this).text(truncatedContent);
+                $(this).append('<a href="{% url "testimonials"  %}#conversationClub " class="read-more text-decoration-none float-end">Read More</a>');
+            }
+        });
 
+        $('.testimonial').on('click', '.read-more', function() {
+            var fullContent = $(this).siblings('p').text();
+            $(this).siblings('blockquote').text(fullContent);
+            $(this).remove();
+        });
+    });
 </script>
-</body>
-
-</html>
 {% endblock %}
