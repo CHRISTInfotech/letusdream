@@ -3,7 +3,7 @@
 
 {% block title %}
 Triennial Conference 2023
-{% endblock %}
+{% endblock title%}
 
 {% block extraStyles %}
 <link rel="stylesheet" href="{% static 'css/triennialConference.css' %}" type="text/css">
@@ -12,7 +12,8 @@ Triennial Conference 2023
 <link rel="stylesheet" href="{% static 'css/stannes-college.css' %}" type="text/css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300&display=swap"
+    rel="stylesheet">
 <style>
     .cardBorder {
         border-left: 3px solid #0c52a1 !important;
@@ -41,7 +42,7 @@ Triennial Conference 2023
         Empowered Communities: Strengthening Connections For a Sustainable Future
     </div>
     <div class="fs-3 font fw-bold mt-2"><em>LET US DREAM</em> 2023 Triennial International Conference</div>
-    <div class="fs-4 text-font mt-2">CHRIST University, Bangalore | November 17 to November 19, 2023</div>
+    <div class="fs-4 text-font mt-2">CHRIST University, Bangalore | November 3 - 5, 2023</div>
     <h4></h4>
 </div>
 
@@ -65,7 +66,7 @@ Triennial Conference 2023
 
                     </div>
                     <div class="carousel-item">
-                        <img src="{% static 'conference/triennial/2023/LUD2023_img.jpg' %}" class="d-block w-100"
+                        <img src="{% static 'conference/triennial/2023/triennial2023.png' %}" class="d-block w-100"
                             alt="">
 
                     </div>
@@ -97,7 +98,8 @@ Triennial Conference 2023
                 </div>
 
                 <p class="mb-4 fw-semibold text-font">
-                    With the theme of Empowered Communities, the <em>LET US DREAM</em> conference brings together individuals
+                    With the theme of Empowered Communities, the <em>LET US DREAM</em> conference brings together
+                    individuals
                     with transformative stories of social intervention. Driven by a shared commitment of establishing a
                     sustainable community, we invite people who have adopted responsible practices in the social,
                     educational, health, environmental, and economic sectors. Contemporary narratives about
@@ -109,9 +111,11 @@ Triennial Conference 2023
                 <p class="mb-4 fw-semibold text-font">
                     The ultimate objective is to empower all sectors of society, which necessitates involving a broad
                     ecosystem comprising NGOs, educational institutions, post-secondary institutions, service
-                    organizations, corporations, and volunteers. <em>LET US DREAM</em> 2023 aims to provide opportunities for
+                    organizations, corporations, and volunteers. <em>LET US DREAM</em> 2023 aims to provide
+                    opportunities for
                     sharing authentic stories of inspiring pursuits and discover ways to improve the quality of life in
-                    diverse communities. <em>LET US DREAM</em> a better reality and come together to establish and strengthen
+                    diverse communities. <em>LET US DREAM</em> a better reality and come together to establish and
+                    strengthen
                     connections while working collectively to better ourselves and future generations.
                 </p>
 
@@ -120,9 +124,9 @@ Triennial Conference 2023
 
             <div class="row m-auto">
                 <div class="col">
-                    <a href="{% static 'conference/triennial/2023/LUD2023.pdf' %}" class="btn btn-outline-success">
+                    <!-- <a href="{% static 'conference/triennial/2023/LUD2023.pdf' %}" class="btn btn-outline-success">
                         Event Brochure
-                    </a>
+                    </a> -->
                 </div>
                 <div class="col">
                     <a href="#schedule" class="btn btn-outline-success">
@@ -229,12 +233,11 @@ Triennial Conference 2023
                                                 src="{% static 'conference/triennial/2023/Profiles/Jimmy.jpeg' %}">
                                         </div>
                                         <div class="d-flex justify-content-center fw-bold mt-3">
-                                            Jimmy Cherian
+                                            Mr. Jimmy Cherian
                                         </div>
                                         <div class="text-center">
-                                            Founder & President<br />
-                                            Creating Futures<br />
-                                            Bangalore, India
+                                            Founder & President, Creating Futures, India <br/>
+                                            <a href="mailto:jims.cherian@gmail.com"><i class="fa-regular fa-envelope"></i></a>
                                         </div>
                                     </div>
                                     <div class="col">
@@ -249,9 +252,8 @@ Triennial Conference 2023
                                             Dr. Cheyrl Mansfield Ensley
                                         </div>
                                         <div class="text-center">
-                                            Head & Associate Professor<br />
-                                            Grambling State University<br />
-                                            Grambling, Louisiana
+                                            Interim Head & Associate Professor, Grambling State University, Louisiana<br />
+                                            <a href="mailto:ensleyc@gram.edu"><i class="fa-regular fa-envelope"></i></a>
                                         </div>
                                     </div>
                                     <div class="col">
@@ -262,14 +264,13 @@ Triennial Conference 2023
                                             <img class="border border-info-subtle rounded" height="100px"
                                                 src="{% static 'Aboutus/aboutUs/aboutus-ld5.png' %}">
                                         </div>
-                                        <!-- <div class="d-flex justify-content-center fw-bold mt-3">
-                                            Dr Jimmy Cheriyan
+                                        <div class="d-flex justify-content-center fw-bold mt-3">
+                                            Prof. Nisha Joseph
                                         </div>
                                         <div class="text-center">
-                                            Associate Professor<br />
-                                            CHRIST (Deemed to be University)<br />
-                                            Bangalore, India
-                                        </div> -->
+                                            Principal, St. Anne's Degree College, Bangalore, India<br />
+                                            <a href="mailto:annescollege@gmail.com"><i class="fa-regular fa-envelope"></i></a>
+                                        </div>
                                     </div>
                                 </td>
                             </tr>
@@ -287,13 +288,28 @@ Triennial Conference 2023
                                                 src="{% static 'conference/triennial/2023/Profiles/Anita.png' %}">
                                         </div>
                                         <div class="d-flex justify-content-center fw-bold mt-3">
-                                            Ms. Anita Eipe 
+                                            Ms. Anita Eipe
                                         </div>
-                                        <!-- <div class="text-center">
-                                            Associate Professor<br />
-                                            CHRIST (Deemed to be University)<br />
-                                            Bangalore, India
-                                        </div> -->
+                                        <div class="text-center">
+                                            Managing Trustee, Samatha, Bangalore, India <br />
+                                            <a href="mailto:eipeanita@gmail.com"><i class="fa-regular fa-envelope"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="d-flex justify-content-center fw-bold mb-2 mt-1">
+                                            Co Chair
+                                        </div>
+                                        <div class="d-flex justify-content-center">
+                                            <img class="border border-info-subtle rounded" height="100px"
+                                                src="{% static 'conference/triennial/2023/Profiles/Tracy.jpg' %}">
+                                        </div>
+                                        <div class="d-flex justify-content-center fw-bold mt-3">
+                                            Ms. Tracy Lyman
+                                        </div>
+                                        <div class="text-center">
+                                            Associate Professor, Binghamton University, United States<br />
+                                            <a href="mailto:tlyman@binghamton.edu"><i class="fa-regular fa-envelope"></i></a>
+                                        </div>
                                     </div>
                                     <div class="col">
                                         <div class="d-flex justify-content-center fw-bold mb-2 mt-1">
@@ -307,29 +323,11 @@ Triennial Conference 2023
                                             Ms. Aparna Singh
                                         </div>
                                         <div class="text-center">
-                                            Associate Professor<br />
-                                            CHRIST (Deemed to be University)<br />
-                                            Bangalore, India
+                                            Associate Professor, CHRIST (Deemed to be University), Bangalore, India<br />
+                                            <a href="mailto:aparna25@hotmail.com"><i class="fa-regular fa-envelope"></i></a>
                                         </div>
                                     </div>
-                                    <div class="col">
-                                        <div class="d-flex justify-content-center fw-bold mb-2 mt-1">
-                                            Co Chair
-                                        </div>
-                                        <div class="d-flex justify-content-center">
-                                            <img class="border border-info-subtle rounded" height="100px"
-                                                src="{% static 'conference/triennial/2023/Profiles/Tracy.jpg' %}">
-                                        </div>
-                                        <div class="d-flex justify-content-center fw-bold mt-3">
-                                            Tracy Lyman
-                                        </div>
-                                        <div class="text-center">
-                                            Associate Professor<br />
-                                            Binghamton University<br />
-                                            Binghamton, United States
-                                        </div>
-                                    </div>
-                                    
+
                                 </td>
                             </tr>
                             <tr>
@@ -346,12 +344,11 @@ Triennial Conference 2023
                                                 src="{% static 'conference/triennial/2023/Profiles/Anupa.png' %}">
                                         </div>
                                         <div class="d-flex justify-content-center fw-bold mt-3">
-                                            Anupa Gnanakan
+                                            Ms. Anupa Gnanakan
                                         </div>
                                         <div class="text-center">
-                                            Director – Education<br />
-                                            ACTS Group of Institutions<br />
-                                            Bangalore, India
+                                            Director – Education, ACTS Group of Institutions, Bangalore, India<br />
+                                            <a href="mailto:anupagnanakan@gmail.com"><i class="fa-regular fa-envelope"></i></a>
                                         </div>
                                     </div>
                                     <div class="col">
@@ -360,15 +357,14 @@ Triennial Conference 2023
                                         </div>
                                         <div class="d-flex justify-content-center">
                                             <img class="border border-info-subtle rounded" height="100px"
-                                                src="{% static 'conference/triennial/2023/Profiles/Michael.png' %}">
+                                                src="{% static 'conference/triennial/2023/Profiles/Lisa.jpg' %}">
                                         </div>
                                         <div class="d-flex justify-content-center fw-bold mt-3">
-                                            Mr Michael Kaufmann
+                                            Ms. Lisa Jungkamp
                                         </div>
                                         <div class="text-center">
-                                            Director, Sam and Myra Ross Institute<br />
-                                            Green Chimneys Children’s Services<br />
-                                            New York, United States
+                                            Social Worker and Systemic Counselor, Catholic University of Applied Science of North Rhine-Westphalia, Germany<br />
+                                            <a href="mailto:l.jungkamp@katho-nrw.de"><i class="fa-regular fa-envelope"></i></a>
                                         </div>
                                     </div>
                                     <div class="col">
@@ -380,19 +376,18 @@ Triennial Conference 2023
                                                 src="{% static 'conference/triennial/2023/Profiles/Shinto.png' %}">
                                         </div>
                                         <div class="d-flex justify-content-center fw-bold mt-3">
-                                            Shinto Joseph
+                                            Mr. Shinto Joseph
                                         </div>
                                         <div class="text-center">
-                                            Director - South East Asia Operations<br />
-                                            LDRA India<br />
-                                            Bangalore, India
+                                            Director - South East Asia Operations, LDRA, Bangalore,  India<br />
+                                            <a href="mailto:shintojoseph13345@gmail.com"><i class="fa-regular fa-envelope"></i></a>
                                         </div>
                                     </div>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="fw-bold">
-                                    Host University
+                                    Operations
                                 </td>
                                 <td class="row m-auto">
                                     <div class="col">
@@ -401,15 +396,14 @@ Triennial Conference 2023
                                         </div>
                                         <div class="d-flex justify-content-center">
                                             <img class="border border-info-subtle rounded" height="100px"
-                                                src="{% static 'Aboutus/aboutUs/aboutus-ld5.png' %}">
+                                                src="{% static 'conference/triennial/2023/Profiles/Nijumon.jpeg' %}">
                                         </div>
                                         <div class="d-flex justify-content-center fw-bold mt-3">
-                                            Nijumon K John
+                                            Mr. Nijumon K John
                                         </div>
                                         <div class="text-center">
-                                            Associate Professor<br />
-                                            CHRIST (Deemed to be University)<br />
-                                            Bangalore, India
+                                            Associate Professor, CHRIST (Deemed to be University), Bangalore, India<br />
+                                            <a href="mailto:nijumon.k.john@christuniversity.in"><i class="fa-regular fa-envelope"></i></a>
                                         </div>
                                     </div>
                                     <div class="col">
@@ -421,12 +415,11 @@ Triennial Conference 2023
                                                 src="{% static 'Aboutus/aboutUs/aboutus-ld5.png' %}">
                                         </div>
                                         <div class="d-flex justify-content-center fw-bold mt-3">
-                                            Nikhil pai
+                                            Mr. Nikhil Pai
                                         </div>
                                         <div class="text-center">
-                                            Associate Professor<br />
-                                            CHRIST (Deemed to be University)<br />
-                                            Bangalore, India
+                                            Technical Writer, Cisco, Bangalore, India<br />
+                                            <a href="mailto:mailnikhilpai@gmail.com"><i class="fa-regular fa-envelope"></i></a>
                                         </div>
                                     </div>
                                     <div class="col">
@@ -438,12 +431,11 @@ Triennial Conference 2023
                                                 src="{% static 'Aboutus/aboutUs/aboutus-ld5.png' %}">
                                         </div>
                                         <div class="d-flex justify-content-center fw-bold mt-3">
-                                            Fr Jeff Shown
+                                            Mr. David S R
                                         </div>
                                         <div class="text-center">
-                                            Associate Professor<br />
-                                            CHRIST (Deemed to be University)<br />
-                                            Bangalore, India
+                                            Founder, E-Cure Charitable Trust,  Bangalore, India<br />
+                                            <a href="mailto:david@e-cure.org"><i class="fa-regular fa-envelope"></i></a>
                                         </div>
                                     </div>
                                 </td>
@@ -818,7 +810,7 @@ Triennial Conference 2023
                 </tbody>
             </table>
             <p class="text-muted text-font">
-              Note: Schedule remains the same for all three days
+                Note: Schedule remains the same for all three days
             </p>
         </div>
     </div>
@@ -834,8 +826,47 @@ Triennial Conference 2023
             </a>
         </div>
 
+        <div class="col-12 mt-5 mb-4">
+            <div class="fw-bold fs-4 text-center font">
+                Glimpses of Triennial Conference 2020
+            </div>
+            <div class="gallery">
+                <div>
+                    <iframe src="https://www.youtube.com/embed/AhTNFO-ETe4?list=PLTas59dAb68dNPXGkcE1FzSECebNc_vaT"
+                        allowfullscreen frameborder="0" name="tab"></iframe>
+                </div>
+                <div>
+                    <span>
+                        <a href="https://www.youtube.com/embed/AhTNFO-ETe4?list=PLTas59dAb68dNPXGkcE1FzSECebNc_vaT"
+                            target="tab"><img src="https://img.youtube.com/vi/AhTNFO-ETe4/default.jpg"></a>
+                        <a href="https://www.youtube.com/embed/B3K90MF7mSg?list=PLTas59dAb68dNPXGkcE1FzSECebNc_vaT"
+                            target="tab"><img src="https://img.youtube.com/vi/B3K90MF7mSg/default.jpg"></a>
+                        <a href="https://www.youtube.com/embed/Bb4JwMPcenM?list=PLTas59dAb68dNPXGkcE1FzSECebNc_vaT"
+                            target="tab"><img src="https://img.youtube.com/vi/Bb4JwMPcenM/default.jpg"></a>
+                        <a href="https://www.youtube.com/embed/OAWBnr1-Bkg?list=PLTas59dAb68dNPXGkcE1FzSECebNc_vaT"
+                            target="tab"><img src="https://img.youtube.com/vi/OAWBnr1-Bkg/default.jpg"></a>
+                        <a href="https://www.youtube.com/embed/VG_jdhIoIQk?list=PLTas59dAb68dNPXGkcE1FzSECebNc_vaT"
+                            target="tab"><img src="https://img.youtube.com/vi/VG_jdhIoIQk/default.jpg"></a>
+                        <a href="https://www.youtube.com/embed/hHr_GGeC33c?list=PLTas59dAb68dNPXGkcE1FzSECebNc_vaT"
+                            target="tab"><img src="https://img.youtube.com/vi/hHr_GGeC33c/default.jpg"></a>
+                        <a href="https://www.youtube.com/embed/kpDPsKrqSik?list=PLTas59dAb68dNPXGkcE1FzSECebNc_vaT"
+                            target="tab"><img src="https://img.youtube.com/vi/kpDPsKrqSik/default.jpg"></a>
+                        <a href="https://www.youtube.com/embed/lGLcZjg2zhU?list=PLTas59dAb68dNPXGkcE1FzSECebNc_vaT"
+                            target="tab"><img src="https://img.youtube.com/vi/lGLcZjg2zhU/default.jpg"></a>
+                        <a href="https://www.youtube.com/embed/nd6zho_iu2s?list=PLTas59dAb68dNPXGkcE1FzSECebNc_vaT"
+                            target="tab"><img src="https://img.youtube.com/vi/nd6zho_iu2s/default.jpg"></a>
+                        <a href="https://www.youtube.com/embed/qvFY6Nbyuqw?list=PLTas59dAb68dNPXGkcE1FzSECebNc_vaT"
+                            target="tab"><img src="https://img.youtube.com/vi/qvFY6Nbyuqw/default.jpg"></a>
+                        <a href="https://www.youtube.com/embed/y5m7So1W_9s?list=PLTas59dAb68dNPXGkcE1FzSECebNc_vaT"
+                            target="tab"><img src="https://img.youtube.com/vi/y5m7So1W_9s/default.jpg"></a>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+
         <div class="col-12 mt-5 fw-bold font fs-3 text-center">
-            Our  Collaborations
+            Our Collaborations
         </div>
         <div class="col-12">
             <img src="{% static 'conference/triennial/2020/Conference-Logos1.png' %}" class="img-fluid">
