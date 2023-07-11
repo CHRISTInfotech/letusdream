@@ -219,7 +219,7 @@ Dream Band
                             <img src="{% static 'testimonial\AbhishikithGeorge.jpg' %}" alt="">
                         </div>
 
-                        <div class="t-bq-quote-jasper-base">
+                        <div class="t-bq-quote-jasper-base" id="testimonial">
 
                             <blockquote class="t-bq-quote-jasper-text" cite="Strugatsky Brothers">
                                 DREAMS Band is a group of budding musicians coming together for one vision and mission
@@ -277,7 +277,7 @@ Dream Band
                             <img src="{% static 'testimonial\IbinRigia.jpeg' %}" alt="">
                         </div>
 
-                        <div class="t-bq-quote-jasper-base">
+                        <div class="t-bq-quote-jasper-base" id="testimonial">
 
                             <blockquote class="t-bq-quote-jasper-text" cite="Strugatsky Brothers">
                                 Being part of the dreams band for me was a journey of self-discovery and holistic
@@ -319,9 +319,25 @@ Dream Band
         });
 
     });
+
+    $(document).ready(function() {
+        var maxLength = 250;
+
+        $('#testimonial blockquote').each(function() {
+            var content = $(this).text();
+            if (content.length > maxLength) {
+                var truncatedContent = content.substring(0, maxLength) + '...';
+                $(this).text(truncatedContent);
+                $(this).append('<a href="{% url "testimonials"  %}#dreamsBand " class="read-more text-decoration-none float-end">Read More</a>');
+            }
+        });
+
+        $('.testimonial').on('click', '.read-more', function() {
+            var fullContent = $(this).siblings('p').text();
+            $(this).siblings('blockquote').text(fullContent);
+            $(this).remove();
+        });
+    });
 </script>
 
-</body>
-
-</html>
 {% endblock %}

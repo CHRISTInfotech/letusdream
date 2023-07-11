@@ -435,7 +435,7 @@ RESEARCH
                                 <img src="{% static 'testimonial\PrakashGS.jpg' %}" alt="">
                             </div>
 
-                            <div class="t-bq-quote-jasper-base">
+                            <div class="t-bq-quote-jasper-base" id="testimonial">
 
                                 <blockquote class="t-bq-quote-jasper-text" cite="Strugatsky Brothers">
                                     DREAMS is a wonderful Afterschool intervention programme I have ever seen as it
@@ -463,5 +463,24 @@ RESEARCH
         </div>
     </div>
 </section>
+<script>
+    $(document).ready(function() {
+        var maxLength = 250;
 
+        $('#testimonial blockquote').each(function() {
+            var content = $(this).text();
+            if (content.length > maxLength) {
+                var truncatedContent = content.substring(0, maxLength) + '...';
+                $(this).text(truncatedContent);
+                $(this).append('<a href="{% url "testimonials"  %}#reasearch " class="read-more text-decoration-none float-end">Read More</a>');
+            }
+        });
+
+        $('.testimonial').on('click', '.read-more', function() {
+            var fullContent = $(this).siblings('p').text();
+            $(this).siblings('blockquote').text(fullContent);
+            $(this).remove();
+        });
+    });
+</script>
 {% endblock %}

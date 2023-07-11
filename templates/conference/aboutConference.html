@@ -294,7 +294,7 @@ Conferences
                             <img src="{% static 'testimonial\SMT photo.png' %}" alt="">
                         </div>
 
-                        <div class="t-bq-quote-jasper-base">
+                        <div class="t-bq-quote-jasper-base" id="testimonial">
 
                             <blockquote class="t-bq-quote-jasper-text" cite="Strugatsky Brothers">
                                 <b>"Never doubt that a small group of thoughtful, committed citizens can change the
@@ -352,7 +352,7 @@ Conferences
                             <img src="{% static 'testimonial\Phinu Jose.jpg' %}" alt="">
                         </div>
 
-                        <div class="t-bq-quote-jasper-base">
+                        <div class="t-bq-quote-jasper-base" id="testimonial">
 
                             <blockquote class="t-bq-quote-jasper-text" cite="Strugatsky Brothers">
                                 LUD Conference 2020 held completely Online from 20 November to 22 November was a
@@ -410,7 +410,7 @@ Conferences
                             <img src="{% static 'testimonial\CollettOBrien_Debbie2.jpg' %}" alt="">
                         </div>
 
-                        <div class="t-bq-quote-jasper-base">
+                        <div class="t-bq-quote-jasper-base" id="testimonial">
 
                             <blockquote class="t-bq-quote-jasper-text" cite="Strugatsky Brothers">
                                 In my role, I have worked with and helped coordinate the Let Us Dream Conference at
@@ -465,7 +465,7 @@ Conferences
                             <img src="{% static 'testimonial\Martin Klien.jpg' %}" alt="">
                         </div>
 
-                        <div class="t-bq-quote-jasper-base">
+                        <div class="t-bq-quote-jasper-base" id="testimonial" >
 
                             <blockquote class="t-bq-quote-jasper-text" cite="Strugatsky Brothers">
                                 60 years ago, on 18 August 1963, Martin Luther King gave his "I have a dream" speech at
@@ -492,6 +492,7 @@ Conferences
                                 beginning.
 
                             </blockquote>
+                            
                             <div class="t-bq-quote-jasper-meta">
                                 <div class="t-bq-quote-jasper-meta-info">
                                     <div class="t-bq-quote-jasper-author"><cite>Prof. Dr. Martin Klein
@@ -506,6 +507,31 @@ Conferences
                 </div>
             </section>
         </div>
+        <div class="col-md-12 end-0">
+            <a href="{% url 'testimonials' %}" class="end-0 text-decoration-none  float-end">Readmore..</a>
+        </div>
     </div>
 </div>
+
+<script>
+    $(document).ready(function() {
+        var maxLength = 250;
+
+        $('#testimonial blockquote').each(function() {
+            var content = $(this).text();
+            if (content.length > maxLength) {
+                var truncatedContent = content.substring(0, maxLength) + '...';
+                $(this).text(truncatedContent);
+                $(this).append('<a href="{% url "testimonials"  %}#conference " class="read-more text-decoration-none float-end">Read More</a>');
+            }
+        });
+
+        $('.testimonial').on('click', '.read-more', function() {
+            var fullContent = $(this).siblings('p').text();
+            $(this).siblings('blockquote').text(fullContent);
+            $(this).remove();
+        });
+    });
+</script>
+
 {% endblock %}
