@@ -43,9 +43,14 @@
 
 <body ondragstart="return false">
     <header class="menu-wrapper">
-        <nav class="navbar navbar-expand-lg" id="navbar">
+        <marquee width="100%" direction="left" class="fixed-top bg-white fw-bold text-success">
+            <a href="{% url 'tc-2023' %}" class="text-decoration-none">
+              Register for Let Us Dream Triennial International Conferences 2023, Held at CHRIST University Banglore from Nov 3 - 5.
+            </a>
+        </marquee>
+        <nav class="navbar navbar-expand-lg mt-4" id="navbar">
             <div class="container">
-                <a class="navbar-brand" href=" {% url 'main' %}">
+                <a class="navbar-brand" href=" {% url 'main' %}" class="mb-3">
                     <img src="{% static 'logo/let-us-dream-Empowering-Communities-01.png' %}" class="logo-img"
                         alt="LET US DREAM">
                 </a>
@@ -68,14 +73,12 @@
                                 <li> <a href="{% url 'announcement' %}" class="dropdown-item">Sustainability</a></li>
                                 <li> <a href="{% url 'media' %}" class="dropdown-item">Media</a></li>
                                 <li> <a href="{% url 'conatctUs' %}" class="dropdown-item">Contact Us</a></li>
-
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" data-bs-auto-close="outside"
                                 href="#">DREAMS</a>
                             <ul class="dropdown-menu shadow">
-
                                 <li> <a href="{% url 'dreams' 'program' %}" class="dropdown-item">DREAMS Program</a>
                                 </li>
                             </ul>
@@ -84,8 +87,6 @@
                             <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" data-bs-auto-close="outside"
                                 href="#">CLUBS</a>
                             <ul class="dropdown-menu shadow">
-
-
 
                                 <li>
                                     <a href="{% url 'dreams' 'proclub' %}" class="dropdown-item">Professional Club</a>
@@ -119,27 +120,22 @@
                                         Triennial Conferences
                                     </a>
                                 </li>
-
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" data-bs-auto-close="outside"
                                 href="#">PRODUCTIONS</a>
                             <ul class="dropdown-menu shadow">
-
-
                                 <li> <a href="{% url 'dreams' 'band' %}" class="dropdown-item">DREAMS Band</a></li>
-
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" data-bs-auto-close="outside"
                                 href="#">Courses</a>
                             <ul class="dropdown-menu shadow">
-                                <li> <a href="{% url 'yclp-course' %}" class="dropdown-item">Young Community Leadership Program Course</a></li>
+                                <li> <a href="{% url 'yclp-course' %}" class="dropdown-item">Young Community Leadership
+                                        Program Course</a></li>
                                 <li> <a href="{% url 'llfp' %}" class="dropdown-item">Fellowship</a></li>
-
-
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
@@ -216,15 +212,12 @@
 
         </nav>
     </header>
-
-
+    <div style="height: 40px!important;"></div>
     {% block content %}
 
     {% endblock content %}
 
-
     <footer>
-
         <div class="container">
             <div class="row">
                 <div class="col-md-12 col-xm-12 col-lg-12">
