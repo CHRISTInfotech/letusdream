@@ -315,7 +315,7 @@ def announcement(request):
     return render(request, 'aboutUs/announcement.html')
 
 def llfp(request):
-    return render(request, 'aboutUs/llfp.html')
+    return render(request, 'courses/llfp.html')
 
 
 def triennialConference2023(request):

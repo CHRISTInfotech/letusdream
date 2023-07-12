@@ -1,0 +1,769 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+D.R.E.A.M.S Program
+{% endblock %}
+
+{% block extraStyles %}
+<link rel="stylesheet" href="{% static 'css/dreamsProgram.css' %}" type="text/css">
+<link rel="stylesheet" href="{% static 'css/location.css' %}" type="text/css">
+
+{% endblock extraStyles %}
+
+{% block links %}
+{% endblock links %}
+
+{% block content %}
+<!-- section -->
+<nav aria-label="breadcrumb animated slideInDown" class="cus-breadcrumb">
+    <ol class="breadcrumb text-uppercase mb-0 bg-white">
+        <li class="breadcrumb-item"><a class="text-black text-decoration-none" href="{% url 'main' %}">Home</a></li>
+        <li class="breadcrumb-item"><a class="text-black text-decoration-none"
+                href="{% url 'announcement' %}#dreamProgram">announcements</a></li>
+        <li class="breadcrumb-item  active" aria-current="page">LLFP</li>
+    </ol>
+</nav>
+
+<!-- dreams logo -->
+<section class="projects-section bg-white" id="projects">
+    <!-- drams about -->
+    <div class="container-fluid pb-5">
+        <div class="container">
+            <h1 class=" fw-bold text-center text-green text-uppercase ">LEADERSHIP FELLOWSHIP PROGRAM
+            </h1>
+            <div class="row text-center mb-5 ">
+                <h4>Call for applications for Let Us dream Leadership Fellowship Program (LLFP)</h4>
+            </div>
+
+            <div class="text-center">
+                <a href="{% static '/courses/llfp/FellowshipBrochure23.pdf' %}" target="_blank">
+                    <button type="button" class="button"><span>Get Brochure</span></button>
+                </a>
+            </div>
+
+            <div class="row g-5 align-items-center">
+                <div class="col">
+                    <h1 class="program-h1 main-h1 text-uppercase  fw-bold text-green heading-h2 text-center mt-5">
+                        The future is young!
+                    </h1>
+                    <p class="mb-4">LLFP trains young leaders with aspiration, skills and competencies
+                        to address community needs.</p>
+                    <p class="mb-4">Fellows receive mentorship and training to identify and solve
+                        community development issues with actionable project plans.
+                    </p>
+                    <p class="mb-4">The fellowship promotes teamwork, skill development, and critical
+                        thinking, resulting in an empowered and sustainable community.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container px-4 px-lg-5">
+        <!-- dreams Project Row-->
+        <div class="row gx-0 mb-4 mb-lg-5 align-items-center ml-5 pl-5">
+
+            <div class="col align-items-center justify-content-center "><img class="img-fluid "
+                    src="{% static 'Aboutus/announcement/llfp/img2.png' %}" alt="..." />
+            </div>
+
+            <div class="col align-items-center justify-content-center">
+                <a href="https://forms.gle/iuWrKmQvK6icT4Z69" target="_blank">
+                    <button type="button" class="button"><span>Apply Now</span></button>
+                </a>
+            </div>
+
+            <div class="col align-items-center justify-content-center"><img class="img-fluid"
+                    src="{% static 'Aboutus/announcement/llfp/img1.png' %}" alt="..." />
+            </div>
+        </div>
+        <br />
+        <br />
+    </div>
+    <!--Application Process -->
+    <div class="custom-div">
+        <div class="container cus-con-1">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="content-implementation">
+                        <h1 class="program-h1 main-h1 text-uppercase  fw-bold text-green heading-h3 text-center mt-2">
+                            Application Process
+                        </h1>
+                        <h5 class="mb-5 fs-4">The application process for the Let Us Dream fellowship program is as
+                            follows:</h5>
+                        <p class="text-justify  fs-5">
+                            The application form is open,
+                        </p>
+                        <p class="text-justify  fs-5">
+                            To apply, please read the FAQs before submitting your application.
+                        </p>
+                        <p class="text-justify fs-5">
+                            Your written submission should include details about what makes your work unique and how
+                            it affects the community. Assume that we are not industry specialists and write simply
+                            for a broad audience.
+                        </p>
+                        <p class="text-justify fs-5">
+                            Only applications submitted in English are accepted.
+                        </p>
+                        <p class="text-justify fs-5">
+                            We will review all applications and notify applicants of their acceptance status.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-sm-12">
+                    <div class="image-implementation d-flex justify-content-center">
+                        <img src="{% static 'Aboutus/announcement/llfp/process.png' %}" alt=" Implementation">
+                    </div>
+                </div>
+            </div>
+            <br />
+            <br />
+        </div>
+    </div>
+    <!-- Eligibility -->
+    <div class="container cus-con-2">
+        <center>
+            <div class="row image-section mt-2">
+                <div class="col-lg-12">
+                    <h1 class="heading-h1 text-green heading-h3 text-center "><strong class="main-h1">
+                            Who should apply?
+                        </strong>
+                    </h1>
+                </div>
+            </div>
+        </center>
+        <div class="content-implementation">
+            <h4 class="mb-5">Eligibility requirements for applicants include:
+            </h4>
+            <p class="card-text text-start ">
+            <ul class="text-left text-start">
+                <li class="mb-2">Demonstrating a commitment to the community</li>
+                <li class="mb-2">Being aged between 18-26 at the start of the program (June 1, 2023)</li>
+                <li class="mb-2">Showing fluency in spoken and written English</li>
+                <li class="mb-2">Submitting a completed application on or before the submission date.</li>
+                <li class="mb-2">Having access to email and the internet and staying in constant contact with the
+                    Young Leaders Program mentor throughout the year </li>
+            </ul>
+            </p>
+        </div>
+        <br />
+        <br />
+    </div>
+    <!--benefit -->
+    <div class="custom-div">
+        <div class="container cus-con-1">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="content-implementation">
+
+                        <h1 class="program-h1 main-h1 text-uppercase  fw-bold text-green heading-h3 text-center mt-2">
+                            What will I benefit from the Fellowship Program?
+                        </h1>
+                        <p class="card-text text-start ">
+                        <ul class="text-left text-start">
+                            <li class="mb-2">Formulate a detailed action plan to address strategic and leadership
+                                challenges</li>
+                            <li class="mb-2">Discover the operational challenges of community leadership in the
+                                Let Us Dream intervention program </li>
+                            <li class="mb-2">Lead organizational change and inspire high-performing global teams
+                            </li>
+                            <li class="mb-2">Develop a personal leadership philosophy and presence that reflects
+                                greater confidence and capabilities </li>
+                            <li class="mb-2">Build a lasting network with accomplished peers from diverse
+                                functions, regions, and countries </li>
+                            <li class="mb-2">Make invaluable professional connections </li>
+                            <li class="mb-2">Advance their career with knowledge, fellowship certification, and
+                                recognition. </li>
+                            <li class="mb-2">Take the first step towards becoming a member of the global Let Us
+                                Dream alumni community.</li>
+                        </ul>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <br />
+            <br />
+        </div>
+    </div>
+    <div class="container dreams-tab ">
+        <div class="row">
+            <div class="col-lg-12">
+                <!-- Tabs navs -->
+                <div class="container py-5">
+
+
+                    <div class="p-5 bg-white rounded shadow mb-5">
+                        <!-- Lined tabs-->
+                        <ul id="myTab2" role="tablist"
+                            class="nav nav-tabs nav-pills with-arrow lined flex-column flex-sm-row text-center">
+                            <li class="nav-item flex-sm-fill">
+                                <a id="program-tab" data-toggle="tab" href="#faq" role="tab" aria-controls="program"
+                                    aria-selected="true"
+                                    class="nav-link text-uppercase fw-bold font-weight-bold mr-sm-3 rounded-0 active">
+                                    <h5 class="fw-bold text-h3">FAQ</h5>
+                                </a>
+                            </li>
+                            <li class="nav-item flex-sm-fill">
+                                <a id="band-tab" data-toggle="tab" href="#tips" role="tab" aria-controls="band"
+                                    aria-selected="false"
+                                    class="nav-link text-uppercase fw-bold font-weight-bold mr-sm-3 rounded-0">
+                                    <h5 class="fw-bold text-h3">TIPS FOR APPLYING</h5>
+                                </a>
+                            </li>
+                            <li class="nav-item flex-sm-fill">
+                                <a id="proclub-tab" data-toggle="tab" href="#selectprocess" role="tab"
+                                    aria-controls="proclub" aria-selected="false"
+                                    class="nav-link text-uppercase fw-bold font-weight-bold rounded-0">
+                                    <h5 class="fw-bold text-h3">SELECTION PROCESS</h5>
+                                </a>
+                            </li>
+                        </ul>
+                        <div id="myTab2Content" class="tab-content">
+                            <div id="faq" role="tabpanel" aria-labelledby="program-tab"
+                                class="tab-pane fade px-4 py-5 show active">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-lg-12 col-sm-12 col-md-12 p-4">
+                                            <h5>Questions? Learn more about our program</h5>
+                                            <p class="leade font-italic  justify-content">
+                                                The Let Us DREAM (LUD) Fellowship program is an opportunity for
+                                                young leaders to gain the skills and experience necessary to
+                                                generate transformative social change. The program focuses on
+                                                developing leadership, mentoring, organizational, and
+                                                entrepreneurial skills through community-based initiatives.
+                                            </p>
+
+                                        </div>
+                                        <div class="col-lg-12 mt-5">
+                                            <div class="accordion accordion-flush" id="accordionFlushExample">
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header" id="flush-headingOne">
+                                                        <button class="accordion-button collapsed btn btn-link"
+                                                            type="button" data-bs-toggle="collapse"
+                                                            data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                                            aria-controls="flush-collapseOne">
+                                                            1. Why should you apply to be a Fellow?
+                                                        </button>
+                                                    </h2>
+                                                    <div id="flush-collapseOne" class="accordion-collapse collapse"
+                                                        aria-labelledby="flush-headingOne"
+                                                        data-bs-parent="#accordionFlushExample">
+                                                        <div class="accordion-body card-body">The LUD Fellowship
+                                                            program can advance your professional career by
+                                                            providing personal and professional development
+                                                            opportunities, including professional coaching,
+                                                            educational programming, peer support, public speaking
+                                                            and media training, and practical experience to
+                                                            implement projects.</div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header" id="flush-headingTwo">
+                                                        <button class="accordion-button collapsed btn btn-link"
+                                                            type="button" data-bs-toggle="collapse"
+                                                            data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                                                            aria-controls="flush-collapseTwo">
+                                                            2. What are we looking for in LUD fellows?
+                                                        </button>
+                                                    </h2>
+                                                    <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                                                        aria-labelledby="flush-headingTwo"
+                                                        data-bs-parent="#accordionFlushExample">
+                                                        <div class="card-body accordion-body">
+                                                            We are searching for individuals who have a track record
+                                                            of producing great work in their fields and who have
+                                                            outstanding moral integrity. Students from all
+                                                            disciplines are welcome to apply, as long as they are
+                                                            collegial learners.
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header" id="flush-headingThree">
+                                                        <button class="accordion-button collapsed btn btn-link"
+                                                            type="button" data-bs-toggle="collapse"
+                                                            data-bs-target="#flush-collapseThree" aria-expanded="false"
+                                                            aria-controls="flush-collapseThree">
+                                                            3. What are the core principles of the LUD Fellowship
+                                                            Program?
+                                                        </button>
+                                                    </h2>
+                                                    <div id="flush-collapseThree" class="accordion-collapse collapse"
+                                                        aria-labelledby="flush-headingThree"
+                                                        data-bs-parent="#accordionFlushExample">
+                                                        <div class="accordion-body card-body"> The program is based
+                                                            on the belief in a global family, where each individual
+                                                            and society works interdependently to create a
+                                                            sustainable world. The program is composed of people who
+                                                            share this core value from all diversities around the
+                                                            world to support, guide, and lead this vision of
+                                                            holistic development in the growth of individuals and
+                                                            local communities.
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header card-header" id="flush-headingFour">
+                                                        <button class="accordion-button collapsed btn btn-link"
+                                                            type="button" data-bs-toggle="collapse"
+                                                            data-bs-target="#flush-collapseFour" aria-expanded="false"
+                                                            aria-controls="flush-collapseFour">
+                                                            4. Can the fellowship be held on a part-time basis?
+                                                        </button>
+                                                    </h2>
+                                                    <div id="flush-collapseFour" class="accordion-collapse collapse"
+                                                        aria-labelledby="flush-headingFour"
+                                                        data-bs-parent="#accordionFlushExample">
+                                                        <div class="accordion-body card-body">Yes, the fellowship is
+                                                            structured on a monthly total working hours basis, which
+                                                            allows for flexibility and does not interfere with daily
+                                                            working and academic responsibilities.</div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header card-header" id="flush-headingFive">
+                                                        <button class="accordion-button collapsed btn btn-link"
+                                                            type="button" data-bs-toggle="collapse"
+                                                            data-bs-target="#flush-collapseFive" aria-expanded="false"
+                                                            aria-controls="flush-collapseFive">
+                                                            5. Are there research opportunities available through
+                                                            the fellowship?
+                                                        </button>
+                                                    </h2>
+                                                    <div id="flush-collapseFive" class="accordion-collapse collapse"
+                                                        aria-labelledby="flush-headingFive"
+                                                        data-bs-parent="#accordionFlushExample">
+                                                        <div class="accordion-body card-body">The fellowship
+                                                            provides opportunities for research practices. The
+                                                            research team of Let Us DREAM is committed to the
+                                                            scientific evaluation of programs and their impact on
+                                                            participants and beneficiaries. The multidisciplinary
+                                                            team undertakes high-quality research that contributes
+                                                            to the overall improvement and efficacy of LUD.
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header card-header" id="flush-headingSix">
+                                                        <button class="accordion-button collapsed btn btn-link"
+                                                            type="button" data-bs-toggle="collapse"
+                                                            data-bs-target="#flush-collapseSix" aria-expanded="false"
+                                                            aria-controls="flush-collapseSix">
+                                                            6. Are fellows encouraged to present at local or
+                                                            national conferences?
+                                                        </button>
+                                                    </h2>
+                                                    <div id="flush-collapseSix" class="accordion-collapse collapse"
+                                                        aria-labelledby="flush-headingSix"
+                                                        data-bs-parent="#accordionFlushExample">
+                                                        <div class="accordion-body card-body">Yes, the community
+                                                            engagement platform of Let Us Dream encourages
+                                                            presenting at national and international conferences,
+                                                            which can provide better networking opportunities for
+                                                            individuals and the LUD community
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header card-header" id="flush-headingSeven">
+                                                        <button class="accordion-button collapsed btn btn-link"
+                                                            type="button" data-bs-toggle="collapse"
+                                                            data-bs-target="#flush-collapseSeven" aria-expanded="false"
+                                                            aria-controls="flush-collapseSeven">
+                                                            7. What is the duration of the fellowship program?
+                                                        </button>
+                                                    </h2>
+                                                    <div id="flush-collapseSeven" class="accordion-collapse collapse"
+                                                        aria-labelledby="flush-headingSeven"
+                                                        data-bs-parent="#accordionFlushExample">
+                                                        <div class="accordion-body card-body">The fellowship program
+                                                            is a year-long program.
+
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header card-header" id="flush-headingEight">
+                                                        <button class="accordion-button collapsed btn btn-link"
+                                                            type="button" data-bs-toggle="collapse"
+                                                            data-bs-target="#flush-collapseEight" aria-expanded="false"
+                                                            aria-controls="flush-collapseEight">
+                                                            8. Are there any specific locations where the fellowship
+                                                            program is offered?
+                                                        </button>
+                                                    </h2>
+                                                    <div id="flush-collapseEight" class="accordion-collapse collapse"
+                                                        aria-labelledby="flush-headingEight"
+                                                        data-bs-parent="#accordionFlushExample">
+                                                        <div class="accordion-body card-body">
+                                                            The fellowship program is open to applicants from all
+                                                            around the world. However, the location of the
+                                                            fellowship will be determined by the community-based
+                                                            initiative that the fellow is working on.
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header card-header" id="flush-headingNine">
+                                                        <button class="accordion-button collapsed btn btn-link"
+                                                            type="button" data-bs-toggle="collapse"
+                                                            data-bs-target="#flush-collapseNine" aria-expanded="false"
+                                                            aria-controls="flush-collapseNine">
+                                                            9. Are there any financial benefits provided to the
+                                                            fellows?
+                                                        </button>
+                                                    </h2>
+                                                    <div id="flush-collapseNine" class="accordion-collapse collapse"
+                                                        aria-labelledby="flush-headingNine"
+                                                        data-bs-parent="#accordionFlushExample">
+                                                        <div class="accordion-body card-body">
+                                                            The fellowship program provides a stipend to cover
+                                                            expenses related to the fellowship program, including
+                                                            travel, accommodation, and other related costs. However,
+                                                            the program does not cover the cost of living expenses,
+                                                            as the fellowship is a non funded program.
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header card-header" id="flush-headingTen">
+                                                        <button class="accordion-button collapsed btn btn-link"
+                                                            type="button" data-bs-toggle="collapse"
+                                                            data-bs-target="#flush-collapseTen" aria-expanded="false"
+                                                            aria-controls="flush-collapseTen">
+                                                            10. Is there an age limit to apply for the fellowship
+                                                            program?
+                                                        </button>
+                                                    </h2>
+                                                    <div id="flush-collapseTen" class="accordion-collapse collapse"
+                                                        aria-labelledby="flush-headingTen"
+                                                        data-bs-parent="#accordionFlushExample">
+                                                        <div class="accordion-body card-body">
+                                                            The fellowship program is open to aspirants aged 18-26,
+                                                            who desire to effect meaningful community change in
+                                                            health, education or social activity, while growing in
+                                                            their ability to lead effectively.
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header card-header" id="flush-headingEleven">
+                                                        <button class="accordion-button collapsed btn btn-link"
+                                                            type="button" data-bs-toggle="collapse"
+                                                            data-bs-target="#flush-collapseEleven" aria-expanded="false"
+                                                            aria-controls="flush-collapseEleven">
+                                                            11. What portion of the Fellowship is not funded?
+                                                        </button>
+                                                    </h2>
+                                                    <div id="flush-collapseEleven" class="accordion-collapse collapse"
+                                                        aria-labelledby="flush-headingEleven"
+                                                        data-bs-parent="#accordionFlushExample">
+                                                        <div class="accordion-body card-body">
+                                                            The travel expenses will not be taken into
+                                                            consideration, however the accommodation will be
+                                                            provided for LUD Fellows.
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--  -->
+                                        </div>
+
+                                    </div>
+                                </div>
+
+
+
+
+                            </div>
+                            <div id="tips" role="tabpanel" aria-labelledby="band-tab" class="tab-pane fade px-4 py-5">
+
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-lg-12 mt-5">
+                                            <div class="accordion accordion-flush" id="accordionFlushExample1">
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header" id="flush-headingoneOne">
+                                                        <button class="accordion-button collapsed btn btn-link"
+                                                            type="button" data-bs-toggle="collapse"
+                                                            data-bs-target="#flush-collapseoneOne" aria-expanded="false"
+                                                            aria-controls="flush-collapseoneOne">
+                                                            1. Gather support letters and transcripts
+                                                        </button>
+                                                    </h2>
+                                                    <div id="flush-collapseoneOne" class="accordion-collapse collapse"
+                                                        aria-labelledby="flush-headingoneOne"
+                                                        data-bs-parent="#accordionFlushExample1">
+                                                        <div class="accordion-body card-body">As part of the
+                                                            application process, you may be required to submit
+                                                            letters of support or transcripts. Be sure to gather
+                                                            these materials well in advance of the application
+                                                            deadline, and check that they meet the requirements
+                                                            outlined in the application.</div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header" id="flush-headingoneTwo">
+                                                        <button class="accordion-button collapsed btn btn-link"
+                                                            type="button" data-bs-toggle="collapse"
+                                                            data-bs-target="#flush-collapseoneTwo" aria-expanded="false"
+                                                            aria-controls="flush-collapseoneTwo">
+                                                            2. Proofread and edit your application
+                                                        </button>
+                                                    </h2>
+                                                    <div id="flush-collapseoneTwo" class="accordion-collapse collapse"
+                                                        aria-labelledby="flush-headingoneTwo"
+                                                        data-bs-parent="#accordionFlushExample1">
+                                                        <div class="card-body accordion-body">
+                                                            Before submitting your application, be sure to proofread
+                                                            and edit it for grammar, spelling, and formatting
+                                                            errors. It's also a good idea to have someone else
+                                                            review your application for feedback and suggestions.
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header" id="flush-headingoneThree">
+                                                        <button class="accordion-button collapsed btn btn-link"
+                                                            type="button" data-bs-toggle="collapse"
+                                                            data-bs-target="#flush-collapseoneThree"
+                                                            aria-expanded="false"
+                                                            aria-controls="flush-collapseoneThree">
+                                                            3. Submit your application on time
+                                                        </button>
+                                                    </h2>
+                                                    <div id="flush-collapseoneThree" class="accordion-collapse collapse"
+                                                        aria-labelledby="flush-headingoneThree"
+                                                        data-bs-parent="#accordionFlushExample1">
+                                                        <div class="accordion-body card-body"> Be sure to submit
+                                                            your application by the deadline given. Late
+                                                            applications will not be accepted.
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header card-header" id="flush-headingoneFour">
+                                                        <button class="accordion-button collapsed btn btn-link"
+                                                            type="button" data-bs-toggle="collapse"
+                                                            data-bs-target="#flush-collapseoneFour"
+                                                            aria-expanded="false" aria-controls="flush-collapseoneFour">
+                                                            4. Follow up with the program
+                                                        </button>
+                                                    </h2>
+                                                    <div id="flush-collapseoneFour" class="accordion-collapse collapse"
+                                                        aria-labelledby="flush-headingoneFour"
+                                                        data-bs-parent="#accordionFlushExample1">
+                                                        <div class="accordion-body card-body">After submitting your
+                                                            application, it's a good idea to follow up with the
+                                                            program to ensure that your application was received and
+                                                            to answer any questions they may have.
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header card-header" id="flush-headingoneFive">
+                                                        <button class="accordion-button collapsed btn btn-link"
+                                                            type="button" data-bs-toggle="collapse"
+                                                            data-bs-target="#flush-collapseoneFive"
+                                                            aria-expanded="false" aria-controls="flush-collapseoneFive">
+                                                            5. Prepare for the next steps
+                                                        </button>
+                                                    </h2>
+                                                    <div id="flush-collapseoneFive" class="accordion-collapse collapse"
+                                                        aria-labelledby="flush-headingoneFive"
+                                                        data-bs-parent="#accordionFlushExample1">
+                                                        <div class="accordion-body card-body"> If your application
+                                                            is accepted, you'll need to prepare for the next steps
+                                                            in the process, such as interviews or assessments. Be
+                                                            sure to keep in touch with the program and stay informed
+                                                            of the timeline and requirements for the next steps.
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--  -->
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div id="selectprocess" role="tabpanel" aria-labelledby="proclub-tab"
+                                class="tab-pane fade px-4 py-5">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-lg-7 col-sm-12 mt-4 col-md-12 p-4">
+                                            <p class="justify-content align-content-center">
+                                                The selection of fellows is done after intensive fact-checking,
+                                                reference checks, and consultation with experts from various fields
+                                                and the Let Us Dream core leadership team. The details provided in
+                                                the application are important to our selection process. We carefully
+                                                consider each application, so before submitting yours, we suggest
+                                                reading our tips for applying link which provides a checklist for
+                                                things we will be looking for when we review your application. We
+                                                choose Fellows based on their potential and the positive social
+                                                impact of their proposed work.
+                                            </p>
+
+
+                                        </div>
+                                        <div class="col-lg-5 col-sm-12 col-md-12">
+
+                                            <img src="{% static 'locations/proclub.png' %}" alt="mannanam" height="400"
+                                                width="400" class="w-100 h-auto">
+
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <!-- End lined tabs -->
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!--good lud -->
+    <div class="custom-div">
+        <div class="container cus-con-1">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="content-implementation">
+                        <h1 class="program-h1 main-h1 text-uppercase  fw-bold text-green heading-h3 text-center mt-2">
+                            What makes a good LUD Fellowship application?
+                        </h1>
+                        <p class="card-text text-start ">
+                        <ul class="text-left text-start">
+                            <li class="mb-2">The applicant has done something that has created a positive
+                                impact in society with some track records.</li>
+                            <li class="mb">Potential applicants are often in the early stages of their careers or
+                                college students. </li>
+                            <li class="mb">Potential applicants are those who are working for empowering
+                                others holistically and impacting society for sustainable
+                                improvement.
+                            </li>
+                            <li class="mb">They are working with a good amount of originality and authenticity
+                                and based on some of the core values of LUD such as inclusion,
+                                equity, benevolence, collaboration, transformative and service
+                                leadership, talent enhancement and collective growth etc. </li>
+                        </ul>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <br />
+            <br />
+        </div>
+    </div>
+
+    <!-- selected -->
+    <div class="container cus-con-2">
+        <center>
+            <div class="row image-section mt-2">
+                <div class="col-lg-12">
+                    <h1 class="heading-h1 text-green heading-h3 text-center "><strong class="main-h1">
+                            Selected LUD Fellows will be
+                        </strong>
+                    </h1>
+                </div>
+            </div>
+        </center>
+        <div class="content-implementation">
+            <p class="card-text text-start ">
+            <ul class="text-left text-start">
+                <li class="mb">Part of the global community and strategic leadership
+                    teams of LUD</li>
+                <li class="mb">Connect to a diverse network of professionals for support
+                    and resources.</li>
+                <li class="mb">Shadowing opportunities with leaders and project
+                    implementation meetings for a year.</li>
+                <li class="mb">Participation in monthly conversation meetings and
+                    leadership committees for local and international
+                    conferences.</li>
+                <li class="mb">Contribution to research and evaluation team. </li>
+                <li class="mb">Opportunity to attend Residential leadership training
+                    program in Bangalore. </li>
+            </ul>
+            </p>
+        </div>
+        <br />
+        <br />
+    </div>
+
+    <div style="background-color: #1c2331">
+        <br />
+        <div class="container">
+            <div class="footer-cta pt-5 pb-5 ">
+                <div class="row text-white">
+                    <div class="col">
+                        <div class="single-org">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div class="cta-text">
+                                <h4>Find us</h4>
+                                <span>Christ (Deemed to be University),
+                                    Central Campus, Hosur road,
+                                    Bengaluru- 560096</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="single-green">
+                            <i class="fas fa-phone"></i>
+                            <div class="cta-text">
+                                <h4>Call us</h4>
+                                <span>Devika M: +91 9538627538</span> <br>
+                                <span>Tiana Denny: +91 8971430086</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="single-yellow">
+                            <i class="far fa-envelope-open"></i>
+                            <div class="cta-text">
+                                <h4>Mail us</h4>
+                                <span>fellowship@letusdream.org</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-xl-12 col-lg-5 center">
+                <div class="featured-text text-center text-lg-center ">
+                    <a href="https://forms.gle/iuWrKmQvK6icT4Z69" target="_blank"><button type="button"
+                            class="button"><span>Apply Now</span></button></a>
+                    <br />
+                    <br />
+                    <br />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5 mb-5">
+        <object data="{% static '/courses/llfp/FellowshipBrochure23.pdf' %}" type="application/pdf" width="100%"
+            height="900px">
+            <p>Unable to display PDF file. <a href="{% static '/courses/llfp/FellowshipBrochure23.pdf' %}">Download</a>
+                instead.
+            </p>
+        </object>
+    </div>
+
+</section>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- MDB -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.4.0/mdb.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+{% endblock %}
