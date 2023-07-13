@@ -283,6 +283,35 @@ HOME
   </div>
 </div> -->
 
+<script>
+  $(document).ready(function () {
 
+      [...document.querySelectorAll('.first-column')].map(column => {
+          column.style.setProperty('--animation', 'slide');
+          column.style.setProperty('height', '200%');
+          column.innerHTML = column.innerHTML + column.innerHTML;
+      });
+
+  });
+
+  $(document).ready(function() {
+      var maxLength = 250;
+
+      $('#testimonial blockquote').each(function() {
+          var content = $(this).text();
+          if (content.length > maxLength) {
+              var truncatedContent = content.substring(0, maxLength) + '...';
+              $(this).text(truncatedContent);
+              $(this).append('<a href="{% url "testimonials"  %}#home " class="read-more text-decoration-none float-end">Read More</a>');
+          }
+      });
+
+      $('.testimonial').on('click', '.read-more', function() {
+          var fullContent = $(this).siblings('p').text();
+          $(this).siblings('blockquote').text(fullContent);
+          $(this).remove();
+      });
+  });
+</script>
 
 {% endblock content %}
