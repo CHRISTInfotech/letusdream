@@ -12,9 +12,11 @@ BANGALORE
 {% block links %}
 
 
-<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css' type="text/css">
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css'
+    type="text/css">
 <!-- Font Awesome -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" type="text/css"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"
+    type="text/css" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <!-- MDB -->
 {% endblock links %}
@@ -34,7 +36,8 @@ BANGALORE
             <li class="breadcrumb-item  active" aria-current="page">BANGALORE</li>
         </ol>
     </nav>
-    <h1 class="mb-4  fw-bold text-center fs-1 text-green text-uppercase heading-h3 mt-5">BANGALORE, Karnataka, India</h1>
+    <h1 class="mb-4  fw-bold text-center fs-1 text-green text-uppercase heading-h3 mt-5">BANGALORE, Karnataka, India
+    </h1>
     <div class="container dreams-tab ">
         <div class="row">
             <div class="col-lg-12">
@@ -73,7 +76,7 @@ BANGALORE
                                 class="tab-pane fade px-4 py-5 show active">
                                 <div class="container-fluid">
                                     <div class="row">
-                                        <div class="col-lg-12 col-sm-12 col-md-12 p-4">
+                                        <div class="col-lg-6 col-sm-6 col-md-6 p-4">
                                             <p class="leade font-italic  justify-content">
                                                 The DREAMS chapter in Bengaluru was introduced in February 2017 under
                                                 the initiative taken by Ms. Mihika Rajesh, along with her friends
@@ -124,7 +127,7 @@ BANGALORE
 
                                         </div>
                                         <div
-                                            class="col-lg-5 col-sm-12 col-md-12 d-flex justify-content-center align-content-start flex-wrap">
+                                            class="col-lg-6 col-sm-6 col-md-6 d-flex justify-content-center align-content-start flex-wrap">
 
                                             <img src="{% static 'locations/bangalore/BANGLORE.png' %}" alt="mannanam"
                                                 height="400" width="400" class="pt-5 w-100 h-auto">
@@ -137,11 +140,18 @@ BANGALORE
                                             <div>
                                                 <h4 class="mt-3 mb-3 mr-3 font-italic fw-semibold mt-5">Leadership:</h4>
                                                 <p class="leade font-italic text-left">
-                                                    Dr. Anuradha Sathiyaseelan, Dr Ameersha S,<br>  Dr Sathiyashelan
-                                                    B, Ms.Sajina
-                                                    begum
+                                                    Dr. Anuradha Sathiyaseelan
                                                 </p>
-                                                <p class="leade font-italic ">
+                                                <p class="leade font-italic text-left">
+                                                    Dr Ameersha S
+                                                </p>
+                                                <p class="leade font-italic text-left">
+                                                    Dr Sathiyashelan B
+                                                </p>
+                                                <p class="leade font-italic text-left">
+                                                    Ms.Sajina Begum
+                                                </p>
+                                                <p class="leade font-italic text-left">
                                                     Prof. Rosline Gomas (Community Lead)
                                                 </p>
                                                 <p class="leade font-italic text-left">
@@ -149,7 +159,7 @@ BANGALORE
                                                 </p>
                                                 <p class="leade font-italic text-left">
                                                     Ms Avanthi (Community Coordinator)
-                                                 </p>
+                                                </p>
                                             </div>
                                         </div>
 
@@ -271,9 +281,22 @@ BANGALORE
 
     <div class="container">
         <div class="row">
-            
+
             {% include 'partials/_countDetails.html' %}
-           
+
+
+            <div class="row m-auto mt-5" id="recentEvents">
+                <div class="col-12 fw-boldee">
+                    <h1 class="text-center text-green mb-5">
+                        RECENT EVENTS
+                    </h1>
+                </div>
+                <div class="col-6">
+                    <img src="{% static 'locations/bangalore/events/GUFTHAGU23.jpg' %}" alt="" class="img-fluid">
+                </div>
+            </div>
+
+
             <div class="col-lg-12 m-5 p-5">
                 <!-- Modal gallery -->
                 <section class="">
