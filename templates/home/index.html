@@ -184,11 +184,22 @@ HOME
         <div class="col-md-6 on-hover">
           <div class="card border-0 ">
             <a href="{% url 'tc-2023' %}">
-              <img class="img-fluid card-img-top feed-area " src="{% static 'home/Lud2023.jpg' %}"" alt="wrappixel kit"></a>
+              <img class="img-fluid card-img-top feed-area " src="{% static 'home/latestEvents/Lud2023.jpg' %}"" alt="wrappixel kit"></a>
             <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
               Nov<span class="d-block">3 - 5</span></div>
             <h5 class="font-weight-medium mt-4 text-center"><a href="{% url 'tc-2023' %}" class="text-decoration-none link">
               Triennial Conferences 2023
+            </a></h5>
+          </div>
+        </div>
+        <div class="col-md-6 on-hover">
+          <div class="card border-0 ">
+            <a href="{% url 'locations' 'bangalore' %}#recentEvents">
+              <img class="img-fluid card-img-top feed-area " src="{% static 'home/latestEvents/GUFTHAGU23.jpg' %}"" alt="wrappixel kit"></a>
+            <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
+              May<span class="d-block">29</span></div>
+            <h5 class="font-weight-medium mt-4 text-center"><a href="{% url 'locations' 'bangalore' %}" class="text-decoration-none link">
+              GUFTHAGU - CHRIST University Banglore
             </a></h5>
           </div>
         </div>
