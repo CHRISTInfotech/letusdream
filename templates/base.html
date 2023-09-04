@@ -25,9 +25,12 @@
 
     {% endblock links %}
     <!-- CSS only -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous"
-        type="text/css">
+        type="text/css"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
     <link href="{% static  'css/style.css' %}" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="{% static 'css/view_testimonials.css' %}" type="text/css">
     <link href="{% static  'css/header.css' %}" rel="stylesheet" type="text/css" />
@@ -228,8 +231,8 @@
                         <li><a href="https://www.instagram.com/letus.dream/"><i class="fab fa-instagram"></i></a></li>
                         <li><a href="https://www.youtube.com/channel/UCNw5z9O3LZ7OJlySigI9dlw/featured"><i
                                     class="fab fa-youtube"></i></a></li>
-                        <li><a href="https://www.facebook.com/ludreams.ludreams/"><i
-                                    class="fab fa-facebook"></i></a></li>
+                        <li><a href="https://www.facebook.com/ludreams.ludreams/"><i class="fab fa-facebook"></i></a>
+                        </li>
                         <li><a href="https://www.linkedin.com/company/let-us-dream/"><i class="fab fa-linkedin"></i></a>
                         </li>
                         <li><a href="https://twitter.com/LetUsDream5?s=08"><i class="fab fa-twitter"></i></a>
@@ -274,73 +277,76 @@
         </div>
     </footer>
 
-</body>
-<script>
+    <script>
 
-    $(document).ready(function () {
-        $('.dropdown-submenu a.dropdown-toggle').on("click", function (e) {
-            $(this).next('ul').toggle();
-            e.stopPropagation();
-            e.preventDefault();
+        $(document).ready(function () {
+            $('.dropdown-submenu a.dropdown-toggle').on("click", function (e) {
+                $(this).next('ul').toggle();
+                e.stopPropagation();
+                e.preventDefault();
+            });
         });
-    });
 
-    $(window).on('scroll', function () {
+        $(window).on('scroll', function () {
 
-        if ($(window).scrollTop()) {
-            $('#navbar').addClass('black');
+            if ($(window).scrollTop()) {
+                $('#navbar').addClass('black');
+            }
+            else {
+                $('#navbar').removeClass('black');
+            }
+        })
+        // JavaScript functions to open and close the modal
+        function openModal() {
+            var modal = document.getElementById("myModal");
+            modal.style.display = "block";
         }
-        else {
-            $('#navbar').removeClass('black');
+
+        function openModal1() {
+            var modal = document.getElementById("myModal1");
+            modal.style.display = "block";
         }
-    })
-    // JavaScript functions to open and close the modal
-    function openModal() {
-        var modal = document.getElementById("myModal");
-        modal.style.display = "block";
-    }
+        function openModal2() {
+            var modal = document.getElementById("myModal2");
+            modal.style.display = "block";
+        }
+        function openModal3() {
+            var modal = document.getElementById("myModal3");
+            modal.style.display = "block";
+        }
 
-    function openModal1() {
-        var modal = document.getElementById("myModal1");
-        modal.style.display = "block";
-    }
-    function openModal2() {
-        var modal = document.getElementById("myModal2");
-        modal.style.display = "block";
-    }
-    function openModal3() {
-        var modal = document.getElementById("myModal3");
-        modal.style.display = "block";
-    }
-
-    function closeModal() {
-        var modal = document.getElementById("myModal");
-        modal.style.display = "none";
-    }
-    function closeModal1() {
-        var modal = document.getElementById("myModal1");
-        modal.style.display = "none";
-    }
-    function closeModal2() {
-        var modal = document.getElementById("myModal2");
-        modal.style.display = "none";
-    }
-    function closeModal3() {
-        var modal = document.getElementById("myModal3");
-        modal.style.display = "none";
-    }
+        function closeModal() {
+            var modal = document.getElementById("myModal");
+            modal.style.display = "none";
+        }
+        function closeModal1() {
+            var modal = document.getElementById("myModal1");
+            modal.style.display = "none";
+        }
+        function closeModal2() {
+            var modal = document.getElementById("myModal2");
+            modal.style.display = "none";
+        }
+        function closeModal3() {
+            var modal = document.getElementById("myModal3");
+            modal.style.display = "none";
+        }
 
 
 
-</script>
-<!-- intsgram feed script -->
-<script src='https://widgets.sociablekit.com/instagram-feed/widget.js' async defer></script>
+    </script>
+    <!-- intsgram feed script -->
+    <script src='https://widgets.sociablekit.com/instagram-feed/widget.js' async defer></script>
 
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
-    crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
     integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
-    crossorigin="anonymous"></script>
+    crossorigin="anonymous"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+</body>
 
 </html>
