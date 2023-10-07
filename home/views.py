@@ -15,15 +15,12 @@ from home.models import ConferenceRegistration, Visitor
 # Create your views here.
 
 
-
-
-
 def index(request):
 
     try:
-        visitorObj=Visitor.objects.all()
+        visitorObj = Visitor.objects.all()
 
-        visitor_country=get_visitor_country(request)
+        visitor_country = get_visitor_country(request)
         # print(visitor_country)
         country_name = dict(countries)[visitor_country]
         # print(country_name)
@@ -33,24 +30,24 @@ def index(request):
             visitor.save()
         except Visitor.DoesNotExist:
             # If the visitor's country does not exist in the database, create a new entry
-            visitor = Visitor(country=country_name, count=1,code=visitor_country)
+            visitor = Visitor(country=country_name,
+                              count=1, code=visitor_country)
         visitor.save()
-        return render(request, 'home/index.html',{"visitor":visitorObj})
+        return render(request, 'home/index.html', {"visitor": visitorObj})
 
     except:
 
-        return render(request, 'home/index.html',{"visitor":visitorObj})
-
+        return render(request, 'home/index.html', {"visitor": visitorObj})
 
 
 def get_visitor_country(request):
     # Specify the path to the GeoIP2 database file
 
     ip_address = request.META.get('REMOTE_ADDR')
-    api_key = 'at_SjzTo0u3XOvJceUDT6klhGk7TRUCN'  # Replace with your GeoIPify API key
+    # Replace with your GeoIPify API key
+    api_key = 'at_SjzTo0u3XOvJceUDT6klhGk7TRUCN'
 
     url = f'https://geoipify.whoisxmlapi.com/api/v1?apiKey={api_key}&ip={ip_address}'
-
 
     url = f'https://geoipify.whoisxmlapi.com/api/v1?apiKey={api_key}&ip={ip_address}'
 
@@ -63,13 +60,16 @@ def get_visitor_country(request):
 
     return country
 
+
 def aboutUs(request):
     return render(request, 'aboutUs/aboutUs.html')
+
 
 def login(request):
     if request.method == "POST":
         return render(request, "AdminPanel/home.html")
-    
+
+
 def media(request):
     return render(request, 'aboutUs/media.html')
 
@@ -101,11 +101,14 @@ def allConferences(request):
 def triennialConference(request):
     return render(request, 'conference/triennialConference.html')
 
+
 def triennialConference2020(request):
-    return render(request, 'conference/triennialConference/triennialConference2020.html') 
+    return render(request, 'conference/triennialConference/triennialConference2020.html')
+
 
 def conference2023(request):
     return render(request, 'conference/conference2023.html')
+
 
 def bangalorechristuniversity(request):
     return render(request, 'conference/christ-university-bangalore.html')
@@ -121,6 +124,7 @@ def cuT(request):
 
 def jncaB(request):
     return render(request, 'conference/jncaB.html')
+
 
 def withoutdata_2023(request):
     return render(request, 'conference/triennialConference/withoutdata.html')
@@ -209,7 +213,7 @@ def publications(request):
 
 
 def registration_user(request):
-    
+
     if request.method == "POST":
         name = request.POST.get('name')
         email = request.POST.get('email')
@@ -232,25 +236,25 @@ def registration_user(request):
         partmsg = request.POST.get('partmsg')
 
         confreg = ConferenceRegistration.objects.create(
-        name = name ,
-        email = email , 
-        phone = phone , 
-        interest = inter , 
-        user_type = utype , 
-        st_addr = staddr , 
-        # st_phone = stphone , 
-        st_grade = stgrade , 
-        st_Pname = ptname , 
-        st_Pnum = ptphone , 
-        st_Pemail = ptemail , 
-        st_Paddr = ptaddr , 
-        vl_type = volt , 
-        vl_about = intro , 
-        vl_expert = expertise , 
-        # vl_phone = vlphone , 
-        ptr_addr = partaddr , 
-        # ptr_phone= partphone , 
-        ptr_msg = partmsg)
+            name=name,
+            email=email,
+            phone=phone,
+            interest=inter,
+            user_type=utype,
+            st_addr=staddr,
+            # st_phone = stphone ,
+            st_grade=stgrade,
+            st_Pname=ptname,
+            st_Pnum=ptphone,
+            st_Pemail=ptemail,
+            st_Paddr=ptaddr,
+            vl_type=volt,
+            vl_about=intro,
+            vl_expert=expertise,
+            # vl_phone = vlphone ,
+            ptr_addr=partaddr,
+            # ptr_phone= partphone ,
+            ptr_msg=partmsg)
         confreg.save()
         print(confreg)
         return redirect('registration_user')
@@ -267,24 +271,27 @@ def calender(request):
 def downloadcsv(request):
     response = HttpResponse(content_type='text/csv')
     response['Content-Disposition'] = 'attachment; filename="participant_list.csv"'
-    confreg = ConferenceRegistration.objects.filter(user_type='Paticipant').all()
+    confreg = ConferenceRegistration.objects.filter(
+        user_type='Paticipant').all()
     # confreg = ConferenceRegistration.objects.all()
 
     print(confreg)
     writer = csv.writer(response)
 
-    writer.writerow(['Date','Name', 'Email ID', 'Phone No', 'Interest', 'Student Address',
+    writer.writerow(['Date', 'Name', 'Email ID', 'Phone No', 'Interest', 'Student Address',
                     'Student Grade', 'Parent Name', 'Parent Mobile', 'Parent Email ID',
-                    'Parent Address', 'User Type'])
+                     'Parent Address', 'User Type'])
     for i in confreg:
         writer.writerow([i.date, i.name, i.email, i.phone, i.interest, i.st_addr, i.st_grade,
                          i.st_Pname, i.st_Pnum, i.st_Pemail, i.st_Paddr, i.user_type])
     return response
 
+
 def downloadvoltcsv(request):
     response = HttpResponse(content_type='text/csv')
     response['Content-Disposition'] = 'attachment; filename="vounteer_list.csv"'
-    confreg = ConferenceRegistration.objects.filter(user_type='Volunteer').all()
+    confreg = ConferenceRegistration.objects.filter(
+        user_type='Volunteer').all()
 
     writer = csv.writer(response)
 
@@ -294,6 +301,7 @@ def downloadvoltcsv(request):
         writer.writerow([i.date, i.name, i.email, i.phone, i.interest, i.vl_type,
                          i.vl_about, i.vl_expert, i.user_type])
     return response
+
 
 def downloadpartcsv(request):
     response = HttpResponse(content_type='text/csv')
@@ -305,25 +313,34 @@ def downloadpartcsv(request):
     writer.writerow(['Date', 'Name', 'Email ID', 'Phone No', 'Interest', 'Address',
                     'Message', 'User Type'])
     for i in confreg:
-        writer.writerow([i.date, i.name, i.email, i.phone, i.interest, i.ptr_addr, i.ptr_msg, i.user_type])
+        writer.writerow([i.date, i.name, i.email, i.phone,
+                        i.interest, i.ptr_addr, i.ptr_msg, i.user_type])
     return response
+
 
 def testimonials(request):
     return render(request, 'home/view_testimonials.html')
 
+
 def announcement(request):
     return render(request, 'aboutUs/announcement.html')
+
 
 def llfp(request):
     return render(request, 'courses/llfp.html')
 
 
 def triennialConference2023(request):
+    context = {
+        'bgcolor': '#274C7D',
+    }
     return render(request,
-                  'conference/triennialConference/triennialConference2023.html')
+                  'conference/triennialConference/triennialConference2023.html', context)
+
 
 def contactUs(request):
-    return render(request,'aboutUs/contactus.html')
+    return render(request, 'aboutUs/contactus.html')
+
 
 def conversation_club(request):
-    return render(request,'clubs/conversation_club.html')
+    return render(request, 'clubs/conversation_club.html')
