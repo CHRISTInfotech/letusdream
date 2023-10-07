@@ -44,17 +44,17 @@
 
 </head>
 
-<body ondragstart="return false">
+<body ondragstart="return false" {% if bgcolor %}style="background-color:{{bgcolor}}!important; color:white !important" {% endif %}>
     <header class="menu-wrapper">
-        <marquee width="100%" direction="left" class="fixed-top marquee" scrollamount="12"
-            style="background-color: #d3f2e9;">
-            <a href="{% url 'tc-2023' %}" class="text-decoration-none text-dark"> <i class="fa fa-arrow-right"
-                    aria-hidden="true"></i>
-                Register for Let Us Dream Triennial International Conference 2023, Held at CHRIST University Banglore
-                from November 3 - 5.
+        <marquee width="100%" direction="left" class="fixed-top marquee" scrollamount="12" 
+        {% if bgcolor %}style="background-color:{{bgcolor}}!important;" {%else%} style="background-color: #d3f2e9;" {% endif %}>
+            <a href="{% url 'tc-2023' %}" class="text-decoration-none"
+            {% if bgcolor %}style="color: white;" {%else%} style="color: black;" {% endif %}> 
+                <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                Register here for the Let Us Dream Triennial International Conference 2023.
             </a>
         </marquee>
-        <nav class="navbar navbar-expand-lg mt-4" id="navbar">
+        <nav class="navbar navbar-expand-lg mt-4" id="navbar" {% if bgcolor %}style="background-color:{{bgcolor}}!important;" {% endif %}>
             <div class="container">
                 <a class="navbar-brand" href=" {% url 'main' %}" class="mb-3">
                     <img src="{% static 'logo/let-us-dream-Empowering-Communities-01.png' %}" class="logo-img"
@@ -69,10 +69,13 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class=" navbar-nav ml-auto">
                         <li class="nav-item active">
-                            <a class="nav-link" href="{% url 'main' %}">Home <span class="sr-only">(current)</span></a>
+                            <a class="nav-link"
+                            {% if bgcolor %}style="color:white !important" {% endif %}
+                             href="{% url 'main' %}">Home <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                            {% if bgcolor %}style="color:white !important" {% endif %}
                                 href="#">About Us</a>
                             <ul class="dropdown-menu shadow">
                                 <li> <a href="{% url 'about-us' %}" class="dropdown-item">Overview</a></li>
@@ -83,6 +86,7 @@
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                            {% if bgcolor %}style="color:white !important" {% endif %}
                                 href="#">DREAMS</a>
                             <ul class="dropdown-menu shadow">
                                 <li> <a href="{% url 'dreams' 'program' %}" class="dropdown-item">DREAMS Program</a>
@@ -91,6 +95,7 @@
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                            {% if bgcolor %}style="color:white !important" {% endif %}
                                 href="#">CLUBS</a>
                             <ul class="dropdown-menu shadow">
 
@@ -109,6 +114,7 @@
 
                         <li class="nav-item dropdown active">
                             <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                            {% if bgcolor %}style="color:white !important" {% endif %}
                                 href="#">
                                 Conferences
                             </a>
@@ -130,6 +136,7 @@
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                            {% if bgcolor %}style="color:white !important" {% endif %}
                                 href="#">PRODUCTIONS</a>
                             <ul class="dropdown-menu shadow">
                                 <li> <a href="{% url 'dreams' 'band' %}" class="dropdown-item">DREAMS Band</a></li>
@@ -137,6 +144,7 @@
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                            {% if bgcolor %}style="color:white !important" {% endif %}
                                 href="#">Courses</a>
                             <ul class="dropdown-menu shadow">
                                 <li> <a href="{% url 'yclp-course' %}" class="dropdown-item">Young Community Leadership
@@ -146,6 +154,7 @@
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                            {% if bgcolor %}style="color:white !important" {% endif %}
                                 href="#">Research</a>
                             <ul class="dropdown-menu shadow">
 
@@ -156,6 +165,7 @@
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                            {% if bgcolor %}style="color:white !important" {% endif %}
                                 href="#">Locations</a>
                             <ul class="dropdown-menu shadow">
                                 <li class="dropstart">
@@ -259,19 +269,9 @@
                 <li>
                     <a class="text-decoration-none" href="{% url 'conatctUs' %}">Contact</a>
                 </li>
-                <!-- <li>
-                <a class="text-decoration-none" href="{% url 'signup' %}">Login</a>
-            </li> -->
             </ul>
         </div>
-        <div class="md-12 xm-6">
-            <!-- <a class="text-decoration-none text-white" href="">Terms&Conditions</a> | <a
-                class="text-decoration-none text-white" href="">Privacy Policy</a> | <a
-                class="text-decoration-none text-white" href="">API Policy</a> | <a
-                class="text-decoration-none text-white" href="">Cookies</a> -->
-        </div>
-
-        <div class="col-md-12 ml-5 col-xm-6 justify-content-center">
+        <div class="col-md-12 col-xm-6 justify-content-center">
             Designed, Developed and Maintained by <a class="text-decoration-none text-white"
                 href="https://christinfotech.org/" target="_blank">CHRIST Infotech</a>
         </div>

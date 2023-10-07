@@ -135,12 +135,13 @@
 .gallery {
   display: flex;
   flex-flow: wrap;
-  border: solid rgb(240, 240, 240);
+  /* border: solid rgb(240, 240, 240); */
 }
 .gallery div {
   flex: 150px;
   position: relative;
   text-align: center;
+  border-radius: 5px;
 }
 .gallery div:nth-of-type(1) {
   flex: 10000 1 300px;
