@@ -335,7 +335,7 @@ def triennialConference2023(request):
         'bgcolor': '#274C7D',
     }
     return render(request,
-                  'conference/triennialConference/triennialConference2023.html', context)
+                  'conference/triennialConference/conference2023.html', context)
 
 
 def contactUs(request):
