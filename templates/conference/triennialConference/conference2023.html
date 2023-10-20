@@ -10,14 +10,43 @@ Triennial Conference 2023
 <link rel="stylesheet" href="{% static 'css/triennialConference2023.css' %}" type="text/css">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
 <link rel="stylesheet" href="{% static 'css/stannes-college.css' %}" type="text/css">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300&display=swap"
+<link
+    href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;700&family=Playfair+Display:wght@700;900&display=swap"
     rel="stylesheet">
 <style>
     .cardBorder {
         border-left: 3px solid #0c52a1 !important;
         padding-left: 8px;
+    }
+
+    @font-face {
+        font-family: "myFont";
+        src: url('LoveloBlack.ttf') format('ttf'),
+            url('Lovelo-Black.woff') format('woff'), url('Lovelo-Black.woff2') format('woff2');
+    }
+
+    .heading {
+        font-family: "Playfair Display", serif !important;
+        font-weight: 900;
+
+    }
+
+    .sub-heading {
+        font-family: "Playfair Display", serif !important;
+        font-weight: 700;
+    }
+
+    .small-heading {
+        font-family: 'Josefin Sans', sans-serif;
+        font-weight: 500;
+    }
+
+    .normal-text {
+        font-family: 'Josefin Sans', sans-serif;
+        font-weight: 400;
     }
 
     /* transition-duration: 0.5s, 0.5s; */
@@ -58,15 +87,17 @@ Triennial Conference 2023
     <div class="row m-auto p-auto mb-5">
         <div class="col-md-8 mt-5 ">
 
-            <div class="display-4 font fw-bolder text-h3" style="color: #92ed26 !important;">
+            <div class="display-4  fw-bolder text-h3 myFont heading"
+                style="color: #92ed26 !important; letter-spacing: 0px;">
                 LET US DREAM
             </div>
-            <div class="font fw-bold mt-2" style="font-size: 42px;">Triennial International Conference 2023</div>
-            <div class="mt-4" style="font-size: x-large; font-style: italic;">
+            <div class=" fw-bold mt-2 sub-heading" style="font-size: 42px;">Triennial International Conference 2023
+            </div>
+            <div class="mt-4 small-heading " style="font-size: x-large; font-style: italic;">
                 Empowered Communities: <br> Strengthening Connections For a Sustainable Future
             </div>
 
-            <div class="fs-4  text-font mt-4 mb-2">CHRIST University, Bangalore | November 3 - 5, 2023</div>
+            <div class="fs-4 small-heading  t mt-4 mb-2">CHRIST University, Bangalore | November 3 - 5, 2023</div>
 
             <a href="https://www.dlearners.in/letusdream/" target="_blank" class="mt-5 btn btn-outline-light mb-5">
                 Register Here for Free
@@ -198,369 +229,1406 @@ Triennial Conference 2023
 
         </div>
     </div>
-    <div class="container-fluid p-5">
+</div>
 
-        <div class="row d-flex align-items-center justify-content-center">
-            <div class="col-12 fw-bold font fs-2 text-center mb-3" style="color: #274C7D;">
-                Conference Schedule
-                
-            </div>
-            <div class="col-md-4 m-auto mt-5">
-                <div class="col-md-12 m-auto p-3" style="background-color: #274C7D;min-height: 1061px;">
-                    <div class="col-12 fw-bold font fs-4 text-center mb-3">
-                        Day One <br />
-                        <small class="fw-normal">November 3, 2023</small>
-                    </div>
-                    <div class="col-12 row mb-3 mt-5">
-                        <div class="col-6 d-flex justify-content-end">09.30 AM to 10.30 AM</div>
-                        <div class="col">Inaugural Session</div>
-                    </div>
-                    <div class="col-12 row mb-3">
-                        <div class="col-6 d-flex justify-content-start align-items-end flex-column">10.30 AM to 11.00 AM
 
-                            <img src="{% static 'conference/triennial/2023/Profiles/Hope_LeNoir.jpg' %}"
-                                class="img-fluid rounded-circle mt-1" height="65px" width="65px" alt="">
-                        </div>
-                        <div class="col">
-                            <b>
-                                Keynote Address
-                            </b> <br />
-                            Ms. Hope Lenoir <br />
-                            <i>
-                                Founder and Owner <br />
-                                Rise and Fly (C), LLC
-                            </i>
-                        </div>
-                    </div>
-                    <div class="col-12 row mb-3">
-                        <div class="col-6 d-flex justify-content-end">11.15 AM to 11.30 AM</div>
-                        <div class="col">
-                            Break | Networking
-                        </div>
-                    </div>
-                    <div class="col-12 row mb-3">
-                        <div class="col-6 d-flex justify-content-end">11:30 AM - 12:30 PM</div>
-                        <div class="col">
-                            Panel Discussions
-                        </div>
-                    </div>
-                    <div class="col-12 row mb-3">
-                        <div class="col-6 d-flex justify-content-end">12:30 PM - 01:30 PM</div>
-                        <div class="col">
-                            Lunch | Stall Visit
-                        </div>
-                    </div>
-                    <div class="col-12 row mb-3">
-                        <div class="col-6 d-flex justify-content-start align-items-end flex-column">01:30 PM - 03:00 PM
+<div class="container mb-5">
 
-                            <img src="{% static 'conference/triennial/2023/Profiles/VenuDoddavarapu.jpg' %}"
-                                class="img-fluid rounded-circle mt-1" height="65px" width="65px" alt="">
-                        </div>
-                        <div class="col">
-                            <b>
-                                Immersive Learning
-                            </b> <br />
-                            Mr. Venu Doddavarapu <br />
-                            <i>
-                                Experiential Learning Designer,Consultant Facilitator & Trainer
-                            </i>
-                        </div>
-                    </div>
-                    <div class="col-12 row mb-3">
-                        <div class="col-6 d-flex justify-content-end">03:00 PM - 3:30 PM</div>
-                        <div class="col">
-                            Break | Networking
-                        </div>
-                    </div>
-                    <div class="col-12 row mb-3">
-                        <div class="col-6 d-flex justify-content-end">03:30 PM - 04:00 PM</div>
-                        <div class="col">
-                            Changemakers
-                        </div>
-                    </div>
-                    <div class="col-12 row mb-3">
-                        <div class="col-6 d-flex justify-content-start align-items-end flex-column">04:00 PM - 04:20 PM
 
-                            <img src="{% static 'conference/triennial/2023/Profiles/GaryGuice.png' %}"
-                                class="img-fluid rounded-circle mt-1" height="65px" width="65px" alt="">
+    <ul class="nav nav-tabs m-4" id="myTab" role="tablist"
+        style=" background-color: #274C7D!important;    border-bottom: var(--bs-nav-tabs-border-width) solid #274C7D;">
+        <li class="nav-item" role="presentation">
+            <button class="nav-link active " id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane"
+                type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true"
+                style="color: #92ed26; background-color: #274C7D!important;">Day One - November 3, 2023</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link " id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane"
+                type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false"
+                style="color: #92ed26;background-color: #274C7D!important;">Day Two - November 4, 2023</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link " id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane"
+                type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false"
+                style="color: #92ed26;background-color: #274C7D!important;">Day Three - November 5, 2023</button>
+        </li>
+
+    </ul>
+    <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab"
+            tabindex="0">
+            <div class="row d-flex align-items-center justify-content-center">
+                <div class="col-12 fw-bold heading fs-2  text-white text-center mb-3"
+                    style="color: #92ed26 !important;">
+                    <small class="small-heading text-white">Day One - November 3, 2023</small>
+                    <br>
+                    Education Track
+                    <h4></h4>
+                </div>
+                <div class="col-md-12">
+                    <div class="row m-auto mt-3">
+                        <div class="col-md-4 mb-3 d-flex flex-column align-items-center justify-content-center">
+                            <p class="sub-heading " style="color: #62ce23;"> Welcome Message</p>
+                            <div class="d-flex align-items-center mx-2">
+                                <img src="{% static 'conference/triennial/2023/Profiles/frjosecc.jpg' %}" height="70px"
+                                    width="70px" alt="" class="img-fluid rounded-circle">
+                                <div class="mx-2">
+                                    <div class="small-heading fw-bold">REV DR Joseph CC</div>
+                                    <small class="normal-text">
+                                        Vice Chancellor, <br> Christ
+                                        (Deemed to be University)
+                                    </small>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col">
-                            <b>
-                                LUD Expressions
-                            </b> <br />
-                            Mr. Gary Guice <br />
-                            <i>
-                                Police Officer, Director of DREAMS Intervention Program in Bastrop, Louisiana, USA
-                            </i>
+                        <div class="col-md-4 mb-3 d-flex flex-column align-items-center justify-content-center">
+                            <p class="sub-heading " style="color: #62ce23;">Inaugural Address</p>
+                            <div class="d-flex align-items-center mx-2">
+                                <img src="{% static 'conference/triennial/2023/Profiles/donalad-e-hall.jpg' %}"
+                                    height="70px" width="70px" alt="" class="img-fluid rounded-circle">
+                                <div class="mx-2">
+                                    <div class="small-heading fw-bold">Dr Donald E Hall</div>
+                                    <small class="normal-text">
+                                        Provost & Executive Vice
+                                        President <br> for Academic
+                                        Affairs, <br> Binghamton
+                                        University
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 mb-3 d-flex flex-column align-items-center justify-content-center">
+                            <p class="sub-heading " style="color: #62ce23;">Keynote Speaker</p>
+                            <div class="d-flex align-items-center mx-2">
+                                <img src="{% static 'conference/triennial/2023/Profiles/Hope_LeNoir.jpg' %}"
+                                    height="70px" width="70px" alt="" class="img-fluid rounded-circle">
+                                <div class="mx-2">
+                                    <div class="small-heading fw-bold">Ms Hope Lenoir</div>
+                                    <small class="normal-text">
+                                        Founder and Owner
+                                        Rise and Fly, <br> USA
+                                    </small>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-12 row mb-3">
-                        <div class="col-6 d-flex justify-content-start align-items-end flex-column">04:20 PM - 04:30 PM
-                            <img src="{% static 'conference/triennial/2023/Profiles/NishaJoseph.jpg' %}"
-                                class="img-fluid rounded-circle mt-1" height="65px" width="65px" alt="">
+                    <div class="row m-auto mt-3">
+                        <div class="col-md-4 mb-3 d-flex flex-column align-items-center justify-content-center">
+                            <p class="sub-heading " style="color: #62ce23;">Immersive Learning</p>
+                            <div class="d-flex align-items-center mx-2">
+                                <img src="{% static 'conference/triennial/2023/Profiles/VenuDoddavarapu.jpg' %}" alt=""
+                                    height="70px" width="70px" class="img-fluid rounded-circle">
+                                <div class="mx-2">
+                                    <div class="small-heading fw-bold">Mr Venu Doddavarapu</div>
+                                    <small class="normal-text">
+                                        Experiential Learning Designer <br>
+                                        Consultant Facilitator & Trainer
+                                    </small>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col">
-                            <i>
-                                Closing Address
-                            </i> <br />
-                            Ms. Nisha Joseph <br />
-                            <i>
-                                Principal, St. Anne's Degree College, India
-                            </i>
+                        <div class="col-md-4 mb-3 d-flex flex-column align-items-center justify-content-center">
+                            <p class="sub-heading " style="color: #62ce23;">LUD Expression</p>
+                            <div class="d-flex align-items-center mx-2">
+                                <img src="{% static 'conference/triennial/2023/Profiles/GaryGuice.png' %}" alt=""
+                                    height="70px" width="70px" class="img-fluid rounded-circle">
+                                <div class="mx-2">
+                                    <div class="small-heading fw-bold">Mr Gary Guice</div>
+                                    <small class="normal-text">
+                                        Police Officer, Director of DREAMS <br>
+                                        Project in Bastrop, Louisiana, USA
+                                    </small>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-12 row mb-3">
-                        <div class="col-6 d-flex justify-content-end">04:30 PM - 05:00 PM</div>
-                        <div class="col">
-                            Networking | Stall Visit
-                        </div>
-                    </div>
-                    <div class="col-12 row mb-3">
-                        <div class="col-6 d-flex justify-content-end">05:00 PM - 06:00 PM</div>
-                        <div class="col">
-                            Cultural Team
+                        <div class="col-md-4 mb-3 d-flex flex-column align-items-center justify-content-center">
+                            <p class="sub-heading " style="color: #62ce23;">Closing Address</p>
+                            <div class="d-flex align-items-center mx-2">
+                                <img src="{% static 'conference/triennial/2023/Profiles/DrAnilJosephPinto.jpg' %}"
+                                    alt="" height="70px" width="70px" class="img-fluid rounded-circle">
+                                <div class="mx-2">
+                                    <div class="small-heading fw-bold">Dr Anil Joseph Pinto</div>
+                                    <small class="normal-text">
+                                        Registrar, <br> Christ (Deemed
+                                        to be University)
+                                    </small>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <div class="row mt-4">
+                    <div class="col-12 small-heading fs-5  mb-5 text-center mb-3" style="color: #62ce23;">
+
+                        PANEL 1 - Re-Imagining Global Education Policies, Reforms and Innovations
+
+                    </div>
+                    <div class="col-md-3 mb-3 d-flex flex-column align-items-center justify-content-center text-center">
+
+
+                        <img src="{% static 'conference/triennial/2023/Profiles/GaryGuice.png' %}" alt="" height="70px"
+                            width="70px" class="img-fluid rounded-circle mb-3">
+
+                        <div class="small-heading fw-bold">Mr Vikram Bhatt</div>
+                        <span class="normal-text">(MODERATOR)</span>
+                        <small class="normal-text">
+                            Joint Director, the Bangalore <br>
+                            International Centre (BIC)
+                        </small>
+
+
+                    </div>
+                    <div class="col-md-3 mb-3 d-flex flex-column align-items-center justify-content-center text-center">
+
+
+                        <img src="{% static 'conference/triennial/2023/Profiles/GaryGuice.png' %}" alt="" height="70px"
+                            width="70px" class="img-fluid rounded-circle mb-3">
+
+                        <div class="small-heading fw-bold">Mr Anustup Nayak</div>
+                        <span class="normal-text">(PANELIST)</span>
+                        <small class="normal-text">
+                            Project Director, Central Square <br>
+                            Foundation
+                        </small>
+
+
+                    </div>
+                    <div class="col-md-3 mb-3 d-flex flex-column align-items-center justify-content-start text-center">
+
+
+                        <img src="{% static 'conference/triennial/2023/Profiles/GaryGuice.png' %}" alt="" height="70px"
+                            width="70px" class="img-fluid rounded-circle mb-3">
+
+                        <div class="small-heading fw-bold">Ms Juanita Rea</div>
+                        <span class="normal-text">(PANELIST)</span>
+                        <small class="normal-text">
+                            Founder, CEO - eduSOIL
+                        </small>
+
+
+                    </div>
+                    <div class="col-md-3 mb-3 d-flex flex-column align-items-center justify-content-center text-center">
+
+
+                        <img src="{% static 'conference/triennial/2023/Profiles/GaryGuice.png' %}" alt="" height="70px"
+                            width="70px" class="img-fluid rounded-circle mb-3">
+
+                        <div class="small-heading fw-bold">Ms Khushboo Awasthi</div>
+                        <span class="normal-text">(PANELIST)</span>
+                        <small class="normal-text">
+                            Founder, ShikshaLokam and <br>
+                            Mantra4Change
+                        </small>
+
+
+                    </div>
+                </div>
+                <div class="row mt-4 justify-content-center">
+                    <div class="col-12  fs-5 small-heading text-center mb-5" style="color: #62ce23;">
+
+                        PANEL 2 - Equalized: Embrace Diversity, Empower Minds in Education
+
+                    </div>
+                    <div class="col-md-3 mb-3 d-flex flex-column align-items-center justify-content-center text-center">
+
+
+                        <img src="{% static 'conference/triennial/2023/Profiles/GaryGuice.png' %}" alt="" height="70px"
+                            width="70px" class="img-fluid rounded-circle mb-3">
+
+                        <div class="small-heading fw-bold">Dr Michelle
+                            McCormack</div>
+                        <span class="normal-text">(MODERATOR)</span>
+                        <small class="normal-text">
+                            CEO, Drake Music NI
+                        </small>
+
+
+                    </div>
+                    <div class="col-md-3 mb-3 d-flex flex-column align-items-center justify-content-center text-center">
+
+
+                        <img src="{% static 'conference/triennial/2023/Profiles/GaryGuice.png' %}" alt="" height="70px"
+                            width="70px" class="img-fluid rounded-circle mb-3">
+
+                        <div class="small-heading fw-bold">Dr Jennifer
+                            Gillis</div>
+                        <span class="normal-text">(PANELIST)</span>
+                        <small class="normal-text">
+                            Professor, Psychology, <br>
+                            Binghamton University
+                        </small>
+
+
+                    </div>
+                    <div class="col-md-3 mb-3 d-flex flex-column align-items-center justify-content-center text-center">
+
+
+                        <img src="{% static 'conference/triennial/2023/Profiles/GaryGuice.png' %}" alt="" height="70px"
+                            width="70px" class="img-fluid rounded-circle mb-3">
+
+                        <div class="small-heading fw-bold">Dr Suzanne
+                            Mynette Mayo</div>
+                        <span class="normal-text">(PANELIST)</span>
+                        <small class="normal-text">
+                            Lecturer, Grambling State <br>
+                            University
+                        </small>
+
+
+                    </div>
+                    <div class="col-md-3 mb-3 d-flex flex-column align-items-center justify-content-center text-center">
+
+
+                        <img src="{% static 'conference/triennial/2023/Profiles/GaryGuice.png' %}" alt="" height="70px"
+                            width="70px" class="img-fluid rounded-circle mb-3">
+
+                        <div class="small-heading fw-bold">Ms Sneha A</div>
+                        <span class="normal-text">(PANELIST)</span>
+                        <small class="normal-text">
+                            Undergraduate Student, <br>
+                            Christ (Deemed to be
+                            University)
+                        </small>
+
+
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-12 small-heading mb-5 fs-5  text-center mb-3" style="color: #62ce23;">
+
+                        PANEL 3 - Storytellers Of Change: Scripting A Resilient Story For Tomorrow
+
+                    </div>
+                    <div class="col-md-3 mb-3 d-flex flex-column align-items-center justify-content-center text-center">
+
+
+                        <img src="{% static 'conference/triennial/2023/Profiles/GaryGuice.png' %}" alt="" height="70px"
+                            width="70px" class="img-fluid rounded-circle mb-3">
+
+                        <div class="small-heading fw-bold">Ms Lauretta
+                            Philip</div>
+                        <span class="normal-text">(MODERATOR)</span>
+                        <small class="normal-text">
+                            Head of Inclusion at <br>
+                            GEMS Modern
+                            Academy
+                        </small>
+
+
+                    </div>
+                    <div class="col-md-3 mb-3 d-flex flex-column align-items-center justify-content-center text-center">
+
+
+                        <img src="{% static 'conference/triennial/2023/Profiles/GaryGuice.png' %}" alt="" height="70px"
+                            width="70px" class="img-fluid rounded-circle mb-3">
+
+                        <div class="small-heading fw-bold">Ms Dianne
+                            Malone</div>
+                        <span class="normal-text">(PANELIST)</span>
+                        <small class="normal-text">
+                            Associate Dean, Memphis College of Urban <br>
+                            Theological Studies
+                        </small>
+
+
+                    </div>
+                    <div class="col-md-3 mb-3 d-flex flex-column align-items-center justify-content-center text-center">
+
+
+                        <img src="{% static 'conference/triennial/2023/Profiles/GaryGuice.png' %}" alt="" height="70px"
+                            width="70px" class="img-fluid rounded-circle mb-3">
+
+                        <div class="small-heading fw-bold">Mr Tarsh
+                            Williams</div>
+                        <span class="normal-text">(PANELIST)</span>
+                        <small class="normal-text">
+                            Founder/Director, <br>
+                            TrueNature Learning &
+                            Development
+                        </small>
+
+
+                    </div>
+                    <div class="col-md-3 mb-3 d-flex flex-column align-items-center justify-content-center text-center">
+
+
+                        <img src="{% static 'conference/triennial/2023/Profiles/GaryGuice.png' %}" alt="" height="70px"
+                            width="70px" class="img-fluid rounded-circle mb-3">
+
+                        <div class="small-heading fw-bold">Ms Tasqeen
+                            Macchiwalla</div>
+                        <span class="normal-text">(PANELIST)</span>
+                        <small class="normal-text">
+                            General Manager, <br>
+                            Azim Premji Foundation
+                        </small>
+
+
+                    </div>
+                </div>
             </div>
-            <div class="col-md-4 m-auto mt-5">
-                <div class="col-md-12 m-auto p-3" style="background-color: #274C7D;min-height: 1061px;">
-                    <div class="col-12 fw-bold font fs-4 text-center mb-3">
-                        Day Two <br />
-                        <small class="fw-normal">November 4, 2023</small>
-                    </div>
-                    <div class="col-12 row mb-3 mt-5">
-                        <div class="col-6 d-flex justify-content-start align-items-end flex-column">10:00 AM - 10:15 AM
-                            <img src="{% static 'conference/triennial/2023/Profiles/AngelaCurl.jpg' %}"
-                                class="img-fluid rounded-circle mt-1" height="65px" width="65px" alt="">
+
+        </div>
+        <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+            <div class="row d-flex align-items-center justify-content-center">
+                <div class="col-12 fw-bold heading fs-2  text-white text-center mb-3"
+                    style="color: #92ed26 !important;">
+                    <small class="small-heading text-white">Day Two - November 4, 2023</small>
+                    <br>
+                    HEALTH TRACK
+                    <h4></h4>
+                </div>
+                <div class="col-md-12">
+                    <div class="row m-auto mt-3">
+                        <div class="col-md-4 mb-3 d-flex flex-column align-items-center justify-content-center">
+                            <p class="sub-heading " style="color: #62ce23;"> Welcome Message</p>
+                            <div class="d-flex align-items-center mx-2">
+                                <img src="{% static 'conference/triennial/2023/Profiles/frjosecc.jpg' %}" height="70px"
+                                    width="70px" alt="" class="img-fluid rounded-circle">
+                                <div class="mx-2">
+                                    <div class="small-heading fw-bold">Dr Angela Curl</div>
+                                    <small class="normal-text">
+                                        MSW Program Director & <br> Associate
+                                        Professor <br> Miami University, Ohio, USA
+                                    </small>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col">
-                            <b>
-                                Welcome Message
-                            </b><br />
-                            Dr Angela Curl <br />
-                            <i>
-                                Miami University, Ohio, USA
-                            </i>
+                        <div class="col-md-4 mb-3 d-flex flex-column align-items-center justify-content-center">
+                            <p class="sub-heading " style="color: #62ce23;">Inaugural Address</p>
+                            <div class="d-flex align-items-center mx-2">
+                                <img src="{% static 'conference/triennial/2023/Profiles/donalad-e-hall.jpg' %}"
+                                    height="70px" width="70px" alt="" class="img-fluid rounded-circle">
+                                <div class="mx-2">
+                                    <div class="small-heading fw-bold">Dr Donna R. Hedgepath</div>
+                                    <small class="normal-text">
+                                        Provost/Vice President <br> for Academic Affairs, <br>
+                                        Campbellsville University, USA
+                                    </small>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-12 row mb-3">
-                        <div class="col-6 d-flex justify-content-start align-items-end flex-column">10:15 AM - 10:30 AM
-                            <img src="{% static 'conference/triennial/2023/Profiles/Dr.-Donna-Hedgepath.png' %}"
-                                class="img-fluid rounded-circle mt-1" height="65px" width="65px" alt="">
-                        </div>
-                        <div class="col">
-                            <b>
-                                Inagural address
-                            </b><br />
-                            Dr. Donna R. Hedgepath
-                            <i>
-                                Provost/Vice President for Academic Affairs, Campbellsville University, USA
-                            </i>
-                        </div>
-                    </div>
-                    <div class="col-12 row mb-3">
-                        <div class="col-6 d-flex justify-content-start align-items-end flex-column">10:30 AM - 11:15 AM
-                            <img src="{% static 'conference/triennial/2023/Profiles/sunita.png' %}"
-                                class="img-fluid rounded-circle mt-1" height="65px" width="65px" alt="">
-                        </div>
-                        <div class="col">
-                            <b>
-                                Keynote Address
-                            </b><br />
-                            Dr. Sunita Maheswari <br>
-                            <i>
-                                Chief Dreamer & Loop Closer, Telerad Group
-                                Cofounder, The Telerad Group
-                            </i>
-                        </div>
-                    </div>
-                    <div class="col-12 row mb-3">
-                        <div class="col-6 d-flex justify-content-end">11:15 AM - 11:30 AM</div>
-                        <div class="col">
-                            Break | Networking
-                        </div>
-                    </div>
-                    <div class="col-12 row mb-3">
-                        <div class="col-6 d-flex justify-content-end">11:30 AM - 12:30 PM</div>
-                        <div class="col">
-                            Panel Discussions
+
+                        <div class="col-md-4 mb-3 d-flex flex-column align-items-center justify-content-center">
+                            <p class="sub-heading " style="color: #62ce23;">Keynote Speaker</p>
+                            <div class="d-flex align-items-center mx-2">
+                                <img src="{% static 'conference/triennial/2023/Profiles/Hope_LeNoir.jpg' %}"
+                                    height="70px" width="70px" alt="" class="img-fluid rounded-circle">
+                                <div class="mx-2">
+                                    <div class="small-heading fw-bold">Dr Sunita Maheswari</div>
+                                    <small class="normal-text">
+                                        Chief Dreamer & Loop Closer, <br> Telerad
+                                        Group <br>
+                                        Cofounder, The Telerad Group
+                                    </small>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-12 row mb-3">
-                        <div class="col-6 d-flex justify-content-end">12:30 PM - 01:30 PM</div>
-                        <div class="col">
-                            Lunch | Stall Visit
+                    <div class="row m-auto mt-3">
+                        <div class="col-md-4 mb-3 d-flex flex-column align-items-center justify-content-center">
+                            <p class="sub-heading " style="color: #62ce23;">Immersive Learning</p>
+                            <div class="d-flex align-items-center mx-2">
+                                <img src="{% static 'conference/triennial/2023/Profiles/VenuDoddavarapu.jpg' %}" alt=""
+                                    height="70px" width="70px" class="img-fluid rounded-circle">
+                                <div class="mx-2">
+                                    <div class="small-heading fw-bold">Mr Kamal Singh</div>
+                                    <small class="normal-text">
+                                        Clinical Music Therapist
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3 d-flex flex-column align-items-center justify-content-center">
+                            <p class="sub-heading " style="color: #62ce23;">LUD Expression</p>
+                            <div class="d-flex align-items-center mx-2">
+                                <img src="{% static 'conference/triennial/2023/Profiles/GaryGuice.png' %}" alt=""
+                                    height="70px" width="70px" class="img-fluid rounded-circle">
+                                <div class="mx-2">
+                                    <div class="small-heading fw-bold">Dr george Noflin, Jr.</div>
+                                    <small class="normal-text">
+                                        Associate Professor, <br> Grambling
+                                        State University
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3 d-flex flex-column align-items-center justify-content-center">
+                            <p class="sub-heading " style="color: #62ce23;">Closing Address</p>
+                            <div class="d-flex align-items-center mx-2">
+                                <img src="{% static 'conference/triennial/2023/Profiles/DrAnilJosephPinto.jpg' %}"
+                                    alt="" height="70px" width="70px" class="img-fluid rounded-circle">
+                                <div class="mx-2">
+                                    <div class="small-heading fw-bold">Dr Carolyn Bishop</div>
+                                    <small class="normal-text">
+                                        President, Consortium <br> for Global
+                                        Education
+                                    </small>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-12 row mb-3">
-                        <div class="col-6 d-flex justify-content-end">01:30 PM - 03:00 PM</div>
-                        <div class="col">
+                </div>
+                <div class="row mt-4">
+                    <div class="col-12 small-heading fs-5  mb-5 text-center mb-3" style="color: #62ce23;">
+
+                        PANEL 1 - The Future of Food: Navigating Sustainability in Production and Consumption
+
+                    </div>
+                    <div class="col mb-3 d-flex flex-column align-items-center justify-content-center text-center">
+
+
+                        <img src="{% static 'conference/triennial/2023/Profiles/GaryGuice.png' %}" alt="" height="70px"
+                            width="70px" class="img-fluid rounded-circle mb-3">
+
+                        <div class="small-heading fw-bold">Mr Mack Ottens</div>
+                        <span class="normal-text">(MODERATOR)</span>
+                        <small class="normal-text">
+                            Community Research and <br>
+                            Action Doctoral Program
+                        </small>
+
+
+                    </div>
+                    <div class="col mb-3 d-flex flex-column align-items-center justify-content-center text-center">
+
+
+                        <img src="{% static 'conference/triennial/2023/Profiles/GaryGuice.png' %}" alt="" height="70px"
+                            width="70px" class="img-fluid rounded-circle mb-3">
+
+                        <div class="small-heading fw-bold">Ms Francesca Bové</div>
+                        <span class="normal-text">(PANELIST)</span>
+                        <small class="normal-text">
+                            PhD Scholar, <br>
+                            Binghamton University
+                        </small>
+
+
+                    </div>
+                    <div class="col mb-3 d-flex flex-column align-items-center justify-content-start text-center">
+
+
+                        <img src="{% static 'conference/triennial/2023/Profiles/GaryGuice.png' %}" alt="" height="70px"
+                            width="70px" class="img-fluid rounded-circle mb-3">
+
+                        <div class="small-heading fw-bold">Dr Shamala Devi</div>
+                        <span class="normal-text">(PANELIST)</span>
+                        <small class="normal-text">
+                            Social Activist
+                        </small>
+
+
+                    </div>
+                    <div class="col mb-3 d-flex flex-column align-items-center justify-content-center text-center">
+
+
+                        <img src="{% static 'conference/triennial/2023/Profiles/GaryGuice.png' %}" alt="" height="70px"
+                            width="70px" class="img-fluid rounded-circle mb-3">
+
+                        <div class="small-heading fw-bold">Ms Bhagyalakshmi
+                            Ganapathy</div>
+                        <span class="normal-text">(PANELIST)</span>
+                        <small class="normal-text">
+                            Manager – Sustainability, <br>
+                            Griffith Foods
+                        </small>
+
+
+                    </div>
+                    <div class="col mb-3 d-flex flex-column align-items-center justify-content-center text-center">
+
+
+                        <img src="{% static 'conference/triennial/2023/Profiles/GaryGuice.png' %}" alt="" height="70px"
+                            width="70px" class="img-fluid rounded-circle mb-3">
+
+                        <div class="small-heading fw-bold">Ms Sonia Varghese
+                            Tharakan</div>
+                        <span class="normal-text">(PANELIST)</span>
+                        <small class="normal-text">
+                            Executive Operations, <br>
+                            Bangalore Food Bank
+                        </small>
+
+
+                    </div>
+                </div>
+                <div class="row mt-4 justify-content-center">
+                    <div class="col-12  fs-5 small-heading text-center mb-5" style="color: #62ce23;">
+
+                        PANEL 2 -Unraveling Wellness: How Can the Mind and Body Find Synchrony?
+
+                    </div>
+                    <div class="col mb-3 d-flex flex-column align-items-center justify-content-center text-center">
+
+
+                        <img src="{% static 'conference/triennial/2023/Profiles/GaryGuice.png' %}" alt="" height="70px"
+                            width="70px" class="img-fluid rounded-circle mb-3">
+
+                        <div class="small-heading fw-bold">Ms Tracy Lyman</div>
+                        <span class="normal-text">(MODERATOR)</span>
+                        <small class="normal-text">
+                            Lecturer, Teaching, <br> Learning &
+                            Educational Leadership <br> Binghamton
+                            University, USA
+                        </small>
+
+
+                    </div>
+                    <div class="col mb-3 d-flex flex-column align-items-center justify-content-center text-center">
+
+
+                        <img src="{% static 'conference/triennial/2023/Profiles/GaryGuice.png' %}" alt="" height="70px"
+                            width="70px" class="img-fluid rounded-circle mb-3">
+
+                        <div class="small-heading fw-bold">Dr Debra Craighead</div>
+                        <span class="normal-text">(PANELIST)</span>
+                        <small class="normal-text">
+                            Professor, Kitty DeGree <br> School of Nursing, USA
+                        </small>
+
+
+                    </div>
+                    <div class="col mb-3 d-flex flex-column align-items-center justify-content-center text-center">
+
+
+                        <img src="{% static 'conference/triennial/2023/Profiles/GaryGuice.png' %}" alt="" height="70px"
+                            width="70px" class="img-fluid rounded-circle mb-3">
+
+                        <div class="small-heading fw-bold">Ms Champa Saha</div>
+                        <span class="normal-text">(PANELIST)</span>
+                        <small class="normal-text">
+                            Founder Trustee – MayaMukunda <br />
+                            Educational Trust, Bangalore
+                        </small>
+
+
+                    </div>
+                    <div class="col mb-3 d-flex flex-column align-items-center justify-content-center text-center">
+
+
+                        <img src="{% static 'conference/triennial/2023/Profiles/GaryGuice.png' %}" alt="" height="70px"
+                            width="70px" class="img-fluid rounded-circle mb-3">
+
+                        <div class="small-heading fw-bold">Dr Aaron
+                            Livingston</div>
+                        <span class="normal-text">(PANELIST)</span>
+                        <small class="normal-text">
+                            Professor, Grambling <br>
+                            State University, USA
+                        </small>
+
+
+                    </div>
+                    <div class="col mb-3 d-flex flex-column align-items-center justify-content-center text-center">
+
+
+                        <img src="{% static 'conference/triennial/2023/Profiles/GaryGuice.png' %}" alt="" height="70px"
+                            width="70px" class="img-fluid rounded-circle mb-3">
+
+                        <div class="small-heading fw-bold">Dr Jeffrey Moore</div>
+                        <span class="normal-text">(PANELIST)</span>
+                        <small class="normal-text">
+                            Professor of Management, <br>
+                            Anderson University, USA
+                        </small>
+
+
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-12 small-heading mb-5 fs-5  text-center mb-3" style="color: #62ce23;">
+
+                        PANEL 3 - Collective Vigilance: How can United Stakeholders Safeguard A
+
+                        Healthy Future?
+
+                    </div>
+                    <div class="col mb-3 d-flex flex-column align-items-center justify-content-center text-center">
+
+
+                        <img src="{% static 'conference/triennial/2023/Profiles/GaryGuice.png' %}" alt="" height="70px"
+                            width="70px" class="img-fluid rounded-circle mb-3">
+
+                        <div class="small-heading fw-bold">Ms Aparna Singh</div>
+                        <span class="normal-text">(MODERATOR)</span>
+                        <small class="normal-text">
+                            Program Director, <br>
+                            Orbit Future
+                            Academy, <br> Bangalore,
+                            India
+                        </small>
+
+
+                    </div>
+                    <div class="col mb-3 d-flex flex-column align-items-center justify-content-center text-center">
+
+
+                        <img src="{% static 'conference/triennial/2023/Profiles/GaryGuice.png' %}" alt="" height="70px"
+                            width="70px" class="img-fluid rounded-circle mb-3">
+
+                        <div class="small-heading fw-bold">Ms Paula Russell</div>
+                        <span class="normal-text">(PANELIST)</span>
+                        <small class="normal-text">
+                            Senior Director, <br> Center for
+                            Learning and Teaching, <br>
+                            Binghamton University, USA
+                        </small>
+
+
+                    </div>
+                    <div class="col mb-3 d-flex flex-column align-items-center justify-content-center text-center">
+
+
+                        <img src="{% static 'conference/triennial/2023/Profiles/GaryGuice.png' %}" alt="" height="70px"
+                            width="70px" class="img-fluid rounded-circle mb-3">
+
+                        <div class="small-heading fw-bold">Mr Chandan Sharma</div>
+                        <span class="normal-text">(PANELIST)</span>
+                        <small class="normal-text">
+                            Chapter Head <br> of
+                            Karnataka - Goonj
+                        </small>
+
+
+                    </div>
+                    <div class="col mb-3 d-flex flex-column align-items-center justify-content-center text-center">
+
+
+                        <img src="{% static 'conference/triennial/2023/Profiles/GaryGuice.png' %}" alt="" height="70px"
+                            width="70px" class="img-fluid rounded-circle mb-3">
+
+                        <div class="small-heading fw-bold">Mr George
+                            Nariamparambil</div>
+                        <span class="normal-text">(PANELIST)</span>
+                        <small class="normal-text">
+                            Major General
+                            (Retired)
+                        </small>
+
+
+                    </div>
+                    <div class="col mb-3 d-flex flex-column align-items-center justify-content-center text-center">
+
+
+                        <img src="{% static 'conference/triennial/2023/Profiles/GaryGuice.png' %}" alt="" height="70px"
+                            width="70px" class="img-fluid rounded-circle mb-3">
+
+                        <div class="small-heading fw-bold">MR R Vimal Kingston</div>
+                        <span class="normal-text">(PANELIST)</span>
+                        <small class="normal-text">
+                            Student, MBBS, <br>
+                            St. John’s Medical College,
+                        </small>
+
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
+            <div class="row d-flex align-items-center justify-content-center">
+                <div class="col-12 fw-bold heading fs-2  text-white text-center mb-3"
+                    style="color: #92ed26 !important;">
+                    <small class="small-heading text-white">Day Three - November 5, 2023</small>
+                    <br>
+                    SOCIAL TRACK
+                    <h4></h4>
+                </div>
+                <div class="col-md-12">
+                    <div class="row m-auto mt-3">
+                        <div class="col-md-4 mb-3 d-flex flex-column align-items-center justify-content-center">
+                            <p class="sub-heading " style="color: #62ce23;"> Welcome Message</p>
+                            <div class="d-flex align-items-center mx-2">
+                                <img src="{% static 'conference/triennial/2023/Profiles/frjosecc.jpg' %}" height="70px"
+                                    width="70px" alt="" class="img-fluid rounded-circle">
+                                <div class="mx-2">
+                                    <div class="small-heading fw-bold">Dr Jain Mathew</div>
+                                    <small class="normal-text">
+                                        Dean, School of Business & <br>
+                                        Management, <br> Christ (Deemed to be
+                                        University)
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3 d-flex flex-column align-items-center justify-content-center">
+                            <p class="sub-heading " style="color: #62ce23;">Inaugural Address</p>
+                            <div class="d-flex align-items-center mx-2">
+                                <img src="{% static 'conference/triennial/2023/Profiles/donalad-e-hall.jpg' %}"
+                                    height="70px" width="70px" alt="" class="img-fluid rounded-circle">
+                                <div class="mx-2">
+                                    <div class="small-heading fw-bold">Mr Chocko Valliappa</div>
+                                    <small class="normal-text">
+                                        CEO, VEE Technologies and<br> Vice
+                                        Chairman,<br> Sona Group of Institutions
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 mb-3 d-flex flex-column align-items-center justify-content-center">
+                            <p class="sub-heading " style="color: #62ce23;">Keynote Speaker</p>
+                            <div class="d-flex align-items-center mx-2">
+                                <img src="{% static 'conference/triennial/2023/Profiles/Hope_LeNoir.jpg' %}"
+                                    height="70px" width="70px" alt="" class="img-fluid rounded-circle">
+                                <div class="mx-2">
+                                    <div class="small-heading fw-bold">Prof Dr Norbert
+                                        Frieters-Reermann</div>
+                                    <small class="normal-text">
+                                        Professor of Education and <br>Educational
+                                        Sciences, <br> Aachen, Social Services
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row m-auto mt-3">
+                        <div class="col-md-4 mb-3 d-flex flex-column align-items-center justify-content-center">
+                            <p class="sub-heading " style="color: #62ce23;">Immersive Learning</p>
+                            <div class="d-flex align-items-center mx-2">
+                                <img src="{% static 'conference/triennial/2023/Profiles/VenuDoddavarapu.jpg' %}" alt=""
+                                    height="70px" width="70px" class="img-fluid rounded-circle">
+                                <div class="mx-2">
+                                    <div class="small-heading fw-bold">Ms Tabeah Sperber</div>
+                                    <small class="normal-text">
+                                        Special Educator, <br>
+                                        Neev Academy, Bangalore
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3 d-flex flex-column align-items-center justify-content-center">
+                            <p class="sub-heading " style="color: #62ce23;">LUD Expression</p>
+                            <div class="d-flex align-items-center mx-2">
+                                <img src="{% static 'conference/triennial/2023/Profiles/GaryGuice.png' %}" alt=""
+                                    height="70px" width="70px" class="img-fluid rounded-circle">
+                                <div class="mx-2">
+                                    <div class="small-heading fw-bold">Mr Anson P D Alexander</div>
+                                    <small class="normal-text">
+                                        Director and Founder of Kanal, <br>
+                                        Kerala
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3 d-flex flex-column align-items-center justify-content-center">
+                            <p class="sub-heading " style="color: #62ce23;">Closing Address</p>
+                            <div class="d-flex align-items-center mx-2">
+                                <img src="{% static 'conference/triennial/2023/Profiles/DrAnilJosephPinto.jpg' %}"
+                                    alt="" height="70px" width="70px" class="img-fluid rounded-circle">
+                                <div class="mx-2">
+                                    <div class="small-heading fw-bold">Rev Dr Lijo Thomas</div>
+                                    <small class="normal-text">
+                                        Director and Dean, <br> Christ
+                                        University, Pune, Lavasa
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-12 small-heading fs-5  mb-5 text-center mb-3" style="color: #62ce23;">
+
+                        PANEL 1 - Lonely Together: Exploring the Paradox of
+                        Connection and Isolation in Modern Times
+
+                    </div>
+                    <div class="col-md-3 mb-3 d-flex flex-column align-items-center justify-content-center text-center">
+
+
+                        <img src="{% static 'conference/triennial/2023/Profiles/GaryGuice.png' %}" alt="" height="70px"
+                            width="70px" class="img-fluid rounded-circle mb-3">
+
+                        <div class="small-heading fw-bold">Ms Paula Russel</div>
+                        <span class="normal-text">(MODERATOR)</span>
+                        <small class="normal-text">
+                            Senior Director, <br> Center for Learning
+                            and Teaching, <br> Binghamton
+                            University
+                        </small>
+
+
+                    </div>
+                    <div class="col-md-3 mb-3 d-flex flex-column align-items-center justify-content-center text-center">
+
+
+                        <img src="{% static 'conference/triennial/2023/Profiles/GaryGuice.png' %}" alt="" height="70px"
+                            width="70px" class="img-fluid rounded-circle mb-3">
+
+                        <div class="small-heading fw-bold">Dr Angela Curl</div>
+                        <span class="normal-text">(PANELIST)</span>
+                        <small class="normal-text">
+                            MSW Program Director & Associate
+                            Professor <br> Miami University, Ohio,
+                            USA
+                        </small>
+
+
+                    </div>
+                    <div class="col-md-3 mb-3 d-flex flex-column align-items-center justify-content-start text-center">
+
+
+                        <img src="{% static 'conference/triennial/2023/Profiles/GaryGuice.png' %}" alt="" height="70px"
+                            width="70px" class="img-fluid rounded-circle mb-3">
+
+                        <div class="small-heading fw-bold">Dr Eliza Pereira</div>
+                        <span class="normal-text">(PANELIST)</span>
+                        <small class="normal-text">
+                            Mental Health
+                            Counsellor
+                        </small>
+
+
+                    </div>
+                    <div class="col-md-3 mb-3 d-flex flex-column align-items-center justify-content-center text-center">
+
+
+                        <img src="{% static 'conference/triennial/2023/Profiles/GaryGuice.png' %}" alt="" height="70px"
+                            width="70px" class="img-fluid rounded-circle mb-3">
+
+                        <div class="small-heading fw-bold">Ms Neha Cadabam</div>
+                        <span class="normal-text">(PANELIST)</span>
+                        <small class="normal-text">
+                            Neurologist, Executive <br>
+                            Director, Cadabam's Group
+                        </small>
+
+
+                    </div>
+                </div>
+                <div class="row mt-4 justify-content-center">
+                    <div class="col-12  fs-5 small-heading text-center mb-5" style="color: #62ce23;">
+
+                        PANEL 2 - Climate Injustice: Are We All Bearing the Brunt Equally?
+
+                    </div>
+                    <div class="col mb-3 d-flex flex-column align-items-center justify-content-center text-center">
+
+
+                        <img src="{% static 'conference/triennial/2023/Profiles/GaryGuice.png' %}" alt="" height="70px"
+                            width="70px" class="img-fluid rounded-circle mb-3">
+
+                        <div class="small-heading fw-bold">Dr Ashok Patil</div>
+                        <span class="normal-text">(MODERATOR)</span>
+                        <small class="normal-text">
+                            Honorary President, <br>
+                            International Association of <br>
+                            Rural Health & Medicine,
+                            Japan
+                        </small>
+
+
+                    </div>
+                    <div class="col mb-3 d-flex flex-column align-items-center justify-content-center text-center">
+
+
+                        <img src="{% static 'conference/triennial/2023/Profiles/GaryGuice.png' %}" alt="" height="70px"
+                            width="70px" class="img-fluid rounded-circle mb-3">
+
+                        <div class="small-heading fw-bold">Ms Laura Maren Harter</div>
+                        <span class="normal-text">(PANELIST)</span>
+                        <small class="normal-text">
+                            Research Associate, <br>
+                            Katho Aachen
+                        </small>
+
+
+                    </div>
+                    <div class="col mb-3 d-flex flex-column align-items-center justify-content-start text-center">
+
+
+                        <img src="{% static 'conference/triennial/2023/Profiles/GaryGuice.png' %}" alt="" height="70px"
+                            width="70px" class="img-fluid rounded-circle mb-3">
+
+                        <div class="small-heading fw-bold">Mr paritosh
+                            segal</div>
+                        <span class="normal-text">(PANELIST)</span>
+                        <small class="normal-text">
+                            Co-Founder, <br>
+                            NavSahyog Foundation
+                        </small>
+
+
+                    </div>
+                    <div class="col mb-3 d-flex flex-column align-items-center justify-content-center text-center">
+
+
+                        <img src="{% static 'conference/triennial/2023/Profiles/GaryGuice.png' %}" alt="" height="70px"
+                            width="70px" class="img-fluid rounded-circle mb-3">
+
+                        <div class="small-heading fw-bold">Mr Venkata Krishnan S</div>
+                        <span class="normal-text">(PANELIST)</span>
+                        <small class="normal-text">
+                            Co-Founder and Chief <br>
+                            Growth Officer, <br> Smart Grid
+                            Analytics
+                        </small>
+
+
+                    </div>
+                    <div class="col mb-3 d-flex flex-column align-items-center justify-content-center text-center">
+
+
+                        <img src="{% static 'conference/triennial/2023/Profiles/GaryGuice.png' %}" alt="" height="70px"
+                            width="70px" class="img-fluid rounded-circle mb-3">
+
+                        <div class="small-heading fw-bold">Dr Kshithij Urs</div>
+                        <span class="normal-text">(PANELIST)</span>
+                        <small class="normal-text">
+                            Executive Director, <br> IBBN - India
+                            Biochar and <br> Bioresources
+                            Network
+                        </small>
+
+
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-12 small-heading mb-5 fs-5  text-center mb-3" style="color: #62ce23;">
+
+                        PANEL 3 - New Horizons, New Struggles: Can We Ensure Dignity in Migration?
+
+                    </div>
+                    <div class="col-md-3 mb-3 d-flex flex-column align-items-center justify-content-center text-center">
+
+
+                        <img src="{% static 'conference/triennial/2023/Profiles/GaryGuice.png' %}" alt="" height="70px"
+                            width="70px" class="img-fluid rounded-circle mb-3">
+
+                        <div class="small-heading fw-bold">Ms Fracesca Bove</div>
+                        <span class="normal-text">(MODERATOR)</span>
+                        <small class="normal-text">
+                            PhD Scholar, <br>
+                            Binghamton
+                            University
+                        </small>
+
+
+                    </div>
+                    <div class="col-md-3 mb-3 d-flex flex-column align-items-center justify-content-center text-center">
+
+
+                        <img src="{% static 'conference/triennial/2023/Profiles/GaryGuice.png' %}" alt="" height="70px"
+                            width="70px" class="img-fluid rounded-circle mb-3">
+
+                        <div class="small-heading fw-bold">Prof Gowribalan Ananda</div>
+                        <span class="normal-text">(PANELIST)</span>
+                        <small class="normal-text">
+                            Associate Professor, <br>
+                            University of Cincinnati
+                        </small>
+
+
+                    </div>
+                    <div class="col-md-3 mb-3 d-flex flex-column align-items-center justify-content-center text-center">
+
+
+                        <img src="{% static 'conference/triennial/2023/Profiles/GaryGuice.png' %}" alt="" height="70px"
+                            width="70px" class="img-fluid rounded-circle mb-3">
+
+                        <div class="small-heading fw-bold">Dr Ali Fitzgibbon</div>
+                        <span class="normal-text">(PANELIST)</span>
+                        <small class="normal-text">
+                            Senior Lecturer, Creative & Cultural <br>
+                            Industries Management School of
+                            Arts, <br> English and Languages Queen's University Belfast
+                        </small>
+
+
+                    </div>
+                    <div class="col-md-3 mb-3 d-flex flex-column align-items-center justify-content-center text-center">
+
+
+                        <img src="{% static 'conference/triennial/2023/Profiles/GaryGuice.png' %}" alt="" height="70px"
+                            width="70px" class="img-fluid rounded-circle mb-3">
+
+                        <div class="small-heading fw-bold">Prof Dr Norbert
+                            Frieters-Reermann</div>
+                        <span class="normal-text">(PANELIST)</span>
+                        <small class="normal-text">
+                            Professor of Education
+                            and <br>Educational Sciences
+                            Aachen, Social Services
+                        </small>
+
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+</div>
+
+<div class="container-fluid p-3 bg-white">
+
+    <div class="row d-flex align-items-center justify-content-center">
+        <div class="col-12 fw-bold font fs-2 text-center mb-3" style="color: #274C7D;">
+            Conference Schedule
+
+        </div>
+        <div class="col-md-4 m-auto mt-5">
+            <div class="col-md-12 m-auto p-3" style="background-color: #274C7D;min-height: 1061px;">
+                <div class="col-12 fw-bold font fs-4 text-center mb-3">
+                    Day One <br />
+                    <small class="fw-normal">November 3, 2023</small>
+                </div>
+                <div class="col-12 row mb-3 mt-5">
+                    <div class="col-6 d-flex justify-content-end">09.30 AM to 10.30 AM</div>
+                    <div class="col">Inaugural Session</div>
+                </div>
+                <div class="col-12 row mb-3">
+                    <div class="col-6 d-flex justify-content-start align-items-end flex-column">10.30 AM to 11.00 AM
+
+                        <img src="{% static 'conference/triennial/2023/Profiles/Hope_LeNoir.jpg' %}"
+                            class="img-fluid rounded-circle mt-1" height="65px" width="65px" alt="">
+                    </div>
+                    <div class="col">
+                        <b>
+                            Keynote Address
+                        </b> <br />
+                        Ms. Hope Lenoir <br />
+                        <i>
+                            Founder and Owner <br />
+                            Rise and Fly (C), LLC
+                        </i>
+                    </div>
+                </div>
+                <div class="col-12 row mb-3">
+                    <div class="col-6 d-flex justify-content-end">11.15 AM to 11.30 AM</div>
+                    <div class="col">
+                        Break | Networking
+                    </div>
+                </div>
+                <div class="col-12 row mb-3">
+                    <div class="col-6 d-flex justify-content-end">11:30 AM - 12:30 PM</div>
+                    <div class="col">
+                        Panel Discussions
+                    </div>
+                </div>
+                <div class="col-12 row mb-3">
+                    <div class="col-6 d-flex justify-content-end">12:30 PM - 01:30 PM</div>
+                    <div class="col">
+                        Lunch | Stall Visit
+                    </div>
+                </div>
+                <div class="col-12 row mb-3">
+                    <div class="col-6 d-flex justify-content-start align-items-end flex-column">01:30 PM - 03:00 PM
+
+                        <img src="{% static 'conference/triennial/2023/Profiles/VenuDoddavarapu.jpg' %}"
+                            class="img-fluid rounded-circle mt-1" height="65px" width="65px" alt="">
+                    </div>
+                    <div class="col">
+                        <b>
                             Immersive Learning
-                        </div>
+                        </b> <br />
+                        Mr. Venu Doddavarapu <br />
+                        <i>
+                            Experiential Learning Designer,Consultant Facilitator & Trainer
+                        </i>
                     </div>
-                    <div class="col-12 row mb-3">
-                        <div class="col-6 d-flex justify-content-end">03:00 PM - 3:30 PM</div>
-                        <div class="col">
-                            Break | Networking
-                        </div>
+                </div>
+                <div class="col-12 row mb-3">
+                    <div class="col-6 d-flex justify-content-end">03:00 PM - 3:30 PM</div>
+                    <div class="col">
+                        Break | Networking
                     </div>
-                    <div class="col-12 row mb-3">
-                        <div class="col-6 d-flex justify-content-end">03:30 PM - 04:00 PM</div>
-                        <div class="col">
-                            Changemakers
-                        </div>
+                </div>
+                <div class="col-12 row mb-3">
+                    <div class="col-6 d-flex justify-content-end">03:30 PM - 04:00 PM</div>
+                    <div class="col">
+                        Changemakers
                     </div>
-                    <div class="col-12 row mb-3">
-                        <div class="col-6 d-flex justify-content-end">04:00 PM - 04:20 PM</div>
-                        <div class="col">
+                </div>
+                <div class="col-12 row mb-3">
+                    <div class="col-6 d-flex justify-content-start align-items-end flex-column">04:00 PM - 04:20 PM
+
+                        <img src="{% static 'conference/triennial/2023/Profiles/GaryGuice.png' %}"
+                            class="img-fluid rounded-circle mt-1" height="65px" width="65px" alt="">
+                    </div>
+                    <div class="col">
+                        <b>
                             LUD Expressions
-                        </div>
+                        </b> <br />
+                        Mr. Gary Guice <br />
+                        <i>
+                            Police Officer, Director of DREAMS Intervention Program in Bastrop, Louisiana, USA
+                        </i>
                     </div>
-                    <div class="col-12 row mb-3">
-                        <div class="col-6 d-flex justify-content-end">04:20 PM - 04:30 PM</div>
-                        <div class="col">
+                </div>
+                <div class="col-12 row mb-3">
+                    <div class="col-6 d-flex justify-content-start align-items-end flex-column">04:20 PM - 04:30 PM
+                        <img src="{% static 'conference/triennial/2023/Profiles/NishaJoseph.jpg' %}"
+                            class="img-fluid rounded-circle mt-1" height="65px" width="65px" alt="">
+                    </div>
+                    <div class="col">
+                        <i>
                             Closing Address
-                        </div>
+                        </i> <br />
+                        Ms. Nisha Joseph <br />
+                        <i>
+                            Principal, St. Anne's Degree College, India
+                        </i>
                     </div>
-                    <div class="col-12 row mb-3">
-                        <div class="col-6 d-flex justify-content-end">04:30 PM - 05:00 PM</div>
-                        <div class="col">
-                            Networking | Stall Visit
-                        </div>
+                </div>
+                <div class="col-12 row mb-3">
+                    <div class="col-6 d-flex justify-content-end">04:30 PM - 05:00 PM</div>
+                    <div class="col">
+                        Networking | Stall Visit
                     </div>
-                    <div class="col-12 row mb-3">
-                        <div class="col-6 d-flex justify-content-end">05:00 PM - 06:00 PM</div>
-                        <div class="col">
-                            Cultural Team
-                        </div>
+                </div>
+                <div class="col-12 row mb-3">
+                    <div class="col-6 d-flex justify-content-end">05:00 PM - 06:00 PM</div>
+                    <div class="col">
+                        Cultural Team
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 m-auto mt-5">
-                <div class="col-md-12 m-auto p-3" style="background-color: #274C7D; min-height: 1061px;">
-                    <div class="col-12 fw-bold font fs-4 text-center mb-3">
-                        Day Three <br />
-                        <small class="fw-normal">November 5, 2023</small>
+        </div>
+        <div class="col-md-4 m-auto mt-5">
+            <div class="col-md-12 m-auto p-3" style="background-color: #274C7D;min-height: 1061px;">
+                <div class="col-12 fw-bold font fs-4 text-center mb-3">
+                    Day Two <br />
+                    <small class="fw-normal">November 4, 2023</small>
+                </div>
+                <div class="col-12 row mb-3 mt-5">
+                    <div class="col-6 d-flex justify-content-start align-items-end flex-column">10:00 AM - 10:15 AM
+                        <img src="{% static 'conference/triennial/2023/Profiles/AngelaCurl.jpg' %}"
+                            class="img-fluid rounded-circle mt-1" height="65px" width="65px" alt="">
                     </div>
-                    <div class="col-12 row mb-3 mt-5">
-                        <div class="col-6 d-flex justify-content-start align-items-end flex-column">10.00 AM to 10.15 AM
-                            <img src="{% static 'conference/triennial/2023/Profiles/Dr.JainMathew.jpg' %}"
-                                class="img-fluid rounded-circle mt-1" height="65px" width="65px" alt="">
-                        </div>
-                        <div class="col">
-                            <b>
-                                Welcome Message
-                            </b><br />
-                            Dr. Jain Mathew <br>
-                            <i>
-                                Dean, School of Business & Management, Christ (Deemed to be University), India
-                            </i>
-                        </div>
+                    <div class="col">
+                        <b>
+                            Welcome Message
+                        </b><br />
+                        Dr Angela Curl <br />
+                        <i>
+                            Miami University, Ohio, USA
+                        </i>
                     </div>
-                    <div class="col-12 row mb-3">
-                        <div class="col-6 d-flex justify-content-start align-items-end flex-column">10.15 AM to 10.30 AM
-                            <img src="{% static 'conference/triennial/2023/Profiles/Chocko-Valliappa.jpg' %}"
-                                class="img-fluid rounded-circle mt-1" height="65px" width="65px" alt="">
-                        </div>
-                        <div class="col">
-                            <b>
-                                Inagural address
-                            </b> <br />
-                            Mr. Chocko Valliappa <br>
-                            <i>
-                                CEO, VEE Technologies and Vice Chairman, Sona Group of Institutions
-                            </i>
-                        </div>
+                </div>
+                <div class="col-12 row mb-3">
+                    <div class="col-6 d-flex justify-content-start align-items-end flex-column">10:15 AM - 10:30 AM
+                        <img src="{% static 'conference/triennial/2023/Profiles/Dr.-Donna-Hedgepath.png' %}"
+                            class="img-fluid rounded-circle mt-1" height="65px" width="65px" alt="">
                     </div>
-                    <div class="col-12 row mb-3">
-                        <div class="col-6 d-flex justify-content-start align-items-end flex-column">10.30 AM to 11.15 AM
-                            <img src="{% static 'conference/triennial/2023/Profiles/Norbert.png' %}"
-                                class="img-fluid rounded-circle mt-1" height="65px" width="65px" alt="">
-                        </div>
-                        <div class="col">
-                            <b>
-                                Keynote Address
-                            </b> <br />
-                            Prof. Dr. Norbert Frieters-Reermann
-                            <i>
-                                Professor of Education and Educational Sciences
-                                Aachen, Social Services
-                            </i>
-                        </div>
+                    <div class="col">
+                        <b>
+                            Inagural address
+                        </b><br />
+                        Dr. Donna R. Hedgepath
+                        <i>
+                            Provost/Vice President for Academic Affairs, Campbellsville University, USA
+                        </i>
                     </div>
-                    <div class="col-12 row mb-3">
-                        <div class="col-6 d-flex justify-content-end">11.15 AM to 11.30 AM</div>
-                        <div class="col">
-                            Break | Networking
-                        </div>
+                </div>
+                <div class="col-12 row mb-3">
+                    <div class="col-6 d-flex justify-content-start align-items-end flex-column">10:30 AM - 11:15 AM
+                        <img src="{% static 'conference/triennial/2023/Profiles/sunita.png' %}"
+                            class="img-fluid rounded-circle mt-1" height="65px" width="65px" alt="">
                     </div>
-                    <div class="col-12 row mb-3">
-                        <div class="col-6 d-flex justify-content-end">11:30 AM - 12:30 PM</div>
-                        <div class="col">
-                            Panel Discussions
-                        </div>
+                    <div class="col">
+                        <b>
+                            Keynote Address
+                        </b><br />
+                        Dr. Sunita Maheswari <br>
+                        <i>
+                            Chief Dreamer & Loop Closer, Telerad Group
+                            Cofounder, The Telerad Group
+                        </i>
                     </div>
-                    <div class="col-12 row mb-3">
-                        <div class="col-6 d-flex justify-content-end">12:30 PM - 01:30 PM</div>
-                        <div class="col">
-                            Lunch | Stall Visit
-                        </div>
+                </div>
+                <div class="col-12 row mb-3">
+                    <div class="col-6 d-flex justify-content-end">11:15 AM - 11:30 AM</div>
+                    <div class="col">
+                        Break | Networking
                     </div>
-                    <div class="col-12 row mb-3">
-                        <div class="col-6 d-flex justify-content-start align-items-end flex-column">01:30 PM - 03:00 PM
-                            <img src="{% static 'conference/triennial/2023/Profiles/AngelaCurl.jpg' %}"
-                                class="img-fluid rounded-circle mt-1" height="65px" width="65px" alt="">
-                        </div>
-                        <div class="col">
-                            <b>
-                                Immersive Learning
-                            </b> <br />
-                            Dr Angela Curl <br>
-                            <i>
-                                Miami University, Ohio, USA
-                            </i>
-                        </div>
+                </div>
+                <div class="col-12 row mb-3">
+                    <div class="col-6 d-flex justify-content-end">11:30 AM - 12:30 PM</div>
+                    <div class="col">
+                        Panel Discussions
                     </div>
-                    <div class="col-12 row mb-3">
-                        <div class="col-6 d-flex justify-content-end">03:00 PM - 03:30 PM</div>
-                        <div class="col">
-                            Break | Networking
-                        </div>
+                </div>
+                <div class="col-12 row mb-3">
+                    <div class="col-6 d-flex justify-content-end">12:30 PM - 01:30 PM</div>
+                    <div class="col">
+                        Lunch | Stall Visit
                     </div>
-                    <div class="col-12 row mb-3">
-                        <div class="col-6 d-flex justify-content-end">03:30 PM - 04:00 PM</div>
-                        <div class="col">
-                            Changemakers
-                        </div>
+                </div>
+                <div class="col-12 row mb-3">
+                    <div class="col-6 d-flex justify-content-end">01:30 PM - 03:00 PM</div>
+                    <div class="col">
+                        Immersive Learning
                     </div>
-                    <div class="col-12 row mb-3">
-                        <div class="col-6 d-flex justify-content-end">04:00 PM - 04:20 PM</div>
-                        <div class="col">
-                            <b>
-                                LUD Expressions
-                            </b> <br />
-                            Mr. Anson P D Alexander
-                        </div>
+                </div>
+                <div class="col-12 row mb-3">
+                    <div class="col-6 d-flex justify-content-end">03:00 PM - 3:30 PM</div>
+                    <div class="col">
+                        Break | Networking
                     </div>
-                    <div class="col-12 row mb-3">
-                        <div class="col-6 d-flex justify-content-end">04:20 PM - 04:30 PM</div>
-                        <div class="col">
-                            Closing Address
-                        </div>
+                </div>
+                <div class="col-12 row mb-3">
+                    <div class="col-6 d-flex justify-content-end">03:30 PM - 04:00 PM</div>
+                    <div class="col">
+                        Changemakers
                     </div>
-                    <div class="col-12 row mb-3">
-                        <div class="col-6 d-flex justify-content-end">04:30 PM - 05:00 PM</div>
-                        <div class="col">
-                            Networking | Stall Visit
-                        </div>
+                </div>
+                <div class="col-12 row mb-3">
+                    <div class="col-6 d-flex justify-content-end">04:00 PM - 04:20 PM</div>
+                    <div class="col">
+                        LUD Expressions
+                    </div>
+                </div>
+                <div class="col-12 row mb-3">
+                    <div class="col-6 d-flex justify-content-end">04:20 PM - 04:30 PM</div>
+                    <div class="col">
+                        Closing Address
+                    </div>
+                </div>
+                <div class="col-12 row mb-3">
+                    <div class="col-6 d-flex justify-content-end">04:30 PM - 05:00 PM</div>
+                    <div class="col">
+                        Networking | Stall Visit
+                    </div>
+                </div>
+                <div class="col-12 row mb-3">
+                    <div class="col-6 d-flex justify-content-end">05:00 PM - 06:00 PM</div>
+                    <div class="col">
+                        Cultural Team
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 m-auto mt-5">
+            <div class="col-md-12 m-auto p-3" style="background-color: #274C7D; min-height: 1061px;">
+                <div class="col-12 fw-bold font fs-4 text-center mb-3">
+                    Day Three <br />
+                    <small class="fw-normal">November 5, 2023</small>
+                </div>
+                <div class="col-12 row mb-3 mt-5">
+                    <div class="col-6 d-flex justify-content-start align-items-end flex-column">10.00 AM to 10.15 AM
+                        <img src="{% static 'conference/triennial/2023/Profiles/Dr.JainMathew.jpg' %}"
+                            class="img-fluid rounded-circle mt-1" height="65px" width="65px" alt="">
+                    </div>
+                    <div class="col">
+                        <b>
+                            Welcome Message
+                        </b><br />
+                        Dr. Jain Mathew <br>
+                        <i>
+                            Dean, School of Business & Management, Christ (Deemed to be University), India
+                        </i>
+                    </div>
+                </div>
+                <div class="col-12 row mb-3">
+                    <div class="col-6 d-flex justify-content-start align-items-end flex-column">10.15 AM to 10.30 AM
+                        <img src="{% static 'conference/triennial/2023/Profiles/Chocko-Valliappa.jpg' %}"
+                            class="img-fluid rounded-circle mt-1" height="65px" width="65px" alt="">
+                    </div>
+                    <div class="col">
+                        <b>
+                            Inagural address
+                        </b> <br />
+                        Mr. Chocko Valliappa <br>
+                        <i>
+                            CEO, VEE Technologies and Vice Chairman, Sona Group of Institutions
+                        </i>
+                    </div>
+                </div>
+                <div class="col-12 row mb-3">
+                    <div class="col-6 d-flex justify-content-start align-items-end flex-column">10.30 AM to 11.15 AM
+                        <img src="{% static 'conference/triennial/2023/Profiles/Norbert.png' %}"
+                            class="img-fluid rounded-circle mt-1" height="65px" width="65px" alt="">
+                    </div>
+                    <div class="col">
+                        <b>
+                            Keynote Address
+                        </b> <br />
+                        Prof. Dr. Norbert Frieters-Reermann
+                        <i>
+                            Professor of Education and Educational Sciences
+                            Aachen, Social Services
+                        </i>
+                    </div>
+                </div>
+                <div class="col-12 row mb-3">
+                    <div class="col-6 d-flex justify-content-end">11.15 AM to 11.30 AM</div>
+                    <div class="col">
+                        Break | Networking
+                    </div>
+                </div>
+                <div class="col-12 row mb-3">
+                    <div class="col-6 d-flex justify-content-end">11:30 AM - 12:30 PM</div>
+                    <div class="col">
+                        Panel Discussions
+                    </div>
+                </div>
+                <div class="col-12 row mb-3">
+                    <div class="col-6 d-flex justify-content-end">12:30 PM - 01:30 PM</div>
+                    <div class="col">
+                        Lunch | Stall Visit
+                    </div>
+                </div>
+                <div class="col-12 row mb-3">
+                    <div class="col-6 d-flex justify-content-start align-items-end flex-column">01:30 PM - 03:00 PM
+                        <img src="{% static 'conference/triennial/2023/Profiles/AngelaCurl.jpg' %}"
+                            class="img-fluid rounded-circle mt-1" height="65px" width="65px" alt="">
+                    </div>
+                    <div class="col">
+                        <b>
+                            Immersive Learning
+                        </b> <br />
+                        Dr Angela Curl <br>
+                        <i>
+                            Miami University, Ohio, USA
+                        </i>
+                    </div>
+                </div>
+                <div class="col-12 row mb-3">
+                    <div class="col-6 d-flex justify-content-end">03:00 PM - 03:30 PM</div>
+                    <div class="col">
+                        Break | Networking
+                    </div>
+                </div>
+                <div class="col-12 row mb-3">
+                    <div class="col-6 d-flex justify-content-end">03:30 PM - 04:00 PM</div>
+                    <div class="col">
+                        Changemakers
+                    </div>
+                </div>
+                <div class="col-12 row mb-3">
+                    <div class="col-6 d-flex justify-content-end">04:00 PM - 04:20 PM</div>
+                    <div class="col">
+                        <b>
+                            LUD Expressions
+                        </b> <br />
+                        Mr. Anson P D Alexander
+                    </div>
+                </div>
+                <div class="col-12 row mb-3">
+                    <div class="col-6 d-flex justify-content-end">04:20 PM - 04:30 PM</div>
+                    <div class="col">
+                        Closing Address
+                    </div>
+                </div>
+                <div class="col-12 row mb-3">
+                    <div class="col-6 d-flex justify-content-end">04:30 PM - 05:00 PM</div>
+                    <div class="col">
+                        Networking | Stall Visit
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<div class="container mt-5">
+
+<!-- <div class="container mt-5">
     <div class="m-3">
 
         <div class="row mb-4">
@@ -672,7 +1740,7 @@ Triennial Conference 2023
             </div>
         </div>
     </div>
-</div>
+</div> -->
 <div class="container">
     <div class="row mt-5">
         <div class="row mb-4">
@@ -700,7 +1768,7 @@ Triennial Conference 2023
                     Mr. Jimmy Cherian
                 </div>
                 <div class="text-center">
-                    Founder & President,<br/> Creating Futures, India <br />
+                    Founder & President,<br /> Creating Futures, India <br />
                     <a class="text-white" href="mailto:jims.cherian@gmail.com"><i
                             class="fa-regular fa-envelope"></i></a>
                 </div>
@@ -717,7 +1785,7 @@ Triennial Conference 2023
                     Dr. Cheyrl Mansfield Ensley
                 </div>
                 <div class="text-center">
-                    Interim Head & Associate Professor,<br/> Grambling State University,
+                    Interim Head & Associate Professor,<br /> Grambling State University,
                     Louisiana<br />
                     <a class="text-white" href="mailto:ensleyc@gram.edu"><i class="fa-regular fa-envelope"></i></a>
                 </div>
@@ -734,7 +1802,7 @@ Triennial Conference 2023
                     Prof. Nisha Joseph
                 </div>
                 <div class="text-center">
-                    Principal,<br/> St. Anne's Degree College, Bangalore, India<br />
+                    Principal,<br /> St. Anne's Degree College, Bangalore, India<br />
                     <a class="text-white" href="mailto:annescollege@gmail.com"><i
                             class="fa-regular fa-envelope"></i></a>
                 </div>
@@ -759,7 +1827,7 @@ Triennial Conference 2023
                     Ms. Anita Eipe
                 </div>
                 <div class="text-center">
-                    Managing Trustee,<br/> Samatha, Bangalore, India <br />
+                    Managing Trustee,<br /> Samatha, Bangalore, India <br />
                     <a class="text-white" href="mailto:eipeanita@gmail.com"><i class="fa-regular fa-envelope"></i></a>
                 </div>
             </div>
@@ -775,7 +1843,7 @@ Triennial Conference 2023
                     Ms. Tracy Lyman
                 </div>
                 <div class="text-center">
-                    Associate Professor,<br/> Binghamton University, United States<br />
+                    Associate Professor,<br /> Binghamton University, United States<br />
                     <a class="text-white" href="mailto:tlyman@binghamton.edu"><i class="fa-regular fa-envelope"></i></a>
                 </div>
             </div>
@@ -791,7 +1859,7 @@ Triennial Conference 2023
                     Ms. Aparna Singh
                 </div>
                 <div class="text-center">
-                    Program Director,<br/> Orbit Future Academy<br />
+                    Program Director,<br /> Orbit Future Academy<br />
                     <a class="text-white" href="mailto:aparna25@hotmail.com"><i class="fa-regular fa-envelope"></i></a>
                 </div>
             </div>
@@ -815,7 +1883,7 @@ Triennial Conference 2023
                     Ms. Anupa Gnanakan
                 </div>
                 <div class="text-center">
-                    Director – Education,<br/> ACTS Group of Institutions, Bangalore, India<br />
+                    Director – Education,<br /> ACTS Group of Institutions, Bangalore, India<br />
                     <a class="text-white" href="mailto:anupagnanakan@gmail.com"><i
                             class="fa-regular fa-envelope"></i></a>
                 </div>
@@ -832,7 +1900,7 @@ Triennial Conference 2023
                     Ms. Lisa Jungkamp
                 </div>
                 <div class="text-center">
-                    Social Worker and Systemic Counselor,<br/> Catholic University of Applied Science
+                    Social Worker and Systemic Counselor,<br /> Catholic University of Applied Science
                     of North Rhine-Westphalia, Germany<br />
                     <a class="text-white" href="mailto:l.jungkamp@katho-nrw.de"><i
                             class="fa-regular fa-envelope"></i></a>
@@ -850,7 +1918,7 @@ Triennial Conference 2023
                     Mr. Shinto Joseph
                 </div>
                 <div class="text-center">
-                    Director - South East Asia Operations,<br/> LDRA, Bangalore, India<br />
+                    Director - South East Asia Operations,<br /> LDRA, Bangalore, India<br />
                     <a class="text-white" href="mailto:shintojoseph13345@gmail.com"><i
                             class="fa-regular fa-envelope"></i></a>
                 </div>
@@ -875,7 +1943,7 @@ Triennial Conference 2023
                     Mr. Nijumon K John
                 </div>
                 <div class="text-center">
-                    Associate Professor,<br/> CHRIST (Deemed to be University), Bangalore,
+                    Associate Professor,<br /> CHRIST (Deemed to be University), Bangalore,
                     India<br />
                     <a class="text-white" href="mailto:nijumon.k.john@christuniversity.in"><i
                             class="fa-regular fa-envelope"></i></a>
@@ -893,7 +1961,7 @@ Triennial Conference 2023
                     Mr. Nikhil Pai
                 </div>
                 <div class="text-center">
-                    Technical Writer,<br/> Cisco, Bangalore, India<br />
+                    Technical Writer,<br /> Cisco, Bangalore, India<br />
                     <a class="text-white" href="mailto:mailnikhilpai@gmail.com"><i
                             class="fa-regular fa-envelope"></i></a>
                 </div>
@@ -910,7 +1978,7 @@ Triennial Conference 2023
                     Mr. David S R
                 </div>
                 <div class="text-center">
-                    Founder,<br/> E-Cure Charitable Trust, Bangalore, India<br />
+                    Founder,<br /> E-Cure Charitable Trust, Bangalore, India<br />
                     <a class="text-white" href="mailto:david@e-cure.org"><i class="fa-regular fa-envelope"></i></a>
                 </div>
             </div>
@@ -919,56 +1987,56 @@ Triennial Conference 2023
 </div>
 
 <div style="background-color: white;">
-<div class="container mt-5" >
-    <div class="row m-auto">
+    <div class="container mt-5">
+        <div class="row m-auto">
 
-        <div class="col-12 mt-5 mb-3 fw-bold font fs-3 text-center" style="color: #274C7D;">
-            Host Universities
-        </div>
-        <div class="col-12">
-            <img src="{% static 'conference/triennial/2023/Conference-Logos1.png' %}" class="img-fluid">
-        </div>
-
-        <div class="col-12 mt-5 mb-4">
-            <div class="fw-bold fs-4 text-center font" style="color: #274C7D;">
-                Glimpses of Triennial Conference 2020
+            <div class="col-12 mt-5 mb-3 fw-bold font fs-3 text-center" style="color: #274C7D;">
+                Host Universities
             </div>
-            <div class="gallery mb-5">
-                <div style="border-radius: 10px;">
-                    <iframe src="https://www.youtube.com/embed/AhTNFO-ETe4?list=PLTas59dAb68dNPXGkcE1FzSECebNc_vaT"
-                        allowfullscreen frameborder="0" name="tab"></iframe>
+            <div class="col-12">
+                <img src="{% static 'conference/triennial/2023/Conference-Logos1.png' %}" class="img-fluid">
+            </div>
+
+            <div class="col-12 mt-5 mb-4">
+                <div class="fw-bold fs-4 text-center font" style="color: #274C7D;">
+                    Glimpses of Triennial Conference 2020
                 </div>
-                <div>
-                    <span>
-                        <a href="https://www.youtube.com/embed/AhTNFO-ETe4?list=PLTas59dAb68dNPXGkcE1FzSECebNc_vaT"
-                            target="tab"><img src="https://img.youtube.com/vi/AhTNFO-ETe4/default.jpg"></a>
-                        <a href="https://www.youtube.com/embed/B3K90MF7mSg?list=PLTas59dAb68dNPXGkcE1FzSECebNc_vaT"
-                            target="tab"><img src="https://img.youtube.com/vi/B3K90MF7mSg/default.jpg"></a>
-                        <a href="https://www.youtube.com/embed/Bb4JwMPcenM?list=PLTas59dAb68dNPXGkcE1FzSECebNc_vaT"
-                            target="tab"><img src="https://img.youtube.com/vi/Bb4JwMPcenM/default.jpg"></a>
-                        <a href="https://www.youtube.com/embed/OAWBnr1-Bkg?list=PLTas59dAb68dNPXGkcE1FzSECebNc_vaT"
-                            target="tab"><img src="https://img.youtube.com/vi/OAWBnr1-Bkg/default.jpg"></a>
-                        <a href="https://www.youtube.com/embed/VG_jdhIoIQk?list=PLTas59dAb68dNPXGkcE1FzSECebNc_vaT"
-                            target="tab"><img src="https://img.youtube.com/vi/VG_jdhIoIQk/default.jpg"></a>
-                        <a href="https://www.youtube.com/embed/hHr_GGeC33c?list=PLTas59dAb68dNPXGkcE1FzSECebNc_vaT"
-                            target="tab"><img src="https://img.youtube.com/vi/hHr_GGeC33c/default.jpg"></a>
-                        <a href="https://www.youtube.com/embed/kpDPsKrqSik?list=PLTas59dAb68dNPXGkcE1FzSECebNc_vaT"
-                            target="tab"><img src="https://img.youtube.com/vi/kpDPsKrqSik/default.jpg"></a>
-                        <a href="https://www.youtube.com/embed/lGLcZjg2zhU?list=PLTas59dAb68dNPXGkcE1FzSECebNc_vaT"
-                            target="tab"><img src="https://img.youtube.com/vi/lGLcZjg2zhU/default.jpg"></a>
-                        <a href="https://www.youtube.com/embed/nd6zho_iu2s?list=PLTas59dAb68dNPXGkcE1FzSECebNc_vaT"
-                            target="tab"><img src="https://img.youtube.com/vi/nd6zho_iu2s/default.jpg"></a>
-                        <a href="https://www.youtube.com/embed/qvFY6Nbyuqw?list=PLTas59dAb68dNPXGkcE1FzSECebNc_vaT"
-                            target="tab"><img src="https://img.youtube.com/vi/qvFY6Nbyuqw/default.jpg"></a>
-                        <a href="https://www.youtube.com/embed/y5m7So1W_9s?list=PLTas59dAb68dNPXGkcE1FzSECebNc_vaT"
-                            target="tab"><img src="https://img.youtube.com/vi/y5m7So1W_9s/default.jpg"></a>
-                    </span>
+                <div class="gallery mb-5">
+                    <div style="border-radius: 10px;">
+                        <iframe src="https://www.youtube.com/embed/AhTNFO-ETe4?list=PLTas59dAb68dNPXGkcE1FzSECebNc_vaT"
+                            allowfullscreen frameborder="0" name="tab"></iframe>
+                    </div>
+                    <div>
+                        <span>
+                            <a href="https://www.youtube.com/embed/AhTNFO-ETe4?list=PLTas59dAb68dNPXGkcE1FzSECebNc_vaT"
+                                target="tab"><img src="https://img.youtube.com/vi/AhTNFO-ETe4/default.jpg"></a>
+                            <a href="https://www.youtube.com/embed/B3K90MF7mSg?list=PLTas59dAb68dNPXGkcE1FzSECebNc_vaT"
+                                target="tab"><img src="https://img.youtube.com/vi/B3K90MF7mSg/default.jpg"></a>
+                            <a href="https://www.youtube.com/embed/Bb4JwMPcenM?list=PLTas59dAb68dNPXGkcE1FzSECebNc_vaT"
+                                target="tab"><img src="https://img.youtube.com/vi/Bb4JwMPcenM/default.jpg"></a>
+                            <a href="https://www.youtube.com/embed/OAWBnr1-Bkg?list=PLTas59dAb68dNPXGkcE1FzSECebNc_vaT"
+                                target="tab"><img src="https://img.youtube.com/vi/OAWBnr1-Bkg/default.jpg"></a>
+                            <a href="https://www.youtube.com/embed/VG_jdhIoIQk?list=PLTas59dAb68dNPXGkcE1FzSECebNc_vaT"
+                                target="tab"><img src="https://img.youtube.com/vi/VG_jdhIoIQk/default.jpg"></a>
+                            <a href="https://www.youtube.com/embed/hHr_GGeC33c?list=PLTas59dAb68dNPXGkcE1FzSECebNc_vaT"
+                                target="tab"><img src="https://img.youtube.com/vi/hHr_GGeC33c/default.jpg"></a>
+                            <a href="https://www.youtube.com/embed/kpDPsKrqSik?list=PLTas59dAb68dNPXGkcE1FzSECebNc_vaT"
+                                target="tab"><img src="https://img.youtube.com/vi/kpDPsKrqSik/default.jpg"></a>
+                            <a href="https://www.youtube.com/embed/lGLcZjg2zhU?list=PLTas59dAb68dNPXGkcE1FzSECebNc_vaT"
+                                target="tab"><img src="https://img.youtube.com/vi/lGLcZjg2zhU/default.jpg"></a>
+                            <a href="https://www.youtube.com/embed/nd6zho_iu2s?list=PLTas59dAb68dNPXGkcE1FzSECebNc_vaT"
+                                target="tab"><img src="https://img.youtube.com/vi/nd6zho_iu2s/default.jpg"></a>
+                            <a href="https://www.youtube.com/embed/qvFY6Nbyuqw?list=PLTas59dAb68dNPXGkcE1FzSECebNc_vaT"
+                                target="tab"><img src="https://img.youtube.com/vi/qvFY6Nbyuqw/default.jpg"></a>
+                            <a href="https://www.youtube.com/embed/y5m7So1W_9s?list=PLTas59dAb68dNPXGkcE1FzSECebNc_vaT"
+                                target="tab"><img src="https://img.youtube.com/vi/y5m7So1W_9s/default.jpg"></a>
+                        </span>
+                    </div>
                 </div>
             </div>
-        </div>
 
+        </div>
     </div>
-</div>
 </div>
 
 {% endblock %}
