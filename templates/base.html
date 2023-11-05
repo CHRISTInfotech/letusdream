@@ -46,24 +46,15 @@
 
 <body ondragstart="return false" {% if bgcolor %}style="background-color:{{bgcolor}}!important; color:white !important" {% endif %}>
     <header class="menu-wrapper">
-<<<<<<< HEAD
-        <marquee width="100%" direction="left" class="fixed-top marquee" scrollamount="12" 
-=======
         <!-- <marquee width="100%" direction="left" class="fixed-top marquee" scrollamount="12" 
->>>>>>> 5e2800a0bb5775535741c942a18afdd8f6894554
         {% if bgcolor %}style="background-color:{{bgcolor}}!important;" {%else%} style="background-color: #d3f2e9;" {% endif %}>
             <a href="{% url 'tc-2023' %}" class="text-decoration-none"
             {% if bgcolor %}style="color: white;" {%else%} style="color: black;" {% endif %}> 
                 <i class="fa fa-arrow-right" aria-hidden="true"></i>
                 Register here for the Let Us Dream Triennial International Conference 2023.
             </a>
-<<<<<<< HEAD
-        </marquee>
-        <nav class="navbar navbar-expand-lg mt-4" id="navbar" {% if bgcolor %}style="background-color:{{bgcolor}}!important;" {% endif %}>
-=======
         </marquee> -->
         <nav class="navbar navbar-expand-lg" id="navbar" {% if bgcolor %}style="background-color:{{bgcolor}}!important;" {% endif %}>
->>>>>>> 5e2800a0bb5775535741c942a18afdd8f6894554
             <div class="container">
                 <a class="navbar-brand" href=" {% url 'main' %}" class="mb-3">
                     <img src="{% static 'logo/let-us-dream-Empowering-Communities-01.png' %}" class="logo-img"
@@ -237,11 +228,7 @@
 
         </nav>
     </header>
-<<<<<<< HEAD
-    <div style="height: 40px!important;"></div>
-=======
     <!-- <div style="height: 40px!important;"></div> -->
->>>>>>> 5e2800a0bb5775535741c942a18afdd8f6894554
     {% block content %}
 
     {% endblock content %}
