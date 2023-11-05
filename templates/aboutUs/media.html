@@ -44,8 +44,56 @@ MEDIA
 
         <div class="accordion" id="accordionExample">
           <div class="card">
+            <div class="card-header" id="headingThree">
+              <h2 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSix"
+                  aria-expanded="false" aria-controls="collapseSix">
+                  Publications
+                </button>
+              </h2>
+            </div>
+
+            <div id="collapseSix" class="collapse blog-home2 show" aria-labelledby="collapseSix"
+              data-parent="#accordionExample">
+              <div class="card-body">
+                <div class="container-fluid text-h3 bg-green">
+
+                  <div class="row text-center">
+                    <div class="col-lg-3 col-md-3 p-3">
+                      <div
+                        class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
+                        Nov<span class="d-block">05</span>2023</div>
+                      <a href="{% static 'Publications/SilverJubile.pdf' %}"
+                        target="_blank">
+                        <img src="{% static 'Publications/SilverJubileThumpnail.png' %}" class="img1 m-3">
+                      </a>
+                    </div>
+                    <div class="col-lg-3 col-md-3 p-3">
+                      <div
+                        class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
+                        Nov<span class="d-block">05</span>2023</div>
+                      <a href="{% static 'Proceedings/Proceedings.pdf' %}"
+                        target="_blank">
+                        <img src="{% static 'Publications/ProceedingsThumpnail.png' %}" class="img1 m-3">
+                      </a>
+                    </div>
+                    <div class="col-lg-3 col-md-3 p-3">
+                      <div
+                        class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
+                        Nov<span class="d-block">05</span>2023</div>
+                      <a href="{% static 'Publications/Dreams.pdf' %}" target="_blank">
+                        <img src="{% static 'Publications/DreamsThumpnail.png' %}" class="img1 m-3">
+                      </a>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
             <div class="card-header" id="headingOne">
-              <h2  class="mb-0">
+              <h2 class="mb-0">
                 <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
                   aria-expanded="true" aria-controls="collapseOne">
                   Press Release
@@ -53,7 +101,7 @@ MEDIA
               </h2>
             </div>
 
-            <div id="collapseOne" class="collapse blog-home2 show" aria-labelledby="headingOne"
+            <div id="collapseOne" class="collapse blog-home2" aria-labelledby="headingOne"
               data-parent="#accordionExample">
               <div class="card-body">
                 <p>
@@ -217,7 +265,7 @@ MEDIA
                         Nov<span class="d-block">10</span>2020</div>
                       <img src="{% static 'Aboutus/Media/Newsletter/Newsletter-3.jpg' %}" class="img1 m-3">
                     </div>
-                    
+
                   </div>
 
 
@@ -228,11 +276,10 @@ MEDIA
                     class="fw-bold text-h3 text-decoration-none">Read more</a></p>
                 </p>
 
-
-
               </div>
             </div>
           </div>
+
         </div>
 
       </div>
