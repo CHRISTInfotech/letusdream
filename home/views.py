@@ -2,6 +2,7 @@ import csv
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from django_countries import Countries
+from pdf2image import convert_from_path
 from django_countries import countries
 import requests
 
@@ -10,7 +11,9 @@ import geoip2.database
 from letusdream.settings import BASE_DIR
 
 from home.models import ConferenceRegistration, Visitor
-
+from PIL import Image
+import io
+import base64
 
 # Create your views here.
 
@@ -344,3 +347,23 @@ def contactUs(request):
 
 def conversation_club(request):
     return render(request, 'clubs/conversation_club.html')
+
+# def convert_pdf_to_images(pdf_path):
+#     images = convert_from_path(pdf_path)
+#     image_data = []
+#     for image in images:
+#         # Convert each PIL image to a base64 encoded string
+#         buffer = io.BytesIO()
+#         image.save(buffer, format="JPEG")  # You can choose a different format if needed
+#         image_data.append(base64.b64encode(buffer.getvalue()).decode())
+
+#     return image_data
+
+
+def flipbook(request):
+    # pdf_path = 'ltstatic/conference/triennial/2023/media/MAGAZINE - PRINT Version.pdf' 
+    # print(pdf_path) # Replace with your PDF file path
+    # pdf_images = convert_pdf_to_images(pdf_path)
+    # print(pdf_images)
+
+    return render(request, 'components/flipbook.html',)

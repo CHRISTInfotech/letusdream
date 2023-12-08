@@ -46,6 +46,7 @@ urlpatterns = [
      path('triennial-conference-withoutdata-2023', withoutdata_2023,name='tc-without-2023'), 
      path('contactUs/',contactUs,name='conatctUs'),
      path('conversation/club/',conversation_club,name='conversation_club'),
+     path('flibbook/pdf/',flipbook,name='flipbook'),
 
 
 
