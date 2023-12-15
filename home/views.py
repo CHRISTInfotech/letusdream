@@ -2,7 +2,7 @@ import csv
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from django_countries import Countries
-from pdf2image import convert_from_path
+# from pdf2image import convert_from_path
 from django_countries import countries
 import requests
 
@@ -11,7 +11,7 @@ import geoip2.database
 from letusdream.settings import BASE_DIR
 
 from home.models import ConferenceRegistration, Visitor
-from PIL import Image
+# from PIL import Image
 import io
 import base64
 
