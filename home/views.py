@@ -12,6 +12,7 @@ from letusdream.settings import BASE_DIR
 
 from home.models import ConferenceRegistration, Visitor
 # from PIL import Image
+
 import io
 import base64
 
