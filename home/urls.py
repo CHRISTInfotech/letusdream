@@ -45,9 +45,14 @@ urlpatterns = [
      path('triennial-conference-2023', triennialConference2023,name='tc-2023'), 
      path('triennial-conference-withoutdata-2023', withoutdata_2023,name='tc-without-2023'), 
      path('contactUs/',contactUs,name='conatctUs'),
-     path('conversation/club/',conversation_club,name='conversation_club'),
-     path('flibbook/pdf/',flipbook,name='flipbook'),
 
-
+     # CLUB URLs
+     path('clubs',club_overview,name='club-overview'),
+     path('clubs/overview',club_overview,name='club-overview'),
+     path('clubs/community',community_club,name='community-club'),
+     path('clubs/conversation',conversation_club,name='conversation-club'),
+     path('clubs/professional',professional_club,name='professional-club'),
+     path('clubs/selfhelp',selfhelp_club,name='selfhelp-club'),
+     path('clubs/youth-leadership',youthleadership_club,name='youthleadership-club'),
 
 ]

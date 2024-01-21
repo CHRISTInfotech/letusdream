@@ -16,11 +16,11 @@ from home.models import ConferenceRegistration, Visitor
 import io
 import base64
 
+
 # Create your views here.
 
 
 def index(request):
-
     try:
         visitorObj = Visitor.objects.all()
 
@@ -173,12 +173,8 @@ def yclpCourse(request):
 def dreams(request, drm):
     if drm == 'band':
         return render(request, 'dreams/dreamsBand.html', {'drm': drm})
-    elif drm == 'proclub':
-        return render(request, 'dreams/dreamsProclub.html', {'drm': drm})
-    elif drm == 'program':
+    else:
         return render(request, 'dreams/dreamsProgram.html', {'drm': drm})
-    elif drm == 'leadershipnetwork':
-        return render(request, 'dreams/leadershipNetwork.html', {'drm': drm})
 
 
 def locations(request, loc):
@@ -217,7 +213,6 @@ def publications(request):
 
 
 def registration_user(request):
-
     if request.method == "POST":
         name = request.POST.get('name')
         email = request.POST.get('email')
@@ -265,6 +260,8 @@ def registration_user(request):
     else:
         print("Failed")
         return render(request, 'registration.html')
+
+
 #    return render(request, 'registration.html')
 
 
@@ -283,7 +280,7 @@ def downloadcsv(request):
     writer = csv.writer(response)
 
     writer.writerow(['Date', 'Name', 'Email ID', 'Phone No', 'Interest', 'Student Address',
-                    'Student Grade', 'Parent Name', 'Parent Mobile', 'Parent Email ID',
+                     'Student Grade', 'Parent Name', 'Parent Mobile', 'Parent Email ID',
                      'Parent Address', 'User Type'])
     for i in confreg:
         writer.writerow([i.date, i.name, i.email, i.phone, i.interest, i.st_addr, i.st_grade,
@@ -300,7 +297,7 @@ def downloadvoltcsv(request):
     writer = csv.writer(response)
 
     writer.writerow(['Date', 'Name', 'Email ID', 'Phone No', 'Interest', 'Volunteer Type',
-                    'Intro', 'Areas of expertise',  'User Type'])
+                     'Intro', 'Areas of expertise', 'User Type'])
     for i in confreg:
         writer.writerow([i.date, i.name, i.email, i.phone, i.interest, i.vl_type,
                          i.vl_about, i.vl_expert, i.user_type])
@@ -315,10 +312,10 @@ def downloadpartcsv(request):
     writer = csv.writer(response)
 
     writer.writerow(['Date', 'Name', 'Email ID', 'Phone No', 'Interest', 'Address',
-                    'Message', 'User Type'])
+                     'Message', 'User Type'])
     for i in confreg:
         writer.writerow([i.date, i.name, i.email, i.phone,
-                        i.interest, i.ptr_addr, i.ptr_msg, i.user_type])
+                         i.interest, i.ptr_addr, i.ptr_msg, i.user_type])
     return response
 
 
@@ -346,25 +343,27 @@ def contactUs(request):
     return render(request, 'aboutUs/contactus.html')
 
 
+# CLUB Pages
+
+def club_overview(request):
+    return render(request, 'clubs/overview.html')
+
+
+def community_club(request):
+    return render(request, 'clubs/community.html')
+
+
 def conversation_club(request):
-    return render(request, 'clubs/conversation_club.html')
-
-# def convert_pdf_to_images(pdf_path):
-#     images = convert_from_path(pdf_path)
-#     image_data = []
-#     for image in images:
-#         # Convert each PIL image to a base64 encoded string
-#         buffer = io.BytesIO()
-#         image.save(buffer, format="JPEG")  # You can choose a different format if needed
-#         image_data.append(base64.b64encode(buffer.getvalue()).decode())
-
-#     return image_data
+    return render(request, 'clubs/conversation.html')
 
 
-def flipbook(request):
-    # pdf_path = 'ltstatic/conference/triennial/2023/media/MAGAZINE - PRINT Version.pdf' 
-    # print(pdf_path) # Replace with your PDF file path
-    # pdf_images = convert_pdf_to_images(pdf_path)
-    # print(pdf_images)
+def professional_club(request):
+    return render(request, 'clubs/professional.html')
 
-    return render(request, 'components/flipbook.html',)
+
+def selfhelp_club(request):
+    return render(request, 'clubs/selfhelp.html')
+
+
+def youthleadership_club(request):
+    return render(request, 'clubs/youthleadership.html')
