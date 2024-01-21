@@ -1,12 +1,69 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}
-Clubs Overview
+    Clubs Overview
 {% endblock title %}
+
+
+{% block extraStyles %}
+    <link rel="stylesheet" href="{% static 'clubs/clubs.css' %}" type="text/css">
+{% endblock extraStyles %}
 
 {% block content %}
 
-    <div>
+    <div class="container margin-top-170">
+
+        <nav aria-label="breadcrumb animated slideInDown">
+            <ol class="breadcrumb text-uppercase mb-0 bg-white">
+                <li class="breadcrumb-item"><a class="text-black text-decoration-none" href="{% url 'main' %}">Home</a>
+                </li>
+                <li class="breadcrumb-item"><a class="text-black text-decoration-none">Clubs</a></li>
+                <li class="breadcrumb-item  active" aria-current="page" style="color: #0a7b79;">Overview</li>
+            </ol>
+        </nav>
+
+        <div class="row mt-5 mb-5">
+            <div class="col-12">
+                <div class="fs-1 fw-bolder text-center">
+                    Know More on Let Us Dream Clubs
+                </div>
+            </div>
+            <div class="col mt-4">
+                <div class="fw-bolder fs-2 mb-3">
+                    Purpose
+                </div>
+                <div class="lh-lg">
+                    The overarching purpose of Let Us Dream (LUD) Clubs is to build a sense of community and authentic
+                    connections through engagement in online/hybrid conversations and reflective listening about topics
+                    that are professionally and/or personally relevant to group participants for holistic advancement.
+                    Like mastermind groups, the LUD Club is a peer-to-peer mentoring group where members discuss matters
+                    of mutual interest and exchange tested strategies and ideas. The intended outcome is to encourage
+                    divergent thinking and develop personal and professional competencies.
+                </div>
+
+                <div class="fw-bolder fs-2 mb-3 mt-5">
+                    Description
+                </div>
+                <div class="lh-lg">
+                    Research suggests that conversations with friends can support us emotionally, intellectually,
+                    spiritually, and physically. Designating a meeting time and place to interact and dialogue with
+                    others helps ensure that deep conversations will occur. To that end, LUD Clubs are designed to
+                    create a virtual, inclusive, safe space for interested participants to meet, brainstorm, and
+                    exchange ideas, information, and experiences monthly. Participating members are from various
+                    backgrounds of professional, cultures, ethnicities, and nationalities but have a shared desire for
+                    personal and professional growth. There are different clubs available with diverse areas of
+                    interest.
+                </div>
+            </div>
+
+            <div class="col-4">
+                <div class="text-center bg-light mt-5 p-3">
+                    Latest Updates
+                </div>
+            </div>
+
+        </div>
 
     </div>
 
