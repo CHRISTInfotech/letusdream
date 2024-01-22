@@ -1,12 +1,122 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}
-Youth Leadership Club
+    GYLN (Global Youth Leadership Network)
 {% endblock title %}
+
+
+{% block extraStyles %}
+    <link rel="stylesheet" href="{% static 'clubs/clubs.css' %}" type="text/css">
+{% endblock extraStyles %}
 
 {% block content %}
 
-    <div>
+    <div class="container margin-top-170">
+
+        <nav aria-label="breadcrumb animated slideInDown">
+            <ol class="breadcrumb text-uppercase mb-0 bg-white">
+                <li class="breadcrumb-item"><a class="text-black text-decoration-none" href="{% url 'main' %}">Home</a>
+                </li>
+                <li class="breadcrumb-item"><a class="text-black text-decoration-none">Clubs</a></li>
+                <li class="breadcrumb-item  active" aria-current="page" style="color: #0a7b79;">GYLN (Global Youth
+                    Leadership Network)
+                </li>
+            </ol>
+        </nav>
+
+        <div class="row mt-5 mb-5">
+            <div class="col-12">
+                <div class="fs-1 fw-bolder text-center">
+                    GYLN (Global Youth Leadership Network)
+                </div>
+            </div>
+            <div class="col">
+                <div class="fw-bolder fs-2 mb-3 mt-5">
+                    About
+                </div>
+                <div class="lh-lg">
+                    This club provides a platform for young emerging and prospective professional leaders. Members
+                    represent diverse backgrounds and meet to discuss a wide variety of leadership topics based on each
+                    one’s expertise and knowledge. These future leaders expand their professional and leadership skills
+                    by networking and interacting with aspiring club members worldwide.
+                </div>
+
+                <div class="fw-bolder fs-2 mb-3 mt-5">
+                    Objectives
+                </div>
+                <div class="lh-lg">
+                    ● Provide a platform for members to discuss and explore diverse leadership topics, enhancing their
+                    leadership skills and knowledge.
+                    <br/>
+                    ● Foster an environment where members share their expertise and knowledge, contributing to the
+                    collective learning of the group.
+                    <br/>
+                    ● Create a supportive community where members can share challenges and successes, fostering a sense
+                    of camaraderie and mutual encouragement.
+                </div>
+
+                <div class="fw-bolder fs-2 mb-3 mt-5">
+                    How it works?
+                </div>
+                <div class="lh-lg">
+                    While each LUD Club has a distinct focus, the overall structure of the Conversation Club includes
+                    virtual meetings every Saturday, the third week of the month. This includes 12-15 active members who
+                    wish to engage in discourse grounded in shared interests. Generally, a group member assumes a
+                    manager role to ensure that meeting dates, times, and topics are collaboratively identified and
+                    scheduled. Clubs are self-organized, self-managed, and self-generated, and leadership is shared
+                    among group members. Mutual accountability is inherent in club discussions inasmuch as there is a
+                    periodic sharing of goals and progress. A one-hour timebox for each meeting is maintained.
+                </div>
+            </div>
+
+            <div class="col-4">
+                <div class="text-center bg-light mt-5 p-3 fs-4">
+                    Latest Updates
+                </div>
+                <marquee direction="up" height="500px">
+
+                    <div class="p-1 club-news">
+                        <div class="fw-bold">
+                            Latest News Update
+                        </div>
+                        <small class="fst-italic">
+                            20th January 2024 | Bangalore, India
+                        </small>
+                    </div>
+                </marquee>
+
+            </div>
+
+        </div>
+
+
+        <div class="row mt-5 mb-5">
+
+            <div class="col-12 my-5">
+                <div class="text-center fw-bolder fs-2">
+                    Leadership
+                </div>
+                <div class="row d-flex justify-content-evenly mt-3">
+                    <div class="col-2">
+                        <img src="{% static 'clubs/leadership/Tirukovela.png' %}" class="img-thumbnail rounded" alt="">
+                        <div class="mt-3 text-center">
+                            <div class="fw-bolder">Tirukovela Srikar</div>
+                            <small class="fst-italic">Counselling Psychologist</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 my-5">
+                <div class="text-center fw-bolder fs-2">
+                    Contact
+                </div>
+                <div class="text-center mt-4 fw-bold fs-6">
+                    <i class="fa-solid fa-envelope"></i> clubs@letusdream.org
+                </div>
+            </div>
+        </div>
 
     </div>
 

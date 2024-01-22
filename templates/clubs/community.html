@@ -1,12 +1,109 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}
-Community Club
+    Community Hubs
 {% endblock title %}
+
+{% block extraStyles %}
+    <link rel="stylesheet" href="{% static 'clubs/clubs.css' %}" type="text/css">
+{% endblock extraStyles %}
 
 {% block content %}
 
-    <div>
+    <div class="container margin-top-170">
+
+        <nav aria-label="breadcrumb animated slideInDown">
+            <ol class="breadcrumb text-uppercase mb-0 bg-white">
+                <li class="breadcrumb-item"><a class="text-black text-decoration-none" href="{% url 'main' %}">Home</a>
+                </li>
+                <li class="breadcrumb-item"><a class="text-black text-decoration-none">Clubs</a></li>
+                <li class="breadcrumb-item  active" aria-current="page" style="color: #0a7b79;">Community Hubs</li>
+            </ol>
+        </nav>
+
+        <div class="row mt-5 mb-5">
+            <div class="col-12">
+                <div class="fs-1 fw-bolder text-center">
+                    Community Hubs
+                </div>
+            </div>
+            <div class="col">
+                <div class="fw-bolder fs-2 mb-3 mt-5">
+                    About
+                </div>
+                <div class="lh-lg">
+                    With the focus to ‘connect, learn, and grow together, these clubs are to maintain a strong,
+                    connected, and engaged team throughout the year, fostering continuous learning, personal growth, and
+                    a sense of community among team members. By organizing monthly sessions, we aim to replicate the
+                    immersive learning experiences of LUD annual conferences and extend this engagement into a
+                    year-round initiative.
+                </div>
+
+                <div class="fw-bolder fs-2 mb-3 mt-5">
+                    Objectives
+                </div>
+                <div class="lh-lg">
+                    ● Create a platform for team members to share their expertise, insights, and experiences, fostering a collaborative learning environment.
+                    <br/>
+                    ● Recognize and celebrate individual and team achievements, fostering a positive and motivating atmosphere within the group.
+                    <br/>
+                    ● Create a space encouraging innovative thinking and creativity, allowing team members to contribute fresh ideas and perspectives.
+                </div>
+
+            </div>
+
+            <div class="col-4">
+                <div class="text-center bg-light mt-5 p-3 fs-4">
+                    Latest Updates
+                </div>
+                <marquee direction="up" height="500px">
+
+                    <div class="p-1 club-news">
+                        <div class="fw-bold">
+                            Latest News Update
+                        </div>
+                        <small class="fst-italic">
+                            20th January 2024 | Bangalore, India
+                        </small>
+                    </div>
+                </marquee>
+
+            </div>
+
+        </div>
+
+
+        <div class="row mt-5 mb-5">
+
+            <div class="col-12 my-5">
+                <div class="text-center fw-bolder fs-2">
+                    Leadership
+                </div>
+                <div class="row d-flex justify-content-evenly mt-3">
+                    <div class="col-2">
+                        <img src="{% static 'clubs/leadership/SwathiShree.png' %}" class="img-thumbnail rounded" alt="">
+                        <div class="mt-3 text-center">
+                            <div class="fw-bolder">Swathi Shree</div>
+                            <small class="fst-italic">
+                                MSc psychology HRDM
+                                <br/>
+                                HR intern at ThinkAlternate Technologies
+                            </small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 my-5">
+                <div class="text-center fw-bolder fs-2">
+                    Contact
+                </div>
+                <div class="text-center mt-4 fw-bold fs-6">
+                    <i class="fa-solid fa-envelope"></i> clubs@letusdream.org
+                </div>
+            </div>
+        </div>
 
     </div>
 

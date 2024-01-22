@@ -1,12 +1,99 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}
-Self Help Hubs
+    Self-Help Club
 {% endblock title %}
+
+
+{% block extraStyles %}
+    <link rel="stylesheet" href="{% static 'clubs/clubs.css' %}" type="text/css">
+{% endblock extraStyles %}
 
 {% block content %}
 
-    <div>
+    <div class="container margin-top-170">
+
+        <nav aria-label="breadcrumb animated slideInDown">
+            <ol class="breadcrumb text-uppercase mb-0 bg-white">
+                <li class="breadcrumb-item"><a class="text-black text-decoration-none" href="{% url 'main' %}">Home</a>
+                </li>
+                <li class="breadcrumb-item"><a class="text-black text-decoration-none">Clubs</a></li>
+                <li class="breadcrumb-item  active" aria-current="page" style="color: #0a7b79;">Self-Help Club</li>
+            </ol>
+        </nav>
+
+        <div class="row mt-5 mb-5">
+            <div class="col-12">
+                <div class="fs-1 fw-bolder text-center">
+                    Self-Help Club
+                </div>
+            </div>
+            <div class="col">
+                <div class="fw-bolder fs-2 mb-3 mt-5">
+                    About
+                </div>
+                <div class="lh-lg">
+                    Focusing on health and happiness, this club targets personal development and self-discovery. To
+                    achieve this goal, participants explore inspirational ideas from multiple and diverse sources. The
+                    focal point is on considering and celebrating the beauty in caring and being mindful of living
+                    happier and healthier lives.
+                </div>
+
+                <div class="fw-bolder fs-2 mb-3 mt-5">
+                    Objectives
+                </div>
+                <div class="lh-lg">
+                    ● Prioritize discussions and activities that contribute to physical and mental well-being, fostering
+                    a holistic approach to health and happiness.
+                    <br/>
+                    ● Discuss and encourage the adoption of positive habits that contribute to overall well-being, both
+                    physically and emotionally.
+                    <br/>
+                    ● Create awareness around mental health and provide a safe space for open discussions on mental
+                    well-being.
+                </div>
+            </div>
+
+            <div class="col-4">
+                <div class="text-center bg-light mt-5 p-3 fs-4">
+                    Latest Updates
+                </div>
+                <marquee direction="up" height="500px">
+
+                    <div class="p-1 club-news">
+                        <div class="fw-bold">
+                            Latest News Update
+                        </div>
+                        <small class="fst-italic">
+                            20th January 2024 | Bangalore, India
+                        </small>
+                    </div>
+                </marquee>
+
+            </div>
+
+        </div>
+
+
+        <div class="row mt-5 mb-5">
+
+            <div class="col-12 my-5">
+                <div class="text-center fw-bolder fs-2">
+                    Leadership
+                </div>
+
+            </div>
+
+            <div class="col-12 my-5">
+                <div class="text-center fw-bolder fs-2">
+                    Contact
+                </div>
+                <div class="text-center mt-4 fw-bold fs-6">
+                    <i class="fa-solid fa-envelope"></i> clubs@letusdream.org
+                </div>
+            </div>
+        </div>
 
     </div>
 
