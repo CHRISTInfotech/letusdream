@@ -58,11 +58,98 @@
             </div>
 
             <div class="col-4">
-                <div class="text-center bg-light mt-5 p-3">
+                <div class="text-center bg-light mt-5 p-3 fs-4">
                     Latest Updates
                 </div>
+                <marquee direction="up" height="500px">
+
+                    <div class="p-1 club-news">
+                        <div class="fw-bold">
+                            Latest News Update
+                        </div>
+                        <small class="fst-italic">
+                            Club Name
+                        </small>
+                        <br/>
+                        <small>
+                            20th January 2024 | Bangalore, India
+                        </small>
+                    </div>
+                </marquee>
+
             </div>
 
+        </div>
+
+        <div class="row mt-5 mb-5">
+            <div class="col-12">
+                <div class="text-center fw-bolder fs-2">
+                    Clubs
+                </div>
+            </div>
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                    <a href="{% url 'professional-club' %}" class="text-decoration-none">
+                        <div class="card">
+                            <img src="{% static 'clubs/img.png' %}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Professional Club</h5>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="{% url 'conversation-club' %}" class="text-decoration-none">
+                        <div class="card">
+                            <img src="{% static 'clubs/img.png' %}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Conversation Club</h5>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="{% url 'youthleadership-club' %}" class="text-decoration-none">
+                        <div class="card">
+                            <img src="{% static 'clubs/img.png' %}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Youth Leadership Network</h5>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="{% url 'selfhelp-club' %}" class="text-decoration-none">
+                        <div class="card">
+                            <img src="{% static 'clubs/img.png' %}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Self Help Club</h5>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="{% url 'community-club' %}" class="text-decoration-none">
+                        <div class="card">
+                            <img src="{% static 'clubs/img.png' %}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Community Hubs</h5>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5 mb-5">
+            <div class="col-12">
+                <div class="text-center fw-bolder fs-2">
+                    Contact
+                </div>
+                <div class="text-center mt-4 fw-bold fs-6">
+                    <i class="fa-solid fa-envelope"></i> clubs@letusdream.org
+                </div>
+            </div>
         </div>
 
     </div>
