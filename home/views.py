@@ -323,8 +323,8 @@ def testimonials(request):
     return render(request, 'home/view_testimonials.html')
 
 
-def announcement(request):
-    return render(request, 'aboutUs/announcement.html')
+def sustainability(request):
+    return render(request, 'aboutUs/sustainability.html')
 
 
 def llfp(request):
