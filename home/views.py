@@ -1,68 +1,12 @@
 import csv
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
-from django_countries import Countries
-# from pdf2image import convert_from_path
-from django_countries import countries
-import requests
-
-import os
-import geoip2.database
-from letusdream.settings import BASE_DIR
-
 from home.models import ConferenceRegistration, Visitor
-# from PIL import Image
 
-import io
-import base64
-
-
-# Create your views here.
 
 
 def index(request):
-    try:
-        visitorObj = Visitor.objects.all()
-
-        visitor_country = get_visitor_country(request)
-        # print(visitor_country)
-        country_name = dict(countries)[visitor_country]
-        # print(country_name)
-        try:
-            visitor = Visitor.objects.get(country=country_name)
-            visitor.count += 1
-            visitor.save()
-        except Visitor.DoesNotExist:
-            # If the visitor's country does not exist in the database, create a new entry
-            visitor = Visitor(country=country_name,
-                              count=1, code=visitor_country)
-        visitor.save()
-        return render(request, 'home/index.html', {"visitor": visitorObj})
-
-    except:
-
-        return render(request, 'home/index.html', {"visitor": visitorObj})
-
-
-def get_visitor_country(request):
-    # Specify the path to the GeoIP2 database file
-
-    ip_address = request.META.get('REMOTE_ADDR')
-    # Replace with your GeoIPify API key
-    api_key = 'at_SjzTo0u3XOvJceUDT6klhGk7TRUCN'
-
-    url = f'https://geoipify.whoisxmlapi.com/api/v1?apiKey={api_key}&ip={ip_address}'
-
-    url = f'https://geoipify.whoisxmlapi.com/api/v1?apiKey={api_key}&ip={ip_address}'
-
-    try:
-        response = requests.get(url)
-        data = response.json()
-        country = data['location']['country']
-    except requests.exceptions.RequestException:
-        country = 'Unknown'
-
-    return country
+    return render(request, 'home/index.html')
 
 
 def aboutUs(request):
@@ -70,7 +14,7 @@ def aboutUs(request):
 
 
 def login(request):
-    if request.method == "POST":
+    if request.method == "POST" and request.user.is_authenticated:
         return render(request, "AdminPanel/home.html")
 
 
