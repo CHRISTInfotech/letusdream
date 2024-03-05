@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+ABOUT US
+{% endblock %}
+
+{% block content %}
+
+<section class="container">
+    <nav class="cus-breadcrumb" aria-label="breadcrumb animated slideInDown ">
+        <ol class="breadcrumb text-uppercase mb-0 bg-white">
+            <li class="breadcrumb-item"><a class="text-black text-decoration-none" href="{% url 'main' %}">Home</a></li>
+            <li class="breadcrumb-item"><a class="text-black text-decoration-none">ABOUT US</a></li>
+            <li class="breadcrumb-item  active " aria-current="page">Leadership</li>
+        </ol>
+    </nav>
+
+    <div class="container mb-5 mt-5">
+        <div class="row text-center">
+            <div class="fw-bolder fs-3 mb-5">
+                Conference Chairs
+            </div>
+
+            <div class="col-3 mb-5">
+                <div class="bg-white rounded px-5">
+                    <img src="{% static 'locations/bangalore/default.png'%}"
+                        class="img-fluid rounded-circle mb-3">
+                </div>
+                <div class="mb-0">Dr. Karla Verlinden </div>
+                <div>(Faculty Representative)</div>
+                <div class="small text-uppercase text-muted">PROGRAMMER</div>
+            </div>
+
+            <div class="col-3 mb-5">
+                <div class="bg-white rounded px-5">
+                    <img src="{% static 'locations/bangalore/default.png'%}"
+                        class="img-fluid rounded-circle mb-3">
+                </div>
+                <div class="mb-0">Dr. Karla Verlinden </div>
+                <div>(Faculty Representative)</div>
+                <div class="small text-uppercase text-muted">PROGRAMMER</div>
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

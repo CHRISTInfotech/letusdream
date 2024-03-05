@@ -12,6 +12,9 @@ def index(request):
 def aboutUs(request):
     return render(request, 'aboutUs/aboutUs.html')
 
+def leadership(request):
+    return render(request,"aboutUs/leadership.html")
+
 
 def login(request):
     if request.method == "POST" and request.user.is_authenticated:

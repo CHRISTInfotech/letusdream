@@ -7,6 +7,7 @@ urlpatterns = [
      path('', index, name='main'),
      path('locations/<str:loc>', locations, name='locations'),
      path('about-us', aboutUs, name='about-us'),
+     path('leadership', leadership, name='leadership'),
      path('media', media, name='media'),
      path('newsletter', newsletter, name='newsletter'),
      path('press-release/', pressRelease, name="press-release"),
