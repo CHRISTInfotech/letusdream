@@ -275,7 +275,7 @@ def sustainability(request):
 
 
 def llfp(request):
-    return render(request, 'courses/llfp.html')
+    return render(request, 'courses/llfp2024.html')
 
 
 def triennialConference2023(request):
