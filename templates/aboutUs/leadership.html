@@ -5,9 +5,13 @@
 ABOUT US
 {% endblock %}
 
+{% block extraStyles %}
+<link rel="stylesheet" href="{% static 'css/2024/leadership.css' %}" type="text/css">
+{% endblock extraStyles %}
+
 {% block content %}
 
-<section class="container">
+<div class="m-5">
     <nav class="cus-breadcrumb" aria-label="breadcrumb animated slideInDown ">
         <ol class="breadcrumb text-uppercase mb-0 bg-white">
             <li class="breadcrumb-item"><a class="text-black text-decoration-none" href="{% url 'main' %}">Home</a></li>
@@ -15,38 +19,392 @@ ABOUT US
             <li class="breadcrumb-item  active " aria-current="page">Leadership</li>
         </ol>
     </nav>
+</div>
 
-    <div class="container mb-5 mt-5">
+<div class="container">
+
+    <div class="container mb-5 mt-5 green-bg p-5">
+
+        <div class="fw-bolder fs-2 mb-5 text-center">
+            Let Us Dream - Strategic Team
+         </div>
+
         <div class="row text-center">
-            <div class="fw-bolder fs-3 mb-5">
-                Conference Chairs
-            </div>
-
-            <div class="col-3 mb-5">
-                <div class="bg-white rounded px-5">
-                    <img src="{% static 'locations/bangalore/default.png'%}"
-                        class="img-fluid rounded-circle mb-3">
+           
+            <div class="col-5 fs-4 p-3 purple-light-bg">
+                DREAMS Intervention Programme
+                <div class="row m-auto mt-3">
+                    <div class="col">
+                        <div class="mb-2 fs-6 fw-bolder">Senior Leadership</div>
+                        <div class=" px-5">
+                            <img src="{% static 'Aboutus/leadership/frlijo.jpg'%}"
+                                class="img-fluid mb-3">
+                        </div>
+                        <div class="mb-0 fs-6">Mr Adarsh Jose</div>
+                        <div class="fs-6">Designation</div>
+                        <div class="fs-6 text-muted">Organization</div>
+                    </div>
+        
+                    <div class="col">
+                        <div class="mb-2 fs-6 fw-bolder">Youth Leadership</div>
+                        <div class=" px-5">
+                            <img src="{% static 'Aboutus/leadership/frlijo.jpg'%}"
+                                class="img-fluid mb-3">
+                        </div>
+                        <div class="mb-0 fs-6">Mr Yogesh L</div>
+                        <div class="fs-6">Designation</div>
+                        <div class="fs-6 text-muted">Organization</div>
+                    </div>
                 </div>
-                <div class="mb-0">Dr. Karla Verlinden </div>
-                <div>(Faculty Representative)</div>
-                <div class="small text-uppercase text-muted">PROGRAMMER</div>
             </div>
 
-            <div class="col-3 mb-5">
-                <div class="bg-white rounded px-5">
-                    <img src="{% static 'locations/bangalore/default.png'%}"
-                        class="img-fluid rounded-circle mb-3">
+            <div class="col-7 fs-4 p-3 blue-light-bg">
+                Community Conference
+                <div class="row m-auto mt-3">
+                    <div class="col">
+                        <div class="mb-2 fs-6 fw-bolder">Senior Leadership</div>
+                        <div class=" px-5">
+                            <img src="{% static 'Aboutus/leadership/frlijo.jpg'%}"
+                                class="img-fluid mb-3">
+                        </div>
+                        <div class="mb-0 fs-6">Dr Pauline, Jimmy</div>
+                        <div class="fs-6">Designation</div>
+                        <div class="fs-6 text-muted">Organization</div>
+                    </div>
+        
+                    <div class="col">
+                        <div class="mb-2 fs-6 fw-bolder">Senior Leadership</div>
+                        <div class=" px-5">
+                            <img src="{% static 'Aboutus/leadership/frlijo.jpg'%}"
+                                class="img-fluid mb-3">
+                        </div>
+                        <div class="mb-0 fs-6">Dr Jimmy</div>
+                        <div class="fs-6">Designation</div>
+                        <div class="fs-6 text-muted">Organization</div>
+                    </div>
+
+                    <div class="col">
+                        <div class="mb-2 fs-6 fw-bolder">Youth Leadership</div>
+                        <div class=" px-5">
+                            <img src="{% static 'Aboutus/leadership/frlijo.jpg'%}"
+                                class="img-fluid mb-3">
+                        </div>
+                        <div class="mb-0 fs-6">Ms Shrushti Mahajan</div>
+                        <div class="fs-6">Designation</div>
+                        <div class="fs-6 text-muted">Organization</div>
+                    </div>
                 </div>
-                <div class="mb-0">Dr. Karla Verlinden </div>
-                <div>(Faculty Representative)</div>
-                <div class="small text-uppercase text-muted">PROGRAMMER</div>
+            </div>
+            
+            <div class="col-4 fs-4 p-3 violet-light-bg">
+                Research & Publication
+                <div class="row m-auto mt-3">
+                    <div class="col">
+                        <div class="mb-2 fs-6 fw-bolder">Senior Leadership</div>
+                        <div class=" px-5">
+                            <img src="{% static 'Aboutus/leadership/frlijo.jpg'%}"
+                                class="img-fluid mb-3">
+                        </div>
+                        <div class="mb-0 fs-6">Dr Angela</div>
+                        <div class="fs-6">Designation</div>
+                        <div class="fs-6 text-muted">Organization</div>
+                    </div>
+        
+                    <div class="col">
+                        <div class="mb-2 fs-6 fw-bolder">Youth Leadership</div>
+                        <div class=" px-5">
+                            <img src="{% static 'Aboutus/leadership/frlijo.jpg'%}"
+                                class="img-fluid mb-3">
+                        </div>
+                        <div class="mb-0 fs-6">Mr Jestin Joseph</div>
+                        <div class="fs-6">Designation</div>
+                        <div class="fs-6 text-muted">Organization</div>
+                    </div>
+                </div>
             </div>
 
+            <div class="col-4 fs-4 p-3 red-light-bg">
+                LUD Clubs
+                <div class="row m-auto mt-3">
+                    <div class="col">
+                        <div class="mb-2 fs-6 fw-bolder">Senior Leadership</div>
+                        <div class=" px-5">
+                            <img src="{% static 'Aboutus/leadership/frlijo.jpg'%}"
+                                class="img-fluid mb-3">
+                        </div>
+                        <div class="mb-0 fs-6">Col Ranjeev K Babu</div>
+                        <div class="fs-6">Designation</div>
+                        <div class="fs-6 text-muted">Organization</div>
+                    </div>
+        
+                    <div class="col">
+                        <div class="mb-2 fs-6 fw-bolder">Youth Leadership</div>
+                        <div class=" px-5">
+                            <img src="{% static 'Aboutus/leadership/frlijo.jpg'%}"
+                                class="img-fluid mb-3">
+                        </div>
+                        <div class="mb-0 fs-6">Ms Swathishree</div>
+                        <div class="fs-6">Designation</div>
+                        <div class="fs-6 text-muted">Organization</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-4 fs-4 p-3 orange-light-bg">
+                Fellowship
+                <div class="row m-auto mt-3">
+                    <div class="col">
+                        <div class="mb-2 fs-6 fw-bolder">Senior Leadership</div>
+                        <div class=" px-5">
+                            <img src="{% static 'Aboutus/leadership/frlijo.jpg'%}"
+                                class="img-fluid mb-3">
+                        </div>
+                        <div class="mb-0 fs-6">Mr Suraj</div>
+                        <div class="fs-6">Designation</div>
+                        <div class="fs-6 text-muted">Organization</div>
+                    </div>
+        
+                    <div class="col">
+                        <div class="mb-2 fs-6 fw-bolder">Youth Leadership</div>
+                        <div class=" px-5">
+                            <img src="{% static 'Aboutus/leadership/frlijo.jpg'%}"
+                                class="img-fluid mb-3">
+                        </div>
+                        <div class="mb-0 fs-6">Ms Devika M</div>
+                        <div class="fs-6">Designation</div>
+                        <div class="fs-6 text-muted">Organization</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-7 fs-4 p-3 purple-light-bg">
+                Media Management
+                <div class="row m-auto mt-3">
+                    <div class="col">
+                        <div class="mb-2 fs-6 fw-bolder">Senior Leadership</div>
+                        <div class=" px-5">
+                            <img src="{% static 'Aboutus/leadership/frlijo.jpg'%}"
+                                class="img-fluid mb-3">
+                        </div>
+                        <div class="mb-0 fs-6">Ms Aksa</div>
+                        <div class="fs-6">Designation</div>
+                        <div class="fs-6 text-muted">Organization</div>
+                    </div>
+                    <div class="col">
+                        <div class="mb-2 fs-6 fw-bolder">Senior Leadership</div>
+                        <div class=" px-5">
+                            <img src="{% static 'Aboutus/leadership/frlijo.jpg'%}"
+                                class="img-fluid mb-3">
+                        </div>
+                        <div class="mb-0 fs-6">Mr Bharath</div>
+                        <div class="fs-6">Designation</div>
+                        <div class="fs-6 text-muted">Organization</div>
+                    </div>
+        
+                    <div class="col">
+                        <div class="mb-2 fs-6 fw-bolder">Youth Leadership</div>
+                        <div class=" px-5">
+                            <img src="{% static 'Aboutus/leadership/frlijo.jpg'%}"
+                                class="img-fluid mb-3">
+                        </div>
+                        <div class="mb-0 fs-6">Mr </div>
+                        <div class="fs-6">Designation</div>
+                        <div class="fs-6 text-muted">Organization</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-5 fs-4 p-3 blue-light-bg">
+                Community Conference
+                <div class="row m-auto mt-3">       
+                    <div class="col">
+                        <div class="mb-2 fs-6 fw-bolder">Senior Leadership</div>
+                        <div class=" px-5">
+                            <img src="{% static 'Aboutus/leadership/frlijo.jpg'%}"
+                                class="img-fluid mb-3">
+                        </div>
+                        <div class="mb-0 fs-6">Dr Jimmy</div>
+                        <div class="fs-6">Designation</div>
+                        <div class="fs-6 text-muted">Organization</div>
+                    </div>
+
+                    <div class="col">
+                        <div class="mb-2 fs-6 fw-bolder">Youth Leadership</div>
+                        <div class=" px-5">
+                            <img src="{% static 'Aboutus/leadership/frlijo.jpg'%}"
+                                class="img-fluid mb-3">
+                        </div>
+                        <div class="mb-0 fs-6">Ms Shrushti Mahajan</div>
+                        <div class="fs-6">Designation</div>
+                        <div class="fs-6 text-muted">Organization</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-4 fs-4 p-3 violet-light-bg">
+                Band
+                <div class="row m-auto mt-3">
+                    <div class="col">
+                        <div class="mb-2 fs-6 fw-bolder">Senior Leadership</div>
+                        <div class=" px-5">
+                            <img src="{% static 'Aboutus/leadership/frlijo.jpg'%}"
+                                class="img-fluid mb-3">
+                        </div>
+                        <div class="mb-0 fs-6">Ms Deepakkumar S</div>
+                        <div class="fs-6">Designation</div>
+                        <div class="fs-6 text-muted">Organization</div>
+                    </div>
+        
+                    <div class="col">
+                        <div class="mb-2 fs-6 fw-bolder">Youth Leadership</div>
+                        <div class=" px-5">
+                            <img src="{% static 'Aboutus/leadership/frlijo.jpg'%}"
+                                class="img-fluid mb-3">
+                        </div>
+                        <div class="mb-0 fs-6">Ms Kalika</div>
+                        <div class="fs-6">Designation</div>
+                        <div class="fs-6 text-muted">Organization</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-4 fs-4 p-3 red-light-bg">
+                Finance Management
+                <div class="row m-auto mt-3">
+                    <div class="col">
+                        <div class="mb-2 fs-6 fw-bolder">Senior Leadership</div>
+                        <div class=" px-5">
+                            <img src="{% static 'Aboutus/leadership/frlijo.jpg'%}"
+                                class="img-fluid mb-3">
+                        </div>
+                        <div class="mb-0 fs-6">Mr Rupesh</div>
+                        <div class="fs-6">Designation</div>
+                        <div class="fs-6 text-muted">Organization</div>
+                    </div>
+        
+                    <div class="col">
+                        <div class="mb-2 fs-6 fw-bolder">Youth Leadership</div>
+                        <div class=" px-5">
+                            <img src="{% static 'Aboutus/leadership/frlijo.jpg'%}"
+                                class="img-fluid mb-3">
+                        </div>
+                        <div class="mb-0 fs-6">Mr Akshat</div>
+                        <div class="fs-6">Designation</div>
+                        <div class="fs-6 text-muted">Organization</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-4 fs-4 p-3 orange-light-bg">
+                Partnership
+                <div class="row m-auto mt-3">
+                    <div class="col">
+                        <div class="mb-2 fs-6 fw-bolder">Senior Leadership</div>
+                        <div class=" px-5">
+                            <img src="{% static 'Aboutus/leadership/frlijo.jpg'%}"
+                                class="img-fluid mb-3">
+                        </div>
+                        <div class="mb-0 fs-6">Mr David</div>
+                        <div class="fs-6">Designation</div>
+                        <div class="fs-6 text-muted">Organization</div>
+                    </div>
+        
+                    <div class="col">
+                        <div class="mb-2 fs-6 fw-bolder">Youth Leadership</div>
+                        <div class=" px-5">
+                            <img src="{% static 'Aboutus/leadership/frlijo.jpg'%}"
+                                class="img-fluid mb-3">
+                        </div>
+                        <div class="mb-0 fs-6">Ms Samiksha</div>
+                        <div class="fs-6">Designation</div>
+                        <div class="fs-6 text-muted">Organization</div>
+                    </div>
+                </div>
+            </div>    
+            
+            <div class="col-6 fs-4 p-3 yellow-light-bg">
+                Operations - Secretary
+                <div class="row m-auto mt-3">
+                    <div class="col">
+                        <div class="mb-2 fs-6 fw-bolder">Operations - Secretary of Strategic Team</div>
+                        <div class=" px-5">
+                            <img src="{% static 'Aboutus/leadership/frlijo.jpg'%}"
+                                class="img-fluid mb-3">
+                        </div>
+                        <div class="mb-0 fs-6">Ms Jasmine Sahni</div>
+                        <div class="fs-6">Designation</div>
+                        <div class="fs-6 text-muted">Organization</div>
+                    </div>
+                </div>
+            </div>    
+
+            <div class="col-6 fs-4 p-3 blue-light-bg">
+                Operations - Coordinator
+                <div class="row m-auto mt-3">
+                    <div class="col">
+                        <div class="mb-2 fs-6 fw-bolder">Operations - Coordinator of Strategic Team</div>
+                        <div class=" px-5">
+                            <img src="{% static 'Aboutus/leadership/frlijo.jpg'%}"
+                                class="img-fluid mb-3">
+                        </div>
+                        <div class="mb-0 fs-6">Ms Swarnika</div>
+                        <div class="fs-6">Designation</div>
+                        <div class="fs-6 text-muted">Organization</div>
+                    </div>
+                </div>
+            </div>    
 
         </div>
 
     </div>
 
-</section>
+    <div class="container mb-5 mt-5 green-bg p-5">
+
+        <div class="fw-bolder fs-2 mb-5 text-center">
+            Let Us Dream - Board of Trustees
+         </div>
+
+         <div class="row text-center">
+           
+            <div class="col p-3 white-light-bg">
+                <div class="row m-auto mt-3">
+                    <div class="col">
+                        <div class="mb-2 fs-6 fw-bolder">Founder/Director/Secretary</div>
+                        <div class=" px-5">
+                            <img src="{% static 'Aboutus/leadership/frlijo.jpg'%}"
+                                class="img-fluid mb-3">
+                        </div>
+                        <div class="mb-0 fs-6">Fr Lijo Thomas</div>
+                        <div class="fs-6">Dean & Director</div>
+                        <div class="fs-6 text-muted">CHRIST University, Pune Lavasa Campus</div>
+                    </div>
+                    
+                    <div class="col">
+                        <div class="mb-2 fs-6 fw-bolder">Tressurar, Board</div>
+                        <div class=" px-5">
+                            <img src="{% static 'Aboutus/leadership/frlijo.jpg'%}"
+                                class="img-fluid mb-3">
+                        </div>
+                        <div class="mb-0 fs-6">Ms Jasmine Sahni</div>
+                        <div class="fs-6">Designation</div>
+                        <div class="fs-6 text-muted">Organization</div>
+                    </div>
+        
+                    <div class="col">
+                        <div class="mb-2 fs-6 fw-bolder">Managing Trustee</div>
+                        <div class=" px-5">
+                            <img src="{% static 'Aboutus/leadership/frlijo.jpg'%}"
+                                class="img-fluid mb-3">
+                        </div>
+                        <div class="mb-0 fs-6">Fr Tomy Kattampally</div>
+                        <div class="fs-6">Designation</div>
+                        <div class="fs-6 text-muted">Organization</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
 
 {% endblock %}
