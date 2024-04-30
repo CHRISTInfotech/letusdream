@@ -2,46 +2,69 @@
 {% load static %}
 
 {% block title %}
-PUBLICATIONS
+    PUBLICATIONS
 {% endblock %}
 
 
 {% block extraStyles %}
 
-<link rel="stylesheet" href="{% static 'css/publications.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/publications.css' %}" type="text/css">
 
-<link href="https://cdn.datatables.net/1.13.5/css/jquery.dataTables.min.css" rel="stylesheet">
-<script src="https://code.jquery.com/jquery-3.7.0.js"></script>
-<script src="https://cdn.datatables.net/1.13.5/js/jquery.dataTables.min.js"></script>
+    <link href="https://cdn.datatables.net/1.13.5/css/jquery.dataTables.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <script src="https://cdn.datatables.net/1.13.5/js/jquery.dataTables.min.js"></script>
 
 {% endblock extraStyles %}
 
 {% block content %}
-<section class="section">
-    <nav aria-label="breadcrumb animated slideInDown" style="margin-top: 9%; margin-left:15%;">
-        <ol class="breadcrumb text-uppercase mb-0 bg-white">
-            <li class="breadcrumb-item"><a class="text-black text-decoration-none" href="{% url 'main' %}">Home</a></li>
-            <li class="breadcrumb-item"><a class="text-black text-decoration-none">RESEARCH</a></li>
-            <li class="breadcrumb-item  active" aria-current="page" style="color: #0a7b79;">PUBLICATIONS</li>
-        </ol>
-    </nav>
+    <section class="section">
+        <nav aria-label="breadcrumb animated slideInDown" style="margin-top: 9%; margin-left:15%;">
+            <ol class="breadcrumb text-uppercase mb-0 bg-white">
+                <li class="breadcrumb-item"><a class="text-black text-decoration-none" href="{% url 'main' %}">Home</a>
+                </li>
+                <li class="breadcrumb-item"><a class="text-black text-decoration-none">RESEARCH</a></li>
+                <li class="breadcrumb-item  active" aria-current="page" style="color: #0a7b79;">PUBLICATIONS</li>
+            </ol>
+        </nav>
 
-    <h1 class="text-green heading-h3 text-center fw-bold fs-2 text-uppercase mb-2 mt-5 py-3">Publications</h1>
+        <h1 class="text-green heading-h3 text-center fw-bold fs-2 text-uppercase mb-2 mt-5 py-3">Publications</h1>
 
-    <div class="container ">
-        <div class="row justify-content-center">
-            <div class="col-lg-12 m-5">
-                <div class="table-responsive">
-                    <table id="myTable" class="table align-middle">
-                        <thead>
+        <div class="container ">
+            <div class="row justify-content-center">
+                <div class="col-lg-12 m-5">
+                    <div class="table-responsive">
+                        <table id="myTable" class="table align-middle">
+                            <thead>
                             <tr>
                                 <th scope="col">Year</th>
                                 <th scope="col">Title</th>
                                 <th scope="col">Citation</th>
                                 <th scope="col">Link</th>
                             </tr>
-                        </thead>
-                        <tbody>
+                            </thead>
+                            <tbody>
+
+                            <tr>
+                                <td>
+                                    2024
+                                </td>
+                                <td>
+                                    Let Us Dream’s Migration to a Global Virtual Conference: Delivering a Social
+                                    Entrepreneurial Event.
+                                </td>
+                                <td>
+                                    Thomas, L., Curl, A. L., Thameling, C. L., Vijaya, R., & Custer, S. (2023). Let Us
+                                    Dream’s Migration to a Global Virtual Conference: Delivering a Social
+                                    Entrepreneurial Event. Event Management, 28(2), 215-228. DOI:
+                                    https://doi.org/10.3727/152599523X16990639314800
+                                </td>
+                                <td>
+                                    <a class="text-decoration-none" target="_blank"
+                                       href="https://doi.org/10.3727/152599523X16990639314800">
+                                        link
+                                    </a>
+                                </td>
+                            </tr>
 
                             <tr>
                                 <td>
@@ -56,7 +79,7 @@ PUBLICATIONS
                                 </td>
                                 <td>
                                     <a class="text-decoration-none" target="_blank"
-                                        href="https://novapublishers.com/shop/models-for-social-responsibility-action-by-higher-education-institutions/">
+                                       href="https://novapublishers.com/shop/models-for-social-responsibility-action-by-higher-education-institutions/">
                                         link
                                     </a>
                                 </td>
@@ -78,7 +101,7 @@ PUBLICATIONS
                                 </td>
                                 <td>
                                     <a class="text-decoration-none" target="_blank"
-                                        href="https://iopscience.iop.org/article/10.1149/10701.14855ecst">
+                                       href="https://iopscience.iop.org/article/10.1149/10701.14855ecst">
                                         link
                                     </a>
                                 </td>
@@ -98,7 +121,7 @@ PUBLICATIONS
                                 </td>
                                 <td>
                                     <a class="text-decoration-none" target="_blank"
-                                        href="https://jl4d.org/index.php/ejl4d/article/view/614">
+                                       href="https://jl4d.org/index.php/ejl4d/article/view/614">
                                         link
                                     </a>
                                 </td>
@@ -118,7 +141,7 @@ PUBLICATIONS
                                 </td>
                                 <td>
                                     <a class="text-decoration-none" target="_blank"
-                                        href="https://www.igi-global.com/article/dreams-after-school-programme-for-the-holistic-development-of-children-amid-covid-19/310008">
+                                       href="https://www.igi-global.com/article/dreams-after-school-programme-for-the-holistic-development-of-children-amid-covid-19/310008">
                                         link
                                     </a>
                                 </td>
@@ -166,23 +189,23 @@ PUBLICATIONS
                                 </td>
                                 <td>
                                     <a class="text-decoration-none" target="_blank"
-                                        href="https://www.proquest.com/openview/4c3c6c108e286a23f306482b9f710449/">
+                                       href="https://www.proquest.com/openview/4c3c6c108e286a23f306482b9f710449/">
                                         link
                                     </a>
                                 </td>
                             </tr>
 
-                        </tbody>
-                    </table>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-</section>
+    </section>
 
-<script>
-    let table = new DataTable('#myTable');
-</script>
+    <script>
+        let table = new DataTable('#myTable');
+    </script>
 
 {% endblock %}
