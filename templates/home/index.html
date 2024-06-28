@@ -84,7 +84,7 @@ HOME
             </div>
             <div class="card-footer text-center bg-white border-0 card-f1">
 
-              
+
               <a href="{% url 'dreams' 'program' %}" class="add-boder">
                 <button type="button" class="btn-2">Know more</button>
               </a>
@@ -107,7 +107,7 @@ HOME
                 working professionals meet once every month to discuss and implement.</p>
             </div>
             <div class="card-footer text-center bg-white border-0 card-f1">
-              
+
               <a href="{% url 'dreams' 'proclub' %}" class="mb-2"><button type="button" id="btn-more" class="btn-2">Know
                   more</button></a>
 
@@ -130,7 +130,7 @@ HOME
                 communities.</p>
             </div>
             <div class="card-footer text-center bg-white border-0 card-f1">
-             
+
               <a href="{% url 'dreams' 'band' %}" class="mb-2"><button type="button" id="btn-more" class="btn-2">Know
                   more</button></a>
 
@@ -153,7 +153,7 @@ HOME
               </p>
             </div>
             <div class="card-footer text-center bg-white border-0 card-f1">
-              
+
               <a href="{% url 'annualConference' %}" class="mb-2"><button type="button" id="btn-more" class="btn-2">Know
                   more</button></a>
 
@@ -171,14 +171,42 @@ HOME
 <div class="container-fluid cf-2 text-h3" id="conference" style="padding-bottom: 5% !important;">
   <h1 class="text-center text-uppercase">Upcoming Events</h1>
 
-  <div class="d-flex justify-content-center mt-5">
-    <div class="px-3">
-      <img src="{% static '2024/Events/KeralaSummerCamp.png' %}" height="500px">
+  <div id="carouselEvents" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+
+      <div class="carousel-item active">
+        <div class="d-flex justify-content-center mt-5">
+          <div class="px-3">
+            <img src="{% static '2024/Events/dreamspb.png' %}" height="500px">
+          </div>
+          <div>
+            <img src="{% static '2024/Events/conference.png' %}" height="500px">
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item ">
+        <div class="d-flex justify-content-center mt-5">
+          <div class="px-3">
+            <img src="{% static '2024/Events/KeralaSummerCamp.png' %}" height="500px">
+          </div>
+          <div>
+            <img src="{% static '2024/Events/KarnatakaSummerCamp.png' %}" height="500px">
+          </div>
+        </div>
+      </div>
+
     </div>
-    <div>
-      <img src="{% static '2024/Events/KarnatakaSummerCamp.png' %}" height="500px">
-    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselEvents" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselEvents" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
   </div>
+
 </div>
 
 {% include 'partials/_testimonials.html' %}
