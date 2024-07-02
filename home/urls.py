@@ -9,6 +9,7 @@ urlpatterns = [
      path('about-us', aboutUs, name='about-us'),
      path('leadership', leadership, name='leadership'),
      path('media', media, name='media'),
+     path('events', events, name='events'),
      path('newsletter', newsletter, name='newsletter'),
      path('press-release/', pressRelease, name="press-release"),
      path('photo-gallery/', photoGallery, name="photo-gallery"),

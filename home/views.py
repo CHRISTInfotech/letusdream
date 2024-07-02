@@ -24,6 +24,8 @@ def login(request):
 def media(request):
     return render(request, 'aboutUs/media.html')
 
+def events(request):
+    return render(request, 'aboutUs/events.html')
 
 def pressRelease(request):
     return render(request, 'aboutUs/media-view-photo.html')
