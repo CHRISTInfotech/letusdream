@@ -13,526 +13,448 @@ Conferences
 {% endblock links %}
 
 {% block content %}
-<section class="section">
-    <nav aria-label="breadcrumb animated slideInDown" class="cus-breadcrumb">
+
+<div class="m-5">
+    <nav class="cus-breadcrumb" aria-label="breadcrumb animated slideInDown ">
         <ol class="breadcrumb text-uppercase mb-0 bg-white">
-            <li class="breadcrumb-item"><a class="text-black text-decoration-none" href="/">Home</a></li>
-            <li class="breadcrumb-item"><a class="text-black text-decoration-none" >Conferences</a></li>
-            <!-- <li class="breadcrumb-item"><a class="text-black text-decoration-none" href="/#location">Location</a></li> -->
+            <li class="breadcrumb-item"><a class="text-black text-decoration-none" href="{% url 'main' %}">Home</a></li>
+            <li class="breadcrumb-item"><a class="text-black text-decoration-none">Conferences</a></li>
             <li class="breadcrumb-item  active" aria-current="page">Overview</li>
         </ol>
     </nav>
-    <h1 class="  fw-bold text-center fs-1 text-green text-uppercase heading-h3">Community Conferences</h1>
-    <div class="container">
-        <div class="row  p-2">
-            <div class="col-lg-6 hover-zoomin pt-0 p-5">
-                <a href="/annualConference" title="">
+</div>
+
+
+<div class="container">
+
+    <h1 class="fw-bold text-center fs-1 text-green text-uppercase heading-h3">
+        Community Conferences
+    </h1>
+
+    <div class="row mt-5">
+        <div class="col-6">
+            <a href="/annualConference" class="text-decoration-none text-dark">
+                <div class="pt-0 p-5">
                     <img src="/ltstatic/conference/ludConferences/aboutConference/annual.jpg" alt=""
                         class="img-fluid" />
-                </a>
-                <h3 class="text-center fw-bold mt-3 text-dark-green">Annual Conferences</h3>
-                <p class="text-justify">“Aims to promote voluntary community initiatives, facilitate networking
-                    opportunities, and foster a community of practice.”
-                <p class="pl-5" style=" text-align: right;font-size: 15px;" ;=""><a href="/annualConference"
-                        class="fw-bold text-decoration-none text-h3">Know more</a></p>
-                </p>
-            </div>
-
-            <div class="col-lg-6 hover-zoomin pt-0 p-5">
-                <a href="/trriennial-conference" title="">
+                    <h3 class="text-center fw-bold mt-3 text-dark-green">Annual Conferences</h3>
+                    <p class="text-justify">
+                        “Aims to promote voluntary community initiatives, facilitate networking
+                        opportunities, and foster a community of practice.”
+                    </p>
+                </div>
+            </a>
+        </div>
+        <div class="col-6">
+            <a href="/trriennial-conference" class="text-decoration-none text-dark">
+                <div class="pt-0 p-5">
                     <img src="/ltstatic/conference/ludConferences/aboutConference/Triennial.jpg" alt=""
                         class="img-fluid" />
-                </a>
-                <h3 class="text-center fw-bold mt-3 text-dark-green">Triennial Conferences</h3>
-                <p class="text-justify">“Platform connects local service initiatives globally, empowers glocal
-                    communities, and fosters collaborative knowledge sharing.”
-                <p class="pl-5" style=" text-align: right;font-size: 15px;" ;=""><a href="/trriennial-conference"
-                        class="fw-bold text-decoration-none text-h3">Know more</a></p>
-                </p>
-            </div>
-        </div>
-    </div>
-
-    <div class="bg-white">
-        <div class="container py-3">
-            <div class="row h-100 align-items-center  py-4">
-                <div class="col-lg-6">
-                    <h1 class="display-4 text-green heading-h3 text-center">HISTORY</h1>
-                    <p class="text-muted mb-0">The LET US DREAM conference is a platform to share, learn, and
-                        celebrate the diversity of our selfless acts around us. It invites individuals with bigger
-                        hearts and deeper thoughts for their society and its progress. The conferences organized by us
-                        aim at introducing different community service possibilities and intervention models among
-                        younger and older generations to promote their volunteerism. Since its inception in the year
-                        2017, conferences have reflected on positive recommendations for community development.</p>
-
+                    <h3 class="text-center fw-bold mt-3 text-dark-green">Triennial Conferences</h3>
+                    <p class="text-justify">
+                        “Platform connects local service initiatives globally, empowers glocal
+                        communities, and fosters collaborative knowledge sharing.”
+                    </p>
                 </div>
-                <div class="col-md-6">
-                    <div class="gallery">
-                        <div class="video-box cus-he">
-                            <iframe src="https://www.youtube.com/embed/YayLbO0K9Zc" class="cus-he"></iframe>
-                        </div>
-                        <div class="video-box active cus-he">
-                            <iframe src="https://www.youtube.com/embed/YayLbO0K9Zc" class="cus-he"></iframe>
-                        </div>
-                        <div class="video-box  cus-he">
-                            <iframe src="https://www.youtube.com/embed/YayLbO0K9Zc" class="cus-he"></iframe>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 align-items-center">
-                <div id="carouselExampleFade" class="carousel slide carousel-fade carousel-first align-items-center"
-                    data-bs-ride="carousel">
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
-                            class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                            aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                            aria-label="Slide 3"></button>
-                    </div>
-                    <div class="carousel-inner align-items-center rounded ">
-                        <div class="carousel-item active">
-                            <img src="{% static 'conference/ludConferences/aboutConference/slider1.jpg' %}"
-                                class="d-block w-100" alt="DREAMS Program" />
-                        </div>
-                        <div class="carousel-item align-items-center">
-                            <img src="{% static 'conference/ludConferences/aboutConference/slider2.jpg' %}"
-                                class="d-block w-100" alt="DREAMS Program" />
-                        </div>
-                        <div class="carousel-item align-items-center">
-                            <img src="{% static 'conference/ludConferences/aboutConference/slider3.jpg' %}"
-                                class="d-block w-100" alt="DREAMS Program" />
-                        </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
-                        data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
-                        data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="bg-light py-3">
-        <div class="container py-2">
-            <div class="row align-items-center mb-5">
-                <div class="col-lg-6 order-2 order-lg-1">
-                    <h2 class="font-weight-light">VISION</h2>
-                    <p class="font-italic text-muted mb-2"> Empowering local communities for sustainable global impact
-                        and improvement.</p>
-
-                </div>
-                <div class="col-lg-5 mx-auto order-1 order-lg-2"><img
-                        src="{% static 'conference/ludConferences/aboutConference/Conference1.jpg' %}" alt=""
-                        class="img-fluid mb-lg-0 w-100 h-100"></div>
-            </div>
-            <div class="row align-items-center">
-                <div class="col-lg-5  mx-auto"><img src="{% static 'conference/Conference-2.jpg' %}" alt=""
-                        class="img-fluid  mb-lg-0  w-100 mh-100 "></div>
-                <div class="col-lg-6">
-                    <h2 class="font-weight-light">MISSION</h2>
-                    <p class="font-italic text-muted mb-4">To provide an opportunity to share, learn and support more
-                        community intervention research, theories and models.</p>
-                    <p class="font-italic text-muted mb-4">To provide a forum for sharing experiences including the
-                        successes and challenges in community organisations and efforts.</p>
-                    <p class="font-italic text-muted mb-4">To invite individuals with bigger hearts and deeper thoughts
-                        for their society to be a support system for the community empowerment initiatives.</p>
-
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="bg-white py-3">
-        <div class="container py-2">
-            <div class="row align-items-center mb-5">
-                <div class="col-lg-6 order-2 order-lg-1">
-                    <h2 class="font-weight-light">OBJECTIVES </h2>
-                    <p class="font-italic text-muted mb-2"> To offer the participants an opportunity to bridge the
-                        knowledge gap through the interaction of researchers and practitioners worldwide.</p>
-                    <p class="font-italic text-muted mb-2"> To make recommendations towards achieving greater global
-                        peace and harmony worldwide.</p>
-                    <p class="font-italic text-muted mb-2"> To provide an opportunity to share, learn, and support more
-                        community interventions research, theories, and models.</p>
-                    <p class="font-italic text-muted mb-2"> To provide a forum for sharing experiences including the
-                        successes and challenges in community organizations and efforts.</p>
-                    <p class="font-italic text-muted mb-2"> To invite individuals with bigger hearts and deeper thoughts
-                        for their society to be a support system for the community empowerment initiatives.</p>
-
-                </div>
-                <div class="col-lg-5  mx-auto order-1 order-lg-2"><img
-                        src="{% static 'conference/ludConferences/aboutConference/Conference3.jpg' %}" alt=""
-                        class="img-fluid mb-lg-0  w-100 h-100"></div>
-            </div>
-
-        </div>
-    </div>
-    <div class="bg-light py-3">
-        <div class="container d-flex justify-content-center">
-            <div id="demo" class="carousel slide align-ca-center" data-ride="carousel">
-
-                <div class="carousel-inner mb-5">
-                    <div class="carousel-item active">
-                        <div class="card ">
-                            <div class="col-md-12 text-center align-self-center">
-                                <div class="col-md-12">
-                                    <h1 class="text-center mb-2" style="font-size:35px !important;padding-top:15px;">
-                                        IMPLEMENTATION</h2>
-                                </div>
-                                <div class="fs-6 text-right p-5">
-                                    <p>The LET US DREAM Conference is implemented at three
-                                        levels: in collaboration with Universities, Communities and
-                                        Organizations</p>
-                                </div>
-                                <img class="img-fluid" src="{% static 'conference/Conference4.jpg' %}">
-                            </div>
-                            <div class="col-md-12 info ">
-
-
-
-                                <p class="p-5 text-muted font-italic">The conference has also been expanded into
-                                    different levels during its course: Annual
-                                    Community conference and Triennial- International conference at four locations.
-                                </p>
-
-                            </div>
-
-
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-
-    <div class=" py-5 bg-greenlight">
-        <div class="container py-5">
-            <div class="row">
-                <h2 class="fw-bold text-center ">A network of local conferences implemented globally </h2>
-                <div class="col-lg-12 col-md-12 mb-4 mb-lg-0">
-                    <img src="{% static 'conference/ludConferences/aboutConference/Conference-History.jpg' %}"
-                        class="w-100 shadow-1-strong rounded mb-4" alt="Boat on Calm Water" />
-
-                    <img src="{% static 'conference/ludConferences/aboutConference/Conference-Logos.png' %}"
-                        class="w-100 shadow-1-strong rounded mb-4" alt="Wintry Mountain Landscape" />
-                </div>
-
-
-
-
-            </div>
-        </div>
-    </div>
-
-
-
-
-    <div class="bg-light py-3">
-        <div class="container py-2">
-
-            <div class="row align-items-center">
-                <div class="col-lg-5  mx-auto order-1 order-lg-2"><img
-                        src="{% static 'conference/ludConferences/aboutConference/Conference5.jpg' %}" alt=""
-                        class="img-fluid mb-lg-0  w-100 h-100"></div>
-                <div class="col-lg-6">
-                    <h1 class="font-weight-light text-center">TARGET AUDIENCE</h2>
-                        <p class="font-italic text-muted mb-2">Adult and young adult volunteers, business owners
-                            involved in
-                            voluntary community developmental projects in different locations. Not-for-profit
-                            organisations,
-                            philanthropists, board members, social workers, educators/educational administrators (who
-                            are
-                            interested in community collaboration), College students (psycho-social behavioral studies),
-                            college professors, Anyone interested in community initiatives and leadership to make a
-                            positive
-                            difference in their community.</p>
-                        <p class="font-italic text-muted mb-4">Retired people who wish to give their expertise and time
-                            back
-                            to their community for its better development and anyone who dreams for the better future of
-                            the
-                            next generation.</p>
-
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-<div class="container mt-5">
-    <div class="row">
-        <h4 class="text-center text-green text-uppercase mb-3">testimonials</h4>
-        <div class="col-6">
-            <section class="t-bq-section blog-home2" id="jasper">
-
-                <div class="t-bq-wrapper t-bq-wrapper-boxed">
-                    <div class="t-bq-quote t-bq-quote-jasper" style="min-height: 375px;">
-                        <div class="t-bq-quote-jasper-pattern">
-                            <!-- <div
-                                    class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
-                                    <span class="d-block"></span></div> -->
-                            <div class="t-bq-quote-jasper-qmark">
-                                &#10077;
-                            </div>
-                        </div>
-
-                        <div class="t-bq-quote-jasper-userpic">
-                            <img src="{% static 'testimonial\SMT photo.png' %}" alt="">
-                        </div>
-
-                        <div class="t-bq-quote-jasper-base" id="testimonial">
-
-                            <blockquote class="t-bq-quote-jasper-text" cite="Strugatsky Brothers">
-                                <b>"Never doubt that a small group of thoughtful, committed citizens can change the
-                                    world;
-                                    indeed its the only thing that ever has"</b><br>
-                                The Let Us Dream Conference has been one of the most inspiring experiences for the
-                                students I teach at Grambling State University (GSU) and for me since 2017. Dr. Glenda
-                                Island, Chair of the Department of Family and Consumer Sciences at GSU invited me to
-                                join her in 2018 for the conference at La Tech University in Ruston, LA as a part of the
-                                GSU our partnership with Christ University and Father Lijo, Founder of the conference.
-                                Since 2017 I have engaged students in the LUD conferences domestically and abroad into
-                                my classes as an example of teaching servant and transformational leadership, social
-                                responsibility and globalization. My most memorable single moment was in 202( during the
-                                Pandemic) when the Student Panel was highlighted with student's comments and reflections
-                                on giving back to their communities and others in need. This panel awakened my inner
-                                core of what teaching and learning is all about and I continue to keep this spark today
-                                and into the future with this conference. Each time we begin to plan for the LUD
-                                Conferences in Louisiana each year, a natural disaster or worldwide or local crisis has
-                                occurred, but this has not put a damper on our ability to gather together, share
-                                insightful thoughts, research and practices and work to help us help others in the name
-                                of service to mankind. For the many persons who are Unsung Heroes, I salute Father Lijo
-                                and The Let Us Dream Conference is a master in featuring everyday great ones to give in
-                                the areas of health, education and social justice for all. I remain a LUD advocate and
-                                look forward to 2023 in India.
-                            </blockquote>
-                            <div class="t-bq-quote-jasper-meta">
-                                <div class="t-bq-quote-jasper-meta-info">
-                                    <div class="t-bq-quote-jasper-author"><cite>Dr. Suzanne Mynette Mayo
-                                        </cite></div>
-                                    <div class="t-bq-quote-jasper-source"><span>FCS Lecture, Grambling State University
-
-                                        </span></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
-        <div class="col-6">
-            <section class="t-bq-section blog-home2" id="jasper">
-
-                <div class="t-bq-wrapper t-bq-wrapper-boxed">
-                    <div class="t-bq-quote t-bq-quote-jasper" style="min-height: 375px;">
-                        <div class="t-bq-quote-jasper-pattern">
-                            <!-- <div
-                                    class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
-                                    <span class="d-block"></span></div> -->
-                            <div class="t-bq-quote-jasper-qmark">
-                                &#10077;
-                            </div>
-                        </div>
-
-                        <div class="t-bq-quote-jasper-userpic">
-                            <img src="{% static 'testimonial\Phinu Jose.jpg' %}" alt="">
-                        </div>
-
-                        <div class="t-bq-quote-jasper-base" id="testimonial">
-
-                            <blockquote class="t-bq-quote-jasper-text" cite="Strugatsky Brothers">
-                                LUD Conference 2020 held completely Online from 20 November to 22 November was a
-                                life-changing experience indeed for me.
-                                <br>
-                                While the Planning Committee began planning for the in-person Conference November 2020
-                                as early as December 2019, when i was invited to join the team....no one in their
-                                wildest dreams thought Covid would turn our world upside down....and in many ways it was
-                                literally upside down....reverse mentoring by tech-savvy young volunteers in making the
-                                conference completely digital....venue didn't matter as all of us seemed to have lost
-                                sense of time and space......logging in to meetings early in the morning while the night
-                                seemed to never end at some places....as our universe started in the bedroom and ended
-                                in the kitchen during the terrible days of lockdown across the globe, LUD opened the
-                                screens into lives of people who joined us from SouthAfrica to Australia to New York to
-                                Zurich to Kerala and Bangalore....breaking barriers and building bridges across the
-                                boundaries defined by geography with only one philosophy...to make this world a better
-                                place! LUD Triennial Conference 2020 became the beacon of hope for all of us involved,
-                                so much so that we continued with the same spirit in organising the Annual Conference in
-                                2021 and Local Conference in 2022 with the same zeal and enthusiasm. The success of
-                                these 3 years is not defined by the 40000+ registrations or views online but by the
-                                leaders nurtured through volunteerism and lives touched that make ordinary days seem
-                                extraordinarily blessed!.
-
-                            </blockquote>
-                            <div class="t-bq-quote-jasper-meta">
-                                <div class="t-bq-quote-jasper-meta-info">
-                                    <div class="t-bq-quote-jasper-author"><cite>Dr. Phinu Jose
-                                        </cite></div>
-                                    <!-- <div class="t-bq-quote-jasper-source"><span>Mental health advocate| Mental health
-                                            professional |Music enthusiast| Musician|
-
-                                        </span></div> -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
-        <div class="col-6">
-            <section class="t-bq-section blog-home2" id="jasper">
-
-                <div class="t-bq-wrapper t-bq-wrapper-boxed">
-                    <div class="t-bq-quote t-bq-quote-jasper" style="min-height: 375px;">
-                        <div class="t-bq-quote-jasper-pattern">
-                            <!-- <div
-                                    class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
-                                    <span class="d-block"></span></div> -->
-                            <div class="t-bq-quote-jasper-qmark">
-                                &#10077;
-                            </div>
-                        </div>
-
-                        <div class="t-bq-quote-jasper-userpic">
-                            <img src="{% static 'testimonial\CollettOBrien_Debbie2.jpg' %}" alt="">
-                        </div>
-
-                        <div class="t-bq-quote-jasper-base" id="testimonial">
-
-                            <blockquote class="t-bq-quote-jasper-text" cite="Strugatsky Brothers">
-                                In my role, I have worked with and helped coordinate the Let Us Dream Conference at
-                                Binghamton University since 2019 and have been amazed by the impact which this
-                                organization has had across the globe. The Let Us Dream Conferences has allowed
-                                practitioners, learners and community members come together, hone their skills in a
-                                variety of disciplines, and invigorate one another to bring out and strengthen
-                                sentiments of community, empathy and care which is already ingrained in the community
-                                itself. I love recruiting students, faculty members and staff at Binghamton University
-                                to get involved with the Let Us Dream Conferences as it provides an opportunity for
-                                international, interdisciplinary collaboration where you meet others who are passionate,
-                                innovative and driven to educate others about best-practices that will better the lives
-                                of others, while learning how to translate those skills in your own work. Let Us Dream
-                                has endless opportunities for involvement and working with Dean Laura Bronstein, Michael
-                                Kaufmann, Tracy Lyman and Jeff Smith has been such an amazing experience to see the
-                                wonderful work of those in the Binghamton community get recognized on a national- and
-                                global-level. It’s been such an honor to work with such accomplished, hardworking
-                                individuals who exemplify how to be a positive agent of change and empower others to do
-                                the same. I look forward to the continued partnership and collaboration between
-                                Binghamton University and Let Us Dream and how this work will positively change the
-                                local community in the years to come.
-                            </blockquote>
-                            <div class="t-bq-quote-jasper-meta">
-                                <div class="t-bq-quote-jasper-meta-info">
-                                    <div class="t-bq-quote-jasper-author"><cite>Debbie Collett-O’Brien
-                                        </cite></div>
-                                    <div class="t-bq-quote-jasper-source"><span>Let Us Dream Liason - Binghamton
-                                            University
-                                        </span></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
-        <div class="col-6">
-            <section class="t-bq-section blog-home2" id="jasper">
-
-                <div class="t-bq-wrapper t-bq-wrapper-boxed">
-                    <div class="t-bq-quote t-bq-quote-jasper" style="min-height: 375px;">
-                        <div class="t-bq-quote-jasper-pattern">
-                            <!-- <div
-                                    class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
-                                    <span class="d-block"></span></div> -->
-                            <div class="t-bq-quote-jasper-qmark">
-                                &#10077;
-                            </div>
-                        </div>
-
-                        <div class="t-bq-quote-jasper-userpic">
-                            <img src="{% static 'testimonial\Martin Klien.jpg' %}" alt="">
-                        </div>
-
-                        <div class="t-bq-quote-jasper-base" id="testimonial" >
-
-                            <blockquote class="t-bq-quote-jasper-text" cite="Strugatsky Brothers">
-                                60 years ago, on 18 August 1963, Martin Luther King gave his "I have a dream" speech at
-                                the Lincoln Memorial in Washington. It is one of the most famous speeches of the 20th
-                                century. The dream was to fight racial discrimination and to treat all citizens equal
-                                before the law.
-                                The dream of a better society is more relevant than ever. In the 21st century, too,
-                                there is hope of living in a society without discrimination and gender inequality. Hope,
-                                that companies take on social responsibility, produce sustainably and protect the
-                                environment.
-                                Unique about all these dreams is, that they will only be fulfilled, if we stand up for
-                                our convictions, act on them ourselves and convince others of our dreams.
-                                At the "Let us Dream"-conferences we dream together. The cooperation supported by
-                                visionary and committed people from all over the world is not only an important source
-                                of joy and inspiration. It is also a strong motivator for specific measures for
-                                implementation and helps enduring all the obstacles and setbacks along the way.
-
-
-                                Through the international exchange I was lucky to experience creativity and the power of
-                                imagination emerge across borders, so new ideas and innovations could be developed. The
-                                "Let us Dream"-conferences are supported by a community and live from the commitment and
-                                contributions of the volunteers. This is a gift and it would be great, if, at the end of
-                                the 21st century, the project was as well known as the speech mentioned in the
-                                beginning.
-
-                            </blockquote>
-                            
-                            <div class="t-bq-quote-jasper-meta">
-                                <div class="t-bq-quote-jasper-meta-info">
-                                    <div class="t-bq-quote-jasper-author"><cite>Prof. Dr. Martin Klein
-                                        </cite></div>
-                                    <div class="t-bq-quote-jasper-source"><span>Vice President <br>
-                                        Catholic University of Applied Sciences NRW, Germany
-                                        </span></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
-        <div class="col-md-12 end-0">
-            <a href="{% url 'testimonials' %}" class="end-0 text-decoration-none  float-end">Readmore..</a>
+            </a>
         </div>
     </div>
 </div>
 
-<script>
-    $(document).ready(function() {
-        var maxLength = 250;
+<div class="bg-light">
+    <div class="container py-3">
+        <div class="row h-100 align-items-center  py-4">
+            <div class="col-lg-6">
+                <h3 class="fw-bold mt-3 text-dark-green mb-3">HISTORY</h3>
+                <p class="text-muted mb-0">
+                    The LET US DREAM conference is a platform to share, learn, and
+                    celebrate the diversity of our selfless acts around us. It invites individuals with bigger
+                    hearts and deeper thoughts for their society and its progress. The conferences organized by us
+                    aim at introducing different community service possibilities and intervention models among
+                    younger and older generations to promote their volunteerism. Since its inception in the year
+                    2017, conferences have reflected on positive recommendations for community development.
+                </p>
+            </div>
+            <div class="col-md-6">
+                <div class="gallery">
+                    <div class="video-box cus-he">
+                        <iframe src="https://www.youtube.com/embed/YayLbO0K9Zc" class="cus-he"></iframe>
+                    </div>
+                    <div class="video-box active cus-he">
+                        <iframe src="https://www.youtube.com/embed/YayLbO0K9Zc" class="cus-he"></iframe>
+                    </div>
+                    <div class="video-box  cus-he">
+                        <iframe src="https://www.youtube.com/embed/YayLbO0K9Zc" class="cus-he"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-        $('#testimonial blockquote').each(function() {
-            var content = $(this).text();
-            if (content.length > maxLength) {
-                var truncatedContent = content.substring(0, maxLength) + '...';
-                $(this).text(truncatedContent);
-                $(this).append('<a href="{% url "testimonials"  %}#conference " class="read-more text-decoration-none float-end">Read More</a>');
-            }
-        });
+<div class="container">
+    <div class="row py-5">
+        <div class="col-6 d-flex align-items-center justify-content-center">
+            <div id="carouselExampleFade" class="carousel slide carousel-fade carousel-first align-items-center"
+                data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                        class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                        aria-label="Slide 4"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
+                        aria-label="Slide 5"></button>
+                </div>
+                <div class="carousel-inner align-items-center rounded ">
+                    <div class="carousel-item active">
+                        <img src="{% static 'conference/ludConferences/aboutConference/slider1.jpg' %}"
+                            class="d-block w-100" alt="DREAMS Program" />
+                    </div>
+                    <div class="carousel-item align-items-center">
+                        <img src="{% static 'conference/ludConferences/aboutConference/slider2.jpg' %}"
+                            class="d-block w-100" alt="DREAMS Program" />
+                    </div>
+                    <div class="carousel-item align-items-center">
+                        <img src="{% static 'conference/ludConferences/aboutConference/slider3.jpg' %}"
+                            class="d-block w-100" alt="DREAMS Program" />
+                    </div>
+                    <div class="carousel-item align-items-center">
+                        <img src="{% static 'conference/ludConferences/aboutConference/Conference1.jpg' %}"
+                            class="d-block w-100" alt="DREAMS Program" />
+                    </div>
+                    <div class="carousel-item align-items-center">
+                        <img src="{% static 'conference/Conference-2.jpg' %}" class="d-block w-100"
+                            alt="DREAMS Program" />
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="row align-items-center">
+                <h3 class="fw-bold mt-3 text-dark-green mb-3">VISION</h3>
+                <p class="font-italic text-muted">
+                    Empowering local communities for sustainable global impact
+                    and improvement.
+                </p>
 
-        $('.testimonial').on('click', '.read-more', function() {
-            var fullContent = $(this).siblings('p').text();
-            $(this).siblings('blockquote').text(fullContent);
-            $(this).remove();
-        });
-    });
-</script>
+                <h3 class="fw-bold mt-3 text-dark-green mb-3">MISSION</h3>
+                <p class="font-italic text-muted mb-2">
+                    To provide an opportunity to share, learn and support more
+                    community intervention research, theories and models.
+                </p>
+                <p class="font-italic text-muted mb-2">
+                    To provide a forum for sharing experiences including the
+                    successes and challenges in community organisations and efforts.
+                </p>
+                <p class="font-italic text-muted mb-2">
+                    To invite individuals with bigger hearts and deeper thoughts
+                    for their society to be a support system for the community empowerment initiatives.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="bg-light py-3">
+    <div class="container py-2">
+        <div class="row align-items-center">
+            <div class="col-6">
+                <h3 class="fw-bold mt-3 text-dark-green mb-3">OBJECTIVES</h3>
+                <p class="font-italic text-muted mb-2">
+                    To offer the participants an opportunity to bridge the
+                    knowledge gap through the interaction of researchers and practitioners worldwide.
+                </p>
+                <p class="font-italic text-muted mb-2">
+                    To make recommendations towards achieving greater global peace and harmony worldwide.
+                </p>
+                <p class="font-italic text-muted mb-2">
+                    To provide an opportunity to share, learn, and support more community interventions research,
+                    theories, and models.
+                </p>
+                <p class="font-italic text-muted mb-2">
+                    To provide a forum for sharing experiences including the successes and challenges in community
+                    organizations and efforts.
+                </p>
+                <p class="font-italic text-muted mb-2">
+                    To invite individuals with bigger hearts and deeper thoughts for their society to be a support
+                    system for the community empowerment initiatives.
+                </p>
+
+            </div>
+            <div class="col-6 d-flex justify-content-center align-items-center">
+                <img src="{% static 'conference/ludConferences/aboutConference/Conference3.jpg' %}" alt=""
+                    class="img-fluid mb-lg-0  w-100 h-100">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="bg-white py-4">
+
+    <div class="container">
+        <div class="row m-0">
+            <div class="col-6">
+                <h3 class="fw-bold mt-3 text-dark-green mb-3">IMPLEMENTATION</h3>
+
+                <p class="font-italic text-muted mb-3">
+                    The LET US DREAM Conference is implemented at three
+                    levels: in collaboration with Universities, Communities and
+                    Organizations
+                </p>
+
+                <img class="img-fluid" src="{% static 'conference/Conference4.jpg' %}">
+
+                <p class="font-italic text-muted mb-2 mt-3">
+                    The conference has also been expanded into
+                    different levels during its course: Annual
+                    Community conference and Triennial- International conference at four locations.
+                </p>
+            </div>
+
+            <div class="col-6">
+
+                <h3 class="fw-bold mt-3 text-dark-green mb-3">TARGET AUDIENCE</h3>
+                <p class="font-italic text-muted mb-2">
+                    Adult and young adult volunteers, business owners involved in voluntary community developmental
+                    projects in different locations. Not-for-profit organisations, philanthropists, board members,
+                    social workers, educators/educational administrators (who are interested in community
+                    collaboration), College students (psycho-social behavioral studies),
+                    college professors, Anyone interested in community initiatives and leadership to make a
+                    positive difference in their community.
+                </p>
+                <p class="font-italic text-muted mb-4">
+                    Retired people who wish to give their expertise and time back to their community for its better
+                    development and anyone who dreams for the better future of the next generation.
+                </p>
+
+                <img src="{% static 'conference/Conference-2.jpg' %}" class="img-fluid" alt="DREAMS Program" />
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<div class=" py-3 bg-greenlight">
+    <div class="container py-3">
+        <div class="row">
+            <h2 class="fw-bold text-center mb-3">A network of local conferences implemented globally </h2>
+            <div class="col-lg-12 col-md-12 mb-3 mb-lg-0">
+                <img src="{% static 'conference/ludConferences/aboutConference/Conference-History.jpg' %}"
+                    class="w-100 shadow-1-strong rounded mb-3" alt="Boat on Calm Water" />
+
+                <img src="{% static 'conference/ludConferences/aboutConference/Conference-Logos.png' %}"
+                    class="w-100 shadow-1-strong rounded mb-3" alt="Wintry Mountain Landscape" />
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container mt-3">
+    <div class="row">
+        <h3 class="fw-bold mt-3 text-dark-green mb-4 text-center">TESTIMONIALS</h3>
+
+        <div id="carouselTestimonials" class="carousel slide">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row m-0">
+                        <div class="col-6">
+                            <section class="t-bq-section blog-home2" id="jasper">
+                                <div class="t-bq-wrapper t-bq-wrapper-boxed">
+                                    <div class="t-bq-quote t-bq-quote-jasper">
+                                        <div class="t-bq-quote-jasper-pattern">
+                                            <div class="t-bq-quote-jasper-qmark">
+                                                &#10077;
+                                            </div>
+                                        </div>
+
+                                        <div class="t-bq-quote-jasper-userpic">
+                                            <img src="{% static 'testimonial\SMT photo.png' %}" alt="">
+                                        </div>
+
+                                        <div class="t-bq-quote-jasper-base" id="testimonial">
+
+                                            <blockquote class="t-bq-quote-jasper-text text-truncate">
+                                                <b>
+                                                    "Never doubt that a small group of thoughtful, committed citizens
+                                                    can change the
+                                                    world; indeed its the only thing that ever has"
+                                                </b>
+                                                The Let Us Dream Conference has been one of the most inspiring
+                                                experiences for the students I teach at Grambling State University (GSU)
+                                                and for me since 2017.
+                                            </blockquote>
+                                            <div class="t-bq-quote-jasper-meta">
+                                                <div class="t-bq-quote-jasper-meta-info">
+                                                    <div class="t-bq-quote-jasper-author">
+                                                        <cite>
+                                                            Dr. Suzanne Mynette Mayo
+                                                        </cite>
+                                                    </div>
+                                                    <div class="t-bq-quote-jasper-source">
+                                                        <span>
+                                                            FCS Lecture, Grambling State University
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                        <div class="col-6">
+                            <section class="t-bq-section blog-home2" id="jasper">
+                                <div class="t-bq-wrapper t-bq-wrapper-boxed">
+                                    <div class="t-bq-quote t-bq-quote-jasper">
+                                        <div class="t-bq-quote-jasper-pattern">
+                                            <div class="t-bq-quote-jasper-qmark">
+                                                &#10077;
+                                            </div>
+                                        </div>
+
+                                        <div class="t-bq-quote-jasper-userpic">
+                                            <img src="{% static 'testimonial\Phinu Jose.jpg' %}" alt="">
+                                        </div>
+
+                                        <div class="t-bq-quote-jasper-base" id="testimonial">
+
+                                            <blockquote class="t-bq-quote-jasper-text text-truncate">
+                                                LUD Conference 2020 held completely Online from 20 November to 22
+                                                November was a life-changing experience indeed for me.
+                                                While the Planning Committee began planning for the in-person Conference
+                                                November 2020 as early as December 2019, when i was invited to join the
+                                                team.
+                                            </blockquote>
+                                            <div class="t-bq-quote-jasper-meta">
+                                                <div class="t-bq-quote-jasper-meta-info">
+                                                    <div class="t-bq-quote-jasper-author">
+                                                        <cite>Dr. Phinu Jose</cite>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row m-0">
+                        <div class="col-6">
+                            <section class="t-bq-section blog-home2" id="jasper">
+                                <div class="t-bq-wrapper t-bq-wrapper-boxed">
+                                    <div class="t-bq-quote t-bq-quote-jasper">
+                                        <div class="t-bq-quote-jasper-pattern">
+                                            <div class="t-bq-quote-jasper-qmark">
+                                                &#10077;
+                                            </div>
+                                        </div>
+
+                                        <div class="t-bq-quote-jasper-userpic">
+                                            <img src="{% static 'testimonial\CollettOBrien_Debbie2.jpg' %}" alt="">
+                                        </div>
+
+                                        <div class="t-bq-quote-jasper-base" id="testimonial">
+
+                                            <blockquote class="t-bq-quote-jasper-text text-truncate">
+                                                In my role, I have worked with and helped coordinate the Let Us Dream
+                                                Conference at Binghamton University since 2019 and have been amazed by
+                                                the impact which this organization has had across the globe.
+                                            </blockquote>
+                                            <div class="t-bq-quote-jasper-meta">
+                                                <div class="t-bq-quote-jasper-meta-info">
+                                                    <div class="t-bq-quote-jasper-author">
+                                                        <cite>Debbie Collett-O’Brien</cite>
+                                                    </div>
+                                                    <div class="t-bq-quote-jasper-source">
+                                                        <span>
+                                                            Let Us Dream Liason - Binghamton University
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                        <div class="col-6">
+                            <section class="t-bq-section blog-home2" id="jasper">
+                                <div class="t-bq-wrapper t-bq-wrapper-boxed">
+                                    <div class="t-bq-quote t-bq-quote-jasper">
+                                        <div class="t-bq-quote-jasper-pattern">
+                                            <div class="t-bq-quote-jasper-qmark">
+                                                &#10077;
+                                            </div>
+                                        </div>
+
+                                        <div class="t-bq-quote-jasper-userpic">
+                                            <img src="{% static 'testimonial\Martin Klien.jpg' %}" alt="">
+                                        </div>
+
+                                        <div class="t-bq-quote-jasper-base" id="testimonial">
+
+                                            <blockquote class="t-bq-quote-jasper-text text-truncate">
+                                                60 years ago, on 18 August 1963, Martin Luther King gave his "I have a
+                                                dream" speech at the Lincoln Memorial in Washington.
+                                            </blockquote>
+
+                                            <div class="t-bq-quote-jasper-meta">
+                                                <div class="t-bq-quote-jasper-meta-info">
+                                                    <div class="t-bq-quote-jasper-author">
+                                                        <cite>Prof. Dr. Martin Klein</cite>
+                                                    </div>
+                                                    <div class="t-bq-quote-jasper-source">
+                                                        <span>
+                                                            Vice President, Catholic University of Applied Sciences NRW,
+                                                            Germany
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselTestimonials"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselTestimonials"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+        <div class="col-md-12 end-0 mb-5">
+            <a href="{% url 'testimonials' %}" class="end-0 text-decoration-none  float-end">Read more testimonials.</a>
+        </div>
+    </div>
+</div>
 
 {% endblock %}
