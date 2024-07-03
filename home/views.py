@@ -1,7 +1,7 @@
 import csv
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
-from home.models import ConferenceRegistration, Visitor
+from home.models import ConferenceRegistration
 
 
 
