@@ -2,386 +2,419 @@
 {% load static %}
 
 {% block title %}
-Annual Conferences
+    Annual Conferences
 {% endblock %}
 
 
 {% block extraStyles %}
-<link rel="stylesheet" href="{% static 'css/annualConference.css' %}" type="text/css">
-<!-- <link rel="stylesheet" href="{% static 'css/louisiana-tech-university.css' %}" type="text/css"> -->
-<link rel="stylesheet" href="{% static 'css/media.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/annualConference.css' %}" type="text/css">
+    <!-- <link rel="stylesheet" href="{% static 'css/louisiana-tech-university.css' %}" type="text/css"> -->
+    <link rel="stylesheet" href="{% static 'css/media.css' %}" type="text/css">
 {% endblock extraStyles %}
 
 {% block links %}
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 
-<!--  Bootstrap CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+    <!--  Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
 
-<!-- Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
 {% endblock links %}
 
 
 {% block content %}
-<nav aria-label="breadcrumb animated slideInDown" class="cus-breadcrumb">
-    <ol class="breadcrumb text-uppercase mb-0 bg-white">
-        <li class="breadcrumb-item"><a class="text-black text-decoration-none" href="{% url 'main' %}">Home</a></li>
-        <li class="breadcrumb-item"><a class="text-black text-decoration-none"
-                href="{% url 'main' %}Conferences">Conferences</a></li>
-        <li class="breadcrumb-item  active" aria-current="page">Annual Conferences</li>
-    </ol>
-</nav>
-<br>
-<div class="container">
-    <div class="row p-5">
-        <h1>Annual Conferences</h1>
-        <h5 class="text-center mt-3 mb-3">
-            "The chance to reconnect with people in person, talk over key topics, and go
-            to some great sessions was invaluable."
-        </h5>
-        <div class="col-lg-12 text-center align-self-center">
-            <a href="https://cmt.letusdream.org/" target="_blank"><button type="button"
-                    class="button"><span>Participate</span></button></a>
+    <nav aria-label="breadcrumb animated slideInDown" class="cus-breadcrumb">
+        <ol class="breadcrumb text-uppercase mb-0 bg-white">
+            <li class="breadcrumb-item"><a class="text-black text-decoration-none" href="{% url 'main' %}">Home</a></li>
+            <li class="breadcrumb-item"><a class="text-black text-decoration-none"
+                                           href="{% url 'main' %}Conferences">Conferences</a></li>
+            <li class="breadcrumb-item  active" aria-current="page">Annual Conferences</li>
+        </ol>
+    </nav>
+    <br>
+    <div class="container">
+        <div class="row p-5">
+            <h1>Annual Conferences</h1>
+            <h5 class="text-center mt-3 mb-3">
+                "The chance to reconnect with people in person, talk over key topics, and go
+                to some great sessions was invaluable."
+            </h5>
+            <div class="col-lg-12 text-center align-self-center">
+                <a href="https://cmt.letusdream.org/" target="_blank">
+                    <button type="button"
+                            class="button"><span>Participate</span></button>
+                </a>
+            </div>
         </div>
     </div>
-</div>
 
-<div class="container mb-5">
-    <!-- <h1>MEDIA</h1>
-    <h3 class="text-center pb-5">Social Networks aren't about websites. They're about experiences</h3> -->
-    <div class="row">
-        <div class="col-lg-12 col-md-12 col-sm-12">
+    <div class="container mb-5">
+        <!-- <h1>MEDIA</h1>
+        <h3 class="text-center pb-5">Social Networks aren't about websites. They're about experiences</h3> -->
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12">
 
-            <div class="accordion" id="accordionExample">
-                <div class="card">
-                    <div class="card-header" id="headingOne">
-                        <h2 class="mb-0">
-                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
-                                aria-expanded="true" aria-controls="collapseOne">
-                                Bangalore
-                            </button>
-                        </h2>
-                    </div>
+                <div class="accordion" id="accordionExample">
+                    <div class="card">
+                        <div class="card-header" id="headingOne">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                        data-target="#collapseOne"
+                                        aria-expanded="true" aria-controls="collapseOne">
+                                    Bangalore
+                                </button>
+                            </h2>
+                        </div>
 
-                    <div id="collapseOne" class="collapse show  blog-home2" aria-labelledby="headingOne"
-                        data-parent="#accordionExample">
-                        <div class="card-body">
-                            <p>
-                            <div class="container-fluid text-h3 bg-green">
+                        <div id="collapseOne" class="collapse blog-home2" aria-labelledby="headingOne"
+                             data-parent="#accordionExample">
+                            <div class="card-body">
+                                <div class="container-fluid text-h3 bg-green">
+                                    <div class="row text-center">
+                                        <div class="col-lg-4 col-md-4 p-3 ">
+                                            <a class="text-decoration-none"
+                                               href="{% url 'christ-university-bangalore' %}">
+                                                <img src="{% static 'conference/annual/bangalore/ChristBangalore/christ-university-bangalore.jpg' %}"
+                                                     class="img1 m-3 anualcon-cus-img" alt="">
+                                                <div
+                                                        class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
+                                                    Nov<span class="d-block">16</span>2019
+                                                </div>
+                                                <p class="text-center text-black anualcon-cus-p">Christ University,
+                                                    Bangalore</p>
+                                            </a>
 
-                                <div class="row text-center">
-                                    <div class="col-lg-4 col-md-4 p-3 ">
-                                        <a class="text-decoration-none" href="{% url 'christ-university-bangalore' %}">
-                                            <img src="{% static 'conference/annual/bangalore/ChristBangalore/christ-university-bangalore.jpg' %}"
-                                                class="img1 m-3 anualcon-cus-img">
-                                            <div
-                                                class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
-                                                Nov<span class="d-block">16</span>2019</div>
-                                            <p class="text-center text-black anualcon-cus-p">Christ University,
-                                                Bangalore</p>
-                                        </a>
+                                        </div>
+
+                                        <div class="col-lg-4 col-md-4 p-3">
+                                            <a class="text-decoration-none" href="{% url 'stannescollege' %}">
+                                                <img src="{% static 'conference/annual/bangalore/stAnnesCollege/stanne.png' %}"
+                                                     class="img1 m-3 anualcon-cus-img" alt="">
+                                                <div
+                                                        class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
+                                                    Nov<span class="d-block">19</span>2019
+                                                </div>
+                                                <!-- <div class="card-text"> -->
+                                                <p class="text-center text-black anualcon-cus-p">St. Annes Degree
+                                                    College
+                                                    for Women
+                                                    Bangalore</p>
+
+                                                <!-- </div> -->
+                                            </a>
+                                        </div>
+
+                                        <div class="col-lg-4 col-md-4 p-3">
+                                            <a class="text-decoration-none"
+                                               href="{% url 'jyoti-nivas-college-autonomous' %}">
+                                                <img src="{% static 'conference/annual/bangalore/JyotiNivasCollege/JyotiNivasCollege.jpg' %}"
+                                                     class="img1 m-3 anualcon-cus-img" alt="">
+                                                <div
+                                                        class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
+                                                    Nov<span class="d-block">10</span>2021
+                                                </div>
+                                            </a>
+                                            <p class="text-center text-black ">Jyoti Nivas College Autonomous Bangalore
+                                            </p>
+                                        </div>
 
                                     </div>
 
-                                    <div class="col-lg-4 col-md-4 p-3">
-                                        <a class="text-decoration-none" href="{% url 'stannescollege' %}">
-                                            <img src="{% static 'conference/annual/bangalore/stAnnesCollege/stanne.png' %}"
-                                                class="img1 m-3 anualcon-cus-img">
-                                            <div
-                                                class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
-                                                Nov<span class="d-block">19</span>2019</div>
-                                            <!-- <div class="card-text"> -->
-                                            <p class="text-center text-black anualcon-cus-p">St. Annes Degree College
-                                                for Women
-                                                Bangalore</p>
-
-                                            <!-- </div> -->
-                                        </a>
-                                    </div>
-
-                                    <div class="col-lg-4 col-md-4 p-3">
-                                        <a class="text-decoration-none"
-                                            href="{% url 'jyoti-nivas-college-autonomous' %}">
-                                            <img src="{% static 'conference/annual/bangalore/JyotiNivasCollege/JyotiNivasCollege.jpg' %}"
-                                                class="img1 m-3 anualcon-cus-img">
-                                            <div
-                                                class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
-                                                Nov<span class="d-block">10</span>2021</div>
-                                        </a>
-                                        <p class="text-center text-black ">Jyoti Nivas College Autonomous Bangalore
-                                        </p>
-                                    </div>
 
                                 </div>
-
-
+                                <br>
                             </div>
-                            <br>
-
-                            <!-- <p class="pl-5"><a href="{% url 'press-release' %}" class="fw-bold text-h3">Read more</a>
-                            </p> -->
-                            </p>
-
-
-
                         </div>
                     </div>
-                </div>
-                <div class="card">
-                    <div class="card-header" id="headingTwo">
-                        <h2 class="mb-0">
-                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
-                                data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                Chennai
-                            </button>
-                        </h2>
-                    </div>
-                    <div id="collapseTwo" class="collapse blog-home2" aria-labelledby="headingTwo"
-                        data-parent="#accordionExample">
-                        <div class="card-body">
-                            <div class="container-fluid text-h3 bg-green">
-                                <div class="row text-center">
-                                    <div class="col-lg-4 col-md-4 p-3">
-                                        <a class="text-decoration-none" href="{% url 'donboscocollege' %}">
-                                            <img src="{% static 'conference/annual/chennai/DonboscoCollege/bosco.jpg' %}"
-                                                class="img1 m-3 anualcon-cus-img">
-                                            <div
-                                                class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
-                                                Oct
-                                                <span class="d-block">
+                    <div class="card">
+                        <div class="card-header" id="headingTwo">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                        data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Chennai
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseTwo" class="collapse blog-home2" aria-labelledby="headingTwo"
+                             data-parent="#accordionExample">
+                            <div class="card-body">
+                                <div class="container-fluid text-h3 bg-green">
+                                    <div class="row text-center">
+                                        <div class="col-lg-4 col-md-4 p-3">
+                                            <a class="text-decoration-none" href="{% url 'donboscocollege' %}">
+                                                <img src="{% static 'conference/annual/chennai/DonboscoCollege/bosco.jpg' %}"
+                                                     class="img1 m-3 anualcon-cus-img">
+                                                <div
+                                                        class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
+                                                    Oct
+                                                    <span class="d-block">
                                                     15
                                                 </span>
-                                                2022
-                                            </div>
+                                                    2022
+                                                </div>
 
-                                        </a>
-                                        <p class="text-center text-black">Donbosco College, Chennai</p>
+                                            </a>
+                                            <p class="text-center text-black">Donbosco College, Chennai</p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <br>
+                                <br>
 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingThree">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                        data-target="#collapseThree" aria-expanded="false"
+                                        aria-controls="collapseThree">
+                                    Louisiana
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseThree" class="collapse  blog-home2" aria-labelledby="headingThree"
+                             data-parent="#accordionExample">
+                            <div class="card-body">
+
+                                <div class="container-fluid text-h3 bg-green">
+
+                                    <div class="row text-center">
+
+                                        <div class="col-lg-4 col-md-4 p-3 mb-5">
+                                            <a class="text-decoration-none"
+                                               href="https://www.gram.edu/letusdream/" target="_blank">
+                                                <img src="{% static 'conference/annual/Louisiana/GramblingStateUniversity/GramblingStateUniversity.jpg' %}"
+                                                     class="img1 m-3 anualcon-cus-img" alt="">
+                                                <div
+                                                        class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
+                                                    Oct<span class="d-block">31</span>2024
+                                                </div>
+                                            </a>
+                                            <p class="text-center text-black anualcon-cus-p">
+                                                Louisiana Tech University, Louisiana
+                                            </p>
+                                        </div>
+
+                                        <div class="col-lg-4 col-md-4 p-3 mb-5">
+                                            <a class="text-decoration-none"
+                                               href="{% url 'louisiana-tech-university' %}">
+                                                <img src="{% static 'conference/annual/Louisiana/LouisianaTechUniversity/LouisianaTechUniversity.jpg' %}"
+                                                     class="img1 m-3 anualcon-cus-img" alt="">
+                                                <div
+                                                        class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
+                                                    Oct<span class="d-block">27</span>2022
+                                                </div>
+                                            </a>
+                                            <p class="text-center text-black anualcon-cus-p">
+                                                Louisiana Tech University, Louisiana
+                                            </p>
+                                        </div>
+
+                                        <div class="col-lg-4 col-md-4 p-3 mb-5">
+                                            <a class="text-decoration-none"
+                                               href="{% url 'louisiana-state-university-shreveport' %}">
+                                                <img src="{% static 'conference/annual/Louisiana/LouisianaStateUniversity/Shreveport.jpg' %}"
+                                                     class="img1 m-3 anualcon-cus-img" alt="">
+                                                <div
+                                                        class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
+                                                    Oct<span class="d-block">15</span>2022
+                                                </div>
+                                            </a>
+                                            <p class="text-center text-black anualcon-cus-p">
+                                                Louisiana State University, Shreveport
+                                            </p>
+                                        </div>
+                                        
+                                        <div class="col-lg-4 col-md-4 p-3 mb-5">
+                                            <a class="text-decoration-none"
+                                               href="{% url 'universityofLouisianaMonroe' %}">
+                                                <img src="{% static 'conference/annual/Louisiana/universityofLouisiana/Monroe.jpg' %}"
+                                                     class="img1 m-3 anualcon-cus-img" alt="">
+                                                <div
+                                                        class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
+                                                    Oct<span class="d-block">15</span>2022
+                                                </div>
+                                            </a>
+                                            <p class="text-center text-black anualcon-cus-p">
+                                                University of Louisiana, Monroe
+                                            </p>
+                                        </div>
+                                        
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingFour">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                        data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    New York
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseFour" class="collapse  blog-home2" aria-labelledby="headingFour"
+                             data-parent="#accordionExample">
+                            <div class="card-body">
+
+                                <div class="container-fluid text-h3 bg-green">
+
+                                    <div class="row text-center">
+                                        <div class="col-lg-4 col-md-4 p-3">
+                                            <a class="text-decoration-none"
+                                               href="{% url 'binghamton-university-new-york' %}">
+                                                <img src="{% static 'conference/annual/newYork/BinghamtonUniversity/BinghamtonUniversity.jpeg' %}"
+                                                     class="img1 m-3 anualcon-cus-img">
+                                                <!-- <div class="card-text"> -->
+                                                <div
+                                                        class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
+                                                    Nov<span class="d-block">19</span>2021
+                                                </div>
+                                                <!-- </div> -->
+                                            </a>
+                                            <p class="text-center text-black anualcon-cus-p">Binghamton University, New
+                                                York
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingThree">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                        data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+
+                                    Thiruvananthapuram
+
+                                </button>
+                            </h2>
+                        </div>
+
+                        <div id="collapseFive" class="collapse blog-home2" aria-labelledby="headingOne"
+                             data-parent="#accordionExample">
+                            <div class="card-body">
+                                <p>
+                                <div class="container-fluid text-h3 bg-green">
+
+                                    <div class="row text-center">
+                                        <div class="col-lg-4 col-md-4 p-3">
+                                            <a class="text-decoration-none" href="{% url 'allsaintssollege' %}">
+                                                <img src="{% static 'conference/annual/Trivandrum/allSaintsCollege/allsaints.jpg' %}"
+                                                     class="img1 m-3 anualcon-cus-img">
+                                                <!-- <div class="card-text"> -->
+                                                <div
+                                                        class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
+                                                    Dec<span class="d-block">05</span>2022
+                                                </div>
+                                                <!-- </div> -->
+                                            </a>
+                                            <p class="text-center text-black paragraph">All Saints College,
+                                                Trivandrum</p>
+
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 p-3">
+                                            <a class="text-decoration-none"
+                                               href="{% url 'christ-university-thiruvananthapuram' %}">
+                                                <img src="{% static 'conference/annual/Trivandrum/christUniversity/Christ-thrivandrum.jpg' %}"
+                                                     class="img1 m-3 anualcon-cus-img">
+
+                                                <div
+                                                        class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
+                                                    Jan<span class="d-block">11</span>2020
+                                                </div>
+
+                                            </a>
+                                            <p class="text-center text-black paragraph">CHRIST University
+                                                Thiruvananthapuram
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="card">
-                    <div class="card-header" id="headingThree">
-                        <h2 class="mb-0">
-                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
-                                data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                Louisiana
-                            </button>
-                        </h2>
-                    </div>
-                    <div id="collapseThree" class="collapse  blog-home2" aria-labelledby="headingThree"
-                        data-parent="#accordionExample">
-                        <div class="card-body">
 
-                            <div class="container-fluid text-h3 bg-green">
-
-                                <div class="row text-center">
-
-                                    <div class="col-lg-4 col-md-4 p-3">
-                                        <a class="text-decoration-none" href="{% url 'louisiana-tech-university' %}">
-                                            <img src="{% static 'conference/annual/Louisiana/LouisianaTechUniversity/LouisianaTechUniversity.jpg' %}"
-                                                class="img1 m-3 anualcon-cus-img">
-                                            <!-- <div class="card-text"> -->
-                                            <div
-                                                class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
-                                                Oct<span class="d-block">27</span>2022</div>
-                                            <!-- </div> -->
-                                        </a>
-                                        <p class="text-center text-black anualcon-cus-p">Louisiana Tech University,
-                                            Louisiana</p>
-                                    </div>
-
-                                    <div class="col-lg-4 col-md-4 p-3">
-                                        <a class="text-decoration-none"
-                                            href="{% url 'louisiana-state-university-shreveport' %}">
-                                            <img src="{% static 'conference/annual/Louisiana/LouisianaStateUniversity/Shreveport.jpg' %}"
-                                                class="img1 m-3 anualcon-cus-img">
-                                            <!-- <div class="card-text"> -->
-                                            <div
-                                                class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
-                                                Oct<span class="d-block">15</span>2022</div>
-                                            <!-- </div> -->
-                                        </a>
-                                        <p class="text-center text-black anualcon-cus-p">Louisiana State University,
-                                            Shreveport</p>
-                                    </div>
-                                    <div class="col-lg-4 col-md-4 p-3">
-                                        <a class="text-decoration-none" href="{% url 'universityofLouisianaMonroe' %}">
-                                            <img src="{% static 'conference/annual/Louisiana/universityofLouisiana/Monroe.jpg' %}"
-                                                class="img1 m-3 anualcon-cus-img">
-                                            <!-- <div class="card-text"> -->
-                                            <div
-                                                class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
-                                                Oct<span class="d-block">15</span>2022</div>
-                                            <!-- </div> -->
-                                        </a>
-                                        <p class="text-center text-black anualcon-cus-p">University of Louisiana, Monroe
-                                        </p>
-                                    </div>
-
-
-                                </div>
-
-                            </div>
-                            <br>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-header" id="headingFour">
-                        <h2 class="mb-0">
-                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
-                                data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                New York
-                            </button>
-                        </h2>
-                    </div>
-                    <div id="collapseFour" class="collapse  blog-home2" aria-labelledby="headingFour"
-                        data-parent="#accordionExample">
-                        <div class="card-body">
-
-                            <div class="container-fluid text-h3 bg-green">
-
-                                <div class="row text-center">
-                                    <div class="col-lg-4 col-md-4 p-3">
-                                        <a class="text-decoration-none"
-                                            href="{% url 'binghamton-university-new-york' %}">
-                                            <img src="{% static 'conference/annual/newYork/BinghamtonUniversity/BinghamtonUniversity.jpeg' %}"
-                                                class="img1 m-3 anualcon-cus-img">
-                                            <!-- <div class="card-text"> -->
-                                            <div
-                                                class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
-                                                Nov<span class="d-block">19</span>2021</div>
-                                            <!-- </div> -->
-                                        </a>
-                                        <p class="text-center text-black anualcon-cus-p">Binghamton University, New York
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <br>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-header" id="headingThree">
-                        <h2 class="mb-0">
-                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
-                                data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-
-                                Thiruvananthapuram
-
-                            </button>
-                        </h2>
-                    </div>
-
-                    <div id="collapseFive" class="collapse blog-home2" aria-labelledby="headingOne"
-                        data-parent="#accordionExample">
-                        <div class="card-body">
-                            <p>
-                            <div class="container-fluid text-h3 bg-green">
-
-                                <div class="row text-center">
-                                    <div class="col-lg-4 col-md-4 p-3">
-                                        <a class="text-decoration-none" href="{% url 'allsaintssollege' %}">
-                                            <img src="{% static 'conference/annual/Trivandrum/allSaintsCollege/allsaints.jpg' %}"
-                                                class="img1 m-3 anualcon-cus-img">
-                                            <!-- <div class="card-text"> -->
-                                            <div
-                                                class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
-                                                Dec<span class="d-block">05</span>2022</div>
-                                            <!-- </div> -->
-                                        </a>
-                                        <p class="text-center text-black paragraph">All Saints College, Trivandrum</p>
-
-                                    </div>
-                                    <div class="col-lg-4 col-md-4 p-3">
-                                        <a class="text-decoration-none"
-                                            href="{% url 'christ-university-thiruvananthapuram' %}">
-                                            <img src="{% static 'conference/annual/Trivandrum/christUniversity/Christ-thrivandrum.jpg' %}"
-                                                class="img1 m-3 anualcon-cus-img">
-
-                                            <div
-                                                class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
-                                                Jan<span class="d-block">11</span>2020</div>
-
-                                        </a>
-                                        <p class="text-center text-black paragraph">CHRIST University Thiruvananthapuram
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <br>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</div>
-
-<div class="container">
-    <div class="row py-5">
-        <div class="col-md-12">
-            <div class="main-timeline">
-                <a href="#" class="timeline">
-                    <div class="timeline-icon"><i class="fa-solid fa-globe"></i></div>
-                    <div class="timeline-content">
-                        <h3 class="title">HISTORY</h3>
-                        <p class="description">
-                            Volunteers from the local community including business owners involved in voluntary
-                            community developmental projects, non-profit organizations, philanthropists, social workers,
-                            educators or educational administrators, retired personnel, students, or anyone interested
-                            in contributing to their community development can be a part of the conference and engage in
-                            fruitful dialogues with visionaries through the conference.
-                        </p>
-                    </div>
-                </a>
-                <a href="#" class="timeline">
-                    <div class="timeline-icon"><i class="fa-regular fa-lightbulb"></i></div>
-                    <div class="timeline-content">
-                        <h3 class="title pl-5">VISION</h3>
-                        <p class="description pl-5 ">
-                            Our Vision is to Empowered local communities for sustainable impact, improvement, Global
-                            Harmony (and Holistic Success).
-                        </p>
-                    </div>
-                </a>
-                <a href="#" class="timeline">
-                    <div class="timeline-icon"><i class="fa-solid fa-rocket"></i></div>
-                    <div class="timeline-content">
-                        <h3 class="title">GOAL</h3>
-                        <p class="description">
-                            The Let Us Dream Conference was established in 2017 for the purpose of providing a forum for
-                            sharing experiences with successes and challenges in community improvement organizations and
-                            efforts. Broad conference goals are to
-                        <ul>
-                            <li>Improve networking and collaboration among all those interested in community improvement
-                                organizations and programs.</li>
-                            <li>Promote volunteerism and empower all those involved in community improvement
-                                organizations and initiatives, including employees, volunteers, post-secondary students,
-                                researchers, and practitioners.</li>
-                            <li>Create a professional learning organization dedicated to improving local communities and
-                                characterized by a culture of shared researcher and practitioner knowledge, skills,
-                                theories, and best practices.</li>
-                        </ul>
-                        </p>
-                    </div>
-                </a>
             </div>
         </div>
     </div>
-</div>
+
+    <div class="container">
+        <div class="row py-5">
+            <div class="col-md-12">
+                <div class="main-timeline">
+                    <a href="#" class="timeline">
+                        <div class="timeline-icon"><i class="fa-solid fa-globe"></i></div>
+                        <div class="timeline-content">
+                            <h3 class="title">HISTORY</h3>
+                            <p class="description">
+                                Volunteers from the local community including business owners involved in voluntary
+                                community developmental projects, non-profit organizations, philanthropists, social
+                                workers,
+                                educators or educational administrators, retired personnel, students, or anyone
+                                interested
+                                in contributing to their community development can be a part of the conference and
+                                engage in
+                                fruitful dialogues with visionaries through the conference.
+                            </p>
+                        </div>
+                    </a>
+                    <a href="#" class="timeline">
+                        <div class="timeline-icon"><i class="fa-regular fa-lightbulb"></i></div>
+                        <div class="timeline-content">
+                            <h3 class="title pl-5">VISION</h3>
+                            <p class="description pl-5 ">
+                                Our Vision is to Empowered local communities for sustainable impact, improvement, Global
+                                Harmony (and Holistic Success).
+                            </p>
+                        </div>
+                    </a>
+                    <a href="#" class="timeline">
+                        <div class="timeline-icon"><i class="fa-solid fa-rocket"></i></div>
+                        <div class="timeline-content">
+                            <h3 class="title">GOAL</h3>
+                            <p class="description">
+                                The Let Us Dream Conference was established in 2017 for the purpose of providing a forum
+                                for
+                                sharing experiences with successes and challenges in community improvement organizations
+                                and
+                                efforts. Broad conference goals are to
+                            <ul>
+                                <li>Improve networking and collaboration among all those interested in community
+                                    improvement
+                                    organizations and programs.
+                                </li>
+                                <li>Promote volunteerism and empower all those involved in community improvement
+                                    organizations and initiatives, including employees, volunteers, post-secondary
+                                    students,
+                                    researchers, and practitioners.
+                                </li>
+                                <li>Create a professional learning organization dedicated to improving local communities
+                                    and
+                                    characterized by a culture of shared researcher and practitioner knowledge, skills,
+                                    theories, and best practices.
+                                </li>
+                            </ul>
+                            </p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 {% endblock %}
