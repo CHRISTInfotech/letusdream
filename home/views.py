@@ -121,7 +121,7 @@ def yclpCourse(request):
 
 def dreams(request, drm):
     if drm == 'band':
-        return render(request, 'dreams/dreamsBand.html', {'drm': drm})
+        return render(request, 'productions/dreamsBand.html', {'drm': drm})
     else:
         return render(request, 'dreams/dreamsProgram.html', {'drm': drm})
 
