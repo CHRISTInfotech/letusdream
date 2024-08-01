@@ -2,109 +2,76 @@
 {% load static %}
 
 {% block title %}
-    Conversation Club
+Conversation Club
 {% endblock title %}
-
 
 {% block extraStyles %}
     <link rel="stylesheet" href="{% static 'clubs/clubs.css' %}" type="text/css">
 {% endblock extraStyles %}
 
 {% block content %}
-
     <div class="container margin-top-170">
-
-        <nav aria-label="breadcrumb animated slideInDown">
+        <nav aria-label="breadcrumb" class="animated slideInDown">
             <ol class="breadcrumb text-uppercase mb-0 bg-white">
-                <li class="breadcrumb-item"><a class="text-black text-decoration-none" href="{% url 'main' %}">Home</a>
-                </li>
+                <li class="breadcrumb-item"><a class="text-black text-decoration-none" href="{% url 'main' %}">Home</a></li>
                 <li class="breadcrumb-item"><a class="text-black text-decoration-none">Clubs</a></li>
-                <li class="breadcrumb-item  active" aria-current="page" style="color: #0a7b79;">Conversation Club</li>
+                <li class="breadcrumb-item active" aria-current="page" style="color: #0a7b79;">Conversation Club</li>
             </ol>
         </nav>
-
-        <div class="row mt-5 mb-5">
-            <div class="col-12">
-                <div class="fs-1 fw-bolder text-center">
-                    Conversation Club
-                </div>
+        
+        <div class="col-12">
+            <div class="fs-1 fw-bolder text-center">
+                Conversation Club
             </div>
-            <div class="col">
-                <div class="fw-bolder fs-2 mb-3 mt-5">
+        </div>
+        
+        <!-- About section -->
+        <div class="row mt-5">
+            <div class="col-md-6">
+                <div class="fw-bolder fs-2 mb-3">
                     About
                 </div>
                 <div class="lh-lg">
-                    The primary aim of this club is to engage in casual and reflective conversations. While the
-                    discourse is informal, the topics are intriguing, provocative, and frequently laced with humor. A
-                    wide range of themes, spanning the serious to the whimsical, are discussed at monthly online
-                    meetings. Some topics thus far include Inclusion And Equity, Empathy and Compassion, Personal
-                    Decision-Making Styles, Inspirational Persons; Food, Clothes, Personal Uniqueness, and Cancel
-                    Culture.
+                    The primary aim of this club is to engage in casual and reflective conversations. While the discourse is informal, the topics are intriguing, provocative, and frequently laced with humor. A wide range of themes, spanning the serious to the whimsical, are discussed at monthly online meetings. Some topics thus far include Inclusion And Equity, Empathy and Compassion, Personal Decision-Making Styles, Inspirational Persons; Food, Clothes, Personal Uniqueness, and Cancel Culture.
                 </div>
+            </div>
 
-                <div class="fw-bolder fs-2 mb-3 mt-5">
+            <!-- Image section for About -->
+            <div class="col-md-6 d-flex justify-content-center align-items-center">
+                <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="img-thumbnail rounded" width="350px" height="250px" alt="">
+            </div>
+            
+        </div>
+
+        <!-- Objectives section -->
+        <div class="row mt-5">
+            <div class="col-md-6">
+                <div class="fw-bolder fs-2 mb-3">
                     Objectives
                 </div>
                 <div class="lh-lg">
                     ● Foster an environment that encourages open and free-flowing conversations among members.
                     <br/>
-                    ● Build a community where members feel connected through shared experiences and engaging
-                    conversations.
+                    ● Build a community where members feel connected through shared experiences and engaging conversations.
                     <br/>
-                    ● Embrace a wide range of themes to explore the diversity of thought and perspectives within the
-                    group.
-                </div>
-
-                <div class="fw-bolder fs-2 mb-3 mt-5">
-                    How it works?
-                </div>
-                <div class="lh-lg">
-                    While each LUD Club has a distinct focus, the overall structure of the Conversation Club includes
-                    virtual meetings every Wednesday, the third week of the month. This includes 12-15 active members
-                    who wish to engage in discourse grounded in shared interests. Generally, a group member assumes a
-                    manager role to ensure that meeting dates, times, and topics are collaboratively identified and
-                    scheduled. Clubs are self-organised, self-managed, and self-generated, and leadership is shared
-                    among group members. Mutual accountability is inherent in club discussions inasmuch as there is a
-                    periodic sharing of goals and progress. A one-hour timebox for each meeting is maintained.
+                    ● Embrace a wide range of themes to explore the diversity of thought and perspectives within the group.
                 </div>
             </div>
 
-            <div class="col-4">
-                <div class="text-center bg-light mt-5 p-3 fs-4">
-                    Latest Updates
-                </div>
-                <marquee direction="up" height="500px">
-
-                    <div class="p-1 club-news">
-                        <div class="fw-bold">
-                            Latest News Update
-                        </div>
-                        <small class="fst-italic">
-                            20th January 2024 | Bangalore, India
-                        </small>
-                    </div>
-                </marquee>
-
-            </div>
-
-        </div>
-
-
-        <div class="row mt-5 mb-5">
-
-            <div class="col-12 my-5">
+            <!-- Leadership section -->
+            <div class="col-md-6">
                 <div class="text-center fw-bolder fs-2">
                     Leadership
                 </div>
                 <div class="row d-flex justify-content-evenly mt-3">
-                    <div class="col-2">
+                    <div class="col-3">
                         <img src="{% static 'clubs/leadership/Pauline.png' %}" class="img-thumbnail rounded" alt="">
                         <div class="mt-3 text-center">
                             <div class="fw-bolder">Dr Pauline</div>
                             <small class="fst-italic">Retired Professor, Louisiana Tech University</small>
                         </div>
                     </div>
-                    <div class="col-2">
+                    <div class="col-3">
                         <img src="{% static 'clubs/leadership/Lisa.png' %}" class="img-thumbnail rounded" alt="">
                         <div class="mt-3 text-center">
                             <div class="fw-bolder">Lisa Jungkamp</div>
@@ -113,7 +80,37 @@
                     </div>
                 </div>
             </div>
+        </div>
 
+        <!-- How it works section -->
+        <div class="row mt-5">
+            <div class="col-md-6">
+                <div class="fw-bolder fs-2 mb-3">
+                    How it works?
+                </div>
+                <div class="lh-lg">
+                    While each LUD Club has a distinct focus, the overall structure of the Conversation Club includes virtual meetings every Wednesday, the third week of the month. This includes 12-15 active members who wish to engage in discourse grounded in shared interests. Generally, a group member assumes a manager role to ensure that meeting dates, times, and topics are collaboratively identified and scheduled. Clubs are self-organised, self-managed, and self-generated, and leadership is shared among group members. Mutual accountability is inherent in club discussions inasmuch as there is a periodic sharing of goals and progress. A one-hour timebox for each meeting is maintained.
+                </div>
+            </div>
+
+            <!-- Latest Updates section -->
+            <div class="col-md-6">
+                <div class="text-center fw-bolder fs-2">
+                    Latest Updates
+                </div>
+                <div class="club-news p-3">
+                    <div class="fw-bold">
+                        Latest News Update
+                    </div>
+                    <small class="fst-italic">
+                        20th January 2024 | Bangalore, India
+                    </small>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact section above footer -->
+        <div class="row mt-5">
             <div class="col-12 my-5">
                 <div class="text-center fw-bolder fs-2">
                     Contact
@@ -123,7 +120,5 @@
                 </div>
             </div>
         </div>
-
     </div>
-
 {% endblock content %}
