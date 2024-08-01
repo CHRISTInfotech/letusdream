@@ -2,110 +2,77 @@
 {% load static %}
 
 {% block title %}
-   Professional Club
+Professional Club
 {% endblock title %}
-
 
 {% block extraStyles %}
     <link rel="stylesheet" href="{% static 'clubs/clubs.css' %}" type="text/css">
 {% endblock extraStyles %}
 
 {% block content %}
-
     <div class="container margin-top-170">
-
-        <nav aria-label="breadcrumb animated slideInDown">
+        <nav aria-label="breadcrumb" class="animated slideInDown">
             <ol class="breadcrumb text-uppercase mb-0 bg-white">
-                <li class="breadcrumb-item"><a class="text-black text-decoration-none" href="{% url 'main' %}">Home</a>
-                </li>
+                <li class="breadcrumb-item"><a class="text-black text-decoration-none" href="{% url 'main' %}">Home</a></li>
                 <li class="breadcrumb-item"><a class="text-black text-decoration-none">Clubs</a></li>
-                <li class="breadcrumb-item  active" aria-current="page" style="color: #0a7b79;">Professional Club</li>
+                <li class="breadcrumb-item active" aria-current="page" style="color: #0a7b79;">Professional Club</li>
             </ol>
         </nav>
-
-        <div class="row mt-5 mb-5">
-            <div class="col-12">
-                <div class="fs-1 fw-bolder text-center">
-                    Professional (Pro) Club
-                </div>
-            </div>
-            <div class="col">
-                <div class="fw-bolder fs-2 mb-3 mt-5">
-                    About
-                </div>
-                <div class="lh-lg">
-                    A professional development mentoring club, this group was established to support its members. Small
-                    groups of 10-12 working professionals representing a variety of occupations meet monthly to share
-                    and discuss various strategies about scheduled topics and members’ experiences with implementing
-                    those strategies.
-                </div>
-
-                <div class="fw-bolder fs-2 mb-3 mt-5">
-                    Objectives
-                </div>
-                <div class="lh-lg">
-                    ● Encourage sharing of expertise and experiences.
-                    <br/>
-                    ● Foster a collaborative environment for diverse perspectives.
-                    <br/>
-                    ● Provide a platform for discussing career strategies.
-                    <br/>
-                    ● Focus on skill development, networking, and navigating professional challenges.
-                    <br/>
-                    ● Create a space to discuss real-world challenges.
-                </div>
-
-                <div class="fw-bolder fs-2 mb-3 mt-5">
-                    How it works?
-                </div>
-                <div class="lh-lg">
-                    While each LUD Club has a distinct focus, the overall structure of the Professional Club includes
-                    virtual meetings every Thursday, the second week of the month. This includes 12-15 active members
-                    who wish to engage in discourse grounded in shared interests. Generally, a group member assumes a
-                    manager role to ensure that meeting dates, times, and topics are collaboratively identified and
-                    scheduled. Clubs are self-organized, self-managed, and self-generated, and leadership is shared
-                    among group members. Mutual accountability is inherent in club discussions as much as there is a
-                    periodic sharing of goals and progress. A one-hour timebox for each meeting is maintained.
-                </div>
-            </div>
-
-            <div class="col-4">
-                <div class="text-center bg-light mt-5 p-3 fs-4">
-                    Latest Updates
-                </div>
-                <marquee direction="up" height="500px">
-
-                    <div class="p-1 club-news">
-                        <div class="fw-bold">
-                            Latest News Update
-                        </div>
-                        <small class="fst-italic">
-                            20th January 2024 | Bangalore, India
-                        </small>
-                    </div>
-                </marquee>
-
+        
+        <div class="col-12">
+            <div class="fs-1 fw-bolder text-center">
+                Professional (Pro) Club
             </div>
 
         </div>
+        
+        <!-- About section -->
+        <div class="row mt-5">
+            <div class="col-md-6">
+                <div class="fw-bolder fs-2 mb-3">
+                    About
+                </div>
+                <div class="lh-lg">
+                    A professional development mentoring club, this group was established to support its members. Small groups of 10-12 working professionals representing a variety of occupations meet monthly to share and discuss various strategies about scheduled topics and members’ experiences with implementing those strategies.
+                </div>
+            </div>
 
+            <!-- Image section for About -->
+            <div class="col-md-6 d-flex justify-content-center align-items-center">
+                <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="img-thumbnail rounded" width="350px" height alt="Professional Club Image">
+            </div>
+        </div>
 
-        <div class="row mt-5 mb-5">
+        <!-- Objectives section -->
+        <div class="row mt-5">
+            <div class="col-md-6">
+                <div class="fw-bolder fs-2 mb-3">
+                    Objectives
+                </div>
+                <div class="lh-lg">
+                    ● Encourage sharing of expertise and experiences.<br/>
+                    ● Foster a collaborative environment for diverse perspectives.<br/>
+                    ● Provide a platform for discussing career strategies.<br/>
+                    ● Focus on skill development, networking, and navigating professional challenges.<br/>
+                    ● Create a space to discuss real-world challenges.
+                </div>
+            </div>
 
-            <div class="col-12 my-5">
+            <!-- Leadership section -->
+            <div class="col-md-6">
                 <div class="text-center fw-bolder fs-2">
                     Leadership
                 </div>
                 <div class="row d-flex justify-content-evenly mt-3">
-                    <div class="col-2">
-                        <img src="{% static 'clubs/leadership/rajeev.png' %}" class="img-thumbnail rounded" alt="">
+                    <div class="col-3">
+                        <img src="{% static 'clubs/leadership/rajeev.png' %}" class="img-thumbnail rounded" alt="Rajeev Image">
                         <div class="mt-3 text-center">
                             <div class="fw-bolder">Col Ranjeev Babu, VSM</div>
                             <small class="fst-italic">Agile Trainer | ICAgile Authorized Instructor</small>
                         </div>
                     </div>
-                    <div class="col-2">
-                        <img src="{% static 'clubs/leadership/rajesh.png' %}" class="img-thumbnail rounded" alt="">
+                    <div class="col-3">
+                        <img src="{% static 'clubs/leadership/rajesh.png' %}" class="img-thumbnail rounded" alt="Rajesh Image">
                         <div class="mt-3 text-center">
                             <div class="fw-bolder">Rajesh P I</div>
                             <small class="fst-italic">Founder & Artistic Director, The Actors Collective</small>
@@ -113,7 +80,37 @@
                     </div>
                 </div>
             </div>
+        </div>
 
+        <!-- How it works section -->
+        <div class="row mt-5">
+            <div class="col-md-6">
+                <div class="fw-bolder fs-2 mb-3">
+                    How it works?
+                </div>
+                <div class="lh-lg">
+                    While each LUD Club has a distinct focus, the overall structure of the Professional Club includes virtual meetings every Thursday, the second week of the month. This includes 12-15 active members who wish to engage in discourse grounded in shared interests. Generally, a group member assumes a manager role to ensure that meeting dates, times, and topics are collaboratively identified and scheduled. Clubs are self-organized, self-managed, and self-generated, and leadership is shared among group members. Mutual accountability is inherent in club discussions inasmuch as there is a periodic sharing of goals and progress. A one-hour timebox for each meeting is maintained.
+                </div>
+            </div>
+
+            <!-- Latest Updates section -->
+            <div class="col-md-6">
+                <div class="text-center fw-bolder fs-2">
+                    Latest Updates
+                </div>
+                <div class="club-news p-3">
+                    <div class="fw-bold">
+                        Latest News Update
+                    </div>
+                    <small class="fst-italic">
+                        20th January 2024 | Bangalore, India
+                    </small>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact section above footer -->
+        <div class="row mt-5">
             <div class="col-12 my-5">
                 <div class="text-center fw-bolder fs-2">
                     Contact
@@ -123,7 +120,5 @@
                 </div>
             </div>
         </div>
-
     </div>
-
 {% endblock content %}
