@@ -6,172 +6,520 @@ Sustainability Goals
 {% endblock %}
 
 {% block content %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sustainability Goals</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <style>
-        .breadcrumb {
-            background-color: #f8f9fa;
-        }
-        .sdg-img {
-            max-height: 100px;
-        }
-        .accordion-header {
-            background-color: #f1f1f1;
-            cursor: pointer;
-        }
-        .accordion-header:hover {
-            background-color: #e1e1e1;
-        }
-        .accordion-body {
-            background-color: #fafafa;
-        }
-
-        @media screen and (max-width: 768px) {
-            .sdg-img {
-                max-height: 50px;
-            }
-            span{
-                font-size: 1.2rem;
-            }
-            
-        }
-    </style>
-</head>
-<body>
-
-<nav class="cus-breadcrumb" aria-label="breadcrumb">
-    <ol class="breadcrumb text-uppercase mb-0">
+<nav class="cus-breadcrumb" aria-label="breadcrumb animated slideInDown">
+    <ol class="breadcrumb text-uppercase mb-0 bg-white">
         <li class="breadcrumb-item"><a class="text-black text-decoration-none" href="{% url 'main' %}">Home</a></li>
-        <li class="breadcrumb-item active" aria-current="page">ABOUT US</li>
+        </li>
+        <li class="breadcrumb-item"><a class="text-black text-decoration-none">ABOUT US</a></li>
+        <li class="breadcrumb-item  active " aria-current="page">Sustainability</li>
     </ol>
 </nav>
 
-<div class="container mt-5">
-    <div class="text-center mb-5">
-        <div class="d-flex justify-content-center flex-wrap">
-            <img src="{% static 'Aboutus/sdg/sdg3.png' %}" alt="SDG 3" class="sdg-img m-1">
-            <img src="{% static 'Aboutus/sdg/sdg4.png' %}" alt="SDG 4" class="sdg-img m-1">
-            <img src="{% static 'Aboutus/sdg/sdg5.png' %}" alt="SDG 5" class="sdg-img m-1">
-            <img src="{% static 'Aboutus/sdg/sdg10.png' %}" alt="SDG 10" class="sdg-img m-1">
-            <img src="{% static 'Aboutus/sdg/sdg11.png' %}" alt="SDG 11" class="sdg-img m-1">
-            <img src="{% static 'Aboutus/sdg/sdg13.png' %}" alt="SDG 13" class="sdg-img m-1">
-            <img src="{% static 'Aboutus/sdg/sdg16.png' %}" alt="SDG 16" class="sdg-img m-1">
-            <img src="{% static 'Aboutus/sdg/sdg17.png' %}" alt="SDG 17" class="sdg-img m-1">
-            <img src="{% static 'logo/let-us-dream-Empowering-Communities-01.png' %}" alt="Logo" class="sdg-img m-1">
-        </div>
-    </div>
+<div class="container">
+    <div class="row py-5">
+        <div class="col-12 text-center mb-5 fw-bolder fs-1">
+            <div class="row mb-1">
+                <div class="col d-flex justify-content-center">
 
-    <div class="mb-5">
-        <p class="lh-lg">
-            We envision creating sustainably empowered global communities. We approach our vision through diverse programs aligned with the 
-            <strong>United Nations' Sustainable Development Goals (SDGs)</strong>. Let Us Dream stands committed to fostering positive change through empowering communities.
-        </p>
-    </div>
+                    <img src="{% static 'Aboutus/sdg/sdg3.png' %}" alt="" height="100px" class="p-1">
+                    <img src="{% static 'Aboutus/sdg/sdg4.png' %}" alt="" height="100px" class="p-1">
+                    <img src="{% static 'Aboutus/sdg/sdg5.png' %}" alt="" height="100px" class="p-1">
+                    <img src="{% static 'Aboutus/sdg/sdg10.png' %}" alt="" height="100px" class="p-1">
+                    <img src="{% static 'Aboutus/sdg/sdg11.png' %}" alt="" height="100px" class="p-1">
+                    <img src="{% static 'Aboutus/sdg/sdg13.png' %}" alt="" height="100px" class="p-1">
+                    <img src="{% static 'Aboutus/sdg/sdg16.png' %}" alt="" height="100px" class="p-1">
+                    <img src="{% static 'Aboutus/sdg/sdg17.png' %}" alt="" height="100px" class="p-1">
 
-    <div class="accordion" id="accordionExample">
-        <!-- DREAMS -->
-        <div class="card">
-            <div class="card-header accordion-header" id="headingOne" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                <h2 class="mb-0 d-flex justify-content-between align-items-center">
-                    <span>DREAMS</span>
-                    <div>
-                        <img src="{% static 'Aboutus/sdg/sdg3.png' %}" alt="SDG 3" class="sdg-img m-1">
-                        <img src="{% static 'Aboutus/sdg/sdg4.png' %}" alt="SDG 4" class="sdg-img m-1">
-                        <img src="{% static 'Aboutus/sdg/sdg5.png' %}" alt="SDG 5" class="sdg-img m-1">
-                        <img src="{% static 'Aboutus/sdg/sdg10.png' %}" alt="SDG 10" class="sdg-img m-1">
-                        <img src="{% static 'Aboutus/sdg/sdg11.png' %}" alt="SDG 11" class="sdg-img m-1">
-                        <img src="{% static 'Aboutus/sdg/sdg16.png' %}" alt="SDG 16" class="sdg-img m-1">
-                        <img src="{% static 'Aboutus/sdg/sdg17.png' %}" alt="SDG 17" class="sdg-img m-1">
-                    </div>
-                </h2>
+                    <div style="border: 1px solid black" class="m-3"></div>
+                    <img src="{% static 'logo/let-us-dream-Empowering-Communities-01.png' %}" alt="" height="100px"
+                        class="p-1">
+                </div>
             </div>
+        </div>
 
-            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
-                <div class="card-body accordion-body">
-                    <div class="row">
-                        <div class="col-12 mb-3">
-                            <div class="d-flex">
-                                <img src="{% static 'Aboutus/sdg/sdg3.png' %}" alt="SDG 3" class="sdg-img m-1">
-                                <div class="ml-3">
-                                    <h5>SDG 3 - Good Health and Wellbeing</h5>
-                                    <p>
-                                        This three-year after-school program addresses the holistic health and well-being of each participant left under-attended at their regular schooling. 
-                                        The program addresses the psychosocial skill development of its stakeholders.
-                                    </p>
+        <div class="col-12 lh-lg mb-5">
+            We envision creating sustainably empowered global communities. We approach our vision through diverse
+            programs aligned with the <b>United Nations' Sustainable Development Goals (SDGs)</b>. Let Us Dream stands
+            committed to fostering positive change through Empowering communities.
+        </div>
+
+        <div class="col-12 mb-5">
+            <div class="accordion" id="accordionExample">
+                <!-- DREAMS -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <div class="p-3" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false"
+                            aria-controls="collapseOne">
+                            <div class="row">
+                                <div class="col d-flex align-items-center">
+                                    <div class="fw-normal fst-italic fs-4">
+                                        DREAMS <br />
+                                        <small>Community-University-School Intervention</small>
+                                    </div>
+                                </div>
+                                <div class="col d-flex justify-content-end">
+                                    <img src="{% static 'Aboutus/sdg/sdg3.png' %}" alt="" height="100px" class="p-1">
+                                    <img src="{% static 'Aboutus/sdg/sdg4.png' %}" alt="" height="100px" class="p-1">
+                                    <img src="{% static 'Aboutus/sdg/sdg5.png' %}" alt="" height="100px" class="p-1">
+                                    <img src="{% static 'Aboutus/sdg/sdg10.png' %}" alt="" height="100px" class="p-1">
+                                    <img src="{% static 'Aboutus/sdg/sdg11.png' %}" alt="" height="100px" class="p-1">
+                                    <img src="{% static 'Aboutus/sdg/sdg16.png' %}" alt="" height="100px" class="p-1">
+                                    <img src="{% static 'Aboutus/sdg/sdg17.png' %}" alt="" height="100px" class="p-1">
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 mb-3">
-                            <div class="d-flex">
-                                <img src="{% static 'Aboutus/sdg/sdg4.png' %}" alt="SDG 4" class="sdg-img m-1">
-                                <div class="ml-3">
-                                    <h5>SDG 4 - Quality Education</h5>
-                                    <p>
-                                        Differentiating ourselves with an impactful 1:2 mentor-mentee ratio ensures a student-centric holistic development. 
-                                        Engaging in diverse activities and interactive sessions brings exposure to bridge formal education and real-world experiences, empowering students to become lifelong learners and critical/creative thinkers.
-                                    </p>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <div class="row m-auto">
+                                <div class="col-12 mb-3">
+                                    <div class="row m-auto">
+                                        <div class="col-2 d-flex justify-content-center align-items-center">
+                                            <img src="{% static 'Aboutus/sdg/sdg3.png' %}" alt="" height="100px">
+                                        </div>
+                                        <div class="col lh-lg">
+                                            <div class="fw-bolder">SDG 3 - Good Health and Wellbeing</div>
+                                            This three-year after-school program addresses the holistic health and
+                                            well-being of each participant left under-attended at their regular
+                                            schooling. The program addresses the psychosocial skill development of its
+                                            stakeholders.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 mb-3">
+                                    <div class="row m-auto">
+                                        <div class="col-2 d-flex justify-content-center align-items-center">
+                                            <img src="{% static 'Aboutus/sdg/sdg4.png' %}" alt="" height="100px">
+                                        </div>
+                                        <div class="col lh-lg">
+                                            <div class="fw-bolder">SDG 4 - Quality Education</div>
+                                            Differentiating ourselves with an impactful 1:2 mentor-mentee ratio ensures
+                                            a student-centric holistic development. Engaging in diverse activities and
+                                            interactive sessions brings exposure to bridge formal education and
+                                            real-world experiences, empowering students to become lifelong learners and
+                                            critical/creative thinkers.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 mb-3">
+                                    <div class="row m-auto">
+                                        <div class="col-2 d-flex justify-content-center align-items-center">
+                                            <img src="{% static 'Aboutus/sdg/sdg5.png' %}" alt="" height="100px">
+                                        </div>
+                                        <div class="col lh-lg">
+                                            <div class="fw-bolder">SDG 5 - Gender Equality</div>
+                                            The program ensures a safe, inclusive environment to enforce gender equality
+                                            to all mentors and mentees throughout the program.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 mb-3">
+                                    <div class="row m-auto">
+                                        <div class="col-2 d-flex justify-content-center align-items-center">
+                                            <img src="{% static 'Aboutus/sdg/sdg10.png' %}" alt="" height="100px">
+                                        </div>
+                                        <div class="col lh-lg">
+                                            <div class="fw-bolder">SDG 10 - Reduce Inequalities</div>
+                                            The program was designed to address our education system's inequalities and
+                                            challenges. The program focuses on those students who need more
+                                            opportunities and attention for their growth to their full potential.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 mb-3">
+                                    <div class="row m-auto">
+                                        <div class="col-2 d-flex justify-content-center align-items-center">
+                                            <img src="{% static 'Aboutus/sdg/sdg11.png' %}" alt="" height="100px">
+                                        </div>
+                                        <div class="col lh-lg">
+                                            <div class="fw-bolder">SDG 11 - Sustainable Cities and Communities</div>
+                                            The project is implemented to build the future generation with social
+                                            commitment and civic sense to lead and care for better and sustainable
+                                            communities and cities.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 mb-3">
+                                    <div class="row m-auto">
+                                        <div class="col-2 d-flex justify-content-center align-items-center">
+                                            <img src="{% static 'Aboutus/sdg/sdg16.png' %}" alt="" height="100px">
+                                        </div>
+                                        <div class="col lh-lg">
+                                            <div class="fw-bolder">SDG 16 - Peace, Justice, and Strong Institutions
+                                            </div>
+                                            The project promotes harmony and inclusion among stakeholders from different
+                                            demographic and socio-cultural backgrounds. The program envisions creating
+                                            harmonious transnational and transculturally connected social institutions.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 mb-3">
+                                    <div class="row m-auto">
+                                        <div class="col-2 d-flex justify-content-center align-items-center">
+                                            <img src="{% static 'Aboutus/sdg/sdg17.png' %}" alt="" height="100px">
+                                        </div>
+                                        <div class="col lh-lg">
+                                            <div class="fw-bolder">SDG 17 - Partnership for the Goals</div>
+                                            The DREAMS Intervention Program accomplished its goals by collaborating with
+                                            Higher Education Institutions, Schools and Community
+                                            organisations/businesses. The program builds an extensive network of
+                                            educational institutions and organisations glocally.
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 mb-3">
-                            <div class="d-flex">
-                                <img src="{% static 'Aboutus/sdg/sdg5.png' %}" alt="SDG 5" class="sdg-img m-1">
-                                <div class="ml-3">
-                                    <h5>SDG 5 - Gender Equality</h5>
-                                    <p>
-                                        The program ensures a safe, inclusive environment to enforce gender equality to all mentors and mentees throughout the program.
-                                    </p>
+                    </div>
+                </div>
+                <!-- CLUBS -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <div class="p-3" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
+                            aria-controls="collapseTwo">
+                            <div class="row">
+                                <div class="col d-flex align-items-center">
+                                    <div class="fw-normal fst-italic fs-5">CLUBs</div>
+                                </div>
+                                <div class="col d-flex justify-content-end">
+                                    <img src="{% static 'Aboutus/sdg/sdg3.png' %}" alt="" height="100px" class="p-1">
+                                    <img src="{% static 'Aboutus/sdg/sdg4.png' %}" alt="" height="100px" class="p-1">
+                                    <img src="{% static 'Aboutus/sdg/sdg10.png' %}" alt="" height="100px" class="p-1">
+                                    <img src="{% static 'Aboutus/sdg/sdg11.png' %}" alt="" height="100px" class="p-1">
+                                    <img src="{% static 'Aboutus/sdg/sdg16.png' %}" alt="" height="100px" class="p-1">
+                                    <img src="{% static 'Aboutus/sdg/sdg17.png' %}" alt="" height="100px" class="p-1">
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 mb-3">
-                            <div class="d-flex">
-                                <img src="{% static 'Aboutus/sdg/sdg10.png' %}" alt="SDG 10" class="sdg-img m-1">
-                                <div class="ml-3">
-                                    <h5>SDG 10 - Reduce Inequalities</h5>
-                                    <p>
-                                        The program was designed to address our education system's inequalities and challenges. 
-                                        The program focuses on those students who need more opportunities and attention for their growth to their full potential.
-                                    </p>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <div class="row m-auto">
+                                <div class="col-12 mb-3">
+                                    <div class="row m-auto">
+                                        <div class="col-2 d-flex justify-content-center align-items-center">
+                                            <img src="{% static 'Aboutus/sdg/sdg3.png' %}" alt="" height="100px">
+                                        </div>
+                                        <div class="col lh-lg">
+                                            <div class="fw-bolder">SDG 3 - Good Health and Wellbeing</div>
+                                            The monthly meeting promotes mentoring and sharing the members' experiences,
+                                            concerns and challenges. Together, they discuss and find possible solutions
+                                            that promote members' well-being and better performance.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 mb-3">
+                                    <div class="row m-auto">
+                                        <div class="col-2 d-flex justify-content-center align-items-center">
+                                            <img src="{% static 'Aboutus/sdg/sdg4.png' %}" alt="" height="100px">
+                                        </div>
+                                        <div class="col lh-lg">
+                                            <div class="fw-bolder">SDG 4 - Quality Education</div>
+                                            The members of the club learn from each other's experiences and expertise.
+                                            The feedback system and collaborative efforts to solve their professional
+                                            challenges impart knowledge sharing and learning.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 mb-3">
+                                    <div class="row m-auto">
+                                        <div class="col-2 d-flex justify-content-center align-items-center">
+                                            <img src="{% static 'Aboutus/sdg/sdg10.png' %}" alt="" height="100px">
+                                        </div>
+                                        <div class="col lh-lg">
+                                            <div class="fw-bolder">SDG 10 - Reduced Inequality</div>
+                                            The members of the clubs are from different backgrounds and domains to
+                                            foster inclusivity and understanding. This diversity and inclusion promotes
+                                            openness to diverse perspectives.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 mb-3">
+                                    <div class="row m-auto">
+                                        <div class="col-2 d-flex justify-content-center align-items-center">
+                                            <img src="{% static 'Aboutus/sdg/sdg11.png' %}" alt="" height="100px">
+                                        </div>
+                                        <div class="col lh-lg">
+                                            <div class="fw-bolder">SDG 11 - Sustainable Cities and Communities</div>
+                                            Monthly deliberations promote engagement, aligning to create sustainable and
+                                            resilient communities through mutual understanding and support.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 mb-3">
+                                    <div class="row m-auto">
+                                        <div class="col-2 d-flex justify-content-center align-items-center">
+                                            <img src="{% static 'Aboutus/sdg/sdg16.png' %}" alt="" height="100px">
+                                        </div>
+                                        <div class="col lh-lg">
+                                            <div class="fw-bolder">SDG 16 - Peace, Justice and Strong Institutions</div>
+                                            Members of different walks of life collaborate with an openness and
+                                            inclusive mindset that promotes harmony and justice in their organisations
+                                            and communities.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 mb-3">
+                                    <div class="row m-auto">
+                                        <div class="col-2 d-flex justify-content-center align-items-center">
+                                            <img src="{% static 'Aboutus/sdg/sdg17.png' %}" alt="" height="100px">
+                                        </div>
+                                        <div class="col lh-lg">
+                                            <div class="fw-bolder">SDG 17 - Partnership for the Goals</div>
+                                            The members of the clubs are selected from different organisations and
+                                            institutions to achieve the objectives mentioned above.
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 mb-3">
-                            <div class="d-flex">
-                                <img src="{% static 'Aboutus/sdg/sdg11.png' %}" alt="SDG 11" class="sdg-img m-1">
-                                <div class="ml-3">
-                                    <h5>SDG 11 - Sustainable Cities and Communities</h5>
-                                    <p>
-                                        The project is implemented to build the future generation with social commitment and civic sense to lead and care for better and sustainable communities and cities.
-                                    </p>
+                    </div>
+                </div>
+                <!-- CONFERENCES -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <div class="p-3" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false"
+                            aria-controls="collapseThree">
+                            <div class="row">
+                                <div class="col d-flex align-items-center">
+                                    <div class="fw-normal fst-italic fs-5">CONFERENCEs</div>
+                                </div>
+                                <div class="col d-flex justify-content-end">
+                                    <img src="{% static 'Aboutus/sdg/sdg3.png' %}" alt="" height="100px" class="p-1">
+                                    <img src="{% static 'Aboutus/sdg/sdg4.png' %}" alt="" height="100px" class="p-1">
+                                    <img src="{% static 'Aboutus/sdg/sdg10.png' %}" alt="" height="100px" class="p-1">
+                                    <img src="{% static 'Aboutus/sdg/sdg13.png' %}" alt="" height="100px" class="p-1">
+                                    <img src="{% static 'Aboutus/sdg/sdg17.png' %}" alt="" height="100px" class="p-1">
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 mb-3">
-                            <div class="d-flex">
-                                <img src="{% static 'Aboutus/sdg/sdg16.png' %}" alt="SDG 16" class="sdg-img m-1">
-                                <div class="ml-3">
-                                    <h5>SDG 16 - Peace, Justice, and Strong Institutions</h5>
-                                    <p>
-                                        The project promotes harmony and inclusion among stakeholders from different demographic and socio-cultural backgrounds. 
-                                        The program envisions creating harmonious transnational and transculturally connected social institutions.
-                                    </p>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <div class="row m-auto">
+                                <div class="col-12 mb-3">
+                                    <div class="row m-auto">
+                                        <div class="col-2 d-flex justify-content-center align-items-center">
+                                            <img src="{% static 'Aboutus/sdg/sdg3.png' %}" alt="" height="100px">
+                                        </div>
+                                        <div class="col lh-lg">
+                                            <div class="fw-bolder">SDG 3 - Good Health and Well-Being</div>
+                                            Community conferences promote initiatives and models for health
+                                            interventions and solutions in the local communities and on a global
+                                            platform.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 mb-3">
+                                    <div class="row m-auto">
+                                        <div class="col-2 d-flex justify-content-center align-items-center">
+                                            <img src="{% static 'Aboutus/sdg/sdg4.png' %}" alt="" height="100px">
+                                        </div>
+                                        <div class="col lh-lg">
+                                            <div class="fw-bolder">SDG 4 - Quality Education</div>
+                                            The conferences advocate and promote initiatives and models of inclusive and
+                                            holistic education. The presentations revolve around diverse, innovative
+                                            models and policies to break down barriers and provide equal access to
+                                            quality education.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 mb-3">
+                                    <div class="row m-auto">
+                                        <div class="col-2 d-flex justify-content-center align-items-center">
+                                            <img src="{% static 'Aboutus/sdg/sdg10.png' %}" alt="" height="100px">
+                                        </div>
+                                        <div class="col lh-lg">
+                                            <div class="fw-bolder">
+                                                SDG 10 - Reduced Inequalities
+                                            </div>
+                                            Conferences address social disparities, promote social inclusion, and combat
+                                            discrimination by introducing community best practices and initiatives.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 mb-3">
+                                    <div class="row m-auto">
+                                        <div class="col-2 d-flex justify-content-center align-items-center">
+                                            <img src="{% static 'Aboutus/sdg/sdg13.png' %}" alt="" height="100px">
+                                        </div>
+                                        <div class="col lh-lg">
+                                            <div class="fw-bolder">
+                                                SDG 13 - Climate Action
+                                            </div>
+                                            One of the tracks of the LUD conferences is focused on climate justice and
+                                            environmental protection. The conference promulgates sustainable actions and
+                                            initiatives to combat climate change and environmental protection.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 mb-3">
+                                    <div class="row m-auto">
+                                        <div class="col-2 d-flex justify-content-center align-items-center">
+                                            <img src="{% static 'Aboutus/sdg/sdg17.png' %}" alt="" height="100px">
+                                        </div>
+                                        <div class="col lh-lg">
+                                            <div class="fw-bolder">
+                                                SDG 17 - Partnerships for the Goals
+                                            </div>
+                                            LUD Conferences are consistently implemented in collaboration with
+                                            Universities and Colleges, Community Institutions and
+                                            for-profit/Not-for-profit Organisations.
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 mb-3">
-                            <div class="d-flex">
-                                <img src="{% static 'Aboutus/sdg/sdg17.png' %}" alt="SDG 17" class="sdg-img m-1">
-                                <div class="ml-3">
-                                    <h5>SDG 17 - Partnership for the Goals</h5>
-                                    <p>
-                                        The DREAMS Intervention Program accomplished its goals by collaborating with Higher Education Institutions and other social agencies in line with SDG 17 - Partnerships for the Goals.
-                                    </p>
+                    </div>
+                </div>
+                <!-- PRODUCTIONs -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <div class="p-3" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false"
+                            aria-controls="collapseFour">
+                            <div class="row">
+                                <div class="col d-flex align-items-center">
+                                    <div class="fw-normal fst-italic fs-5">PRODUCTIONs</div>
+                                </div>
+                                <div class="col d-flex justify-content-end">
+                                    <img src="{% static 'Aboutus/sdg/sdg3.png' %}" alt="" height="100px" class="p-1">
+                                    <img src="{% static 'Aboutus/sdg/sdg4.png' %}" alt="" height="100px" class="p-1">
+                                    <img src="{% static 'Aboutus/sdg/sdg11.png' %}" alt="" height="100px" class="p-1">
+                                    <img src="{% static 'Aboutus/sdg/sdg16.png' %}" alt="" height="100px" class="p-1">
+                                </div>
+                            </div>
+                        </div>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <div class="row m-auto">
+                                <div class="col-12 mb-3">
+                                    <div class="row m-auto">
+                                        <div class="col-2 d-flex justify-content-center align-items-center">
+                                            <img src="{% static 'Aboutus/sdg/sdg3.png' %}" alt="" height="100px">
+                                        </div>
+                                        <div class="col lh-lg">
+                                            <div class="fw-bolder">SDG 3 - Good Health and Well-Being</div>
+                                            Music, dance and theatre have a considerable power in promoting holistic
+                                            health and personal wellbeing. The music and themes used in the LUD
+                                            Productions are always aimed to inspire and motivate the audience.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 mb-3">
+                                    <div class="row m-auto">
+                                        <div class="col-2 d-flex justify-content-center align-items-center">
+                                            <img src="{% static 'Aboutus/sdg/sdg4.png' %}" alt="" height="100px">
+                                        </div>
+                                        <div class="col lh-lg">
+                                            <div class="fw-bolder">SDG 4 - Quality Education</div>
+                                            The members who are part of the productions are the people who are only
+                                            sometimes given opportunities for learning and performance. LUD Productions
+                                            provides opportunities to those underserved for their skill development and
+                                            performance.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 mb-3">
+                                    <div class="row m-auto">
+                                        <div class="col-2 d-flex justify-content-center align-items-center">
+                                            <img src="{% static 'Aboutus/sdg/sdg11.png' %}" alt="" height="100px">
+                                        </div>
+                                        <div class="col lh-lg">
+                                            <div class="fw-bolder">SDG 11 - Sustainable Cities and Communities</div>
+                                            LUD Productions promulgates the value of caring for others and communities
+                                            for sustainable flourishing.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 mb-3">
+                                    <div class="row m-auto">
+                                        <div class="col-2 d-flex justify-content-center align-items-center">
+                                            <img src="{% static 'Aboutus/sdg/sdg16.png' %}" alt="" height="100px">
+                                        </div>
+                                        <div class="col lh-lg">
+                                            <div class="fw-bolder">SDG 16 - Peace, Justice and Strong Institutions</div>
+                                            Productions created by the LUD teams are always aimed at the spread of
+                                            peace, harmony and justice.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Courses -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <div class="p-3" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false"
+                            aria-controls="collapseFive">
+                            <div class="row">
+                                <div class="col d-flex align-items-center">
+                                    <div class="fw-normal fst-italic fs-5">COURSEs</div>
+                                </div>
+                                <div class="col d-flex justify-content-end">
+                                    <img src="{% static 'Aboutus/sdg/sdg3.png' %}" alt="" height="100px" class="p-1">
+                                    <img src="{% static 'Aboutus/sdg/sdg4.png' %}" alt="" height="100px" class="p-1">
+                                    <img src="{% static 'Aboutus/sdg/sdg16.png' %}" alt="" height="100px" class="p-1">
+                                    <img src="{% static 'Aboutus/sdg/sdg17.png' %}" alt="" height="100px" class="p-1">
+                                </div>
+                            </div>
+                        </div>
+                    </h2>
+                    <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <div class="row m-auto">
+                                <div class="col-12 mb-3">
+                                    <div class="row m-auto">
+                                        <div class="col-2 d-flex justify-content-center align-items-center">
+                                            <img src="{% static 'Aboutus/sdg/sdg3.png' %}" alt="" height="100px">
+                                        </div>
+                                        <div class="col lh-lg">
+                                            <div class="fw-bolder">SDG 3 - Good Health and Well-Being</div>
+                                            All the courses and the fellowships were designed to train the mentors to
+                                            address the psychosocial needs and well-being of the community.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 mb-3">
+                                    <div class="row m-auto">
+                                        <div class="col-2 d-flex justify-content-center align-items-center">
+                                            <img src="{% static 'Aboutus/sdg/sdg4.png' %}" alt="" height="100px">
+                                        </div>
+                                        <div class="col lh-lg">
+                                            <div class="fw-bolder">SDG 4 - Quality Education</div>
+                                            The courses and the fellowship empower young leaders through
+                                            interdisciplinary training, aligning to provide quality and holistic
+                                            education to those in need beyond traditional school settings.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 mb-3">
+                                    <div class="row m-auto">
+                                        <div class="col-2 d-flex justify-content-center align-items-center">
+                                            <img src="{% static 'Aboutus/sdg/sdg16.png' %}" alt="" height="100px">
+                                        </div>
+                                        <div class="col lh-lg">
+                                            <div class="fw-bolder">SDG 16 - Peace, Justice, and Strong Institutions
+                                            </div>
+                                            By developing mentors, leaders and fellows for a transformational societal
+                                            impact, LUD aligns to promote peace, justice, and strong institutions.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 mb-3">
+                                    <div class="row m-auto">
+                                        <div class="col-2 d-flex justify-content-center align-items-center">
+                                            <img src="{% static 'Aboutus/sdg/sdg17.png' %}" alt="" height="100px">
+                                        </div>
+                                        <div class="col lh-lg">
+                                            <div class="fw-bolder">
+                                                SDG 17 - Partnerships for the Goals
+                                            </div>
+                                            LUD courses and training are implemented in collaboration with universities,
+                                            colleges, corporations, community institutions, and
+                                            for-profit/not-for-profit organisations.
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -180,301 +528,7 @@ Sustainability Goals
             </div>
         </div>
 
-        <!-- CLUBS -->
-        <div class="card">
-            <div class="card-header accordion-header" id="headingTwo" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                <h2 class="mb-0 d-flex justify-content-between align-items-center">
-                    <span>CLUBS</span>
-                    <div>
-                        <img src="{% static 'Aboutus/sdg/sdg3.png' %}" alt="SDG 3" class="sdg-img m-1">
-                        <img src="{% static 'Aboutus/sdg/sdg4.png' %}" alt="SDG 4" class="sdg-img m-1">
-                        <img src="{% static 'Aboutus/sdg/sdg10.png' %}" alt="SDG 10" class="sdg-img m-1">
-                        <img src="{% static 'Aboutus/sdg/sdg11.png' %}" alt="SDG 11" class="sdg-img m-1">
-                        <img src="{% static 'Aboutus/sdg/sdg16.png' %}" alt="SDG 16" class="sdg-img m-1">
-                        <img src="{% static 'Aboutus/sdg/sdg17.png' %}" alt="SDG 17" class="sdg-img m-1">
-                    </div>
-                </h2>
-            </div>
-
-            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                <div class="card-body accordion-body">
-                    <div class="row">
-                        <div class="col-12 mb-3">
-                            <div class="d-flex">
-                                <img src="{% static 'Aboutus/sdg/sdg3.png' %}" alt="SDG 3" class="sdg-img m-1">
-                                <div class="ml-3">
-                                    <h5>SDG 3 - Good Health and Wellbeing</h5>
-                                    <p>
-                                        The monthly meeting promotes mentoring and sharing the members' experiences, concerns and challenges. Together, they discuss and find possible solutions that promote members' well-being and better performance.                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 mb-3">
-                            <div class="d-flex">
-                                <img src="{% static 'Aboutus/sdg/sdg4.png' %}" alt="SDG 4" class="sdg-img m-1">
-                                <div class="ml-3">
-                                    <h5>SDG 4 - Quality Education</h5>
-                                    <p>
-                                        The members of the club learn from each other's experiences and expertise. The feedback system and collaborative efforts to solve their professional challenges impart knowledge sharing and learning.                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 mb-3">
-                            <div class="d-flex">
-                                <img src="{% static 'Aboutus/sdg/sdg10.png' %}" alt="SDG 10" class="sdg-img m-1">
-                                <div class="ml-3">
-                                    <h5>SDG 10 - Reduce Inequalities</h5>
-                                    <p>
-                                        The members of the clubs are from different backgrounds and domains to foster inclusivity and understanding. This diversity and inclusion promotes openness to diverse perspectives.                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 mb-3">
-                            <div class="d-flex">
-                                <img src="{% static 'Aboutus/sdg/sdg11.png' %}" alt="SDG 11" class="sdg-img m-1">
-                                <div class="ml-3">
-                                    <h5>SDG 11 - Sustainable Cities and Communities</h5>
-                                    <p>
-                                        Monthly deliberations promote engagement, aligning to create sustainable and resilient communities through mutual understanding and support                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 mb-3">
-                            <div class="d-flex">
-                                <img src="{% static 'Aboutus/sdg/sdg16.png' %}" alt="SDG 16" class="sdg-img m-1">
-                                <div class="ml-3">
-                                    <h5>SDG 16 - Peace, Justice, and Strong Institutions</h5>
-                                    <p>
-                                        Members of different walks of life collaborate with an openness and inclusive mindset that promotes harmony and justice in their organisations and communities.                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 mb-3">
-                            <div class="d-flex">
-                                <img src="{% static 'Aboutus/sdg/sdg17.png' %}" alt="SDG 17" class="sdg-img m-1">
-                                <div class="ml-3">
-                                    <h5>SDG 17 - Partnership for the Goals</h5>
-                                    <p>
-                                        The members of the clubs are selected from different organisations and institutions to achieve the objectives mentioned above.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- CONFERENCEs -->
-        <div class="card">
-            <div class="card-header accordion-header" id="headingTwo" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                <h2 class="mb-0 d-flex justify-content-between align-items-center">
-                    <span>CONFERENCE</span>
-                    <div>
-                        <img src="{% static 'Aboutus/sdg/sdg3.png' %}" alt="SDG 3" class="sdg-img m-1">
-                        <img src="{% static 'Aboutus/sdg/sdg4.png' %}" alt="SDG 4" class="sdg-img m-1">
-                        <img src="{% static 'Aboutus/sdg/sdg10.png' %}" alt="SDG 10" class="sdg-img m-1">
-                        <img src="{% static 'Aboutus/sdg/sdg13.png' %}" alt="SDG 13" class="sdg-img m-1">
-                        <img src="{% static 'Aboutus/sdg/sdg17.png' %}" alt="SDG 17" class="sdg-img m-1">
-                    </div>
-                </h2>
-            </div>
-
-            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                <div class="card-body accordion-body">
-                    <div class="row">
-                        <div class="col-12 mb-3">
-                            <div class="d-flex">
-                                <img src="{% static 'Aboutus/sdg/sdg3.png' %}" alt="SDG 3" class="sdg-img m-1">
-                                <div class="ml-3">
-                                    <h5>SDG 3 - Good Health and Well-Being</h5>
-                                    <p>
-                                        Community conferences promote initiatives and models for health interventions and solutions in the local communities and on a global platform.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 mb-3">
-                            <div class="d-flex">
-                                <img src="{% static 'Aboutus/sdg/sdg4.png' %}" alt="SDG 4" class="sdg-img m-1">
-                                <div class="ml-3">
-                                    <h5>SDG 4 - Quality Education</h5>
-                                    <p>
-                                        The conferences advocate and promote initiatives and models of inclusive and holistic education. The presentations revolve around diverse, innovative models and policies to break down barriers and provide equal access to quality education.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 mb-3">
-                            <div class="d-flex">
-                                <img src="{% static 'Aboutus/sdg/sdg10.png' %}" alt="SDG 10" class="sdg-img m-1">
-                                <div class="ml-3">
-                                    <h5>SDG 10 - Reduce Inequalities</h5>
-                                    <p>
-                                        Conferences address social disparities, promote social inclusion, and combat discrimination by introducing community best practices and initiatives.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 mb-3">
-                            <div class="d-flex">
-                                <img src="{% static 'Aboutus/sdg/sdg13.png' %}" alt="SDG 13" class="sdg-img m-1">
-                                <div class="ml-3">
-                                    <h5>SDG 13 - Climate Action</h5>
-                                    <p>
-                                        One of the tracks of the LUD conferences is focused on climate justice and environmental protection. The conference promulgates sustainable actions and initiatives to combat climate change and environmental protection.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 mb-3">
-                            <div class="d-flex">
-                                <img src="{% static 'Aboutus/sdg/sdg17.png' %}" alt="SDG 17" class="sdg-img m-1">
-                                <div class="ml-3">
-                                    <h5>SDG 17 - Partnerships for the Goals</h5>
-                                    <p>
-                                        LUD Conferences are consistently implemented in collaboration with Universities and Colleges, Community Institutions and for-profit/Not-for-profit Organisations.                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- PRODUCTIONs -->
-        <div class="card">
-            <div class="card-header accordion-header" id="headingTwo" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                <h2 class="mb-0 d-flex justify-content-between align-items-center">
-                    <span>PRODUCTION</span>
-                    <div>
-                        <img src="{% static 'Aboutus/sdg/sdg3.png' %}" alt="SDG 3" class="sdg-img m-1">
-                        <img src="{% static 'Aboutus/sdg/sdg4.png' %}" alt="SDG 4" class="sdg-img m-1">
-                        <img src="{% static 'Aboutus/sdg/sdg11.png' %}" alt="SDG 11" class="sdg-img m-1">
-                        <img src="{% static 'Aboutus/sdg/sdg16.png' %}" alt="SDG 16" class="sdg-img m-1">
-                    </div>
-                </h2>
-            </div>
-
-            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                <div class="card-body accordion-body">
-                    <div class="row">
-                        <div class="col-12 mb-3">
-                            <div class="d-flex">
-                                <img src="{% static 'Aboutus/sdg/sdg3.png' %}" alt="SDG 3" class="sdg-img m-1">
-                                <div class="ml-3">
-                                    <h5>SDG 3 - Good Health and Well-Being</h5>
-                                    <p>
-                                        Music, dance and theatre have a considerable power in promoting holistic health and personal wellbeing. The music and themes used in the LUD Productions are always aimed to inspire and motivate the audience.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 mb-3">
-                            <div class="d-flex">
-                                <img src="{% static 'Aboutus/sdg/sdg4.png' %}" alt="SDG 4" class="sdg-img m-1">
-                                <div class="ml-3">
-                                    <h5>SDG 4 - Quality Education</h5>
-                                    <p>
-                                        The members who are part of the productions are the people who are only sometimes given opportunities for learning and performance. LUD Productions provides opportunities to those underserved for their skill development and performance.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 mb-3">
-                            <div class="d-flex">
-                                <img src="{% static 'Aboutus/sdg/sdg10.png' %}" alt="SDG 10" class="sdg-img m-1">
-                                <div class="ml-3">
-                                    <h5>SDG 11 - Sustainable Cities and Communities</h5>
-                                    <p>
-                                        LUD Productions promulgates the value of caring for others and communities for sustainable flourishing.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 mb-3">
-                            <div class="d-flex">
-                                <img src="{% static 'Aboutus/sdg/sdg16.png' %}" alt="SDG 16" class="sdg-img m-1">
-                                <div class="ml-3">
-                                    <h5>SDG 16 - Peace, Justice, and Strong Institutions</h5>
-                                    <p>
-                                        Productions created by the LUD teams are always aimed at the spread of peace, harmony and justice.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- COURSE -->
-        <div class="card">
-            <div class="card-header accordion-header" id="headingThree" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                <h2 class="mb-0 d-flex justify-content-between align-items-center">
-                    <span>COURSE</span>
-                    <div>
-                        <img src="{% static 'Aboutus/sdg/sdg3.png' %}" alt="SDG 3" class="sdg-img m-1">
-                        <img src="{% static 'Aboutus/sdg/sdg4.png' %}" alt="SDG 4" class="sdg-img m-1">
-                        <img src="{% static 'Aboutus/sdg/sdg16.png' %}" alt="SDG 16" class="sdg-img m-1">
-                        <img src="{% static 'Aboutus/sdg/sdg17.png' %}" alt="SDG 17" class="sdg-img m-1">
-                    </div>
-                </h2>
-            </div>
-
-            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                <div class="card-body accordion-body">
-                    <div class="row">
-                        <div class="col-12 mb-3">
-                            <div class="d-flex">
-                                <img src="{% static 'Aboutus/sdg/sdg3.png' %}" alt="SDG 3" class="sdg-img m-1">
-                                <div class="ml-3">
-                                    <h5>SDG 3 - Good Health and Wellbeing</h5>
-                                    <p>
-                                        All the courses and the fellowships were designed to train the mentors to address the psychosocial needs and well-being of the community.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 mb-3">
-                            <div class="d-flex">
-                                <img src="{% static 'Aboutus/sdg/sdg4.png' %}" alt="SDG 4" class="sdg-img m-1">
-                                <div class="ml-3">
-                                    <h5>SDG 4 - Quality Education</h5>
-                                    <p>
-                                        The courses and the fellowship empower young leaders through interdisciplinary training, aligning to provide quality and holistic education to those in need beyond traditional school settings.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 mb-3">
-                            <div class="d-flex">
-                                <img src="{% static 'Aboutus/sdg/sdg16.png' %}" alt="SDG 16" class="sdg-img m-1">
-                                <div class="ml-3">
-                                    <h5>SDG 16 - Peace, Justice, and Strong Institutions</h5>
-                                    <p>
-                                        By developing mentors, leaders and fellows for a transformational societal impact, LUD aligns to promote peace, justice, and strong institutions.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 mb-3">
-                            <div class="d-flex">
-                                <img src="{% static 'Aboutus/sdg/sdg17.png' %}" alt="SDG 17" class="sdg-img m-1">
-                                <div class="ml-3">
-                                    <h5>SDG 17 - Partnerships for the Goals</h5>
-                                    <p>
-                                        LUD courses and training are implemented in collaboration with universities, colleges, corporations, community institutions, and for-profit/not-for-profit organisations.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
         <div class="col-12 lh-lg mb-3">
-            <br>
             Let Us Dream is a role model for community institutions, integrating research wings with SDG goals. The LUD
             Research team comprises researchers and scholars from various Higher Education Institutions worldwide. The
             team scientifically tests and validates the effectiveness of all its six interventions periodically and
@@ -489,16 +543,5 @@ Sustainability Goals
         </div>
     </div>
 </div>
-
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<script>
-    $('.accordion-header').click(function() {
-        $(this).next('.collapse').collapse('toggle');
-    });
-</script>
-</body>
-</html>
 
 {% endblock %}
