@@ -7,6 +7,11 @@ ABOUT US
 
 {% block content %}
 <script src="https://kit.fontawesome.com/f8cd4d7fce.js" crossorigin="anonymous"></script>
+
+{% block extraStyles %}
+<link rel="stylesheet" href="{% static 'css/aboutUs.css' %}" type="text/css">
+{% endblock extraStyles %}
+
 <section class="aboutus">
     <nav class="cus-breadcrumb" aria-label="breadcrumb animated slideInDown ">
         <ol class="breadcrumb text-uppercase mb-0 bg-white">
@@ -77,10 +82,83 @@ ABOUT US
                     better place.</p>
 
             </div>
-
-
-
-
+            <div class="container-fluid">
+                <h2 class="heading-h3 text-green">Goals, Vision, Mission & Core Values</h2>
+                <div class="row">
+                    <div class="container-fluid">
+                        <div id="para4" class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <div class="card border-0">
+                                    <div class="card-icon">
+                                        <br><i class="fa-solid fa-lightbulb"></i>
+                                    </div>
+                                    <h5 class="card-title">Core Values</h5>
+                                    <div class="card-body">
+                                        <p class="card-text text-start text-justify">
+                                            <ul class="text-left text-font">
+                                                <li>Inclusive Collaboration</li>
+                                                <li>Passion for Service & Stewardship</li>
+                                                <li>Talent Development & Mutual Empowerment</li>
+                                                <li>Continuous Commitment for Improvement & Innovation</li>
+                                                <li>Global Perspective and Social Commitment</li>
+                                            </ul>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>                
+                    <div id="para5" class="col-lg-6 col-md-6 col-sm-12">
+                        <div class="card border-0">
+                            <div class="card-icon">
+                                <br><br><i class="fa-solid fa-eye"></i>
+                            </div>
+                            <h5 id="para6" class="card-title">Vision</h5>
+                            <div class="card-body">
+                                <p class="card-text text-font text-justify">
+                                    Empowering Communities for Global Harmony <br>(and Holistic Success).
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <div class="card border-0">
+                            <div class="card-icon">
+                                <br><br><i class="fa-solid fa-rocket"></i>
+                            </div>
+                            <h5 class="card-title">Mission</h5>
+                            <div class="card-body">
+                                <p class="card-text text-start">
+                                    <ul class="text-left text-font">
+                                        <li>Promote the hidden talents for the holistic success of youth and adults</li>
+                                        <li>Enhance collaboration for sustainable achievements of communities</li>
+                                        <li>Create diverse platform for opportunities and support system where
+                                            unidentified/struggling individuals to be empowered</li>
+                                        <li>Develop social commitment and responsibilities with a global outlook</li>
+                                    </ul>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id = "para7" class="col-lg-6 col-md-6 col-sm-12">
+                        <div class="card border-0">
+                            <br><br>
+                            <div class="card-icon">
+                                <i class="fa-solid fa-bullseye"></i>
+                            </div>
+                            <h5 id = "para9" class="card-title">Goal</h5>
+                            <div class="card-body">
+                                <ul class="text-font text-left">
+                                    <li>The goal of Let Us DREAMS is the holistic development of youth through clear and realistic goal setting in life.</li>
+                                    <li>Focus will be on the physical, psychological, emotional, social, spiritual, and leadership aspects of each individual.</li>
+                                    <li>The aim is to form a group of socially responsible, mature, and successful teenagers in three years.</li>
+                                    <li>The program seeks to develop and hone the youth so they can take their place in society.</li>
+                                    <li>The ultimate goal is for the youth to lead and contribute to the growth of society.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>  
+                </div>
+            </div>
+            <div class="pg">
                 <h3 class="heading-h3 text-green text-center">EMPOWERING COMMUNITIES</h3>
                 <p class="text-justify">The LET US DREAM organizational culture is rooted in the universal human
                     values after the vision of St. Kuriakose Elias Chavara, that is, the integral formation of a person and commitment to the society.
@@ -88,65 +166,33 @@ ABOUT US
                     foundation for the society to grow in. We believe humanity to be one global family, tied together, where our
                     excellence and holistic success as an individual or as a society is interdependent on each other. Growing in
                     the holistic view of life, we would like to DREAM together and grow together</p>
-
-
-            <div class="container d-flex justify-content-center img-middle">
-                <a href="{% static 'Aboutus/aboutUs/about us.png' %}"> <img src="{% static 'Aboutus/aboutUs/about us.png' %}"
-                                                                            class="rounded"></a>
-            </div>
-
-            <div class="pg">
                 <div class="row">
                     <div class="col-lg-9 col-md-9">
-                        <p class="text-justify">Finding his own confidence through music, Father Reverend Lijo
-                            Thomas
-                            Pathickal, CMI, wanted to
-                            assist people to help children who are under confident, shy and struggle to showcase their
-                            capabilities. The drive to share his insights with others like him and helping them realise
-                            their
-                            full potential led him to forming the DREAM Program. The journey for developing and
-                            implementing
-                            the
-                            programme has been through turbulent and testing times but the sheer will power and the
-                            conviction
-                            of Rev Fr Lijo Thomas to help the others has helped the project stay afloat for many years
-                            now.
+                        <p id="para3" class="text-justify">Finding his own confidence through music, Father Reverend Lijo
+                            Thomas Pathickal, CMI, wanted to assist people to help children who are under confident, shy and struggle to
+                            showcase their capabilities. The drive to share his insights with others like him and helping them realize their
+                            full potential led him to forming the DREAM Program. The journey for developing and implementing the
+                            programme has been through turbulent and testing times but the sheer will power and the conviction of Rev Fr
+                            Lijo Thomas to help the others has helped the project stay afloat for many years now.
                         </p>
-                        <p class="text-justify">The Project gradually expanded but the turning point came in 2010,
-                            while
-                            he was pursuing his Ph.D. in
-                            Educational Leadership, at the University of Louisiana, Monroe. His mentor at the time, Dr
-                            Pauline
-                            Leonard, a professor at Louisiana Tech University, suggested that DREAM had the potential of
-                            being
-                            developed into a working, scientific model and that was the moment the project steered
-                            towards
-                            the
-                            direction it is flowing in today. It has become a 3-year curriculum-based community
-                            mentoring
-                            project, for schools and colleges. Each year focuses on the development of skills and
-                            leadership,
-                            both at the personal and at the communal levels. The program is further designed to
-                            encourage
-                            children, especially those with low self-confidence, to rise up to their maximum potential,
-                            while
-                            also motivating others to do the same around them. Through a 3-stage developmental model,
-                            <strong>DREAM</strong>
-                            helps individuals to work through <strong>D</strong>esire, <strong>R</strong>eadiness,
-                            <strong>E</strong>mpowerment, and <strong>A</strong>ction, to attain
-                            <strong>M</strong>astery
-                            for
-                            success.
+                        <p id="para3" class="text-justify">The Project gradually expanded but the turning point came in 2010, while he was
+                            pursuing his Ph.D. in Educational Leadership, at the University of Louisiana, Monroe. His mentor at the time, Dr
+                            Pauline Leonard, a professor at Louisiana Tech University, suggested that DREAM had the potential of being
+                            developed into a working, scientific model and that was the moment the project steered towards the direction it is
+                            flowing in today. It has become a 3-year curriculum-based community mentoring project, for schools and colleges.
+                            Each year focuses on the development of skills and leadership, both at the personal and at the communal levels. The
+                            program is further designed to encourage children, especially those with low self-confidence, to rise up to their
+                            maximum potential, while also motivating others to do the same around them. Through a 3-stage developmental
+                            model, <strong>DREAM</strong> helps individuals to work through <strong>D</strong>esire, <strong>R</strong>eadiness,
+                            <strong>E</strong>mpowerment, and <strong>A</strong>ction, to attain <strong>M</strong>astery for success.
                         </p>
-                        <p class="text-justify">A motivation and an inspiration, Father Reverend Lijo Thomas
-                            Pathickal has purposed his life to helping others grow. </p>
-
+                        <p class="text-justify">A motivation and an inspiration, Father Reverend Lijo Thomas Pathickal has purposed his life
+                            to helping others grow.</p>
                     </div>
                     <div class="col-lg-3 col-md-3">
                         <div class="card-shadow rounded">
                             <a href="https://www.facebook.com/lijo.pathickal.5" target="_blank">
-                                <img src="{% static 'Aboutus/aboutUs/aboutus-lijo.png' %}"
-                                    href="https://www.facebook.com/lijo.pathickal.5" class="card-img-top p-3"
+                                <img src="{% static 'Aboutus/aboutUs/aboutus-lijo.png' %}" class="card-img-top p-3"
                                     alt="Dr. Fr. Lijo Thomas CMI">
                             </a>
                             <div class="card-body">
@@ -157,125 +203,13 @@ ABOUT US
                     </div>
                 </div>
             </div>
-
-            <!-- card -->
-            <div class="container-fluid">
-                <h2 class="heading-h3 text-green text-center pt-5 pb-5">Goals Vision Mission Core values</h2>
-                <div class="row">
-                    <div class="col-lg-6 col-md-12 col-sm-12">
-                        <div class="m-4">
-                            <div class="card border-0" style="max-width: 700px;">
-                                <div class="row g-0">
-                                    <div class="col-sm-3">
-                                        <span class="logo-align">
-                                            <i class="fa-solid fa-bullseye fa-4x"></i>
-                                        </span>
-                                    </div>
-                                    <div class="col-sm-9">
-                                        <div class="card-body">
-                                            <h5 class="card-title m-2 fs-4 fw-bold text-primary d-flex justify-content-left">Goal</h5>
-                                            <p class="card-text text-font" style="text-align: left;">
-                                                The Goal of the Let Us DREAMS is the holistic development of youth
-                                                through clear and realistic goal setting in life. Focus will be on the physical,
-                                                psychological,
-                                                emotional, social, spiritual, and leadership aspects of each and every individual
-                                                forming a
-                                                group of socially responsible, mature, and successful teenagers in three years. We
-                                                aim
-                                                to
-                                                develop and hone the youth such that they are able to take their place in the
-                                                society and can lead and contribute to its growth.
-                                            </p>
-                                            
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-12 col-sm-12">
-                        <div class="m-4">
-                            <div class="card border-0" style="max-width: 700px;">
-                                <div class="row g-0">
-                                    <div class="col-sm-3">
-                                        <span class="logo-align">
-                                            <i class="fa-solid fa-eye fa-4x"></i>
-                                        </span>
-                                    </div>
-                                    <div class="col-sm-9">
-                                        <div class="card-body ">
-                                            <h5 class="card-title m-2 fs-4 fw-bold text-primary d-flex justify-content-left">Vision</h5>
-                                            <p class="card-text text-font" style="text-align: justify;">
-                                                Empowering Communities for Global Harmony (and Holistic Success).
-                                            </p>
-                                            
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-6 col-md-12 col-sm-12">
-                        <div class="m-4">
-                            <div class="card border-0" style="max-width: 700px;">
-                                <div class="row g-0">
-                                    <div class="col-sm-3">
-                                        <span class="logo-align">
-                                            <i class="fa-solid fa-rocket fa-4x"></i>
-                                        </span>
-                                    </div>
-                                    <div class="col-sm-9">
-                                        <div class="card-body">
-                                            <h5 class="card-title m-2 fs-4 fw-bold text-primary d-flex justify-content-left">Mission</h5>
-                                            <p class="card-text text-start ">
-                                                <ul class="text-left text-start text-font">
-                                                    <li>Promote the hidden talents for the holistic success of youth and adults</li>
-                                                    <li>Enhance collaboration for sustainable achievements of communities</li>
-                                                    <li>Create diverse platform for opportunities and support system where
-                                                        unidentified/struggling individuals to be empowered</li>
-                                                    <li>Develop social commitment and responsibilities with a global outlook</li>
-                
-                                                </ul>
-                                            </p>
-                                            
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-12 col-sm-12">
-                        <div class="m-4">
-                            <div class="card border-0" style="max-width: 700px;">
-                                <div class="row g-0">
-                                    <div class="col-sm-3">
-                                        <span class="logo-align">
-                                            <i class="fa-solid fa-lightbulb fa-4x"></i>
-                                        </span>
-                                    </div>
-                                    <div class="col-sm-9">
-                                        <div class="card-body">
-                                            <h5 class="card-title m-2 fs-4 fw-bold text-primary d-flex justify-content-left">Core Values</h5>
-                                            <p class="card-text text-start text-justify">
-                                                <ul class="text-left text-start text-font">
-                                                    <li >Inclusive Collaboration</li>
-                                                    <li>Passion for Service & Stewardship</li>
-                                                    <li>Talent Development & Mutual Empowerment</li>
-                                                    <li>Continues Commitment for Improvement & Innovation</li>
-                                                    <li>Global Perspective and Social Commitment</li>
-                                                </ul>
-                                            </p>
-                                            
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            
             </div>
+            
+            
+
+
+            
         </div>
     </div>
 
