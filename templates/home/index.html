@@ -2,17 +2,17 @@
 {% load static %}
 
 {% block title %}
-HOME
+    HOME
 {% endblock title %}
 
 {% block extraStyles %}
-<link rel="stylesheet" href="{% static 'css/index.css' %}" type="text/css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.6.6/css/flag-icons.min.css" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Baskervville&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}" type="text/css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.6.6/css/flag-icons.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baskervville&display=swap" rel="stylesheet">
 {% endblock extraStyles %}
 
 {% block links %}
@@ -20,262 +20,330 @@ HOME
 {% endblock links %}
 
 {% block content %}
-<!-- <div class="mt-5 mb-5 row"></div> -->
-<div id="carouselExampleFade" class="carousel slide carousel-fade mt-5" data-bs-ride="carousel"
-  style="margin-top: 150px !important;">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="{% static 'home/banner/1.png' %}" class="d-block w-100" alt="...">
+    <!-- <div class="mt-5 mb-5 row"></div> -->
+    <div id="carouselExampleFade" class="carousel slide carousel-fade mt-5" data-bs-ride="carousel"
+         style="margin-top: 150px !important;">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="{% static 'home/banner/1.png' %}" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'home/banner/2.png' %}" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'home/banner/3.png' %}" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'home/banner/4.png' %}" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'home/banner/img2.png' %}" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'home/banner/img1.png' %}" class="d-block w-100" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
     </div>
-    <div class="carousel-item">
-      <img src="{% static 'home/banner/2.png' %}" class="d-block w-100" alt="...">
+
+    <div class="container-fluid cf-2 ">
+        <div class="row m-auto mb-5">
+            <div class="col-12 mb-3 text-center fw-bolder fs-2">
+                Upcoming Annual Conferences
+            </div>
+            <div class="col text-center">
+                <a href="https://cmt.letusdream.org/conference_details/f04bb2c8-5d1e-4321-9367-7174bbed482e"
+                   class="text-decoration-none text-black" target="_blank">
+                    September <span class="fs-1 fw-bolder text-primary">21</span> 2024
+                    <img src="{% static 'conference/annual/hyderabad/stfranciscollege.jpeg' %}"
+                         class="img1 p-3 anualcon-cus-img" alt="">
+                    St Francis College for Women, Begumpet, Hyderabad, India
+                </a>
+            </div>
+            <div class="col text-center">
+                <a href="https://cmt.letusdream.org/conference_details/83571339-3169-40bc-88f8-dbfb35e27bf5"
+                   class="text-decoration-none text-black" target="_blank">
+                    September <span class="fs-1 fw-bolder text-primary">28</span> 2024
+                    <img src="{% static 'conference/annual/pune/puneuniversity.png' %}"
+                         class="img1 p-3 anualcon-cus-img" alt="">
+                    Savitribai Phule Pune University, Pune, India
+                </a>
+            </div>
+            <div class="col text-center">
+                <a href="https://cmt.letusdream.org/conference_details/03f56cc1-d3fc-4aa6-9cfa-8f0a5013a24a"
+                   class="text-decoration-none text-black" target="_blank">
+                    October <span class="fs-1 fw-bolder text-primary">26</span> 2024
+                    <img src="{% static 'conference/annual/bangalore/stfrancisdesales/stfranciscollegebanglore.jpeg' %}"
+                         class="img1 p-3 anualcon-cus-img" alt="">
+                    St Francis De Sales College, Hebagodi, Bangalore, India
+                </a>
+            </div>
+            <div class="col text-center">
+                <a href="https://cmt.letusdream.org/conference_details/b49bbfd3-0575-40a7-a024-e022b1259208"
+                   class="text-decoration-none text-black" target="_blank">
+                    October <span class="fs-1 fw-bolder text-primary">31</span> 2024
+                    <img src="{% static 'conference/annual/Louisiana/GramblingStateUniversity/GramblingStateUniversity.jpg' %}"
+                         class="img1 p-3 anualcon-cus-img" alt="">
+                    Grambling State University, Grambling, Louisiana, USA
+                </a>
+            </div>
+            <div class="col text-center">
+                <a href="https://cmt.letusdream.org/conference_details/d9dfd46e-bb84-4c2b-af70-0c81d646f8de"
+                   class="text-decoration-none text-black" target="_blank">
+                    November <span class="fs-1 fw-bolder text-primary">8</span> 2024
+                    <img src="{% static 'conference/annual/newYork/BinghamtonUniversity/BinghamtonUniversity.jpeg' %}"
+                         class="img1 p-3 anualcon-cus-img" alt="">
+                    Binghamton University, Binghamton, New York, USA
+                </a>
+            </div>
+
+        </div>
     </div>
-    <div class="carousel-item">
-      <img src="{% static 'home/banner/3.png' %}" class="d-block w-100" alt="...">
+
+    <div class="container-fluid mt-5" id="dreamProgram">
+        <div class="row m-auto mt-5">
+            <h1 class="text-center text-uppercase">OUR PROGRAMS</h1>
+            <div class="col-10 offset-1">
+
+                <div class="row pt-5 max-auto row-2">
+                    <div class="col-md-6 col-lg-3 pb-3">
+
+                        <div class="card card-custom bg-white border-white border-0 card-1">
+                            <div class="card-custom-img card-img1">
+                            </div>
+
+                            <div class="card-body cb-1 p-4">
+                                <h5 class="card-title text-h3 fw-bold fs-4">DREAMS Program</h5>
+                                <p class="card-text text-h1-cen mt-3 card-t1 fs-6">The
+                                    DREAMS Program is a
+                                    three-year curriculum-based community mentoring project for schools and colleges,
+                                    each year focusing on
+                                    personal development, interpersonal skills and leadership skills. The program aims
+                                    to.</p>
+                            </div>
+                            <div class="card-footer text-center bg-white border-0 card-f1">
+
+
+                                <a href="{% url 'dreams' 'program' %}" class="add-boder">
+                                    <button type="button" class="btn-2">Know more</button>
+                                </a>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-6 col-lg-3 pb-3">
+
+                        <div class="card card-custom bg-white border-white border-0 card-1">
+                            <div class="card-custom-img card-img2">
+                            </div>
+
+                            <div class="card-body cb-1 p-4">
+                                <h5 class="card-title fw-bold text-h3 fs-4">DREAMS Pro Club</h5>
+                                <p class="card-text  text-h1-cen mt-3  card-t1 ">DREAMS Pro Club is a
+                                    support group for the personal and professional development of young professionals.
+                                    Small groups of
+                                    10-12
+                                    working professionals meet once every month to discuss and implement.</p>
+                            </div>
+                            <div class="card-footer text-center bg-white border-0 card-f1">
+
+                                <a href="{% url 'dreams' 'proclub' %}" class="mb-2">
+                                    <button type="button" id="btn-more" class="btn-2">Know
+                                        more
+                                    </button>
+                                </a>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-6 col-lg-3 pb-3">
+
+                        <div class="card card-custom bg-white border-white border-0 card-1">
+                            <div class="card-custom-img card-img3">
+                            </div>
+
+                            <div class="card-body cb-1 p-4">
+                                <h5 class="card-title text-h3 fs-4 fw-bold">DREAMS Band</h5>
+                                <p class="card-text text-h1-cen mt-3 card-t1">The DREAMS Band strives
+                                    towards making a positive difference in the community by utilizing their musical
+                                    skills. DREAMS Band is
+                                    not only an opportunity to sing and motivate the audience but also uses music as a
+                                    platform to empower
+                                    communities.</p>
+                            </div>
+                            <div class="card-footer text-center bg-white border-0 card-f1">
+
+                                <a href="{% url 'dreams' 'band' %}" class="mb-2">
+                                    <button type="button" id="btn-more" class="btn-2">Know
+                                        more
+                                    </button>
+                                </a>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-6 col-lg-3 pb-3">
+
+                        <div class="card card-custom bg-white border-white border-0 card-1">
+                            <div class="card-custom-img card-img4"></div>
+
+                            <div class="card-body cb-1 p-4">
+                                <h5 class="card-title text-h3 fs-4 fw-bold">Community Conferences</h5>
+                                <p class="card-text text-h1-cen mt-3 card-t1">Started in 2017, Let Us
+                                    Dream Conference provides a platform for researchers, practitioners and volunteers
+                                    to discuss various
+                                    possibilities of promoting community volunteerism among students, sharing their
+                                    experiences and
+                                    challenges
+                                </p>
+                            </div>
+                            <div class="card-footer text-center bg-white border-0 card-f1">
+
+                                <a href="{% url 'annualConference' %}" class="mb-2">
+                                    <button type="button" id="btn-more" class="btn-2">Know
+                                        more
+                                    </button>
+                                </a>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="carousel-item">
-      <img src="{% static 'home/banner/4.png' %}" class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="{% static 'home/banner/img2.png' %}" class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="{% static 'home/banner/img1.png' %}" class="d-block w-100" alt="...">
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
-
-<!-- <div class="content-div fs-5">
-  <div class="p-5">
-    Register for 2022 Annual Conferences <a href="{% url 'registration_user' %}"><button
-        class="content-button fs-6">Register Now</button></a>
-  </div>
-</div> -->
 
 
+    <div class="container-fluid cf-2 text-h3" id="conference" style="padding-bottom: 5% !important;">
+        <h1 class="text-center text-uppercase">Upcoming Events</h1>
 
-<div class="container-fluid mt-5" id="dreamProgram">
-  <div class="row m-auto mt-5">
-    <h1 class="text-center text-uppercase">OUR PROGRAMS</h1>
-    <div class="col-10 offset-1">
+        <div id="carouselEvents" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
 
-      <div class="row pt-5 max-auto row-2">
-        <div class="col-md-6 col-lg-3 pb-3">
+                <div class="carousel-item active">
+                    <div class="d-flex justify-content-center mt-5">
+                        <div class="px-3">
+                            <img src="{% static '2024/Events/Conceference_with_dates.png' %}" height="500px" alt="">
+                        </div>
+                        <div>
+                            <img src="{% static '2024/Events/dreamspb.png' %}" height="500px" alt="">
+                        </div>
+                    </div>
+                </div>
 
-          <div class="card card-custom bg-white border-white border-0 card-1">
-            <div class="card-custom-img card-img1">
-            </div>
-
-            <div class="card-body cb-1 p-4">
-              <h5 class="card-title text-h3 fw-bold fs-4">DREAMS Program</h5>
-              <p class="card-text text-h1-cen mt-3 card-t1 fs-6">The
-                DREAMS Program is a
-                three-year curriculum-based community mentoring project for schools and colleges, each year focusing on
-                personal development, interpersonal skills and leadership skills. The program aims to.</p>
-            </div>
-            <div class="card-footer text-center bg-white border-0 card-f1">
-
-
-              <a href="{% url 'dreams' 'program' %}" class="add-boder">
-                <button type="button" class="btn-2">Know more</button>
-              </a>
+                <div class="carousel-item ">
+                    <div class="d-flex justify-content-center mt-5">
+                        <div class="px-3">
+                            <img src="{% static '2024/Events/KeralaSummerCamp.png' %}" height="500px">
+                        </div>
+                        <div>
+                            <img src="{% static '2024/Events/KarnatakaSummerCamp.png' %}" height="500px">
+                        </div>
+                    </div>
+                </div>
 
             </div>
-          </div>
-
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselEvents" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselEvents" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
-        <div class="col-md-6 col-lg-3 pb-3">
-
-          <div class="card card-custom bg-white border-white border-0 card-1">
-            <div class="card-custom-img card-img2">
-            </div>
-
-            <div class="card-body cb-1 p-4">
-              <h5 class="card-title fw-bold text-h3 fs-4">DREAMS Pro Club</h5>
-              <p class="card-text  text-h1-cen mt-3  card-t1 ">DREAMS Pro Club is a
-                support group for the personal and professional development of young professionals. Small groups of
-                10-12
-                working professionals meet once every month to discuss and implement.</p>
-            </div>
-            <div class="card-footer text-center bg-white border-0 card-f1">
-
-              <a href="{% url 'dreams' 'proclub' %}" class="mb-2"><button type="button" id="btn-more" class="btn-2">Know
-                  more</button></a>
-
-            </div>
-          </div>
-
-        </div>
-
-        <div class="col-md-6 col-lg-3 pb-3">
-
-          <div class="card card-custom bg-white border-white border-0 card-1">
-            <div class="card-custom-img card-img3">
-            </div>
-
-            <div class="card-body cb-1 p-4">
-              <h5 class="card-title text-h3 fs-4 fw-bold">DREAMS Band</h5>
-              <p class="card-text text-h1-cen mt-3 card-t1">The DREAMS Band strives
-                towards making a positive difference in the community by utilizing their musical skills. DREAMS Band is
-                not only an opportunity to sing and motivate the audience but also uses music as a platform to empower
-                communities.</p>
-            </div>
-            <div class="card-footer text-center bg-white border-0 card-f1">
-
-              <a href="{% url 'dreams' 'band' %}" class="mb-2"><button type="button" id="btn-more" class="btn-2">Know
-                  more</button></a>
-
-            </div>
-          </div>
-
-        </div>
-
-        <div class="col-md-6 col-lg-3 pb-3">
-
-          <div class="card card-custom bg-white border-white border-0 card-1">
-            <div class="card-custom-img card-img4"></div>
-
-            <div class="card-body cb-1 p-4">
-              <h5 class="card-title text-h3 fs-4 fw-bold">Community Conferences</h5>
-              <p class="card-text text-h1-cen mt-3 card-t1">Started in 2017, Let Us
-                Dream Conference provides a platform for researchers, practitioners and volunteers to discuss various
-                possibilities of promoting community volunteerism among students, sharing their experiences and
-                challenges
-              </p>
-            </div>
-            <div class="card-footer text-center bg-white border-0 card-f1">
-
-              <a href="{% url 'annualConference' %}" class="mb-2"><button type="button" id="btn-more" class="btn-2">Know
-                  more</button></a>
-
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<div class="container-fluid cf-2 text-h3" id="conference" style="padding-bottom: 5% !important;">
-  <h1 class="text-center text-uppercase">Upcoming Events</h1>
-
-  <div id="carouselEvents" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner">
-
-      <div class="carousel-item active">
-        <div class="d-flex justify-content-center mt-5">
-          <div class="px-3">
-            <img src="{% static '2024/Events/Conceference_with_dates.png' %}" height="500px" alt="">
-          </div>
-          <div>
-             <img src="{% static '2024/Events/dreamspb.png' %}" height="500px" alt="">
-          </div>
-        </div>
-      </div>
-
-      <div class="carousel-item ">
-        <div class="d-flex justify-content-center mt-5">
-          <div class="px-3">
-            <img src="{% static '2024/Events/KeralaSummerCamp.png' %}" height="500px">
-          </div>
-          <div>
-            <img src="{% static '2024/Events/KarnatakaSummerCamp.png' %}" height="500px">
-          </div>
-        </div>
-      </div>
 
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselEvents" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselEvents" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
 
-</div>
+    {% include 'partials/_testimonials.html' %}
+    <br><br><br>
+    {% include 'partials/_globalPresence.html' %}
 
-{% include 'partials/_testimonials.html' %}
-<br><br><br>
-{% include 'partials/_globalPresence.html' %}
+    {% include 'partials/_countDetails.html' %}
 
-{% include 'partials/_countDetails.html' %}
+    <!-- instagram feed -->
 
-<!-- instagram feed -->
+    <div class="container-fluid cf-2 text-h3" id="conference">
+        <h1 class="text-center text-uppercase">NEWSLETTERs</h1>
 
-<div class="container-fluid cf-2 text-h3" id="conference">
-  <h1 class="text-center text-uppercase">NEWSLETTERs</h1>
+        <div class="blog-home2">
+            <div class="container">
 
-  <div class="blog-home2">
-    <div class="container">
+                <div class="row mt-4">
+                    <div class="col-lg-3 col-md-3 p-3 on-hover">
+                        <div class="card border-0 ">
+                            <a href="{% url 'newsletter' %}"><img class="img1 m-3"
+                                                                  src="{% static 'Aboutus/Media/Newsletter/LUD Connect 03 - October 2023.png' %}"
+                                                                  alt="wrappixel kit"
+                                                                  style="margin: 0rem !important"></a>
+                            <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
+                                Oct<span class="d-block"></span>2023
+                            </div>
+                        </div>
+                    </div>
 
-      <div class="row mt-4">
-        <div class="col-lg-3 col-md-3 p-3 on-hover">
-          <div class="card border-0 ">
-            <a href="{% url 'newsletter' %}"><img class="img1 m-3"
-                src="{% static 'Aboutus/Media/Newsletter/LUD Connect 03 - October 2023.png' %}" alt="wrappixel kit"
-                style="margin: 0rem !important"></a>
-            <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
-              Oct<span class="d-block"></span>2023 </div>
-          </div>
+                    <div class="col-lg-3 col-md-3 p-3 on-hover">
+                        <div class="card border-0 ">
+                            <a href="{% url 'newsletter' %}"><img class="img1 m-3"
+                                                                  src="{% static 'Aboutus/Media/Newsletter/LUD Connect 02 - September 2023.png' %}"
+                                                                  alt="wrappixel kit"
+                                                                  style="margin: 0rem !important"></a>
+                            <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
+                                Sep<span class="d-block"></span>2023
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 p-3 on-hover">
+                        <div class="card border-0 ">
+                            <a href="{% url 'newsletter' %}"><img class="img1 m-3"
+                                                                  src="{% static 'Aboutus/Media/Newsletter/LUD Connect 01 - September 2023.png' %}"
+                                                                  alt="wrappixel kit"
+                                                                  style="margin: 0rem !important"></a>
+                            <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
+                                Sep<span class="d-block"></span>2023
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 p-3 on-hover">
+                        <div class="card border-0 ">
+                            <a href="{% url 'newsletter' %}">
+                                <img class="img1 m-3" src="{% static 'Aboutus/Media/Newsletter/lead_team.png' %}"
+                                     alt="wrappixel kit"
+                                     style="margin: 0rem !important"></a>
+                            <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
+                                June<span class="d-block">03</span>2023
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class=" mb-3 float-end">
+                    <a href="{% url 'newsletter' %}" class="fw-bold text-h3 text-decoration-none">
+                        Read more
+                    </a>
+                </div>
+            </div>
         </div>
-
-        <div class="col-lg-3 col-md-3 p-3 on-hover">
-          <div class="card border-0 ">
-            <a href="{% url 'newsletter' %}"><img class="img1 m-3"
-                src="{% static 'Aboutus/Media/Newsletter/LUD Connect 02 - September 2023.png' %}" alt="wrappixel kit"
-                style="margin: 0rem !important"></a>
-            <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
-              Sep<span class="d-block"></span>2023</div>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-3 p-3 on-hover">
-          <div class="card border-0 ">
-            <a href="{% url 'newsletter' %}"><img class="img1 m-3"
-                src="{% static 'Aboutus/Media/Newsletter/LUD Connect 01 - September 2023.png' %}" alt="wrappixel kit"
-                style="margin: 0rem !important"></a>
-            <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
-              Sep<span class="d-block"></span>2023 </div>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-3 p-3 on-hover">
-          <div class="card border-0 ">
-            <a href="{% url 'newsletter' %}">
-              <img class="img1 m-3" src="{% static 'Aboutus/Media/Newsletter/lead_team.png' %}" alt="wrappixel kit"
-                style="margin: 0rem !important"></a>
-            <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
-              June<span class="d-block">03</span>2023</div>
-          </div>
-        </div>
-
-
-
-      </div>
-      <div class=" mb-3 float-end">
-        <a href="{% url 'newsletter' %}" class="fw-bold text-h3 text-decoration-none">
-          Read more
-        </a>
-      </div>
     </div>
-  </div>
-</div>
 
-<!-- vistor -->
+    <!-- vistor -->
 
-<!-- <div class="container mt-5 mb-5">
+    <!-- <div class="container mt-5 mb-5">
   <h5 class="fw-bold text-uppercase">Vistors</h5>
   <div class="row mb-5 mt-3">
     {% for visitor in visitor %}
@@ -289,35 +357,35 @@ HOME
   </div>
 </div> -->
 
-<script>
-  $(document).ready(function () {
+    <script>
+        $(document).ready(function () {
 
-    [...document.querySelectorAll('.first-column')].map(column => {
-      column.style.setProperty('--animation', 'slide');
-      column.style.setProperty('height', '200%');
-      column.innerHTML = column.innerHTML + column.innerHTML;
-    });
+            [...document.querySelectorAll('.first-column')].map(column => {
+                column.style.setProperty('--animation', 'slide');
+                column.style.setProperty('height', '200%');
+                column.innerHTML = column.innerHTML + column.innerHTML;
+            });
 
-  });
+        });
 
-  $(document).ready(function () {
-    var maxLength = 250;
+        $(document).ready(function () {
+            var maxLength = 250;
 
-    $('#testimonial blockquote').each(function () {
-      var content = $(this).text();
-      if (content.length > maxLength) {
-        var truncatedContent = content.substring(0, maxLength) + '...';
-        $(this).text(truncatedContent);
-        $(this).append('<a href="{% url "testimonials"  %}#home " class="read-more text-decoration-none float-end">Read More</a>');
-      }
-    });
+            $('#testimonial blockquote').each(function () {
+                var content = $(this).text();
+                if (content.length > maxLength) {
+                    var truncatedContent = content.substring(0, maxLength) + '...';
+                    $(this).text(truncatedContent);
+                    $(this).append('<a href="{% url "testimonials"  %}#home " class="read-more text-decoration-none float-end">Read More</a>');
+                }
+            });
 
-    $('.testimonial').on('click', '.read-more', function () {
-      var fullContent = $(this).siblings('p').text();
-      $(this).siblings('blockquote').text(fullContent);
-      $(this).remove();
-    });
-  });
-</script>
+            $('.testimonial').on('click', '.read-more', function () {
+                var fullContent = $(this).siblings('p').text();
+                $(this).siblings('blockquote').text(fullContent);
+                $(this).remove();
+            });
+        });
+    </script>
 
 {% endblock content %}
