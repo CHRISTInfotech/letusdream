@@ -51,19 +51,82 @@
             </div>
             <div class="col-lg-12 text-center align-self-center">
                 <a href="https://cmt.letusdream.org/" target="_blank">
-                    <button type="button"
-                            class="button"><span>Participate</span></button>
+                    <button type="button" class="button">
+                        <span>
+                            Participate
+                        </span>
+                    </button>
                 </a>
             </div>
         </div>
     </div>
 
-    <div class="container mb-5">
+    <div class="container-fluid mb-5">
+        <div class="row m-auto">
+            <div class="col-12 mb-3 text-center fw-bolder fs-4">
+                Upcoming LUD Annual Conferences
+            </div>
+            <div class="col text-center">
+                <a href="https://cmt.letusdream.org/conference_details/f04bb2c8-5d1e-4321-9367-7174bbed482e"
+                   class="text-decoration-none text-black" target="_blank">
+                    September <span class="fs-1 fw-bolder text-primary">21</span> 2024
+                    <img src="{% static 'conference/annual/hyderabad/stfranciscollege.jpeg' %}"
+                         class="img1 p-3 anualcon-cus-img" alt="">
+                    St Francis College for Women, Begumpet, Hyderabad, India
+                </a>
+            </div>
+            <div class="col text-center">
+                <a href="https://cmt.letusdream.org/conference_details/83571339-3169-40bc-88f8-dbfb35e27bf5"
+                   class="text-decoration-none text-black"  target="_blank">
+                    September <span class="fs-1 fw-bolder text-primary">28</span> 2024
+                    <img src="{% static 'conference/annual/pune/puneuniversity.png' %}"
+                         class="img1 p-3 anualcon-cus-img" alt="">
+                    Savitribai Phule Pune University, Pune, India
+                </a>
+            </div>
+            <div class="col text-center">
+                <a href="https://cmt.letusdream.org/conference_details/03f56cc1-d3fc-4aa6-9cfa-8f0a5013a24a"
+                   class="text-decoration-none text-black"  target="_blank">
+                    October <span class="fs-1 fw-bolder text-primary">26</span> 2024
+                    <img src="{% static 'conference/annual/bangalore/stfrancisdesales/stfranciscollegebanglore.jpeg' %}"
+                         class="img1 p-3 anualcon-cus-img" alt="">
+                    St Francis De Sales College, Hebagodi, Bangalore, India
+                </a>
+            </div>
+            <div class="col text-center">
+                <a href="https://cmt.letusdream.org/conference_details/b49bbfd3-0575-40a7-a024-e022b1259208"
+                   class="text-decoration-none text-black"  target="_blank">
+                    October <span class="fs-1 fw-bolder text-primary">31</span> 2024
+                    <img src="{% static 'conference/annual/Louisiana/GramblingStateUniversity/GramblingStateUniversity.jpg' %}"
+                         class="img1 p-3 anualcon-cus-img" alt="">
+                    Grambling State University, Grambling, Louisiana, USA
+                </a>
+            </div>
+            <div class="col text-center">
+                <a href="https://cmt.letusdream.org/conference_details/d9dfd46e-bb84-4c2b-af70-0c81d646f8de"
+                   class="text-decoration-none text-black"  target="_blank">
+                    November <span class="fs-1 fw-bolder text-primary">8</span> 2024
+                    <img src="{% static 'conference/annual/newYork/BinghamtonUniversity/BinghamtonUniversity.jpeg' %}"
+                         class="img1 p-3 anualcon-cus-img" alt="">
+                    Binghamton University, Binghamton, New York, USA
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+    <br/>
+
+    <div class="container py-5">
         <div class="row">
+            <div class="col-12 mb-4 text-center fw-bolder fs-4">
+                LUD Annual Conferences
+                <hr/>
+            </div>
             <div class="col-lg-12 col-md-12 col-sm-12">
 
                 <div class="accordion" id="accordionExample">
-                    
+
                     <div class="card">
                         <div class="card-header" id="headingOne">
                             <h2 class="mb-0">
@@ -79,7 +142,7 @@
                             <div class="card-body">
                                 <div class="container-fluid text-h3 bg-green">
                                     <div class="row text-center mb-4">
-                                        
+
                                         <div class="col-lg-4 col-md-4 p-3 mb-5">
                                             <a class="text-decoration-none" href="">
                                                 <img src="{% static 'conference/annual/bangalore/stfrancisdesales/stfranciscollegebanglore.jpeg' %}"
@@ -92,7 +155,7 @@
                                                 St. Francis de Sales College
                                             </p>
                                         </div>
-                                        
+
                                         <div class="col-lg-4 col-md-4 p-3 mb-5">
                                             <a class="text-decoration-none"
                                                href="{% url 'jyoti-nivas-college-autonomous' %}">
@@ -106,7 +169,7 @@
                                             <p class="text-center text-black ">Jyoti Nivas College Autonomous Bangalore
                                             </p>
                                         </div>
-                                        
+
                                         <div class="col-lg-4 col-md-4 p-3 mb-5">
                                             <a class="text-decoration-none"
                                                href="{% url 'christ-university-bangalore' %}">
@@ -145,7 +208,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="card">
                         <div class="card-header" id="headingTwo">
                             <h2 class="mb-0">
@@ -160,7 +223,7 @@
                             <div class="card-body">
                                 <div class="container-fluid text-h3 bg-green">
                                     <div class="row text-center">
-                                         <div class="col-lg-4 col-md-4 p-3">
+                                        <div class="col-lg-4 col-md-4 p-3">
                                             <a class="text-decoration-none" href="{% url 'donboscocollege' %}">
                                                 <img src="{% static 'conference/annual/chennai/womenschristiancollege/womenschristiancollege.jpg' %}"
                                                      class="img1 m-3 anualcon-cus-img" alt="">
@@ -187,7 +250,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="card">
                         <div class="card-header" id="headingThree">
                             <h2 class="mb-0">
@@ -250,7 +313,7 @@
                                                 Louisiana State University, Shreveport
                                             </p>
                                         </div>
-                                        
+
                                         <div class="col-lg-4 col-md-4 p-3 mb-5">
                                             <a class="text-decoration-none"
                                                href="{% url 'universityofLouisianaMonroe' %}">
@@ -265,14 +328,14 @@
                                                 University of Louisiana, Monroe
                                             </p>
                                         </div>
-                                        
+
                                     </div>
 
                                 </div>
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="card">
                         <div class="card-header" id="headingFour">
                             <h2 class="mb-0">
@@ -316,13 +379,13 @@
                                             </p>
                                         </div>
                                     </div>
-                                    
+
                                 </div>
                                 <br>
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="card">
                         <div class="card-header" id="headingThree">
                             <h2 class="mb-0">
@@ -385,7 +448,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="card">
                         <div class="card-header" id="headingSix">
                             <h2 class="mb-0">
@@ -414,20 +477,21 @@
                                                 St. Francis Degree College for Women
                                             </p>
                                         </div>
-                                        
+
                                     </div>
-                                
+
                                 </div>
                                 <br>
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="card">
                         <div class="card-header" id="headingSeven">
                             <h2 class="mb-0">
                                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
-                                        data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                                        data-target="#collapseSeven" aria-expanded="false"
+                                        aria-controls="collapseSeven">
                                     Pune
                                 </button>
                             </h2>
@@ -438,7 +502,7 @@
                                 <p>
                                 <div class="container-fluid text-h3 bg-green">
 
-                                     <div class="row text-center">
+                                    <div class="row text-center">
                                         <div class="col-lg-4 col-md-4 p-3">
                                             <a class="text-decoration-none" href="">
                                                 <img src="{% static 'conference/annual/pune/puneuniversity.png' %}"
@@ -451,15 +515,15 @@
                                                 Savitribai Phule Pune University
                                             </p>
                                         </div>
-                                         
+
                                     </div>
-                                
+
                                 </div>
                                 <br>
                             </div>
                         </div>
                     </div>
-                    
+
                 </div>
 
             </div>
@@ -467,7 +531,7 @@
     </div>
 
     <div class="container">
-        <div class="row py-5">
+        <div class="row mb-5">
             <div class="col-md-12">
                 <div class="main-timeline">
                     <a href="#" class="timeline">
