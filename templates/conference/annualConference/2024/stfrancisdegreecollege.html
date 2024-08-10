@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    St Francis Degree College for Women
+{% endblock %}
+
+{% block extraStyles %}
+{% endblock extraStyles %}
+
+
+{% block links %}
+{% endblock links %}
+
+
+{% block content %}
+
+    <nav aria-label="breadcrumb animated slideInDown" class="cus-breadcrumb">
+        <ol class="breadcrumb text-uppercase mb-0 bg-white">
+            <li class="breadcrumb-item"><a class="text-black text-decoration-none" href="{% url 'main' %}">Home</a></li>
+            <li class="breadcrumb-item"><a class="text-black text-decoration-none">Conferences</a></li>
+            <li class="breadcrumb-item"><a class="text-black text-decoration-none"
+                                           href="{% url 'annualConference' %}">Annual Conference</a></li>
+            <li class="breadcrumb-item  active" aria-current="page">St Francis Degree College for Women</li>
+        </ol>
+    </nav>
+
+    <h1 class="mb-4  fw-bold text-center fs-1 text-green text-uppercase heading-h3 mt-5">
+       St Francis Degree College for Women
+    </h1>
+
+    
+
+{% endblock %}

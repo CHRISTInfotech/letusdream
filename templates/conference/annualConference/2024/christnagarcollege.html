@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    Christ Nagar College, Trivandrum
+{% endblock %}
+
+{% block extraStyles %}
+{% endblock extraStyles %}
+
+
+{% block links %}
+{% endblock links %}
+
+
+{% block content %}
+
+    <nav aria-label="breadcrumb animated slideInDown" class="cus-breadcrumb">
+        <ol class="breadcrumb text-uppercase mb-0 bg-white">
+            <li class="breadcrumb-item"><a class="text-black text-decoration-none" href="{% url 'main' %}">Home</a></li>
+            <li class="breadcrumb-item"><a class="text-black text-decoration-none">Conferences</a></li>
+            <li class="breadcrumb-item"><a class="text-black text-decoration-none"
+                                           href="{% url 'annualConference' %}">Annual Conference</a></li>
+            <li class="breadcrumb-item  active" aria-current="page">Christ Nagar College, Trivandrum</li>
+        </ol>
+    </nav>
+
+    <h1 class="mb-4  fw-bold text-center fs-1 text-green text-uppercase heading-h3 mt-5">
+       Christ Nagar College, Trivandrum
+    </h1>
+
+    
+
+{% endblock %}

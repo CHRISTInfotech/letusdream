@@ -4,7 +4,6 @@ from django.shortcuts import render, redirect
 from home.models import ConferenceRegistration
 
 
-
 def index(request):
     return render(request, 'home/index.html')
 
@@ -12,8 +11,9 @@ def index(request):
 def aboutUs(request):
     return render(request, 'aboutUs/aboutUs.html')
 
+
 def leadership(request):
-    return render(request,"aboutUs/leadership.html")
+    return render(request, "aboutUs/leadership.html")
 
 
 def login(request):
@@ -24,8 +24,10 @@ def login(request):
 def media(request):
     return render(request, 'aboutUs/media.html')
 
+
 def events(request):
     return render(request, 'aboutUs/events.html')
+
 
 def pressRelease(request):
     return render(request, 'aboutUs/media-view-photo.html')
@@ -59,60 +61,41 @@ def triennialConference2020(request):
     return render(request, 'conference/triennialConference/triennialConference2020.html')
 
 
-def conference2023(request):
-    return render(request, 'conference/conference2023.html')
-
-
-def bangalorechristuniversity(request):
-    return render(request, 'conference/christ-university-bangalore.html')
-
-
-def binghamtonUniversity(request):
-    return render(request, 'conference/binghamton-university.html')
-
-
-def cuT(request):
-    return render(request, 'conference/cuT.html')
-
-
-def jncaB(request):
-    return render(request, 'conference/jncaB.html')
-
-
-def withoutdata_2023(request):
-    return render(request, 'conference/triennialConference/withoutdata.html')
-
-
-def louisianatechuniversity(request):
-    return render(request, 'conference/louisiana-tech-university.html')
-
-
-def donboscocollege(request):
-    return render(request, 'conference/donbosco-college-of-arts-and-science.html')
-
-
-def stannescollege(request):
-    return render(request, 'conference/stannes-college.html')
-
-
-def loyolacollegeConference(request):
-    return render(request, 'conference/loyola.html')
-
-
-def universityofLouisianaMonroe(request):
-    return render(request, 'conference/universityofLouisianaMonroe.html')
-
-
-def allsaintssollege(request):
-    return render(request, 'conference/allsaintssollege.html')
-
-
-def louisianastateuniversityshreveport(request):
-    return render(request, 'conference/louisianastateuniversityshreveport.html')
-
-
-def gramblingstateuniversitylouisiana(request):
-    return render(request, 'conference/grambling-state-university-louisiana.html')
+def annualConferences(request, year, location):
+    if int(year) == 2024 and location == "stfrancisdesalescollege":
+        return render(request,"conference/annualConference/2024/stfrancisdesalescollege.html")
+    elif int(year) == 2024 and location == "womenschristiancollege":
+        return render(request,"conference/annualConference/2024/womenschristiancollege.html")
+    elif int(year) == 2024 and location == "gamblingstateuniversity":
+        return render(request,"conference/annualConference/2024/gamblingstateuniversity.html")
+    elif int(year) == 2024 and location == "binghamtonuniversity2024":
+        return render(request,"conference/annualConference/2024/binghamtonuniversity2024.html")
+    elif int(year) == 2024 and location == "christnagarcollege":
+        return render(request,"conference/annualConference/2024/christnagarcollege.html")
+    elif int(year) == 2024 and location == "stfrancisdegreecollege":
+        return render(request,"conference/annualConference/2024/stfrancisdegreecollege.html")
+    elif int(year) == 2024 and location == "savitribaiphulepune":
+        return render(request,"conference/annualConference/2024/savitribaiphulepune.html")
+    elif int(year) == 2022 and location == "allsaintscollege":
+        return render(request, 'conference/annualConference/2022/allsaintssollege.html')
+    elif int(year) == 2022 and location == "louisianatechuniversity":
+        return render(request, 'conference/annualConference/2022/louisiana-tech-university.html')
+    elif int(year) == 2022 and location == "louisianastageuniversitysherveport":
+        return render(request, 'conference/annualConference/2022/louisianastateuniversityshreveport.html')
+    elif int(year) == 2022 and location == "louisianatechuniversitymonroe":
+        return render(request, 'conference/annualConference/2022/universityofLouisianaMonroe.html')
+    elif int(year) == 2022 and location == "donboscocollegechennai":
+        return render(request, 'conference/annualConference/2022/donbosco-college.html')
+    elif int(year) == 2021 and location == "jyotinivascollegeautonompus":
+        return render(request, 'conference/annualConference/2021/jncaB.html')
+    elif int(year) == 2021 and location == "binghamtonuniversity2021":
+        return render(request, 'conference/annualConference/2021/binghamton-university.html')
+    elif int(year) == 2020 and location == "christuniversitytvm":
+        return render(request, 'conference/annualConference/2020/christuniversitytrivandrum.html')
+    elif int(year) == 2019 and location == "christuniversity":
+        return render(request, 'conference/annualConference/2019/christ-university-bangalore.html')
+    elif int(year) == 2019 and location == "stannesdegreecollege":
+        return render(request, 'conference/annualConference/2019/stannes-college.html')
 
 
 def yclpCourse(request):
@@ -285,7 +268,7 @@ def triennialConference2023(request):
         'bgcolor': '#274C7D',
     }
     return render(request,
-                  'conference/triennialConference/conference2023.html', context)
+                  'conference/triennialConference/triennialConference2023.html', context)
 
 
 def contactUs(request):

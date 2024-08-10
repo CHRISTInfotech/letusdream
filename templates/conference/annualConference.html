@@ -64,7 +64,7 @@
     <div class="container-fluid mb-3 cf-2">
         <div class="row m-auto">
             <div class="col-12 mb-3 text-center fw-bolder fs-2">
-                Upcoming Annual Conferences
+                Register for Upcoming Annual Conferences
             </div>
         </div>
         <div class="row d-flex justify-content-center">
@@ -139,11 +139,10 @@
     <div class="container py-5">
         <div class="row">
             <div class="col-12 mb-4 text-center fw-bolder fs-4">
-                LUD Annual Conferences
+                Annual Conferences
                 <hr/>
             </div>
             <div class="col-lg-12 col-md-12 col-sm-12">
-
                 <div class="accordion" id="accordionExample">
 
                     <div class="card">
@@ -160,69 +159,58 @@
                              data-parent="#accordionExample">
                             <div class="card-body">
                                 <div class="container-fluid text-h3 bg-green">
-                                    <div class="row text-center mb-4">
+                                    <div class="row text-center m-0 mb-5">
 
-                                        <div class="col-lg-4 col-md-4 p-3 mb-5">
-                                            <a class="text-decoration-none" href="">
+                                        <div class="col-3 p-2 mb-3">
+                                            <a class="text-decoration-none text-black" href="{% url 'annual-conference' '2024' 'stfrancisdesalescollege' %}">
+                                                October <span class="fs-1 text-primary">26</span> 2024
                                                 <img src="{% static 'conference/annual/bangalore/stfrancisdesales/stfranciscollegebanglore.png' %}"
-                                                     class="img1 m-3 anualcon-cus-img" alt="">
-                                                <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
-                                                    Oct<span class="d-block">26</span>2024
+                                                     class="img-fluid" alt="">
+                                                <div class="fw-bolder mt-2">
+                                                    St. Francis de Sales College
                                                 </div>
                                             </a>
-                                            <p class="text-center text-black ">
-                                                St. Francis de Sales College
-                                            </p>
                                         </div>
 
-                                        <div class="col-lg-4 col-md-4 p-3 mb-5">
-                                            <a class="text-decoration-none"
-                                               href="{% url 'jyoti-nivas-college-autonomous' %}">
+                                        <div class="col-3 p-2 mb-3">
+                                            <a class="text-decoration-none text-black"
+                                               href="{% url 'annual-conference' '2021' 'jyotinivascollegeautonompus' %}">
+                                                November <span class="fs-1 text-primary">10</span> 2021
                                                 <img src="{% static 'conference/annual/bangalore/JyotiNivasCollege/JyotiNivasCollege.jpg' %}"
-                                                     class="img1 m-3 anualcon-cus-img" alt="">
-                                                <div
-                                                        class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
-                                                    Nov<span class="d-block">10</span>2021
+                                                     class="img-fluid" alt="">
+                                                <div class="fw-bolder mt-2">
+                                                    Jyoti Nivas College Autonomous Bangalore
                                                 </div>
                                             </a>
-                                            <p class="text-center text-black ">Jyoti Nivas College Autonomous Bangalore
-                                            </p>
                                         </div>
 
-                                        <div class="col-lg-4 col-md-4 p-3 mb-5">
-                                            <a class="text-decoration-none"
-                                               href="{% url 'christ-university-bangalore' %}">
+                                        <div class="col-3 p-2 mb-3">
+                                            <a class="text-decoration-none text-black"
+                                               href="{% url 'annual-conference' '2019' 'christuniversity' %}">
+                                                November <span class="fs-1 text-primary">16</span> 2019
                                                 <img src="{% static 'conference/annual/bangalore/ChristBangalore/christ-university-bangalore.jpg' %}"
-                                                     class="img1 m-3 anualcon-cus-img" alt="">
-                                                <div
-                                                        class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
-                                                    Nov<span class="d-block">16</span>2019
+                                                     class="img-fluid" alt="">
+                                                <div class="fw-bolder mt-2">
+                                                    Christ University, Bangalore
                                                 </div>
-                                                <p class="text-center text-black anualcon-cus-p">Christ University,
-                                                    Bangalore</p>
                                             </a>
 
                                         </div>
 
-                                        <div class="col-lg-4 col-md-4 p-3 mb-5">
-                                            <a class="text-decoration-none" href="{% url 'stannescollege' %}">
+                                        <div class="col-3 p-2 mb-3">
+                                            <a class="text-decoration-none text-black"
+                                               href="{% url 'annual-conference' '2019' 'stannesdegreecollege' %}">
+                                                November <span class="fs-1 text-primary">19</span> 2019
                                                 <img src="{% static 'conference/annual/bangalore/stAnnesCollege/stanne.png' %}"
-                                                     class="img1 m-3 anualcon-cus-img" alt="">
-                                                <div
-                                                        class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
-                                                    Nov<span class="d-block">19</span>2019
+                                                     class="img-fluid" alt="">
+                                                <div class="fw-bolder mt-2">
+                                                    St. Annes Degree College for Women, Bangalore
                                                 </div>
-                                                <!-- <div class="card-text"> -->
-                                                <p class="text-center text-black anualcon-cus-p">St. Annes Degree
-                                                    College
-                                                    for Women
-                                                    Bangalore</p>
-
-                                                <!-- </div> -->
                                             </a>
                                         </div>
 
                                     </div>
+                                    <br/>
                                 </div>
                             </div>
                         </div>
@@ -241,31 +229,35 @@
                              data-parent="#accordionExample">
                             <div class="card-body">
                                 <div class="container-fluid text-h3 bg-green">
-                                    <div class="row text-center">
-                                        <div class="col-lg-4 col-md-4 p-3">
-                                            <a class="text-decoration-none" href="{% url 'donboscocollege' %}">
+                                    <div class="row text-center mb-5">
+
+                                        <div class="col-3 p-2 mb-3">
+                                            <a class="text-decoration-none text-black"
+                                               href="{% url 'annual-conference' '2024' 'womenschristiancollege' %}">
+                                                November <span class="fs-1 text-primary"> 23 </span> 2024
                                                 <img src="{% static 'conference/annual/chennai/womenschristiancollege/womenschristian.png' %}"
-                                                     class="img1 m-3 anualcon-cus-img" alt="">
-                                                <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
-                                                    Nov <span class="d-block"> 23 </span> 2024
+                                                     class="img-fluid" alt="">
+                                                <div class="fw-bolder mt-2">
+                                                    Women's Christian College, Chennai
                                                 </div>
                                             </a>
-                                            <p class="text-center text-black">Women's Christian College, Chennai</p>
                                         </div>
-                                        <div class="col-lg-4 col-md-4 p-3">
-                                            <a class="text-decoration-none" href="{% url 'donboscocollege' %}">
+
+                                        <div class="col-3 p-2 mb-3">
+                                            <a class="text-decoration-none text-black"
+                                               href="{% url 'annual-conference' '2022' 'donboscocollegechennai' %}">
+                                                October <span class="fs-1 text-primary"> 15 </span> 2022
                                                 <img src="{% static 'conference/annual/chennai/DonboscoCollege/bosco.jpg' %}"
-                                                     class="img1 m-3 anualcon-cus-img" alt="">
-                                                <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
-                                                    Oct <span class="d-block"> 15 </span> 2022
+                                                     class="img-fluid" alt="">
+                                                <div class="fw-bolder mt-2">
+                                                    Donbosco College, Chennai
                                                 </div>
                                             </a>
-                                            <p class="text-center text-black">Donbosco College, Chennai</p>
                                         </div>
+
                                     </div>
                                 </div>
                                 <br>
-
                             </div>
                         </div>
                     </div>
@@ -285,70 +277,58 @@
                             <div class="card-body">
 
                                 <div class="container-fluid text-h3 bg-green">
+                                    <div class="row text-center mb-5">
 
-                                    <div class="row text-center">
-
-                                        <div class="col-lg-4 col-md-4 p-3 mb-5">
-                                            <a class="text-decoration-none"
-                                               href="https://www.gram.edu/letusdream/" target="_blank">
+                                        <div class="col-3 p-2 mb-3">
+                                            <a class="text-decoration-none text-black"
+                                               href="{% url 'annual-conference' '2024' 'gamblingstateuniversity' %}">
+                                                October <span class="fs-1 text-primary"> 31 </span> 2024
                                                 <img src="{% static 'conference/annual/Louisiana/GramblingStateUniversity/GramblingStateUniversity.png' %}"
-                                                     class="img1 m-3 anualcon-cus-img" alt="">
-                                                <div
-                                                        class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
-                                                    Oct<span class="d-block">31</span>2024
+                                                     class="img-fluid" alt="">
+                                                <div class="fw-bolder mt-2">
+                                                    Grambling State University, Grambling
                                                 </div>
                                             </a>
-                                            <p class="text-center text-black anualcon-cus-p">
-                                                Grambling State University, Grambling
-                                            </p>
                                         </div>
 
-                                        <div class="col-lg-4 col-md-4 p-3 mb-5">
-                                            <a class="text-decoration-none"
-                                               href="{% url 'louisiana-tech-university' %}">
+                                        <div class="col-3 p-2 mb-3">
+                                            <a class="text-decoration-none text-black"
+                                               href="{% url 'annual-conference' '2022' 'louisianatechuniversity' %}">
+                                                October <span class="fs-1 text-primary"> 27 </span> 2022
                                                 <img src="{% static 'conference/annual/Louisiana/LouisianaTechUniversity/LouisianaTechUniversity.jpg' %}"
-                                                     class="img1 m-3 anualcon-cus-img" alt="">
-                                                <div
-                                                        class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
-                                                    Oct<span class="d-block">27</span>2022
+                                                     class="img-fluid" alt="">
+                                                <div class="fw-bolder mt-2">
+                                                    Louisiana Tech University, Louisiana
                                                 </div>
                                             </a>
-                                            <p class="text-center text-black anualcon-cus-p">
-                                                Louisiana Tech University, Louisiana
-                                            </p>
                                         </div>
 
-                                        <div class="col-lg-4 col-md-4 p-3 mb-5">
-                                            <a class="text-decoration-none"
-                                               href="{% url 'louisiana-state-university-shreveport' %}">
+                                        <div class="col-3 p-2 mb-3">
+                                            <a class="text-decoration-none text-black"
+                                               href="{% url 'annual-conference' '2022' 'louisianastageuniversitysherveport' %}">
+                                                October <span class="fs-1 text-primary"> 15 </span> 2022
                                                 <img src="{% static 'conference/annual/Louisiana/LouisianaStateUniversity/Shreveport.jpg' %}"
-                                                     class="img1 m-3 anualcon-cus-img" alt="">
-                                                <div
-                                                        class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
-                                                    Oct<span class="d-block">15</span>2022
+                                                     class="img-fluid" alt="">
+                                                <div class="fw-bolder mt-2">
+                                                    Louisiana State University, Shreveport
                                                 </div>
                                             </a>
-                                            <p class="text-center text-black anualcon-cus-p">
-                                                Louisiana State University, Shreveport
-                                            </p>
                                         </div>
 
-                                        <div class="col-lg-4 col-md-4 p-3 mb-5">
-                                            <a class="text-decoration-none"
-                                               href="{% url 'universityofLouisianaMonroe' %}">
+                                        <div class="col-3 p-2 mb-3">
+                                            <a class="text-decoration-none text-black"
+                                               href="{% url 'annual-conference' '2022' 'louisianatechuniversitymonroe' %}">
+                                                October <span class="fs-1 text-primary"> 15 </span> 2022
                                                 <img src="{% static 'conference/annual/Louisiana/universityofLouisiana/Monroe.jpg' %}"
-                                                     class="img1 m-3 anualcon-cus-img" alt="">
-                                                <div
-                                                        class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
-                                                    Oct<span class="d-block">15</span>2022
+                                                     class="img-fluid" alt="">
+                                                <div class="fw-bolder mt-2">
+                                                    University of Louisiana, Monroe
                                                 </div>
                                             </a>
-                                            <p class="text-center text-black anualcon-cus-p">
-                                                University of Louisiana, Monroe
-                                            </p>
                                         </div>
 
                                     </div>
+                                    <br/>
 
                                 </div>
                             </div>
@@ -369,36 +349,33 @@
                             <div class="card-body">
 
                                 <div class="container-fluid text-h3 bg-green">
+                                    <div class="row text-center mb-5">
 
-                                    <div class="row text-center">
-                                        <div class="col-lg-4 col-md-4 p-3">
-                                            <a class="text-decoration-none"
-                                               href="">
+                                        <div class="col-3 p-2 mb-3">
+                                            <a class="text-decoration-none text-black"
+                                               href="{% url 'annual-conference' '2024' 'binghamtonuniversity2024' %}">
+                                                November <span class="fs-1 text-primary"> 8 </span> 2024
                                                 <img src="{% static 'conference/annual/newYork/BinghamtonUniversity/BinghamtonUniversity.png' %}"
-                                                     class="img1 m-3 anualcon-cus-img" alt="">
-                                                <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
-                                                    Nov<span class="d-block">8</span>2024
+                                                     class="img-fluid" alt="">
+                                                <div class="fw-bolder mt-2">
+                                                    Binghamton University, New York
                                                 </div>
                                             </a>
-                                            <p class="text-center text-black anualcon-cus-p">
-                                                Binghamton University, New York
-                                            </p>
                                         </div>
-                                        <div class="col-lg-4 col-md-4 p-3">
-                                            <a class="text-decoration-none"
-                                               href="{% url 'binghamton-university-new-york' %}">
+
+                                        <div class="col-3 p-2 mb-3">
+                                            <a class="text-decoration-none text-black"
+                                               href="{% url 'annual-conference' '2021' 'binghamtonuniversity2021' %}">
+                                                November <span class="fs-1 text-primary"> 19 </span> 2021
                                                 <img src="{% static 'conference/annual/newYork/BinghamtonUniversity/BinghamtonUniversity.png' %}"
-                                                     class="img1 m-3 anualcon-cus-img" alt="">
-                                                <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
-                                                    Nov<span class="d-block">19</span>2021
+                                                     class="img-fluid" alt="">
+                                                <div class="fw-bolder mt-2">
+                                                    Binghamton University, New York
                                                 </div>
                                             </a>
-                                            <p class="text-center text-black anualcon-cus-p">
-                                                Binghamton University, New York
-                                            </p>
                                         </div>
+
                                     </div>
-
                                 </div>
                                 <br>
                             </div>
@@ -417,52 +394,48 @@
                         <div id="collapseFive" class="collapse blog-home2" aria-labelledby="headingOne"
                              data-parent="#accordionExample">
                             <div class="card-body">
-                                <p>
                                 <div class="container-fluid text-h3 bg-green">
+                                    <div class="row text-center mb-5">
 
-                                    <div class="row text-center">
-                                        <div class="col-lg-4 col-md-4 p-3">
-                                            <a class="text-decoration-none" href="">
+                                        <div class="col-3 p-2 mb-3">
+                                            <a class="text-decoration-none text-black"
+                                               href="{% url 'annual-conference' '2024' 'christnagarcollege' %}">
+                                                November <span class="fs-1 text-primary"> 16 </span> 2024
                                                 <img src="{% static 'conference/annual/Trivandrum/christnagarcollege/christnagar.png' %}"
-                                                     class="img1 m-3 anualcon-cus-img" alt="">
-                                                <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
-                                                    Nov<span class="d-block">16</span>2024
+                                                     class="img-fluid" alt="">
+                                                <div class="fw-bolder mt-2">
+                                                    CHRIST Nagar College, Trivandrum
                                                 </div>
                                             </a>
-                                            <p class="text-center text-black paragraph">
-                                                CHRIST Nagar College, Trivandrum
-                                            </p>
                                         </div>
-                                        <div class="col-lg-4 col-md-4 p-3">
-                                            <a class="text-decoration-none" href="{% url 'allsaintssollege' %}">
-                                                <img src="{% static 'conference/annual/Trivandrum/allSaintsCollege/allsaints.jpg' %}"
-                                                     class="img1 m-3 anualcon-cus-img" alt="">
-                                                <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
-                                                    Dec<span class="d-block">05</span>2022
-                                                </div>
-                                            </a>
-                                            <p class="text-center text-black paragraph">
-                                                All Saints College, Trivandrum
-                                            </p>
-                                        </div>
-                                        <div class="col-lg-4 col-md-4 p-3">
-                                            <a class="text-decoration-none"
-                                               href="{% url 'christ-university-thiruvananthapuram' %}">
-                                                <img src="{% static 'conference/annual/Trivandrum/christUniversity/Christ-thrivandrum.jpg' %}"
-                                                     class="img1 m-3 anualcon-cus-img" alt="">
-                                                <div
-                                                        class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
-                                                    Jan<span class="d-block">11</span>2020
-                                                </div>
 
+                                        <div class="col-3 p-2 mb-3">
+                                            <a class="text-decoration-none text-black"
+                                               href="{% url 'annual-conference' '2022' 'stannesdegreecollege' %}">
+                                                December <span class="fs-1 text-primary"> 5 </span> 2022
+                                                <img src="{% static 'conference/annual/Trivandrum/allSaintsCollege/allsaints.jpg' %}"
+                                                     class="img-fluid" alt="">
+                                                <div class="fw-bolder mt-2">
+                                                    All Saints College, Trivandrum
+                                                </div>
                                             </a>
-                                            <p class="text-center text-black paragraph">CHRIST University
-                                                Thiruvananthapuram
-                                            </p>
                                         </div>
+
+                                        <div class="col-3 p-2 mb-3">
+                                            <a class="text-decoration-none text-black"
+                                               href="{% url 'annual-conference' '2020' 'christuniversitytvm' %}">
+                                                January <span class="fs-1 text-primary"> 11 </span> 2020
+                                                <img src="{% static 'conference/annual/Trivandrum/christUniversity/Christ-thrivandrum.jpg' %}"
+                                                     class="img-fluid" alt="">
+                                                <div class="fw-bolder mt-2">
+                                                    CHRIST University, Thiruvananthapuram
+                                                </div>
+                                            </a>
+                                        </div>
+
                                     </div>
+                                    <br>
                                 </div>
-                                <br>
                             </div>
                         </div>
                     </div>
@@ -479,25 +452,22 @@
                         <div id="collapseSix" class="collapse blog-home2" aria-labelledby="headingSix"
                              data-parent="#accordionExample">
                             <div class="card-body">
-                                <p>
                                 <div class="container-fluid text-h3 bg-green">
+                                    <div class="row text-center mb-5">
 
-                                    <div class="row text-center">
-                                        <div class="col-lg-4 col-md-4 p-3">
-                                            <a class="text-decoration-none" href="">
+                                        <div class="col-3 p-2 mb-3">
+                                            <a class="text-decoration-none text-black"
+                                               href="{% url 'annual-conference' '2024' 'stfrancisdegreecollege' %}">
+                                                September <span class="fs-1 text-primary"> 21 </span> 2024
                                                 <img src="{% static 'conference/annual/hyderabad/stfranciscollege.png' %}"
-                                                     class="img1 m-3 anualcon-cus-img" alt="">
-                                                <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
-                                                    Sept<span class="d-block">21</span>2024
+                                                     class="img-fluid" alt="">
+                                                <div class="fw-bolder mt-2">
+                                                    St. Francis Degree College for Women
                                                 </div>
                                             </a>
-                                            <p class="text-center text-black paragraph">
-                                                St. Francis Degree College for Women
-                                            </p>
                                         </div>
 
                                     </div>
-
                                 </div>
                                 <br>
                             </div>
@@ -517,25 +487,22 @@
                         <div id="collapseSeven" class="collapse blog-home2" aria-labelledby="headingSeven"
                              data-parent="#accordionExample">
                             <div class="card-body">
-                                <p>
                                 <div class="container-fluid text-h3 bg-green">
+                                    <div class="row text-center mb-5">
 
-                                    <div class="row text-center">
-                                        <div class="col-lg-4 col-md-4 p-3">
-                                            <a class="text-decoration-none" href="">
+                                        <div class="col-3 p-2 mb-3">
+                                            <a class="text-decoration-none text-black"
+                                               href="{% url 'annual-conference' '2024' 'savitribaiphulepune' %}">
+                                                September <span class="fs-1 text-primary"> 28 </span> 2024
                                                 <img src="{% static 'conference/annual/pune/puneuniversity.png' %}"
-                                                     class="img1 m-3 anualcon-cus-img" alt="">
-                                                <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
-                                                    Sept<span class="d-block">28</span>2024
+                                                     class="img-fluid" alt="">
+                                                <div class="fw-bolder mt-2">
+                                                    Savitribai Phule Pune University, Pune, India
                                                 </div>
                                             </a>
-                                            <p class="text-center text-black paragraph">
-                                                Savitribai Phule Pune University
-                                            </p>
                                         </div>
 
                                     </div>
-
                                 </div>
                                 <br>
                             </div>
@@ -543,7 +510,6 @@
                     </div>
 
                 </div>
-
             </div>
         </div>
     </div>
@@ -559,12 +525,9 @@
                             <p class="description">
                                 Volunteers from the local community including business owners involved in voluntary
                                 community developmental projects, non-profit organizations, philanthropists, social
-                                workers,
-                                educators or educational administrators, retired personnel, students, or anyone
-                                interested
-                                in contributing to their community development can be a part of the conference and
-                                engage in
-                                fruitful dialogues with visionaries through the conference.
+                                workers, educators or educational administrators, retired personnel, students, or anyone
+                                interested in contributing to their community development can be a part of the
+                                conference and engage in fruitful dialogues with visionaries through the conference.
                             </p>
                         </div>
                     </a>
