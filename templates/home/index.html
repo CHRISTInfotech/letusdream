@@ -270,8 +270,86 @@
 
     </div>
 
-    {% include 'partials/_testimonials.html' %}
-    <br><br><br>
+    <div class="container text-h3 mb-5" id="">
+        <h1 class="text-center text-uppercase text-break">
+            Partnering Organizations
+        </h1>
+        <div class="row m-0 mb-4">
+            <div class="col-12 fs-4 fw-bolder">
+                NGOs
+            </div>
+            <hr/>
+            <div class="col d-flex justify-content-center">
+                <img src="{% static '2024/Logos/NGOs/creatingfuture.jpg' %}" class="img-fluid" alt="">
+            </div>
+            <div class="col d-flex justify-content-center">
+                <img src="{% static '2024/Logos/NGOs/Ecure.jpeg' %}" class="img-fluid" alt="">
+            </div>
+            <div class="col d-flex justify-content-center">
+                <img src="{% static '2024/Logos/NGOs/oclogo.jpg' %}" class="img-fluid" alt="">
+            </div>
+            <div class="col d-flex justify-content-center">
+                <img src="{% static '2024/Logos/NGOs/samathalearning.jpeg' %}" class="img-fluid" alt="">
+            </div>
+            <div class="col-3 d-flex justify-content-center">
+                <img src="{% static '2024/Logos/NGOs/treetagkerala.jpeg' %}" class="img-fluid" alt="">
+            </div>
+        </div>
+        <div class="row m-0 mb-5">
+            <div class="col-12 fs-4 fw-bolder">
+                Universities & Colleges
+            </div>
+            <hr/>
+            <div class="col-12 row m-0 mt-3">
+                <div class="col-5 d-flex justify-content-center">
+                    <img src="{% static '2024/Logos/Universities/indian/christ-university.png' %}" class="img-fluid"
+                         alt="">
+                </div>
+                <div class="col-3 d-flex justify-content-center">
+                    <img src="{% static '2024/Logos/Universities/indian/christ-nagar.jpeg' %}" class="img-fluid" alt="">
+                </div>
+                <div class="col-4 d-flex justify-content-center">
+                    <img src="{% static '2024/Logos/Universities/indian/JNC.png' %}" class="img-fluid" alt="">
+                </div>
+            </div>
+            <div class="col-12 row m-0 mt-3">
+                <div class="col d-flex justify-content-center">
+                    <img src="{% static '2024/Logos/Universities/indian/kristu-jyoti.png' %}" class="img-fluid" alt="">
+                </div>
+                <div class="col d-flex justify-content-center">
+                    <img src="{% static '2024/Logos/Universities/indian/kuriakose-college.jpg' %}" class="img-fluid"
+                         alt="">
+                </div>
+                <div class="col d-flex justify-content-center">
+                    <img src="{% static '2024/Logos/Universities/indian/Mar-ivanios.jpeg' %}" class="img-fluid" alt="">
+                </div>
+                <div class="col d-flex justify-content-center">
+                    <img src="{% static '2024/Logos/Universities/indian/SFS.jpg' %}" class="img-fluid" alt="">
+                </div>
+                <div class="col d-flex justify-content-center">
+                    <img src="{% static '2024/Logos/Universities/indian/berchmans.jpg' %}" class="img-fluid" alt="">
+                </div>
+            </div>
+            <div class="col-12 row  m-0  mt-3">
+                <div class="col d-flex justify-content-center">
+                    <img src="{% static '2024/Logos/Universities/International/Binghamton.jpeg' %}" class="img-fluid"
+                         alt="">
+                </div>
+                <div class="col d-flex justify-content-center">
+                    <img src="{% static '2024/Logos/Universities/International/Grambling.jpeg' %}" class="img-fluid"
+                         alt="">
+                </div>
+                <div class="col-5 d-flex justify-content-center">
+                    <img src="{% static '2024/Logos/Universities/International/katho.jpeg' %}" class="img-fluid" alt="">
+                </div>
+                <div class="col d-flex justify-content-center">
+                    <img src="{% static '2024/Logos/Universities/International/Louisiana.jpeg' %}" class="img-fluid"
+                         alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
     {% include 'partials/_globalPresence.html' %}
 
     {% include 'partials/_countDetails.html' %}
@@ -279,7 +357,7 @@
     <!-- instagram feed -->
 
     <div class="container-fluid cf-2 text-h3" id="conference">
-        <h1 class="text-center text-uppercase">NEWSLETTERs</h1>
+        <h1 class="text-center text-uppercase text-break">NEWSLETTERs</h1>
 
         <div class="blog-home2">
             <div class="container">
@@ -342,21 +420,11 @@
         </div>
     </div>
 
-    <!-- vistor -->
+    {% include 'partials/_testimonials.html' %}
 
-    <!-- <div class="container mt-5 mb-5">
-  <h5 class="fw-bold text-uppercase">Vistors</h5>
-  <div class="row mb-5 mt-3">
-    {% for visitor in visitor %}
-
-    <div class="col-2 p-3 m-1 d-flex justify-content-center border">
-      <i class="fi fi-{{ visitor.code|lower }}"></i>
-      <small class="ml-2 text-center text-dark">{{ visitor.country }}</small>
-      <span class="ml-2"> {{ visitor.count }}</span>
-    </div>
-    {% endfor %}
-  </div>
-</div> -->
+    <br/>
+    <br/>
+    <br/>
 
     <script>
         $(document).ready(function () {
