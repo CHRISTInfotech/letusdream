@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    How to organize Let us Dream Conferences
+{% endblock %}
+
+
+{% block extraStyles %}
+    <link rel="stylesheet" href="{% static 'conference/resources/video_gal.css' %}" type="text/css">
+{% endblock extraStyles %}
+
+{% block links %}
+{% endblock links %}
+
+
+{% block content %}
+    <nav aria-label="breadcrumb animated slideInDown" class="cus-breadcrumb">
+        <ol class="breadcrumb text-uppercase mb-0 bg-white">
+            <li class="breadcrumb-item">
+                <a class="text-black text-decoration-none" href="{% url 'main' %}">
+                    Home
+                </a>
+            </li>
+            <li class="breadcrumb-item">
+                <a class="text-black text-decoration-none" href="{% url 'main' %}Conferences">
+                    Conferences
+                </a>
+            </li>
+            <li class="breadcrumb-item  active" aria-current="page">
+                Organiser Kit - Let Us Dream Conferences
+            </li>
+        </ol>
+    </nav>
+
+    <div class="container">
+        <div class="col-12 py-5">
+            <div class="fw-bold fs-4 text-center font">
+                Conference Organisers Manual
+                <hr/>
+            </div>
+            <div class="gallery py-5">
+                <div style="border-radius: 10px;">
+                    <iframe src="https://www.youtube.com/embed/B4nDIrmxppU?list=PLTas59dAb68eBE-jooq5IvMVesYjoqWQU"
+                            allowfullscreen name="tab"></iframe>
+                </div>
+                <div>
+                    <span>
+                        <a href="https://www.youtube.com/embed/B4nDIrmxppU?list=PLTas59dAb68eBE-jooq5IvMVesYjoqWQU"
+                           target="tab"><img src="https://img.youtube.com/vi/B4nDIrmxppU/default.jpg" alt=""></a>
+                        <a href="https://www.youtube.com/embed/chy46TTa-w0?list=PLTas59dAb68eBE-jooq5IvMVesYjoqWQU"
+                           target="tab"><img src="https://img.youtube.com/vi/chy46TTa-w0/default.jpg" alt=""></a>
+                        <a href="https://www.youtube.com/embed/qXfBHnue4pg?list=PLTas59dAb68eBE-jooq5IvMVesYjoqWQU"
+                           target="tab"><img src="https://img.youtube.com/vi/qXfBHnue4pg/default.jpg" alt=""></a>
+                        <a href="https://www.youtube.com/embed/aTmpNM-Cz6k?list=PLTas59dAb68eBE-jooq5IvMVesYjoqWQU"
+                           target="tab"><img src="https://img.youtube.com/vi/aTmpNM-Cz6k/default.jpg" alt=""></a>
+                        <a href="https://www.youtube.com/embed/vbeVBDMN3KU?list=PLTas59dAb68eBE-jooq5IvMVesYjoqWQU"
+                           target="tab"><img src="https://img.youtube.com/vi/vbeVBDMN3KU/default.jpg" alt=""></a>
+                        <a href="https://www.youtube.com/embed/E7cz0D3NTUA?list=PLTas59dAb68eBE-jooq5IvMVesYjoqWQU"
+                           target="tab"><img src="https://img.youtube.com/vi/E7cz0D3NTUA/default.jpg" alt=""></a>
+                        <a href="https://www.youtube.com/embed/BqIUqSOBcUU?list=PLTas59dAb68eBE-jooq5IvMVesYjoqWQU"
+                           target="tab"><img src="https://img.youtube.com/vi/BqIUqSOBcUU/default.jpg" alt=""></a>
+                        <a href="https://www.youtube.com/embed/X6L4Eza3C3Q?list=PLTas59dAb68eBE-jooq5IvMVesYjoqWQU"
+                           target="tab"><img src="https://img.youtube.com/vi/X6L4Eza3C3Q/default.jpg" alt=""></a>
+                        <a href="https://www.youtube.com/embed/EeZeW06i02U?list=PLTas59dAb68eBE-jooq5IvMVesYjoqWQU"
+                           target="tab"><img src="https://img.youtube.com/vi/EeZeW06i02U/default.jpg" alt=""></a>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}

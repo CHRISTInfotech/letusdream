@@ -61,6 +61,16 @@ def triennialConference2020(request):
     return render(request, 'conference/triennialConference/triennialConference2020.html')
 
 
+def triennialConference2023(request):
+    context = {
+        'bgcolor': '#274C7D',
+    }
+    return render(request,
+                  'conference/triennialConference/triennialConference2023.html', context)
+
+def howtoConference(request):
+    return render(request,'conference/ludConferences.html')
+
 def annualConferences(request, year, location):
     if int(year) == 2024 and location == "stfrancisdesalescollege":
         return render(request,"conference/annualConference/2024/stfrancisdesalescollege.html")
@@ -262,18 +272,8 @@ def sustainability(request):
 def llfp(request):
     return render(request, 'courses/llfp2024.html')
 
-
-def triennialConference2023(request):
-    context = {
-        'bgcolor': '#274C7D',
-    }
-    return render(request,
-                  'conference/triennialConference/triennialConference2023.html', context)
-
-
 def contactUs(request):
     return render(request, 'aboutUs/contactus.html')
-
 
 # CLUB Pages
 

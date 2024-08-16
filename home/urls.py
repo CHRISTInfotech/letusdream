@@ -35,6 +35,7 @@ urlpatterns = [
     path('trriennialConference', triennialConference, name='trriennial-conference'),
     path('triennial-conference-2020', triennialConference2020, name='tc-2020'),
     path('triennial-conference-2023', triennialConference2023, name='tc-2023'),
+    path('run-lud-conference', howtoConference, name='run-lud-conference'),
     path('annualConference/<int:year>/<str:location>', annualConferences, name='annual-conference'),
     # CONFERENCE URLS ENDS
 
