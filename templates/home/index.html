@@ -128,123 +128,92 @@
         </div>
     </div>
 
-    <div class="container-fluid" id="dreamProgram">
+    <div class="container" id="dreamProgram">
         <div class="row m-auto mt-5">
-            <h1 class="text-center text-uppercase">OUR PROGRAMS</h1>
-            <div class="col-10 offset-1">
+            <h1 class="col-12 mb-4 text-center fw-bolder fs-2">
+                OUR PROGRAMS
+            </h1>
+            <div class="row mt-4 m-0">
 
-                <div class="row pt-5 max-auto row-2">
-                    <div class="col-md-6 col-lg-3 pb-3">
-
-                        <div class="card card-custom bg-white border-white border-0 card-1">
-                            <div class="card-custom-img card-img1">
-                            </div>
-
-                            <div class="card-body cb-1 p-4">
-                                <h5 class="card-title text-h3 fw-bold fs-4">DREAMS Program</h5>
-                                <p class="card-text text-h1-cen mt-3 card-t1 fs-6">The
-                                    DREAMS Program is a
-                                    three-year curriculum-based community mentoring project for schools and colleges,
-                                    each year focusing on
-                                    personal development, interpersonal skills and leadership skills. The program aims
-                                    to.</p>
-                            </div>
-                            <div class="card-footer text-center bg-white border-0 card-f1">
-
-
-                                <a href="{% url 'dreams' 'program' %}" class="add-boder">
-                                    <button type="button" class="btn-2">Know more</button>
-                                </a>
-
-                            </div>
+                <div class="col-sm-12 col-md-6 col-lg-3 card card-custom bg-white border-white border-0 card-1">
+                    <div class="card-body ">
+                        <img src="{% static 'home/programs/Program.png' %}" class="img-fluid" alt="">
+                        <h5 class="card-title text-h3 fw-bold fs-4 mt-3">DREAMS Program</h5>
+                        <p class="card-text text-h1-cen mt-3 card-t1 fs-6">
+                            The DREAMS Program is a three-year curriculum-based community mentoring project for schools
+                            and colleges, each year focusing on personal development, interpersonal skills and
+                            leadership skills. The program aims to...
+                        </p>
+                        <div class="text-center mt-3">
+                            <a href="{% url 'dreams' 'program' %}" class="add-boder">
+                                <button type="button" id="btn-more" class="btn">
+                                    Know more
+                                </button>
+                            </a>
                         </div>
-
                     </div>
-                    <div class="col-md-6 col-lg-3 pb-3">
-
-                        <div class="card card-custom bg-white border-white border-0 card-1">
-                            <div class="card-custom-img card-img2">
-                            </div>
-
-                            <div class="card-body cb-1 p-4">
-                                <h5 class="card-title fw-bold text-h3 fs-4">DREAMS Pro Club</h5>
-                                <p class="card-text  text-h1-cen mt-3  card-t1 ">DREAMS Pro Club is a
-                                    support group for the personal and professional development of young professionals.
-                                    Small groups of
-                                    10-12
-                                    working professionals meet once every month to discuss and implement.</p>
-                            </div>
-                            <div class="card-footer text-center bg-white border-0 card-f1">
-
-                                <a href="{% url 'dreams' 'proclub' %}" class="mb-2">
-                                    <button type="button" id="btn-more" class="btn-2">Know
-                                        more
-                                    </button>
-                                </a>
-
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="col-md-6 col-lg-3 pb-3">
-
-                        <div class="card card-custom bg-white border-white border-0 card-1">
-                            <div class="card-custom-img card-img3">
-                            </div>
-
-                            <div class="card-body cb-1 p-4">
-                                <h5 class="card-title text-h3 fs-4 fw-bold">DREAMS Band</h5>
-                                <p class="card-text text-h1-cen mt-3 card-t1">The DREAMS Band strives
-                                    towards making a positive difference in the community by utilizing their musical
-                                    skills. DREAMS Band is
-                                    not only an opportunity to sing and motivate the audience but also uses music as a
-                                    platform to empower
-                                    communities.</p>
-                            </div>
-                            <div class="card-footer text-center bg-white border-0 card-f1">
-
-                                <a href="{% url 'dreams' 'band' %}" class="mb-2">
-                                    <button type="button" id="btn-more" class="btn-2">Know
-                                        more
-                                    </button>
-                                </a>
-
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="col-md-6 col-lg-3 pb-3">
-
-                        <div class="card card-custom bg-white border-white border-0 card-1">
-                            <div class="card-custom-img card-img4"></div>
-
-                            <div class="card-body cb-1 p-4">
-                                <h5 class="card-title text-h3 fs-4 fw-bold">Community Conferences</h5>
-                                <p class="card-text text-h1-cen mt-3 card-t1">Started in 2017, Let Us
-                                    Dream Conference provides a platform for researchers, practitioners and volunteers
-                                    to discuss various
-                                    possibilities of promoting community volunteerism among students, sharing their
-                                    experiences and
-                                    challenges
-                                </p>
-                            </div>
-                            <div class="card-footer text-center bg-white border-0 card-f1">
-
-                                <a href="{% url 'annualConference' %}" class="mb-2">
-                                    <button type="button" id="btn-more" class="btn-2">Know
-                                        more
-                                    </button>
-                                </a>
-
-                            </div>
-                        </div>
-
-                    </div>
-
                 </div>
+
+                <div class="col-sm-12 col-md-6 col-lg-3 card card-custom bg-white border-white border-0 card-1">
+                    <div class="card-body ">
+                        <img src="{% static '/home/programs/Club.png' %}" class="img-fluid" alt="">
+                        <h5 class="card-title fw-bold text-h3 fs-4 mt-3">DREAMS Pro Club</h5>
+                        <p class="card-text  text-h1-cen mt-3  card-t1 ">
+                            DREAMS Pro Club is a support group for the personal and professional development of young
+                            professionals. Small groups of 10-12 working professionals meet once every month to discuss
+                            and implement.
+                        </p>
+                        <div class="text-center mt-3">
+                            <a href="{% url 'dreams' 'proclub' %}" class="mb-2">
+                                <button type="button" id="btn-more" class="btn">
+                                    Know more
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-sm-12 col-md-6 col-lg-3 card card-custom bg-white border-white border-0 card-1">
+                    <div class="card-body ">
+                        <img src="{% static '/home/programs/Band.png' %}" class="img-fluid" alt="">
+                        <h5 class="card-title text-h3 fs-4 fw-bold mt-3">DREAMS Band</h5>
+                        <p class="card-text text-h1-cen mt-3 card-t1">
+                            The DREAMS Band strives towards making a positive difference in the community by utilizing
+                            their musical skills. DREAMS Band is not only an opportunity to sing and motivate the
+                            audience but also uses music as a platform to empower communities.
+                        </p>
+                        <div class="text-center mt-3">
+                            <a href="{% url 'dreams' 'band' %}" class="mb-2">
+                                <button type="button" id="btn-more" class="btn">
+                                    Know more
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-12 col-md-6 col-lg-3 card card-custom bg-white border-white border-0 card-1">
+                    <div class="card-body ">
+                        <img src="{% static '/home/programs/Conference.png' %}" class="img-fluid" alt="">
+                        <h5 class="card-title text-h3 fs-4 fw-bold mt-3">Community Conferences</h5>
+                        <p class="card-text text-h1-cen mt-3 card-t1">
+                            Started in 2017, Conferences provides a platform for researchers, practitioners and
+                            volunteers to discuss various possibilities of promoting community volunteerism among
+                            students, sharing their experiences and challenges
+                        </p>
+                        <div class="text-center mt-3">
+                            <a href="{% url 'annualConference' %}" class="mb-2">
+                                <button type="button" id="btn-more" class="btn">
+                                    Know more
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
             </div>
+
         </div>
     </div>
 

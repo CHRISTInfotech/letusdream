@@ -51,11 +51,6 @@
   color: #ffffff;
 }
 
-.content h1 {
-  font-size: 60px;
-  font-size: 5rem;
-}
-
 .content h3 {
   width: 80%;
   margin: 20px auto 50px;
@@ -98,51 +93,6 @@
   background: #d3f2e9;
 }
 
-.container {
-  font-size: 16px;
-  color: #666666;
-}
-
-.card-custom {
-  border-radius: 25px !important;
-  overflow: hidden;
-  min-height: 610px !important;
-  box-shadow: 0 0 15px rgba(10, 10, 10, 0.3);
-}
-
-.card-custom-img {
-  height: 200px;
-  min-height: 200px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  border-color: inherit;
-}
-
-.card-custom-img::after {
-  position: absolute;
-  content: "";
-  top: 170px;
-  left: 0;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-top-width: 40px;
-  border-right-width: 0;
-  border-bottom-width: 0;
-  border-left-width: 545px;
-  border-left-width: calc(575px - 5vw);
-  border-top-color: transparent;
-  border-right-color: transparent;
-  border-bottom-color: transparent;
-  border-left-color: inherit;
-}
-
-/* #container-body{
-        background: linear-gradient(-100deg,#B8FFF9 50%, #EFFFFD 50%);
-        height: 70vh;
-        font-family: 'Montserrat', sans-serif;
-      } */
 
 .img-text {
   width: 100%;
@@ -271,13 +221,6 @@ h1:after {
   border-image-slice: 1;
 }
 
-h1 {
-  padding-top: 0px;
-  padding-bottom: 10px;
-
-  font-size: 30px;
-}
-
 h6 {
   padding-top: 2%;
   padding-bottom: 2%;
@@ -319,22 +262,6 @@ h6 {
 
 .card-t1 {
   text-align: justify;
-}
-
-.card-img1 {
-  background-image: url(../../ltstatic/home/DREAMS-Program.jpeg);
-}
-
-.card-img2 {
-  background-image: url(../../ltstatic/home/DREAMS-Pro-Club.jpeg);
-}
-
-.card-img3 {
-  background-image: url(../../ltstatic/home/letusdream.com-dreams-band22.png);
-}
-
-.card-img4 {
-  background-image: url(../../ltstatic/home/Let-Us-Dream-Conference.jpeg);
 }
 
 .cf-2 {
