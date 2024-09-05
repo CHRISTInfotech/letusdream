@@ -59,7 +59,7 @@
                 Register for Upcoming Annual Conferences
             </div>
         </div>
-        <div class="row d-flex justify-content-center">
+        <div class="row d-flex justify-content-center mt-3">
             <div class="col-sm-12 col-md-2 text-center mb-3">
                 <a href="https://cmt.letusdream.org/conference_details/f04bb2c8-5d1e-4321-9367-7174bbed482e"
                    class="text-decoration-none text-black" target="_blank">
@@ -97,7 +97,7 @@
                 </a>
             </div>
         </div>
-        <div class="row d-flex justify-content-center">
+        <div class="row d-flex justify-content-center mt-3">
             <div class="col-sm-12 col-md-2 text-center mb-3">
                 <a href="https://cmt.letusdream.org/conference_details/d9dfd46e-bb84-4c2b-af70-0c81d646f8de"
                    class="text-decoration-none text-black" target="_blank">
@@ -123,6 +123,15 @@
                     <img src="{% static 'conference/annual/chennai/womenschristiancollege/womenschristian.png' %}"
                          class="p-3 img-fluid" alt="">
                     Women's Christian College, Chennai, India
+                </a>
+            </div>
+            <div class="col-sm-12 col-md-2 text-center mb-3">
+                <a href=""
+                   class="text-decoration-none text-black" target="_blank">
+                    November <span class="fs-1 fw-bolder text-primary">30</span> 2024
+                    <img src="{% static 'conference/annual/tanzania/unitedafricanuniversity/unitedafricanuniversity.png' %}"
+                         class="p-3 img-fluid" alt="">
+                    United African University of Tanzania
                 </a>
             </div>
         </div>
@@ -221,40 +230,45 @@
     <div class="container-fluid cf-2 text-h3" id="conference" style="padding-bottom: 5% !important;">
         <h1 class="text-center text-uppercase">Upcoming Events</h1>
 
-        <div id="carouselEvents" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
+        <div class="container">
+            <div id="carouselEvents" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
 
-                <div class="carousel-item active">
-                    <div class="d-flex justify-content-center mt-5">
-                        <div class="px-3">
-                            <img src="{% static '2024/Events/Conceference_with_dates.jpg' %}" height="500px" alt="">
-                        </div>
-                        <div>
-                            <img src="{% static '2024/Events/dreamspb.png' %}" height="500px" alt="">
+                    <div class="carousel-item active">
+                        <div class="row mt-5">
+                            <div class="col-sm-12 col-md-6 mb-3">
+                                <img src="{% static '2024/Events/Conceference_with_dates.jpg' %}" class="img-fluid"
+                                     alt="">
+                            </div>
+                            <div class="col-sm-12 col-md-6 mb-3">
+                                <img src="{% static '2024/Events/dreamspb.png' %}" class="img-fluid" alt="">
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="carousel-item ">
-                    <div class="d-flex justify-content-center mt-5">
-                        <div class="px-3">
-                            <img src="{% static '2024/Events/KeralaSummerCamp.png' %}" height="500px">
-                        </div>
-                        <div>
-                            <img src="{% static '2024/Events/KarnatakaSummerCamp.png' %}" height="500px">
+                    <div class="carousel-item ">
+                        <div class="row mt-5">
+                            <div class="col-sm-12 col-md-6 mb-3">
+                                <img src="{% static '2024/Events/KeralaSummerCamp.png' %}" class="img-fluid" alt="">
+                            </div>
+                            <div class="col-sm-12 col-md-6 mb-3">
+                                <img src="{% static '2024/Events/KarnatakaSummerCamp.png' %}" class="img-fluid" alt="">
+                            </div>
                         </div>
                     </div>
-                </div>
 
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselEvents"
+                        data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselEvents"
+                        data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselEvents" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselEvents" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
         </div>
 
     </div>

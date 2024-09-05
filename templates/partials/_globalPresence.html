@@ -2,7 +2,6 @@
 
 <style>
     .global {
-
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
@@ -14,25 +13,13 @@
         font-weight: bolder !important;
     }
 
-    .big-heading {
-        color: #7ca8a1;
-    }
-
     .global a {
         text-decoration: none;
-
-
-
-    }
-
-    .global .img1 {
-        width: 100% !important;
-        height: 100% !important;
     }
 
     .global h6 {
-        padding-top: 2%;
-        padding-bottom: 2%;
+        padding-top: 1%;
+        padding-bottom: 1%;
         color: #7ca8a1;
     }
 </style>
@@ -42,18 +29,33 @@
         
         <h1 class="text-center">OUR GLOBAL PRESENCE</h1>
 
-        <div class="container global-con-1">
+        <div class="container">
+            <div class="col-lg-12 col-md-12 col-sm-12 mt-4 mb-5">
+{#                <iframe#}
+{#                    src="https://www.google.com/maps/d/embed?mid=1ZvktJaPvuWkrNNxCkQBO41ZUtrxfuBI&ehbc=2E312F&z=3&ll=6"#}
+{#                    class="mt-4 mapframe"></iframe>#}
+                <img src="{% static 'home/locations/map.png' %}" class="img-fluid" alt="">
+            </div>
             <div class="row">
-                <div class="col-lg-4 col-md-6 global-col-1">
+                <div class="col-lg-3 col-md-6 global-col-1">
                     <h3>INDIA</h3>
+                    <a href="">
+                        <h6 class="fw-bold">Pune, Maharashtra</h6>
+                    </a>
+                     <a href="">
+                        <h6 class="fw-bold">Chennai, Tamil Nadu</h6>
+                    </a>
                     <a href="{% url 'locations' 'bangalore' %}">
                         <h6 class="fw-bold">Bangalore, Karnataka</h6>
                     </a>
-                    <a href="{% url 'locations' 'changancherry' %}">
-                        <h6 class="fw-bold">Chaganacherry, Kerala</h6>
+                     <a href="">
+                        <h6 class="fw-bold">Hyderabad, Telangana</h6>
                     </a>
                     <a href="{% url 'locations' 'mannanam' %}">
                         <h6 class="fw-bold">Mannanam, Kerala</h6>
+                    </a>
+                    <a href="{% url 'locations' 'changancherry' %}">
+                        <h6 class="fw-bold">Chaganacherry, Kerala</h6>
                     </a>
                     <a href="{% url 'locations' 'thiruvananthapuram' %}">
                         <h6 class="fw-bold">Tiruvananthapuram, Kerala</h6>
@@ -62,16 +64,10 @@
                         <h6 class="fw-bold">Thiruvallam, Kerala</h6>
                     </a>
                 </div>
-                <div class="col-lg-4 col-md-6 global-col-1">
+                <div class="col-lg-3 col-md-6 global-col-1">
                     <h3>USA</h3>
-                    <a href="{% url 'locations' 'bastrope' %}">
-                        <h6 class="fw-bold">Bastrop, Louisiana</h6>
-                    </a>
                     <a href="{% url 'locations' 'dalias' %}">
                         <h6 class="fw-bold">Dallas, Texas</h6>
-                    </a>
-                    <a href="{% url 'locations' 'lagrande' %}">
-                        <h6 class="fw-bold">LaGrande, Oregon</h6>
                     </a>
                     <a href="{% url 'locations' 'mcallen' %}">
                         <h6 class="fw-bold">McAllen, Texas</h6>
@@ -79,21 +75,31 @@
                     <a href="{% url 'locations' 'monroe' %}">
                         <h6 class="fw-bold">Monroe, Louisiana</h6>
                     </a>
+                    <a href="{% url 'locations' 'bastrope' %}">
+                        <h6 class="fw-bold">Bastrop, Louisiana</h6>
+                    </a>
+                    <a href="{% url 'locations' 'lagrande' %}">
+                        <h6 class="fw-bold">LaGrande, Oregon</h6>
+                    </a>
+                    <a href="">
+                        <h6 class="fw-bold">Gambling, Louisiana</h6>
+                    </a>
+                    <a href="">
+                        <h6 class="fw-bold">Binghamton, NewYork</h6>
+                    </a>
                 </div>
-                <div class="col-lg-4 col-md-6 global-col-1">
+                <div class="col-lg-3 col-md-6 global-col-1">
                     <h3>Germany</h3>
                     <a href="{% url 'locations' 'cologne' %}">
                         <h6 class="fw-bold">Cologne</h6>
                     </a>
                 </div>
-
-
-            </div>
-            <div class="col-lg-12 col-md-12 col-sm-12 text-center global-col-2 mt-4 mb-5">
-{#                <iframe#}
-{#                    src="https://www.google.com/maps/d/embed?mid=1ZvktJaPvuWkrNNxCkQBO41ZUtrxfuBI&ehbc=2E312F&z=3&ll=6"#}
-{#                    class="mt-4 mapframe"></iframe>#}
-                <img src="{% static 'home/locations/map.png' %}" class="img-fluid" >
+                <div class="col-lg-3 col-md-6 global-col-1">
+                    <h3>Africa</h3>
+                    <a href="{% url 'locations' 'cologne' %}">
+                        <h6 class="fw-bold">Tanzania</h6>
+                    </a>
+                </div>
             </div>
         </div>
 
