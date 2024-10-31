@@ -20,88 +20,56 @@ Professional Club
         </nav>
         
         <div class="col-12">
-            <div class="fs-1 fw-bolder text-center mt-4">
-                Professional (Pro) Club
+            <div class="fs-1 fw-bolder text-center mt-5">
+                Welcome to the Professional Club!
             </div>
 
+            <div class="lh-lg mt-3">
+                The Professional Club is a dynamic support network designed for individuals seeking personal and professional growth through mutual 
+                mentorship and collaborative learning. Established in 2018, the club has evolved into a vibrant community that encourages members to share 
+                their experiences, enhance their skills, and navigate the complexities of their professional journeys.
+
+            </div>
         </div>
-        
+
         <!-- About section -->
-        <div class="row mt-5">
-            <div class="col-md-8">
-                <div class="fw-bolder fs-2 mb-3">
-                    About
-                </div>
-                <div class="lh-lg">
-                    A professional development mentoring club, this group was established to support its members. Small groups of 10-12 working professionals representing a variety of occupations meet monthly to share and discuss various strategies about scheduled topics and members’ experiences with implementing those strategies.
-                </div>
-            </div>
-
+        <div class="row mt-2">
             <!-- Image section for About -->
-            <div class="col-md-4 d-flex justify-content-center align-items-center">
-                <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="img-fluid" alt="Professional Club Image">
+             <div class="col-12">
+                <div class="text-center mb-3">
+                    <img src="{% static '/clubs/professional1.png' %}" alt="Clubs Overview Image" class="img-fluid" id="expandableImage" style="cursor:pointer;">
+                </div>
             </div>
         </div>
 
-        <!-- Objectives section -->
-        <div class="row mt-5">
-            <div class="col-md-8">
-                <div class="fw-bolder fs-2 mb-3">
-                    Objectives
-                </div>
-                <div class="lh-lg">
-                    <ul>
-                        <li>
-                            Encourage sharing of expertise and experiences.
-                        </li>
-                        <li>
-                            Foster a collaborative environment for diverse perspectives.
-                        </li>
-                        <li>
-                            Provide a platform for discussing career strategies.
-                        </li>
-                        <li>
-                            Focus on skill development, networking, and navigating professional challenges.
-                        </li>
-                        <li>
-                            Create a space to discuss real-world challenges.
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Leadership section -->
-            <div class="col-md-4">
-                <div class="text-center fw-bolder fs-2">
-                    Leadership
-                </div>
-                <div class="row d-flex justify-content-evenly mt-3">
-                    <div class="col">
-                        <img src="{% static 'clubs/leadership/rajeev.png' %}" class="img-thumbnail rounded" alt="Rajeev Image">
-                        <div class="mt-3 text-center">
-                            <div class="fw-bolder">Col Ranjeev Babu, VSM</div>
-                            <small class="fst-italic">Agile Trainer | ICAgile Authorized Instructor</small>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <img src="{% static 'clubs/leadership/rajesh.png' %}" class="img-thumbnail rounded" alt="Rajesh Image">
-                        <div class="mt-3 text-center">
-                            <div class="fw-bolder">Rajesh P I</div>
-                            <small class="fst-italic">Founder & Artistic Director, The Actors Collective</small>
-                        </div>
-                    </div>
+         <!-- Objectives section -->
+         <div class="row mt-1">
+            <div class="col-12">
+                <div class="text-center mb-5">
+                    <img src="{% static '/clubs/professional2.png' %}" alt="Clubs Overview Image" class="img-fluid" id="expandableImage" style="cursor:pointer;">
                 </div>
             </div>
         </div>
 
         <!-- How it works section -->
+        <div class="row mt-1">
+            <div class="col-12">
+                <div class="text-center mb-5">
+                    <img src="{% static '/clubs/professional3.png' %}" alt="Clubs Overview Image" class="img-fluid" id="expandableImage" style="cursor:pointer;">
+                </div>
+            </div>
+        </div>
+
+        <!-- Get involved -->
         <div class="row mt-5">
             <div class="col-md-8">
                 <div class="fw-bolder fs-2 mb-3">
-                    How it works?
+                    Get Involved
                 </div>
                 <div class="lh-lg">
-                    While each LUD Club has a distinct focus, the overall structure of the Professional Club includes virtual meetings every Thursday, the second week of the month. This includes 12-15 active members who wish to engage in discourse grounded in shared interests. Generally, a group member assumes a manager role to ensure that meeting dates, times, and topics are collaboratively identified and scheduled. Clubs are self-organized, self-managed, and self-generated, and leadership is shared among group members. Mutual accountability is inherent in club discussions inasmuch as there is a periodic sharing of goals and progress. A one-hour timebox for each meeting is maintained.
+                    We invite all professionals looking to grow personally and professionally to join the Professional Club. Whether you’re a seasoned 
+                    expert or just starting in your career, our club offers a space to learn, share, and thrive together.
+
                 </div>
             </div>
 
@@ -121,8 +89,42 @@ Professional Club
             </div>
         </div>
 
+        <!-- Leadership section -->
+        
+        <div class="row mt-5 mb-5">
+            <div class="col-12">
+                <div class="text-center fw-bolder fs-2">
+                    Leadership Team
+                </div>
+            </div>
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col text-center">
+                    <img src="{% static 'clubs/img.png' %}" class="img-thumbnail rounded" alt="" style="width: 150px; height: auto;">
+                    <div class="mt-3 text-center">
+                        <div class="fw-bolder">Ms. Satya</div>
+                        <small class="fst-italic">-----</small>
+                    </div>
+                </div>
+                <div class="col text-center">
+                    <img src="{% static 'clubs/img.png' %}" class="img-thumbnail rounded" alt="" style="width: 150px; height: auto;">
+                    <div class="mt-3 text-center">
+                        <div class="fw-bolder">Col Ranjeev Babu</div>
+                        <small class="fst-italic">------</small>
+                    </div>
+                </div>
+                <div class="col text-center">
+                    <img src="{% static 'clubs/img.png' %}" class="img-thumbnail rounded" alt="" style="width: 150px; height: auto;">
+                    <div class="mt-3 text-center">
+                        <div class="fw-bolder">Mr. Rajesh P I</div>
+                        <small class="fst-italic">------</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
         <!-- Contact section above footer -->
-        <div class="row mt-3">
+        <div class="row m-0 d-flex justify-content-center">
             <div class="col-12 my-5">
                 <div class="text-center fw-bolder fs-2">
                     Contact
