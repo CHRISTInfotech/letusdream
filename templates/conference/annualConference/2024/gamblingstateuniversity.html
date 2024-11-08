@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block title %}
-    Grambling State Univsersity, Grambling
+Grambling State Univsersity, Grambling
 {% endblock %}
 
 {% block extraStyles %}
@@ -15,20 +15,35 @@
 
 {% block content %}
 
-    <nav aria-label="breadcrumb animated slideInDown" class="cus-breadcrumb">
-        <ol class="breadcrumb text-uppercase mb-0 bg-white">
-            <li class="breadcrumb-item"><a class="text-black text-decoration-none" href="{% url 'main' %}">Home</a></li>
-            <li class="breadcrumb-item"><a class="text-black text-decoration-none">Conferences</a></li>
-            <li class="breadcrumb-item"><a class="text-black text-decoration-none"
-                                           href="{% url 'annualConference' %}">Annual Conference</a></li>
-            <li class="breadcrumb-item  active" aria-current="page">Grambling State University, Grambling</li>
-        </ol>
-    </nav>
+<nav aria-label="breadcrumb animated slideInDown" class="cus-breadcrumb">
+    <ol class="breadcrumb text-uppercase mb-0 bg-white">
+        <li class="breadcrumb-item"><a class="text-black text-decoration-none" href="{% url 'main' %}">Home</a></li>
+        <li class="breadcrumb-item"><a class="text-black text-decoration-none">Conferences</a></li>
+        <li class="breadcrumb-item"><a class="text-black text-decoration-none"
+                href="{% url 'annualConference' %}">Annual Conference</a></li>
+        <li class="breadcrumb-item  active" aria-current="page">Grambling State University, Grambling</li>
+    </ol>
+</nav>
 
-    <h1 class="mb-4  fw-bold text-center fs-1 text-green text-uppercase heading-h3 mt-5">
-       Grambling State University, Grambling
-    </h1>
+<h1 class="mb-4  fw-bold text-center fs-1 text-green text-uppercase heading-h3 mt-5">
+    Grambling State University, Grambling
+</h1>
 
-    
+<div class="container">
+    <div class="mt-5 mb-5 text-center">
+        <div class="fw-bold mb-3">
+            Let Us Dream Conference at Grambling State Promotes Unity and Cultural Competence
+        </div>
+        <div>
+            <a href="https://www.gram.edu/news/index.php/2024/11/06/let-us-dream-conference-at-grambling-state-promotes-unity-and-cultural-competence/"
+                target="_blank" 
+                class="text-decoration-none">
+                <i class="fa-solid fa-up-right-from-square"></i>
+                Read More on Conference in News
+            </a>
+        </div>
+    </div>
+</div>
+
 
 {% endblock %}
