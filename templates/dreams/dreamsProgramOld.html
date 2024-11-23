@@ -1,0 +1,503 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+D.R.E.A.M.S Program
+{% endblock %}
+
+{% block extraStyles %}
+<link rel="stylesheet" href="{% static 'css/dreamsProgram.css' %}" type="text/css">
+{% endblock extraStyles %}
+
+{% block links %}
+{% endblock links %}
+
+{% block content %}
+<!-- section -->
+<nav aria-label="breadcrumb animated slideInDown" class="cus-breadcrumb">
+    <ol class="breadcrumb text-uppercase mb-0 bg-white">
+        <li class="breadcrumb-item"><a class="text-black text-decoration-none" href="{% url 'main' %}">Home</a></li>
+        <li class="breadcrumb-item"><a class="text-black text-decoration-none"
+                href="{% url 'main' %}#dreamProgram">Dreams</a></li>
+        <li class="breadcrumb-item  active" aria-current="page">Dreams Program</li>
+    </ol>
+</nav>
+
+
+<!-- dreams logo -->
+<section class="projects-section bg-white " id="projects">
+
+    <!-- drams about -->
+    <div class="container-fluid pb-5">
+        <div class="container">
+
+            <h1 class="mb-3  fw-bold text-center big-heading text-green text-uppercase ">DREAMS Program</h1>
+
+            <div class="row align-items-center">
+                <div class="col-lg-6 ">
+
+                    <div id="carouselExampleFade" class="carousel slide carousel-fade carousel-first"
+                        data-bs-ride="carousel">
+                        <div class="carousel-inner rounded w-95">
+                            <div class="carousel-item active">
+                                <img src="{% static 'DreamsProgram/DREAMS-BAND-7-1-min-scaled.jpg' %}"
+                                    class="d-block w-100" alt="DREAMS Program" />
+                            </div>
+                            <div class="carousel-item">
+                                <img src="{% static 'DreamsProgram/DREAMS-Site-Banner-2-1-scaled.jpg' %}"
+                                    class="d-block w-100" alt="DREAMS Program" />
+                            </div>
+                            <div class="carousel-item">
+                                <img src="{% static 'DreamsProgram/DREAMS-BAND-4-1-min-scaled.jpg' %}"
+                                    class="d-block w-100" alt="DREAMS Program" />
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+
+                </div>
+                <div class="col-lg-6  mt-3 ">
+                    <div id="carouselExampleIndicators" class="carousel slide carousel-second" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                                class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                                aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                                aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <iframe class="" src="https://www.youtube.com/embed/VhBG7GVXcNw"
+                                    title="YouTube video player" frameborder="0" style="width: 100%; height: 300px;"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen></iframe>
+
+                            </div>
+                            <div class="carousel-item">
+                                <iframe class="" src="https://www.youtube.com/embed/Dm8-XtFZzA4"
+                                    title="YouTube video player" frameborder="0" style="width: 100%; height: 300px;"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen></iframe>
+
+                            </div>
+                            <div class="carousel-item">
+                                <iframe class="" src="https://www.youtube.com/embed/vmLuafs-BhE?feature=oembed"
+                                    title="YouTube video player" frameborder="0" style="width: 100%; height: 300px;"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="row align-items-center mt-3">
+
+                <div class="col-6">
+                    <p class="mb-4 ">
+                        The DREAMS Program is a three-year curriculum based community mentoring project for
+                        schools and colleges. It started as a motivational music band at UC College, Aluva, India in
+                        1998 and in 2003 at Dharmarama College, Bangalore. The program later evolved as a summer
+                        camp for the high school students of Changanacherry, Kerala.
+                    </p>
+                    <p class="mb-4 ">
+                        In 2012 it established itself as a one-year program with a few follow up sessions in
+                        Monroe, Louisiana, USA. In the subsequent years, the program design was developed into a
+                        three-year after-school program with nine credit hours (eight days/year) for the middle
+                        school underperforming/under-serving teenagers.
+                    </p>
+
+                </div>
+
+                <div class="col-6">
+
+                    <p class="mb-4">
+                        The project was researched longitudinally at the University of
+                        Louisiana, Monroe, USA, on its impact on the middle school participants.
+                    </p>
+                    <p class="mb-4 ">
+                        The focus on the holistic development of young adults is achieved through an active
+                        engagement between the youth, the community, and the local community volunteers. Apart from
+                        the focus on promoting individual strengths and psycho-social skills, the program also
+                        focuses on bringing the community back to schools and colleges.
+                    </p>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container  mb-5 ">
+        <!-- dreams Project Row-->
+        <div class="row  justify-content-center mb-4">
+
+            <div class="col-md-6 ">
+                <img class="img-fluid" src="{% static 'DreamsProgram/Dreams-programme-wheel.png' %}" alt="..." />
+            </div>
+
+            <div class="col-md-6">
+                <iframe src="https://drive.google.com/file/d/1inAygaTmjq-m0FW1KcJb0oC-HXNVhTkQ/preview" allow="autoplay"
+                    class="w-100 h-100"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- dreams Implementation -->
+    <div class="custom-div ">
+        <div class="container cus-con-1">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="content-implementation">
+                        <h1 class="program-h1 main-h1 text-uppercase  fw-bold text-green heading-h3 text-center">
+                            Implementation
+                        </h1>
+                        <p class="text-justify">
+                            The three-year model of the DREAMS Program is specifically designed and utilized to help
+                            the less privileged and the underperforming middle school students in their holistic
+                            development – year one focuses on Personal development, year two on Interpersonal
+                            skills, and year hree on Leadership skills.
+                        </p>
+                        <p class="text-justify">
+                            This community mentoring project is implemented in Schools by College/University
+                            students with the support of the local community. 6th grade students with weak academic
+                            performances and/or with low self-esteem are identified from different local middle
+                            schools. Once the target group is identified, college students implement this
+                            intervention for eight days (45 hours) in a year with the support and guidance of the
+                            local community volunteers who manages the project.
+                        </p>
+                        <p class="text-justify">
+                            This program and the community seeks to impart knowledge and tools for these students to
+                            grow into a better version of themselves, to lead not only themselves but societies
+                            around them to a better future.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <img src="{% static 'DreamsProgram/DREAMS-Program-Implementation-Ver-7-_page-0001.png' %}"
+                        alt=" Implementation" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- dreams Model -->
+    <div class="container  cus-con-2 mt-5">
+
+        <div class="row image-section mt-5">
+            <div class="col-12">
+                <h1 class="heading-h1 text-green heading-h3 text-center ">
+                    <strong class="main-h1">
+                        DREAMS
+                    </strong>
+                    Model
+                </h1>
+            </div>
+            <div class="col-lg-5 ">
+                <div class="image-model">
+                    <img src="{% static 'DreamsProgram/Dreams-Programme-png.png' %}" alt="Dreams Model"
+                        class="img-fluid">
+                </div>
+            </div>
+            <div class="col-lg-7 mt-5">
+                <div class="accordion accordion-flush" id="accordionFlushExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button collapsed btn text-decoration-none" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                aria-controls="flush-collapseOne">
+                                DESIRE
+                            </button>
+                        </h2>
+                        <div id="flush-collapseOne" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body card-body">The fire that burns in every student, the
+                                fascination
+                                and thirst
+                                for knowledge is
+                                the first step toward our journey for success.</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingTwo">
+                            <button class="accordion-button collapsed btn text-decoration-none" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                                aria-controls="flush-collapseTwo">
+                                READINESS
+                            </button>
+                        </h2>
+                        <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                            <div class="card-body accordion-body">
+                                The ability to face any stones thrown by the world, the second stage of the
+                                model,
+                                transforms this fascination into realisation.“Why is success important?”
+                                Together we
+                                all grapple this question together and seek in our hearts the answer.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingThree">
+                            <button class="accordion-button collapsed btn text-decoration-none" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false"
+                                aria-controls="flush-collapseThree">
+                                EMPOWERMENT
+                            </button>
+                        </h2>
+                        <div id="flush-collapseThree" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body card-body"> Giving our body and our soul the power to
+                                change,
+                                not
+                                only our self but the world
+                                too. It looks at three different aspects of life – Personal, Interpersonal and
+                                Leadership.</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header card-header" id="flush-headingFour">
+                            <button class="accordion-button collapsed btn text-decoration-none" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false"
+                                aria-controls="flush-collapseFour">
+                                Action
+                            </button>
+                        </h2>
+                        <div id="flush-collapseFour" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body card-body">The stage where mistakes and failures are
+                                embraced
+                                with open arms in order to get
+                                closer to excellence.</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header card-header" id="flush-headingFive">
+                            <button class="accordion-button collapsed btn text-decoration-none" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false"
+                                aria-controls="flush-collapseFive">
+                                MASTERY
+                            </button>
+                        </h2>
+                        <div id="flush-collapseFive" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body card-body">The result of persistent action which launches
+                                you
+                                in
+                                the orbit of success. Once you
+                                reach the level of Mastery and success begins a higher level of Desire, and the
+                                cyclical journey towards Success begins yet again.</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header card-header" id="flush-headingSix">
+                            <button class="accordion-button collapsed btn text-decoration-none" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false"
+                                aria-controls="flush-collapseSix">
+                                SUCCESS
+                            </button>
+                        </h2>
+                        <div id="flush-collapseSix" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingSix" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body card-body">Your content goes here. Edit or remove this
+                                text
+                                inline or in the module Content
+                                settings. You can also style every aspect of this content in the module Design
+                                settings and even apply custom CSS to this text in the module Advanced settings.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--  -->
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container text-h3 mt-5" id="conference" style="padding-bottom: 5% !important;">
+
+        <h1 class="text-center text-uppercase fs-2">Upcoming Events</h1>
+
+        <div class="row   justify-content-center">
+            <div class="col-md-6">
+                <img src="{% static '2024/Events/KeralaSummerCamp.png' %}" class="img-fluid">
+            </div>
+            <div class="col-md-6 ">
+                <img src="{% static '2024/Events/KarnatakaSummerCamp.png' %}" class="img-fluid">
+            </div>
+        </div>
+    </div>
+    <div class="container mt-4">
+        <h1 class="text-center text-uppercase fs-2">Latest News</h1>
+        <div id="carouselExampleAutoplaying" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="row ">
+                    <div class="col-md-4">
+                        <div class="card mb-3 border-0">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img src="{% static 'DreamsProgram/news/posterThrikkodithanam.jpeg' %}"
+                                        class="img-fluid rounded-start" alt="...">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+        
+                                        <p class="card-text"> The summer camp posters of Thrikodidthanam Chapter</p>
+        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+        
+                    </div>
+        
+                    <div class="col-md-4">
+                        <div class="card mb-3 border-0">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img src="{% static 'DreamsProgram/news/posterPallam.jpeg' %}"
+                                        class="img-fluid rounded-start" alt="...">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+        
+                                        <p class="card-text">The summer camp posters of Ocean Community Chapter </p>
+        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+        
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-3 border-0">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img src="{% static 'DreamsProgram/news/newsThrikkodithanam.jpeg' %}"
+                                        class="img-fluid rounded-start" alt="...">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+        
+                                        <p class="card-text">The newspaper clipping about Thrikodidthanam Sumer Camp</p>
+        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+        
+                    </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="row ">
+                    <div class="col-md-4">
+                        <div class="card mb-3 border-0">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img src="{% static 'DreamsProgram/news/newsChanganessery.jpeg' %}"
+                                        class="img-fluid rounded-start" alt="...">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+        
+                                        <p class="card-text">The newspaper clipping about Changanassery Summer Camp </p>
+        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+        
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card border-0">
+                            <img src="{% static 'DreamsProgram/news/newsMaranallor.jpeg' %}"
+                                class="rounded card-img-top img-fluid p-2 mx-auto" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title"></h5>
+                                <p class="card-text">Newspaper clipping from Keralakaumudi about the Christ Nagar College Summer Camp
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card border-0">
+                            <img src="{% static 'DreamsProgram/news/treePlanting.jpeg' %}"
+                                class="rounded card-img-top img-fluid p-2 mx-auto" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title"></h5>
+                                <p class="card-text">Tree planting and labeling with tags by Dreams Project began on May 10th in
+                                    Maranaloor. Students are actively involved in this environmental project, planting and
+                                    tagging
+                                    trees as part of their curriculum. Christ Maranaloor has already planted three trees, with
+                                    annual growth updates to be featured on the website demonstrating the program's dedication
+                                    to
+                                    sustainability and community involvement.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="row justify-content-center">
+                    <div class="col-md-4">
+                        <div class="card mb-3 border-0">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img src="{% static 'DreamsProgram/news/PallamPoster.jpeg' %}"
+                                        class="img-fluid rounded-start" alt="...">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+        
+                                        <p class="card-text">The summer camp posters of Ocean Community Chapter</p>
+        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+        
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card border-0">
+                            <img src="{% static 'DreamsProgram/news/imageThrikkodithanam.jpeg' %}"
+                                class="rounded card-img-top img-fluid p-2 mx-auto" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title"></h5>
+                                <p class="card-text">Picture from Thrikodithanam Summer Camp</p>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+              </div>
+              
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+          </div>
+        
+        
+
+    </div>
+
+
+    {% include 'partials/_globalPresence.html' %}
+</section>
+{% endblock %}
