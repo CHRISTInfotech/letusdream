@@ -126,7 +126,7 @@
 
     <div class="bg-lightgreen mb-5">
         <div class="container">
-            <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+            <div id="dreamsCarousel" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <div class="mt-5 mb-5 text-center">
@@ -184,12 +184,12 @@
                         </div>
                     </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+                <button class="carousel-control-prev" type="button" data-bs-target="#dreamsCarousel"
                         data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Previous</span>
                 </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+                <button class="carousel-control-next" type="button" data-bs-target="#dreamsCarousel"
                         data-bs-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Next</span>
@@ -230,11 +230,34 @@
     </div>
 
     <div class="m-0">
-        <div class="text-center fs-1 fw-bolder">
+        <div class="text-center mt-4 fs-1 fw-bolder">
             Partners
         </div>
-        <div class="row m-0">
-            <img>
+        <div class="container">
+            <div id="dreamsPartnersCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="text-center">
+                            <img src="{% static '2024/dreams/partners1.png' %}" class="img-fluid" alt="">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="text-center">
+                            <img src="{% static '2024/dreams/partners2.png' %}" class="img-fluid" alt="">
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#dreamsPartnersCarousel"
+                        data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#dreamsPartnersCarousel"
+                        data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
         </div>
     </div>
 
