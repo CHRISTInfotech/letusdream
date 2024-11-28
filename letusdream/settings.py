@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-)ij8yr40t__zu2z_$ve9@_#7x7183^v-ki9b(0i_7l60ndhz6!
 DEBUG =  False
 
 if not DEBUG:
-    ALLOWED_HOSTS = ['10.5.5.31', 'letusdream.org']
+    ALLOWED_HOSTS = ['10.5.5.31', 'letusdream.org','www.letusdream.org']
 else:
     ALLOWED_HOSTS = ['*']
 
