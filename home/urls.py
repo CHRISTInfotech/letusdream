@@ -48,5 +48,7 @@ urlpatterns = [
     path('clubs/selfhelp', selfhelp_club, name='selfhelp-club'),
     path('clubs/youth-leadership', youthleadership_club, name='youthleadership-club'),
     # CLUBS PAGES URL END
+    
+    path('newsletters/<str:month>/<str:year>',news_letter_html,name='newsletter-page'),
 
 ]

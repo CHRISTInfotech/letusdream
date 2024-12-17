@@ -299,3 +299,10 @@ def selfhelp_club(request):
 
 def youthleadership_club(request):
     return render(request, 'clubs/youthleadership.html')
+
+def news_letter_html(request,month,year):
+    context = {
+        'month': month,
+        'year': year,
+    }
+    return render(request, 'newsletters/'+month+'-'+year+'.html',context)

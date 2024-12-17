@@ -1,0 +1,415 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{{month|capfirst}} | {{year}}</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="row mb-5">
+      <div class="col d-flex justify-content-center align-items-center mt-5">
+        <img src="{% static 'newsletters/dec2024/logo.png' %}" alt="" class="img-fluid col-2">
+        <div class=" p-4 m-2 text-white col-5" style="background-color: darkblue;">
+          <div class="fw-bold fs-3">
+            News Letter
+          </div>
+          <div class="fst-italic fs-4">
+            {{month|capfirst}} | {{year}}
+          </div>
+          <small class=" float-end">
+            <a href="https://letusdream.org/" class="text-white text-decoration-none" target="_blank">Visit Let Us Dream
+              for more details</a>
+          </small>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-3">
+        <nav id="navbar-example3" class="h-100 flex-column align-items-stretch pe-5 border-end">
+          <nav class="nav  flex-column">
+            <a class="nav-link">Table of Contents</a>
+            <hr />
+            <a class="nav-link" href="#item-1">1. Hyderabad Conference</a>
+            <a class="nav-link" href="#item-2">2. Pune Conference</a>
+            <a class="nav-link" href="#item-3">3. Bangalore Conference</a>
+            <a class="nav-link" href="#item-4">4. Chennai Conference</a>
+            <a class="nav-link" href="#item-5">5. Louisiana Conference</a>
+            <a class="nav-link" href="#item-6">6. New York Conference</a>
+            <a class="nav-link" href="#item-7">7. Trivandrum Conference</a>
+          </nav>
+        </nav>
+      </div>
+
+
+      <div class="col-9 justify-content-around"
+        style="background-size:cover; width: 880px; color:black; text-align: justify;">
+        <div data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-smooth-scroll="true"
+          class="scrollspy-example-2" tabindex="0">
+      
+            <!-- section 1 -->
+
+            <div id="item-1">
+              <h3 class="mt-5 mb-3">1. Hyderabad Conference</h3>
+              <div style="display: flex; align-items: flex-start;">
+                <!-- Image on the Left -->
+                <img src="{% static 'newsletters/dec2024/lud1.JPG' %}" class="img"
+                  style="height: 200px; margin-right: 20px;">
+
+                <!-- Details on the Right -->
+                <div style="padding: 15px; border-radius: 8px;">
+                  <h5 class="mt-3">The Let Us Dream Annual Conference 2024</h5>
+                  <p style="font-size: 16px; line-height: 1.8; margin: 5px 0;">
+                    <strong>Venue:</strong> St. Francis Degree College for Women
+                  </p>
+                  <p style="font-size: 16px; line-height: 1.8; margin: 5px 0;">
+                    <strong>Date:</strong> 21st September, 2024
+                  </p>
+                </div>
+              </div>
+
+              
+              <p class="mt-3">Hosted at St. Francis College for Women, the <strong>Let Us Dream Annual Conference 2024</strong>
+                brought together thought leaders, innovators, and changemakers to address the theme
+                <strong>"Building a Holistic Community: Strategies and Solutions."</strong> The conference explored
+                sustainable development through integrated efforts across education, health, and social
+                sectors, with the aim of driving meaningful change at the grassroots level.
+              </p>
+
+              <h6>Key panels at the conference delved into vital areas of impact:</h6>
+
+              ● <strong>The Education Panel </strong>focused on the ethical integration of artificial intelligence
+              and the need for curriculum reforms to prepare students for the challenges of the
+              future. <br>
+              ● <strong>The Health Panel </strong>centered on women’s health, with in-depth discussions on
+              mental health awareness and maternal care. <br>
+              ● <strong>The Social Panel</strong> highlighted the empowerment of marginalized communities,
+              exploring the importance of resilience and grassroots development in fostering
+              social change. <br> <br>
+
+              The <strong>Changemakers Session</strong> provided powerful insights and inspiration, featuring
+              leaders such as Father Jose, Jaya Bharathi from the MOWO movement, Dr. Sajadullah,
+              who shared his healthcare initiatives, and Subhalakshmi, an advocate for the differently-
+              abled. <br>
+              By promoting cross-sector collaboration and community engagement, the conference laid
+              a strong foundation for inclusive and sustainable progress, emphasizing the collective
+              action needed to achieve societal transformation.
+            </div>
+
+            <!-- section 2 -->
+            <div id="item-2">
+              <h3 class="mt-5 mb-3">2. Pune Conference</h3>
+              <div style="display: flex; align-items: flex-start;">
+                <!-- Image on the Left -->
+                <img src="{% static 'newsletters/dec2024/lud1.JPG' %}" class="img"
+                  style="height: 200px; margin-right: 20px;">
+
+                <!-- Details on the Right -->
+                <div style="padding: 15px; border-radius: 8px; margin-bottom: 10px;">
+                  <h5 class="mt-3">Inaugural Let Us Dream Annual Community Conference 2024</h5>
+                  <p style="font-size: 16px; line-height: 1.8; margin: 5px 0;">
+                    <strong>Venue:</strong> Savitribai Phule Pune University
+                  </p>
+                  <p style="font-size: 16px; line-height: 1.8; margin: 5px 0;">
+                    <strong>Date:</strong>28th February, 2024
+                  </p>
+                </div>
+              </div>
+
+
+              
+              <p class="mt-3">The inaugural <strong>Let Us Dream Annual Community Conference </strong>in Pune, held at
+                <strong>Savitribai Phule Pune University, </strong> brought together changemakers to address pressing
+
+                Conference wise content
+
+                issues in <strong> Health, Social Issues, </strong> and <strong> Education, </strong> fostering
+                impactful
+                community
+                development and collaboration.
+              </p>
+
+              <p><strong>The Health Panel</strong> explored key topics such as digital accessibility, fitness, and
+                diabetes
+                prevention. Notable speakers included <strong>Mrs. Tejasvini</strong>, CEO of <strong>Sugamya Digital
+                  Solutions</strong>, who inspired attendees with her advocacy for digital literacy and healthcare,
+                despite being visually imparied. <strong>Mr. Bhagwat</strong> shared valuable insights on physiotherapy,
+                while <strong>Dr. Ravindra</strong> emphasized the importance of mindful living and healthy eating
+                habits. </p>
+
+              <p> <strong>The Social Issues Panel</strong> addressed critical concerns like human trafficking and
+                inclusivity. <strong>Dr. Mathew </strong>discussed Maharashtra’s anti-trafficking initiatives,
+                <strong>Ms.
+                  Suhasini</strong> focused on survivor rehabilitation, and <strong>Mr. Tushar</strong> highlighted the
+                need for
+                equitable education for people with disabilities. </p>
+
+              <p><strong>The Education Panel</strong> underscored the significance of inclusive learning. <strong>Dr.
+                  Pharande</strong>
+                reflected on his work in Jammu and Kashmir, <strong>Dr. Sadakale</strong> advocated for rural
+                education, and <strong>Ms. Patwardhan</strong> emphasized the importance of vocational training. </p>
+
+              <p>Through these dynamic discussions, the conference provided a platform for collaboration
+                and actionable solutions, advancing the cause of community-driven development.</p>
+            </div>
+
+
+            <!-- section 3 -->
+
+            <div id="item-3">
+              <h4 class="mt-5 mb-3">3. Bangalore - Conference</h4>
+              <div style="display: flex; align-items: flex-start;">
+                <!-- Image on the Left -->
+                <img src="{% static 'newsletters/dec2024/lud3.JPG' %}" class="img"
+                  style="height: 200px; margin-right: 20px;">
+
+                <!-- Details on the Right -->
+                <div style="padding: 15px; border-radius: 8px; margin-bottom: 10px;">
+                  <h5>Youth and Employability Conference 2024</h5>
+                  <p style="font-size: 16px; line-height: 1.8; margin: 5px 0;">
+                    <strong>Venue:</strong> St. Francis De Sales (Autonomous) College
+                  </p>
+                  <p style="font-size: 16px; line-height: 1.8; margin: 5px 0;">
+                    <strong>Date:</strong> 19th October, 2024
+                  </p>
+                </div>
+              </div>
+
+              
+              <p class="mt-3">The <strong>Youth and Employability Conference ,</strong> hosted by <strong>St. Francis De Sales
+                  College
+                  (Autonomous)</strong> in collaboration with <strong>Jyoti Nivas College</strong> and <strong>Christ
+                  (Deemed to be
+                  University),</strong> brought together a diverse group of experts to tackle the critical challenge of
+                workforce readiness.</p> <br>
+
+              <p>Esteemed speakers, including <strong>Ms. Suja Warriar,</strong> Director of Academia at
+                <strong>Wequity, Ms.
+                  Suma Merlin,</strong> Assistant Professor at St. Francis De Sales College, and <strong>Mr. Venu
+                  Doddavarapu,</strong> Founder of <strong>Theatre for Liberation,</strong> emphasized the importance of
+                innovative educational strategies. Their discussions covered a range of vital topics, from
+                fostering sustainability and diversity to integrating experiential and social-emotional
+                learning frameworks, such as the Delhi Government’s <strong>Happiness Curriculum.</strong> </p><br>
+
+              <p>The conference highlighted key themes such as <strong>skill development, industry-academia
+                  collaboration,</strong> and <strong>entrepreneurial innovation</strong>. By focusing on these areas,
+                the event
+                aimed to bridge the gap between education and employability, ensuring that young
+                individuals are well-equipped to meet the evolving demands of the modern workforce. </p><br>
+
+              <p>The host institutions, renowned for their commitment to excellence, provided a platform
+                for actionable solutions and transformative ideas, empowering youth for a brighter future.</p>
+
+            </div>
+
+            <!-- section 4 -->
+
+            <div id="item-4">
+              <h4 class="mt-5 mb-3">4.Chennai Conference</h4>
+              <div style="display: flex; align-items: flex-start;">
+                <!-- Image on the Left -->
+                <img src="{% static 'newsletters/dec2024/lud4.JPG' %}" class="img"
+                  style="height: 200px; margin-right: 20px;">
+
+                <!-- Details on the Right -->
+                <div style="padding: 15px; border-radius: 8px; margin-bottom: 10px;">
+                  <h5>Let Us Dream Annual Community Conference 2024</h5>
+                <!-- <p style="font-size: 16px; line-height: 1.8; margin: 5px 0;">
+                  <strong>Venue:</strong> St. Francis Degree College for Women
+                </p>
+                <p style="font-size: 16px; line-height: 1.8; margin: 5px 0;">
+                  <strong>Date:</strong> 21st September, 2024
+                </p> -->
+              </div>
+              </div>
+
+
+              <h5 class="mt-3">Fostering Collaboration for a Sustainable Future</h5>
+              <p>The <i>Let Us Dream (LUD) Annual Community Conference 2024</i> hosted by Women’s
+                Christian College brought together over <strong>608 participants</strong>, including students,
+                researchers, volunteers, NGO leaders, and thought experts, for meaningful discussions
+                and collaborations.</p>
+
+              <p>Themed <strong>“A Holistic Approach to Sustainable Well-Being”,</strong> the conference featured
+                interactive panel discussions, engaging dialogues, and impactful workshops. Participants,
+                including students from <strong>13 colleges,</strong> explored real-world social challenges,
+                collaborative
+                projects, and sustainability initiatives.</p>
+
+              <p>The conference showcased the contributions of <strong>80+ NGOs </strong> and inspired participants with
+                stories of resilience and innovation. The event emphasized fostering <strong>compassion,
+                  practical experience,</strong> and <strong>holistic growth,</strong> empowering individuals to become
+                future-
+                ready leaders.</p>
+
+              <p>>Key speakers like <strong>Arun Fernandez,</strong> founder of Blink Foundation, and <strong>Ponni
+                  Bharatanatyam,</strong> a distinguished dancer and trainer, underscored the importance of
+                community-driven action and sustainability.
+                WCC Principal <strong>Lilian I. Jasper</strong> highlighted the conference&#39;s role in shaping
+                students into
+                socially responsible leaders, prepared to address community challenges.</p>
+
+            </div>
+
+
+            <!-- section 5 -->
+            <div id="item-5">
+              <h3 class="mt-5 mb-3">5. Louisiana Conference</h3>
+              <div style="display: flex; align-items: flex-start;">
+                <!-- Image on the Left -->
+                <img src="{% static 'newsletters/dec2024/lud5.png' %}" class="img"
+                  style="height: 200px; margin-right: 20px;">
+
+                <!-- Details on the Right -->
+                <div style="padding: 15px; border-radius: 8px; margin-bottom: 10px;">
+                  <h5 class="mt-3 mb-3">Inaugural Let Us Dream Conference at Grambling State University</h5>
+                  <p style="font-size: 16px; line-height: 1.8; margin: 5px 0;">
+                    <strong>Venue:</strong> Grambling State University
+                  </p>
+                  <p style="font-size: 16px; line-height: 1.8; margin: 5px 0;">
+                    <strong>Date:</strong> 31st October, 2024
+                  </p>
+                </div>
+              </div>
+
+              
+
+              <p class="mt-3">On <strong>October 31, 2024, Grambling State University</strong> hosted the inaugural <strong>Let Us Dream
+                Conference</strong> at the <strong>Fredrick C. Hobdy Assembly Center,</strong> bringing together students,
+                educators, and community leaders to promote <strong>social justice, cultural competence,</strong> and
+                <strong>community empowerment.</strong></p> <br>
+
+              <p>The conference featured powerful panel discussions, cultural performances, and poignant
+                moments, including a heartfelt tribute to the late <strong>Tori Smith,</strong> chair of the LUD 2024
+                social committee. <strong>Madison Mason’s</strong> poem, What a Beautiful Gift It Is to Let Us Dream,
+                inspired attendees with a message of resilience and hope.</p> <br>
+
+              <p> Fr. Lijo Thomas, founder of <strong>Let Us Dream Inc.,</strong> emphasized the importance of
+                collaboration in weaving community stories into actionable models for change.
+                <strong>Grambling President Martin Lemelle Jr.</strong> and other university leaders highlighted the
+                significance of cross-cultural exchanges and global awareness. Panel discussions focused
+                on initiatives to foster inclusion, equity, and safety in education, while <strong>Deputy Sheriff</strong>
+                <strong>Gary Guice</strong> introduced the <strong>Dream Program,</strong> enabling students who are mostly
+                overlooked to discover their voices and achieve their goals to the fullest.</p> <br>
+
+              <p>The conference underscored the transformative power of dreaming together, creating
+                pathways for inclusive and empowered communities.</p>
+            </div>
+
+
+            <!-- section 6 -->
+            <div id="item-6">
+              <h3 class="mt-5 mb-3">6. New York Conference</h3>
+              <div style="display: flex; align-items: flex-start;">
+                <!-- Image on the Left -->
+                <img src="{% static 'newsletters/dec2024/lud6.png' %}" class="img"
+                  style="height: 200px; margin-right: 20px;">
+
+                <!-- Details on the Right -->
+                <div style="padding: 15px; border-radius: 8px; margin-bottom: 10px;">
+                  <h5 class="mt-3">Inaugural Let Us Dream Conference at Grambling State University</h5>
+                  <p style="font-size: 16px; line-height: 1.8; margin: 5px 0;">
+                    <strong>Venue:</strong> Binghamton University
+                  </p>
+                  <p style="font-size: 16px; line-height: 1.8; margin: 5px 0;">
+                    <strong>Date:</strong> 8th November, 2024
+                  </p>
+                </div>
+              </div>
+
+              
+
+              <p class="mt-3">The <strong>Let Us Dream Annual Community Conference 2024 at Christ Nagar College</strong>
+                The <strong>Let Us Dream Annual Community Conference 2024 at Christ Nagar College,</strong>
+                <strong>Maranalloor</strong> opened with powerful addresses from key dignitaries. <strong>Ms. Deepthi Rani
+                  SS</strong> welcomed attendees, recognizing figures such as <strong>Raju Narayana Swamy IAS</strong> and
+                Fr. Lijo Thomas <strong>CMI</strong>. </p>
+
+                <p>Fr. Lijo Thomas highlighted the impact of the <strong>DREAMS initiative</strong> and the importance of
+                  collaboration in societal change, while <strong>Mr. Jimmy Manuel,</strong> Chair of the conference,
+                  encouraged action through his personal connection to DREAMS. <strong>Raju Narayana                
+                    Swamy IAS,</strong> the keynote speaker, stressed upon <strong>equality, gender inclusivity,</strong> and
+                  creativity’s role in strengthening democracy.</p>
+
+                <p>Panels included thought-provoking discussions on social and health issues. <strong>Sheeja
+                  Sandra</strong> of <strong>Snehasandram Charitable Trust</strong> shared her work with specially-abled
+                  children, and <strong>Prabin PB</strong> of the <strong>Nadi Foundation</strong> focused on youth empowerment and
+                  mental health. <strong>Jekcy C. Joy</strong> from <strong>Green Worms</strong> discussed sustainable waste
+                  management, while <strong>Niteesh Sundareshan of Varsya Eco Solutions</strong> emphasized eco-
+                  friendly packaging.</p>
+
+                <p>Health panelists <strong>Dr. Ajan M. J.</strong> and <strong>Dr. Athira Menon</strong> spoke on community health and
+                holistic approaches to reproductive health. The conference inspired collaboration for
+                meaningful community change.</p>
+            </div>     
+
+
+            <!-- section 7 -->
+
+            <div id="item-7">
+              <h3 class="mt-5 mb-3">7. Trivandrum Conference</h3>
+              <div style="display: flex; align-items: flex-start;">
+                <!-- Image on the Left -->
+                <img src="{% static 'newsletters/dec2024/lud7.JPG' %}" class="img"
+                  style="height: 200px; margin-right: 20px;">
+
+                <!-- Details on the Right -->
+                <div style="padding: 15px; border-radius: 8px; margin-bottom: 10px;">
+                  <h5 class="mt-3">Inaugural Let Us Dream Conference at Grambling State University</h5>
+                  <p style="font-size: 16px; line-height: 1.8; margin: 5px 0;">
+                    <strong>Venue:</strong> CHRIST Nagar College
+                  </p>
+                  <p style="font-size: 16px; line-height: 1.8; margin: 5px 0;">
+                    <strong>Date:</strong> 16th November, 2024
+                  </p>
+                </div>
+              </div>
+
+             
+
+              <p class="mt-3">The <strong>Let Us Dream Annual Community Conference 2024 at Christ Nagar College</strong>
+                The <strong>Let Us Dream Annual Community Conference 2024 at Christ Nagar College,</strong>
+                <strong>Maranalloor</strong> opened with powerful addresses from key dignitaries. <strong>Ms. Deepthi Rani
+                  SS</strong> welcomed attendees, recognizing figures such as <strong>Raju Narayana Swamy IAS</strong> and
+                <strong>Fr. Lijo Thomas Pathickal CMI.</strong>. </p>
+
+                <p>Fr. Lijo Thomas highlighted the impact of the <strong>DREAMS initiative</strong> and the importance of
+                  collaboration in societal change, while <strong>Mr. Jimmy Manuel,</strong> Chair of the conference,
+                  encouraged action through his personal connection to DREAMS. <strong>Raju Narayana                
+                    Swamy IAS,</strong> the keynote speaker, stressed upon <strong>equality, gender inclusivity,</strong> and
+                  creativity’s role in strengthening democracy.</p>
+
+                <p>Panels included thought-provoking discussions on social and health issues. <strong>Sheeja
+                  Sandra</strong> of <strong>Snehasandram Charitable Trust</strong> shared her work with specially-abled
+                  children, and <strong>Prabin PB</strong> of the <strong>Nadi Foundation</strong> focused on youth empowerment and
+                  mental health. <strong>Jekcy C. Joy</strong> from <strong>Green Worms</strong> discussed sustainable waste
+                  management, while <strong>Niteesh Sundareshan of Varsya Eco Solutions</strong> emphasized eco-
+                  friendly packaging.</p>
+
+                <p>Health panelists <strong>Dr. Ajan M. J.</strong> and <strong>Dr. Athira Menon</strong> spoke on community health and
+                holistic approaches to reproductive health. The conference inspired collaboration for
+                meaningful community change.</p>
+            </div> 
+
+         
+        </div>
+      </div>
+
+      <div class="mt-5 mb-5">
+        Footer
+      </div>
+
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
