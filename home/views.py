@@ -300,9 +300,16 @@ def selfhelp_club(request):
 def youthleadership_club(request):
     return render(request, 'clubs/youthleadership.html')
 
+def error_pages(request, exception=None):
+    data = {}
+    return render(request, 'home/errorpage.html', data)
+
 def news_letter_html(request,month,year):
-    context = {
-        'month': month,
-        'year': year,
-    }
-    return render(request, 'newsletters/'+month+'-'+year+'.html',context)
+    if month == 'december' and year == '2024':
+        context = {
+            'month': month,
+            'year': year,
+        }
+        return render(request, 'newsletters/'+month+'-'+year+'.html',context)
+    else:
+        return redirect('main')

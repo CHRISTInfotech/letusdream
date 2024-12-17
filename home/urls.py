@@ -1,7 +1,12 @@
-from django.contrib import admin
-from django.urls import path, include
+from django.conf.urls import handler404, handler500, handler403, handler400
+from django.urls import path
 
 from .views import *
+
+handler404 = 'home.views.error_pages'
+handler500 = 'home.views.error_pages'
+handler403 = 'home.views.error_pages' 
+handler400 = 'home.views.error_pages' 
 
 urlpatterns = [
     path('', index, name='main'),
