@@ -1,35 +1,34 @@
-{% extends 'base.html' %} {% load static %} {% block title %} MEDIA {% endblock
-%} {% block extraStyles %}
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Events {% endblock%}
+
+{% block extraStyles %}
 <link rel="stylesheet" href="{% static 'css/media.css' %}" type="text/css" />
-{% endblock extraStyles %} {% block links %}
+{% endblock extraStyles %} 
+
+{% block links %}
 <!--Google font-->
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link
-  href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
-  rel="stylesheet"
-/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
 
 <!--  Bootstrap CSS -->
-<link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-  type="text/css"
-/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" type="text/css" />
 
 <!-- Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
-{% endblock links %} {% block content %}
+{% endblock links %}
+
+{% block content %}
 
 <section class="media-sec">
   <nav aria-label="breadcrumb animated slideInDown" class="cus-breadcrumb">
     <ol class="breadcrumb text-uppercase mb-0 bg-white">
       <li class="breadcrumb-item">
-        <a class="text-black text-decoration-none" href="{% url 'main' %}"
-          >Home</a
-        >
+        <a class="text-black text-decoration-none" href="{% url 'main' %}">Home</a>
       </li>
       <li class="breadcrumb-item">
         <a class="text-black text-decoration-none">ABOUT US</a>
@@ -46,349 +45,195 @@
     <div class="row">
       <div class="col-lg-12 col-md-12 col-sm-12">
         <div class="accordion" id="accordionExample">
+
           <div class="card">
             <div class="card-header" id="headingThree">
               <h2 class="mb-0">
-                <button
-                  class="btn btn-link collapsed"
-                  type="button"
-                  data-toggle="collapse"
-                  data-target="#collapseSix"
-                  aria-expanded="false"
-                  aria-controls="collapseSix"
-                >
-                  Events
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSix"
+                  aria-expanded="false" aria-controls="collapseSix">
+                  2024
                 </button>
               </h2>
             </div>
 
-            <div
-              id="collapseSix"
-              class="collapse blog-home2 show"
-              aria-labelledby="collapseSix"
-              data-parent="#accordionExample"
-            >
+            <div id="collapseSix" class="collapse blog-home2 show" aria-labelledby="collapseSix"
+              data-parent="#accordionExample">
               <div class="card-body">
                 <div class="container-fluid text-h3 bg-green">
                   <div class="row text-center">
+
                     <div class="col-lg-3 col-md-3 p-3">
                       {% comment %}
                       <div
-                        class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute"
-                      >
+                        class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
                         June<span class="d-block">01-09</span>2024
                       </div>
                       {% endcomment %}
-                      <a
-                        href="{% static '2024/Reports/Germany_02June24.pdf' %}"
-                        target="_blank"
-                      >
-                        <img
-                          src="{% static '2024/Reports/DREAMS - NGO.jpg' %}"
-                          class="img1 m-3"
-                        />
+                      <a href="{% static '2024/Reports/Germany_02June24.pdf' %}" target="_blank">
+                        <img src="{% static '2024/Reports/DREAMS - NGO.jpg' %}" class="img1 m-3" />
                       </a>
                     </div>
 
                     <div class="col-lg-3 col-md-3 p-3">
                       {% comment %}
                       <div
-                        class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute"
-                      >
+                        class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
                         June<span class="d-block">01-09</span>2024
                       </div>
                       {% endcomment %}
-                      <a
-                        href="{% static '2024/Reports/Germany_02June24.pdf' %}"
-                        target="_blank"
-                      >
-                        <img
-                          src="{% static '2024/Reports/CV FOLLOW UP SESSION - 2.jpg' %}"
-                          class="img1 m-3"
-                        />
+                      <a href="{% static '2024/Reports/Germany_02June24.pdf' %}" target="_blank">
+                        <img src="{% static '2024/Reports/CV FOLLOW UP SESSION - 2.jpg' %}" class="img1 m-3" />
                       </a>
                     </div>
 
                     <div class="col-lg-3 col-md-3 p-3">
                       <div
-                        class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute"
-                      >
+                        class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
                         MARCH<span class="d-block">23</span>2024
                       </div>
-                      <a
-                        href="{% static '2024/Reports/Germany_02June24.pdf' %}"
-                        target="_blank"
-                      >
-                        <img
-                          src="{% static '2024/Reports/INVESTITURE CEREMONY.jpg' %}"
-                          class="img1 m-3"
-                        />
+                      <a href="{% static '2024/Reports/Germany_02June24.pdf' %}" target="_blank">
+                        <img src="{% static '2024/Reports/INVESTITURE CEREMONY.jpg' %}" class="img1 m-3" />
                       </a>
                     </div>
 
                     <div class="col-lg-3 col-md-3 p-3">
                       <div
-                        class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute"
-                      >
+                        class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
                         June<span class="d-block">01-09</span>2024
                       </div>
-                      <a
-                        href="{% static '2024/Reports/Germany_02June24.pdf' %}"
-                        target="_blank"
-                      >
-                        <img
-                          src="{% static '2024/Reports/STUDENT EXCHANGE PROGRAM.jpg' %}"
-                          class="img1 m-3"
-                        />
+                      <a href="{% static '2024/Reports/Germany_02June24.pdf' %}" target="_blank">
+                        <img src="{% static '2024/Reports/STUDENT EXCHANGE PROGRAM.jpg' %}" class="img1 m-3" />
                       </a>
                     </div>
-                  </div>
-                </div>
-              </div>
-            </div>
 
-            <div
-              id="collapseSix"
-              class="collapse blog-home2 show"
-              aria-labelledby="collapseSix"
-              data-parent="#accordionExample"
-            >
-              <div class="card-body">
-                <div class="container-fluid text-h3 bg-green">
-                  <div class="row text-center">
                     <div class="col-lg-3 col-md-3 p-3">
                       <div
-                        class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute"
-                      >
+                        class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
                         June<span class="d-block">29</span>2024
                       </div>
-                      <a
-                        href="{% static '2024/Reports/Germany_02June24.pdf' %}"
-                        target="_blank"
-                      >
-                        <img
-                          src="{% static '2024/Reports/TRAINING SESSION FOR ST. ANTHONY_S NEW MENTORS.jpg' %}"
-                          class="img1 m-3"
-                        />
+                      <a href="{% static '2024/Reports/Germany_02June24.pdf' %}" target="_blank">
+                        <img src="{% static '2024/Reports/TRAINING SESSION FOR ST. ANTHONY_S NEW MENTORS.jpg' %}"
+                          class="img1 m-3" />
                       </a>
                     </div>
 
                     <div class="col-lg-3 col-md-3 p-3">
                       <div
-                        class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute"
-                      >
+                        class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
                         JULY<span class="d-block">6</span>2024
                       </div>
-                      <a
-                        href="{% static '2024/Reports/Germany_02June24.pdf' %}"
-                        target="_blank"
-                      >
-                        <img
-                          src="{% static '2024/Reports/WORKSHOP.jpg' %}"
-                          class="img1 m-3"
-                        />
+                      <a href="{% static '2024/Reports/Germany_02June24.pdf' %}" target="_blank">
+                        <img src="{% static '2024/Reports/WORKSHOP.jpg' %}" class="img1 m-3" />
                       </a>
                     </div>
 
                     <div class="col-lg-3 col-md-3 p-3">
                       <div
-                        class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute"
-                      >
+                        class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
                         SEPT<span class="d-block">5</span>2024
                       </div>
-                      <a
-                        href="{% static '2024/Reports/Germany_02June24.pdf' %}"
-                        target="_blank"
-                      >
-                        <img
-                          src="{% static '2024/Reports/TEACHERS_ DAY 2024.jpg' %}"
-                          class="img1 m-3"
-                        />
+                      <a href="{% static '2024/Reports/Germany_02June24.pdf' %}" target="_blank">
+                        <img src="{% static '2024/Reports/TEACHERS_ DAY 2024.jpg' %}" class="img1 m-3" />
                       </a>
                     </div>
 
                     <div class="col-lg-3 col-md-3 p-3">
                       <div
-                        class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute"
-                      >
+                        class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
                         SEPT<span class="d-block">10</span>2024
                       </div>
-                      <a
-                        href="{% static '2024/Reports/Germany_02June24.pdf' %}"
-                        target="_blank"
-                      >
-                        <img
-                          src="{% static '2024/Reports/JAM SESSION.jpg' %}"
-                          class="img1 m-3"
-                        />
+                      <a href="{% static '2024/Reports/Germany_02June24.pdf' %}" target="_blank">
+                        <img src="{% static '2024/Reports/JAM SESSION.jpg' %}" class="img1 m-3" />
                       </a>
                     </div>
-                  </div>
-                </div>
-              </div>
-            </div>
 
-            <div
-              id="collapseSix"
-              class="collapse blog-home2 show"
-              aria-labelledby="collapseSix"
-              data-parent="#accordionExample"
-            >
-              <div class="card-body">
-                <div class="container-fluid text-h3 bg-green">
-                  <div class="row text-center">
                     <div class="col-lg-3 col-md-3 p-3">
                       <div
-                        class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute"
-                      >
+                        class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
                         SEPT<span class="d-block">11</span>2024
                       </div>
-                      <a
-                        href="{% static '2024/Reports/Germany_02June24.pdf' %}"
-                        target="_blank"
-                      >
-                        <img
-                          src="{% static '2024/Reports/GOALS AND PRINCIPLES TRAINING SESSION.jpg' %}"
-                          class="img1 m-3"
-                        />
+                      <a href="{% static '2024/Reports/Germany_02June24.pdf' %}" target="_blank">
+                        <img src="{% static '2024/Reports/GOALS AND PRINCIPLES TRAINING SESSION.jpg' %}"
+                          class="img1 m-3" />
                       </a>
                     </div>
 
                     <div class="col-lg-3 col-md-3 p-3">
                       <div
-                        class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute"
-                      >
+                        class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
                         SEPT<span class="d-block">21-22</span>2024
                       </div>
-                      <a
-                        href="{% static '2024/Reports/Germany_02June24.pdf' %}"
-                        target="_blank"
-                      >
-                        <img
-                          src="{% static '2024/Reports/OLT POSTER.jpg' %}"
-                          class="img1 m-3"
-                        />
+                      <a href="{% static '2024/Reports/Germany_02June24.pdf' %}" target="_blank">
+                        <img src="{% static '2024/Reports/OLT POSTER.jpg' %}" class="img1 m-3" />
                       </a>
                     </div>
 
                     <div class="col-lg-3 col-md-3 p-3">
                       <div
-                        class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute"
-                      >
+                        class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
                         SEPT<span class="d-block">28</span>2024
                       </div>
-                      <a
-                        href="{% static '2024/Reports/Germany_02June24.pdf' %}"
-                        target="_blank"
-                      >
-                        <img
-                          src="{% static '2024/Reports/YCLP SESSION - 2ND YEARS .jpg' %}"
-                          class="img1 m-3"
-                        />
+                      <a href="{% static '2024/Reports/Germany_02June24.pdf' %}" target="_blank">
+                        <img src="{% static '2024/Reports/YCLP SESSION - 2ND YEARS .jpg' %}" class="img1 m-3" />
                       </a>
                     </div>
 
                     <div class="col-lg-3 col-md-3 p-3">
                       <div
-                        class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute"
-                      >
+                        class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
                         SEPT<span class="d-block">30</span>2024
                       </div>
-                      <a
-                        href="{% static '2024/Reports/Germany_02June24.pdf' %}"
-                        target="_blank"
-                      >
-                        <img
-                          src="{% static '2024/Reports/CV CHAPTER CONNECT.jpg' %}"
-                          class="img1 m-3"
-                        />
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              id="collapseSix"
-              class="collapse blog-home2 show"
-              aria-labelledby="collapseSix"
-              data-parent="#accordionExample"
-            >
-              <div class="card-body">
-                <div class="container-fluid text-h3 bg-green">
-                  <div class="row text-center">
-                    <div class="col-lg-3 col-md-3 p-3">
-                      <div
-                        class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute"
-                      >
-                        SEPT<span class="d-block">30</span>2024
-                      </div>
-                      <a
-                        href="{% static '2024/Reports/Germany_02June24.pdf' %}"
-                        target="_blank"
-                      >
-                        <img
-                          src="{% static '2024/Reports/ST ANTHONY - CHAPTER CONNECT.jpg' %}"
-                          class="img1 m-3"
-                        />
+                      <a href="{% static '2024/Reports/Germany_02June24.pdf' %}" target="_blank">
+                        <img src="{% static '2024/Reports/CV CHAPTER CONNECT.jpg' %}" class="img1 m-3" />
                       </a>
                     </div>
 
                     <div class="col-lg-3 col-md-3 p-3">
                       <div
-                        class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute"
-                      >
+                        class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
+                        SEPT<span class="d-block">30</span>2024
+                      </div>
+                      <a href="{% static '2024/Reports/Germany_02June24.pdf' %}" target="_blank">
+                        <img src="{% static '2024/Reports/ST ANTHONY - CHAPTER CONNECT.jpg' %}" class="img1 m-3" />
+                      </a>
+                    </div>
+
+                    <div class="col-lg-3 col-md-3 p-3">
+                      <div
+                        class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
                         OCT<span class="d-block">7</span>2024
                       </div>
-                      <a
-                        href="{% static '2024/Reports/Germany_02June24.pdf' %}"
-                        target="_blank"
-                      >
-                        <img
-                          src="{% static '2024/Reports/ST. ANTHONY FOLLOW UP - 1.jpg' %}"
-                          class="img1 m-3"
-                        />
+                      <a href="{% static '2024/Reports/Germany_02June24.pdf' %}" target="_blank">
+                        <img src="{% static '2024/Reports/ST. ANTHONY FOLLOW UP - 1.jpg' %}" class="img1 m-3" />
                       </a>
                     </div>
 
                     <div class="col-lg-3 col-md-3 p-3">
                       <div
-                        class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute"
-                      >
+                        class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
                         OCT<span class="d-block">25</span>2024
                       </div>
-                      <a
-                        href="{% static '2024/Reports/Germany_02June24.pdf' %}"
-                        target="_blank"
-                      >
-                        <img
-                          src="{% static '2024/Reports/SA & CV COLLAB MEET.jpg' %}"
-                          class="img1 m-3"
-                        />
+                      <a href="{% static '2024/Reports/Germany_02June24.pdf' %}" target="_blank">
+                        <img src="{% static '2024/Reports/SA & CV COLLAB MEET.jpg' %}" class="img1 m-3" />
                       </a>
                     </div>
 
                     <div class="col-lg-3 col-md-3 p-3">
                       <div
-                        class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute"
-                      >
+                        class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
                         NOV<span class="d-block">23</span>2024
                       </div>
-                      <a
-                        href="{% static '2024/Reports/Germany_02June24.pdf' %}"
-                        target="_blank"
-                      >
-                        <img
-                          src="{% static '2024/Reports/FOLLOW UP 2 ST. ANTHONY.jpg' %}"
-                          class="img1 m-3"
-                        />
+                      <a href="{% static '2024/Reports/Germany_02June24.pdf' %}" target="_blank">
+                        <img src="{% static '2024/Reports/FOLLOW UP 2 ST. ANTHONY.jpg' %}" class="img1 m-3" />
                       </a>
                     </div>
+
                   </div>
                 </div>
               </div>
             </div>
           </div>
+
         </div>
       </div>
     </div>
