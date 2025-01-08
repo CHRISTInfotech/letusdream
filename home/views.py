@@ -293,7 +293,7 @@ def professional_club(request):
     return render(request, 'clubs/professional.html')
 
 
-def selfhelp_club(request):
+def growandglow_club(request):
     return render(request, 'clubs/selfhelp.html')
 
 
