@@ -50,7 +50,7 @@ urlpatterns = [
     path('clubs/community', community_club, name='community-club'),
     path('clubs/conversation', conversation_club, name='conversation-club'),
     path('clubs/professional', professional_club, name='professional-club'),
-    path('clubs/selfhelp', selfhelp_club, name='selfhelp-club'),
+    path('clubs/growandglow', growandglow_club, name='growandglow-club'),
     path('clubs/youth-leadership', youthleadership_club, name='youthleadership-club'),
     # CLUBS PAGES URL END
     
