@@ -118,9 +118,6 @@ USE_TZ = True
 if DEBUG == False:
     STATIC_URL = '/ltstatic/'
     STATIC_ROOT = '/home/administrator/letusdream/ltstatic'
-    STATICFILES_DIRS = [
-        os.path.join(BASE_DIR, 'ltstatic')
-    ]
 
     MEDIA_URL = '/ltmedia/'
     MEDIA_ROOT = '/home/administrator/letusdream/ltmedia/'
