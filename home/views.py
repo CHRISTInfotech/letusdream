@@ -1,7 +1,6 @@
 import csv
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
-from home.models import ConferenceRegistration
 
 
 def index(request):
@@ -65,8 +64,7 @@ def triennialConference2023(request):
     context = {
         'bgcolor': '#274C7D',
     }
-    return render(request,
-                  'conference/triennialConference/triennialConference2023.html', context)
+    return render(request, 'conference/triennialConference/triennialConference2023.html', context)
 
 def howtoConference(request):
     return render(request,'conference/ludConferences.html')

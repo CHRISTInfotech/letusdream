@@ -1,0 +1,10 @@
+{% if messages %}
+<div class="messages text-center p-5">
+    {% for message in messages %}
+    <div {% if message.tags %} class="bg-{{ message.tags }} text-white p-3"{% endif %}>
+        {% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}Important: {% endif %}
+        {{ message }}
+    </div>
+    {% endfor %}
+</div>
+{% endif %}
