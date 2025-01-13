@@ -10,11 +10,10 @@ Media-Photos
 {% endblock extraStyles %}
 
 {% block links %}
-
 <!--Google font-->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" >
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 
 <!--  Bootstrap CSS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" type="text/css">
@@ -23,9 +22,8 @@ Media-Photos
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
-
-
 {% endblock links %}
+
 {% block content %}
 <nav class="cus-breadcrumb" aria-label="breadcrumb animated slideInDown">
     <ol class="breadcrumb text-uppercase mb-0 bg-white">
@@ -39,14 +37,19 @@ Media-Photos
 
 
 
-
-<div class="container view-container blog-home2">
+<div class="container view-container blog-home2 mb-5">
     <h1>PRESS RELEASE</h1>
     <div class="image-container">
         <div class="card">
-            <div class="image h-100"><img src="{% static 'Aboutus/Media/Press/lud news.png' %}" alt=""></div>
+            <div class="image h-100">
+                <a href="{% static '2024/Conference/news/ConversationsToday-December2024.pdf' %}" target="_blank">
+                    <img src="{% static 'Aboutus/Media/Press/lud news.png' %}" alt="">
+                </a>
+            </div>
             <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
-                Jun<span class="d-block">12</span>2014</div>
+                Dec
+                <span class="d-block"></span>2024
+            </div>
         </div>
         <div class="card">
             <div class="image h-100"><img src="{% static 'Aboutus/Media/Press/Press2.jpg' %}" alt=""></div>
@@ -62,7 +65,7 @@ Media-Photos
             <div class="image h-100"><img src="{% static 'Aboutus/Media/Press/Press6.jpg' %}" alt="img1"></div>
             <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
                 Jul<span class="d-block">27</span>2016</div>
-        </div> 
+        </div>
         <div class="card">
             <div class="image h-100"><img src="{% static 'Aboutus/Media/Press/Press7.png' %}" alt=""></div>
             <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
@@ -72,7 +75,7 @@ Media-Photos
             <div class="image h-100"><img src="{% static 'Aboutus/Media/Press/Press8.png' %}" alt=""></div>
             <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
                 Nov<span class="d-block">02</span>2017</div>
-        </div>       
+        </div>
         <div class="card">
             <div class="image h-100"><img src="{% static 'Aboutus/Media/Press/Press5.jpeg' %}" alt=""></div>
             <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
@@ -80,19 +83,18 @@ Media-Photos
         </div>
         <div class="card">
             <div class="image h-100"><img src="{% static 'Aboutus/Media/Press/Press1.jpg' %}" alt=""></div>
-        </div>      
+        </div>
         <div class="card">
             <div class="image h-100"><img src="{% static 'Aboutus/Media/Press/Press4.jpeg' %}" alt=""></div>
         </div>
     </div>
-
-
 
     <div class="popup-image">
         <span>&times;</span>
         <img src="{% static 'Aboutus/Media/Press/Press6.jpg' %}" alt="img1">
     </div>
 </div>
+
 <script>
     document.querySelectorAll('.image-container img').forEach(image => {
 
@@ -107,7 +109,5 @@ Media-Photos
 
     }
 </script>
-</body>
 
-</html>
 {% endblock %}
