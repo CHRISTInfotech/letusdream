@@ -74,7 +74,7 @@ def annualConferences(request, year, location):
         return render(request,"conference/annualConference/2024/stfrancisdesalescollege.html")
     elif int(year) == 2024 and location == "womenschristiancollege":
         return render(request,"conference/annualConference/2024/womenschristiancollege.html")
-    elif int(year) == 2024 and location == "gamblingstateuniversity":
+    elif int(year) == 2024 and location == "gramblingstateuniversity":
         return render(request,"conference/annualConference/2024/gamblingstateuniversity.html")
     elif int(year) == 2024 and location == "binghamtonuniversity2024":
         return render(request,"conference/annualConference/2024/binghamtonuniversity2024.html")
