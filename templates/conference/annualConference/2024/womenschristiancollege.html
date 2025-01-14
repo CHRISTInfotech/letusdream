@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block title %}
-    St Francis de Sales College, Bangalore
+St Francis de Sales College, Bangalore
 {% endblock %}
 
 {% block extraStyles %}
@@ -15,19 +15,19 @@
 
 {% block content %}
 
-    <nav aria-label="breadcrumb animated slideInDown" class="cus-breadcrumb">
-        <ol class="breadcrumb text-uppercase mb-0 bg-white">
-            <li class="breadcrumb-item"><a class="text-black text-decoration-none" href="{% url 'main' %}">Home</a></li>
-            <li class="breadcrumb-item"><a class="text-black text-decoration-none">Conferences</a></li>
-            <li class="breadcrumb-item"><a class="text-black text-decoration-none"
-                                           href="{% url 'annualConference' %}">Annual Conference</a></li>
-            <li class="breadcrumb-item  active" aria-current="page">Women's Christian College</li>
-        </ol>
-    </nav>
+<nav aria-label="breadcrumb animated slideInDown" class="cus-breadcrumb">
+    <ol class="breadcrumb text-uppercase mb-0 bg-white">
+        <li class="breadcrumb-item"><a class="text-black text-decoration-none" href="{% url 'main' %}">Home</a></li>
+        <li class="breadcrumb-item"><a class="text-black text-decoration-none">Conferences</a></li>
+        <li class="breadcrumb-item"><a class="text-black text-decoration-none"
+                href="{% url 'annualConference' %}">Annual Conference</a></li>
+        <li class="breadcrumb-item  active" aria-current="page">Women's Christian College</li>
+    </ol>
+</nav>
 
-    <h1 class="mb-4  fw-bold text-center fs-1 text-green text-uppercase heading-h3 mt-5">
-        Women's Christian College, Chennai
-    </h1>
+<h1 class="mb-4  fw-bold text-center fs-1 text-green text-uppercase heading-h3 mt-5">
+    Women's Christian College, Chennai
+</h1>
 
 <div class="container">
     <div class="row mt-5 mb-5">
@@ -37,8 +37,10 @@
                 Sunday Dec 1 - The Hindu Chennai conference news
             </div>
             <div>
-                <img src="{% static '2024/Conference/news/chennai_thehindu.jpg' %}" class="img-fluid" alt="The Hindu Chennai Conference News">
+                <img src="{% static '2024/Conference/news/chennai_thehindu.jpg' %}" class="img-fluid"
+                    alt="The Hindu Chennai Conference News">
             </div>
+
         </div>
 
         <!-- Second Image Block (New Image) -->
@@ -52,11 +54,26 @@
                 </a>
             </div>
         </div>
+        <div class="container">
+            <div class="mt-5 mb-5 text-center">
+                <div class="fw-bold mb-3">
+                  <h4> 2024 Annual Community Conference of the “Let Us Dream” program at Women’s Christian College in Chennai.</h4>
+                  </div>
+               <div>
+                <a href="https://www.linkedin.com/posts/frjossy_community-service-volunteerism-activity-7266290865340317696-rh_G?utm_source=share&amp;utm_medium=member_desktop"
+                    target="_blank" class="text-decoration-none">
+                    <i class="fa-solid fa-up-right-from-square mt-1"></i>
+                    LinkedIn post by Fr Jossy
+                </a>
+                </div>
+            
+            </div>
+        </div>
     </div>
+
 </div>
 
-    
-    
+
+
 
 {% endblock %}
-
