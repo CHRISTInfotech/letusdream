@@ -2,216 +2,210 @@
 {% load static %}
 
 {% block title %}
-    Newsletter
+Newsletter
 {% endblock %}
 
 
 {% block extraStyles %}
-    <link rel="stylesheet" href="{% static 'css/media-view-photo.css' %}" type="text/css">
+<link rel="stylesheet" href="{% static 'css/media-view-photo.css' %}" type="text/css">
 {% endblock extraStyles %}
 
 {% block links %}
 
-    <!--Google font-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+<!--Google font-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 
-    <!--  Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-          type="text/css">
+<!--  Bootstrap CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" type="text/css">
 
-    <!-- Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
+<!-- Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
 
 
 {% endblock links %}
 {% block content %}
-    <nav class="cus-breadcrumb" aria-label="breadcrumb animated slideInDown">
-        <ol class="breadcrumb text-uppercase mb-0 bg-white">
-            <li class="breadcrumb-item"><a class="text-black text-decoration-none" href="{% url 'main' %}">Home</a></li>
-            <li class="breadcrumb-item"><a class="text-black text-decoration-none">ABOUT US</a></li>
-            <li class="breadcrumb-item"><a class="text-black text-decoration-none" href="{% url 'media' %}">Media</a>
-            </li>
-            <li class="breadcrumb-item  active " aria-current="page">Newsletter</li>
-        </ol>
-    </nav>
+<nav class="cus-breadcrumb" aria-label="breadcrumb animated slideInDown">
+    <ol class="breadcrumb text-uppercase mb-0 bg-white">
+        <li class="breadcrumb-item"><a class="text-black text-decoration-none" href="{% url 'main' %}">Home</a></li>
+        <li class="breadcrumb-item"><a class="text-black text-decoration-none">ABOUT US</a></li>
+        <li class="breadcrumb-item"><a class="text-black text-decoration-none" href="{% url 'media' %}">Media</a>
+        </li>
+        <li class="breadcrumb-item  active " aria-current="page">Newsletter</li>
+    </ol>
+</nav>
 
 
 
 
-    <div class="container view-container blog-home2">
-        <h1>Newsletters</h1>
-        <div class="image-container">
-              <div class="card">
-                <div class="image h-100"><a href="{% static '2024/newsletters/DREAMSJNC2024Newsletter.pdf' %}"
-                                            target="_blank"><img
-                        src="{% static '2024/newsletters/thumbnails/dreamsjnc24.png' %}" alt=""></a></div>
-                <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
-                    Jul<span class="d-block"></span>2024
-                </div>
+<div class="container view-container blog-home2">
+    <h1>Newsletters</h1>
+    <div class="image-container">
+        
+        <div class="card">
+            <div class="image h-100"><a href="{% url 'newsletter-page' 'december' '2024' %}" target="_blank"><img
+                        src="{% static 'Aboutus/Media/Newsletter/dec2024.png' %}" alt=""></a></div>
+            <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
+                Jul<span class="d-block"></span>2024
             </div>
-            <div class="card">
-                <div class="image h-100"><a href="{% static '2024/newsletters/DREAMSxKJCMTNewsletter_1.pdf' %}"
-                                            target="_blank"><img
+        </div>
+
+        <div class="card">
+            <div class="image h-100"><a href="{% static '2024/newsletters/DREAMSJNC2024Newsletter.pdf' %}"
+                    target="_blank"><img src="{% static '2024/newsletters/thumbnails/dreamsjnc24.png' %}" alt=""></a>
+            </div>
+            <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
+                Jul<span class="d-block"></span>2024
+            </div>
+        </div>
+        <div class="card">
+            <div class="image h-100"><a href="{% static '2024/newsletters/DREAMSxKJCMTNewsletter_1.pdf' %}"
+                    target="_blank"><img
                         src="{% static '2024/newsletters/thumbnails/DREAMSxKJCMTNewsletter_1.png' %}"></a></div>
-                <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
-                    Jul<span class="d-block"></span>2024
-                </div>
+            <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
+                Jul<span class="d-block"></span>2024
             </div>
-            <div class="card">
-                <div class="image h-100"><a href="{% static '2024/newsletters/Changanassery_2.pdf' %}"
-                                            target="_blank"><img
+        </div>
+        <div class="card">
+            <div class="image h-100"><a href="{% static '2024/newsletters/Changanassery_2.pdf' %}" target="_blank"><img
                         src="{% static '2024/newsletters/thumbnails/Changanassery_2.png' %}"></a></div>
-                <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
-                    Jul<span class="d-block"></span>2024
-                </div>
+            <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
+                Jul<span class="d-block"></span>2024
             </div>
-            <div class="card">
-                <div class="image h-100"><a href="{% static '2024/newsletters/Changanassery_1.pdf' %}"
-                                            target="_blank"><img
+        </div>
+        <div class="card">
+            <div class="image h-100"><a href="{% static '2024/newsletters/Changanassery_1.pdf' %}" target="_blank"><img
                         src="{% static '2024/newsletters/thumbnails/Changanassery_1.png' %}"></a></div>
-                <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
-                    Jul<span class="d-block"></span>2024
-                </div>
+            <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
+                Jul<span class="d-block"></span>2024
             </div>
+        </div>
 
-            <div class="card">
-                <div class="image h-100"><a
-                        href="{% static 'Aboutus/Media/Newsletter/LUD Connect 01 - September 2023.pdf' %}"
-                        target="_blank"><img
+        <div class="card">
+            <div class="image h-100"><a
+                    href="{% static 'Aboutus/Media/Newsletter/LUD Connect 01 - September 2023.pdf' %}"
+                    target="_blank"><img
                         src="{% static 'Aboutus/Media/Newsletter/LUD Connect 01 - September 2023.png' %}"></a></div>
-                <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
-                    Sep<span class="d-block"></span>2023
-                </div>
+            <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
+                Sep<span class="d-block"></span>2023
             </div>
-            <div class="card">
-                <div class="image h-100"><a
-                        href="{% static 'Aboutus/Media/Newsletter/LUD Connect 02 - September 2023.pdf' %}"
-                        target="_blank"><img
+        </div>
+        <div class="card">
+            <div class="image h-100"><a
+                    href="{% static 'Aboutus/Media/Newsletter/LUD Connect 02 - September 2023.pdf' %}"
+                    target="_blank"><img
                         src="{% static 'Aboutus/Media/Newsletter/LUD Connect 02 - September 2023.png' %}"></a></div>
-                <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
-                    Sep<span class="d-block"></span>2023
-                </div>
+            <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
+                Sep<span class="d-block"></span>2023
             </div>
-            <div class="card">
-                <div class="image h-100"><a
-                        href="{% static 'Aboutus/Media/Newsletter/LUD Connect 03 - October 2023.pdf' %}"
-                        target="_blank"><img
+        </div>
+        <div class="card">
+            <div class="image h-100"><a href="{% static 'Aboutus/Media/Newsletter/LUD Connect 03 - October 2023.pdf' %}"
+                    target="_blank"><img
                         src="{% static 'Aboutus/Media/Newsletter/LUD Connect 03 - October 2023.png' %}"></a></div>
-                <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
-                    Oct<span class="d-block"></span>2023
-                </div>
+            <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
+                Oct<span class="d-block"></span>2023
             </div>
-
-            <div class="card">
-                <div class="image h-100"><a href="{% static 'Aboutus/Media/Newsletter/Newsletter-1.jpg' %}"
-                                            target="_blank"><img
-                        src="{% static 'Aboutus/Media/Newsletter/Newsletter-1.jpg' %}"></a></div>
-                <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
-                    Aug<span class="d-block">27</span>2020
-                </div>
-            </div>
-            <div class="card">
-                <div class="image h-100"><a href="{% static 'Aboutus/Media/Newsletter/Newsletter-2.jpg' %}"
-                                            target="_blank"><img
-                        src="{% static 'Aboutus/Media/Newsletter/Newsletter-2.jpg' %}"></a></div>
-                <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
-                    Oct<span class="d-block">21</span>2020
-                </div>
-            </div>
-            <div class="card">
-                <div class="image h-100"><a href="{% static 'Aboutus/Media/Newsletter/Newsletter-3.jpg' %}"
-                                            target="_blank"><img
-                        src="{% static 'Aboutus/Media/Newsletter/Newsletter-3.jpg' %}"></a></div>
-                <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
-                    Nov<span class="d-block">10</span>2020
-                </div>
-            </div>
-            <div class="card">
-                <div class="image h-100"><a href="{% static 'Aboutus/Media/Newsletter/Newsletter-4.jpg' %}"
-                                            target="_blank"><img
-                        src="{% static 'Aboutus/Media/Newsletter/Newsletter-4.jpg' %}"></a></div>
-                <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
-                    Nov<span class="d-block">22</span>2020
-                </div>
-            </div>
-            <div class="card">
-                <div class="image h-100"><a href="{% static 'Aboutus/Media/Newsletter/Newsletter-5.jpg' %}"
-                                            target="_blank"><img
-                        src="{% static 'Aboutus/Media/Newsletter/Newsletter-5.jpg' %}"></a></div>
-                <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
-                    Nov<span class="d-block">22</span>2020
-                </div>
-            </div>
-            <div class="card">
-                <div class="image h-100"><a href="{% static 'Aboutus/Media/Newsletter/Newsletter-6.jpg' %}"
-                                            target="_blank"><img
-                        src="{% static 'Aboutus/Media/Newsletter/Newsletter-6.jpg' %}"></a></div>
-                <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
-                    Nov<span class="d-block">22</span>2020
-                </div>
-            </div>
-            <div class="card">
-                <div class="image h-100"><a href="{% static 'Aboutus/Media/Newsletter/Newsletter-7.jpg' %}"
-                                            target="_blank"><img
-                        src="{% static 'Aboutus/Media/Newsletter/Newsletter-7.jpg' %}"></a></div>
-                <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
-                    Jun<span class="d-block">03</span>2021
-                </div>
-            </div>
-            <div class="card">
-                <div class="image h-100"><a href="{% static 'Aboutus/Media/Newsletter/Newsletter-8.jpg' %}"
-                                            target="_blank"><img
-                        src="{% static 'Aboutus/Media/Newsletter/Newsletter-8.jpg' %}"></a></div>
-                <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
-                    Oct<span class="d-block">03</span>2021
-                </div>
-            </div>
-            <div class="card">
-                <div class="image h-100"><a href="{% static 'Aboutus/Media/Newsletter/Newsletter-9.jpg' %}"
-                                            target="_blank"><img
-                        src="{% static 'Aboutus/Media/Newsletter/Newsletter-9.jpg' %}"></a></div>
-                <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
-                    Dec<span class="d-block">03</span>2021
-                </div>
-            </div>
-
         </div>
-        <h1>General Newsletters</h1>
-        <div class="image-container">
-            <div class="card">
-                <div class="image h-100"><a href="{% static 'Aboutus/Media/Newsletter/Lead_team.pdf' %}"
-                                            target="_blank"><img
-                        src="{% static 'Aboutus/Media/Newsletter/lead_team.png' %}"></a></div>
-                <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
-                    June<span class="d-block">03</span>2023
-                </div>
-            </div>
-            <div class="card">
-                <div class="image h-100"><a href="{% static 'Aboutus/Media/Newsletter/Newsletter-10.jpg' %}"
-                                            target="_blank"><img
-                        src="{% static 'Aboutus/Media/Newsletter/Newsletter-10.jpg' %}"></a></div>
-                <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
-                    May<span class="d-block">13</span>2017
-                </div>
-            </div>
 
+        <div class="card">
+            <div class="image h-100"><a href="{% static 'Aboutus/Media/Newsletter/Newsletter-1.jpg' %}"
+                    target="_blank"><img src="{% static 'Aboutus/Media/Newsletter/Newsletter-1.jpg' %}"></a></div>
+            <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
+                Aug<span class="d-block">27</span>2020
+            </div>
         </div>
-        <h1>DREAMS Intervention Program</h1>
-        <div class="image-container mb-5">
-            <div class="card">
-                <div class="image h-100"><a href="{% static 'Aboutus/Media/Newsletter/studentExchangeProgram.jpg' %}"
-                                            target="_blank"><img
-                        src="{% static 'Aboutus/Media/Newsletter/studentExchangeProgram.jpg' %}"></a></div>
-                <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
-                    June<span class="d-block">01</span>2024
-                </div>
+        <div class="card">
+            <div class="image h-100"><a href="{% static 'Aboutus/Media/Newsletter/Newsletter-2.jpg' %}"
+                    target="_blank"><img src="{% static 'Aboutus/Media/Newsletter/Newsletter-2.jpg' %}"></a></div>
+            <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
+                Oct<span class="d-block">21</span>2020
+            </div>
+        </div>
+        <div class="card">
+            <div class="image h-100"><a href="{% static 'Aboutus/Media/Newsletter/Newsletter-3.jpg' %}"
+                    target="_blank"><img src="{% static 'Aboutus/Media/Newsletter/Newsletter-3.jpg' %}"></a></div>
+            <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
+                Nov<span class="d-block">10</span>2020
+            </div>
+        </div>
+        <div class="card">
+            <div class="image h-100"><a href="{% static 'Aboutus/Media/Newsletter/Newsletter-4.jpg' %}"
+                    target="_blank"><img src="{% static 'Aboutus/Media/Newsletter/Newsletter-4.jpg' %}"></a></div>
+            <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
+                Nov<span class="d-block">22</span>2020
+            </div>
+        </div>
+        <div class="card">
+            <div class="image h-100"><a href="{% static 'Aboutus/Media/Newsletter/Newsletter-5.jpg' %}"
+                    target="_blank"><img src="{% static 'Aboutus/Media/Newsletter/Newsletter-5.jpg' %}"></a></div>
+            <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
+                Nov<span class="d-block">22</span>2020
+            </div>
+        </div>
+        <div class="card">
+            <div class="image h-100"><a href="{% static 'Aboutus/Media/Newsletter/Newsletter-6.jpg' %}"
+                    target="_blank"><img src="{% static 'Aboutus/Media/Newsletter/Newsletter-6.jpg' %}"></a></div>
+            <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
+                Nov<span class="d-block">22</span>2020
+            </div>
+        </div>
+        <div class="card">
+            <div class="image h-100"><a href="{% static 'Aboutus/Media/Newsletter/Newsletter-7.jpg' %}"
+                    target="_blank"><img src="{% static 'Aboutus/Media/Newsletter/Newsletter-7.jpg' %}"></a></div>
+            <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
+                Jun<span class="d-block">03</span>2021
+            </div>
+        </div>
+        <div class="card">
+            <div class="image h-100"><a href="{% static 'Aboutus/Media/Newsletter/Newsletter-8.jpg' %}"
+                    target="_blank"><img src="{% static 'Aboutus/Media/Newsletter/Newsletter-8.jpg' %}"></a></div>
+            <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
+                Oct<span class="d-block">03</span>2021
+            </div>
+        </div>
+        <div class="card">
+            <div class="image h-100"><a href="{% static 'Aboutus/Media/Newsletter/Newsletter-9.jpg' %}"
+                    target="_blank"><img src="{% static 'Aboutus/Media/Newsletter/Newsletter-9.jpg' %}"></a></div>
+            <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
+                Dec<span class="d-block">03</span>2021
             </div>
         </div>
 
     </div>
-    
+    <h1>General Newsletters</h1>
+    <div class="image-container">
+        <div class="card">
+            <div class="image h-100"><a href="{% static 'Aboutus/Media/Newsletter/Lead_team.pdf' %}"
+                    target="_blank"><img src="{% static 'Aboutus/Media/Newsletter/lead_team.png' %}"></a></div>
+            <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
+                June<span class="d-block">03</span>2023
+            </div>
+        </div>
+        <div class="card">
+            <div class="image h-100"><a href="{% static 'Aboutus/Media/Newsletter/Newsletter-10.jpg' %}"
+                    target="_blank"><img src="{% static 'Aboutus/Media/Newsletter/Newsletter-10.jpg' %}"></a></div>
+            <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
+                May<span class="d-block">13</span>2017
+            </div>
+        </div>
+
+    </div>
+    <h1>DREAMS Intervention Program</h1>
+    <div class="image-container mb-5">
+        <div class="card">
+            <div class="image h-100"><a href="{% static 'Aboutus/Media/Newsletter/studentExchangeProgram.jpg' %}"
+                    target="_blank"><img src="{% static 'Aboutus/Media/Newsletter/studentExchangeProgram.jpg' %}"></a>
+            </div>
+            <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
+                June<span class="d-block">01</span>2024
+            </div>
+        </div>
+    </div>
+
+</div>
+
 {% endblock %}
