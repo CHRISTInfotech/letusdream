@@ -39,7 +39,7 @@ Conferences
         </div>
         <div class="col-sm-12 col-md-6">
             <a href="/annualConference" class="text-decoration-none text-dark">
-                <div class="mb-3 px-5">
+                <div class="mb-3 px-1">
                     <img src="/ltstatic/conference/ludConferences/aboutConference/annual.jpg" alt=""
                         class="img-fluid" />
                     <h3 class="text-center fw-bold mt-3 text-dark-green">Annual Conferences</h3>
@@ -66,7 +66,7 @@ Conferences
         </div>
         <div class="col-sm-12 col-md-6">
             <a href="{% url 'trriennial-conference' %}" class="text-decoration-none text-dark">
-                <div class="mb-3 px-5">
+                <div class="mb-3 px-1">
                     <img src="/ltstatic/conference/ludConferences/aboutConference/Triennial.jpg" alt=""
                         class="img-fluid" />
                     <h3 class="text-center fw-bold mt-3 text-dark-green">Triennial Conferences</h3>
@@ -89,7 +89,7 @@ Conferences
                 </div>
             </a>
         </div>
-        <div class="col-12 d-flex justify-content-center mb-3">
+        <div class="col-12 d-flex justify-content-center mb-3 mt-3">
             <a href="https://cmt.letusdream.org/" target="_blank" class="btn" style="background-color: lightgreen; ">
                 Register for Upcoming Conferences
             </a>
@@ -100,7 +100,7 @@ Conferences
 <div class="bg-light">
     <div class="container py-3">
         <div class="row h-100 align-items-center  py-4">
-            <div class="col-lg-6">
+            <div class=" col-sm-12 col-md-6">
                 <h3 class="fw-bold mt-3 text-dark-green mb-3">HISTORY</h3>
                 <p class="  mb-3">
                 <ul>
@@ -131,7 +131,7 @@ Conferences
                 </ul>
                 </p>
             </div>
-            <div class="col-md-6">
+            <div class=" col-sm-12 col-md-6">
                 <div class="gallery">
                     <div class="video-box cus-he">
                         <iframe src="https://www.youtube.com/embed/YayLbO0K9Zc" class="cus-he"></iframe>
@@ -222,7 +222,7 @@ Conferences
                 </p>
             </div>
         </div>
-        
+
         <div class="col-12 d-flex justify-content-center mt-2">
             <a href="https://cmt.letusdream.org/" target="_blank" class="btn" style="background-color: lightgreen; ">
                 Register for Upcoming Conferences
@@ -326,7 +326,7 @@ Conferences
 
             </div>
         </div>
-<div class="col-12 d-flex justify-content-center mt-5 mb-5">
+        <div class="col-12 d-flex justify-content-center mt-5 mb-5">
             <a href="https://cmt.letusdream.org/" target="_blank" class="btn" style="background-color: lightgreen; ">
                 Register for Upcoming Conferences
             </a>
@@ -538,13 +538,24 @@ Conferences
         <div class="col-md-12 end-0 mb-3">
             <a href="{% url 'testimonials' %}" class="end-0 text-decoration-none  float-end">Read more testimonials.</a>
         </div>
-        
-        <div class="col-12 d-flex justify-content-center mb-5">
+
+        <div class="col-12 d-flex justify-content-center mb-5 mt-4">
             <a href="https://cmt.letusdream.org/" target="_blank" class="btn" style="background-color: lightgreen; ">
                 Register for Upcoming Conferences
             </a>
         </div>
     </div>
 </div>
+
+<div class="container mt-3 mb-5">
+    <h3 class="fw-bold mt-3 text-dark-green mb-4 text-center">LEADERSHIP TEAM</h3>
+    <div class="mb-3">
+        <img src="{% static '2025/conference/Conference_Strategic_Youth.jpeg' %}" class="img-fluid" alt="leadership team">
+    </div>
+    <div class="mb-3">
+        <img src="{% static '2025/conference/Conference_Core_Youth.jpeg' %}" class="img-fluid" alt="leadership team">
+    </div>
+</div>
+
 
 {% endblock %}
