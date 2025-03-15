@@ -40,11 +40,17 @@ Newsletter
 
 
 
+<div class="container view-container blog-home2 mb-5">
+    <!-- <h1>Newsletters</h1> -->
+    <div class="image-container mb-5">
 
-<div class="container view-container blog-home2">
-    <h1>Newsletters</h1>
-    <div class="image-container">
-        
+        <div class="card">
+            <div class="image h-100"><a href="{% static '2025/newsletter/NewsBulletin_Changanassery.pdf' %}" target="_blank"><img
+                        src="{% static '2025/newsletter/NewsBulletin_Changanassery.png' %}" alt=""></a></div>
+            <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
+                Jan<span class="d-block">15</span>2025
+            </div>
+        </div>        
         <div class="card">
             <div class="image h-100"><a href="{% url 'newsletter-page' 'december' '2024' %}" target="_blank"><img
                         src="{% static 'Aboutus/Media/Newsletter/dec2024.png' %}" alt=""></a></div>
@@ -52,7 +58,6 @@ Newsletter
                 Jul<span class="d-block"></span>2024
             </div>
         </div>
-
         <div class="card">
             <div class="image h-100"><a href="{% static '2024/newsletters/DREAMSJNC2024Newsletter.pdf' %}"
                     target="_blank"><img src="{% static '2024/newsletters/thumbnails/dreamsjnc24.png' %}" alt=""></a>
@@ -83,7 +88,6 @@ Newsletter
                 Jul<span class="d-block"></span>2024
             </div>
         </div>
-
         <div class="card">
             <div class="image h-100"><a
                     href="{% static 'Aboutus/Media/Newsletter/LUD Connect 01 - September 2023.pdf' %}"
@@ -110,7 +114,6 @@ Newsletter
                 Oct<span class="d-block"></span>2023
             </div>
         </div>
-
         <div class="card">
             <div class="image h-100"><a href="{% static 'Aboutus/Media/Newsletter/Newsletter-1.jpg' %}"
                     target="_blank"><img src="{% static 'Aboutus/Media/Newsletter/Newsletter-1.jpg' %}"></a></div>
@@ -174,10 +177,6 @@ Newsletter
                 Dec<span class="d-block">03</span>2021
             </div>
         </div>
-
-    </div>
-    <h1>General Newsletters</h1>
-    <div class="image-container">
         <div class="card">
             <div class="image h-100"><a href="{% static 'Aboutus/Media/Newsletter/Lead_team.pdf' %}"
                     target="_blank"><img src="{% static 'Aboutus/Media/Newsletter/lead_team.png' %}"></a></div>
@@ -192,10 +191,6 @@ Newsletter
                 May<span class="d-block">13</span>2017
             </div>
         </div>
-
-    </div>
-    <h1>DREAMS Intervention Program</h1>
-    <div class="image-container mb-5">
         <div class="card">
             <div class="image h-100"><a href="{% static 'Aboutus/Media/Newsletter/studentExchangeProgram.jpg' %}"
                     target="_blank"><img src="{% static 'Aboutus/Media/Newsletter/studentExchangeProgram.jpg' %}"></a>
@@ -204,6 +199,7 @@ Newsletter
                 June<span class="d-block">01</span>2024
             </div>
         </div>
+
     </div>
 
 </div>
