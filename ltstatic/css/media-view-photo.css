@@ -17,14 +17,14 @@
 .view-container .image-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 15px;
+    gap: 20px;
     justify-content: center;
     padding: 10px;
 }
 
 .view-container .image-container .image {
-    height: 250px;
-    width: 350px;
+    height: 150px;
+    width: 250px;
     border: 10px solid #fff;
     box-shadow: 0 5px 15px rgba(0, 0, 0, .1);
     overflow: hidden;
