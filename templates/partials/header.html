@@ -1,192 +1,189 @@
 {% load static %}
-<header class="p-1 menu fixed-top bg-white m-0" {% if bgcolor %}style="background-color:{{ bgcolor }}!important;" {% endif %}>
-    <div class="d-flex justify-content-around">
-        <nav class="navbar navbar-expand-lg" id="navbar"
-             {% if bgcolor %}style="background-color:{{ bgcolor }}!important;" {% endif %}>
-            <a href="{% url 'main' %}" class="mr-5" style="margin-right: 10px !important;">
-                <img src="{% static 'logo/logo.png' %}" class=""
-                     alt="LET US DREAM" height="100px">
+<header class="p-1 menu fixed-top m-0">
+
+    <nav class="navbar navbar-expand-lg" id="navbar">
+
+        <a href="{% url 'main' %}" class="d-block d-md-none mr-10px" >
+            <img src="{% static 'logo/logo.png' %}" class="" alt="LET US DREAM" height="100px">
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bar navbar-toggler-icon"></i>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-around" id="navbarSupportedContent">
+            <ul class=" navbar-nav">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white" data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                       href="#">About Us</a>
+                    <ul class="dropdown-menu shadow">
+                        <li><a href="{% url 'about-us' %}" class="dropdown-item">Overview</a></li>
+                        <li><a href="{% url 'leadership' %}" class="dropdown-item">Leadership</a></li>
+                        <li><a href="{% url 'sustainability' %}" class="dropdown-item">Sustainability</a></li>
+                        <li><a href="{% url 'media' %}" class="dropdown-item">Media</a></li>
+                        <li><a href="{% url 'events' %}" class="dropdown-item">Events</a></li>
+                        <li><a href="{% url 'conatctUs' %}" class="dropdown-item">Contact Us</a></li>
+                        <li><a href="{% url 'conatctUs' %}" class="dropdown-item">Blog</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white" data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                       href="#">DREAMS</a>
+                    <ul class="dropdown-menu shadow">
+                        <li>
+                            <a href="{% url 'dreams' 'program' %}" class="dropdown-item">DREAMS Program</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white" data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                       href="#">Clubs</a>
+                    <ul class="dropdown-menu shadow">
+                        <li>
+                            <a href="{% url 'club-overview' %}" class="dropdown-item">Overview</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'conversation-club' %}" class="dropdown-item">Conversation Club</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'professional-club' %}" class="dropdown-item">Professional Club</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'youthleadership-club' %}" class="dropdown-item">
+                                Global Youth Leardership Network
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{% url 'community-club' %}" class="dropdown-item">Community Hubs</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'growandglow-club' %}" class="dropdown-item"> Grow & Glow Club</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white" data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                       href="#">
+                        Conferences
+                    </a>
+                    <ul class="dropdown-menu shadow mld" aria-labelledby="MyAccountDDM" id="AppDropDownId">
+                        <li>
+                            <a href="{% url 'Conferences' %}" class="dropdown-item">Overview</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'annualConference' %}" class="dropdown-item">
+                                Annual Conferences
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{% url 'trriennial-conference' %}" class="dropdown-item">
+                                Triennial Conferences
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://cmt.letusdream.org/" target="_blank" class="dropdown-item">
+                                Participate
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{% url 'run-lud-conference' %}" class="dropdown-item">
+                                Resources - Organizers
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <a href="{% url 'main' %}" class="d-none d-md-block background">
+                <img src="{% static 'logo/logo.png' %}" class="" alt="LET US DREAM" height="100px">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                <i class="fas fa-bar navbar-toggler-icon"></i>
-            </button>
+            <ul class=" navbar-nav">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white" data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                       href="#">Productions</a>
+                    <ul class="dropdown-menu shadow">
+                        <li><a href="{% url 'dreams' 'band' %}" class="dropdown-item">DREAMS Band</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white" data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                       href="#">
+                        Courses
+                    </a>
+                    <ul class="dropdown-menu shadow">
+                        <li>
+                            <a href="{% url 'yclp-course' %}" class="dropdown-item">
+                                Young Community Leadership Program (YCLP)
+                            </a>
+                        </li>
+                        <li><a href="{% url 'llfp' %}" class="dropdown-item">Leadership Fellowship (LLFP)</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white" data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                       href="#">Research</a>
+                    <ul class="dropdown-menu shadow">
 
-            <div class="collapse navbar-collapse ml-5" id="navbarSupportedContent">
-                <ul class=" navbar-nav">
-                    <li class="nav-item active">
-                        <a class="nav-link"
-                           {% if bgcolor %}style="color:white !important" {% endif %}
-                           href="{% url 'main' %}">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" data-bs-auto-close="outside"
-                           {% if bgcolor %}style="color:white !important" {% endif %}
-                           href="#">About Us</a>
-                        <ul class="dropdown-menu shadow">
-                            <li><a href="{% url 'about-us' %}" class="dropdown-item">Overview</a></li>
-                            <li><a href="{% url 'leadership' %}" class="dropdown-item">Leadership</a></li>
-                            <li><a href="{% url 'sustainability' %}" class="dropdown-item">Sustainability</a></li>
-                            <li><a href="{% url 'media' %}" class="dropdown-item">Media</a></li>
-                            <li><a href="{% url 'events' %}" class="dropdown-item">Events</a></li>
-                            <li><a href="{% url 'conatctUs' %}" class="dropdown-item">Contact Us</a></li>
-                            <li><a href="{% url 'conatctUs' %}" class="dropdown-item">Blog</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" data-bs-auto-close="outside"
-                           {% if bgcolor %}style="color:white !important" {% endif %}
-                           href="#">DREAMS</a>
-                        <ul class="dropdown-menu shadow">
-                            <li><a href="{% url 'dreams' 'program' %}" class="dropdown-item">DREAMS Program</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" data-bs-auto-close="outside"
-                           {% if bgcolor %}style="color:white !important" {% endif %}
-                           href="#">Clubs</a>
-                        <ul class="dropdown-menu shadow">
-                            <li>
-                                <a href="{% url 'club-overview' %}" class="dropdown-item">Overview</a>
-                            </li>
-                            <li>
-                                <a href="{% url 'conversation-club' %}" class="dropdown-item">Conversation Club</a>
-                            </li>
-                            <li>
-                                <a href="{% url 'professional-club' %}" class="dropdown-item">Professional Club</a>
-                            </li>
-                            <li>
-                                <a href="{% url 'youthleadership-club' %}" class="dropdown-item">Global Youth Leardership
-                                    Network</a>
-                            </li>
-                            <li>
-                                <a href="{% url 'community-club' %}" class="dropdown-item">Community Hubs</a>
-                            </li>
-                            <li>
-                                <a href="{% url 'growandglow-club' %}" class="dropdown-item"> Grow & Glow Club</a>
-                            </li>
-                        </ul>
-                    </li>
+                        <li><a href="{% url 'research' %}" class="dropdown-item">Research</a></li>
+                        <li><a href="{% url 'publications' %}" class="dropdown-item">Publications</a></li>
 
-                    <li class="nav-item dropdown active">
-                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" data-bs-auto-close="outside"
-                           {% if bgcolor %}style="color:white !important" {% endif %}
-                           href="#">
-                            Conferences
-                        </a>
-                        <ul class="dropdown-menu shadow mld" aria-labelledby="MyAccountDDM" id="AppDropDownId">
-                            <li>
-                                <a href="{% url 'Conferences' %}" class="dropdown-item">Overview</a>
-                            </li>
-                            <li>
-                                <a href="{% url 'annualConference' %}" class="dropdown-item">
-                                    Annual Conferences
-                                </a>
-                            </li>
-                            <li>
-                                <a href="{% url 'trriennial-conference' %}" class="dropdown-item">
-                                    Triennial Conferences
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://cmt.letusdream.org/" target="_blank" class="dropdown-item">
-                                    Participate
-                                </a>
-                            </li>
-                            <li>
-                                <a href="{% url 'run-lud-conference' %}" class="dropdown-item">
-                                    Resources - Organizers
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" data-bs-auto-close="outside"
-                           {% if bgcolor %}style="color:white !important" {% endif %}
-                           href="#">Productions</a>
-                        <ul class="dropdown-menu shadow">
-                            <li><a href="{% url 'dreams' 'band' %}" class="dropdown-item">DREAMS Band</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" data-bs-auto-close="outside"
-                           {% if bgcolor %}style="color:white !important" {% endif %}
-                           href="#">Courses</a>
-                        <ul class="dropdown-menu shadow">
-                            <li><a href="{% url 'yclp-course' %}" class="dropdown-item">Young Community Leadership
-                                Program (YCLP)</a></li>
-                            <li><a href="{% url 'llfp' %}" class="dropdown-item">Leadership Fellowship (LLFP)</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" data-bs-auto-close="outside"
-                           {% if bgcolor %}style="color:white !important" {% endif %}
-                           href="#">Research</a>
-                        <ul class="dropdown-menu shadow">
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white" data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                       href="#">Locations</a>
+                    <ul class="dropdown-menu shadow">
+                        <li class="dropstart">
+                            <a href="" class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown">India</a>
+                            <ul class="dropdown-menu shadow">
 
-                            <li><a href="{% url 'research' %}" class="dropdown-item">Research</a></li>
-                            <li><a href="{% url 'publications' %}" class="dropdown-item">Publications</a></li>
+                                <li><a href="{% url 'locations' 'bangalore' %}"
+                                       class="dropdown-item">Bangalore</a>
+                                </li>
+                                <li><a href="{% url 'locations' 'changancherry' %}"
+                                       class="dropdown-item">Changancherry</a></li>
+                                <li><a href="{% url 'locations' 'mannanam' %}"
+                                       class="dropdown-item">Mannanam</a>
+                                </li>
+                                <li><a href="{% url 'locations' 'thiruvananthapuram' %}"
+                                       class="dropdown-item">Thiruvananthapuram</a></li>
+                                <li><a href="{% url 'locations' 'thiruvallam' %}"
+                                       class="dropdown-item">Thiruvallam</a></li>
+                                <li><a href="{% url 'locations' 'chennai' %}" class="dropdown-item">Chennai</a>
+                                </li>
 
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" data-bs-auto-close="outside"
-                           {% if bgcolor %}style="color:white !important" {% endif %}
-                           href="#">Locations</a>
-                        <ul class="dropdown-menu shadow">
-                            <li class="dropstart">
-                                <a href="" class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown">India</a>
-                                <ul class="dropdown-menu shadow">
+                            </ul>
+                        </li>
+                        <li class="dropstart">
+                            <a href="" class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown">USA</a>
+                            <ul class="dropdown-menu shadow">
+                                <li><a href="{% url 'locations' 'bastrope' %}"
+                                       class="dropdown-item">Bastrope</a>
+                                </li>
+                                <li><a href="{% url 'locations' 'dalias' %}" class="dropdown-item">Dallas</a>
+                                </li>
+                                <li><a href="{% url 'locations' 'lagrande' %}"
+                                       class="dropdown-item">LaGrande</a>
+                                </li>
+                                <li><a href="{% url 'locations' 'mcallen' %}" class="dropdown-item">McAllen</a>
+                                </li>
+                                <li><a href="{% url 'locations' 'monroe' %}" class="dropdown-item">Monroe</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropstart">
+                            <a href="" class="dropdown-item dropdown-toggle"
+                               data-bs-toggle="dropdown">Germany</a>
+                            <ul class="dropdown-menu shadow">
+                                <li><a href="{% url 'locations' 'cologne' %}" class="dropdown-item">Cologne</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
 
-                                    <li><a href="{% url 'locations' 'bangalore' %}"
-                                           class="dropdown-item">Bangalore</a>
-                                    </li>
-                                    <li><a href="{% url 'locations' 'changancherry' %}"
-                                           class="dropdown-item">Changancherry</a></li>
-                                    <li><a href="{% url 'locations' 'mannanam' %}"
-                                           class="dropdown-item">Mannanam</a>
-                                    </li>
-                                    <li><a href="{% url 'locations' 'thiruvananthapuram' %}"
-                                           class="dropdown-item">Thiruvananthapuram</a></li>
-                                    <li><a href="{% url 'locations' 'thiruvallam' %}"
-                                           class="dropdown-item">Thiruvallam</a></li>
-                                    <li><a href="{% url 'locations' 'chennai' %}" class="dropdown-item">Chennai</a>
-                                    </li>
-
-                                </ul>
-                            </li>
-                            <li class="dropstart">
-                                <a href="" class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown">USA</a>
-                                <ul class="dropdown-menu shadow">
-                                    <li><a href="{% url 'locations' 'bastrope' %}"
-                                           class="dropdown-item">Bastrope</a>
-                                    </li>
-                                    <li><a href="{% url 'locations' 'dalias' %}" class="dropdown-item">Dallas</a>
-                                    </li>
-                                    <li><a href="{% url 'locations' 'lagrande' %}"
-                                           class="dropdown-item">LaGrande</a>
-                                    </li>
-                                    <li><a href="{% url 'locations' 'mcallen' %}" class="dropdown-item">McAllen</a>
-                                    </li>
-                                    <li><a href="{% url 'locations' 'monroe' %}" class="dropdown-item">Monroe</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="dropstart">
-                                <a href="" class="dropdown-item dropdown-toggle"
-                                   data-bs-toggle="dropdown">Germany</a>
-                                <ul class="dropdown-menu shadow">
-                                    <li><a href="{% url 'locations' 'cologne' %}" class="dropdown-item">Cologne</a>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-
-        </nav>
-    </div>
+    </nav>
 </header>
