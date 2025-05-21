@@ -1,0 +1,70 @@
+/* leadership.css */
+/* M3 Typography */
+.m3-headline-small {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+    letter-spacing: 0.009375rem;
+}
+
+.m3-title-large {
+    font-size: 1.375rem;
+    line-height: 1.75rem;
+    letter-spacing: 0.009375rem;
+}
+
+.m3-body-medium {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    letter-spacing: 0.015625rem;
+}
+
+/* M3 Card Styling */
+.m3-card {
+    background-color: #fff;
+    /* transition: box-shadow 0.3s ease, transform 0.3s ease; */
+    border: none;
+}
+
+.m3-card:hover {
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1) !important;
+    /* transform: translateY(-4px); */
+}
+
+.m3-card.outlined {
+    border: 1px solid #e0e0e0;
+}
+
+/* M3 Surface Container */
+.m3-surface-container {
+    background-color: #f5f5f5;
+}
+
+/* M3 Image Container */
+.m3-image-container {
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #eeeeee;
+}
+
+/* Rounded corners */
+.rounded-4 {
+    border-radius: 16px;
+}
+
+.rounded-top-4 {
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+}
+
+/* Spacing */
+.g-3 > [class*='col-'] {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+}
+
+.g-4 > [class*='col-'] {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
