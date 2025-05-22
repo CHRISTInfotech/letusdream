@@ -12,9 +12,11 @@ COLOGNE
 {% block links %}
 
 
-<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css' type="text/css">
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css'
+    type="text/css">
 <!-- Font Awesome -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" type="text/css"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"
+    type="text/css" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <!-- MDB -->
 
@@ -23,18 +25,18 @@ COLOGNE
 {% block content %}
 <section class="changacherry-loc">
 
-   
-                <nav aria-label="breadcrumb animated slideInDown" class="cus-breadcrumb ">
-                    <ol class="breadcrumb text-uppercase mb-0 bg-white">
-                        <li class="breadcrumb-item"><a class="text-black text-decoration-none"
-                                href="{% url 'main' %}">Home</a></li>
-                        <li class="breadcrumb-item"><a class="text-black text-decoration-none"
-                                href="{% url 'main' %}#location">Germany</a></li>
 
-                        <li class="breadcrumb-item  active" aria-current="page">cologne</li>
-                    </ol>
-                </nav>
-            
+    <nav aria-label="breadcrumb animated slideInDown" class="cus-breadcrumb"
+        style="margin-top: 150px; margin-left: 50px;">
+        <ol class="breadcrumb text-uppercase mb-0 bg-white">
+            <li class="breadcrumb-item"><a class="text-black text-decoration-none" href="{% url 'main' %}">Home</a></li>
+            <li class="breadcrumb-item"><a class="text-black text-decoration-none"
+                    href="{% url 'main' %}#location">Germany</a></li>
+
+            <li class="breadcrumb-item  active" aria-current="page">cologne</li>
+        </ol>
+    </nav>
+
     <h1 class="mb-4  fw-bold text-center fs-1 text-green text-uppercase heading-h3 mt-5"> cologne, Germany</h1>
     <div class="container dreams-tab">
         <div class="row">
@@ -200,7 +202,7 @@ COLOGNE
         <div class="row">
 
             {% include 'partials/_countDetails.html' %}
-         
+
             <div class="col-lg-12 m-5 p-5">
                 <!-- Modal gallery -->
                 <section class="">

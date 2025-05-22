@@ -7,6 +7,27 @@ Conferences
 
 {% block extraStyles %}
 <link rel="stylesheet" href="{% static 'css/2025/aboutConference.css' %}" type="text/css">
+<style>
+    .image-container {
+        position: relative;
+        text-align: center;
+        width: 100%;
+    }
+
+    .image-container img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .btncolor {
+        background: linear-gradient(90deg, #5a91c5, #002c5e);
+        padding: 10px;
+        width: 140px;
+        border-radius: 10px;
+    }
+</style>
+
 {% endblock extraStyles %}
 
 {% block links %}
@@ -14,9 +35,369 @@ Conferences
 
 {% block content %}
 
+<nav aria-label="breadcrumb animated slideInDown" class="cus-breadcrumb" style="margin-top: 150px; margin-left: 50px;">
+    <ol class="breadcrumb text-uppercase mb-0 bg-white">
+        <li class="breadcrumb-item">
+            <a class="text-black text-decoration-none" href="{% url 'main' %}">
+                Home
+            </a>
+        </li>
+        <li class="breadcrumb-item">
+            <a class="text-black text-decoration-none" href="{% url 'main' %}Conferences">
+                Conferences
+            </a>
+        </li>
+        <li class="breadcrumb-item  active" aria-current="page">
+            Overview
+        </li>
+    </ol>
+</nav>
+
+<div class="container-fluid">
+    <div class="image-container">
+        <img src="{% static 'Aboutus/aboutUs/Conference_overview.png' %}" class="card-img-top p-3"
+            alt="Conference Overview">
+        <!-- <div class="centered-text">Your Text Here</div> -->
+    </div>
+</div>
+
+<!-- <div class="container-fluid main-about">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 mt-3">
+                <h1 class="heading-h1 text-center fw-bold" style="color: #005b96;">Ordinary people.
+                    Extraordinary change.</h1>
+            </div>
+        </div>
+    </div>
+</div> -->
+<section class="container my-5 py-4">
+    <div class="row justify-content-center">
+        <div class="col-lg-10 text-center">
+            <h1 class="display-4 fw-bold mb-4" style="color: #005b96;">Ordinary people. Extraordinary change.</h1>
+            <p class="text-justify lh-lg" style="color: #186ab6;">
+                The Let Us Dream (LUD) Annual Community Conferences are powerful local gatherings
+                held each year across India, Germany, South Africa, and beyond.
+                These conferences celebrate the human spirit - our shared capacity to care, to lead, and to serve.
+                Each Annual Conference offers a space for dialogue, learning, inspiraon, and acon - united
+                by a common mission to empower communies through compassion, collaboraon, and service.
+                Whether you’re a student stepping into service, a teacher sharing wisdom,
+                a social worker leading change, or a volunteer looking to give back—this is your space.
+            </p>
+            <button class="text-light mb-4"
+                style="background: linear-gradient(90deg, #5a91c5, #002c5e);padding: 12px; width: 120px; border-radius: 12px;">
+                Join Us
+            </button>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- <div class="container-fluid">
+    <div class="mt-5 row col-lg-12">
+        <div class="col-sm-6 ">
+            <h1 class="text-uppercase heading-h1 text-center about-cus-h1 fw-bold" style="color: #85bd76;">Let Us Dream
+                Conferences</h1>
+
+            <p class="text-justify lh-lg mt-5 mx-5" style="color: #186ab6;">
+                The Let Us Dream movement began in Monroe, Louisiana
+                in 2017 with a simple idea: that people who dream for
+                others create real, lasting change. What started as a
+                modest university gathering soon grew into an
+                international wave of community empowerment.
+
+                While our Triennial International Conferences unite
+                chapters globally every three years, the Annual
+                Community Conferences happen locally, every year on
+                the ground, in your city, in your community.
+
+                Today, these annual conferences are hosted in countries
+                like India, US, South Africa, adapting to local needs while
+                staying true to a shared global vision.
+            </p>
+            <button class="rounded text-light mb-4"
+                style="background: linear-gradient(90deg, #5a91c5, #002c5e);padding: 10px; width: 100px; margin-left:350px;">Join
+                Us
+            </button>
+        </div>
+        <div class="col-sm-6 ">
+            <img src="{% static 'Aboutus/aboutUs/Conference_overview2.png' %}" class="card-img-top"
+                alt="Conference Overview">
+        </div>
+
+    </div>
+</div> -->
+<section class="container-fluid bg-light py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 order-lg-1 order-2 mt-lg-0 mt-4">
+                <h2 class="display-5 fw-bold text-uppercase mb-4" style="color: #85bd76;">Let Us Dream Conferences</h2>
+                <div class="pe-lg-5">
+                    <p class="text-secondary-blue lh-lg mb-4">
+                        The Let Us Dream movement began in Monroe, Louisiana
+                        in 2017 with a simple idea: that people who dream for
+                        others create real, lasting change. What started as a
+                        modest university gathering soon grew into an
+                        international wave of community empowerment.
+                    </p>
+                    <p class="text-secondary-blue lh-lg mb-4">
+                        While our Triennial International Conferences unite
+                        chapters globally every three years, the Annual
+                        Community Conferences happen locally, every year on
+                        the ground, in your city, in your community.
+                    </p>
+                    <p class="text-secondary-blue lh-lg mb-4">
+                        Today, these annual conferences are hosted in countries
+                        like India, US, South Africa, adapting to local needs while
+                        staying true to a shared global vision.
+                    </p>
+                </div>
+                <div class="text-center text-lg-start">
+                    <button class="text-light mb-4"
+                        style="background: linear-gradient(90deg, #5a91c5, #002c5e);padding: 12px; width: 120px; border-radius: 12px;">
+                        Read More
+                    </button>
+                </div>
+            </div>
+            <div class="col-lg-6 order-lg-2 order-1">
+                <img src="{% static 'Aboutus/aboutUs/Conference_overview2.png' %}" class="img-fluid rounded shadow"
+                    alt="Conference Overview">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="container-fluid bg-light py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-12">
+                <!-- Image Section -->
+                <img src="{% static 'Aboutus/aboutUs/Conference_overview3.2.png' %}" class="img-fluid rounded w-100"
+                    alt="Conference Overview">
+
+                <!-- White Background Button Section -->
+                <div class="bg-white p-4 text-center">
+                    <div class="row justify-content-center">
+                        <!-- Annual Conference Buttons -->
+                        <div class="col-md-5 mb-4 mb-md-0">
+                            <div class="d-flex justify-content-center gap-3">
+                                <a href="#" class="btn text-light"
+                                    style="background: linear-gradient(90deg, #5a91c5, #002c5e);padding: 10px; width: 140px; border-radius: 10px;">Register
+                                    here</a>
+                                <a href="#" class="btn text-light"
+                                    style="background: linear-gradient(90deg, #5a91c5, #002c5e);padding: 10px; width: 140px; border-radius: 10px;">Read
+                                    more</a>
+                            </div>
+                        </div>
+
+                        <!-- Triennial Conference Buttons -->
+                        <div class="col-md-5">
+                            <a href="#" class="btn text-light"
+                                style="background: linear-gradient(90deg, #5a91c5, #002c5e);padding: 10px; width: 140px; border-radius: 10px;">Read
+                                more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="container py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-12">
+                <h1 class="display-5 fw-bold" style="color: #005b96;">A Network Of Local Conferences Implemented
+                    Globally</h1>
+                <!-- Image Section -->
+                <img src="{% static 'Aboutus/aboutUs/Conference_overview4.png' %}" class="img-fluid rounded w-100"
+                    alt="Conference Overview">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="container py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-12">
+                <h1 class="display-5 fw-bold mb-4 text-center" style="color: #005b96;">Partners</h1>
+                <div class="row justify-content-center">
+                    <div class="col-6 col-sm-4 col-md-3 col-lg-3 mb-4 d-flex justify-content-center">
+                        <img src="{% static 'Aboutus/aboutUs/Conference_overview5.1.png' %}" class="img-fluid rounded"
+                            alt="Partner Logo 1" style="max-height: 150px; object-fit: contain;">
+                    </div>
+
+                    <div class="col-6 col-sm-4 col-md-3 col-lg-3 mb-4 d-flex justify-content-center">
+                        <img src="{% static 'Aboutus/aboutUs/Conference_overview5.2.png' %}" class="img-fluid rounded"
+                            alt="Partner Logo 2" style="max-height: 150px; object-fit: contain;">
+                    </div>
+
+                    <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4 d-flex justify-content-center">
+                        <img src="{% static 'Aboutus/aboutUs/Conference_overview5.3.png' %}" class="img-fluid rounded"
+                            alt="Partner Logo 3" style="max-height: 150px; object-fit: contain;">
+                    </div>
+
+                    <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4 d-flex justify-content-center">
+                        <img src="{% static 'Aboutus/aboutUs/Conference_overview5.4.png' %}" class="img-fluid rounded"
+                            alt="Partner Logo 4" style="max-height: 150px; object-fit: contain;">
+                    </div>
+
+                    <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4 d-flex justify-content-center">
+                        <img src="{% static 'Aboutus/aboutUs/Conference_overview5.5.png' %}" class="img-fluid rounded"
+                            alt="Partner Logo 5" style="max-height: 150px; object-fit: contain;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="container py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-12">
+                <h1 class="display-5 fw-bold text-center" style="color: #85bd76;">Impacting Communities Worldwide</h1>
+
+                <img src="{% static 'Aboutus/aboutUs/Conference_overview6.png' %}" class="img-fluid rounded mt-5"
+                    alt="Conference Overview">
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="container py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-12">
+                <h1 class="display-5 fw-bold text-center" style="color: #85bd76;">Testimonies</h1>
+                <img src="{% static 'Aboutus/aboutUs/Conference_overview7.png' %}" class="img-fluid rounded mt-5"
+                    alt="Conference Overview">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="container py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-12">
+                <h1 class="display-5 fw-bold text-center" style="color: #85bd76;">Our Team</h1>
+                <img src="{% static 'Aboutus/aboutUs/Conference_overview8.png' %}" class="img-fluid rounded mt-3"
+                    alt="Conference Overview">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="container-fluid bg-light py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <h2 class="display-5 fw-bold text-uppercase mb-4 text-center" style="color: #85bd76;">Stories & Event
+                Updates</h2>
+
+            <div class="row col-lg-12">
+                <div class="col-lg-4 order-lg-1 order-2 mt-lg-0 mt-4">
+                    <img src="{% static 'Aboutus/aboutUs/Conference_overview9.png' %}" class="img-fluid rounded"
+                        alt="Conference Overview">
+                    <button class="text-light mt-2 mx-3"
+                        style="background: linear-gradient(90deg, #5a91c5, #002c5e);padding: 10px; width: 120px; border-radius: 14px;">
+                        Read More
+                    </button>
+                </div>
+                <div class="col-lg-4 order-lg-2 order-1">
+                    <img src="{% static 'Aboutus/aboutUs/Conference_overview9.png' %}" class="img-fluid rounded"
+                        alt="Conference Overview">
+                    <button class="text-light mt-2 mx-3"
+                        style="background: linear-gradient(90deg, #5a91c5, #002c5e);padding: 10px; width: 120px; border-radius: 14px;">
+                        Read More
+                    </button>
+                </div>
+                <div class="col-lg-4 order-lg-2 order-1">
+                    <img src="{% static 'Aboutus/aboutUs/Conference_overview9.png' %}" class="img-fluid rounded"
+                        alt="Conference Overview">
+                    <button class="text-light mt-2 mx-3"
+                        style="background: linear-gradient(90deg, #5a91c5, #002c5e);padding: 10px; width: 120px; border-radius: 14px;">
+                        Read More
+                    </button>
+                </div>
+            </div>
+            <div class="row col-lg-12">
+                <div class="col-lg-4 order-lg-1 order-2 mt-lg-0 mt-4">
+                    <img src="{% static 'Aboutus/aboutUs/Conference_overview9.png' %}" class="img-fluid rounded"
+                        alt="Conference Overview">
+                    <button class="text-light mt-2 mx-3"
+                        style="background: linear-gradient(90deg, #5a91c5, #002c5e);padding: 10px; width: 120px; border-radius: 14px;">
+                        Read More
+                    </button>
+                </div>
+                <div class="col-lg-4 order-lg-2 order-1">
+                    <img src="{% static 'Aboutus/aboutUs/Conference_overview9.png' %}" class="img-fluid rounded"
+                        alt="Conference Overview">
+                    <button class="text-light mt-2 mx-3"
+                        style="background: linear-gradient(90deg, #5a91c5, #002c5e);padding: 10px; width: 120px; border-radius: 14px;">
+                        Read More
+                    </button>
+                </div>
+                <div class="col-lg-4 order-lg-2 order-1">
+                    <img src="{% static 'Aboutus/aboutUs/Conference_overview9.png' %}" class="img-fluid rounded"
+                        alt="Conference Overview">
+                    <button class="text-light mt-2 mx-3"
+                        style="background: linear-gradient(90deg, #5a91c5, #002c5e);padding: 10px; width: 120px; border-radius: 14px;">
+                        Read More
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="container py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-12">
+                <h1 class="display-5 fw-bold text-center" style="color: #85bd76;">Stay Up To Date On
+                    What's New</h1>
+            </div>
+        </div>
+        <div>
+            <input type="text" class="form-control w-50 mt-5" style="background-color: #a9ecc5;" placeholder="Enter Email">
+        </div>
+
+    </div>
+</section>
+
+{% endblock %}
+
+
+
+
+<!-- old (update pulled ) conference overview: -->
+<!-- 
+<nav aria-label="breadcrumb animated slideInDown" class="cus-breadcrumb" style="margin-top: 150px; margin-left: 50px;">
+    <ol class="breadcrumb text-uppercase mb-0 bg-white">
+        <li class="breadcrumb-item">
+            <a class="text-black text-decoration-none" href="{% url 'main' %}">
+                Home
+            </a>
+        </li>
+        <li class="breadcrumb-item">
+            <a class="text-black text-decoration-none" href="{% url 'main' %}Conferences">
+                Conferences
+            </a>
+        </li>
+        <li class="breadcrumb-item  active" aria-current="page">
+            Overview
+        </li>
+    </ol>
+</nav>
+
 <div class="container">
 
-    <h1 class="fw-bold text-center fs-1 text-green text-uppercase ">
+    <h1 class="fw-bold text-center fs-1 text-green text-uppercase mt-4">
         Community Conferences
     </h1>
 
@@ -539,12 +920,10 @@ Conferences
 <div class="container mt-3 mb-5">
     <h3 class="fw-bold mt-3 text-dark-green mb-4 text-center">LEADERSHIP TEAM</h3>
     <div class="mb-3">
-        <img src="{% static '2025/conference/Conference_Strategic_Youth.jpeg' %}" class="img-fluid" alt="leadership team">
+        <img src="{% static '2025/conference/Conference_Strategic_Youth.jpeg' %}" class="img-fluid"
+            alt="leadership team">
     </div>
     <div class="mb-3">
         <img src="{% static '2025/conference/Conference_Core_Youth.jpeg' %}" class="img-fluid" alt="leadership team">
     </div>
-</div>
-
-
-{% endblock %}
+</div> -->
