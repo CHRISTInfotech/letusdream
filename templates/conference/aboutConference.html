@@ -2,538 +2,152 @@
 {% load static %}
 
 {% block title %}
-Conferences
+    Conferences
 {% endblock %}
 
-{% block extraStyles %}
-<link rel="stylesheet" href="{% static 'css/2025/aboutConference.css' %}" type="text/css">
-<style>
-    .image-container {
-        position: relative;
-        text-align: center;
-        display: inline-block;
-        width: 100%;
-    }
-
-    .image-container img {
-        width: 100%;
-        height: auto;
-        display: block;
-    }
-
-    .btncolor {
-        background: linear-gradient(90deg, #5a91c5, #002c5e);
-        padding: 10px;
-        width: 140px;
-        border-radius: 10px;
-    }
-
-    .overlay-text {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        color: white;
-        font-size: 24px;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    }
-
-    .member-image {
-        width: 100%;
-        /* Ensure image scales with the container */
-        height: auto;
-        aspect-ratio: 1 / 1;
-        /* Makes the image square */
-        object-fit: cover;
-        /* Ensures the image fills the square area */
-        border-radius: 50%;
-        /* Makes the image circular */
-        border: 2px solid #ddd;
-        /* Optional: adds a subtle border */
-    }
-
-    .member-image {
-        width: 100%;
-        height: auto;
-        aspect-ratio: 1 / 1;
-        object-fit: cover;
-        border-radius: 50%;
-        border: 2px solid #ddd;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        /* Subtle shadow */
-        transition: transform 0.3s ease;
-    }
-
-    .member-image:hover {
-        transform: scale(1.05);
-        /* Slight zoom effect on hover */
-    }
-</style>
-
-{% endblock extraStyles %}
-
 {% block links %}
+    <link rel="stylesheet" href="{% static 'css/2025/aboutConference.css' %}" type="text/css">
 {% endblock links %}
 
 {% block content %}
 
-<nav aria-label="breadcrumb animated slideInDown" class="cus-breadcrumb" style="margin-top: 150px; margin-left: 50px;">
-    <ol class="breadcrumb text-uppercase mb-0 bg-white">
-        <li class="breadcrumb-item">
-            <a class="text-black text-decoration-none" href="{% url 'main' %}">
-                Home
-            </a>
-        </li>
-        <li class="breadcrumb-item">
-            <a class="text-black text-decoration-none" href="{% url 'main' %}Conferences">
-                Conferences
-            </a>
-        </li>
-        <li class="breadcrumb-item  active" aria-current="page">
-            Overview
-        </li>
-    </ol>
-</nav>
-
-<div class="container-fluid">
-    <div class="image-container position-relative">
-        <img src="{% static 'Aboutus/aboutUs/Conference_overview.png' %}" class="card-img-top p-3"
-            alt="Conference Overview">
-        <div class="overlay-text position-absolute top-50 start-50 translate-middle text-center fw-bold"
-            style="color: #002c5e; bottom: 50px;">
-            <h1 style="font-size: 4rem; font-weight: 900;">Welcome to Annual Conferences 2025</h1>
-            <br>
-            <h3 style="font-size: 2.5rem; color: darkcyan; font-weight: 700;">Register Here</h3>
+    <div class="container py-5">
+        <div class="fs-1 fw-bolder lh-sm text-center mb-3">
+            Let Us Dream Community Conferences
         </div>
-    </div>
-</div>
-
-
-<!-- <section class="container my-5 py-4">
-    <div class="row justify-content-center">
-        <div class="col-lg-10 text-center">
-            <h1 class="display-4 fw-bold mb-4" style="color: #005b96;">Ordinary people. Extraordinary change.</h1>
-            <p class="text-justify lh-lg" style="color: #186ab6;">
-                The Let Us Dream (LUD) Annual Community Conferences are powerful local gatherings
-                held each year across India, Germany, South Africa, and beyond.
-                These conferences celebrate the human spirit - our shared capacity to care, to lead, and to serve.
-                Each Annual Conference offers a space for dialogue, learning, inspiraon, and acon - united
-                by a common mission to empower communies through compassion, collaboraon, and service.
-                Whether you’re a student stepping into service, a teacher sharing wisdom,
-                a social worker leading change, or a volunteer looking to give back—this is your space.
-            </p>
-            <button class="text-light mb-4"
-                style="background: linear-gradient(90deg, #5a91c5, #002c5e);padding: 12px; width: 120px; border-radius: 12px;">
-                Join Us
-            </button>
+        <div class="lh-lg text-center cover">
+            The Let Us Dream (LUD) Conferences are a powerful initiative dedicated to fostering community empowerment
+            through compassion, collaboration, and service. What began as a local gathering in Monroe, Louisiana, has
+            grown into a global movement, comprising both annual community conferences and triennial international
+            conferences.
         </div>
-    </div>
-</section> -->
 
-
-<section class="container my-5 py-5">
-    <div class="row justify-content-center">
-        <div class="col-lg-10 text-center">
-            <h1 class="display-4 fw-bold mb-4" style="color: #005b96; font-family: 'Segoe UI', sans-serif;">
-                Ordinary People. Extraordinary Change.
-            </h1>
-            <p class="text-start px-3 px-md-5"
-                style="color: #155a99; font-size: 1.25rem; line-height: 2; text-align: justify; font-weight: 400;">
-                The <strong>Let Us Dream (LUD) Annual Community Conferences</strong> are powerful local gatherings held
-                each year across
-                <strong>India, Germany, South Africa</strong>, and beyond. These conferences celebrate the human
-                spirit—our shared capacity
-                to care, to lead, and to serve.
-                <br><br>
-                Each Annual Conference offers a space for <em>dialogue, learning, inspiration, and action</em>—united by
-                a common mission:
-                to empower communities through <strong>compassion, collaboration, and service</strong>.
-                <br><br>
-                Whether you're a <strong>student</strong> stepping into service, a <strong>teacher</strong> sharing
-                wisdom, a
-                <strong>social worker</strong> leading change, or a <strong>volunteer</strong> looking to give back—this
-                is your space.
-            </p>
-            <button class="text-light mt-4"
-                style="background: linear-gradient(90deg, #5a91c5, #002c5e); padding: 14px 28px; border-radius: 30px; font-weight: bold; font-size: 1.1rem;">
-                Join Us
-            </button>
-        </div>
-    </div>
-</section>
-
-
-<section class="container-fluid bg-light py-5">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-6 order-lg-1 order-2 mt-lg-0 mt-4">
-                <h2 class="display-5 fw-bold text-uppercase mb-4" style="color: #85bd76;">Let Us Dream Conferences</h2>
-                <div class="pe-lg-5">
-                    <p class="text-secondary-blue lh-lg mb-4" style="font-size: 1.2rem;">
-                        The Let Us Dream movement began in Monroe, Louisiana
-                        in 2017 with a simple idea: that people who dream for
-                        others create real, lasting change. What started as a
-                        modest university gathering soon grew into an
-                        international wave of community empowerment.
-                    </p>
-                    <p class="text-secondary-blue lh-lg mb-4" style="font-size: 1.2rem;">
-                        While our Triennial International Conferences unite
-                        chapters globally every three years, the Annual
-                        Community Conferences happen locally, every year on
-                        the ground, in your city, in your community.
-                    </p>
-                    <p class="text-secondary-blue lh-lg mb-4" style="font-size: 1.2rem;">
-                        Today, these annual conferences are hosted in countries
-                        like India, US, South Africa, adapting to local needs while
-                        staying true to a shared global vision.
-                    </p>
+        <div class="row mt-5">
+            <div class="col-sm-12 col-md-6 mb-3">
+                <div class="fs-3 fw-bold text-center mb-3 border">
+                    Annual Conferences
                 </div>
-                <div class="text-center text-lg-start">
-                    <button class="text-light mb-4"
-                        style="background: linear-gradient(90deg, #5a91c5, #002c5e);padding: 12px; width: 120px; border-radius: 12px;">
-                        Read More
-                    </button>
+                <div class="text-center card-cover">
+                    Make a difference together! Attend our annual conferences held around the world.
+                    <div class="mt-3 fst-italic">
+                        Connect with volunteering opportunities. ⦁ Build your social and professional network. ⦁ Create
+                        a space to share ideas and skills. ⦁ Learn from leading, unsung heroes tackling problems, big
+                        and small.
+                    </div>
                 </div>
             </div>
-            <div class="col-lg-6 order-lg-2 order-1">
-                <img src="{% static 'Aboutus/aboutUs/Conference_overview2.png' %}" class="img-fluid rounded shadow"
-                    alt="Conference Overview">
+            <div class="col-sm-12 col-md-6 mb-3">
+                <div class="fs-3 fw-bold text-center mb-3 border">
+                    Triennial Conferences
+                </div>
+                <div class="text-center card-cover">
+                    Connect globally, act locally! Our international conference happens once every three years.
+                    It brings together service initiatives from around the world.
+                    <div class="mt-3  fst-italic">
+                        Collaborate and network with like-minded people. ⦁ Learn how to make a positive impact in your
+                        own community. ⦁ Celebrate unsung heroes.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-custom-dark mt-5">
+        <div class="container py-5">
+            <div class="fs-3 fw-bold text-center mb-3 border">
+                History of LUD Conferences
+            </div>
+
+            <div class="lh-lg text-center">
+                The first LET US DREAM conference was launched in 2017 to inspire community service.
+                From then on, all conferences organized have provided a platform to learn, share, and celebrate acts of
+                volunteerism. The first Triennial International Conference was conducted virtually in 2020 during the
+                pandemic. It highlighted resilience and strength, showcasing community initiatives from around the
+                world. The conference targets both younger and older generations, introducing them to various community
+                service opportunities and models. Through discussions and presentations, attendees gain insights and
+                recommendations for positive community development. Currently, conferences are organized around the
+                world. This includes multiple locations in India and USA, and countries like Germany, Nepal, South
+                Africa, and more.
             </div>
         </div>
     </div>
-</section>
 
-<section class="container-fluid bg-light py-5">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-12">
-                <!-- Image Section -->
-                <img src="{% static 'Aboutus/aboutUs/Conference_overview3.2.png' %}" class="img-fluid rounded w-100"
-                    alt="Conference Overview">
-
-                <!-- White Background Button Section -->
-                <div class="bg-white p-4 text-center">
-                    <div class="row justify-content-center">
-                        <!-- Annual Conference Buttons -->
-                        <div class="col-md-5 mb-4 mb-md-0">
-                            <div class="d-flex justify-content-center gap-3">
-                                <a href="#" class="btn text-light"
-                                    style="background: linear-gradient(90deg, #5a91c5, #002c5e);padding: 10px; width: 140px; border-radius: 10px;">Register
-                                    here</a>
-                                <a href="#" class="btn text-light"
-                                    style="background: linear-gradient(90deg, #5a91c5, #002c5e);padding: 10px; width: 140px; border-radius: 10px;">Read
-                                    more</a>
-                            </div>
+    <div class="container py-3">
+        <div class="row py-5">
+            <div class="col-sm-12 col-md-6 mb-3">
+                <div>
+                    <div class="fs-3 fw-bold text-center mb-3 border-bottom">
+                        Vision
+                    </div>
+                    <div>
+                        Empowering local communities for sustainable global impact and improvement.
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 mb-3">
+                <div>
+                    <div class="fs-3 fw-bold text-center mb-3 border-bottom">
+                        Mission
+                    </div>
+                    <div>
+                        <div class="mb-3">
+                            To provide an opportunity to share, learn and support more community intervention research,
+                            theories and models.
                         </div>
 
-                        <!-- Triennial Conference Buttons -->
-                        <div class="col-md-5">
-                            <a href="#" class="btn text-light"
-                                style="background: linear-gradient(90deg, #5a91c5, #002c5e);padding: 10px; width: 140px; border-radius: 10px;">Read
-                                more</a>
+                        <div class="mb-3">
+                            To provide a forum for sharing experiences including the successes and challenges in
+                            community organisations and efforts.
+                        </div>
+
+                        <div  class="mb-3">
+                            To invite individuals with bigger hearts and deeper thoughts for their society to be a
+                            support system for the community empowerment initiatives.
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</section>
 
+    <div>
+        OBJECTIVES
+        To offer the participants an opportunity to bridge the knowledge gap through the interaction of researchers and
+        practitioners worldwide.
 
-<section class="container py-5">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-12">
-                <h1 class="display-5 fw-bold" style="color: #005b96;">A Network Of Local Conferences Implemented
-                    Globally</h1>
-                <!-- Image Section -->
-                <img src="{% static 'Aboutus/aboutUs/Conference_overview4.png' %}" class="img-fluid rounded w-100"
-                    alt="Conference Overview">
-            </div>
-        </div>
-    </div>
-</section>
+        To make recommendations towards achieving greater global peace and harmony worldwide.
 
-<section class="container py-5">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-12">
-                <h1 class="display-5 fw-bold mb-4 text-center" style="color: #005b96;">Partners</h1>
-                <div class="row justify-content-center">
-                    <div class="col-6 col-sm-4 col-md-3 col-lg-3 mb-4 d-flex justify-content-center">
-                        <img src="{% static 'Aboutus/aboutUs/Conference_overview5.1.png' %}" class="img-fluid rounded"
-                            alt="Partner Logo 1" style="max-height: 150px; object-fit: contain;">
-                    </div>
+        To provide an opportunity to share, learn, and support more community interventions research, theories, and
+        models.
 
-                    <div class="col-6 col-sm-4 col-md-3 col-lg-3 mb-4 d-flex justify-content-center">
-                        <img src="{% static 'Aboutus/aboutUs/Conference_overview5.2.png' %}" class="img-fluid rounded"
-                            alt="Partner Logo 2" style="max-height: 150px; object-fit: contain;">
-                    </div>
+        To provide a forum for sharing experiences including the successes and challenges in community organizations and
+        efforts.
 
-                    <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4 d-flex justify-content-center">
-                        <img src="{% static 'Aboutus/aboutUs/Conference_overview5.3.png' %}" class="img-fluid rounded"
-                            alt="Partner Logo 3" style="max-height: 150px; object-fit: contain;">
-                    </div>
-
-                    <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4 d-flex justify-content-center">
-                        <img src="{% static 'Aboutus/aboutUs/Conference_overview5.4.png' %}" class="img-fluid rounded"
-                            alt="Partner Logo 4" style="max-height: 150px; object-fit: contain;">
-                    </div>
-
-                    <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4 d-flex justify-content-center">
-                        <img src="{% static 'Aboutus/aboutUs/Conference_overview5.5.png' %}" class="img-fluid rounded"
-                            alt="Partner Logo 5" style="max-height: 150px; object-fit: contain;">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="container py-5">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-12">
-                <h1 class="display-5 fw-bold text-center" style="color: #85bd76;">Impacting Communities Worldwide</h1>
-
-                <img src="{% static 'Aboutus/aboutUs/Conference_overview6.png' %}" class="img-fluid rounded mt-5"
-                    alt="Conference Overview">
-            </div>
-        </div>
-    </div>
-</section>
-
-
-<section class="container py-5">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-12">
-                <h1 class="display-5 fw-bold text-center" style="color: #85bd76;">Testimonies</h1>
-                <img src="{% static 'Aboutus/aboutUs/Conference_overview7.png' %}" class="img-fluid rounded mt-5"
-                    alt="Conference Overview">
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="team-section">
-    <div class="container">
-        <h2 class="section-title">Our Team</h2>
-
-        <div class="row justify-content-center">
-            <!-- Row 1 -->
-            <div class="col-lg-2 col-md-4 col-sm-6 col-12 mb-4">
-                <div class="team-member text-center">
-                    <div class="member-image-container">
-                        <img src="{% static 'Aboutus/aboutUs/demo.jpeg' %}" alt="John Doe"
-                            class="member-image rounded-circle img-fluid p-2">
-                    </div>
-                    <h4 class="member-name">John Doe</h4>
-                    <p class="member-designation">CEO & Founder</p>
-                </div>
-            </div>
-
-            <div class="col-lg-2 col-md-4 col-sm-6 col-12 mb-4">
-                <div class="team-member text-center">
-                    <div class="member-image-container">
-                        <img src="{% static 'Aboutus/aboutUs/demo.jpeg' %}" alt="John Doe"
-                            class="member-image rounded-circle img-fluid p-2">
-                    </div>
-                    <h4 class="member-name">John Doe</h4>
-                    <p class="member-designation">CEO & Founder</p>
-                </div>
-            </div>
-
-            <div class="col-lg-2 col-md-4 col-sm-6 col-12 mb-4">
-                <div class="team-member text-center">
-                    <div class="member-image-container">
-                        <img src="{% static 'Aboutus/aboutUs/demo.jpeg' %}" alt="John Doe"
-                            class="member-image rounded-circle img-fluid p-2">
-                    </div>
-                    <h4 class="member-name">John Doe</h4>
-                    <p class="member-designation">CEO & Founder</p>
-                </div>
-            </div>
-
-            <div class="col-lg-2 col-md-4 col-sm-6 col-12 mb-4">
-                <div class="team-member text-center">
-                    <div class="member-image-container">
-                        <img src="{% static 'Aboutus/aboutUs/demo.jpeg' %}" alt="John Doe"
-                            class="member-image rounded-circle img-fluid p-2">
-                    </div>
-                    <h4 class="member-name">John Doe</h4>
-                    <p class="member-designation">CEO & Founder</p>
-                </div>
-            </div>
-
-            <div class="col-lg-2 col-md-4 col-sm-6 col-12 mb-4">
-                <div class="team-member text-center">
-                    <div class="member-image-container">
-                        <img src="{% static 'Aboutus/aboutUs/demo.jpeg' %}" alt="John Doe"
-                            class="member-image rounded-circle img-fluid p-2">
-                    </div>
-                    <h4 class="member-name">John Doe</h4>
-                    <p class="member-designation">CEO & Founder</p>
-                </div>
-            </div>
-
-
-            <!-- Row 2 -->
-            <div class="col-lg-2 col-md-4 col-sm-6 col-12 mb-4">
-                <div class="team-member text-center">
-                    <div class="member-image-container">
-                        <img src="{% static 'Aboutus/aboutUs/demo.jpeg' %}" alt="John Doe"
-                            class="member-image rounded-circle img-fluid p-2">
-                    </div>
-                    <h4 class="member-name">John Doe</h4>
-                    <p class="member-designation">CEO & Founder</p>
-                </div>
-            </div>
-
-            <div class="col-lg-2 col-md-4 col-sm-6 col-12 mb-4">
-                <div class="team-member text-center">
-                    <div class="member-image-container">
-                        <img src="{% static 'Aboutus/aboutUs/demo.jpeg' %}" alt="John Doe"
-                            class="member-image rounded-circle img-fluid p-2">
-                    </div>
-                    <h4 class="member-name">John Doe</h4>
-                    <p class="member-designation">CEO & Founder</p>
-                </div>
-            </div>
-
-            <div class="col-lg-2 col-md-4 col-sm-6 col-12 mb-4">
-                <div class="team-member text-center">
-                    <div class="member-image-container">
-                        <img src="{% static 'Aboutus/aboutUs/demo.jpeg' %}" alt="John Doe"
-                            class="member-image rounded-circle img-fluid p-2">
-                    </div>
-                    <h4 class="member-name">John Doe</h4>
-                    <p class="member-designation">CEO & Founder</p>
-                </div>
-            </div>
-
-            <div class="col-lg-2 col-md-4 col-sm-6 col-12 mb-4">
-                <div class="team-member text-center">
-                    <div class="member-image-container">
-                        <img src="{% static 'Aboutus/aboutUs/demo.jpeg' %}" alt="John Doe"
-                            class="member-image rounded-circle img-fluid p-2">
-                    </div>
-                    <h4 class="member-name">John Doe</h4>
-                    <p class="member-designation">CEO & Founder</p>
-                </div>
-            </div>
-
-            <div class="col-lg-2 col-md-4 col-sm-6 col-12 mb-4">
-                <div class="team-member text-center">
-                    <div class="member-image-container">
-                        <img src="{% static 'Aboutus/aboutUs/demo.jpeg' %}" alt="John Doe"
-                            class="member-image rounded-circle img-fluid p-2">
-                    </div>
-                    <h4 class="member-name">John Doe</h4>
-                    <p class="member-designation">CEO & Founder</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="container-fluid bg-light py-5">
-    <div class="container">
-        <div class="row align-items-center">
-            <h2 class="display-5 fw-bold  mb-4 text-center" style="color: #85bd76;">Stories & Event
-                Updates</h2>
-
-            <div class="row col-lg-12">
-                <div class="col-lg-4 order-lg-1 order-2 mt-lg-0 mt-4">
-                    <img src="{% static 'Aboutus/aboutUs/Conference_overview9.png' %}" class="img-fluid rounded"
-                        alt="Conference Overview">
-                    <button class="text-light mt-2 mx-3"
-                        style="background: linear-gradient(90deg, #5a91c5, #002c5e);padding: 10px; width: 120px; border-radius: 14px;">
-                        Read More
-                    </button>
-                </div>
-                <div class="col-lg-4 order-lg-2 order-1">
-                    <img src="{% static 'Aboutus/aboutUs/Conference_overview9.png' %}" class="img-fluid rounded"
-                        alt="Conference Overview">
-                    <button class="text-light mt-2 mx-3"
-                        style="background: linear-gradient(90deg, #5a91c5, #002c5e);padding: 10px; width: 120px; border-radius: 14px;">
-                        Read More
-                    </button>
-                </div>
-                <div class="col-lg-4 order-lg-2 order-1">
-                    <img src="{% static 'Aboutus/aboutUs/Conference_overview9.png' %}" class="img-fluid rounded"
-                        alt="Conference Overview">
-                    <button class="text-light mt-2 mx-3"
-                        style="background: linear-gradient(90deg, #5a91c5, #002c5e);padding: 10px; width: 120px; border-radius: 14px;">
-                        Read More
-                    </button>
-                </div>
-            </div>
-            <div class="row col-lg-12">
-                <div class="col-lg-4 order-lg-1 order-2 mt-lg-0 mt-4">
-                    <img src="{% static 'Aboutus/aboutUs/Conference_overview9.png' %}" class="img-fluid rounded"
-                        alt="Conference Overview">
-                    <button class="text-light mt-2 mx-3"
-                        style="background: linear-gradient(90deg, #5a91c5, #002c5e);padding: 10px; width: 120px; border-radius: 14px;">
-                        Read More
-                    </button>
-                </div>
-                <div class="col-lg-4 order-lg-2 order-1">
-                    <img src="{% static 'Aboutus/aboutUs/Conference_overview9.png' %}" class="img-fluid rounded"
-                        alt="Conference Overview">
-                    <button class="text-light mt-2 mx-3"
-                        style="background: linear-gradient(90deg, #5a91c5, #002c5e);padding: 10px; width: 120px; border-radius: 14px;">
-                        Read More
-                    </button>
-                </div>
-                <div class="col-lg-4 order-lg-2 order-1">
-                    <img src="{% static 'Aboutus/aboutUs/Conference_overview9.png' %}" class="img-fluid rounded"
-                        alt="Conference Overview">
-                    <button class="text-light mt-2 mx-3"
-                        style="background: linear-gradient(90deg, #5a91c5, #002c5e);padding: 10px; width: 120px; border-radius: 14px;">
-                        Read More
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="container py-5">
-    <div class="text-center">
-        <h1 class="fw-bold" style="color: #85bd76; font-size: 2.5rem;">
-            Stay Up To Date On <br> What's New
-        </h1>
+        To invite individuals with bigger hearts and deeper thoughts for their society to be a support system for the
+        community empowerment initiatives.
     </div>
 
-    <div class="d-flex justify-content-center mt-5">
-        <div class="position-relative" style="width: 500px;">
-            <input type="email"
-                class="form-control ps-5 pe-5 py-4"
-                placeholder="Enter your email"
-                style="
-                    background-color: #e6f9f2;
-                    border-radius: 50px;
-                    border: none;
-                    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-                    font-size: 1.2rem;
-                    color: #003b6d;
-                "
-            >
-            <img src="{% static 'Aboutus/aboutUs/paper-plane-regular.svg' %}" alt="Send" 
-                style="
-                    position: absolute;
-                    right: 25px;
-                    top: 50%;
-                    transform: translateY(-50%);
-                    height: 30px;
-                    opacity: 0.7;
-                    cursor: pointer;
-                "
-            >
-        </div>
-    </div>
-</section>
+    <div>
+        IMPLEMENTATION
+        The LET US DREAM conferences work in the following ways:
 
+        Connect with universities, communities, companies, NGOs, and other institutions to bring you impactful
+        conferences.
+        Choose from annual community conferences or international triennial conferences held around the world.
+        Attend panels, network with fellow professionals, volunteer your time and skill set and acknowledge unsung
+        heroes serving the community.
+    </div>
+
+    <div>
+        TARGET AUDIENCE
+        Be the change you wish to see! The LET US DREAM conferences welcome:
+
+        Adult and young-adult volunteers.
+        Business owners with community development projects.
+        Non-profit organizations, NGOs & philanthropists.
+        Board members, social workers, and educators interested in collaboration.
+        College students and professors.
+        Anyone passionate about community initiatives and leadership.
+    </div>
 
 {% endblock %}
