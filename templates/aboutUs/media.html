@@ -27,7 +27,7 @@ Media
 
 {% block content %}
 
-<section class="media-sec">
+<section class="media-sec" style="margin-top: 150px; margin-left: 50px;">
   <nav aria-label="breadcrumb animated slideInDown" class="cus-breadcrumb">
     <ol class="breadcrumb text-uppercase mb-0 bg-white">
       <li class="breadcrumb-item"><a class="text-black text-decoration-none" href="{% url 'main' %}">Home</a></li>
@@ -35,267 +35,268 @@ Media
       <li class="breadcrumb-item  active" aria-current="page">Media</li>
     </ol>
   </nav>
+</section>
 
-  <div class="container mb-5">
-    <h1>MEDIA</h1>
-    <h3 class="text-center pb-5">Social Networks aren't about websites. They're about experiences</h3>
-    <div class="row">
-      <div class="col-lg-12 col-md-12 col-sm-12">
+<div class="container mb-5">
+  <h1 class="mt-4 text-center">MEDIA</h1>
+  <h3 class="text-center pb-5">Social Networks aren't about websites. They're about experiences</h3>
+  <div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12">
 
-        <div class="accordion" id="accordionExample">
-          <div class="card">
-            <div class="card-header" id="headingThree">
-              <h2 class="mb-0">
-                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSix"
-                  aria-expanded="false" aria-controls="collapseSix">
-                  Publications
-                </button>
-              </h2>
-            </div>
+      <div class="accordion" id="accordionExample">
+        <div class="card">
+          <div class="card-header" id="headingThree">
+            <h2 class="mb-0">
+              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSix"
+                aria-expanded="false" aria-controls="collapseSix">
+                Publications
+              </button>
+            </h2>
+          </div>
 
-            <div id="collapseSix" class="collapse blog-home2 show" aria-labelledby="collapseSix"
-              data-parent="#accordionExample">
-              <div class="card-body">
-                <div class="container-fluid text-h3 bg-green">
+          <div id="collapseSix" class="collapse blog-home2 show" aria-labelledby="collapseSix"
+            data-parent="#accordionExample">
+            <div class="card-body">
+              <div class="container-fluid text-h3 bg-green">
 
-                  <div class="row text-center">
-                    <div class="col-lg-3 col-md-3 p-3">
-                      <div
-                        class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
-                        Nov<span class="d-block">05</span>2023</div>
-                      <a href="{% static 'Publications/SilverJubile.pdf' %}" target="_blank">
-                        <img src="{% static 'Publications/SilverJubileThumpnail.png' %}" class="img1 m-3">
-                      </a>
-                    </div>
-                    <div class="col-lg-3 col-md-3 p-3">
-                      <div
-                        class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
-                        Nov<span class="d-block">05</span>2023</div>
-                      <a href="{% static 'Publications/Proceedings.pdf' %}" target="_blank">
-                        <img src="{% static 'Publications/ProceedingsThumpnail.png' %}" class="img1 m-3">
-                      </a>
-                    </div>
-                    <div class="col-lg-3 col-md-3 p-3">
-                      <div
-                        class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
-                        Nov<span class="d-block">05</span>2023</div>
-                      <a href="https://drive.google.com/file/d/1mgFBqXMw9gSV8D5vAzKGG6W_TGu2_LhK/view?usp=drivesdk"
-                        target="_blank">
-                        <img src="{% static 'Publications/DreamsThumpnail.png' %}" class="img1 m-3">
-                      </a>
-                    </div>
-
+                <div class="row text-center">
+                  <div class="col-lg-3 col-md-3 p-3">
+                    <div
+                      class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
+                      Nov<span class="d-block">05</span>2023</div>
+                    <a href="{% static 'Publications/SilverJubile.pdf' %}" target="_blank">
+                      <img src="{% static 'Publications/SilverJubileThumpnail.png' %}" class="img1 m-3">
+                    </a>
                   </div>
+                  <div class="col-lg-3 col-md-3 p-3">
+                    <div
+                      class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
+                      Nov<span class="d-block">05</span>2023</div>
+                    <a href="{% static 'Publications/Proceedings.pdf' %}" target="_blank">
+                      <img src="{% static 'Publications/ProceedingsThumpnail.png' %}" class="img1 m-3">
+                    </a>
+                  </div>
+                  <div class="col-lg-3 col-md-3 p-3">
+                    <div
+                      class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
+                      Nov<span class="d-block">05</span>2023</div>
+                    <a href="https://drive.google.com/file/d/1mgFBqXMw9gSV8D5vAzKGG6W_TGu2_LhK/view?usp=drivesdk"
+                      target="_blank">
+                      <img src="{% static 'Publications/DreamsThumpnail.png' %}" class="img1 m-3">
+                    </a>
+                  </div>
+
                 </div>
               </div>
             </div>
           </div>
-          <div class="card">
-            <div class="card-header" id="headingOne">
-              <h2 class="mb-0">
-                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
-                  aria-expanded="true" aria-controls="collapseOne">
-                  Press Release
-                </button>
-              </h2>
-            </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingOne">
+            <h2 class="mb-0">
+              <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
+                aria-expanded="true" aria-controls="collapseOne">
+                Press Release
+              </button>
+            </h2>
+          </div>
 
-            <div id="collapseOne" class="collapse blog-home2" aria-labelledby="headingOne"
-              data-parent="#accordionExample">
-              <div class="card-body">
-                <p>
-                <div class="container-fluid text-h3 bg-green">
+          <div id="collapseOne" class="collapse blog-home2" aria-labelledby="headingOne"
+            data-parent="#accordionExample">
+            <div class="card-body">
+              <p>
+              <div class="container-fluid text-h3 bg-green">
 
-                  <div class="row text-center">
-                    <div class="col-lg-3 col-md-3 p-3">
-                      <div
-                        class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
-                        Dec<span class="d-block">25</span>2024</div>
-                      <img src="{% static 'Aboutus/Media/Press/lud news.png' %}" class="img1 m-3">
-                    </div>
-                    <div class="col-lg-3 col-md-3 p-3">
-                      <div
-                        class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
-                        Jul<span class="d-block">25</span>2015</div>
-                      <img src="{% static 'Aboutus/Media/Press/tumb3.jpg' %}" class="img1 m-3">
-                    </div>
-                    <div class="col-lg-3 col-md-3 p-3">
-                      <div
-                        class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
-                        Jul<span class="d-block">27</span>2016</div>
-                      <img src="{% static 'Aboutus/Media/Press/tumb1.jpg' %}" class="img1 m-3">
-                    </div>
-                    <div class="col-lg-3 col-md-3 p-3">
-                      <div
-                        class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
-                        Nov<span class="d-block">02</span>2017</div>
-                      <img src="{% static 'Aboutus/Media/Press/tumb2.png' %}" class="img1 m-3">
-                    </div>
+                <div class="row text-center">
+                  <div class="col-lg-3 col-md-3 p-3">
+                    <div
+                      class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
+                      Dec<span class="d-block">25</span>2024</div>
+                    <img src="{% static 'Aboutus/Media/Press/lud news.png' %}" class="img1 m-3">
                   </div>
-
-
+                  <div class="col-lg-3 col-md-3 p-3">
+                    <div
+                      class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
+                      Jul<span class="d-block">25</span>2015</div>
+                    <img src="{% static 'Aboutus/Media/Press/tumb3.jpg' %}" class="img1 m-3">
+                  </div>
+                  <div class="col-lg-3 col-md-3 p-3">
+                    <div
+                      class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
+                      Jul<span class="d-block">27</span>2016</div>
+                    <img src="{% static 'Aboutus/Media/Press/tumb1.jpg' %}" class="img1 m-3">
+                  </div>
+                  <div class="col-lg-3 col-md-3 p-3">
+                    <div
+                      class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
+                      Nov<span class="d-block">02</span>2017</div>
+                    <img src="{% static 'Aboutus/Media/Press/tumb2.png' %}" class="img1 m-3">
+                  </div>
                 </div>
-                <br>
-
-                <p class="pl-5" style=" text-align: right;font-size: 15px;"><a href="{% url 'press-release' %}"
-                    class="fw-bold text-h3 text-decoration-none">Read more</a></p>
-                </p>
-
 
 
               </div>
+              <br>
+
+              <p class="pl-5" style=" text-align: right;font-size: 15px;"><a href="{% url 'press-release' %}"
+                  class="fw-bold text-h3 text-decoration-none">Read more</a></p>
+              </p>
+
+
+
             </div>
           </div>
-          <div class="card">
-            <div class="card-header" id="headingTwo">
-              <h2 class="mb-0">
-                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo"
-                  aria-expanded="false" aria-controls="collapseTwo">
-                  Videos
-                </button>
-              </h2>
-            </div>
-            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-              <div class="card-body">
-                <div class="container-fluid text-h3 bg-green">
-                  <div class="row text-center">
-                    <div class="col-lg-4 col-md-6 pb-3">
-                      <iframe src="https://www.youtube.com/embed/cq7T8uUdPDQ" class="img1 m-3" target="_blank"></iframe>
-                    </div>
-                    <div class="col-lg-4 col-md-6 pb-3">
-                      <iframe src="https://www.youtube.com/embed/cW_X3EKxkwg" class="img1 m-3" target="_blank"></iframe>
-
-                    </div>
-                    <div class="col-lg-4 col-md pb-3">
-                      <iframe src="https://www.youtube.com/embed/n1lFnIgQSq8" class="img1 m-3" target="_blank"></iframe>
-
-                    </div>
-
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingTwo">
+            <h2 class="mb-0">
+              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo"
+                aria-expanded="false" aria-controls="collapseTwo">
+                Videos
+              </button>
+            </h2>
+          </div>
+          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+            <div class="card-body">
+              <div class="container-fluid text-h3 bg-green">
+                <div class="row text-center">
+                  <div class="col-lg-4 col-md-6 pb-3">
+                    <iframe src="https://www.youtube.com/embed/cq7T8uUdPDQ" class="img1 m-3" target="_blank"></iframe>
+                  </div>
+                  <div class="col-lg-4 col-md-6 pb-3">
+                    <iframe src="https://www.youtube.com/embed/cW_X3EKxkwg" class="img1 m-3" target="_blank"></iframe>
 
                   </div>
-                </div>
-                <br>
-                <p class="pl-5" style=" text-align: right;font-size: 15px;">
-                  <a href="{% url 'youtube-media' %}" class="fw-bold text-h3 text-decoration-none">View more</a>
-
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card-header" id="headingThree">
-              <h2 class="mb-0">
-                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree"
-                  aria-expanded="false" aria-controls="collapseThree">
-                  Photo Gallery
-                </button>
-              </h2>
-            </div>
-            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-              <div class="card-body">
-
-                <div class="container-fluid text-h3 bg-green">
-
-                  <div class="row text-center">
-                    <div class="col-lg-4 col-md-6 pb-5">
-                      <img src="{% static 'Aboutus/Media/photoGallery/thum1.jpg' %}" class="img1">
-                      <p class="fw-bold text-center media-cus-p fs-6">Bangalore Gallery</p>
-                    </div>
-                    <div class="col-lg-4 col-md-6 pb-5">
-                      <img src="{% static 'Aboutus/Media/photoGallery/thum2.jpg' %}" class="img1">
-                      <p class="fw-bold text-center media-cus-p fs-6">Chaganacherry Gallery</p>
-                    </div>
-                    <div class="col-lg-4 col-md pb-5">
-                      <img src="{% static 'Aboutus/Media/photoGallery/thum3.jpg' %}" class="img1">
-                      <p class="fw-bold text-center media-cus-p fs-6">Mannanam Gallery</p>
-                    </div>
-
-
-                  </div>
-
-                </div>
-                <br>
-                <p class="pl-5" style=" text-align: right;font-size: 15px;">
-                  <a href="{% url 'photo-gallery' %}" class="fw-bold text-h3 text-decoration-none">See more</a>
-                </p>
-
-
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card-header" id="headingThree">
-              <h2 class="mb-0">
-                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive"
-                  aria-expanded="false" aria-controls="collapseFive">
-
-                  Newsletters
-
-                </button>
-              </h2>
-            </div>
-
-            <div id="collapseFive" class="collapse blog-home2" aria-labelledby="headingOne"
-              data-parent="#accordionExample">
-              <div class="card-body">
-                <div class="container-fluid text-h3 bg-green">
-
-                  <div class="row text-center">
-
-                    <div class="col-lg-3 col-md-3 p-3">
-                      <div
-                        class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
-                        Sept<span class="d-block">28</span>2023</div>
-                      <a href="{% static '2025/newsletter/NewsBulletin_Changanassery.pdf' %}" target="_blank">
-                        <img src="{% static '2025/newsletter/NewsBulletin_Changanassery.png' %}" class="img1 m-3">
-                      </a>
-                    </div>
-                    <div class="col-lg-3 col-md-3 p-3">
-                      <div
-                        class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
-                        Oct<span class="d-block">21</span>2020</div>
-                      <a href="{% url 'newsletter-page' 'december' '2024' %}" target="_blank">
-                        <img src="{% static 'Aboutus/Media/Newsletter/dec2024.png' %}" class="img1 m-3">
-                      </a>
-                    </div>
-                    <div class="col-lg-3 col-md-3 p-3">
-                      <div
-                        class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
-                        Nov<span class="d-block"></span>2024</div>
-                      <a href="{% static '2024/newsletters/DREAMSJNC2024Newsletter.pdf' %}" target="_blank">
-                        <img src="{% static '2024/newsletters/thumbnails/dreamsjnc24.png' %}" class="img1 m-3">
-                      </a>
-                    </div>
-                    <div class="col-lg-3 col-md-3 p-3">
-                      <div
-                        class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
-                        Sept<span class="d-block">28</span>2023</div>
-                      <a href="{% static 'Aboutus/Media/Newsletter/LUDConnectSeptember2023.pdf' %}" target="_blank">
-                        <img src="{% static 'Aboutus/Media/Newsletter/Newsletter-11.jpg' %}" class="img1 m-3">
-                      </a>
-                    </div>
+                  <div class="col-lg-4 col-md pb-3">
+                    <iframe src="https://www.youtube.com/embed/n1lFnIgQSq8" class="img1 m-3" target="_blank"></iframe>
 
                   </div>
 
 
                 </div>
-                <br>
-
-                <p class="pl-5" style=" text-align: right;font-size: 15px;"><a href="{% url 'newsletter' %}"
-                    class="fw-bold text-h3 text-decoration-none">Read more</a>
-                </p>
-
               </div>
+              <br>
+              <p class="pl-5" style=" text-align: right;font-size: 15px;">
+                <a href="{% url 'youtube-media' %}" class="fw-bold text-h3 text-decoration-none">View more</a>
+
+              </p>
             </div>
           </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingThree">
+            <h2 class="mb-0">
+              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree"
+                aria-expanded="false" aria-controls="collapseThree">
+                Photo Gallery
+              </button>
+            </h2>
+          </div>
+          <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+            <div class="card-body">
 
+              <div class="container-fluid text-h3 bg-green">
+
+                <div class="row text-center">
+                  <div class="col-lg-4 col-md-6 pb-5">
+                    <img src="{% static 'Aboutus/Media/photoGallery/thum1.jpg' %}" class="img1">
+                    <p class="fw-bold text-center media-cus-p fs-6">Bangalore Gallery</p>
+                  </div>
+                  <div class="col-lg-4 col-md-6 pb-5">
+                    <img src="{% static 'Aboutus/Media/photoGallery/thum2.jpg' %}" class="img1">
+                    <p class="fw-bold text-center media-cus-p fs-6">Chaganacherry Gallery</p>
+                  </div>
+                  <div class="col-lg-4 col-md pb-5">
+                    <img src="{% static 'Aboutus/Media/photoGallery/thum3.jpg' %}" class="img1">
+                    <p class="fw-bold text-center media-cus-p fs-6">Mannanam Gallery</p>
+                  </div>
+
+
+                </div>
+
+              </div>
+              <br>
+              <p class="pl-5" style=" text-align: right;font-size: 15px;">
+                <a href="{% url 'photo-gallery' %}" class="fw-bold text-h3 text-decoration-none">See more</a>
+              </p>
+
+
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingThree">
+            <h2 class="mb-0">
+              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive"
+                aria-expanded="false" aria-controls="collapseFive">
+
+                Newsletters
+
+              </button>
+            </h2>
+          </div>
+
+          <div id="collapseFive" class="collapse blog-home2" aria-labelledby="headingOne"
+            data-parent="#accordionExample">
+            <div class="card-body">
+              <div class="container-fluid text-h3 bg-green">
+
+                <div class="row text-center">
+
+                  <div class="col-lg-3 col-md-3 p-3">
+                    <div
+                      class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
+                      Sept<span class="d-block">28</span>2023</div>
+                    <a href="{% static '2025/newsletter/NewsBulletin_Changanassery.pdf' %}" target="_blank">
+                      <img src="{% static '2025/newsletter/NewsBulletin_Changanassery.png' %}" class="img1 m-3">
+                    </a>
+                  </div>
+                  <div class="col-lg-3 col-md-3 p-3">
+                    <div
+                      class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
+                      Oct<span class="d-block">21</span>2020</div>
+                    <a href="{% url 'newsletter-page' 'december' '2024' %}" target="_blank">
+                      <img src="{% static 'Aboutus/Media/Newsletter/dec2024.png' %}" class="img1 m-3">
+                    </a>
+                  </div>
+                  <div class="col-lg-3 col-md-3 p-3">
+                    <div
+                      class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
+                      Nov<span class="d-block"></span>2024</div>
+                    <a href="{% static '2024/newsletters/DREAMSJNC2024Newsletter.pdf' %}" target="_blank">
+                      <img src="{% static '2024/newsletters/thumbnails/dreamsjnc24.png' %}" class="img1 m-3">
+                    </a>
+                  </div>
+                  <div class="col-lg-3 col-md-3 p-3">
+                    <div
+                      class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
+                      Sept<span class="d-block">28</span>2023</div>
+                    <a href="{% static 'Aboutus/Media/Newsletter/LUDConnectSeptember2023.pdf' %}" target="_blank">
+                      <img src="{% static 'Aboutus/Media/Newsletter/Newsletter-11.jpg' %}" class="img1 m-3">
+                    </a>
+                  </div>
+
+                </div>
+
+
+              </div>
+              <br>
+
+              <p class="pl-5" style=" text-align: right;font-size: 15px;"><a href="{% url 'newsletter' %}"
+                  class="fw-bold text-h3 text-decoration-none">Read more</a>
+              </p>
+
+            </div>
+          </div>
         </div>
 
       </div>
+
     </div>
   </div>
+</div>
 
 
-</section>
+
 
 {% endblock %}
