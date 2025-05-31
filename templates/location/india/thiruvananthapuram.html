@@ -12,9 +12,11 @@ THIRUVANANTHAPURAM
 {% block links %}
 
 
-<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css' type="text/css">
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css'
+    type="text/css">
 <!-- Font Awesome -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" type="text/css"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"
+    type="text/css" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <!-- MDB -->
 {% endblock links %}
@@ -23,19 +25,21 @@ THIRUVANANTHAPURAM
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <section class="changacherry-loc">
 
-    <nav aria-label="breadcrumb animated slideInDown" class="cus-breadcrumb" style="margin-top: 150px; margin-left: 50px;">
+    <nav aria-label="breadcrumb animated slideInDown" class="cus-breadcrumb"
+        style="margin-top: 150px; margin-left: 50px;">
         <ol class="breadcrumb text-uppercase mb-0 bg-white">
-          <li class="breadcrumb-item"><a class="text-black text-black text-decoration-none"
+            <li class="breadcrumb-item"><a class="text-black text-black text-decoration-none"
                     href="{% url 'main' %}">Home</a></li>
-               
 
-                <li class="breadcrumb-item"><a class="text-black text-decoration-none"
-                        href="{% url 'main' %}#location">India</a></li>
-        
-                <li class="breadcrumb-item  active" aria-current="page">THIRUVANANTHAPURAM</li>
+
+            <li class="breadcrumb-item"><a class="text-black text-decoration-none"
+                    href="{% url 'main' %}#location">India</a></li>
+
+            <li class="breadcrumb-item  active" aria-current="page">THIRUVANANTHAPURAM</li>
         </ol>
     </nav>
-    <h1 class="mb-4  fw-bold text-center fs-1 text-green text-uppercase heading-h3 mt-5"> THIRUVANANTHAPURAM, Kerela, India</h1>
+    <h1 class="mb-4  fw-bold text-center fs-1 text-green text-uppercase heading-h3 mt-5"> THIRUVANANTHAPURAM, Kerela,
+        India</h1>
     <div class="container dreams-tab">
         <div class="row">
             <div class="col-lg-12">
@@ -171,37 +175,32 @@ THIRUVANANTHAPURAM
 
                                         </div>
                                         <div class="col-lg-5 col-sm-12 col-md-12">
-
                                             <img src="{% static 'locations/proclub.png' %}" alt="mannanam" height="400"
                                                 width="400" class="w-100 h-auto">
-
                                         </div>
                                     </div>
                                 </div>
-
-
                             </div>
                         </div>
                         <!-- End lined tabs -->
                     </div>
-
                 </div>
-
             </div>
         </div>
     </div>
+
+
     <div class="container">
         <div class="row">
-           
             {% include 'partials/_countDetails.html' %}
-        
-            <div class="col-lg-12 m-5 p-5">
+
+            <div class="col-lg-12">
                 <!-- Modal gallery -->
                 <section class="">
                     <!-- Section: Images -->
                     <section class="">
                         <div class="row">
-                            <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+                            <div class="col-lg-4 col-md-12">
                                 <div class="bg-image hover-overlay ripple shadow-1-strong rounded min-hieght-240"
                                     data-ripple-color="light">
 
@@ -303,156 +302,139 @@ THIRUVANANTHAPURAM
     </div>
     <!-- social media -->
     <div class="container">
-        <div class="row mt-5 p-5">
-
-
-            <div class="col-lg-6 hover-zoomin p-5">
-                <a href="https://www.facebook.com/groups/2687207854863577/" title="" target="_blank">
-                    <img src="{% static 'locations/thiruvananthapuram/fb.jpg'%}" alt="" />
-                </a>
+        <div class="row md-5 p-lg-5">
+            <div class="col-lg-6">
+                <div class="ratio ratio-16x9 overflow-hidden rounded-3 hover-zoomin">
+                    <a href="https://www.facebook.com/groups/2687207854863577/" title="" target="_blank"
+                        class="d-block h-100">
+                        <img src="{% static 'locations/thiruvananthapuram/fb.jpg'%}"
+                            class="img-fluid object-fit-cover w-100 h-100" alt="Thiruvananthapuram Facebook Group" />
+                    </a>
+                </div>
                 <h4 class="text-center mt-3 text-green">THIRUVANANTHAPURAM FB GROUP</h4>
             </div>
 
-            <div class="col-lg-6 hover-zoomin p-5">
-                <a href="{% url 'photo-gallery' %}#popup4" title="">
-                    <img src="{% static 'locations/thiruvananthapuram/gallery.jpg'%}" alt="" />
-                </a>
+
+            <div class="col-lg-6">
+                <div class="ratio ratio-16x9 overflow-hidden rounded-3 hover-zoomin">
+                    <a href="{% url 'photo-gallery' %}#popup4" title="" class="d-block h-100">
+                        <img src="{% static 'locations/thiruvananthapuram/gallery.jpg'%}"
+                            class="img-fluid object-fit-cover w-100 h-100" alt="Thiruvananthapuram Gallery" />
+                    </a>
+                </div>
                 <h4 class="text-center mt-3 text-green">THIRUVANANTHAPURAM GALLERY</h4>
             </div>
         </div>
     </div>
+
     <!-- Speaker -->
-    <div class="container">
+    <!-- <div class="container">
         <div class="row text-center">
-
-
             <h1 class="text-green text-center my-5 text-uppercase fw-bold">
                 Conference Chairs
             </h1>
-
-            <!-- Team item -->
             <div class="col-xl-3 col-sm-6 mb-5">
                 <div class="bg-white rounded shadow-sm py-5 px-4 min-height"><img
                         src="{% static 'locations/thiruvananthapuram/default.png'%}" alt="" width="100"
                         class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
                     <h5 class="mb-0">Mr. Anto</h5><span class="small text-uppercase text-muted">PRO -
                         CLUB /PROGRAMMER</span>
-
                 </div>
-            </div><!-- End -->
-
-            <!-- Team item -->
+            </div>
             <div class="col-xl-3 col-sm-6 mb-5">
                 <div class="bg-white rounded shadow-sm py-5 px-4 min-height"><img
                         src="{% static 'locations/thiruvananthapuram/default.png'%}" alt="" width="100"
                         class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
                     <h5 class="mb-0">Ms. Amala Alex</h5><span class="small text-uppercase text-muted">PRO - CLUB
                         /PROGRAMMER</span>
-
                 </div>
-            </div><!-- End -->
-
-            <!-- Team item -->
+            </div>
             <div class="col-xl-3 col-sm-6 mb-5">
                 <div class="bg-white rounded shadow-sm py-5 px-4 min-height"><img
                         src="{% static 'locations/thiruvananthapuram/default.png'%}" alt="" width="100"
                         class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
                     <h5 class="mb-0">Ms. Vaishnavi Satheesh</h5><span class="small text-uppercase text-muted">PRO -
                         CLUB/PROGRAMMER</span>
-
                 </div>
             </div>
-            <!-- End -->
-            <!-- Team item -->
             <div class="col-xl-3 col-sm-6 mb-5">
                 <div class="bg-white rounded shadow-sm py-5 px-4 min-height"><img
                         src="{% static 'locations/thiruvananthapuram/default.png'%}" alt="" width="100"
                         class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
                     <h5 class="mb-0">Prof. Alex</h5><span class="small text-uppercase text-muted">PRO -
                         CLUB</span>
-
                 </div>
             </div>
-            <!-- End -->
         </div>
-
-
         <div class="row text-center">
-
-
-
-            <!-- Team item -->
             <div class="col-xl-3 col-sm-6 mb-5">
                 <div class="bg-white rounded shadow-sm py-5 px-4 min-height"><img
                         src="{% static 'locations/thiruvananthapuram/default.png'%}" alt="" width="100"
                         class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
-                    <h5 class="mb-0">Ms. Maria Oommen</h5><span class="small text-uppercase text-muted">PRO -
-                        CLUB</span>
-
+                    <h5 class="mb-0">Ms. Maria Oommen</h5><span class="small text-uppercase text-muted">PRO-CLUB</span>
                 </div>
-            </div><!-- End -->
-
-
-
-            <!-- Team item -->
-
-            <!-- End -->
+            </div>
         </div>
 
-
-    </div>
+    </div> -->
     {% include 'partials/_testimonials.html' %}
 
     <!-- contact us -->
-
     <div class="contact_info">
         <div class="container">
             <div class="row">
-                <h1 class="text-center text-green mb-5">Connect us</h1>
-                <div class="col-lg-10 offset-lg-1">
-                    <div
-                        class="contact_info_container d-flex flex-lg-row flex-column justify-content-between align-items-center mb-5">
-
-                        <!-- Contact Item -->
-                        <div class="contact_info_item d-flex flex-row align-items-center justify-content-start">
-                            <div class="contact_info_image"><img
-                                    src="https://img.icons8.com/office/24/000000/iphone.png" alt=""></div>
-                            <div class="contact_info_content text-black">
-                                <div class="contact_info_title">Phone</div>
-                                <div class="contact_info_text">
-                                    <!-- contact number -->
+                <h1 class="text-center mb-4 mb-lg-5">Connect us</h1>
+                <div class="col-12">
+                    <div class="row row-cols-1 row-cols-lg-3 g-3 g-lg-4 mb-4">
+                        <!-- phone -->
+                        <div class="col">
+                            <div class="d-flex align-items-center h-100">
+                                <div class="me-2 me-lg-3">
+                                    <img src="https://img.icons8.com/office/24/000000/iphone.png" width="24" height="24"
+                                        alt="phone">
+                                </div>
+                                <div>
+                                    <div class="fw-bold fs-6 fs-lg-5">Phone</div>
+                                    <div class="text-muted fs-6"></div>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Contact Item -->
-                        <div class="contact_info_item d-flex flex-row align-items-center justify-content-start">
-                            <div class="contact_info_image"><img
-                                    src="https://img.icons8.com/ultraviolet/24/000000/filled-message.png" alt=""></div>
-                            <div class="contact_info_content text-black fs-bold">
-                                <div class="contact_info_title">Email</div>
-                                <div class="contact_info_text"><a class="text-decoration-none text-black"
-                                        href="mailto:thiruvananthpuram@letusdream.org">
-                                        thiruvananthapuram@letusdream.org</a></div>
+                        <div class="col">
+                            <div class="d-flex align-items-center h-100">
+                                <div class="me-2 me-lg-3">
+                                    <img src="https://img.icons8.com/ultraviolet/24/000000/filled-message.png"
+                                        width="24" height="24" alt="email">
+                                </div>
+                                <div>
+                                    <div class="fw-bold fs-6 fs-lg-5">Email</div>
+                                    <a href="mailto:thiruvananthpuram@letusdream.org"
+                                        class="text-decoration-none text-muted fs-6">
+                                        thiruvananthapuram@letusdream.org</a>
+                                </div>
                             </div>
                         </div>
 
-                        <!-- Contact Item -->
-                        <div class="contact_info_item d-flex flex-row align-items-center justify-content-start">
-                            <div class="contact_info_image"><img
-                                    src="https://img.icons8.com/ultraviolet/24/000000/map-marker.png" alt=""></div>
-                            <div class="contact_info_content text-black">
-                                <div class="contact_info_title">Address</div>
-                                <div class="contact_info_text text-black fw-semibold">CHRIST NAGAR School, 11, 273,
-                                    Keston Rd, Kanaka Nagar, Kowdiar, Thiruvananthapuram, Kerala 695003.</div>
+                        <!-- address -->
+                        <div class="col">
+                            <div class="d-flex align-items-center h-100">
+                                <div class="me-2 me-lg-3">
+                                    <img src="https://img.icons8.com/ultraviolet/24/000000/map-marker.png" width="24"
+                                        height="24" alt="Address">
+                                </div>
+                                <div class="w-100">
+                                    <div class="fw-bold fs-6 fs-lg-5">Address</div>
+                                    <div class="text-muted fs-6 text-wrap">CHRIST NAGAR School, 11, 273,
+                                        Keston Rd,<br> Kanaka Nagar, Kowdiar, Thiruvananthapuram, Kerala 695003.</div>
+                                </div>
                             </div>
-                        </div>
 
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
 </section>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

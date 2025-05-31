@@ -233,7 +233,7 @@ MONRORE
     <div class="container">
         <div class="row">
             {% include 'partials/_countDetails.html' %}
-            <div class="col-lg-12 m-5 p-5">
+            <div class="col-lg-12">
                 <!-- Modal gallery -->
                 <section class="">
                     <!-- Section: Images -->
@@ -341,29 +341,33 @@ MONRORE
     </div>
     <!-- social media -->
     <div class="container">
-        <div class="row mt-5 p-5">
-
-
-            <div class="col-lg-6 hover-zoomin p-5">
-                <a href="https://www.facebook.com/groups/3183208815051583/" title="" target="_blank">
-                    <img src="{% static 'locations/monroe/Manroe-FB.jpg' %}" alt="" />
-                </a>
+        <div class="row md-5 p-lg-5">
+            <div class="col-lg-6">
+                <div class="ratio ratio-16x9 overflow-hidden rounded-3 hover-zoomin">
+                    <a href="https://www.facebook.com/groups/3183208815051583/" title="" target="_blank"
+                        class="d-block h-100">
+                        <img src="{% static 'locations/monroe/Manroe-FB.jpg' %}" alt="Monroe Facebook Group"
+                            class="img-fluid object-fit-cover w-100 h-100" />
+                    </a>
+                </div>
                 <h4 class="text-center mt-3 text-green">MONROE FB GROUP</h4>
             </div>
 
-            <div class="col-lg-6 hover-zoomin p-5">
-                <a href="{% url 'photo-gallery' %}#popup10" title="">
-                    <img src="{% static 'locations/monroe/L3-Manroe-Gallery-Thumbnail.jpg' %}" alt="" />
-                </a>
+            <div class="col-lg-6">
+                <div class="ratio ratio-16x9 overflow-hidden rounded-3 hover-zoomin">
+                    <a href="{% url 'photo-gallery' %}#popup10" title="" class="d-block h-100">
+                        <img src="{% static 'locations/monroe/L3-Manroe-Gallery-Thumbnail.jpg' %}"
+                            class="img-fluid object-fit-cover w-100 h-100" alt="Manroe Gallery" />
+                    </a>
+                </div>
                 <h4 class="text-center mt-3 text-green">MONROE GALLERY</h4>
             </div>
         </div>
     </div>
+
     <!-- Speaker -->
-    <div class="container">
+    <!-- <div class="container">
         <div class="row text-center">
-
-
             <h1 class="text-green text-center my-5 text-uppercase fw-bold">
                 Conference Chairs
             </h1>
@@ -375,13 +379,9 @@ MONRORE
                         Mr. Abraham Arun
                     </h5><span class="small text-uppercase text-muted">
                         Youth Lead
-
                     </span>
-
                 </div>
             </div>
-            <!-- End -->
-            <!-- Team item -->
             <div class="col-xl-3 col-sm-6 mb-5">
                 <div class="bg-white rounded shadow-sm py-5 px-4 min-height"><img
                         src="{% static 'locations/monroe/default.png'%}" alt="" width="100"
@@ -390,13 +390,9 @@ MONRORE
                         Mr. Carlos Tenorio
                     </h5><span class="small text-uppercase text-muted">
                         Music Director
-
                     </span>
-
                 </div>
             </div>
-            <!-- End -->
-            <!-- Team item -->
             <div class="col-xl-3 col-sm-6 mb-5">
                 <div class="bg-white rounded shadow-sm py-5 px-4 min-height"><img
                         src="{% static 'locations/monroe/default.png'%}" alt="" width="100"
@@ -404,17 +400,9 @@ MONRORE
                     <h5 class="mb-0">
                         Ms. Maribeth Holzer
                     </h5><span class="small text-uppercase text-muted">
-                        <!-- job title -->
-
                     </span>
-
                 </div>
             </div>
-            <!-- End -->
-
-
-
-            <!-- Team item -->
             <div class="col-xl-3 col-sm-6 mb-5">
                 <div class="bg-white rounded shadow-sm py-5 px-4 min-height"><img
                         src="{% static 'locations/monroe/default.png'%}" alt="" width="100"
@@ -422,36 +410,22 @@ MONRORE
                     <h5 class="mb-0">
                         Ms. Janet Breard
                     </h5><span class="small text-uppercase text-muted">
-                        <!-- job title -->
-
-
                     </span>
-
                 </div>
             </div>
-            <!-- End -->
         </div>
 
         <div class="row text-center">
-            <!-- Team item -->
             <div class="col-xl-3 col-sm-6 mb-5">
                 <div class="bg-white rounded shadow-sm py-5 px-4 min-height"><img
                         src="{% static 'locations/monroe/default.png'%}" alt="" width="100"
                         class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
                     <h5 class="mb-0">
                         Ms. Linda Legrand
-
-
                     </h5><span class="small text-uppercase text-muted">
-                        <!-- job title -->
-
-
                     </span>
-
                 </div>
             </div>
-            <!-- End -->
-            <!-- Team item -->
             <div class="col-xl-3 col-sm-6 mb-5">
                 <div class="bg-white rounded shadow-sm py-5 px-4 min-height"><img
                         src="{% static 'locations/monroe/default.png'%}" alt="" width="100"
@@ -460,15 +434,9 @@ MONRORE
                         Ms. Dani Chase
 
                     </h5><span class="small text-uppercase text-muted">
-                        <!-- job title -->
-
-
                     </span>
-
                 </div>
             </div>
-            <!-- End -->
-            <!-- Team item -->
             <div class="col-xl-3 col-sm-6 mb-5">
                 <div class="bg-white rounded shadow-sm py-5 px-4 min-height"><img
                         src="{% static 'locations/monroe/default.png'%}" alt="" width="100"
@@ -476,80 +444,77 @@ MONRORE
                     <h5 class="mb-0">
                         Ms. Kaici Cob
                     </h5><span class="small text-uppercase text-muted">
-                        <!-- job title -->
-
-
                     </span>
-
                 </div>
             </div>
-            <!-- End -->
-            <!-- Team item -->
             <div class="col-xl-3 col-sm-6 mb-5">
                 <div class="bg-white rounded shadow-sm py-5 px-4 min-height"><img
                         src="{% static 'locations/monroe/default.png'%}" alt="" width="100"
                         class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
                     <h5 class="mb-0">
                         Ms. Swapna Arun
-
                     </h5><span class="small text-uppercase text-muted">
-                        <!-- job title -->
-
-
                     </span>
-
                 </div>
             </div>
-            <!-- End -->
         </div>
-
-    </div>
+    </div> -->
     {% include 'partials/_testimonials.html' %}
+
 
     <!-- contact us -->
 
     <div class="contact_info">
         <div class="container">
             <div class="row">
-                <h1 class="text-center text-green mb-5">Connect us</h1>
-                <div class="col-lg-10 offset-lg-1">
-                    <div
-                        class="contact_info_container d-flex flex-lg-row flex-column justify-content-between align-items-center mb-5">
+                <h1 class="text-center mb-4 mb-lg-5">Connect With Us</h1>
+                <div class="col-12">
+                    <div class="row row-cols-1 row-cols-lg-3 g-3 g-lg-4 mb-4">
+                        <!-- phone  -->
+                        <div class="col">
+                            <div class="d-flex align-items-center h-100">
+                                <div class="me-2 me-lg-3">
+                                    <img src="https://img.icons8.com/office/24/000000/iphone.png" width="24" height="24"
+                                        alt="Phone">
+                                </div>
+                                <div>
+                                    <div class="fw-bold fs-6 fs-lg-5">Phone</div>
+                                    <div class="text-muted fs-6"></div>
+                                </div>
+                            </div>
+                        </div>
 
-                        <!-- Contact Item -->
-                        <div class="contact_info_item d-flex flex-row align-items-center justify-content-start">
-                            <div class="contact_info_image"><img
-                                    src="https://img.icons8.com/office/24/000000/iphone.png" alt=""></div>
-                            <div class="contact_info_content text-black">
-                                <div class="contact_info_title">Phone</div>
-                                <div class="contact_info_text">
-                                    <!-- contact number -->
+                        <!-- email  -->
+                        <div class="col">
+                            <div class="d-flex align-items-center h-100">
+                                <div class="me-2 me-lg-3">
+                                    <img src="https://img.icons8.com/ultraviolet/24/000000/filled-message.png"
+                                        width="24" height="24" alt="Email">
+                                </div>
+                                <div>
+                                    <div class="fw-bold fs-6 fs-lg-5">Email</div>
+                                    <a class="text-decoration-none text-muted fs-6"
+                                        href="mailto:monroe@letusdream.org">monroe@letusdream.org
+                                    </a>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Contact Item -->
-                        <div class="contact_info_item d-flex flex-row align-items-center justify-content-start">
-                            <div class="contact_info_image"><img
-                                    src="https://img.icons8.com/ultraviolet/24/000000/filled-message.png" alt=""></div>
-                            <div class="contact_info_content text-black fs-bold">
-                                <div class="contact_info_title">Email</div>
-                                <div class="contact_info_text"><a class="text-decoration-none text-black"
-                                        href="mailto:monroe@letusdream.org">monroe@letusdream.org</a></div>
+                        <div class="col">
+                            <div class="d-flex align-items-center h-100">
+                                <div class="me-2 me-lg-3">
+                                    <img src="https://img.icons8.com/ultraviolet/24/000000/map-marker.png" width="24"
+                                        height="24" alt="Address">
+                                </div>
+                                <div class="w-100">
+                                    <div class="fw-bold fs-6 fs-lg-5">Address</div>
+                                    <div class="text-muted fs-6 text-wrap">Monroe, Louisiana @ Ouachita
+                                        Junior High School (Est 2012) 5500 Blanks Street, Monroe, LA 71203.
+                                    </div>
+                                </div>
                             </div>
                         </div>
-
-                        <!-- Contact Item -->
-                        <div class="contact_info_item d-flex flex-row align-items-center justify-content-start">
-                            <div class="contact_info_image"><img
-                                    src="https://img.icons8.com/ultraviolet/24/000000/map-marker.png" alt=""></div>
-                            <div class="contact_info_content text-black">
-                                <div class="contact_info_title">Address</div>
-                                <div class="contact_info_text text-black fw-semibold">Monroe, Louisiana @ Ouachita
-                                    Junior High School (Est 2012) 5500 Blanks Street, Monroe, LA 71203.</div>
-                            </div>
-                        </div>
-
                     </div>
                 </div>
             </div>

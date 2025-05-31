@@ -5,7 +5,7 @@
 
 {% block extraStyles %}
 <link rel="stylesheet" href="{% static 'css/media.css' %}" type="text/css" />
-{% endblock extraStyles %} 
+{% endblock extraStyles %}
 
 {% block links %}
 <!--Google font-->
@@ -46,13 +46,14 @@
       <div class="col-lg-12 col-md-12 col-sm-12">
         <div class="accordion" id="accordionExample">
 
-          <div class="card">
+          <div class="">
             <div class="card-header" id="headingThree">
               <h2 class="mb-0">
-                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSix"
+                <!-- <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSix"
                   aria-expanded="false" aria-controls="collapseSix">
                   2024
-                </button>
+                </button> -->
+                <h2 class="mb-0">Publications</h2>
               </h2>
             </div>
 
@@ -62,31 +63,39 @@
                 <div class="container-fluid text-h3 bg-green">
                   <div class="row text-center">
 
-                    <div class="col-lg-3 col-md-3 p-3">
-                      {% comment %}
-                      <div
-                        class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
+                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4 position-relative">
+                      <!-- <div
+                        class="bg-info-gradiant p-2 text-dark rounded position-absolute top-0 start-50 translate-middle-x"
+                        style="z-index: 1;">
                         June<span class="d-block">01-09</span>2024
+                      </div> -->
+                      <div class="mt-5 text-dark rounded position-absolute start-50 translate-middle-x"
+                        style="z-index: 1;">
+                        June 01-09, 2024
                       </div>
-                      {% endcomment %}
-                      <a href="{% static '2024/Reports/Germany_02June24.pdf' %}" target="_blank">
-                        <img src="{% static '2024/Reports/DREAMS - NGO.jpg' %}" class="img1 m-3" />
+                      <a href="{% static '2024/Reports/Germany_02June24.pdf' %}" target="_blank" class="d-block">
+                        <img src="{% static '2024/Reports/DREAMS - NGO.jpg' %}" class="img-fluid rounded"
+                          style="margin-top: 80px;" />
                       </a>
                     </div>
 
-                    <div class="col-lg-3 col-md-3 p-3">
-                      {% comment %}
-                      <div
-                        class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
+                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4 position-relative">
+                      <!-- <div
+                        class="bg-info-gradiant p-2 text-dark rounded position-absolute top-0 start-50 translate-middle-x"
+                        style="z-index: 1;">
                         June<span class="d-block">01-09</span>2024
+                      </div> -->
+                      <div class="mt-5 text-dark rounded position-absolute start-50 translate-middle-x"
+                        style="z-index: 1;">
+                        June 01-09, 2024
                       </div>
-                      {% endcomment %}
                       <a href="{% static '2024/Reports/Germany_02June24.pdf' %}" target="_blank">
-                        <img src="{% static '2024/Reports/CV FOLLOW UP SESSION - 2.jpg' %}" class="img1 m-3" />
+                        <img src="{% static '2024/Reports/CV FOLLOW UP SESSION - 2.jpg' %}"
+                          class="img-fluid rounded" style="margin-top: 80px;" />
                       </a>
                     </div>
 
-                    <div class="col-lg-3 col-md-3 p-3">
+                    <!-- <div class="col-lg-3 col-md-3 p-3">
                       <div
                         class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
                         MARCH<span class="d-block">23</span>2024
@@ -226,14 +235,251 @@
                       <a href="{% static '2024/Reports/Germany_02June24.pdf' %}" target="_blank">
                         <img src="{% static '2024/Reports/FOLLOW UP 2 ST. ANTHONY.jpg' %}" class="img1 m-3" />
                       </a>
+                    </div> -->
+
+                    <!-- <div class="col-lg-3 col-md-4 col-sm-6 mb-4 position-relative">
+                      <div
+                        class="bg-info-gradiant p-2 text-white rounded position-absolute top-0 start-50 translate-middle-x"
+                        style="z-index: 1;">
+                        June<span class="d-block">01-09</span>2024
+                      </div>
+                      <a href="{% static '2024/Reports/Germany_02June24.pdf' %}" target="_blank" class="d-block">
+                        <img src="{% static '2024/Reports/CV FOLLOW UP SESSION - 2.jpg' %}"
+                          class="img-fluid rounded " style="margin-top: 60px;" />
+                      </a>
+                    </div> -->
+
+                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4 position-relative">
+                      <!-- <div
+                        class="bg-info-gradiant p-2 text-dark rounded position-absolute top-0 start-50 translate-middle-x"
+                        style="z-index: 1;">
+                        MARCH<span class="d-block">23</span>2024
+                      </div> -->
+                      <div class="mt-5 text-dark rounded position-absolute start-50 translate-middle-x"
+                        style="z-index: 1;">
+                        March 23, 2024
+                      </div>
+                      <a href="{% static '2024/Reports/Germany_02June24.pdf' %}" target="_blank" class="d-block">
+                        <img src="{% static '2024/Reports/INVESTITURE CEREMONY.jpg' %}" class="img-fluid rounded "
+                          style="margin-top: 80px;" />
+                      </a>
                     </div>
+
+                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4 position-relative">
+                      <!-- <div
+                        class="bg-info-gradiant p-2 text-dark rounded position-absolute top-0 start-50 translate-middle-x"
+                        style="z-index: 1;">
+                        June<span class="d-block">01-09</span>2024
+                      </div> -->
+                      <div class="mt-5 text-dark rounded position-absolute start-50 translate-middle-x"
+                        style="z-index: 1;">
+                        June 01-09, 2024
+                      </div>
+                      <a href="{% static '2024/Reports/Germany_02June24.pdf' %}" target="_blank" class="d-block">
+                        <img src="{% static '2024/Reports/STUDENT EXCHANGE PROGRAM.jpg' %}"
+                          class="img-fluid rounded" style="margin-top: 80px;" />
+                      </a>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4 position-relative">
+                      <!-- <div
+                        class="bg-info-gradiant p-2 text-dark rounded position-absolute top-0 start-50 translate-middle-x"
+                        style="z-index: 1;">
+                        June<span class="d-block">29</span>2024
+                      </div> -->
+                      <div class="mt-5 text-dark rounded position-absolute start-50 translate-middle-x"
+                        style="z-index: 1;">
+                        June 29, 2024
+                      </div>
+                      <a href="{% static '2024/Reports/Germany_02June24.pdf' %}" target="_blank" class="d-block">
+                        <img src="{% static '2024/Reports/TRAINING SESSION FOR ST. ANTHONY_S NEW MENTORS.jpg' %}"
+                          class="img-fluid rounded" style="margin-top: 80px;" />
+                      </a>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4 position-relative">
+                      <!-- <div
+                        class="bg-info-gradiant p-2 text-dark rounded position-absolute top-0 start-50 translate-middle-x"
+                        style="z-index: 1;">
+                        JULY<span class="d-block">6</span>2024
+                      </div> -->
+                      <div class="mt-5 text-dark rounded position-absolute start-50 translate-middle-x"
+                        style="z-index: 1;">
+                        July 06, 2024
+                      </div>
+                      <a href="{% static '2024/Reports/Germany_02June24.pdf' %}" target="_blank" class="d-block">
+                        <img src="{% static '2024/Reports/WORKSHOP.jpg' %}" class="img-fluid rounded"
+                          style="margin-top: 80px;" />
+                      </a>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4 position-relative">
+                      <!-- <div
+                        class="bg-info-gradiant p-2 text-dark rounded position-absolute top-0 start-50 translate-middle-x"
+                        style="z-index: 1;">
+                        SEPT<span class="d-block">5</span>2024
+                      </div> -->
+                      <div class="mt-5 text-dark rounded position-absolute start-50 translate-middle-x"
+                        style="z-index: 1;">
+                        September 05, 2024
+                      </div>
+                      <a href="{% static '2024/Reports/Germany_02June24.pdf' %}" target="_blank" class="d-block">
+                        <img src="{% static '2024/Reports/TEACHERS_ DAY 2024.jpg' %}" class="img-fluid rounded"
+                          style="margin-top: 80px;" />
+                      </a>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4 position-relative">
+                      <!-- <div
+                        class="bg-info-gradiant p-2 text-dark rounded position-absolute top-0 start-50 translate-middle-x"
+                        style="z-index: 1;">
+                        SEPT<span class="d-block">10</span>2024
+                      </div> -->
+                      <div class="mt-5 text-dark rounded position-absolute start-50 translate-middle-x"
+                        style="z-index: 1;">
+                        September 10, 2024
+                      </div>
+                      <a href="{% static '2024/Reports/Germany_02June24.pdf' %}" target="_blank" class="d-block">
+                        <img src="{% static '2024/Reports/JAM SESSION.jpg' %}" class="img-fluid rounded"
+                          style="margin-top: 80px;" />
+                      </a>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4 position-relative">
+                      <!-- <div
+                        class="bg-info-gradiant p-2 text-dark rounded position-absolute top-0 start-50 translate-middle-x"
+                        style="z-index: 1;">
+                        SEPT<span class="d-block">11</span>2024
+                      </div> -->
+                      <div class="mt-5 text-dark rounded position-absolute start-50 translate-middle-x"
+                        style="z-index: 1;">
+                        September 11, 2024
+                      </div>
+                      <a href="{% static '2024/Reports/Germany_02June24.pdf' %}" target="_blank" class="d-block">
+                        <img src="{% static '2024/Reports/GOALS AND PRINCIPLES TRAINING SESSION.jpg' %}"
+                          class="img-fluid rounded" style="margin-top: 80px;" />
+                      </a>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4 position-relative">
+                      <!-- <div
+                        class="bg-info-gradiant p-2 text-dark rounded position-absolute top-0 start-50 translate-middle-x"
+                        style="z-index: 1;">
+                        SEPT<span class="d-block">21-22</span>2024
+                      </div> -->
+                      <div class="mt-5 text-dark rounded position-absolute start-50 translate-middle-x"
+                        style="z-index: 1; white-space: nowrap;">
+                        September 21-22, 2024
+                      </div>
+                      <a href="{% static '2024/Reports/Germany_02June24.pdf' %}" target="_blank" class="d-block">
+                        <img src="{% static '2024/Reports/OLT POSTER.jpg' %}" class="img-fluid rounded"
+                          style="margin-top: 80px;" />
+                      </a>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4 position-relative">
+                      <!-- <div
+                        class="bg-info-gradiant p-2 text-dark rounded position-absolute top-0 start-50 translate-middle-x"
+                        style="z-index: 1;">
+                        SEPT<span class="d-block">28</span>2024
+                      </div> -->
+                      <div class="mt-5 text-dark rounded position-absolute start-50 translate-middle-x"
+                        style="z-index: 1;">
+                        September 28, 2024
+                      </div>
+                      <a href="{% static '2024/Reports/Germany_02June24.pdf' %}" target="_blank" class="d-block">
+                        <img src="{% static '2024/Reports/YCLP SESSION - 2ND YEARS .jpg' %}"
+                          class="img-fluid rounded" style="margin-top: 80px;" />
+                      </a>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4 position-relative">
+                      <!-- <div
+                        class="bg-info-gradiant p-2 text-dark rounded position-absolute top-0 start-50 translate-middle-x"
+                        style="z-index: 1;">
+                        SEPT<span class="d-block">30</span>2024
+                      </div> -->
+                      <div class="mt-5 text-dark rounded position-absolute start-50 translate-middle-x"
+                        style="z-index: 1;">
+                        September 30, 2024
+                      </div>
+                      <a href="{% static '2024/Reports/Germany_02June24.pdf' %}" target="_blank" class="d-block">
+                        <img src="{% static '2024/Reports/CV CHAPTER CONNECT.jpg' %}" class="img-fluid rounded"
+                          style="margin-top: 80px;" />
+                      </a>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4 position-relative">
+                      <!-- <div
+                        class="bg-info-gradiant p-2 text-dark rounded position-absolute top-0 start-50 translate-middle-x"
+                        style="z-index: 1;">
+                        SEPT<span class="d-block">30</span>2024
+                      </div> -->
+                      <div class="mt-5 text-dark rounded position-absolute start-50 translate-middle-x"
+                        style="z-index: 1;">
+                        September 30, 2024
+                      </div>
+                      <a href="{% static '2024/Reports/Germany_02June24.pdf' %}" target="_blank" class="d-block">
+                        <img src="{% static '2024/Reports/ST ANTHONY - CHAPTER CONNECT.jpg' %}"
+                          class="img-fluid rounded" style="margin-top: 80px;" />
+                      </a>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4 position-relative">
+                      <!-- <div
+                        class="bg-info-gradiant p-2 text-dark rounded position-absolute top-0 start-50 translate-middle-x"
+                        style="z-index: 1;">
+                        OCT<span class="d-block">7</span>2024
+                      </div> -->
+                      <div class="mt-5 text-dark rounded position-absolute start-50 translate-middle-x"
+                        style="z-index: 1;">
+                        October 07, 2024
+                      </div>
+                      <a href="{% static '2024/Reports/Germany_02June24.pdf' %}" target="_blank" class="d-block">
+                        <img src="{% static '2024/Reports/ST. ANTHONY FOLLOW UP - 1.jpg' %}"
+                          class="img-fluid rounded" style="margin-top: 80px;" />
+                      </a>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4 position-relative">
+                      <!-- <div
+                        class="bg-info-gradiant p-2 text-dark rounded position-absolute top-0 start-50 translate-middle-x"
+                        style="z-index: 1;">
+                        OCT<span class="d-block">25</span>2024
+                      </div> -->
+                      <div class="mt-5 text-dark rounded position-absolute start-50 translate-middle-x"
+                        style="z-index: 1;">
+                        September 25, 2024
+                      </div>
+                      <a href="{% static '2024/Reports/Germany_02June24.pdf' %}" target="_blank" class="d-block">
+                        <img src="{% static '2024/Reports/SA & CV COLLAB MEET.jpg' %}" class="img-fluid rounded"
+                          style="margin-top: 80px;" />
+                      </a>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4 position-relative">
+                      <!-- <div
+                        class="bg-info-gradiant p-2 text-dark rounded position-absolute top-0 start-50 translate-middle-x"
+                        style="z-index: 1;">
+                        NOV<span class="d-block">23</span>2024
+                      </div> -->
+                      <div class="mt-5 text-dark rounded position-absolute start-50 translate-middle-x"
+                        style="z-index: 1;">
+                        November 23, 2024
+                      </div>
+                      <a href="{% static '2024/Reports/Germany_02June24.pdf' %}" target="_blank" class="d-block">
+                        <img src="{% static '2024/Reports/FOLLOW UP 2 ST. ANTHONY.jpg' %}"
+                          class="img-fluid rounded" style="margin-top: 80px;" />
+                      </a>
+                    </div>
+
+
 
                   </div>
                 </div>
               </div>
             </div>
           </div>
-
         </div>
       </div>
     </div>

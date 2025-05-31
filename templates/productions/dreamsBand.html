@@ -2,361 +2,358 @@
 {% load static %}
 
 {% block title %}
-    Dream Band
+Dream Band
 {% endblock %}
 
 {% block extraStyles %}
-    <link rel="stylesheet" href="{% static 'css/dreamsBand.css' %}" type="text/css">
+<link rel="stylesheet" href="{% static 'css/dreamsBand.css' %}" type="text/css">
+<style>
+    .object-fit-cover {
+        object-fit: cover;
+    }
+
+    .t-bq-quote-jasper-text {
+        margin-top: 1.5rem;
+    }
+</style>
 {% endblock extraStyles %}
 
 {% block links %}
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-            crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
 {% endblock links %}
 
 {% block content %}
-    <nav aria-label="breadcrumb animated slideInDown" class="cus-breadcrumb" style="margin-top: 150px; margin-left: 50px;">
-        <ol class="breadcrumb text-uppercase mb-0 bg-white">
-            <li class="breadcrumb-item"><a class="text-black text-decoration-none" href="{% url 'main' %}">Home</a></li>
-            <li class="breadcrumb-item"><a class="text-black text-decoration-none">PRODUCTIONS</a></li>
-            <li class="breadcrumb-item  active" aria-current="page">Dreams Band</li>
-        </ol>
-    </nav>
+<nav aria-label="breadcrumb animated slideInDown" class="cus-breadcrumb" style="margin-top: 150px; margin-left: 50px;">
+    <ol class="breadcrumb text-uppercase mb-0 bg-white">
+        <li class="breadcrumb-item"><a class="text-black text-decoration-none" href="{% url 'main' %}">Home</a></li>
+        <li class="breadcrumb-item"><a class="text-black text-decoration-none">PRODUCTIONS</a></li>
+        <li class="breadcrumb-item  active" aria-current="page">Dreams Band</li>
+    </ol>
+</nav>
 
-    <div class="container">
-        <div class="row mb-5">
-            <div class="col-12">
-                <h1 class=" text-center mt-3 mb-3">DREAMS BAND</h1>
-            </div>
-            <div class="col-lg-8 col-md-12 col-sm-12">
-                <p class="text-justify mt-5 mb-3">
-                    Music the ultimate expression of self. Music is the closest thing
-                    today to divinity. It casts the beauty of the soul and magnifies everything it touches. Not only
-                    a form of self-expression, but also the harbinger of peace and prosperity. Music is the soul’s
-                    way of connecting with God.
-                    Born out of the beautiful vision of the DREAMS program, the DREAMS Band brings together a group
-                    of talented and determined individuals in various location of the DREAMS.
+<div class="container">
+    <div class="row mb-5">
+        <div class="col-12">
+            <h1 class=" text-center mt-3 mb-3">DREAMS BAND</h1>
+        </div>
+        <div class="col-lg-8 col-md-12 col-sm-12">
+            <p class="text-justify mt-5 mb-3">
+                Music the ultimate expression of self. Music is the closest thing
+                today to divinity. It casts the beauty of the soul and magnifies everything it touches. Not only
+                a form of self-expression, but also the harbinger of peace and prosperity. Music is the soul’s
+                way of connecting with God.
+                Born out of the beautiful vision of the DREAMS program, the DREAMS Band brings together a group
+                of talented and determined individuals in various location of the DREAMS.
 
-                </p>
-                <p class="text-justify mb-3">
-                    Project, who wish to make positive changes around them through the power of music. At the core of
-                    the DREAMS Band lies the conviction in the ability of music to transform, educate, and inspire human
-                    beings. Through songs with motivational lyrics and upbeat music, the band attempts to uplift the
-                    spirits of the people, and nurtures a musical garden for holistic development.
-                </p>
-                <p class="text-justify">
-                    Written, composed, performed, and managed by the children in the band, the songs share stories of
-                    values, and success. The children are also supported and guided by the local musicians. The Band
-                    performs one day musical retreats apart from the regular concerts of 1-2 hours’ duration.
-                </p>
-            </div>
+            </p>
+            <p class="text-justify mb-3">
+                Project, who wish to make positive changes around them through the power of music. At the core of
+                the DREAMS Band lies the conviction in the ability of music to transform, educate, and inspire human
+                beings. Through songs with motivational lyrics and upbeat music, the band attempts to uplift the
+                spirits of the people, and nurtures a musical garden for holistic development.
+            </p>
+            <p class="text-justify">
+                Written, composed, performed, and managed by the children in the band, the songs share stories of
+                values, and success. The children are also supported and guided by the local musicians. The Band
+                performs one day musical retreats apart from the regular concerts of 1-2 hours’ duration.
+            </p>
+        </div>
 
 
-            <div class="col-lg-4 col-md-12 col-sm-12">
-                <img src="{% static 'DreamsProgram\StickerLogo.png' %}"
-                     class="img-fluid" alt="">
-            </div>
+        <div class="col-lg-4 col-md-12 col-sm-12">
+            <img src="{% static 'DreamsProgram\StickerLogo.png' %}" class="img-fluid" alt="">
         </div>
     </div>
+</div>
 
-    <div class="container">
-        <div class="row mb-5">
-            <div class="mb-3 fs-3">
-                Events
-                <hr/>
-            </div>
+<div class="container">
+    <div class="row mb-5">
+        <div class="mb-3 fs-3">
+            Events
+            <hr />
+        </div>
 
-            <div class="d-flex align-items-start">
-                <div class="nav flex-column col-2 me-3" id="v-pills-event-1-tab" role="tablist"
-                     aria-orientation="vertical">
-                    <div class="active" id="v-pills-event-0-tab" data-bs-toggle="pill"
-                         data-bs-target="#v-pills-event-0" role="tab" aria-controls="v-pills-event-0"
-                         aria-selected="false">
-                        <div class="fw-bolder">
-                            Louisiana DREAMS Band USA
-                            <hr/>
-                        </div>
+        <div class="d-flex align-items-start">
+            <div class="nav flex-column col-2 me-3" id="v-pills-event-1-tab" role="tablist" aria-orientation="vertical">
+                <div class="active" id="v-pills-event-0-tab" data-bs-toggle="pill" data-bs-target="#v-pills-event-0"
+                    role="tab" aria-controls="v-pills-event-0" aria-selected="false">
+                    <div class="fw-bolder">
+                        Louisiana DREAMS Band USA
+                        <hr />
                     </div>
-                    <div class="" id="v-pills-event-1-tab" data-bs-toggle="pill"
-                         data-bs-target="#v-pills-event-1" role="tab" aria-controls="v-pills-event-1"
-                         aria-selected="true">
-                        <div class="fw-bolder">
-                            Carmel School
-                            <div class="fst-italic fw-lighter fs-6">
-                                January 21, 2023
-                            </div>
-                            <hr/>
-                        </div>
-                    </div>
-                    <div class="" id="v-pills-event-2-tab" data-bs-toggle="pill"
-                         data-bs-target="#v-pills-event-2" role="tab" aria-controls="v-pills-event-2"
-                         aria-selected="false">
-                        <div class="fw-bolder">
-                            Christ University Pune Lavasa Campus
-                            <div class="fst-italic fw-lighter fs-6">
-                                February 17, 2023
-                            </div>
-                            <hr/>
-                        </div>
-                    </div>
-                    <div class="" id="v-pills-event-3-tab" data-bs-toggle="pill"
-                         data-bs-target="#v-pills-event-3" role="tab" aria-controls="v-pills-event-3"
-                         aria-selected="false">
-                        <div class="fw-bolder">
-                            Christ University Bangalore Central Campus
-                            <div class="fst-italic fw-lighter fs-6">
-                                February 26, 2023
-                            </div>
-                            <hr/>
-                        </div>
-                    </div>
-                    <div class="" id="v-pills-event-4-tab" data-bs-toggle="pill"
-                         data-bs-target="#v-pills-event-4" role="tab" aria-controls="v-pills-event-4"
-                         aria-selected="false">
-                        <div class="fw-bolder">
-                            Christ College, Mysore
-                            <div class="fst-italic fw-lighter fs-6">
-                                April 24, 2023
-                            </div>
-                            <hr/>
-                        </div>
-                    </div>
-
                 </div>
-                <div class="tab-content" id="v-pills-tabContent">
-                    <div class="tab-pane fade show active" id="v-pills-event-0" role="tabpanel"
-                         aria-labelledby="v-pills-event-0-tab" tabindex="0">
-                        <div class="fw-bolder fs-4 mb-3 px-3">
-                            Louisiana DREAMS Band USA
+                <div class="" id="v-pills-event-1-tab" data-bs-toggle="pill" data-bs-target="#v-pills-event-1"
+                    role="tab" aria-controls="v-pills-event-1" aria-selected="true">
+                    <div class="fw-bolder">
+                        Carmel School
+                        <div class="fst-italic fw-lighter fs-6">
+                            January 21, 2023
                         </div>
-                        <div class="row m-0">
-                            <div class="col-sm-12 col-md-6">
-                                <div id="louisiana-1" class="carousel slide"
-                                     data-bs-ride="carousel">
-                                    <div class="carousel-inner">
-                                        <div class="carousel-item active">
-                                            <img src="{% static '2024/Band/louisiana/1.png' %}" class="d-block w-100"
-                                                 alt="...">
-                                        </div>
-                                        <div class="carousel-item">
-                                            <img src="{% static '2024/Band/louisiana/2.png' %}" class="d-block w-100"
-                                                 alt="...">
-                                        </div>
-                                    </div>
-                                    <button class="carousel-control-prev" type="button"
-                                            data-bs-target="#louisiana-1" data-bs-slide="prev">
-                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                        <span class="visually-hidden">Previous</span>
-                                    </button>
-                                    <button class="carousel-control-next" type="button"
-                                            data-bs-target="#louisiana-1" data-bs-slide="next">
-                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                        <span class="visually-hidden">Next</span>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="col-sm-12 col-md-6">
-                                <div id="louisiana-2" class="carousel slide"
-                                     data-bs-ride="carousel">
-                                    <div class="carousel-inner">
-                                        <div class="carousel-item active">
-                                            <img src="{% static '2024/Band/louisiana/3.png' %}" class="d-block w-100"
-                                                 alt="...">
-                                        </div>
-                                        <div class="carousel-item">
-                                            <img src="{% static '2024/Band/louisiana/4.png' %}" class="d-block w-100"
-                                                 alt="...">
-                                        </div>
-                                    </div>
-                                    <button class="carousel-control-prev" type="button"
-                                            data-bs-target="#louisiana-2" data-bs-slide="prev">
-                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                        <span class="visually-hidden">Previous</span>
-                                    </button>
-                                    <button class="carousel-control-next" type="button"
-                                            data-bs-target="#louisiana-2" data-bs-slide="next">
-                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                        <span class="visually-hidden">Next</span>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
+                        <hr />
                     </div>
-                    <div class="tab-pane fade" id="v-pills-event-1" role="tabpanel"
-                         aria-labelledby="v-pills-event-1-tab" tabindex="0">
-                        <div class="row g-0">
-                            <div class="col-md-6">
-                                <img src="{% static 'DreamsProgram/band/Dreams-Programme-png.png' %}"
-                                     class="img-fluid" alt="...">
-                            </div>
-                            <div class="col-md-6 px-3">
-                                <div class="card-body">
-                                    <div class="fw-bolder fs-4 mb-3">
-                                        Carmel School
-                                        <span class="fw-normal fs-6">
-                                             January 21, 2023
-                                         </span>
-                                    </div>
+                </div>
+                <div class="" id="v-pills-event-2-tab" data-bs-toggle="pill" data-bs-target="#v-pills-event-2"
+                    role="tab" aria-controls="v-pills-event-2" aria-selected="false">
+                    <div class="fw-bolder">
+                        Christ University Pune Lavasa Campus
+                        <div class="fst-italic fw-lighter fs-6">
+                            February 17, 2023
+                        </div>
+                        <hr />
+                    </div>
+                </div>
+                <div class="" id="v-pills-event-3-tab" data-bs-toggle="pill" data-bs-target="#v-pills-event-3"
+                    role="tab" aria-controls="v-pills-event-3" aria-selected="false">
+                    <div class="fw-bolder">
+                        Christ University Bangalore Central Campus
+                        <div class="fst-italic fw-lighter fs-6">
+                            February 26, 2023
+                        </div>
+                        <hr />
+                    </div>
+                </div>
+                <div class="" id="v-pills-event-4-tab" data-bs-toggle="pill" data-bs-target="#v-pills-event-4"
+                    role="tab" aria-controls="v-pills-event-4" aria-selected="false">
+                    <div class="fw-bolder">
+                        Christ College, Mysore
+                        <div class="fst-italic fw-lighter fs-6">
+                            April 24, 2023
+                        </div>
+                        <hr />
+                    </div>
+                </div>
 
-                                    <p class="text-justify lh-lg">
-                                        DREAMS Band performed at Carmel school, for motivating young students and
-                                        encouraging them, by using music as an instrument. The Band was enthralled to
-                                        interact with them, sharing their own personal experiences, and teaching them
-                                        songs. The students exhibited a keen interest in learning more about music and
-                                        exploring their hidden talents, along with building on their leadership skills
-                                        and honing their potential. The highlight of the day was when the students
-                                        prepared handmade cards as a mark of gratitude and token of appreciation and
-                                        love towards the band, indeed making it a beautiful event.
-                                    </p>
+            </div>
+            <div class="tab-content" id="v-pills-tabContent">
+                <div class="tab-pane fade show active" id="v-pills-event-0" role="tabpanel"
+                    aria-labelledby="v-pills-event-0-tab" tabindex="0">
+                    <div class="fw-bolder fs-4 mb-3 px-3">
+                        Louisiana DREAMS Band USA
+                    </div>
+                    <div class="row m-0">
+                        <div class="col-sm-12 col-md-6">
+                            <div id="louisiana-1" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="{% static '2024/Band/louisiana/1.png' %}" class="d-block w-100"
+                                            alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="{% static '2024/Band/louisiana/2.png' %}" class="d-block w-100"
+                                            alt="...">
+                                    </div>
                                 </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#louisiana-1"
+                                    data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#louisiana-1"
+                                    data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-6">
+                            <div id="louisiana-2" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="{% static '2024/Band/louisiana/3.png' %}" class="d-block w-100"
+                                            alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="{% static '2024/Band/louisiana/4.png' %}" class="d-block w-100"
+                                            alt="...">
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#louisiana-2"
+                                    data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#louisiana-2"
+                                    data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
                             </div>
                         </div>
                     </div>
-                    <div class="tab-pane fade" id="v-pills-event-2" role="tabpanel"
-                         aria-labelledby="v-pills-event-2-tab" tabindex="0">
-                        <div class="row g-0">
-                            <div class="col-md-6">
-                                <img src="{% static 'DreamsProgram/band/2.jpg' %}" class="img-fluid"
-                                     alt="...">
-                            </div>
-                            <div class="col-md-6 px-3">
-                                <div class="card-body">
-                                    <div class="fw-bolder fs-4 mb-3">
-                                        Christ University Pune Lavasa Campus
-                                        <span class="fw-normal fs-6">
-                                             February 17, 2023
-                                         </span>
-                                    </div>
-                                    <p class="text-justify  lh-lg">
-                                        The DREAMS Band from Christ University Central Campus visited the Pune Lavasa
-                                        campus, to perform for the students there. The show was a mega hit, and the band
-                                        got to interact with a new type of audience, making it an invigorating
-                                        experience for them. It was also an opportunity for them to bond together as
-                                        bandmates, which is indeed a significant aspect of working in
-                                        collaboration and cohesiveness. The Student Welfare Office of the Lavasa campus,
-                                        meticulously planned the itinerary for the band members, ensuring a comfortable
-                                        experience, and a refreshing time for them.
-                                    </p>
+                </div>
+                <div class="tab-pane fade" id="v-pills-event-1" role="tabpanel" aria-labelledby="v-pills-event-1-tab"
+                    tabindex="0">
+                    <div class="row g-0">
+                        <div class="col-md-6">
+                            <img src="{% static 'DreamsProgram/band/Dreams-Programme-png.png' %}" class="img-fluid"
+                                alt="...">
+                        </div>
+                        <div class="col-md-6 px-3">
+                            <div class="card-body">
+                                <div class="fw-bolder fs-4 mb-3">
+                                    Carmel School
+                                    <span class="fw-normal fs-6">
+                                        January 21, 2023
+                                    </span>
                                 </div>
+
+                                <p class="text-justify lh-lg">
+                                    DREAMS Band performed at Carmel school, for motivating young students and
+                                    encouraging them, by using music as an instrument. The Band was enthralled to
+                                    interact with them, sharing their own personal experiences, and teaching them
+                                    songs. The students exhibited a keen interest in learning more about music and
+                                    exploring their hidden talents, along with building on their leadership skills
+                                    and honing their potential. The highlight of the day was when the students
+                                    prepared handmade cards as a mark of gratitude and token of appreciation and
+                                    love towards the band, indeed making it a beautiful event.
+                                </p>
                             </div>
                         </div>
                     </div>
-                    <div class="tab-pane fade" id="v-pills-event-3" role="tabpanel"
-                         aria-labelledby="v-pills-event-3-tab" tabindex="0">
-                        <div class="row g-0">
-                            <div class="col-md-4">
-                                <img src="{% static 'DreamsProgram/band/3.jpg' %}" class="img-fluid"
-                                     alt="...">
-                            </div>
-                            <div class="col-md-8 px-3">
-                                <div class="card-body">
-                                    <div class="fw-bolder fs-4 mb-3">
-                                        Christ University Bangalore Central Campus
-                                        <br/>
-                                        <span class="fw-normal fs-6">
-                                            February 26, 2023
-                                         </span>
-                                    </div>
-                                    <p class="text-justify  lh-lg">
-                                        The Let Us Dream community, celebrated the Dreams Annual Day, which was a
-                                        getting together of students from various chapters across Bengaluru. The DREAMS
-                                        Band was invited to culminate the programme with an enthralling performance, in
-                                        front of an esteemed audience of parents, mentors, mentees etc. Members of the
-                                        band put across an engaging concert, by performing songs in various languages,
-                                        which exhilarated the young students, who were happy to dance on the beats of
-                                        the carnivalesque. The band performance also featured a young girl,
-                                        who volunteered to come forward and perform with the band, giving her an
-                                        opportunity to exhibit her skills. The band members also depicted their roots,
-                                        by being decked up in traditional Indian attire and costumes.
-                                    </p>
+                </div>
+                <div class="tab-pane fade" id="v-pills-event-2" role="tabpanel" aria-labelledby="v-pills-event-2-tab"
+                    tabindex="0">
+                    <div class="row g-0">
+                        <div class="col-md-6">
+                            <img src="{% static 'DreamsProgram/band/2.jpg' %}" class="img-fluid" alt="...">
+                        </div>
+                        <div class="col-md-6 px-3">
+                            <div class="card-body">
+                                <div class="fw-bolder fs-4 mb-3">
+                                    Christ University Pune Lavasa Campus
+                                    <span class="fw-normal fs-6">
+                                        February 17, 2023
+                                    </span>
                                 </div>
+                                <p class="text-justify  lh-lg">
+                                    The DREAMS Band from Christ University Central Campus visited the Pune Lavasa
+                                    campus, to perform for the students there. The show was a mega hit, and the band
+                                    got to interact with a new type of audience, making it an invigorating
+                                    experience for them. It was also an opportunity for them to bond together as
+                                    bandmates, which is indeed a significant aspect of working in
+                                    collaboration and cohesiveness. The Student Welfare Office of the Lavasa campus,
+                                    meticulously planned the itinerary for the band members, ensuring a comfortable
+                                    experience, and a refreshing time for them.
+                                </p>
                             </div>
                         </div>
                     </div>
-                    <div class="tab-pane fade" id="v-pills-event-4" role="tabpanel"
-                         aria-labelledby="v-pills-event-4-tab" tabindex="0">
-                        <div class="row g-0">
-                            <div class="col-md-6">
-                                <img src="{% static 'DreamsProgram/band/4.jpg' %}" class="img-fluid"
-                                     alt="...">
-                            </div>
-                            <div class="col-md-6 mt-3 px-3">
-                                <div class="card-body">
-                                    <div class="fw-bolder fs-4 mb-3">
-                                        Christ College, Mysore
-                                        <span class="fw-normal fs-6">
-                                            April 24,2023
-                                         </span>
-                                    </div>
-                                    <p class="text-justify  lh-lg">
-                                        DREAMS Band, from the Christ University Central Campus, visited Christ College,
-                                        Mysore on April 24, 2023, to perform for the students of the college. The
-                                        members of the band had planned a beautiful performance, and had a great time
-                                        performing there, despite any minute challenges, overcoming together. It was the
-                                        first time for the students of that college, witnessing any such live
-                                        performance on their campus, making it a special time for both them, and
-                                        the band. The students and the band interacted well, and had an enriching and
-                                        fun experience.
-                                    </p>
+                </div>
+                <div class="tab-pane fade" id="v-pills-event-3" role="tabpanel" aria-labelledby="v-pills-event-3-tab"
+                    tabindex="0">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="{% static 'DreamsProgram/band/3.jpg' %}" class="img-fluid" alt="...">
+                        </div>
+                        <div class="col-md-8 px-3">
+                            <div class="card-body">
+                                <div class="fw-bolder fs-4 mb-3">
+                                    Christ University Bangalore Central Campus
+                                    <br />
+                                    <span class="fw-normal fs-6">
+                                        February 26, 2023
+                                    </span>
                                 </div>
+                                <p class="text-justify  lh-lg">
+                                    The Let Us Dream community, celebrated the Dreams Annual Day, which was a
+                                    getting together of students from various chapters across Bengaluru. The DREAMS
+                                    Band was invited to culminate the programme with an enthralling performance, in
+                                    front of an esteemed audience of parents, mentors, mentees etc. Members of the
+                                    band put across an engaging concert, by performing songs in various languages,
+                                    which exhilarated the young students, who were happy to dance on the beats of
+                                    the carnivalesque. The band performance also featured a young girl,
+                                    who volunteered to come forward and perform with the band, giving her an
+                                    opportunity to exhibit her skills. The band members also depicted their roots,
+                                    by being decked up in traditional Indian attire and costumes.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="v-pills-event-4" role="tabpanel" aria-labelledby="v-pills-event-4-tab"
+                    tabindex="0">
+                    <div class="row g-0">
+                        <div class="col-md-6">
+                            <img src="{% static 'DreamsProgram/band/4.jpg' %}" class="img-fluid" alt="...">
+                        </div>
+                        <div class="col-md-6 mt-3 px-3">
+                            <div class="card-body">
+                                <div class="fw-bolder fs-4 mb-3">
+                                    Christ College, Mysore
+                                    <span class="fw-normal fs-6">
+                                        April 24,2023
+                                    </span>
+                                </div>
+                                <p class="text-justify  lh-lg">
+                                    DREAMS Band, from the Christ University Central Campus, visited Christ College,
+                                    Mysore on April 24, 2023, to perform for the students of the college. The
+                                    members of the band had planned a beautiful performance, and had a great time
+                                    performing there, despite any minute challenges, overcoming together. It was the
+                                    first time for the students of that college, witnessing any such live
+                                    performance on their campus, making it a special time for both them, and
+                                    the band. The students and the band interacted well, and had an enriching and
+                                    fun experience.
+                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
         </div>
+
     </div>
+</div>
 
-    <div class="container mt-3 mb-5">
-        <div class="row">
+<div class="container mt-3 mb-5">
+    <div class="row">
 
-            <div class="text-uppercase mb-3 fs-3">
-                Video Gallery
-                <hr/>
-            </div>
+        <div class="text-uppercase mb-3 fs-3">
+            Video Gallery
+            <hr />
+        </div>
 
-            <div class="col-12 mb-4 mt-2">
-                <div class="gallery">
-                    <div>
-                        <iframe src="https://www.youtube.com/embed/Ux9nD9YuGv0" allowfullscreen frameborder="0"
-                                name="tab"></iframe>
-                    </div>
-                    <div>
+        <div class="col-12 mb-4 mt-2">
+            <div class="gallery">
+                <div>
+                    <iframe src="https://www.youtube.com/embed/Ux9nD9YuGv0" allowfullscreen frameborder="0"
+                        name="tab"></iframe>
+                </div>
+                <div>
                     <span>
-                    <a href="https://www.youtube.com/embed/Ux9nD9YuGv0" target="tab">
-                        <img src="https://img.youtube.com/vi/Ux9nD9YuGv0/default.jpg" alt="">
-                    </a>
-                    <a href="https://www.youtube.com/embed/E9i2R2aZ-x8" target="tab">
-                        <img src="https://img.youtube.com/vi/E9i2R2aZ-x8/default.jpg" alt="">
-                    </a>
-                    <a href="https://www.youtube.com/embed/m4I74ChX-J8" target="tab">
-                        <img src="https://img.youtube.com/vi/m4I74ChX-J8/default.jpg" alt="">
-                    </a>
-                    <a href="https://www.youtube.com/embed/FlVEeAIWCo0" target="tab">
-                        <img src="https://img.youtube.com/vi/FlVEeAIWCo0/default.jpg" alt="">
-                    </a>
-                    <a href="https://www.youtube.com/embed/LfzJvlfVmOc" target="tab">
-                        <img src="https://img.youtube.com/vi/LfzJvlfVmOc/default.jpg" alt="">
-                    </a>
-                    <a href="https://www.youtube.com/embed/7yjVTzgK030" target="tab">
-                        <img src="https://img.youtube.com/vi/7yjVTzgK030/default.jpg" alt="">
-                    </a>
-                    <a href="https://www.youtube.com/embed/ZggPjSqBT7k" target="tab">
-                        <img src="https://img.youtube.com/vi/ZggPjSqBT7k/default.jpg" alt="">
-                    </a>
-                    <a href="https://www.youtube.com/embed/jw_64W0Ygx4" target="tab">
-                        <img src="https://img.youtube.com/vi/jw_64W0Ygx4/default.jpg" alt="">
-                    </a>
+                        <a href="https://www.youtube.com/embed/Ux9nD9YuGv0" target="tab">
+                            <img src="https://img.youtube.com/vi/Ux9nD9YuGv0/default.jpg" alt="">
+                        </a>
+                        <a href="https://www.youtube.com/embed/E9i2R2aZ-x8" target="tab">
+                            <img src="https://img.youtube.com/vi/E9i2R2aZ-x8/default.jpg" alt="">
+                        </a>
+                        <a href="https://www.youtube.com/embed/m4I74ChX-J8" target="tab">
+                            <img src="https://img.youtube.com/vi/m4I74ChX-J8/default.jpg" alt="">
+                        </a>
+                        <a href="https://www.youtube.com/embed/FlVEeAIWCo0" target="tab">
+                            <img src="https://img.youtube.com/vi/FlVEeAIWCo0/default.jpg" alt="">
+                        </a>
+                        <a href="https://www.youtube.com/embed/LfzJvlfVmOc" target="tab">
+                            <img src="https://img.youtube.com/vi/LfzJvlfVmOc/default.jpg" alt="">
+                        </a>
+                        <a href="https://www.youtube.com/embed/7yjVTzgK030" target="tab">
+                            <img src="https://img.youtube.com/vi/7yjVTzgK030/default.jpg" alt="">
+                        </a>
+                        <a href="https://www.youtube.com/embed/ZggPjSqBT7k" target="tab">
+                            <img src="https://img.youtube.com/vi/ZggPjSqBT7k/default.jpg" alt="">
+                        </a>
+                        <a href="https://www.youtube.com/embed/jw_64W0Ygx4" target="tab">
+                            <img src="https://img.youtube.com/vi/jw_64W0Ygx4/default.jpg" alt="">
+                        </a>
                     </span>
-                    </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
 
-    <div class="container mt-5">
+<!-- <div class="container mt-5">
         <div class="row">
             <div class=" text-uppercase mb-4 fs-3 fw-bolder">
                 testimonials
@@ -434,6 +431,80 @@
                 </section>
             </div>
         </div>
+    </div> -->
+<div class="container mt-5">
+    <div class="row">
+        <div class="text-uppercase mb-4 fs-3 fw-bolder">
+            testimonials
+            <hr />
+        </div>
+        <div class="col-md-6 mb-4">
+            <section class="t-bq-section blog-home2" id="jasper">
+                <div class="t-bq-wrapper t-bq-wrapper-boxed">
+                    <div class="t-bq-quote t-bq-quote-jasper">
+                        <div class="t-bq-quote-jasper-pattern">
+                            <div class="t-bq-quote-jasper-qmark">
+                                &#10077;
+                            </div>
+                        </div>
+                        <div class="t-bq-quote-jasper-userpic ratio ratio-1x1 w-25 mx-auto">
+                            <img src="{% static 'testimonial/AbhishikithGeorge.jpg' %}"
+                                class="img-fluid rounded-circle object-fit-cover" alt="John">
+                        </div>
+                        <div class="t-bq-quote-jasper-base" id="testimonial">
+                            <blockquote class="t-bq-quote-jasper-text" cite="Strugatsky Brothers">
+                                DREAMS Band is a group of budding musicians coming together for one vision and
+                                mission to empower the society and holistically grow others around using music
+                                as an effective tool.
+                            </blockquote>
+                            <div class="t-bq-quote-jasper-meta">
+                                <div class="t-bq-quote-jasper-meta-info">
+                                    <div class="t-bq-quote-jasper-author">
+                                        John
+                                    </div>
+                                    <div class="t-bq-quote-jasper-source">
+                                        Choir Director
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="col-md-6 mb-4">
+            <section class="t-bq-section blog-home2" id="jasper">
+                <div class="t-bq-wrapper t-bq-wrapper-boxed">
+                    <div class="t-bq-quote t-bq-quote-jasper">
+                        <div class="t-bq-quote-jasper-pattern">
+                            <div class="t-bq-quote-jasper-qmark">
+                                &#10077;
+                            </div>
+                        </div>
+                        <div class="t-bq-quote-jasper-userpic ratio ratio-1x1 w-25 mx-auto">
+                            <img src="{% static 'testimonial/IbinRigia.jpeg' %}"
+                                class="img-fluid rounded-circle object-fit-cover" alt="Rigia">
+                        </div>
+                        <div class="t-bq-quote-jasper-base" id="testimonial">
+                            <blockquote class="t-bq-quote-jasper-text" cite="Strugatsky Brothers">
+                                Being part of the dreams band for me was a journey of self-discovery and
+                                holistic growth. It didn't only help me improve my musical abilities...
+                            </blockquote>
+                            <div class="t-bq-quote-jasper-meta">
+                                <div class="t-bq-quote-jasper-meta-info">
+                                    <div class="t-bq-quote-jasper-author">
+                                        Rigia
+                                    </div>
+                                    <div class="t-bq-quote-jasper-source">
+                                        Mental health advocate
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
     </div>
-
+</div>
 {% endblock %}

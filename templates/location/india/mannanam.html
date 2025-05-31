@@ -12,9 +12,11 @@ Mannanam
 {% block links %}
 
 
-<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css' type="text/css">
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css'
+    type="text/css">
 <!-- Font Awesome -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" type="text/css"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"
+    type="text/css" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <!-- MDB -->
 {% endblock links %}
@@ -23,11 +25,13 @@ Mannanam
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <section class="changacherry-loc">
 
-    <nav aria-label="breadcrumb animated slideInDown" class="cus-breadcrumb" style="margin-top: 150px; margin-left: 50px;">
+    <nav aria-label="breadcrumb animated slideInDown" class="cus-breadcrumb"
+        style="margin-top: 150px; margin-left: 50px;">
         <ol class="breadcrumb text-uppercase mb-0 bg-white">
 
             <li class="breadcrumb-item"><a class="text-black text-decoration-none" href="{% url 'main' %}">Home</a></li>
-            <li class="breadcrumb-item"><a class="text-black text-decoration-none" href="{% url 'main' %}#location">India</a></li>
+            <li class="breadcrumb-item"><a class="text-black text-decoration-none"
+                    href="{% url 'main' %}#location">India</a></li>
 
             <li class="breadcrumb-item  active" aria-current="page">Mannanam</li>
         </ol>
@@ -126,17 +130,15 @@ Mannanam
 
                                             <img src="{% static 'locations/mannanam/MANNANAM.png'%}" alt="mannanam"
                                                 height="400" width="400" class="pt-5 w-100 h-auto">
-                                           <a href="{% url 'registration_user' %}"> <button type="button" class="btn-2 mt-5">Join Us</button></a>
+                                            <a href="{% url 'registration_user' %}"> <button type="button"
+                                                    class="btn-2 mt-5">Join Us</button></a>
                                             &nbsp;&nbsp;&nbsp;
                                             <a href="{% url 'main' %}#location"><button type="button"
-                                                class="btn-2 mt-5">Our Location</button></a>
+                                                    class="btn-2 mt-5">Our Location</button></a>
                                         </div>
 
                                     </div>
                                 </div>
-
-
-
 
                             </div>
                             <div id="band" role="tabpanel" aria-labelledby="band-tab" class="tab-pane fade px-4 py-5">
@@ -167,12 +169,11 @@ Mannanam
 
                                             <img src="{% static 'locations/band.webp' %}" alt="mannanam" height="400"
                                                 width="400" sclass="pt-5 w-100 h-auto">
-
                                         </div>
                                     </div>
                                 </div>
-
                             </div>
+
                             <div id="proclub" role="tabpanel" aria-labelledby="proclub-tab"
                                 class="tab-pane fade px-4 py-5">
                                 <div class="container-fluid">
@@ -205,34 +206,29 @@ Mannanam
 
                                             <img src="{% static 'locations/proclub.png' %}" alt="mannanam" height="400"
                                                 width="400" class="w-100 h-auto">
-
                                         </div>
                                     </div>
                                 </div>
-
-
                             </div>
                         </div>
                         <!-- End lined tabs -->
                     </div>
-
                 </div>
-
             </div>
         </div>
     </div>
+
     <div class="container">
         <div class="row">
             {% include 'partials/_countDetails.html' %}
 
-        
-            <div class="col-lg-12 m-5 p-5">
+            <div class="col-lg-12">
                 <!-- Modal gallery -->
                 <section class="">
                     <!-- Section: Images -->
                     <section class="">
                         <div class="row">
-                            <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+                            <div class="col-lg-4 col-md-12 mb-4">
                                 <div class="bg-image hover-overlay ripple shadow-1-strong rounded min-hieght-240"
                                     data-ripple-color="light">
 
@@ -333,67 +329,65 @@ Mannanam
         </div>
     </div>
     <!-- social media -->
+
     <div class="container">
-        <div class="row mt-5 p-5">
-
-
-            <div class="col-lg-6 hover-zoomin p-5">
-                <a href="https://www.facebook.com/groups/684244505701342/" title="" target="_blank">
-                    <img src="{% static 'locations/mannanam/Mannanam-Facebook.jpg'%}" alt="" />
-                </a>
-                <h4 class="text-center mt-3 text-green">MANNANAM FB GROUP</h4>
+        <div class="row md-5 p-lg-5">
+            <div class="col-lg-6">
+                <div class="ratio ratio-16x9 overflow-hidden rounded-3 hover-zoomin">
+                    <a href="https://www.facebook.com/groups/684244505701342/" title="" target="_blank"
+                        class="d-block h-100">
+                        <img src="{% static 'locations/mannanam/Mannanam-Facebook.jpg'%}" alt="Mannanam Facebook Group"
+                            class="img-fluid object-fit-cover w-100 h-100" />
+                    </a>
+                </div>
+                <h4 class="text-center mt-3">MANNANAM FB GROUP</h4>
             </div>
 
-            <div class="col-lg-6 hover-zoomin p-5">
-                <a href="{% url 'photo-gallery' %}#popup3" title="">
-                    <img src="{% static 'locations/mannanam/Mannanam-Gallery.jpg'%}" alt="" />
-                </a>
+            <div class="col-lg-6">
+                <div class="ratio ratio-16x9 overflow-hidden rounded-3 hover-zoomin">
+                    <a href="{% url 'photo-gallery' %}#popup3" title="" class="d-block h-100">
+                        <img src="{% static 'locations/mannanam/Mannanam-Gallery.jpg'%}"
+                            class="img-fluid object-fit-cover w-100 h-100" alt="Mannanam Gallery" />
+                    </a>
+                </div>
                 <h4 class="text-center mt-3 text-green">MANNANAM GALLERY</h4>
             </div>
         </div>
     </div>
+
     <!-- Speaker -->
-    <div class="container">
+    <!-- <div class="container">
         <div class="row text-center">
 
             <h1 class="text-green text-center my-5 text-uppercase fw-bold">
                 Conference Chairs
             </h1>
 
-            <!-- Team item -->
             <div class="col-xl-3 col-sm-6 mb-5">
                 <div class="bg-white rounded shadow-sm py-5 px-4 min-height"><img
                         src="{% static 'locations/cologne/default.png'%}" alt="" width="100" height="100"
                         class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
-                    <h5 class="mb-0">Mr. Reji</h5><span class="small text-uppercase text-muted">PRO -
-                        CLUB</span>
-
+                    <h5 class="mb-0">Mr. Reji</h5><span class="small text-uppercase text-muted">PRO-CLUB</span>
                 </div>
-            </div><!-- End -->
+            </div>
 
-            <!-- Team item -->
             <div class="col-xl-3 col-sm-6 mb-5">
                 <div class="bg-white rounded shadow-sm py-5 px-4 min-height"><img
                         src="{% static 'locations/cologne/default.png'%}" alt="" width="100"
                         class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
-                    <h5 class="mb-0">Adv. Vincent</h5><span class="small text-uppercase text-muted">PRO - CLUB</span>
-
-
+                    <h5 class="mb-0">Adv. Vincent</h5><span class="small text-uppercase text-muted">PRO -
+                        CLUB</span>
                 </div>
-            </div><!-- End -->
+            </div>
 
-            <!-- Team item -->
             <div class="col-xl-3 col-sm-6 mb-5">
                 <div class="bg-white rounded shadow-sm py-5 px-4 min-height"><img
                         src="{% static 'locations/cologne/default.png'%}" alt="" width="100"
                         class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
                     <h5 class="mb-0">Mr. George</h5><span class="small text-uppercase text-muted">PRO -
                         CLUB</span>
-
                 </div>
             </div>
-            <!-- End -->
-            <!-- Team item -->
             <div class="col-xl-3 col-sm-6 mb-5">
                 <div class="bg-white rounded shadow-sm py-5 px-4 min-height"><img
                         src="{% static 'locations/cologne/default.png' %}" alt="" width="100"
@@ -402,28 +396,18 @@ Mannanam
                         CLUB</span>
                 </div>
             </div>
-            <!-- End -->
         </div>
 
-
         <div class="row text-center">
-
-
-
-            <!-- Team item -->
             <div class="col-xl-3 col-sm-6 mb-5">
                 <div class="bg-white rounded shadow-sm py-5 px-4 min-height"><img
                         src="{% static 'locations/cologne/default.png' %}" alt="" width="100"
                         class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
                     <h5 class="mb-0">Ms. Harsha</h5><span class="small text-uppercase text-muted">PRO -
                         CLUB</span>
-
-
                 </div>
             </div>
-            <!-- End -->
 
-            <!-- Team item -->
             <div class="col-xl-3 col-sm-6 mb-5">
                 <div class="bg-white rounded shadow-sm py-5 px-4 min-height"><img
                         src="{% static 'locations/cologne/default.png' %}" alt="" width="100"
@@ -433,73 +417,73 @@ Mannanam
 
                 </div>
             </div>
-            <!-- End -->
-            <!-- Team item -->
             <div class="col-xl-3 col-sm-6 mb-5">
                 <div class="bg-white rounded shadow-sm py-5 px-4 min-height"><img
                         src="{% static 'locations/cologne/default.png' %}" alt="" width="100"
                         class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
                     <h5 class="mb-0">Mr. Jithu</h5><span class="small text-uppercase text-muted">PRO -
                         CLUB</span>
-
                 </div>
             </div>
-            <!-- End -->
-
-
-            <!-- Team item -->
-
-            <!-- End -->
         </div>
-
-
-    </div>
+    </div> -->
     {% include 'partials/_testimonials.html' %}
 
     <!-- contact us -->
-
     <div class="contact_info">
         <div class="container">
             <div class="row">
-                <h1 class="text-center text-green mb-5">Connect us</h1>
-                <div class="col-lg-10 offset-lg-1">
-                    <div
-                        class="contact_info_container d-flex flex-lg-row flex-column justify-content-between align-items-center mb-5">
+                <h1 class="text-center mb-4 mb-lg-5">Connect With Us</h1>
+                <div class="col-12">
+                    <div class="row row-cols-1 row-cols-lg-3 g-3 g-lg-4 mb-4">
 
                         <!-- Contact Item -->
-                        <div class="contact_info_item d-flex flex-row align-items-center justify-content-start">
-                            <div class="contact_info_image"><img
-                                    src="https://img.icons8.com/office/24/000000/iphone.png" alt=""></div>
-                            <div class="contact_info_content text-black">
-                                <div class="contact_info_title">Phone</div>
-                                <div class="contact_info_text">
-                                    <!-- contact number -->
+                        <div class="col">
+                            <div class="d-flex align-items-center h-100">
+                                <div class="me-2 me-lg-3">
+                                    <img src="https://img.icons8.com/office/24/000000/iphone.png" width="24" height="24"
+                                        alt="phone">
+                                </div>
+                                <div>
+                                    <div class="fw-bold fs-6 fs-lg-5">Phone</div>
+                                    <div class="text-muted fs-6">
+                                        <!-- phone no  -->
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Contact Item -->
-                        <div class="contact_info_item d-flex flex-row align-items-center justify-content-start">
-                            <div class="contact_info_image"><img
-                                    src="https://img.icons8.com/ultraviolet/24/000000/filled-message.png" alt=""></div>
-                            <div class="contact_info_content text-black fs-bold">
-                                <div class="contact_info_title">Email</div>
-                                <div class="contact_info_text"><a class="text-decoration-none text-black"
-                                        href="mailto:mannanam@letusdream.org"> mannanam@letusdream.org</a></div>
+
+                        <!-- email -->
+                        <div class="col">
+                            <div class="d-flex align-items-center h-100">
+                                <div class="me-2 me-lg-3">
+                                    <img src="https://img.icons8.com/ultraviolet/24/000000/filled-message.png"
+                                        width="24" height="24" alt="email">
+                                </div>
+                                <div>
+                                    <div class="fw-bold fs-6 fs-lg-5">Email</div>
+                                    <a class="text-decoration-none text-muted fs-6"
+                                        href="mailto:mannanam@letusdream.org"> mannanam@letusdream.org</a>
+                                </div>
                             </div>
                         </div>
 
-                        <!-- Contact Item -->
-                        <div class="contact_info_item d-flex flex-row align-items-center justify-content-start">
-                            <div class="contact_info_image"><img
-                                    src="https://img.icons8.com/ultraviolet/24/000000/map-marker.png" alt=""></div>
-                            <div class="contact_info_content text-black">
-                                <div class="contact_info_title">Address</div>
-                                <div class="contact_info_text text-black fw-semibold">KE English Medium school,
-                                    Mannanam, Kottayam, Kerala 686561.</div>
+                        <!-- address -->
+                        <div class="col">
+                            <div class="d-flex align-items-center h-100">
+                                <div class="me-2 me-lg-3">
+                                    <img src="https://img.icons8.com/ultraviolet/24/000000/map-marker.png" width="24"
+                                        height="24" alt="Address">
+                                </div>
+                                <div class="w-100">
+                                    <div class="fw-bold fs-6 fs-lg-5">Address</div>
+                                    <div class="text-muted fs-6 text-wrap">KE English Medium school,<br>
+                                        Mannanam, Kottayam, Kerala 686561.
+                                    </div>
+                                </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>

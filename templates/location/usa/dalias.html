@@ -12,9 +12,11 @@ DALLAS
 {% block links %}
 
 
-<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css' type="text/css">
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css'
+    type="text/css">
 <!-- Font Awesome -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" type="text/css"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"
+    type="text/css" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <!-- MDB -->
 
@@ -25,16 +27,16 @@ DALLAS
 
     <nav aria-label="breadcrumb animated slideInDown" class="cus-breadcrumb">
         <ol class="breadcrumb text-uppercase mb-0 bg-white" style="margin-top: 150px; margin-left: 50px;">
-           
-                <li class="breadcrumb-item"><a class="text-black text-decoration-none" href="{% url 'main' %}">Home</a>
-                </li>
-             
-                <li class="breadcrumb-item"><a class="text-black text-decoration-none"
-                        href="{% url 'main' %}#location">USA</a></li>
-                <li class="breadcrumb-item  active" aria-current="page">DALLAS</li>
+
+            <li class="breadcrumb-item"><a class="text-black text-decoration-none" href="{% url 'main' %}">Home</a>
+            </li>
+
+            <li class="breadcrumb-item"><a class="text-black text-decoration-none"
+                    href="{% url 'main' %}#location">USA</a></li>
+            <li class="breadcrumb-item  active" aria-current="page">DALLAS</li>
         </ol>
     </nav>
-    <h1 class="mb-4  fw-bold text-center fs-1 text-green text-uppercase heading-h3 mt-5"> DALLAS, Texas, USA</h1>
+    <h1 class="mb-4 fw-bold text-center fs-1 text-green text-uppercase heading-h3 mt-5"> DALLAS, Texas, USA</h1>
     <div class="container dreams-tab">
         <div class="row">
             <div class="col-lg-12">
@@ -135,16 +137,11 @@ DALLAS
                                             &nbsp;&nbsp;&nbsp;
                                             <a href="{% url 'main' %}#location"><button type="button"
                                                     class="btn-2 mt-5">Our Location</button></a>
-
                                         </div>
-
                                     </div>
                                 </div>
-
-
-
-
                             </div>
+
                             <div id="band" role="tabpanel" aria-labelledby="band-tab" class="tab-pane fade px-4 py-5">
 
                                 <div class="container-fluid">
@@ -211,30 +208,25 @@ DALLAS
                                         </div>
                                     </div>
                                 </div>
-
-
                             </div>
                         </div>
                         <!-- End lined tabs -->
                     </div>
-
                 </div>
-
             </div>
         </div>
     </div>
+
     <div class="container">
         <div class="row">
-            
             {% include 'partials/_countDetails.html' %}
-     
-            <div class="col-lg-12 m-5 p-5">
+            <div class="col-lg-12">
                 <!-- Modal gallery -->
                 <section class="">
                     <!-- Section: Images -->
                     <section class="">
                         <div class="row">
-                            <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+                            <div class="col-lg-4 col-md-12">
                                 <div class="bg-image hover-overlay ripple shadow-1-strong rounded min-hieght-240"
                                     data-ripple-color="light">
 
@@ -334,189 +326,130 @@ DALLAS
             </div>
         </div>
     </div>
+
     <!-- social media -->
     <div class="container">
-        <div class="row mt-5 p-5">
-
-
-            <div class="col-lg-6 hover-zoomin p-5">
-                <a href="https://www.facebook.com/groups/572930186985919/" title="" target="_blank">
-                    <img src="{% static 'locations/dallas/Dallas-FB.jpg'%}" alt="" />
-                </a>
+        <div class="row md-5 p-lg-5">
+            <div class="col-lg-6">
+                <div class="ratio ratio-16x9 overflow-hidden rounded-3 hover-zoomin">
+                    <a href="https://www.facebook.com/groups/572930186985919/" title="" target="_blank"
+                        class="d-block h-100">
+                        <img src="{% static 'locations/dallas/Dallas-FB.jpg'%}" alt="Dallas Facebook Group"
+                            class="img-fluid object-fit-cover w-100 h-100" />
+                    </a>
+                </div>
                 <h4 class="text-center mt-3 text-green">DALLAS FB GROUP</h4>
             </div>
 
-            <div class="col-lg-6 hover-zoomin p-5">
-                <a href="{% url 'photo-gallery' %}#popup7" title="">
-                    <img src="{% static 'locations/dallas/dreams-dallas-gallery.jpg'%}" alt="" />
-                </a>
+            <div class="col-lg-6">
+                <div class="ratio ratio-16x9 overflow-hidden rounded-3 hover-zoomin">
+                    <a href="{% url 'photo-gallery' %}#popup7" title="" class="d-block h-100">
+                        <img src="{% static 'locations/dallas/dreams-dallas-gallery.jpg'%}"
+                            class="img-fluid object-fit-cover w-100 h-100" alt="Dallas Gallery" />
+                    </a>
+                </div>
                 <h4 class="text-center mt-3 text-green">DALLAS GALLERY</h4>
             </div>
         </div>
     </div>
+
     <!-- Speaker -->
-    <div class="container">
+    <!-- <div class="container">
         <div class="row text-center">
 
             <h1 class="text-green text-center my-5 text-uppercase fw-bold">
                 Conference Chairs
             </h1>
-
-            <!-- Team item -->
             <div class="col-xl-3 col-sm-6 mb-5">
                 <div class="bg-white rounded shadow-sm py-5 px-4 min-height"><img
                         src="{% static 'locations/dallas/default.png'%}" alt="" width="100"
                         class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
                     <h5 class="mb-0">Mr Shaji Thomas
                     </h5><span class="small text-uppercase text-muted">
-                        <!-- job title-->
                     </span>
-
                 </div>
-            </div><!-- End -->
-
-            <!-- Team item -->
+            </div>
             <div class="col-xl-3 col-sm-6 mb-5">
                 <div class="bg-white rounded shadow-sm py-5 px-4 min-height"><img
                         src="{% static 'locations/dallas/Jacob-Mathew-160x160.jpeg'%}" alt="" width="100"
                         class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
                     <h5 class="mb-0">Mr Jacob Mathew</h5><span class="small text-uppercase text-muted">
-                        <!-- job title-->
                     </span>
-
                 </div>
-            </div><!-- End -->
-
-            <!-- Team item -->
+            </div>
             <div class="col-xl-3 col-sm-6 mb-5">
                 <div class="bg-white rounded shadow-sm py-5 px-4 min-height"><img
                         src="{% static 'locations/dallas/Angela-Thomas-Band-Leader.jpeg-160x160.jpg'%}" alt=""
                         width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
                     <h5 class="mb-0">Ms. Angela Shaji</h5><span class="small text-uppercase text-muted">
-                        <!-- job title-->
                     </span>
-
                 </div>
             </div>
-            <!-- End -->
-            <!-- Team item -->
             <div class="col-xl-3 col-sm-6 mb-5">
                 <div class="bg-white rounded shadow-sm py-5 px-4 min-height"><img
                         src="{% static 'locations/dallas/default.png'%}" alt="" width="100"
                         class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
                     <h5 class="mb-0">Mr Johnson Kuriakose </h5><span class="small text-uppercase text-muted">
-                        <!-- job title-->
                     </span>
-
                 </div>
             </div>
-            <!-- End -->
         </div>
-
-
         <div class="row text-center">
-
-
-
-            <!-- Team item -->
             <div class="col-xl-3 col-sm-6 mb-5">
                 <div class="bg-white rounded shadow-sm py-5 px-4 min-height"><img
                         src="{% static 'locations/dallas/Shaji-Thomas-160x160.jpg'%}" alt="" width="100"
                         class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
                     <h5 class="mb-0">Mr. Shaji Thomas
                     </h5><span class="small text-uppercase text-muted">
-                        <!-- job title-->
                     </span>
-
                 </div>
             </div>
-            <!-- End -->
-
-
-            <!-- Team item -->
             <div class="col-xl-3 col-sm-6 mb-5">
                 <div class="bg-white rounded shadow-sm py-5 px-4 min-height"><img
                         src="{% static 'locations/dallas/Leon-Tharakan-DREAMS-Youth-President-160x160.jpg'%}" alt=""
                         width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
                     <h5 class="mb-0">Mr Leon Tharakan
                     </h5><span class="small text-uppercase text-muted">
-                        <!-- job title-->
                     </span>
-
                 </div>
             </div>
-            <!-- End -->
-
-            <!-- Team item -->
             <div class="col-xl-3 col-sm-6 mb-5">
                 <div class="bg-white rounded shadow-sm py-5 px-4 min-height"><img
                         src="{% static 'locations/dallas/default.png'%}" alt="" width="100"
                         class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
                     <h5 class="mb-0">Mr. Sujan Tharakan</h5><span class="small text-uppercase text-muted">
-                        <!-- job title-->
                     </span>
-
                 </div>
             </div>
-            <!-- End -->
-
-            <!-- Team item -->
             <div class="col-xl-3 col-sm-6 mb-5">
                 <div class="bg-white rounded shadow-sm py-5 px-4 min-height"><img
                         src="{% static 'locations/dallas/default.png'%}" alt="" width="100"
                         class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
                     <h5 class="mb-0">Mr. Dawn Jose</h5><span class="small text-uppercase text-muted">
-                        <!-- job title-->
                     </span>
-
                 </div>
             </div>
-            <!-- End -->
-
-
-            <!-- Team item -->
-
-            <!-- End -->
         </div>
-
         <div class="row text-center">
-
-
-
-            <!-- Team item -->
             <div class="col-xl-3 col-sm-6 mb-5">
                 <div class="bg-white rounded shadow-sm py-5 px-4 min-height min-height"><img
                         src="{% static 'locations/dallas/Justin-Mathews-160x160.png'%}" alt="" width="100"
                         class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
                     <h5 class="mb-0">Mr. Mathew Ozhukayil</h5><span class="small text-uppercase text-muted">
-                        <!-- job title-->
                     </span>
-
                 </div>
             </div>
-            <!-- End -->
-
-
-            <!-- Team item -->
             <div class="col-xl-3 col-sm-6 mb-5">
                 <div class="bg-white rounded shadow-sm py-5 px-4 min-height"><img
                         src="{% static 'locations/dallas/Leah-Tharakan-Youth-Secretary-160x160.png'%}" alt=""
                         width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
                     <h5 class="mb-0">Ms. Leah Tharakan</h5><span class="small text-uppercase text-muted">
-                        <!-- job title-->
                     </span>
-
                 </div>
             </div>
-            <!-- End -->
-
-
-
-
-
         </div>
+    </div> -->
 
-    </div>
     {% include 'partials/_testimonials.html' %}
     <div class="contact_info">
         <div class="container">
@@ -531,50 +464,61 @@ DALLAS
             </div>
         </div>
     </div>
-    <!-- contact us -->
 
+
+    <!-- contact us -->
     <div class="contact_info">
         <div class="container">
             <div class="row">
-                <h1 class="text-center text-green mb-5">Connect us</h1>
-                <div class="col-lg-10 offset-lg-1">
-                    <div
-                        class="contact_info_container d-flex flex-lg-row flex-column justify-content-between align-items-center mb-5">
-
-                        <!-- Contact Item -->
-                        <div class="contact_info_item d-flex flex-row align-items-center justify-content-start">
-                            <div class="contact_info_image"><img
-                                    src="https://img.icons8.com/office/24/000000/iphone.png" alt=""></div>
-                            <div class="contact_info_content text-black">
-                                <div class="contact_info_title">Phone</div>
-                                <div class="contact_info_text">
-                                    <!-- contact number -->
+                <h1 class="text-center mb-4 mb-lg-5">Connect With Us</h1>
+                <div class="col-12">
+                    <div class="row row-cols-1 row-cols-lg-3 g-3 g-lg-4 mb-4">
+                        <!-- phone  -->
+                        <div class="col">
+                            <div class="d-flex align-items-center h-100">
+                                <div class="me-2 me-lg-3">
+                                    <img src="https://img.icons8.com/office/24/000000/iphone.png" width="24" height="24"
+                                        alt="Phone">
+                                </div>
+                                <div>
+                                    <div class="fw-bold fs-6 fs-lg-5">Phone</div>
+                                    <div class="text-muted fs-6"></div>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Contact Item -->
-                        <div class="contact_info_item d-flex flex-row align-items-center justify-content-start">
-                            <div class="contact_info_image"><img
-                                    src="https://img.icons8.com/ultraviolet/24/000000/filled-message.png" alt=""></div>
-                            <div class="contact_info_content text-black fs-bold">
-                                <div class="contact_info_title">Email</div>
-                                <div class="contact_info_text"><a class="text-decoration-none text-black"
-                                        href="mailto:dallas@letusdream.org"> dallas@letusdream.org</a></div>
+                        <div class="col">
+                            <div class="d-flex align-items-center h-100">
+                                <div class="me-2 me-lg-3">
+                                    <img src="https://img.icons8.com/ultraviolet/24/000000/filled-message.png"
+                                        width="24" height="24" alt="Email">
+                                </div>
+                                <div>
+                                    <div class="fw-bold fs-6 fs-lg-5">Email</div>
+                                    <a class="text-decoration-none text-muted fs-6" href="mailto:dallas@letusdream.org">
+                                        dallas@letusdream.org</a>
+                                </div>
                             </div>
                         </div>
 
                         <!-- Contact Item -->
-                        <div class="contact_info_item d-flex flex-row align-items-center justify-content-start">
-                            <div class="contact_info_image"><img
-                                    src="https://img.icons8.com/ultraviolet/24/000000/map-marker.png" alt=""></div>
-                            <div class="contact_info_content text-black">
-                                <div class="contact_info_title">Address</div>
-                                <div class="contact_info_text text-black fw-semibold">Dallas, Texas @ India Cultural and
-                                    Educational Society, Garland, TX (Est 2014).</div>
+                        <div class="col">
+                            <div class="d-flex align-items-center h-100">
+                                <div class="me-2 me-lg-3">
+                                    <img src="https://img.icons8.com/ultraviolet/24/000000/map-marker.png" width="24"
+                                        height="24" alt="Address">
+                                </div>
+                                <div class="w-100">
+                                    <div class="fw-bold fs-6 fs-lg-5">Address</div>
+                                    <div class="text-muted fs-6 text-wrap">Dallas, Texas @ India
+                                        Cultural
+                                        and
+                                        Educational Society, Garland, TX (Est 2014).
+                                    </div>
+                                </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>

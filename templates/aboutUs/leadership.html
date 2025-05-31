@@ -12,7 +12,6 @@ ABOUT US
 {% block content %}
 
 <style>
-    /* M3 Typography */
     .m3-headline-small {
         font-size: 1.5rem;
         line-height: 1.75rem;
@@ -38,22 +37,21 @@ ABOUT US
         border: none;
     }
 
-    .m3-card:hover {
+    /* .m3-card:hover {
         box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1) !important;
-        /* transform: translateY(-4px); */
-    }
+        transform: translateY(-4px);
+    } */
 
-    .m3-card.outlined {
-        /* border: 1px solid #e0e0e0; */
-    }
+    /* .m3-card.outlined {
+        border: 1px solid #e0e0e0;
+    } */
 
     /* M3 Surface Container */
-    .m3-surface-container {
-        /* background-color: #f5f5f5; */
-        /* background: linear-gradient(90deg, #d4d2d2 0%, #FFFFFF 100%); */
-        background: linear-gradient(180deg, #d4d2d2 0%, #f5efef 100%);
-
-    }
+    /* .m3-surface-container { */
+    /* background-color: #f5f5f5; */
+    /* background: linear-gradient(90deg, #d4d2d2 0%, #FFFFFF 100%); */
+    /* background: linear-gradient(180deg, #d4d2d2 0%, #f5efef 100%);  not required*/
+    /* } */
 
     /* M3 Image Container */
     .m3-image-container {
@@ -101,6 +99,26 @@ ABOUT US
         margin-bottom: 1rem;
         font-weight: bold;
     }
+
+    /* For all card images */
+    .image-container {
+        height: 220px;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .object-fit-cover {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Mobile responsiveness */
+    @media (max-width: 768px) {
+        .image-container {
+            height: 180px;
+        }
+    }
 </style>
 
 <div class="m-5">
@@ -132,8 +150,9 @@ ABOUT US
                             <h3 class="m3-headline-small fw-bolder mt-4">DREAMS Intervention Programme (DIP)</h3>
                         </div>
                         <div class="col mb-3 m3-card">
-                            <div class="">
-                                <img src="{% static '2024/dreams/team member1.jpg'%}" class="img-fluid mb-1 rounded-4">
+                            <div class="image-container">
+                                <img src="{% static '2024/dreams/team member1.jpg'%}"
+                                    class="img-fluid mb-1 rounded-4 w-100 h-100 object-fit-cover">
                             </div>
                             <div class="text-center fw-bolder text-break mt-3">
                                 Mr Adarsh Jose
@@ -145,8 +164,9 @@ ABOUT US
                         </div>
 
                         <div class="col mb-3 m3-card">
-                            <div class="">
-                                <img src="{% static '2024/dreams/team member2.jpg'%}" class="img-fluid mb-1 rounded-4">
+                            <div class="image-container">
+                                <img src="{% static '2024/dreams/team member2.jpg'%}"
+                                    class="img-fluid mb-1 rounded-4 w-100 h-100 object-fit-cover">
                             </div>
                             <div class="text-center fw-bolder text-break mt-3">
                                 Ms Banu H V
@@ -168,41 +188,31 @@ ABOUT US
                         <div class="leadership-heading-box">
                             <h3 class="m3-headline-small fw-bolder mb-0">Clubs</h3>
                         </div>
+
                         <div class="col mb-3 m3-card">
                             <div class="">
-<<<<<<< HEAD
-                                <img src="{% static 'Aboutus/leadership/Clubs_1.png'%}" class="img-fluid mb-1 rounded-4">
-=======
-                                <img src="{% static 'Aboutus/leadership/Courses_1.png'%}" class="img-fluid mb-1">
->>>>>>> e44a1a8113a5a313d465b09dc3be24e0ec1f019d
+                                <img src="{% static 'Aboutus/leadership/Courses_1.png'%}"
+                                    class="img-fluid mb-1 rounded-4">
                             </div>
                             <div class="text-center fw-bolder text-break mt-3">
                                 Col Ranjeev K Babu, VSM
                             </div>
                             <div class="col-12 fst-italic text-center text-muted" style="font-size: small;">
-<<<<<<< HEAD
                                 Senior Leader - Clubs<br />
                                 Let Us Dream International Co-Director
-=======
-                                Senior Leader <br/>
+                                Senior Leader <br />
                                 Senior Trainer, AgileAsia Pte Ltd, Singapore| Indian Army (Retd)
->>>>>>> e44a1a8113a5a313d465b09dc3be24e0ec1f019d
                             </div>
                         </div>
 
                         <div class="col mb-3 m3-card">
-                            <div class="">
-<<<<<<< HEAD
-                                <img src="{% static 'Aboutus/leadership/Clubs_2.png'%}" class="img-fluid mb-1 rounded-4">
-=======
-                                <img src="{% static '/clubs/leadership/Mr. Ayush Paul.png' %}" class="img-fluid mb-1">
->>>>>>> e44a1a8113a5a313d465b09dc3be24e0ec1f019d
-                            </div>
+                            <img src="{% static '/clubs/leadership/Mr. Ayush Paul.png' %}"
+                                class="img-fluid mb-1 rounded-4">
                             <div class="text-center fw-bolder text-break mt-3">
                                 Mr. Ayush Paul
                             </div>
                             <div class="col-12 fst-italic text-center text-muted" style="font-size: small;">
-                                Global Strategic and Executive Youth Lead <br/>
+                                Global Strategic and Executive Youth Lead <br />
                                 Student, CHRIST (Deemed to be University)
                             </div>
                         </div>
@@ -220,7 +230,8 @@ ABOUT US
                         </div>
                         <div class="col mb-3 m3-card">
                             <div class="">
-                                <img src="{% static 'Aboutus/leadership/Conference_1.png'%}" class="img-fluid mb-1 rounded-4">
+                                <img src="{% static 'Aboutus/leadership/Conference_1.png'%}"
+                                    class="img-fluid mb-1 rounded-4">
                             </div>
                             <div class="text-center fw-bolder text-break mt-3">
                                 Dr Jimmy Cherian
@@ -233,7 +244,8 @@ ABOUT US
 
                         <div class="col mb-3 m3-card">
                             <div class="">
-                                <img src="{% static 'Aboutus/leadership/Conference_2.png'%}" class="img-fluid mb-1 rounded-4">
+                                <img src="{% static 'Aboutus/leadership/Conference_2.png'%}"
+                                    class="img-fluid mb-1 rounded-4">
                             </div>
                             <div class="text-center fw-bolder text-break mt-3">
                                 Ms Shrushti Mahajan
@@ -263,7 +275,8 @@ ABOUT US
                         </div>
                         <div class="col mb-3 m3-card">
                             <div class="">
-                                <img src="{% static 'Aboutus/leadership/Productions_1.png'%}" class="img-fluid mb-1 rounded-4">
+                                <img src="{% static 'Aboutus/leadership/Productions_1.png'%}"
+                                    class="img-fluid mb-1 rounded-4">
                             </div>
                             <div class="text-center fw-bolder text-break mt-3">
                                 Dr Deepakkumar S
@@ -277,7 +290,9 @@ ABOUT US
 
                         <div class="col mb-3 m3-card">
                             <div class="">
-                                <img src="{% static 'Aboutus/leadership/Productions_2.png'%}" class="img-fluid mb-1 rounded-4">
+                                <img src="{% static 'Aboutus/leadership/Productions_2.png'%}"
+                                    class="img-fluid mb-1 rounded-4"
+                                    style="object-fit: cover; width: 100%; height: 100%;">
                             </div>
                             <div class="text-center fw-bolder text-break mt-3">
                                 Ms Kalika Mathur
@@ -301,7 +316,8 @@ ABOUT US
                         </div>
                         <div class="col mb-3 m3-card">
                             <div class="">
-                                <img src="{% static 'Aboutus/leadership/Courses_1.png'%}" class="img-fluid mb-1 rounded-4">
+                                <img src="{% static 'Aboutus/leadership/Courses_1.png'%}"
+                                    class="img-fluid mb-1 rounded-4">
                             </div>
                             <div class="text-center fw-bolder text-break mt-3">
                                 Col Ranjeev K Babu, VSM
@@ -314,7 +330,8 @@ ABOUT US
 
                         <div class="col mb-3 m3-card">
                             <div class="">
-                                <img src="{% static 'Aboutus/leadership/Courses_2.png'%}" class="img-fluid mb-1 rounded-4">
+                                <img src="{% static 'Aboutus/leadership/Courses_2.png'%}"
+                                    class="img-fluid mb-1 rounded-4">
                             </div>
                             <div class="text-center fw-bolder text-break mt-3">
                                 Ms Devika M
@@ -338,7 +355,8 @@ ABOUT US
                         </div>
                         <div class="col mb-3 m3-card">
                             <div class="">
-                                <img src="{% static 'Aboutus/leadership/Research_1.png'%}" class="img-fluid mb-1 rounded-4">
+                                <img src="{% static 'Aboutus/leadership/Research_1.png'%}"
+                                    class="img-fluid mb-1 rounded-4">
                             </div>
                             <div class="text-center fw-bolder text-break mt-3">
                                 Dr. Carl L. Thameling
@@ -351,7 +369,8 @@ ABOUT US
 
                         <div class="col mb-3 m3-card">
                             <div class="">
-                                <img src="{% static 'Aboutus/leadership/Research_2.png'%}" class="img-fluid mb-1 rounded-4">
+                                <img src="{% static 'Aboutus/leadership/Research_2.png'%}"
+                                    class="img-fluid mb-1 rounded-4">
                             </div>
                             <div class="text-center fw-bolder text-break mt-3">
                                 Mr Jestin Joseph
@@ -381,7 +400,8 @@ ABOUT US
                         </div>
                         <div class="col mb-3 m3-card">
                             <div class="">
-                                <img src="{% static 'Aboutus/leadership/Media_1.png'%}" class="img-fluid mb-1 rounded-4">
+                                <img src="{% static 'Aboutus/leadership/Media_1.png'%}"
+                                    class="img-fluid mb-1 rounded-4">
                             </div>
                             <div class="text-center fw-bolder text-break mt-3">
                                 Ms Meethu Mary George
@@ -394,7 +414,8 @@ ABOUT US
 
                         <div class="col mb-3 m3-card">
                             <div class="">
-                                <img src="{% static 'Aboutus/leadership/Media_2.png'%}" class="img-fluid mb-1 rounded-4">
+                                <img src="{% static 'Aboutus/leadership/Media_2.png'%}"
+                                    class="img-fluid mb-1 rounded-4">
                             </div>
                             <div class="text-center fw-bolder text-break mt-3">
                                 Ms Aadya Gupta
@@ -418,7 +439,8 @@ ABOUT US
                         </div>
                         <div class="col mb-3 m3-card">
                             <div class="">
-                                <img src="{% static 'Aboutus/leadership/Partnership_1.png'%}" class="img-fluid mb-1 rounded-4">
+                                <img src="{% static 'Aboutus/leadership/Partnership_1.png'%}"
+                                    class="img-fluid mb-1 rounded-4 " style=" height: 230px;">
                             </div>
                             <div class="text-center fw-bolder text-break mt-3">
                                 Mr David S R
@@ -431,7 +453,8 @@ ABOUT US
 
                         <div class="col mb-3 m3-card">
                             <div class="">
-                                <img src="{% static 'Aboutus/leadership/Partnership_2.png'%}" class="img-fluid mb-1 rounded-4">
+                                <img src="{% static 'Aboutus/leadership/Partnership_2.png'%}"
+                                    class="img-fluid mb-1 rounded-4">
                             </div>
                             <div class="text-center fw-bolder text-break mt-3">
                                 Ms Samiksha Periwal
@@ -461,7 +484,8 @@ ABOUT US
                         </div>
                         <div class="col mb-3 m3-card">
                             <div class="">
-                                <img src="{% static 'Aboutus/leadership/Operations_1.png'%}" class="img-fluid mb-1 rounded-4">
+                                <img src="{% static 'Aboutus/leadership/Operations_1.png'%}"
+                                    class="img-fluid mb-1 rounded-4">
                             </div>
                             <div class="text-center fw-bolder text-break mt-3">
                                 Mr Yogesh L
@@ -472,7 +496,8 @@ ABOUT US
                         </div>
                         <div class="col mb-3 m3-card">
                             <div class="">
-                                <img src="{% static 'Aboutus/leadership/Operations_2.png'%}" class="img-fluid mb-1 rounded-4">
+                                <img src="{% static 'Aboutus/leadership/Operations_2.png'%}"
+                                    class="img-fluid mb-1 rounded-4">
                             </div>
                             <div class="text-center fw-bolder text-break mt-3">
                                 Ms Swarnika R
@@ -495,7 +520,8 @@ ABOUT US
                         </div>
                         <div class="col mb-3 m3-card">
                             <div class="">
-                                <img src="{% static 'Aboutus/leadership/Finance_1.png'%}" class="img-fluid mb-1 rounded-4">
+                                <img src="{% static 'Aboutus/leadership/Finance_1.png'%}"
+                                    class="img-fluid mb-1 rounded-4">
                             </div>
                             <div class="text-center fw-bolder text-break mt-3">
                                 Mr Akshat Jain
@@ -507,7 +533,8 @@ ABOUT US
                         </div>
                         <div class="col mb-3 m3-card">
                             <div class="">
-                                <img src="{% static 'Aboutus/leadership/Finance_2.png'%}" class="img-fluid mb-1 rounded-4">
+                                <img src="{% static 'Aboutus/leadership/Finance_2.png'%}"
+                                    class="img-fluid mb-1 rounded-4">
                             </div>
                             <div class="text-center fw-bolder text-break mt-3">
                                 Ms Jasmine Kaur Sahni
@@ -519,7 +546,8 @@ ABOUT US
                         </div>
                         <div class="col mb-3 m3-card">
                             <div class="">
-                                <img src="{% static 'Aboutus/leadership/Trustee.png'%}" class="img-fluid mb-1 rounded-4">
+                                <img src="{% static 'Aboutus/leadership/Trustee.png'%}"
+                                    class="img-fluid mb-1 rounded-4">
                             </div>
                             <div class="text-center fw-bolder text-break mt-3">
                                 Dr Fr Tomy Kattampally, CMI
