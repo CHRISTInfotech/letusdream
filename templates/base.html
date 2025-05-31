@@ -42,6 +42,11 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet"
           type="text/css"/>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+          rel="stylesheet">
+
 </head>
 
 <!-- Google tag (gtag.js) -->
@@ -70,6 +75,10 @@
 {% include 'partials/header.html' %}
 
 <div class="mt-4opx">
+    <div class="p-5 bg-warning text-dark text-center fs-4">
+        Website under major revision, you may find inconsistencies. <br/>
+        We are working diligently to fix the designs and revamp the website.
+    </div>
     {% block content %}
 
     {% endblock content %}

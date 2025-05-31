@@ -10,9 +10,7 @@
 {% endblock links %}
 
 {% block content %}
-    <!-- <div class="mt-5 mb-5 row"></div> -->
-    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel"
-         style="margin-top: 120px !important;">
+    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <img src="{% static 'home/banner/1.png' %}" class="d-block w-100" alt="...">
@@ -52,7 +50,7 @@
         <div class="container">
             <div class="row mt-4 m-0 gap-5">
 
-                <div class="col-12 col-sm card">
+                <div class="col-12 col-sm card text-center">
                     <img src="{% static 'home/programs/Program.png' %}" class="img-fluid mt-3" alt="">
                     <h5 class="fw-bold mt-3">DREAMS Program</h5>
                     <p class="mt-3 ">
@@ -69,7 +67,7 @@
                     </div>
                 </div>
 
-                <div class="col-12 col-sm card">
+                <div class="col-12 col-sm card text-center">
                     <img src="{% static '/home/programs/Club.png' %}" class="img-fluid mt-3" alt="">
                     <h5 class="fw-bold mt-3">DREAMS Pro Club</h5>
                     <p class=" mt-3  ">
@@ -86,7 +84,7 @@
                     </div>
                 </div>
 
-                <div class="col-12 col-sm card">
+                <div class="col-12 col-sm card text-center">
                     <img src="{% static '/home/programs/Band.png' %}" class="img-fluid mt-3" alt="">
                     <h5 class="fw-bold mt-3">DREAMS Band</h5>
                     <p class="mt-3">
@@ -103,7 +101,7 @@
                     </div>
                 </div>
 
-                <div class="col-12 col-sm card">
+                <div class="col-12 col-sm card text-center">
                     <img src="{% static '/home/programs/Conference.png' %}" class="img-fluid mt-3" alt="">
                     <h5 class="fw-bold mt-3">Community Conferences</h5>
                     <p class="mt-3 ">
@@ -126,15 +124,30 @@
     </div>
 
     <div class="container-fluid mt-5 mb-5 bg-light-green" id="conference">
-        <div class="row py-5">
-            <h1 class="col-12 text-center">
-                Upcoming Events
-            </h1>
+        <div class="container">
+            <div class="row py-5">
+                <h1 class="col-12 text-center">
+                    Upcoming Events
+                </h1>
 
-            <div class="col-12 text-center mt-5 fs-5">
-                Stay Tuned for the Upcoming Events!
-                <br/>
-                We are currently working on the upcoming events to get displayed here.
+                {#            <div class="col-12 text-center mt-5 fs-5">#}
+                {#                Stay Tuned for the Upcoming Events!#}
+                {#                <br/>#}
+                {#                We are currently working on the upcoming events to get displayed here.#}
+                {#            </div>#}
+
+                <div class="row my-5">
+                    <div class="col">
+                        <img src="{% static '2025/events/25052025_1.jpg' %}" alt="" class="img-fluid">
+                    </div>
+                    <div class="col">
+                        <img src="{% static '2025/events/25052025_2.jpg' %}" alt="" class="img-fluid">
+                    </div>
+                    <div class="col">
+                        <img src="{% static '2025/events/25052025_3.jpg' %}" alt="" class="img-fluid">
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
