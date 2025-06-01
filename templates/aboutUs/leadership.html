@@ -2,257 +2,119 @@
 {% load static %}
 
 {% block title %}
-ABOUT US
+    Leadership
 {% endblock %}
 
-{% block extraStyles %}
-<link rel="stylesheet" href="{% static 'css/2024/leadership.css' %}" type="text/css">
-{% endblock extraStyles %}
+{% block links %}
+    <link rel="stylesheet" href="{% static 'css/2025/leadership.css' %}" type="text/css">
+{% endblock links %}
 
 {% block content %}
 
-<style>
-    .m3-headline-small {
-        font-size: 1.5rem;
-        line-height: 1.75rem;
-        letter-spacing: 0.009375rem;
-    }
-
-    .m3-title-large {
-        font-size: 1.375rem;
-        line-height: 1.75rem;
-        letter-spacing: 0.009375rem;
-    }
-
-    .m3-body-medium {
-        font-size: 0.875rem;
-        line-height: 1.25rem;
-        letter-spacing: 0.015625rem;
-    }
-
-    /* M3 Card Styling */
-    .m3-card {
-        /* background-color: #fff; */
-        /* transition: box-shadow 0.3s ease, transform 0.3s ease;    */
-        border: none;
-    }
-
-    /* .m3-card:hover {
-        box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1) !important;
-        transform: translateY(-4px);
-    } */
-
-    /* .m3-card.outlined {
-        border: 1px solid #e0e0e0;
-    } */
-
-    /* M3 Surface Container */
-    /* .m3-surface-container { */
-    /* background-color: #f5f5f5; */
-    /* background: linear-gradient(90deg, #d4d2d2 0%, #FFFFFF 100%); */
-    /* background: linear-gradient(180deg, #d4d2d2 0%, #f5efef 100%);  not required*/
-    /* } */
-
-    /* M3 Image Container */
-    .m3-image-container {
-        aspect-ratio: 1;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        /* background-color: #eeeeee; */
-    }
-
-    /* Rounded corners */
-    .rounded-4 {
-        border-radius: 16px;
-    }
-
-    .rounded-top-4 {
-        border-top-left-radius: 16px;
-        border-top-right-radius: 16px;
-    }
-
-    /* Spacing */
-    .g-3>[class*='col-'] {
-        padding-top: 0.75rem;
-        padding-bottom: 0.75rem;
-    }
-
-    .g-4>[class*='col-'] {
-        padding-top: 1rem;
-        padding-bottom: 1rem;
-    }
-
-    .leadership-heading-box {
-        height: 70px;
-        /* or use min-height for flexibility */
-        min-height: 70px;
-        width: 100%;
-        text-align: center;
-        display: flex;
-        align-items: center;
-        /* background-color: #f5f5f5; */
-        justify-content: center;
-        /* border: 1px solid #ccc; */
-        /* Optional for styling */
-        border-radius: 10px;
-        margin-bottom: 1rem;
-        font-weight: bold;
-    }
-
-    /* For all card images */
-    .image-container {
-        height: 220px;
-        width: 100%;
-        overflow: hidden;
-    }
-
-    .object-fit-cover {
-        object-fit: cover;
-        width: 100%;
-        height: 100%;
-    }
-
-    /* Mobile responsiveness */
-    @media (max-width: 768px) {
-        .image-container {
-            height: 180px;
-        }
-    }
-</style>
-
-<div class="m-5">
-    <nav class="cus-breadcrumb pt-5" aria-label="breadcrumb animated slideInDown" style="margin-top: 100px;">
-        <ol class="breadcrumb text-uppercase mb-0 bg-white">
-            <li class="breadcrumb-item"><a class="text-black text-decoration-none" href="{% url 'main' %}">Home</a></li>
-            <li class="breadcrumb-item"><a class="text-black text-decoration-none">ABOUT US</a></li>
+    <nav class="cus-breadcrumb breadcrumb-style" aria-label="breadcrumb animated slideInDown">
+        <ol class="breadcrumb container mb-0 ">
+            <li class="breadcrumb-item">
+                <a class="text-black text-decoration-none" href="{% url 'main' %}">Home</a>
+            </li>
+            <li class="breadcrumb-item"><a class="text-black text-decoration-none">About Us</a></li>
             <li class="breadcrumb-item  active " aria-current="page">Leadership</li>
         </ol>
     </nav>
-</div>
 
-<div class="container mb-3 mt-5 ">
 
-    <div class="fw-bolder fs-2 p-2 text-center">
+    <div class="fw-bolder mt-5 fs-2 p-2 text-center">
         Leadership Council
     </div>
 
-    <div class="row m-auto p-2 text-center mt-3">
-        <div class="col p-2">
-            <div class="row m-auto mt-3">
-                <div class="col-sm-12 col-md-4 m3-surface-container">
+    <div class="bg-light mt-5">
+        <div class="container">
+            <div class="py-5 row">
+                <div class="col-sm-12 col-md-4 mb-3">
+                    <div class="text-center">
+                        <h3 class="mb-4">DREAMS Intervention Programme (DIP)</h3>
+                    </div>
                     <div class="row m-0">
-                        <!-- <div class="col-12 fw-bolder mb-3 text-center border p-3 ">
-                            DREAMS Intervention Programme (DIP)
-                        </div> -->
-                        <!-- <div class="m3-surface-container p-3 rounded-top-4 mb-3"> -->
-                        <div class="leadership-heading-box">
-                            <h3 class="m3-headline-small fw-bolder mt-4">DREAMS Intervention Programme (DIP)</h3>
-                        </div>
-                        <div class="col mb-3 m3-card">
-                            <div class="image-container">
-                                <img src="{% static '2024/dreams/team member1.jpg'%}"
-                                    class="img-fluid mb-1 rounded-4 w-100 h-100 object-fit-cover">
-                            </div>
+                        <div class="col mb-3 ">
+                            <img src="{% static '2024/dreams/team member1.jpg' %}"
+                                 class="img-fluid mb-1 rounded-4">
                             <div class="text-center fw-bolder text-break mt-3">
                                 Mr Adarsh Jose
                             </div>
-                            <div class="col-12 fst-italic text-center text-muted" style="font-size: small;">
-                                Senior Leader - DIP <br />
+                            <div class="col-12 fst-italic text-center text-muted">
+                                Senior Leader - DIP <br/>
                                 Director, APACI Ellucian
                             </div>
                         </div>
 
-                        <div class="col mb-3 m3-card">
-                            <div class="image-container">
-                                <img src="{% static '2024/dreams/team member2.jpg'%}"
-                                    class="img-fluid mb-1 rounded-4 w-100 h-100 object-fit-cover">
-                            </div>
+                        <div class="col mb-3 ">
+                            <img src="{% static '2024/dreams/team member2.jpg' %}"
+                                 class="img-fluid mb-1 rounded-4">
                             <div class="text-center fw-bolder text-break mt-3">
                                 Ms Banu H V
                             </div>
-                            <div class="col-12 fst-italic text-center text-muted" style="font-size: small;">
-                                Youth Leader - DIP <br />
-                                Student, CHRIST (Deemed to be University)
+                            <div class="col-12 fst-italic text-center text-muted">
+                                Youth Leader - DIP <br/>
+                                Student, CHRIST University, India
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <div class="col-sm-12 col-md-4 m3-surface-container">
+                <div class="col-sm-12 col-md-4 mb-3">
+                    <div class="text-center">
+                        <h3 class="mb-4">Clubs</h3>
+                    </div>
                     <div class="row m-0">
-                        <!-- <div class="col-12 fw-bolder mb-3 text-center border p-3">
-                            Clubs
-                        </div> -->
-                        <!-- <div class="m3-surface-container p-3 rounded-top-4 mb-3"> -->
-                        <div class="leadership-heading-box">
-                            <h3 class="m3-headline-small fw-bolder mb-0">Clubs</h3>
-                        </div>
-
-                        <div class="col mb-3 m3-card">
-                            <div class="">
-                                <img src="{% static 'Aboutus/leadership/Courses_1.png'%}"
-                                    class="img-fluid mb-1 rounded-4">
-                            </div>
+                        <div class="col mb-3 ">
+                            <img src="{% static 'Aboutus/leadership/Courses_1.png' %}"
+                                 class="img-fluid mb-1 rounded-4">
                             <div class="text-center fw-bolder text-break mt-3">
                                 Col Ranjeev K Babu, VSM
                             </div>
-                            <div class="col-12 fst-italic text-center text-muted" style="font-size: small;">
-                                Senior Leader - Clubs<br />
-                                Let Us Dream International Co-Director
-                                Senior Leader <br />
+                            <div class="col-12 fst-italic text-center text-muted">
+                                Senior Leader - Clubs<br/>
                                 Senior Trainer, AgileAsia Pte Ltd, Singapore| Indian Army (Retd)
                             </div>
                         </div>
 
-                        <div class="col mb-3 m3-card">
+                        <div class="col mb-3 ">
                             <img src="{% static '/clubs/leadership/Mr. Ayush Paul.png' %}"
-                                class="img-fluid mb-1 rounded-4">
+                                 class="img-fluid mb-1 rounded-4">
                             <div class="text-center fw-bolder text-break mt-3">
                                 Mr. Ayush Paul
                             </div>
-                            <div class="col-12 fst-italic text-center text-muted" style="font-size: small;">
-                                Global Strategic and Executive Youth Lead <br />
-                                Student, CHRIST (Deemed to be University)
+                            <div class="col-12 fst-italic text-center text-muted">
+                                Global Strategic and Executive Youth Lead <br/>
+                                Student, CHRIST University, India
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <div class="col-sm-12 col-md-4 m3-surface-container">
+                <div class="col-sm-12 col-md-4 mb-3">
+                    <div class="text-center">
+                        <h3 class="mb-4">Community Conference</h3>
+                    </div>
                     <div class="row m-0">
-                        <!-- <div class="col-12 fw-bolder mb-3 text-center border p-3">
-                            Community Conference
-                        </div> -->
-                        <!-- <div class="m3-surface-container p-3 rounded-top-4 mb-3"> -->
-                        <div class="leadership-heading-box">
-                            <h3 class="m3-headline-small fw-bolder mb-0">Community Conference</h3>
-                        </div>
-                        <div class="col mb-3 m3-card">
-                            <div class="">
-                                <img src="{% static 'Aboutus/leadership/Conference_1.png'%}"
-                                    class="img-fluid mb-1 rounded-4">
-                            </div>
+                        <div class="col mb-3 ">
+                            <img src="{% static 'Aboutus/leadership/Conference_1.png' %}"
+                                 class="img-fluid mb-1 rounded-4">
                             <div class="text-center fw-bolder text-break mt-3">
                                 Dr Jimmy Cherian
                             </div>
-                            <div class="col-12 fst-italic text-center text-muted" style="font-size: small;">
-                                Senior Leader <br />
+                            <div class="col-12 fst-italic text-center text-muted">
+                                Senior Leader <br/>
                                 Founder & President, Creating Futures, India
                             </div>
                         </div>
 
-                        <div class="col mb-3 m3-card">
-                            <div class="">
-                                <img src="{% static 'Aboutus/leadership/Conference_2.png'%}"
-                                    class="img-fluid mb-1 rounded-4">
-                            </div>
+                        <div class="col mb-3 ">
+                            <img src="{% static 'Aboutus/leadership/Conference_2.png' %}"
+                                 class="img-fluid mb-1 rounded-4">
                             <div class="text-center fw-bolder text-break mt-3">
                                 Ms Shrushti Mahajan
                             </div>
-                            <div class="col-12 fst-italic text-center text-muted" style="font-size: small;">
-                                Youth Leader <br />
-                                Student, CHRIST (Deemed to be University)
+                            <div class="col-12 fst-italic text-center text-muted">
+                                Youth Leader <br/>
+                                Student, CHRIST University, India
                             </div>
                         </div>
                     </div>
@@ -261,122 +123,94 @@ ABOUT US
         </div>
     </div>
 
-    <div class="row m-auto p-2 text-center mt-4">
-        <div class="col p-2">
-            <div class="row m-auto mt-3">
-                <div class="col-sm-12 col-md-4 m3-surface-container ">
+    <div class="bg-light-blue">
+        <div class="container py-4">
+            <div class="row mt-3">
+                <div class="col-sm-12 col-md-4 mb-3">
+                    <div class="text-center">
+                        <h3 class="mb-4">DREAMS Productions</h3>
+                    </div>
                     <div class="row m-0">
-                        <!-- <div class="col-12 fw-bolder mb-3 text-center border p-3">
-                            DREAMS Productions
-                        </div> -->
-                        <!-- <div class="m3-surface-container p-3 rounded-top-4 mb-3"> -->
-                        <div class="leadership-heading-box">
-                            <h3 class="m3-headline-small fw-bolder mb-0">DREAMS Productions</h3>
-                        </div>
-                        <div class="col mb-3 m3-card">
-                            <div class="">
-                                <img src="{% static 'Aboutus/leadership/Productions_1.png'%}"
-                                    class="img-fluid mb-1 rounded-4">
-                            </div>
+                        <div class="col mb-3 ">
+                            <img src="{% static 'Aboutus/leadership/Productions_1.png' %}"
+                                 class="img-fluid mb-1 rounded-4">
                             <div class="text-center fw-bolder text-break mt-3">
                                 Dr Deepakkumar S
                             </div>
-                            <div class="col-12 fst-italic text-center text-muted" style="font-size: small;">
-                                Senior Leader - Productions <br />
-                                Assistant Professor, Department of Psychology, CHRIST (Deemed to be University), Central
-                                campus, Bengaluru
+                            <div class="col-12 fst-italic text-center text-muted">
+                                Senior Leader - Productions <br/>
+                                Assistant Professor, Department of Psychology, CHRIST University, India
                             </div>
                         </div>
 
-                        <div class="col mb-3 m3-card">
-                            <div class="">
-                                <img src="{% static 'Aboutus/leadership/Productions_2.png'%}"
-                                    class="img-fluid mb-1 rounded-4"
-                                    style="object-fit: cover; width: 100%; height: 100%;">
-                            </div>
+                        <div class="col mb-3 ">
+                            <img src="{% static 'Aboutus/leadership/Productions_2.png' %}"
+                                 class="img-fluid mb-1 rounded-4">
                             <div class="text-center fw-bolder text-break mt-3">
                                 Ms Kalika Mathur
                             </div>
-                            <div class="col-12 fst-italic text-center text-muted" style="font-size: small;">
-                                Youth Leader - Productions<br />
-                                Student, CHRIST (Deemed to be University)
+                            <div class="col-12 fst-italic text-center text-muted">
+                                Youth Leader - Productions<br/>
+                                Student, CHRIST University, India
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <div class="col-sm-12 col-md-4 m3-surface-container">
+                <div class="col-sm-12 col-md-4 mb-3">
+                    <div class="text-center">
+                        <h3 class="mb-4">Leadership Fellowship Programme (LLP)</h3>
+                    </div>
                     <div class="row m-0">
-                        <!-- <div class="col-12 fw-bolder mb-3 text-center border p-3">
-                            Leadership Fellowship Programme (LLP)
-                        </div> -->
-                        <!-- <div class="m3-surface-container p-3 rounded-top-4 mb-3"> -->
-                        <div class="leadership-heading-box">
-                            <h3 class="m3-headline-small fw-bolder mb-0">Leadership Fellowship Programme (LLP)</h3>
-                        </div>
-                        <div class="col mb-3 m3-card">
-                            <div class="">
-                                <img src="{% static 'Aboutus/leadership/Courses_1.png'%}"
-                                    class="img-fluid mb-1 rounded-4">
-                            </div>
+                        <div class="col mb-3 ">
+                            <img src="{% static 'Aboutus/leadership/Courses_1.png' %}"
+                                 class="img-fluid mb-1 rounded-4">
                             <div class="text-center fw-bolder text-break mt-3">
                                 Col Ranjeev K Babu, VSM
                             </div>
-                            <div class="col-12 fst-italic text-center text-muted" style="font-size: small;">
-                                Senior Leader - LLP <br />
+                            <div class="col-12 fst-italic text-center text-muted">
+                                Senior Leader - LLP <br/>
                                 Senior Trainer, AgileAsia Pte Ltd, Singapore| Indian Army (Retd)
                             </div>
                         </div>
 
-                        <div class="col mb-3 m3-card">
-                            <div class="">
-                                <img src="{% static 'Aboutus/leadership/Courses_2.png'%}"
-                                    class="img-fluid mb-1 rounded-4">
-                            </div>
+                        <div class="col mb-3 ">
+                            <img src="{% static 'Aboutus/leadership/Courses_2.png' %}"
+                                 class="img-fluid mb-1 rounded-4">
                             <div class="text-center fw-bolder text-break mt-3">
                                 Ms Devika M
                             </div>
-                            <div class="col-12 fst-italic text-center text-muted" style="font-size: small;">
-                                Youth Leader - LLP <br />
+                            <div class="col-12 fst-italic text-center text-muted">
+                                Youth Leader - LLP <br/>
                                 Trainee Counselling Psychologist, Bangalore, India
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <div class="col-sm-12 col-md-4 m3-surface-container">
+                <div class="col-sm-12 col-md-4 mb-3">
+                    <div class="text-center">
+                        <h3 class="mb-4">Research</h3>
+                    </div>
                     <div class="row m-0">
-                        <!-- <div class="col-12 fw-bolder mb-3 text-center border p-3">
-                            Research
-                        </div> -->
-                        <!-- <div class="m3-surface-container p-3 rounded-top-4 mb-3"> -->
-                        <div class="leadership-heading-box">
-                            <h3 class="m3-headline-small fw-bolder mb-0">Research</h3>
-                        </div>
-                        <div class="col mb-3 m3-card">
-                            <div class="">
-                                <img src="{% static 'Aboutus/leadership/Research_1.png'%}"
-                                    class="img-fluid mb-1 rounded-4">
-                            </div>
+                        <div class="col mb-3 ">
+                            <img src="{% static 'Aboutus/leadership/Research_1.png' %}"
+                                 class="img-fluid mb-1 rounded-4">
                             <div class="text-center fw-bolder text-break mt-3">
                                 Dr. Carl L. Thameling
                             </div>
-                            <div class="col-12 fst-italic text-center text-muted" style="font-size: small;">
-                                Senior Leader - Research<br />
+                            <div class="col-12 fst-italic text-center text-muted">
+                                Senior Leader - Research<br/>
                                 Professor, University of Louisiana at Monroe, USA
                             </div>
                         </div>
 
-                        <div class="col mb-3 m3-card">
-                            <div class="">
-                                <img src="{% static 'Aboutus/leadership/Research_2.png'%}"
-                                    class="img-fluid mb-1 rounded-4">
-                            </div>
+                        <div class="col mb-3 ">
+                            <img src="{% static 'Aboutus/leadership/Research_2.png' %}"
+                                 class="img-fluid mb-1 rounded-4">
                             <div class="text-center fw-bolder text-break mt-3">
                                 Mr Jestin Joseph
                             </div>
-                            <div class="col-12 fst-italic text-center text-muted" style="font-size: small;">
-                                Youth Leader - Research<br />
+                            <div class="col-12 fst-italic text-center text-muted">
+                                Youth Leader - Research<br/>
                                 Commerce Lecturer, Christ PU College, Bangalore, India
                             </div>
                         </div>
@@ -386,82 +220,65 @@ ABOUT US
         </div>
     </div>
 
-    <div class="row m-auto p-2 text-center mt-4">
-        <div class="col p-2">
-            <div class="row m-auto mt-3">
-                <div class="col-sm-12 col-md-6 m3-surface-container">
+    <div class="bg-light">
+        <div class="container">
+            <div class="py-5 row d-flex justify-content-center ">
+                <div class="col-sm-12 col-md-4 mb-3">
+                    <div class="text-center">
+                        <h3 class="mb-4">Media Management</h3>
+                    </div>
                     <div class="row m-0">
-                        <!-- <div class="col-12 fw-bolder mb-3 text-center border p-3">
-                            Media Management
-                        </div> -->
-                        <!-- <div class="m3-surface-container p-3 rounded-top-4 mb-3"> -->
-                        <div class="leadership-heading-box">
-                            <h3 class="m3-headline-small fw-bolder mb-0">Media Management</h3>
-                        </div>
-                        <div class="col mb-3 m3-card">
-                            <div class="">
-                                <img src="{% static 'Aboutus/leadership/Media_1.png'%}"
-                                    class="img-fluid mb-1 rounded-4">
-                            </div>
+                        <div class="col mb-3 ">
+                            <img src="{% static 'Aboutus/leadership/Media_1.png' %}"
+                                 class="img-fluid mb-1 rounded-4">
                             <div class="text-center fw-bolder text-break mt-3">
                                 Ms Meethu Mary George
                             </div>
-                            <div class="col-12 fst-italic text-center text-muted" style="font-size: small;">
-                                Senior Leader - Media Management <br />
+                            <div class="col-12 fst-italic text-center text-muted">
+                                Senior Leader - Media Management <br/>
                                 Assistant Professor, Kristu Jyoti College Kottayam, Kerala
                             </div>
                         </div>
 
-                        <div class="col mb-3 m3-card">
-                            <div class="">
-                                <img src="{% static 'Aboutus/leadership/Media_2.png'%}"
-                                    class="img-fluid mb-1 rounded-4">
-                            </div>
+                        <div class="col mb-3 ">
+                            <img src="{% static 'Aboutus/leadership/Media_2.png' %}"
+                                 class="img-fluid mb-1 rounded-4">
                             <div class="text-center fw-bolder text-break mt-3">
                                 Ms Aadya Gupta
                             </div>
-                            <div class="col-12 fst-italic text-center text-muted" style="font-size: small">
-                                Youth Leader - Media Management<br />
-                                Student, CHRIST (Deemed to be University)
+                            <div class="col-12 fst-italic text-center text-muted">
+                                Youth Leader - Media Management<br/>
+                                Student, CHRIST University, India
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <div class="col-sm-12 col-md-6 m3-surface-container">
+                <div class="col-sm-12 col-md-4 mb-3">
+                    <div class="text-center">
+                        <h3 class="mb-4">Partnership</h3>
+                    </div>
                     <div class="row m-0">
-                        <!-- <div class="col-12 fw-bolder mb-3 text-center border p-3">
-                            Partnership
-                        </div> -->
-                        <!-- <div class="m3-surface-container p-3 rounded-top-4 mb-3"> -->
-                        <div class="leadership-heading-box">
-                            <h3 class="m3-headline-small fw-bolder mb-0">Partnership</h3>
-                        </div>
-                        <div class="col mb-3 m3-card">
-                            <div class="">
-                                <img src="{% static 'Aboutus/leadership/Partnership_1.png'%}"
-                                    class="img-fluid mb-1 rounded-4 " style=" height: 230px;">
-                            </div>
+                        <div class="col mb-3 ">
+                            <img src="{% static 'Aboutus/leadership/Partnership_1.png' %}"
+                                 class="img-fluid mb-1 rounded-4">
                             <div class="text-center fw-bolder text-break mt-3">
                                 Mr David S R
                             </div>
-                            <div class="col-12 fst-italic text-center text-muted" style="font-size: small;">
-                                Senior Leader - Partnership <br />
+                            <div class="col-12 fst-italic text-center text-muted">
+                                Senior Leader - Partnership <br/>
                                 Founder, E-Cure Charitable Trust, Bangalore, India
                             </div>
                         </div>
 
-                        <div class="col mb-3 m3-card">
-                            <div class="">
-                                <img src="{% static 'Aboutus/leadership/Partnership_2.png'%}"
-                                    class="img-fluid mb-1 rounded-4">
-                            </div>
+                        <div class="col mb-3 ">
+                            <img src="{% static 'Aboutus/leadership/Partnership_2.png' %}"
+                                 class="img-fluid mb-1 rounded-4">
                             <div class="text-center fw-bolder text-break mt-3">
                                 Ms Samiksha Periwal
                             </div>
-                            <div class="col-12 fst-italic text-center text-muted" style="font-size: small;">
-                                Youth Leader - Partnership<br />
-                                Student, CHRIST (Deemed to be University)
+                            <div class="col-12 fst-italic text-center text-muted">
+                                Youth Leader - Partnership<br/>
+                                Student, CHRIST University, India
                             </div>
                         </div>
                     </div>
@@ -470,133 +287,110 @@ ABOUT US
         </div>
     </div>
 
-    <div class="row m-auto p-2 text-center mt-4 mb-5">
-        <div class="col p-2">
-            <div class="row m-auto mt-3">
-                <div class="col-sm-12 col-md-5 m3-surface-container">
-                    <div class="row m-0">
-                        <!-- <div class="col-12 fw-bolder mb-3 text-center border p-3">
-                            Operations
-                        </div> -->
-                        <!-- <div class="m3-surface-container p-3 rounded-top-4 mb-3"> -->
-                        <div class="leadership-heading-box">
-                            <h3 class="m3-headline-small fw-bolder mb-0">Operations</h3>
+    <div class="container">
+        <div class="py-5 row d-flex justify-content-center ">
+            <div class="col-sm-12 col-md-4 mb-3">
+                <div class="text-center">
+                    <h3 class="mb-4">Operations</h3>
+                </div>
+                <div class="row m-0">
+                    <div class="col mb-3 ">
+                        <img src="{% static 'Aboutus/leadership/Operations_1.png' %}"
+                             class="img-fluid mb-1 rounded-4">
+                        <div class="text-center fw-bolder text-break mt-3">
+                            Mr Yogesh L
                         </div>
-                        <div class="col mb-3 m3-card">
-                            <div class="">
-                                <img src="{% static 'Aboutus/leadership/Operations_1.png'%}"
-                                    class="img-fluid mb-1 rounded-4">
-                            </div>
-                            <div class="text-center fw-bolder text-break mt-3">
-                                Mr Yogesh L
-                            </div>
-                            <div class="col-12 fst-italic text-center text-muted" style="font-size: small;">
-                                Senior Leader - Operations
-                            </div>
+                        <div class="col-12 fst-italic text-center text-muted">
+                            Senior Leader - Operations
                         </div>
-                        <div class="col mb-3 m3-card">
-                            <div class="">
-                                <img src="{% static 'Aboutus/leadership/Operations_2.png'%}"
-                                    class="img-fluid mb-1 rounded-4">
-                            </div>
-                            <div class="text-center fw-bolder text-break mt-3">
-                                Ms Swarnika R
-                            </div>
-                            <div class="col-12 fst-italic text-center text-muted" style="font-size: small;">
-                                Youth Leader - Operations<br />
-                                Student, CHRIST (Deemed to be University)
-                            </div>
+                    </div>
+
+                    <div class="col mb-3 ">
+                        <img src="{% static 'Aboutus/leadership/Operations_2.png' %}"
+                             class="img-fluid mb-1 rounded-4">
+                        <div class="text-center fw-bolder text-break mt-3">
+                            Ms Swarnika R
+                        </div>
+                        <div class="col-12 fst-italic text-center text-muted">
+                            Youth Leader - Operations<br/>
+                            Student, CHRIST University, India
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-12 col-md-7 m3-surface-container">
-                    <div class="row m-0">
-                        <!-- <div class="col-12 fw-bolder mb-3 text-center border p-3">
-                            Finance
-                        </div> -->
-                        <!-- <div class="m3-surface-container p-3 rounded-top-4 mb-3"> -->
-                        <div class="leadership-heading-box">
-                            <h3 class="m3-headline-small fw-bolder mb-0">Finance</h3>
+            </div>
+            <div class="col-sm-12 col-md-6 mb-3">
+                <div class="text-center">
+                    <h3 class="mb-4">Finance</h3>
+                </div>
+                <div class="row m-0">
+                    <div class="col mb-3 ">
+                        <img src="{% static 'Aboutus/leadership/Finance_1.png' %}"
+                             class="img-fluid mb-1 rounded-4">
+                        <div class="text-center fw-bolder text-break mt-3">
+                            Mr Akshat Jain
                         </div>
-                        <div class="col mb-3 m3-card">
-                            <div class="">
-                                <img src="{% static 'Aboutus/leadership/Finance_1.png'%}"
-                                    class="img-fluid mb-1 rounded-4">
-                            </div>
-                            <div class="text-center fw-bolder text-break mt-3">
-                                Mr Akshat Jain
-                            </div>
-                            <div class="col-12 fst-italic text-center text-muted" style="font-size: small;">
-                                Youth Leader - Finance <br />
-                                Student, CHRIST (Deemed to be University)
-                            </div>
+                        <div class="col-12 fst-italic text-center text-muted">
+                            Youth Leader - Finance <br/>
+                            Student, CHRIST University, India
                         </div>
-                        <div class="col mb-3 m3-card">
-                            <div class="">
-                                <img src="{% static 'Aboutus/leadership/Finance_2.png'%}"
-                                    class="img-fluid mb-1 rounded-4">
-                            </div>
-                            <div class="text-center fw-bolder text-break mt-3">
-                                Ms Jasmine Kaur Sahni
-                            </div>
-                            <div class="col-12 fst-italic text-center text-muted" style="font-size: small;">
-                                Treasurer <br />
-                                Community Leader, Bangalore, India
-                            </div>
+                    </div>
+
+                    <div class="col mb-3 ">
+                        <img src="{% static 'Aboutus/leadership/Finance_2.png' %}"
+                             class="img-fluid mb-1 rounded-4">
+                        <div class="text-center fw-bolder text-break mt-3">
+                            Ms Jasmine Kaur Sahni
                         </div>
-                        <div class="col mb-3 m3-card">
-                            <div class="">
-                                <img src="{% static 'Aboutus/leadership/Trustee.png'%}"
-                                    class="img-fluid mb-1 rounded-4">
-                            </div>
-                            <div class="text-center fw-bolder text-break mt-3">
-                                Dr Fr Tomy Kattampally, CMI
-                            </div>
-                            <div class="col-12 fst-italic text-center text-muted" style="font-size: small;">
-                                Managing Trustee <br />
-                                HOD, Biblical Theology, Dharmaram Vidya Kshetram, Bangalore, India
-                            </div>
+                        <div class="col-12 fst-italic text-center text-muted">
+                            Treasurer <br/>
+                            Community Leader, Bangalore, India
+                        </div>
+                    </div>
+
+                    <div class="col mb-3 ">
+                        <img src="{% static 'Aboutus/leadership/Trustee.png' %}"
+                             class="img-fluid mb-1 rounded-4">
+                        <div class="text-center fw-bolder text-break mt-3">
+                            Dr Fr Tomy Kattampally, CMI
+                        </div>
+                        <div class="col-12 fst-italic text-center text-muted">
+                            Managing Trustee <br/>
+                            HOD, Biblical Theology, Dharmaram Vidya Kshetram, Bangalore, India
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
     </div>
-    <hr />
+
+
     <div class="container mb-5 mt-3 p-1">
-
+        <hr/>
         <div class="row text-center m-0 ">
             <div class="col p-1 pb-3">
                 <div class="row m-auto mt-3">
                     <div class="col-sm-12 col-md-4 mb-3">
                         <div class="m3-surface-container p-3 rounded-top-4 m3-card">
                             <div class=" px-4">
-                                <img src="{% static 'Aboutus/leadership/Founder.png'%}" class="img-fluid mb-1 rounded-4"
-                                    style="height: 200px;">
+                                <img src="{% static 'Aboutus/leadership/Founder.png' %}"
+                                     class="img-fluid mb-1 rounded-4"
+                                     style="height: 200px;">
                             </div>
                             <div class="mb-0 fs-6 fw-bolder mt-4">Dr Fr Lijo Thomas, CMI</div>
                             <div class="fs-6 text-muted">Founder / Director</div>
                         </div>
                     </div>
                     <div class="col-sm-12 col-md-6 lh-lg d-flex align-items-center">
-                        "LET US DREAM is a locally rooted and globally established not-for-profit organization. Since
-                        its inception, LET US DREAM has envisioned globally interconnected communities where no one and
-                        nothing stands alone. Grounded in volunteerism, collaboration, and networking principles, LET US
-                        DREAM promotes the idea of holistically developed, sustainable communities worldwide."
+                        "LET US DREAM is a locally rooted and globally established not-for-profit organization.
+                        Since its inception, LET US DREAM has envisioned globally interconnected communities where
+                        no one and nothing stands alone. Grounded in volunteerism, collaboration, and networking
+                        principles, LET US DREAM promotes the idea of holistically developed, sustainable
+                        communities worldwide."
                     </div>
                 </div>
             </div>
         </div>
-
     </div>
-
-    <hr />
-
-    <br />
-    <br />
-
-</div>
 
 
 

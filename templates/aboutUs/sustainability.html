@@ -5,12 +5,16 @@
 Sustainability Goals
 {% endblock %}
 
+{% block links %}
+    <link rel="stylesheet" href="{% static 'css/2025/leadership.css' %}" type="text/css">
+{% endblock links %}
+
 
 {% block content %}
-<nav class="cus-breadcrumb" aria-label="breadcrumb animated slideInDown mt-5" style="margin-top: 150px; margin-left: 50px;">
-    <ol class="breadcrumb text-uppercase mb-0 bg-white">
+<nav class="cus-breadcrumb breadcrumb-style" aria-label="breadcrumb animated slideInDown mt-5" >
+    <ol class="breadcrumb container mb-0">
         <li class="breadcrumb-item"><a class="text-black text-decoration-none" href="{% url 'main' %}">Home</a></li>
-        <li class="breadcrumb-item"><a class="text-black text-decoration-none">ABOUT US</a></li>
+        <li class="breadcrumb-item"><a class="text-black text-decoration-none">About Us</a></li>
         <li class="breadcrumb-item  active " aria-current="page">Sustainability</li>
     </ol>
 </nav>
@@ -47,7 +51,7 @@ Sustainability Goals
             <div class="accordion" id="accordionExample">
                 <!-- DREAMS -->
                 <div class="accordion-item">
-                    <h2 class="accordion-header">
+                    <div class="fs-2 accordion-header">
                         <div class="p-3" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false"
                             aria-controls="collapseOne">
                             <div class="row">
@@ -57,18 +61,18 @@ Sustainability Goals
                                         <small>Community-University-School Intervention</small>
                                     </div>
                                 </div>
-                                <div class="col d-flex justify-content-end">
-                                    <img src="{% static 'Aboutus/sdg/sdg3.png' %}" alt="" height="100px" class="p-1">
-                                    <img src="{% static 'Aboutus/sdg/sdg4.png' %}" alt="" height="100px" class="p-1">
-                                    <img src="{% static 'Aboutus/sdg/sdg5.png' %}" alt="" height="100px" class="p-1">
-                                    <img src="{% static 'Aboutus/sdg/sdg10.png' %}" alt="" height="100px" class="p-1">
-                                    <img src="{% static 'Aboutus/sdg/sdg11.png' %}" alt="" height="100px" class="p-1">
-                                    <img src="{% static 'Aboutus/sdg/sdg16.png' %}" alt="" height="100px" class="p-1">
-                                    <img src="{% static 'Aboutus/sdg/sdg17.png' %}" alt="" height="100px" class="p-1">
+                                <div class="col-8 d-flex justify-content-end flex-wrap">
+                                    <img src="{% static 'Aboutus/sdg/sdg3.png' %}" alt="" class="p-1 img-fluid" style="max-height:100px;">
+                                    <img src="{% static 'Aboutus/sdg/sdg4.png' %}" alt="" class="p-1 img-fluid" style="max-height:100px;">
+                                    <img src="{% static 'Aboutus/sdg/sdg5.png' %}" alt="" class="p-1 img-fluid" style="max-height:100px;">
+                                    <img src="{% static 'Aboutus/sdg/sdg10.png' %}" alt="" class="p-1 img-fluid" style="max-height:100px;">
+                                    <img src="{% static 'Aboutus/sdg/sdg11.png' %}" alt="" class="p-1 img-fluid" style="max-height:100px;">
+                                    <img src="{% static 'Aboutus/sdg/sdg16.png' %}" alt="" class="p-1 img-fluid" style="max-height:100px;">
+                                    <img src="{% static 'Aboutus/sdg/sdg17.png' %}" alt="" class="p-1 img-fluid" style="max-height:100px;">
                                 </div>
                             </div>
                         </div>
-                    </h2>
+                    </div>
                     <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                         <div class="accordion-body">
                             <div class="row m-auto">
@@ -173,24 +177,24 @@ Sustainability Goals
                 </div>
                 <!-- CLUBS -->
                 <div class="accordion-item">
-                    <h2 class="accordion-header">
+                    <div class="fs-2 accordion-header">
                         <div class="p-3" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
                             aria-controls="collapseTwo">
                             <div class="row">
                                 <div class="col d-flex align-items-center">
                                     <div class="fw-normal fst-italic fs-5">CLUBs</div>
                                 </div>
-                                <div class="col d-flex justify-content-end">
-                                    <img src="{% static 'Aboutus/sdg/sdg3.png' %}" alt="" height="100px" class="p-1">
-                                    <img src="{% static 'Aboutus/sdg/sdg4.png' %}" alt="" height="100px" class="p-1">
-                                    <img src="{% static 'Aboutus/sdg/sdg10.png' %}" alt="" height="100px" class="p-1">
-                                    <img src="{% static 'Aboutus/sdg/sdg11.png' %}" alt="" height="100px" class="p-1">
-                                    <img src="{% static 'Aboutus/sdg/sdg16.png' %}" alt="" height="100px" class="p-1">
-                                    <img src="{% static 'Aboutus/sdg/sdg17.png' %}" alt="" height="100px" class="p-1">
+                               <div class="col-8 d-flex justify-content-end flex-wrap">
+                                    <img src="{% static 'Aboutus/sdg/sdg3.png' %}" alt="" class="p-1 img-fluid" style="max-height:100px;">
+                                    <img src="{% static 'Aboutus/sdg/sdg4.png' %}" alt="" class="p-1 img-fluid" style="max-height:100px;">
+                                    <img src="{% static 'Aboutus/sdg/sdg10.png' %}" alt="" class="p-1 img-fluid" style="max-height:100px;">
+                                    <img src="{% static 'Aboutus/sdg/sdg11.png' %}" alt="" class="p-1 img-fluid" style="max-height:100px;">
+                                    <img src="{% static 'Aboutus/sdg/sdg16.png' %}" alt="" class="p-1 img-fluid" style="max-height:100px;">
+                                    <img src="{% static 'Aboutus/sdg/sdg17.png' %}" alt="" class="p-1 img-fluid" style="max-height:100px;">
                                 </div>
                             </div>
                         </div>
-                    </h2>
+                    </div>
                     <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                         <div class="accordion-body">
                             <div class="row m-auto">
@@ -276,23 +280,23 @@ Sustainability Goals
                 </div>
                 <!-- CONFERENCES -->
                 <div class="accordion-item">
-                    <h2 class="accordion-header">
+                     <div class="fs-2 accordion-header">
                         <div class="p-3" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false"
                             aria-controls="collapseThree">
                             <div class="row">
-                                <div class="col d-flex align-items-center">
+                                <div class="col d-flex align-items-center text-break">
                                     <div class="fw-normal fst-italic fs-5">CONFERENCEs</div>
                                 </div>
-                                <div class="col d-flex justify-content-end">
-                                    <img src="{% static 'Aboutus/sdg/sdg3.png' %}" alt="" height="100px" class="p-1">
-                                    <img src="{% static 'Aboutus/sdg/sdg4.png' %}" alt="" height="100px" class="p-1">
-                                    <img src="{% static 'Aboutus/sdg/sdg10.png' %}" alt="" height="100px" class="p-1">
-                                    <img src="{% static 'Aboutus/sdg/sdg13.png' %}" alt="" height="100px" class="p-1">
-                                    <img src="{% static 'Aboutus/sdg/sdg17.png' %}" alt="" height="100px" class="p-1">
+                                 <div class="col-8 d-flex justify-content-end flex-wrap">
+                                    <img src="{% static 'Aboutus/sdg/sdg3.png' %}" alt="" class="p-1 img-fluid" style="max-height:100px;">
+                                    <img src="{% static 'Aboutus/sdg/sdg4.png' %}" alt="" class="p-1 img-fluid" style="max-height:100px;">
+                                    <img src="{% static 'Aboutus/sdg/sdg10.png' %}" alt="" class="p-1 img-fluid" style="max-height:100px;">
+                                    <img src="{% static 'Aboutus/sdg/sdg13.png' %}" alt="" class="p-1 img-fluid" style="max-height:100px;">
+                                    <img src="{% static 'Aboutus/sdg/sdg17.png' %}" alt="" class="p-1 img-fluid" style="max-height:100px;">
                                 </div>
                             </div>
                         </div>
-                    </h2>
+                    </div>
                     <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                         <div class="accordion-body">
                             <div class="row m-auto">
@@ -373,14 +377,14 @@ Sustainability Goals
                 </div>
                 <!-- PRODUCTIONs -->
                 <div class="accordion-item">
-                    <h2 class="accordion-header">
+                     <div class="fs-2 accordion-header">
                         <div class="p-3" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false"
                             aria-controls="collapseFour">
                             <div class="row">
-                                <div class="col d-flex align-items-center">
+                                <div class="col d-flex align-items-center text-break">
                                     <div class="fw-normal fst-italic fs-5">PRODUCTIONs</div>
                                 </div>
-                                <div class="col d-flex justify-content-end">
+                                <div class="col-8 d-flex justify-content-end flex-wrap">
                                     <img src="{% static 'Aboutus/sdg/sdg3.png' %}" alt="" height="100px" class="p-1">
                                     <img src="{% static 'Aboutus/sdg/sdg4.png' %}" alt="" height="100px" class="p-1">
                                     <img src="{% static 'Aboutus/sdg/sdg11.png' %}" alt="" height="100px" class="p-1">
@@ -388,7 +392,7 @@ Sustainability Goals
                                 </div>
                             </div>
                         </div>
-                    </h2>
+                    </div>
                     <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                         <div class="accordion-body">
                             <div class="row m-auto">
@@ -449,14 +453,14 @@ Sustainability Goals
                 </div>
                 <!-- Courses -->
                 <div class="accordion-item">
-                    <h2 class="accordion-header">
+                    <div class="fs-2 accordion-header">
                         <div class="p-3" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false"
                             aria-controls="collapseFive">
                             <div class="row">
                                 <div class="col d-flex align-items-center">
                                     <div class="fw-normal fst-italic fs-5">COURSEs</div>
                                 </div>
-                                <div class="col d-flex justify-content-end">
+                                <div class="col-8 d-flex justify-content-end flex-wrap">
                                     <img src="{% static 'Aboutus/sdg/sdg3.png' %}" alt="" height="100px" class="p-1">
                                     <img src="{% static 'Aboutus/sdg/sdg4.png' %}" alt="" height="100px" class="p-1">
                                     <img src="{% static 'Aboutus/sdg/sdg16.png' %}" alt="" height="100px" class="p-1">
@@ -464,7 +468,7 @@ Sustainability Goals
                                 </div>
                             </div>
                         </div>
-                    </h2>
+                    </div>
                     <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                         <div class="accordion-body">
                             <div class="row m-auto">
@@ -537,7 +541,7 @@ Sustainability Goals
             with global priorities, we actively address challenges, striving for outcome-based learning and holistic
             community growth.
         </div>
-        <div class="col-12 lh-lg mb-5 fst-italic text-center fw-bolder">
+        <div class="col-12 lh-lg mb-5 fs-3 fst-italic text-center fw-bolder">
             Join us as we continue to ideate and implement sustainable initiatives for a brighter future by mailing to
             research@letusdream.org
         </div>
