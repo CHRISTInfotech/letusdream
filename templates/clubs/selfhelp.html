@@ -5,21 +5,25 @@
     Community Hubs
 {% endblock title %}
 
-{% block extraStyles %}
-    <link rel="stylesheet" href="{% static 'clubs/clubs.css' %}" type="text/css">
-{% endblock extraStyles %}
+{% block links %}
+    <link rel="stylesheet" href="{% static 'css/2025/clubs.css' %}" type="text/css">
+{% endblock links %}
 
 {% block content %}
+
+    <nav aria-label="breadcrumb animated slideInDown" class="cus-breadcrumb breadcrumb-style">
+        <ol class="breadcrumb container mb-0 ">
+            <li class="breadcrumb-item">
+                <a class="text-black text-decoration-none" href="{% url 'main' %}">Home</a>
+            </li>
+            <li class="breadcrumb-item">
+                <a class="text-black text-decoration-none">Clubs</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">Grow & Glow Club (G & G Club)</li>
+        </ol>
+    </nav>
+
     <div class="container">
-        <nav aria-label="breadcrumb" class="animated slideInDown" style="margin-top: 150px;">
-            <ol class="breadcrumb text-uppercase mb-0 bg-white">
-                <li class="breadcrumb-item"><a class="text-black text-decoration-none" href="{% url 'main' %}">Home</a>
-                </li>
-                <li class="breadcrumb-item"><a class="text-black text-decoration-none">Clubs</a></li>
-                <li class="breadcrumb-item active" aria-current="page" style="color: #0a7b79;">Grow & Glow Club (G & G Club)
-                </li>
-            </ol>
-        </nav>
 
         <div class="col-12">
             <div class="fs-1 fw-bolder text-center mt-5">

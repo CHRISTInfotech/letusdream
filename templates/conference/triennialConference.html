@@ -3,24 +3,24 @@
 
 {% block title %}
     Triennial Conferences
-{% endblock %}
+{% endblock title %}
 
-{% block extraStyles %}
-    <link rel="stylesheet" href="{% static 'css/triennialConference.css' %}" type="text/css">
-    <link rel="stylesheet" href="{% static 'css/annualConference.css' %}" type="text/css">
-    <link rel="stylesheet" href="{% static 'css/media.css' %}" type="text/css">
-{% endblock extraStyles %}
+{% block links %}
+    <link rel="stylesheet" href="{% static 'css/2025/aboutConference.css' %}" type="text/css">
+{% endblock links %}
 
 {% block content %}
-    <nav aria-label="breadcrumb animated slideInDown" class="cus-breadcrumb" style="margin-top: 150px; margin-left: 50px;">
-        <ol class="breadcrumb text-uppercase mb-0 bg-white">
-            <li class="breadcrumb-item"><a class="text-black text-decoration-none" href="{% url 'main' %}">Home</a></li>
-            <li class="breadcrumb-item"><a class="text-black text-decoration-none"
-                                           href="{% url 'main' %}Conferences">Conferences</a></li>
-            <li class="breadcrumb-item  active" aria-current="page">Triennial Conferences</li>
+    <nav aria-label="breadcrumb animated slideInDown" class="cus-breadcrumb breadcrumb-style">
+        <ol class="breadcrumb container mb-0 ">
+            <li class="breadcrumb-item">
+                <a class="text-black text-decoration-none" href="{% url 'main' %}">Home</a>
+            </li>
+            <li class="breadcrumb-item">
+                <a class="text-black text-decoration-none">Conference</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">Triennial Conferences</li>
         </ol>
     </nav>
-    <br><br>
 
     <div class="container">
 

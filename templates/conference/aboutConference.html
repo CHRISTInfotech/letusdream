@@ -10,9 +10,20 @@
 {% endblock links %}
 
 {% block content %}
+    <nav aria-label="breadcrumb animated slideInDown" class="cus-breadcrumb breadcrumb-style">
+        <ol class="breadcrumb container mb-0 ">
+            <li class="breadcrumb-item">
+                <a class="text-black text-decoration-none" href="{% url 'main' %}">Home</a>
+            </li>
+            <li class="breadcrumb-item">
+                <a class="text-black text-decoration-none">Conference</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">Overview</li>
+        </ol>
+    </nav>
 
     <div class="container py-5">
-        <div class="fs-1 fw-bolder lh-sm text-center mb-3">
+        <div class="fs-1 fw-bolder lh-sm text-center mb-5">
             Let Us Dream Community Conferences
         </div>
         <div class="lh-lg text-center cover">
@@ -87,19 +98,19 @@
 
     <div class="container py-3">
         <div class="row py-5">
-            <div class="col-sm-12 col-md-6 mb-3">
-                <div>
+            <div class="col-sm-12 col-md-4 mb-3 card-cover-light d-flex justify-content-center align-items-center">
+                <div class="text-center p-3 ">
                     <div class="fs-3 fw-bold text-center mb-3 border-bottom">
                         Vision
                     </div>
-                    <div>
+                    <div class="lh-lg">
                         Empowering local communities for sustainable global impact and improvement.
                     </div>
                 </div>
             </div>
-            <div class="col-sm-12 col-md-6 mb-3">
-                <div>
-                    <div class="fs-3 fw-bold text-center mb-3 border-bottom">
+            <div class="col-sm-12 col-md-8 mb-3">
+                <div class="lh-lg">
+                    <div class="fs-3 fw-bold mb-3 border-bottom">
                         Mission
                     </div>
                     <div>
@@ -123,7 +134,7 @@
         </div>
     </div>
 
-    <div class="bg-custom-dark mt-5">
+    <div class="bg-custom-dark">
         <div class="container py-5">
             OBJECTIVES
             To offer the participants an opportunity to bridge the knowledge gap through the interaction of researchers
