@@ -6,30 +6,20 @@
 {% endblock %}
 
 
-{% block extraStyles %}
-    <link rel="stylesheet" href="{% static 'conference/resources/video_gal.css' %}" type="text/css">
-{% endblock extraStyles %}
-
 {% block links %}
+    <link rel="stylesheet" href="{% static 'css/2025/aboutConference.css' %}" type="text/css">
 {% endblock links %}
 
-
 {% block content %}
-    <nav aria-label="breadcrumb animated slideInDown" class="cus-breadcrumb" style="margin-top: 150px; margin-left: 50px;">
-        <ol class="breadcrumb text-uppercase mb-0 bg-white">
+    <nav aria-label="breadcrumb animated slideInDown" class="cus-breadcrumb breadcrumb-style">
+        <ol class="breadcrumb container mb-0 ">
             <li class="breadcrumb-item">
-                <a class="text-black text-decoration-none" href="{% url 'main' %}">
-                    Home
-                </a>
+                <a class="text-black text-decoration-none" href="{% url 'main' %}">Home</a>
             </li>
             <li class="breadcrumb-item">
-                <a class="text-black text-decoration-none" href="{% url 'main' %}Conferences">
-                    Conferences
-                </a>
+                <a class="text-black text-decoration-none">Conference</a>
             </li>
-            <li class="breadcrumb-item  active" aria-current="page">
-                Organiser Kit - Let Us Dream Conferences
-            </li>
+            <li class="breadcrumb-item active" aria-current="page">Organiser Kit - Let Us Dream Conferences</li>
         </ol>
     </nav>
 
@@ -42,7 +32,8 @@
             <div class="gallery py-5">
                 <div style="border-radius: 10px;">
                     <iframe src="https://www.youtube.com/embed/B4nDIrmxppU?list=PLTas59dAb68eBE-jooq5IvMVesYjoqWQU"
-                            allowfullscreen name="tab"></iframe>
+                            allowfullscreen name="tab"
+                            width="100%" height="600px"></iframe>
                 </div>
                 <div>
                     <span>

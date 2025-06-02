@@ -4,17 +4,32 @@
     D.R.E.A.M.S Program
 {% endblock %}
 
-{% block extraStyles %}
-    <link rel="stylesheet" href="{% static 'css/dreamsProgram.css' %}" type="text/css">
-{% endblock extraStyles %}
-
 {% block links %}
+    <link rel="stylesheet" href="{% static 'css/2025/dreamsProgram.css' %}" type="text/css">
 {% endblock links %}
 
 {% block content %}
+    <nav aria-label="breadcrumb animated slideInDown" class="cus-breadcrumb breadcrumb-style">
+        <ol class="breadcrumb container mb-0 ">
+            <li class="breadcrumb-item">
+                <a class="text-black text-decoration-none" href="{% url 'main' %}">Home</a>
+            </li>
+            <li class="breadcrumb-item">
+                <a class="text-black text-decoration-none">DREAMS</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">DREAMS Program</li>
+        </ol>
+    </nav>
 
-    <div class="m-0 bg-light">
-        <img src="{% static '2024/dreams/dreams_banner.png' %}" class="img-fluid" alt="no image">
+    <div class="container">
+        <div class="py-5 m-0 text-center">
+            <div class="fs-1 mt-5 text-break">
+                <span class="font-big">DREAMS</span> Program
+            </div>
+            <div class="fs-3 mb-5">
+                <b>D</b>esire, <b>R</b>eadiness, <b>E</b>mpowerment, <b>A</b>ction and <b>M</b>astery for <b>S</b>uccess
+            </div>
+        </div>
     </div>
 
     {% if messages %}
@@ -24,21 +39,21 @@
     <div class="bg-light m-0">
         <div class="container ">
             <div class="row m-0">
-                <div class="col-sm-12 col-md-7 mb-5">
+                <div class="col-sm-12 col-md-7 mb-5 mt-5">
                     <div class="fs-1 fw-bolder mb-3">
                         DREAMS
                     </div>
                     <div class="lh-lg">
-                        The DREAMS ( Desire, Readiness, Empowerment, Action and Mastery for Success) is 
-                        a structured five stage approach designed to foster psycho-social and leadership 
-                        development of an individual. Based on scientific theories , the DREAMS model  
-                        begin with Desire and Readiness stage which incorporates goal setting and motivational 
-                        theories  while the Empowerment , Action and Mastery stages are grounded in self 
-                        determination theory (Thomas , L. 2024, Pilot study, DREAMS  Program - Journal of 
-                        School Administration, Research and Development). Developed by Dr. Fr. Lijo Thomas, 
-                        this evidence-based, three-year after-school program pairs underperforming middle 
-                        school students with mentors from college and senior adults in the local community. 
-                        Focused on mentoring, modeling, and motivating, these mentors help guide, inspire, 
+                        The DREAMS ( Desire, Readiness, Empowerment, Action and Mastery for Success) is
+                        a structured five stage approach designed to foster psycho-social and leadership
+                        development of an individual. Based on scientific theories , the DREAMS model
+                        begin with Desire and Readiness stage which incorporates goal setting and motivational
+                        theories while the Empowerment , Action and Mastery stages are grounded in self
+                        determination theory (Thomas , L. 2024, Pilot study, DREAMS Program - Journal of
+                        School Administration, Research and Development). Developed by Dr. Fr. Lijo Thomas,
+                        this evidence-based, three-year after-school program pairs underperforming middle
+                        school students with mentors from college and senior adults in the local community.
+                        Focused on mentoring, modeling, and motivating, these mentors help guide, inspire,
                         and empower young participants, supporting their growth and resilience.
                     </div>
                 </div>
@@ -59,17 +74,19 @@
                     Why DREAMS
                 </div>
                 <div class="lh-lg">
-                    The DREAMS program is a transformative three- year intervention designed to foster 
-                    authentic leadership, emotional intelligence, civic responsibility, and social 
-                    consciousness. By harnessing the potential of university students, DREAMS program 
+                    The DREAMS program is a transformative three- year intervention designed to foster
+                    authentic leadership, emotional intelligence, civic responsibility, and social
+                    consciousness. By harnessing the potential of university students, DREAMS program
                     strategically impacts three age groups: adolescents, young adults, and senior adults.
                     <br/>
                     <br/>
                     DREAMS key goal is to reconnect local communities with educational institutions while enhancing
                     youth leadership. Through intergenerational and intercultural mentoring, senior adults such as
                     retirees and community volunteers share their wisdom, skills and values with young participants
-                    while young adults contribute their knowledge and hard skills. This exchange bridges generational
-                    gaps, allowing for the transfer of essential skills, cultural values and experiences among all the
+                    while young adults contribute their knowledge and hard skills. This exchange bridges
+                    generational
+                    gaps, allowing for the transfer of essential skills, cultural values and experiences among all
+                    the
                     participants. Thus, DREAMS strengthen community ties and build a shared sense of purpose.
                 </div>
             </div>
@@ -90,9 +107,12 @@
                         senior volunteers, organized into five groups using the D-R-E-A-M model ( Desire, Readiness,
                         Empowerment, Action and Mastery for Success). Each group features a 1:2 mentoring ratio,
                         ensuring personalized attention. The program includes 8 days of physical intervention each
-                        quarter—5 days of summer camp followed by 3 follow-up sessions—complemented by monthly virtual
-                        subgroup meetings to work on community service capstone projects. This structure aims to enhance
-                        students' personal growth and leadership skills while fostering mentorship in college students,
+                        quarter—5 days of summer camp followed by 3 follow-up sessions—complemented by monthly
+                        virtual
+                        subgroup meetings to work on community service capstone projects. This structure aims to
+                        enhance
+                        students' personal growth and leadership skills while fostering mentorship in college
+                        students,
                         with a continuous feedback loop to evaluate progress and community impact.
 
                     </div>
@@ -140,7 +160,8 @@
                                 Empowerment
                             </div>
                             <div>
-                                Empowerment equips participants with the psycho-social and leadership skills necessary
+                                Empowerment equips participants with the psycho-social and leadership skills
+                                necessary
                                 for holistic growth.
                             </div>
                         </div>
@@ -162,7 +183,8 @@
                                 Mastery
                             </div>
                             <div>
-                                Mastery or excellence is the final stage, where sustained effort leads to success, and
+                                Mastery or excellence is the final stage, where sustained effort leads to success,
+                                and
                                 the cycle begins again as new, higher goals are set.
                             </div>
                         </div>
@@ -188,38 +210,66 @@
                 <div class="fs-2 fw-bolder mb-3">
                     DREAMS Impact
                 </div>
-                <div class="col-12">
+                <div class="col-12 text-center">
                     <div class="row m-0">
-                        <div class="col-sm-12 col-md-10">
+                        <div class="col-sm-12 col-md-10 mb-3">
                             <div class="row m-0">
                                 <div class="col p-2 fw-bold fs-5">
-                                    <i class="fa-solid fa-house fs-2"></i> &nbsp;&nbsp; 3100+ Families
+                                    <div class="fs-1">
+                                        <i class="fa-solid fa-house fs-2"></i>
+                                    </div>
+                                    <div>
+                                        3100+ Families
+                                    </div>
                                 </div>
                                 <div class="col p-2 fw-bold fs-5">
-                                    <i class="fa-solid fa-person-walking-with-cane fs-2"></i> &nbsp;&nbsp; 3000 +
-                                    Mentees
+                                    <div class="fs-1">
+                                        <i class="fa-solid fa-person-walking-with-cane fs-2"></i>
+                                    </div>
+                                    <div>
+                                        3000 + Mentees
+                                    </div>
                                 </div>
                                 <div class="col p-2 fw-bold fs-5">
-                                    <i class="fa-solid fa-person-military-pointing fs-2"></i> &nbsp;&nbsp; 1600+ Mentors
+                                    <div class="fs-1">
+                                        <i class="fa-solid fa-person-military-pointing fs-2"></i>
+                                    </div>
+                                    <div>
+                                        1600+ Mentors
+                                    </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col p-2 fw-bold fs-5">
-                                    <i class="fa-solid fa-street-view fs-2"></i> &nbsp;&nbsp; 250+ Community Leaders
+                                    <div class="fs-1">
+                                        <i class="fa-solid fa-street-view fs-2"></i>
+                                    </div>
+                                    <div>
+                                        250+ Community Leaders
+                                    </div>
+                                </div>
+                                <div class="col p-2 fw-bold fs-5 text-break">
+                                    <div class="fs-1">
+                                        <i class="fa-solid fa-building-columns fs-2"></i>
+                                    </div>
+                                    <div>
+                                        10+ College/universities
+                                    </div>
                                 </div>
                                 <div class="col p-2 fw-bold fs-5">
-                                    <i class="fa-solid fa-building-columns fs-2"></i> &nbsp;&nbsp; 10+
-                                    College/universities
-                                </div>
-                                <div class="col p-2 fw-bold fs-5">
-                                    <i class="fa-solid fa-school fs-2"></i> &nbsp;&nbsp; 15+ Schools
+                                    <div class="fs-1">
+                                        <i class="fa-solid fa-school fs-2"></i>
+                                    </div>
+                                    <div>
+                                        15+ Schools
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-sm-12 col-md-2">
+                        <div class="col-sm-12 col-md-2 d-flex justify-content-center align-items-center btn-bg">
                             <a href="https://drive.google.com/file/d/1j46A1wvDq6ebGaQADr4M2nmWRcYPsRVA/view?usp=sharing"
                                class="text-decoration-none" target="_blank">
-                                <div class="btn-bg p-3 text-white fw-bolder text-break text-center">
+                                <div class=" p-3 text-white fw-bolder text-break text-center">
                                     Read our Annual Report 2024
                                 </div>
                             </a>
@@ -273,7 +323,8 @@
                         Impact Studies and Review Reports
                     </div>
                     <span class="fw-bold">a.</span>
-                    More than 20 members from different universities and continents are involved in the research team
+                    More than 20 members from different universities and continents are involved in the research
+                    team
                     who are continuously researching the impact of the program <a
                         href="{% url 'research' %}" class="text-decoration-none" target="_blank">LUD
                     Research</a>.
@@ -283,15 +334,18 @@
                     Publications</a>. <br/><br/>
                     <span class="fw-bold">b.</span>
                     Participants (mentees) and college student mentors have shown significant positive changes in
-                    their self-confidence, self-esteem, level of motivation, personal and social behavior, and academic
+                    their self-confidence, self-esteem, level of motivation, personal and social behavior, and
+                    academic
                     performance.<br/><br/>
                     <span class="fw-bold">c.</span>
                     Senior adult mentors reported feeling happier and finding life more meaningful after retirement
                     after volunteering in the program.<br/><br/>
                     <span class="fw-bold">d.</span>
-                    Our annual review, incorporating feedback from primary stakeholders (students, mentors, families)
+                    Our annual review, incorporating feedback from primary stakeholders (students, mentors,
+                    families)
                     and secondary stakeholders (parents, teachers, local business partners), indicates a significant
-                    positive shift in students' attitudes towards enhanced emotional well-being, learning and community
+                    positive shift in students' attitudes towards enhanced emotional well-being, learning and
+                    community
                     engagement.
 
                 </div>
@@ -300,7 +354,8 @@
                         Impact - Leadership and Community Development
                     </div>
                     <span class="fw-bold">a.</span>
-                    The Program focuses on fostering transformational, and authentic thought leaders among university
+                    The Program focuses on fostering transformational, and authentic thought leaders among
+                    university
                     students through leadership, mentoring, and community service initiatives.<br/><br/>
                     <span class="fw-bold">b.</span>
                     Empowered women, leading to greater social and economic independence within communities. More
@@ -356,64 +411,71 @@
             <div class="row m-0 mt-3">
                 <!-- Member 1 -->
                 <div class="col-12 col-md text-center mb-3">
-                    <img src="{% static '2024/dreams/team member1.jpg' %}" alt="" class="img-fluid mb-2 rounded-pill">
+                    <img src="{% static '2024/dreams/team member1.jpg' %}" alt=""
+                         class="img-fluid mb-2 rounded-pill">
                     <div class="fw-bold">Adarsh Jose</div>
                     <div class="fst-italic">Lead</div>
                 </div>
                 <!-- Member 2 -->
                 <div class="col-12 col-md text-center mb-3">
-                    <img src="{% static '2024/dreams/team member2.jpg' %}" alt="" class="img-fluid mb-2 rounded-pill">
+                    <img src="{% static '2024/dreams/team member2.jpg' %}" alt=""
+                         class="img-fluid mb-2 rounded-pill">
                     <div class="fw-bold">Banu H V</div>
                     <div class="fst-italic">Youth Lead</div>
                 </div>
                 <!-- Member 3 -->
                 <div class="col-12 col-md text-center mb-3">
-                    <img src="{% static '2024/dreams/Leadership/30.png' %}" alt="" class="img-fluid mb-2 rounded-pill">
+                    <img src="{% static '2024/dreams/Leadership/30.png' %}" alt=""
+                         class="img-fluid mb-2 rounded-pill">
                     <div class="fw-bold">Jasmine Sahni</div>
                     <div class="fst-italic">Personnel</div>
                 </div>
+                <!-- Member 9 -->
+                <div class="col-12 col-md text-center mb-5">
+                    <img src="{% static '2024/dreams/Leadership/35.png' %}" alt=""
+                         class="img-fluid mb-2 rounded-pill">
+                    <div class="fw-bold">Jovin George</div>
+                    <div class="fst-italic">Media</div>
+                </div>
                 <!-- Member 4 -->
                 <div class="col-12 col-md text-center mb-3">
-                    <img src="{% static '2024/dreams/Leadership/31.png' %}" alt="" class="img-fluid mb-2 rounded-pill">
+                    <img src="{% static '2024/dreams/Leadership/31.png' %}" alt=""
+                         class="img-fluid mb-2 rounded-pill">
                     <div class="fw-bold">Roseline Gomes</div>
                     <div class="fst-italic">Programs Lead</div>
                 </div>
                 <!-- Member 5 -->
                 <div class="col-12 col-md text-center mb-3">
-                    <img src="{% static '2024/dreams/Leadership/32.png' %}" alt="" class="img-fluid mb-2 rounded-pill">
+                    <img src="{% static '2024/dreams/Leadership/32.png' %}" alt=""
+                         class="img-fluid mb-2 rounded-pill">
                     <div class="fw-bold">Smita Kavatekar</div>
                     <div class="fst-italic">Faculty Lead</div>
                 </div>
-            </div>
-            <div class="row m-0 mt-3">
                 <!-- Member 6 -->
                 <div class="col-12 col-md text-center mb-5">
-                    <img src="{% static '2024/dreams/team member5.jpg' %}" alt="" class="img-fluid mb-2 rounded-pill">
+                    <img src="{% static '2024/dreams/team member5.jpg' %}" alt=""
+                         class="img-fluid mb-2 rounded-pill">
                     <div class="fw-bold">Srikrishna Bhagawan NM</div>
                     <div class="fst-italic">Faculty Coordinator</div>
                 </div>
                 <!-- Member 7 -->
                 <div class="col-12 col-md text-center mb-5">
-                    <img src="{% static '2024/dreams/team member3.jpg' %}" alt="" class="img-fluid mb-2 rounded-pill">
+                    <img src="{% static '2024/dreams/team member3.jpg' %}" alt=""
+                         class="img-fluid mb-2 rounded-pill">
                     <div class="fw-bold">Fina Francis</div>
                     <div class="fst-italic">Community Lead</div>
                 </div>
                 <!-- Member 8 -->
                 <div class="col-12 col-md text-center mb-5">
-                    <img src="{% static '2024/dreams/team member4.jpg' %}" alt="" class="img-fluid mb-2 rounded-pill">
+                    <img src="{% static '2024/dreams/team member4.jpg' %}" alt=""
+                         class="img-fluid mb-2 rounded-pill">
                     <div class="fw-bold">Jasmine Joseph</div>
                     <div class="fst-italic">Operations</div>
-                </div>
-                <!-- Member 9 -->
-                <div class="col-12 col-md text-center mb-5">
-                    <img src="{% static '2024/dreams/Leadership/35.png' %}" alt="" class="img-fluid mb-2 rounded-pill">
-                    <div class="fw-bold">Jovin George</div>
-                    <div class="fst-italic">Media</div>
                 </div>
             </div>
         </div>
     </div>
-    
+
 
     <div class="container">
         <div class="row m-0">
@@ -450,7 +512,8 @@
                 <div class="card-body">
                     <p class="card-text">
                         The Ocean Students Community successfully completed their follow-up session for the DREAMS
-                        Intervention Program on 14th September 2024 at Govt. Muhammadans LPS, Pallam, Thiruvananthapuram
+                        Intervention Program on 14th September 2024 at Govt. Muhammadans LPS, Pallam,
+                        Thiruvananthapuram
                     </p>
                 </div>
             </div>
@@ -466,14 +529,15 @@
                      Subscribe to our Newsletter
                 </span>
                     <div class="form-floating">
-                        <input type="email" class="form-control" id="emailfornews" name="emailfornews" placeholder="Enter your email">
+                        <input type="email" class="form-control" id="emailfornews" name="emailfornews"
+                               placeholder="Enter your email">
                         <input type="text" value="dreams" id="program" name="program" hidden>
                         <label for="emailfornews" disabled>Enter your email</label>
                     </div>
                     <button type="submit" class="btn border" for="">Subscribe</label>
                 </div>
-            </div>
         </div>
+    </div>
     </div>
 
 {% endblock %}
