@@ -1,6 +1,7 @@
 import csv
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
+from .location_data import locations_data
 
 
 def index(request):
@@ -118,8 +119,10 @@ def dreams(request, drm):
 
 
 def locations(request, loc):
+    context = locations_data.get(loc)
     if loc == 'bangalore':
-        return render(request, 'location/india/bangalore.html')
+        
+        return render(request, 'location/location.html',context)
     elif loc == 'changancherry':
         return render(request, 'location/india/changancherry.html')
     elif loc == 'mannanam':

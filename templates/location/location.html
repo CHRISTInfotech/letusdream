@@ -1,0 +1,144 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}{{ location.name|upper }}{% endblock %}
+
+{% block extraStyles %}
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="{% static 'css/location.css' %}" type="text/css">
+{% endblock extraStyles %}
+
+{% block content %}
+
+<!-- Breadcrumb Navigation -->
+<nav aria-label="breadcrumb" class="bg-light py-2 mb-5">
+  <div class="container">
+    <ol class="breadcrumb mb-0">
+      {% for item in breadcrumb %}
+      <li class="breadcrumb-item {% if forloop.last %}active{% endif %}">
+        {% if item.url %}
+        <a href="{{ item.url }}"><i class="{{ item.icon }} me-1"></i>{{ item.name }}</a>
+        {% else %}
+        <i class="{{ item.icon }} me-1"></i>{{ item.name }}
+        {% endif %}
+      </li>
+      {% endfor %}
+    </ol>
+  </div>
+</nav>
+
+<div class="container modern-page">
+    <!-- Header Section -->
+    <header class="page-header">
+        <div class="header-content">
+            <h1>{{ location.title }}</h1>
+            <p class="subtitle">{{ location.subtitle }}</p>
+        </div>
+    </header>
+
+    <!-- Navigation Pills -->
+    <div class="page-container">
+        <nav class="nav-pills">
+            {% for program in programs %}
+            <a href="#{{ program.id }}" class="nav-pill {% if forloop.first %}active{% endif %}">{{ program.title }}</a>
+            {% endfor %}
+        </nav>
+    </div>
+
+    <!-- Main Content -->
+    <div class="page-container">
+        <div class="main-content">
+            <!-- Left Column - Main Content -->
+            <div>
+                {% for program in programs %}
+                <section id="{{ program.id }}" class="program-section">
+                    <h2>{{ program.title }}</h2>
+                    {% for paragraph in program.description %}
+                    <p>{{ paragraph }}</p>
+                    {% endfor %}
+                </section>
+                {% endfor %}
+            </div>
+
+            <!-- Right Column - Leadership -->
+            <aside>
+                {% for program in programs %}
+                <section class="leadership-section">
+                    <h3 class="leadership-title">{{ program.title }} Leadership</h3>
+                    {% for leader in program.leadership %}
+                    <div class="leader-card">
+                        <div class="leader-avatar">{{ leader.initials }}</div>
+                        <div class="leader-info">
+                            <h4>{{ leader.name }}</h4>
+                            <p>{{ leader.role }}</p>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </section>
+                {% endfor %}
+            </aside>
+        </div>
+        
+        <!-- Impact Section -->
+        <section class="impact-section">
+            <h2 class="impact-title">{{ impact.title }}</h2>
+            <div class="impact-grid">
+                {% for stat in impact.stats %}
+                <div class="impact-card">
+                    <span class="impact-number">{{ stat.number }}</span>
+                    <h3>{{ stat.label }}</h3>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section class="gallery-section">
+            <h2 class="gallery-title">{{ gallery.title }}</h2>
+            <div class="gallery-actions">
+                <a href="{{ gallery.gallery_url }}" class="btn btn-primary">
+                    <i class="fas fa-images"></i>
+                    {{ gallery.gallery_text }}
+                </a>
+                <a href="{{ gallery.fb_url }}" class="btn btn-outline">
+                    <i class="fab fa-facebook"></i>
+                    {{ gallery.fb_text }}
+                </a>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <!-- <section class="testimonials-section">
+            <h2 class="testimonials-title">{{ testimonials.title }}</h2>
+            <div class="testimonials-grid">
+                {% for testimonial in testimonials.items %}
+                <div class="testimonial-card">
+                    <p class="testimonial-text">{{ testimonial.text }}</p>
+                    <div class="testimonial-author">{{ testimonial.author }}</div>
+                    <div class="testimonial-role">{{ testimonial.role }}</div>
+                </div>
+                {% endfor %}
+            </div>
+        </section> -->
+
+    {% include 'partials/_testimonials.html' %}
+
+
+        <!-- Contact Section -->
+        <section class="contact-section">
+            <h2 class="contact-title">{{ contact.title }}</h2>
+            <div class="contact-grid">
+                {% for item in contact.items %}
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="{{ item.icon }}"></i>
+                    </div>
+                    <h4>{{ item.label }}</h4>
+                    <p>{{ item.value }}</p>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+    </div>
+</div>
+{% endblock %}
