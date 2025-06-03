@@ -2,229 +2,260 @@
 {% load static %}
 
 {% block title %}
-    Triennial Conferences
+Triennial Conferences
 {% endblock title %}
 
 {% block links %}
-    <link rel="stylesheet" href="{% static 'css/2025/aboutConference.css' %}" type="text/css">
+<link rel="stylesheet" href="{% static 'css/2025/aboutConference.css' %}" type="text/css">
 {% endblock links %}
 
 {% block content %}
-    <nav aria-label="breadcrumb animated slideInDown" class="cus-breadcrumb breadcrumb-style">
-        <ol class="breadcrumb container mb-0 ">
-            <li class="breadcrumb-item">
-                <a class="text-black text-decoration-none" href="{% url 'main' %}">Home</a>
-            </li>
-            <li class="breadcrumb-item">
-                <a class="text-black text-decoration-none">Conference</a>
-            </li>
-            <li class="breadcrumb-item active" aria-current="page">Triennial Conferences</li>
-        </ol>
-    </nav>
+<nav aria-label="breadcrumb animated slideInDown" class="cus-breadcrumb breadcrumb-style">
+    <ol class="breadcrumb container mb-0 ">
+        <li class="breadcrumb-item">
+            <a class="text-black text-decoration-none" href="{% url 'main' %}">Home</a>
+        </li>
+        <li class="breadcrumb-item">
+            <a class="text-black text-decoration-none">Conference</a>
+        </li>
+        <li class="breadcrumb-item active" aria-current="page">Triennial Conferences</li>
+    </ol>
+</nav>
 
-    <div class="container">
+<div class="container">
 
-        <div class="row text-center">
-            <h1 class="display-4 fw-bold text-h3">Triennial International Conferences</h1>
-            <h5>Connecting Local Communities and Service Initiatives Through Global Networking</h5>
+    <div class="row text-center">
+        <h1 class="display-4 fw-bold text-h3">Triennial International Conferences</h1>
+        <h5>Connecting Local Communities and Service Initiatives Through Global Networking</h5>
+    </div>
+
+    <!-- Social Links -->
+    <div class="container body-icons-container d-flex justify-content-center">
+        <a class="text-decoration-none m-1" target="_blank" href="https://www.instagram.com/letus.dream/">
+            <div class="icon ">
+                <i class="fab fa-instagram"></i>
+            </div>
+        </a>
+        <a class="text-decoration-none m-1" target="_blank"
+            href="https://www.youtube.com/channel/UCNw5z9O3LZ7OJlySigI9dlw/featured">
+            <div class="icon">
+                <i class="fab fa-youtube"></i>
+            </div>
+        </a>
+        <a class="text-decoration-none m-1" target="_blank"
+            href="https://www.facebook.com/people/Let-Us-Dream/100083580219431/">
+            <div class="icon">
+                <i class="fab fa-facebook-f"></i>
+            </div>
+        </a>
+        <a class="text-decoration-none m-1" target="_blank" href="https://twitter.com/LetUsDream5?s=08">
+            <div class="icon">
+                <i class="fab fa-twitter"></i>
+            </div>
+        </a>
+        <a class="text-decoration-none m-1" target="_blank" href="https://www.linkedin.com/company/let-us-dream/">
+            <div class="icon">
+                <i class="fab fa-linkedin"></i>
+            </div>
+        </a>
+    </div>
+
+    <section class="container my-5 py-4">
+        <div class="row justify-content-center">
+            <div class="col-lg-12">
+                <h1 class="text-center display-4 fw-bold mb-4" style="color: #005b96;">Introduction</h1>
+                <div class="text-justify lh-lg" style=" font-size: 20px;">
+                    <p>
+                        The Let Us Dream (LUD) Triennial International Conference takes place once every three
+                        years. It brings together LUD chapters and partners from around the world for sharing,
+                        learning from, and celebrating the diversity of people’s selfless acts of care, compassion,
+                        and concern for community.
+                    </p>
+                </div>
+            </div>
+            <button class="text-light"
+                style="background: linear-gradient(90deg, #5a91c5, #002c5e); padding: 10px; width: 170px; border-radius: 12px;">
+                Join the Movement
+            </button>
         </div>
+    </section>
 
-        <!-- Social Links -->
-        <div class="container body-icons-container d-flex justify-content-center">
-            <a class="text-decoration-none m-1" target="_blank" href="https://www.instagram.com/letus.dream/">
-                <div class="icon ">
-                    <i class="fab fa-instagram"></i>
-                </div>
-            </a>
-            <a class="text-decoration-none m-1" target="_blank"
-               href="https://www.youtube.com/channel/UCNw5z9O3LZ7OJlySigI9dlw/featured">
-                <div class="icon">
-                    <i class="fab fa-youtube"></i>
-                </div>
-            </a>
-            <a class="text-decoration-none m-1" target="_blank"
-               href="https://www.facebook.com/people/Let-Us-Dream/100083580219431/">
-                <div class="icon">
-                    <i class="fab fa-facebook-f"></i>
-                </div>
-            </a>
-            <a class="text-decoration-none m-1" target="_blank" href="https://twitter.com/LetUsDream5?s=08">
-                <div class="icon">
-                    <i class="fab fa-twitter"></i>
-                </div>
-            </a>
-            <a class="text-decoration-none m-1" target="_blank" href="https://www.linkedin.com/company/let-us-dream/">
-                <div class="icon">
-                    <i class="fab fa-linkedin"></i>
-                </div>
-            </a>
-        </div>
-
-        <div class="row">
-
-            <div class="col-md-6 mt-5 d-flex justify-content-center">
-                <div>
-                    <a href="{% url 'tc-2023' %}" class="position-relative d-inline-block">
-                        <img src="{% static 'conference/triennial/2023/triennial2023.png' %}"
-                             class="img-fluid rounded mx-auto d-block cus-img" alt="Responsive image">
-                        <div
-                                class="bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute top-0 end-0">
-                            Nov<span class="d-block">3 - 5</span>2023
-                        </div>
-                    </a>
+    <div class="row">
+        <div class="col-md-6 mt-5 d-flex justify-content-center">
+            <div>
+                <a href="{% url 'tc-2023' %}" class="position-relative d-inline-block">
+                    <img src="{% static 'conference/triennial/2023/triennial2023.png' %}"
+                        class="img-fluid rounded mx-auto d-block cus-img" alt="Responsive image">
                     <div
-                            class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center align-self-center d-flex justify-content-center">
-                        <div>
-                            <p class="pl-5 mt-4">
-                                <a href="{% url 'tc-2023' %}"
-                                   class="fw-bold text-h3 text-decoration-none">
-                                    Conference 2023
-                                </a>
-                            </p>
-                        </div>
+                        class="bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute top-0 end-0">
+                        Nov<span class="d-block">3 - 5</span>2023
+                    </div>
+                </a>
+                <div
+                    class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center align-self-center d-flex justify-content-center">
+                    <div>
+                        <p class="pl-5 mt-4">
+                            <a href="{% url 'tc-2023' %}" class="fw-bold text-h3 text-decoration-none">
+                                Conference 2023
+                            </a>
+                        </p>
                     </div>
                 </div>
             </div>
+        </div>
 
-            <div class="col-md-6 mt-5 d-flex justify-content-center">
+        <div class="col-md-6 mt-5 d-flex justify-content-center">
 
-                <div>
-                    <a href="{% url 'tc-2020' %}" class="position-relative d-inline-block">
-                        <img src="{% static 'conference/triennial/TRIENNIAL-CONFERENCE-POSTER2.jpg' %}"
-                             class="img-fluid rounded mx-auto d-block cus-img" alt="Responsive image">
-                        <div
-                                class="bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute top-0 end-0">
-                            Nov<span class="d-block">20 - 22</span>2020
-                        </div>
-                    </a>
+            <div>
+                <a href="{% url 'tc-2020' %}" class="position-relative d-inline-block">
+                    <img src="{% static 'conference/triennial/TRIENNIAL-CONFERENCE-POSTER2.jpg' %}"
+                        class="img-fluid rounded mx-auto d-block cus-img" alt="Responsive image">
                     <div
-                            class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center align-self-center d-flex justify-content-center">
-                        <div>
-                            <p class="pl-5 mt-4">
-                                <a href="{% url 'tc-2020' %}"
-                                   class="fw-bold text-h3 text-decoration-none">
-                                    Virtual Conference 2020
-                                </a>
-                            </p>
-                        </div>
+                        class="bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute top-0 end-0">
+                        Nov<span class="d-block">20 - 22</span>2020
                     </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- conference Description -->
-        <div class="mt-5">
-            <div class="row align-items-center">
-                <div class="col-sm-12  col-md-6 p-4">
-                    <div class="fw-bolder fs-3">
-                        <i class="fa-solid fa-clock-rotate-left"></i>
-                        History
-                        <hr/>
+                </a>
+                <div
+                    class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center align-self-center d-flex justify-content-center">
+                    <div>
+                        <p class="pl-5 mt-4">
+                            <a href="{% url 'tc-2020' %}" class="fw-bold text-h3 text-decoration-none">
+                                Virtual Conference 2020
+                            </a>
+                        </p>
                     </div>
-                    <p class="mb-0 lh-lg">
-                        The international conference offers an opportunity to explore and share the many
-                        and varied community-service possibilities and intervention models, as well as
-                        volunteer opportunities for younger and older generations. The primary intent
-                        is to create an inclusive, diverse, cross-cultural environment for sharing and
-                        growth through community improvement discourse among scholars, practitioners, and
-                        volunteers
-                        of all ages.
-                    </p>
-
-                    <div class="fw-bolder fs-3 mt-3">
-                        <i class="fa-solid fa-eye"></i>
-                        Vision
-                        <hr/>
-                    </div>
-                    <p class="mb-0">Empowering local communities for sustainable global impact and
-                        improvement.
-                    </p>
-                </div>
-                <div class="col-sm-12  col-md-6 p-4">
-                     <div class="fw-bolder fs-3 mt-3">
-                         <i class="fa-solid fa-compact-disc"></i>
-                        Conference Impact
-                        <hr/>
-                    </div>
-                    <a href="https://www.canva.com/design/DAGFxyhil84/sAH26KFBCH8PUnU_FLjOFg/view?utm_content=DAGFxyhil84&utm_campaign=designshare&utm_medium=link&utm_source=viewer" target="_blank">
-                        <img src="{% static '2024/Conference/Conference_glance.png' %}" class="img-fluid">
-                    </a>
-                </div>
-            </div>
-
-            <div class="row align-items-center mb-5">
-                <div class="col-12 p-4">
-
-                    <div class="fw-bolder fs-3 mt-3">
-                        <i class="fa-solid fa-hand-point-right"></i>
-                        Mission
-                        <hr/>
-                    </div>
-                    <p class="mb-0 lh-lg">
-                        The Let Us Dream Conference was established in 2017 for the purpose of providing a
-                        forum for sharing experiences with successes and challenges in community improvement
-                        organizations and efforts.
-                        <br> <br>
-                        Broad conference goals are to:
-                    </p>
-                    <ol class="lh-lg">
-                        <li>Improve networking and collaboration among all those interested in community
-                            improvement
-                            organizations and programs;
-                        </li>
-                        <li>Promote volunteerism and empower all those involved in community improvement
-                            organizations and initiatives, including employees, volunteers, post-secondary
-                            students,
-                            researchers, and practitioners;
-                        </li>
-                        <li>Create a professional learning organization dedicated to improving local
-                            communities and
-                            characterized by a culture of shared researcher and practitioner knowledge,
-                            skills,
-                            theories, and best practices.
-                        </li>
-                    </ol>
-                </div>
-            </div>
-        </div>
-
-        <div class="row mb-5">
-            <div class="col-6">
-                <div class="fw-bold fs-3" style="text-align: left;">
-                    <i class="fa-solid fa-people-group"></i>
-                    Target Audience
-                </div>
-                <div class="mt-4 d-flex justify-content-center lh-lg text-font">
-                    Adult and young adult volunteers, Business owners involved in voluntary community
-                    development projects, Not- for-profit organizations, philanthropists, board members,
-                    social workers, educators, and educational administrators interested in community collaborative
-                    initiatives; Post-secondary student leaders, instructors, and professors; Retirees willing to share
-                    expertise and time for the betterment of community; All who dream of a better future and desire to
-                    make a positive community impact for generations to come.
-                </div>
-            </div>
-            <div class="col-6">
-                <div class="fw-bold fs-3" style="text-align: left;">
-                    This Conference is Presented to:</span>
-                </div>
-                <div class="mt-4 lh-lg">
-                    <ul>
-                        <li>Empower people of diverse age groups and backgrounds working in a myriad of
-                            community
-                            improvement programs aiming at a better tomorrow.
-                        </li>
-                        <li>Consider the concepts and findings of researchers with the real-world
-                            experiences of
-                            practitioners, providing relevance to and synergizing combined knowledge.
-                        </li>
-                        <li>Promote community service and learning among students by introducing diverse
-                            community
-                            improvement interventions.
-                        </li>
-                    </ul>
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- conference Description -->
+    <div class="mt-5">
+        <div class="row align-items-center">
+            <div class="col-sm-12  col-md-6 p-4">
+                <div class="fw-bolder fs-3">
+                    <i class="fa-solid fa-clock-rotate-left"></i>
+                    History
+                    <hr />
+                </div>
+                <p class="mb-0 lh-lg">
+                    Let Us Dream began with a simple yet powerful idea: those who dream for others can
+                    create lasting change. In Monroe, Louisiana, everyday stories of hope reignited Fr. Lijo
+                    Thomas’s vision during a tough phase with the DREAMS project. This led to the first Let Us
+                    Dream Conference on October 21, 2017, at Louisiana Tech University with under 100
+                    participants and 15 service organizations.
+                </p>
+
+                <p class="mb-0 lh-lg mt-3">
+                    By 2019, the model expanded to Binghamton University (New York), Christ University
+                    (Bangalore), and Trivandrum (Kerala), connecting communities across continents. Amid
+                    the 2020 pandemic, Let Us Dream hosted its first and second virtual Triennial
+                    International Conferences with 130+ volunteers, 18,000+ registrations, and 40,000+
+                    viewers, fostering global dialogue.<b>(pls check the impact data and fix it here, and avoid
+                        redundancy)</b>
+                </p>
+
+                <p class="mb-0 lh-lg mt-3">
+                    n 2022, local conferences in Chennai and Kottayam deepened grassroots impact. The
+                    2023 Triennial Conference at Christ University marked a return to in-person gatherings,
+                    featuring global panels, student voices, NGO showcases, and the launch of LUDEx Talks—
+                    a platform for bold ideas and shared visions. <b>(repetition at the timeline) pls verify with
+                        that I have corrected there</b>
+                </p>
+
+                <div class="fw-bolder fs-3 mt-5">
+                    <i class="fa-solid fa-eye"></i>
+                    Vision
+                    <hr />
+                </div>
+                <p class="mb-0">Empowering local communities for sustainable global impact and
+                    improvement.
+                </p>
+            </div>
+            <div class="col-sm-12  col-md-6 p-4">
+                <div class="fw-bolder fs-3 mt-3">
+                    <i class="fa-solid fa-compact-disc"></i>
+                    Conference Impact
+                    <hr />
+                </div>
+                <a href="https://www.canva.com/design/DAGFxyhil84/sAH26KFBCH8PUnU_FLjOFg/view?utm_content=DAGFxyhil84&utm_campaign=designshare&utm_medium=link&utm_source=viewer"
+                    target="_blank">
+                    <img src="{% static '2024/Conference/Conference_glance.png' %}" class="img-fluid">
+                </a>
+            </div>
+        </div>
+
+        <div class="row align-items-center mb-5">
+            <div class="col-12 p-4">
+
+                <div class="fw-bolder fs-3 mt-3">
+                    <i class="fa-solid fa-hand-point-right"></i>
+                    Goals
+                    <hr />
+                </div>
+                <p class="mb-0 lh-lg">
+                    The Let Us Dream Conference was established in 2017 for the purpose of providing a
+                    forum for sharing experiences with successes and challenges in community improvement
+                    organizations and efforts.
+                    <br> <br>
+                    Broad conference goals are to:
+                </p>
+                <ol class="lh-lg">
+                    <li>Improve networking and collaboration among all those interested in community
+                        improvement
+                        organizations and programs.
+                    </li>
+                    <li>Promote volunteerism and empower all those involved in community improvement
+                        organizations and initiatives, including employees, volunteers, post-secondary
+                        students,
+                        researchers, and practitioners.
+                    </li>
+                    <li>Create a professional learning organization dedicated to improving local
+                        communities and
+                        characterized by a culture of shared researcher and practitioner knowledge.
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mb-5">
+        <div class="col-6">
+            <div class="fw-bold fs-3" style="text-align: left;">
+                <i class="fa-solid fa-people-group"></i>
+                Target Audience
+            </div>
+            <div class="mt-4 d-flex justify-content-center lh-lg text-font">
+                Adult and young adult volunteers, Business owners involved in voluntary community
+                development projects, Not- for-profit organizations, philanthropists, board members,
+                social workers, educators, and educational administrators interested in community collaborative
+                initiatives; Post-secondary student leaders, instructors, and professors; Retirees willing to share
+                expertise and time for the betterment of community; All who dream of a better future and desire to
+                make a positive community impact for generations to come.
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="fw-bold fs-3" style="text-align: left;">
+                This Conference is Presented to:</span>
+            </div>
+            <div class="mt-4 lh-lg">
+                <ul>
+                    <li>Empower people of diverse age groups and backgrounds working in a myriad of
+                        community
+                        improvement programs aiming at a better tomorrow.
+                    </li>
+                    <li>Consider the concepts and findings of researchers with the real-world
+                        experiences of
+                        practitioners, providing relevance to and synergizing combined knowledge.
+                    </li>
+                    <li>Promote community service and learning among students by introducing diverse
+                        community
+                        improvement interventions.
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
 
 {% endblock %}
