@@ -1,7 +1,9 @@
 import csv
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
+from datetime import datetime
 from .location_data import locations_data
+from .testimonials_data import TESTIMONIALS_DATA
 
 
 def index(request):
@@ -263,7 +265,15 @@ def downloadpartcsv(request):
 
 
 def testimonials(request):
-    return render(request, 'home/view_testimonials.html')
+    # Convert date strings to datetime objects
+    for testimonial in TESTIMONIALS_DATA:
+        if isinstance(testimonial["date"], str):
+            testimonial["date"] = datetime.strptime(testimonial["date"], "%Y-%m-%d").date()
+
+    context = {
+        'testimonials': TESTIMONIALS_DATA
+    }
+    return render(request, 'home/view_testimonials.html', context)
 
 
 def sustainability(request):

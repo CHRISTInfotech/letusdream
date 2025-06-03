@@ -1,1443 +1,333 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load custom_filters %}
 {% block title %}
 Testimonials
 {% endblock %}
 
 {% block extraStyles %}
-<link rel="stylesheet" href="{% static 'css/testimonials.css' %}" type="text/css">
+<link rel="stylesheet" href="{% static 'css/2025/testimonials.css' %}" type="text/css">
+<style>
+    .testimonial-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border: none;
+        border-radius: 20px;
+        overflow: hidden;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        position: relative;
+    }
+    
+    .testimonial-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    }
+    
+    .testimonial-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+        pointer-events: none;
+    }
+    
+    .testimonial-avatar {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        border: 4px solid rgba(255,255,255,0.3);
+        object-fit: cover;
+        margin: 0 auto;
+        display: block;
+    }
+    
+    .quote-icon {
+        font-size: 3rem;
+        color: rgba(255,255,255,0.3);
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+    
+    .testimonial-date {
+        background: rgba(255,255,255,0.2);
+        backdrop-filter: blur(10px);
+        border-radius: 10px;
+        padding: 8px 12px;
+        font-size: 0.8rem;
+        font-weight: 600;
+    }
+    
+    .testimonial-text {
+        line-height: 1.6;
+        font-size: 1rem;
+        margin: 20px 0;
+    }
+    
+    .author-name {
+        font-weight: 700;
+        font-size: 1.1rem;
+        margin-bottom: 5px;
+    }
+    
+    .author-title {
+        font-size: 0.9rem;
+        opacity: 0.8;
+        font-style: italic;
+    }
+    
+    .section-header {
+        text-align: center;
+        margin-bottom: 4rem;
+    }
+    
+    .section-title {
+        font-size: 3rem;
+        font-weight: 700;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        margin-bottom: 1rem;
+    }
+    
+    .section-subtitle {
+        font-size: 1.2rem;
+        color: #6c757d;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    
+    .breadcrumb-custom {
+        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        border-radius: 15px;
+        padding: 1rem 2rem;
+        margin-bottom: 3rem;
+    }
+    
+    .breadcrumb-custom .breadcrumb-item a {
+        color: #495057;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s ease;
+    }
+    
+    .breadcrumb-custom .breadcrumb-item a:hover {
+        color: #667eea;
+    }
+    
+    .masonry-grid {
+        column-count: 1;
+        column-gap: 2rem;
+    }
+    
+    @media (min-width: 768px) {
+        .masonry-grid {
+            column-count: 2;
+        }
+    }
+    
+    @media (min-width: 1200px) {
+        .masonry-grid {
+            column-count: 2;
+        }
+    }
+    
+    .masonry-item {
+        break-inside: avoid;
+        margin-bottom: 2rem;
+        display: inline-block;
+        width: 100%;
+    }
+    
+.gradient-1 {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #ffffff; /* White for high contrast on dark blues */
+}
+
+.gradient-2 {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    color: #2b0b0e; /* Deep maroon for contrast on pinks */
+}
+
+.gradient-3 {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    color: #0a2e4a; /* Navy blue for contrast on light blues */
+}
+
+.gradient-4 {
+    background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+    color: #00331a; /* Dark green for contrast on bright greens */
+}
+
+.gradient-5 {
+    background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+    color: #4a1c03; /* Dark brown-orange for contrast on peach/yellow */
+}
+
+.gradient-6 {
+    background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+    color: #2a3b4d; /* Dark blue-gray for contrast on pastels */
+}
+/* For gradients 1-3 (darker backgrounds) */
+
+</style>
 {% endblock extraStyles %}
 
 {% block links %}
 <!--Google font-->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 
-<!--  Bootstrap CSS -->
+<!-- Bootstrap Icons -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
 
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-
-<!-- Bootstrap JS -->
-
-
-
-
+<!-- AOS Animation -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 {% endblock links %}
 
 {% block content %}
-<nav aria-label="breadcrumb animated slideInDown" class="cus-breadcrumb">
-    <ol class="breadcrumb text-uppercase mb-0 bg-white">
-        <li class="breadcrumb-item"><a class="text-black text-decoration-none" href="{% url 'main' %}">Home</a></li>
-        <li class="breadcrumb-item  active" aria-current="page">Testimonials</li>
-    </ol>
-</nav>
-
-<div class="container ">
+<!-- Breadcrumb -->
+<div class="container-fluid">
     <div class="row">
-
-        <div class="col-md-12">
-            <section class="t-bq-section blog-home2" id="jasper">
-
-                <div class="t-bq-wrapper2 t-bq-wrapper-boxed2">
-                    <div class="t-bq-quote t-bq-quote-jasper">
-                        <div class="t-bq-quote-jasper-pattern">
-                            <div
-                                class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
-                                Mar<span class="d-block">27</span>2023</div>
-                            <div class="t-bq-quote-jasper-qmark">
-                                &#10077;
-                            </div>
-                        </div>
-
-                        <div class="t-bq-quote-jasper-userpic">
-                            <img src="ltstatic\testimonial\Dr-Deep-Jyoti-Gurung.jpg" alt="">
-                        </div>
-
-                        <div class="t-bq-quote-jasper-base">
-
-                            <blockquote class="t-bq-quote-jasper-text text-justify" cite="Strugatsky Brothers">
-                                As the DREAMS program's faculty coordinator, I cannot express how transformative this
-                                experience has been for me. The program's emphasis on leadership, interpersonal, and
-                                personal development skills has assisted me in developing skills necessary for my role
-                                as a
-                                teacher and mentor.
-                                Being a part of this program has also provided me with an exceptional opportunity to
-                                positively impact the lives of school students. I've had the pleasure of watching
-                                students
-                                discover their strengths and develop essential skills that will help them succeed in all
-                                aspects
-                                of life through the DREAMS program.
-                                It allowed me to positively impact lives and community, while also expanding my
-                                collaboration network, research and publication opportunities.
-                                My goal for the DREAMS program is to broaden its reach and impact. The program has the
-                                potential to benefit even more students and communities worldwide, and I am excited to
-                                be a
-                                part of making that vision a reality.
-                                This program has taught me much about myself, my community, and the power of mentoring
-                                and leadership. Although there have been difficulties along the way, they have only
-                                reinforced my belief in the importance of this program and its ability to effect
-                                positive change
-                                in the world.
-                            </blockquote>
-                            <div class="t-bq-quote-jasper-meta">
-                                <div class="t-bq-quote-jasper-meta-info">
-                                    <div class="t-bq-quote-jasper-author"><cite>Dr. Deep Jyoti Gurung</cite></div>
-                                    <div class="t-bq-quote-jasper-source"><span>Assistant Professor | DREAMS Head
-                                            Faculty
-                                            coordinator of CU | Certified Microsoft
-                                            Innovative Educator</span></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
-        <div class="col-md-6">
-            <section class="t-bq-section blog-home2" id="jasper">
-
-                <div class="t-bq-wrapper t-bq-wrapper-boxed">
-                    <div class="t-bq-quote t-bq-quote-jasper" style="min-height: 517px;">
-                        <div class="t-bq-quote-jasper-pattern">
-                            <div
-                                class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
-                                Aug<span class="d-block">27</span>2020</div>
-                            <div class="t-bq-quote-jasper-qmark">
-                                &#10077;
-                            </div>
-                        </div>
-
-                        <div class="t-bq-quote-jasper-userpic">
-                            <img src="{% static 'logo\user.png' %}" alt="">
-                        </div>
-
-                        <div class="t-bq-quote-jasper-base">
-
-                            <blockquote class="t-bq-quote-jasper-text text-justify" cite="Strugatsky Brothers">
-                                GYLN is one of the best things that happened to me this year. I started as a regular
-                                mentor
-                                in a
-                                small chapter of Dreams, from there I became the coordinator of Dreams media and finally
-                                to
-                                GYLN. In
-                                GYLN, we have people coming from different walks of life, countries, cultures,
-                                languages,
-                                and
-                                qualifications. At GYLN I have an opportunity to show my talents, learn about new
-                                experiences and
-                                cultures. At times the team identifies my problems and tries to give me a better
-                                solution. I
-                                am
-                                really happy and proud to be a member of GYLN. The only suggestion I have is to bring up
-                                more
-                                activities and participants in the coming future.
-                            </blockquote>
-                            <div class="t-bq-quote-jasper-meta">
-                                <div class="t-bq-quote-jasper-meta-info">
-                                    <div class="t-bq-quote-jasper-author"><cite>Jo Anto Nadamukath</cite></div>
-                                    <!-- <div class="t-bq-quote-jasper-source"><span>Programmer</span></div> -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
-        <div class="col-md-6">
-
-            <section class="t-bq-section blog-home2" id="jasper">
-
-                <div class="t-bq-wrapper t-bq-wrapper-boxed">
-                    <div class="t-bq-quote t-bq-quote-jasper" style="min-height: 517px;">
-                        <div class="t-bq-quote-jasper-pattern">
-                            <div
-                                class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
-                                Aug<span class="d-block">27</span>2020</div>
-                            <div class="t-bq-quote-jasper-qmark">
-                                &#10077;
-                            </div>
-                        </div>
-
-                        <div class="t-bq-quote-jasper-userpic">
-                            <img src="{% static 'logo\user.png' %}" alt="">
-                        </div>
-
-                        <div class="t-bq-quote-jasper-base">
-
-                            <blockquote class="t-bq-quote-jasper-text text-justify" cite="Strugatsky Brothers">
-                                I love the platform and I feel the platform provides a lot of opportunities to talk and
-                                grow. I’m
-                                comfortable speaking during each meeting and your team made us comfortable to interact
-                                with
-                                the
-                                participants. I truly enjoy the experience. I think each meeting is always fun because
-                                we
-                                discuss
-                                different topics and it gives us chance to bring new perspectives to situations.
-                            </blockquote>
-                            <div class="t-bq-quote-jasper-meta">
-                                <div class="t-bq-quote-jasper-meta-info">
-                                    <div class="t-bq-quote-jasper-author"><cite>Kaici G</cite></div>
-                                    <!-- <div class="t-bq-quote-jasper-source"><span>Programmer</span></div> -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
-        <div class="col-md-6">
-
-            <section class="t-bq-section blog-home2" id="jasper">
-
-                <div class="t-bq-wrapper t-bq-wrapper-boxed">
-                    <div class="t-bq-quote t-bq-quote-jasper">
-                        <div class="t-bq-quote-jasper-pattern">
-                            <div
-                                class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
-                                Aug<span class="d-block">27</span>2020</div>
-                            <div class="t-bq-quote-jasper-qmark">
-                                &#10077;
-                            </div>
-                        </div>
-
-                        <div class="t-bq-quote-jasper-userpic">
-                            <img src="{% static 'logo\user.png' %}" alt="">
-                        </div>
-
-                        <div class="t-bq-quote-jasper-base">
-
-                            <blockquote class="t-bq-quote-jasper-text text-justify" cite="Strugatsky Brothers">
-                                As a whole, I think the GLYN platform is amazing. It gets young leaders to interact with
-                                one
-                                another
-                                on an international level. Can never have too much of that. It’s very great to have
-                                engaging
-                                discussions with each one of them.
-                            </blockquote>
-                            <div class="t-bq-quote-jasper-meta">
-                                <div class="t-bq-quote-jasper-meta-info">
-                                    <div class="t-bq-quote-jasper-author"><cite>Samuel</cite></div>
-                                    <!-- <div class="t-bq-quote-jasper-source"><span>Programmer</span></div> -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-
-        </div>
-        <div class="col-md-6" id="home">
-
-            <section class="t-bq-section blog-home2" id="jasper">
-
-                <div class="t-bq-wrapper t-bq-wrapper-boxed">
-                    <div class="t-bq-quote t-bq-quote-jasper">
-                        <div class="t-bq-quote-jasper-pattern">
-                            <!-- <div
-                                  class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
-                                  Aug<span class="d-block">27</span>2020</div> -->
-                            <div class="t-bq-quote-jasper-qmark">
-                                &#10077;
-                            </div>
-                        </div>
-
-                        <div class="t-bq-quote-jasper-userpic">
-                            <img src="{% static 'testimonial/Janet.jpg' %}" alt="">
-                        </div>
-
-                        <div class="t-bq-quote-jasper-base" id="testimonial">
-
-                            <blockquote class="t-bq-quote-jasper-text text-justify" cite="Strugatsky Brothers">
-                                I’ve witnessed the program change lives in a way that I have never seen any
-                                program with
-                                similar goals could ever even imagine. Everyone should have a chance to see that they
-                                can do
-                                anything, and I will help in any way I can to make that happen.
-                            </blockquote>
-                            <div class="t-bq-quote-jasper-meta">
-                                <div class="t-bq-quote-jasper-meta-info">
-                                    <div class="t-bq-quote-jasper-author"><cite>Canaan Charrior</cite></div>
-                                    <!-- <div class="t-bq-quote-jasper-source"><span>Associate Professor | Mentor Let US DREAM Research Wing</span></div> -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
-        <div class="col-md-6">
-
-            <section class="t-bq-section blog-home2" id="jasper">
-
-                <div class="t-bq-wrapper t-bq-wrapper-boxed">
-                    <div class="t-bq-quote t-bq-quote-jasper" style="min-height: 375px;">
-                        <div class="t-bq-quote-jasper-pattern">
-                            <!-- <div
-                                class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
-                                Aug<span class="d-block">27</span>2020</div> -->
-                            <div class="t-bq-quote-jasper-qmark">
-                                &#10077;
-                            </div>
-                        </div>
-
-                        <div class="t-bq-quote-jasper-userpic">
-                            <img src="{% static 'testimonial/Kaici-Gordon_2.jpeg' %}" alt="">
-                        </div>
-
-                        <div class="t-bq-quote-jasper-base" id="testimonial">
-
-                            <blockquote class="t-bq-quote-jasper-text text-justify" cite="Strugatsky Brothers">
-                                Really innovative concept.. I was looking forward for
-                                such
-                                curated
-                                content and i got more than i was expecting. I am so far very thrilled with overall
-                                experience
-                                and improvement.
-                            </blockquote>
-                            <div class="t-bq-quote-jasper-meta">
-                                <div class="t-bq-quote-jasper-meta-info">
-                                    <div class="t-bq-quote-jasper-author"><cite>Robin Sehon</cite></div>
-                                    <!-- <div class="t-bq-quote-jasper-source"><span>Associate Professor | Mentor Let US DREAM Research Wing</span></div> -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
-        <div class="col-md-6">
-
-            <section class="t-bq-section blog-home2" id="jasper">
-
-                <div class="t-bq-wrapper t-bq-wrapper-boxed">
-                    <div class="t-bq-quote t-bq-quote-jasper" style="min-height: 375px;">
-                        <div class="t-bq-quote-jasper-pattern">
-                            <!-- <div
-                              class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
-                              Aug<span class="d-block">27</span>2020</div> -->
-                            <div class="t-bq-quote-jasper-qmark">
-                                &#10077;
-                            </div>
-                        </div>
-
-                        <div class="t-bq-quote-jasper-userpic">
-                            <img src="{% static 'testimonial/Hope-Lenior.png' %}" alt="">
-                        </div>
-
-                        <div class="t-bq-quote-jasper-base" id="testimonial">
-
-                            <blockquote class="t-bq-quote-jasper-text text-justify" cite="Strugatsky Brothers">
-                                I was organizing my closet and came across my DREAMS
-                                tshirt.
-                                This
-                                reminded me of how much fun I had with your students and how your volunteer team made me
-                                feel
-                                extremely welcome. Thank you for allowing me to be a part of the DREAMS.
-                            </blockquote>
-                            <div class="t-bq-quote-jasper-meta">
-                                <div class="t-bq-quote-jasper-meta-info">
-                                    <div class="t-bq-quote-jasper-author"><cite>Hope LeNoir</cite></div>
-                                    <!-- <div class="t-bq-quote-jasper-source"><span>Associate Professor | Mentor Let US DREAM Research Wing</span></div> -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
         <div class="col-12">
-
-            <section class="t-bq-section blog-home2" id="jasper">
-
-                <div class="t-bq-wrapper2 t-bq-wrapper-boxed2">
-                    <div class="t-bq-quote t-bq-quote-jasper">
-                        <div class="t-bq-quote-jasper-pattern">
-                            <!-- <div
-                                class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
-                                Aug<span class="d-block">27</span>2020</div> -->
-                            <div class="t-bq-quote-jasper-qmark">
-                                &#10077;
-                            </div>
-                        </div>
-
-                        <div class="t-bq-quote-jasper-userpic">
-                            <img src="{% static 'testimonial\JestinJoseph.jpg' %}" alt="">
-                        </div>
-
-                        <div class="t-bq-quote-jasper-base">
-
-                            <blockquote class="t-bq-quote-jasper-text text-justify" cite="Strugatsky Brothers">
-                                During my school days, I was often labeled as a weak student and struggled to express
-                                myself. This caused me to run away from challenges and opportunities that I felt were
-                                beyond my capabilities. However, everything changed when I joined the DREAMS program.The
-                                DREAMS program has been a game-changer for me, helping me to grow in ways I never
-                                thought possible. It has given me hope and enabled me to overcome my fears, allowing me
-                                to dream bigger and achieve more in my life.One of the most valuable aspects of the
-                                program has been the ample opportunities it provides. As a DREAMS participant, I have
-                                been a mentor, leader, coordinator, and trainer, all of which have been invaluable
-                                experiences in my personal and professional development.
-                                Through these roles, I have learned important skills such as communication,
-                                collaboration, and problem-solving, which have helped me succeed in the program and my
-                                career and personal life. Overall, the DREAMS program has been a transformative
-                                experience for me. It has helped me to develop into a more confident and capable
-                                individual, and given me the tools to pursue my dreams and achieve my goals. I am
-                                grateful for the opportunity to be a part of such an incredible program, and I would
-                                highly recommend it to anyone looking to grow and achieve their full potential.
-
-                            </blockquote>
-                            <div class="t-bq-quote-jasper-meta">
-                                <div class="t-bq-quote-jasper-meta-info">
-                                    <div class="t-bq-quote-jasper-author"><cite>Mr. Jestin Joseph</cite></div>
-                                    <div class="t-bq-quote-jasper-source"><span>DREAMS Changanacherry Chapter, Kerala
-                                            <br>
-                                            Executive Head, Dreams Research Wing
-                                        </span></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-
+            <nav aria-label="breadcrumb" class="breadcrumb-custom" data-aos="fade-down">
+                <ol class="breadcrumb mb-0">
+                    <li class="breadcrumb-item">
+                        <a href="{% url 'main' %}">
+                            <i class="bi bi-house-door me-2"></i>Home
+                        </a>
+                    </li>
+                    <li class="breadcrumb-item active" aria-current="page">
+                        <i class="bi bi-chat-quote me-2"></i>Testimonials
+                    </li>
+                </ol>
+            </nav>
         </div>
-
-        <div class="col-12">
-
-            <section class="t-bq-section blog-home2" id="jasper">
-
-                <div class="t-bq-wrapper2 t-bq-wrapper-boxed2">
-                    <div class="t-bq-quote t-bq-quote-jasper">
-                        <div class="t-bq-quote-jasper-pattern">
-                            <!-- <div
-                                class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
-                                Aug<span class="d-block">27</span>2020</div> -->
-                            <div class="t-bq-quote-jasper-qmark">
-                                &#10077;
-                            </div>
-                        </div>
-
-                        <div class="t-bq-quote-jasper-userpic">
-                            <img src="{% static 'testimonial\AnnemarieOgden.jpg' %}" alt="">
-                        </div>
-
-                        <div class="t-bq-quote-jasper-base">
-
-                            <blockquote class="t-bq-quote-jasper-text text-justify" cite="Strugatsky Brothers">
-                                When I first came to the DREAMS, I thought it was just another summer camp. I didn’t
-                                quite understand the full concept of it, and most definitely I didn't realize the impact
-                                it would soon have not only on these kids but also on myself. Day one of my first summer
-                                program felt a little new to everyone, both to the students and to the mentors. Everyone
-                                was just getting to know one another, and even for me personally as an introvert, it was
-                                a little difficult at first to go out there and make small talk, but then I saw how some
-                                students were doing it with such ease. So they inspired me the very first day, before we
-                                even began lessons. Around the third day, it seemed as if they had been friends for
-                                quite a while. The formation of relationships between the students was such a beautiful
-                                thing to see. This program not only teaches students life values, but it also
-                                demonstrates how they can put these values into practice in their everyday lives.
-                                Normally we have all groups with a few students and two mentors, and we get to teach and
-                                pour into them how we learned these values over these years and the ways we succeeded in
-                                doing them, or how we felt and learned from it. Different speakers from the same town
-                                will come and talk about a particular value that day, and you can really see how the
-                                students relate to and listen to that person, especially because they mostly come from
-                                our own town. The very best part of teaching students these values is seeing them come
-                                back and tell you how they've used them, and even better, the parents will come back and
-                                talk about the transformation they’ve seen in their child. Perhaps my personal favorite
-                                part of this program is that we choose students who are already filled to some extent
-                                with humility; they are not necessarily the leaders or the most popular of their class,
-                                but they are students ready to listen and put into practice what they have learned, and
-                                I think thats what makes a good leader, i love that we give this type of student this
-                                opportunity. These are the kinds of future leaders we need. We teach them to always have
-                                faith in God, and through him they can do anything. So these students are not only
-                                becoming transformed into leaders, but they are transforming everyone around them as
-                                well, such as their mentors.
-                            </blockquote>
-                            <div class="t-bq-quote-jasper-meta">
-                                <div class="t-bq-quote-jasper-meta-info">
-                                    <div class="t-bq-quote-jasper-author"><cite>Anne Marie Ogden</cite></div>
-                                    <div class="t-bq-quote-jasper-source"><span>Mentor, DREAMS </span></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-
-        </div>
-
-        <div class="col-12">
-
-            <section class="t-bq-section blog-home2" id="jasper">
-
-                <div class="t-bq-wrapper2 t-bq-wrapper-boxed2">
-                    <div class="t-bq-quote t-bq-quote-jasper">
-                        <div class="t-bq-quote-jasper-pattern">
-                            <!-- <div
-                                class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
-                                Aug<span class="d-block">27</span>2020</div> -->
-                            <div class="t-bq-quote-jasper-qmark">
-                                &#10077;
-                            </div>
-                        </div>
-
-                        <div class="t-bq-quote-jasper-userpic">
-                            <img src="{% static 'logo\user.png' %}" alt="">
-                        </div>
-
-                        <div class="t-bq-quote-jasper-base">
-
-                            <blockquote class="t-bq-quote-jasper-text text-justify" cite="Strugatsky Brothers">
-                                <b>“We make a living by what we get, but we make a life by what we give." - Winston
-                                    Churchill</b>
-                                If I must answer a question, why I joined Dreams, this quote explains my journey with
-                                Dreams perfectly. As we know, Dreams is an intergenerational program and inspiration
-                                comes in all shapes and sizes. If I mentor students younger than me, I am also gaining
-                                knowledge from these mentors.
-                                Throughout our lives, we are always taught to listen to our elders, because they have a
-                                wealth of knowledge and experience to share - which is true. But what often goes
-                                underappreciated is what we can learn from the younger generations around us as we get
-                                older. It could be how to appreciate new technologies, be more open minded and
-                                accepting, appreciating little moments or following your dreams, no matter what.
-                                Also, to reach any significant goal in life we need to overcome challenges along the
-                                way. But all of us working with Dreams consider ourselves " A FAMILY" and together we
-                                encounter each obstacle and press ourselves forward making DREAMS our "HAPPY PLACE"!!!
-                                I have been a part of Dreams for 3 years and all I want to say to anyone who is ready to
-                                volunteer as a Community Leader, is that it's the most wholesome experience as we are
-                                giving our time in this program as TIME IS CONSIDERED THE BIGGEST GIFT you can gift
-                                anyone and what can be better than the community, we live in. So come let's join hands
-                                in this program and make a difference in the world we live in.
-                            </blockquote>
-                            <div class="t-bq-quote-jasper-meta">
-                                <div class="t-bq-quote-jasper-meta-info">
-                                    <div class="t-bq-quote-jasper-author"><cite>Ms. Jasmine Kaur Sahni</cite></div>
-                                    <div class="t-bq-quote-jasper-source"><span>Chief Mentor, DREAMS Bangalore
-                                            Chapter</span></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-
-        </div>
-
-        <div class="col-12">
-
-            <section class="t-bq-section blog-home2" id="jasper">
-
-                <div class="t-bq-wrapper2 t-bq-wrapper-boxed2">
-                    <div class="t-bq-quote t-bq-quote-jasper">
-                        <div class="t-bq-quote-jasper-pattern">
-                            <!-- <div
-                                class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
-                                Aug<span class="d-block">27</span>2020</div> -->
-                            <div class="t-bq-quote-jasper-qmark">
-                                &#10077;
-                            </div>
-                        </div>
-
-                        <div class="t-bq-quote-jasper-userpic">
-                            <img src="{% static 'testimonial\Sebastian.jpg' %}" alt="">
-                        </div>
-
-                        <div class="t-bq-quote-jasper-base">
-
-                            <blockquote class="t-bq-quote-jasper-text text-justify" cite="Strugatsky Brothers">
-                                I was introduced to DREAMS by Mr. James Anithottam, the then head of its affairs in
-                                Changanacherry in 2018. As a retired teacher, the idea of DREAMS fascinated me as I felt
-                                it was a solution to the imbalance between the slow learners and fast movers. Completion
-                                of school syllabus is time bound and teachers normally move on with the fast,
-                                intelligent students. This prevented the slow learners from gaining enough in their
-                                academic journey.
-
-                                Experiencing further, I realized that the scope of DREAMS is far reaching. It benefited
-                                not only the slow learners but all its stakeholders. The key is direct involvement and
-                                practice. You are into listening, reading, writing, speaking, dancing, acting, drawing,
-                                playing, emulating and whatever....., your best is brought out!.
-
-                                The DREAMS curriculum is unmatched. It aims at developing personal, social and
-                                leadership qualities in a short, 28 day program. It literally makes one grow gracefully
-                                to maturity, empowering self, acquiring values, mastering skills, making socially
-                                responsible, committed and trustworthy. I am happy and feel accomplished as I see our
-                                efforts make a huge difference in society. Parents very often express their gratitude
-                                for the positive changes in their children. Mentors, the middle rung DREAMS family,
-                                through their involvement grow strong, confident and well equipped to face their future.
-
-                                For me, it is also a platform to make friends and to give back to the Community from the
-                                bounty of blessings I received from it.
-
-                            </blockquote>
-                            <div class="t-bq-quote-jasper-meta">
-                                <div class="t-bq-quote-jasper-meta-info">
-                                    <div class="t-bq-quote-jasper-author"><cite>Mr. Sebastian M T</cite></div>
-                                    <div class="t-bq-quote-jasper-source"><span>Community Leader, DREAMS Changanacherry
-                                            Chapter, Kerala</span></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-
-        </div>
-
-        <div class="col-12">
-
-            <section class="t-bq-section blog-home2" id="jasper">
-
-                <div class="t-bq-wrapper2 t-bq-wrapper-boxed2">
-                    <div class="t-bq-quote t-bq-quote-jasper">
-                        <div class="t-bq-quote-jasper-pattern">
-                            <!-- <div
-                                class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
-                                Aug<span class="d-block">27</span>2020</div> -->
-                            <div class="t-bq-quote-jasper-qmark">
-                                &#10077;
-                            </div>
-                        </div>
-
-                        <div class="t-bq-quote-jasper-userpic">
-                            <img src="{% static 'testimonial\Lisa.jpg' %}" alt="">
-                        </div>
-
-                        <div class="t-bq-quote-jasper-base">
-
-                            <blockquote class="t-bq-quote-jasper-text text-justify" cite="Strugatsky Brothers">
-                                First and foremost, I was impressed by the passion and vision with which DREAMS is now
-                                being implemented worldwide. In my opinion, the topics of empowerment, strengthening
-                                one's own resilience and dealing with one's own goals, desires and feelings are given
-                                far too little attention in our society. It's more about performance and less about the
-                                question of what talents/passions exist and how they can be lived out. DREAMS deals with
-                                all of this outside of the school and family context, so that the students can learn
-                                more freely, at their own pace, without pressure. One student said in the last workshop
-                                that DREAMS means joy to her. At that point it was clear to me that we, especially the
-                                students, had done everything right.
-                                The intensive and continuous support by the students, the trust in the group led to the
-                                fact that even difficult (biographical) topics could be discussed and endured together.
-                                The massive social and world-political conflicts and crises put a great strain on young
-                                people, but they are often alone with their worries and fears. The pressure to 'parry'
-                                and to fulfill the roles of student or son/daughter as inconspicuous as possible makes
-                                it difficult to address one's own needs with caregivers and teachers. DREAMS has helped
-                                students emerge empowered.
-                                For the future of DREAMS, I would like to see us bring the differences from the various
-                                countries and cultures closer together and see how we can profit from these different
-                                experiences.
-
-                            </blockquote>
-                            <div class="t-bq-quote-jasper-meta">
-                                <div class="t-bq-quote-jasper-meta-info">
-                                    <div class="t-bq-quote-jasper-author"><cite>Ms. Lisa</cite></div>
-                                    <!-- <div class="t-bq-quote-jasper-source"><span>Programmer</span></div> -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-
-        </div>
-        <div class="col-12" id="conference">
-            <section class="t-bq-section blog-home2" id="jasper">
-
-                <div class="t-bq-wrapper2 t-bq-wrapper-boxed2">
-                    <div class="t-bq-quote t-bq-quote-jasper">
-                        <div class="t-bq-quote-jasper-pattern">
-                            <!-- <div
-                                    class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
-                                    <span class="d-block"></span></div> -->
-                            <div class="t-bq-quote-jasper-qmark">
-                                &#10077;
-                            </div>
-                        </div>
-
-                        <div class="t-bq-quote-jasper-userpic">
-                            <img src="{% static 'testimonial\SMT photo.png' %}" alt="">
-                        </div>
-
-                        <div class="t-bq-quote-jasper-base" id="testimonial">
-
-                            <blockquote class="t-bq-quote-jasper-text" cite="Strugatsky Brothers">
-                                <b>"Never doubt that a small group of thoughtful, committed citizens can change the
-                                    world;
-                                    indeed its the only thing that ever has"</b><br>
-                                The Let Us Dream Conference has been one of the most inspiring experiences for the
-                                students I teach at Grambling State University (GSU) and for me since 2017. Dr. Glenda
-                                Island, Chair of the Department of Family and Consumer Sciences at GSU invited me to
-                                join her in 2018 for the conference at La Tech University in Ruston, LA as a part of the
-                                GSU our partnership with Christ University and Father Lijo, Founder of the conference.
-                                Since 2017 I have engaged students in the LUD conferences domestically and abroad into
-                                my classes as an example of teaching servant and transformational leadership, social
-                                responsibility and globalization. My most memorable single moment was in 202( during the
-                                Pandemic) when the Student Panel was highlighted with student's comments and reflections
-                                on giving back to their communities and others in need. This panel awakened my inner
-                                core of what teaching and learning is all about and I continue to keep this spark today
-                                and into the future with this conference. Each time we begin to plan for the LUD
-                                Conferences in Louisiana each year, a natural disaster or worldwide or local crisis has
-                                occurred, but this has not put a damper on our ability to gather together, share
-                                insightful thoughts, research and practices and work to help us help others in the name
-                                of service to mankind. For the many persons who are Unsung Heroes, I salute Father Lijo
-                                and The Let Us Dream Conference is a master in featuring everyday great ones to give in
-                                the areas of health, education and social justice for all. I remain a LUD advocate and
-                                look forward to 2023 in India.
-                            </blockquote>
-                            <div class="t-bq-quote-jasper-meta">
-                                <div class="t-bq-quote-jasper-meta-info">
-                                    <div class="t-bq-quote-jasper-author"><cite>Dr. Suzanne Mynette Mayo
-                                        </cite></div>
-                                    <div class="t-bq-quote-jasper-source"><span>FCS Lecture, Grambling State University
-
-                                        </span></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
-        <div class="col-12">
-            <section class="t-bq-section blog-home2" id="jasper">
-
-                <div class="t-bq-wrapper2 t-bq-wrapper-boxed2">
-                    <div class="t-bq-quote t-bq-quote-jasper">
-                        <div class="t-bq-quote-jasper-pattern">
-                            <!-- <div
-                                    class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
-                                    <span class="d-block"></span></div> -->
-                            <div class="t-bq-quote-jasper-qmark">
-                                &#10077;
-                            </div>
-                        </div>
-
-                        <div class="t-bq-quote-jasper-userpic">
-                            <img src="{% static 'testimonial\Phinu Jose.jpg' %}" alt="">
-                        </div>
-
-                        <div class="t-bq-quote-jasper-base" id="testimonial">
-
-                            <blockquote class="t-bq-quote-jasper-text" cite="Strugatsky Brothers">
-                                LUD Conference 2020 held completely Online from 20 November to 22 November was a
-                                life-changing experience indeed for me.
-                                <br>
-                                While the Planning Committee began planning for the in-person Conference November 2020
-                                as early as December 2019, when i was invited to join the team....no one in their
-                                wildest dreams thought Covid would turn our world upside down....and in many ways it was
-                                literally upside down....reverse mentoring by tech-savvy young volunteers in making the
-                                conference completely digital....venue didn't matter as all of us seemed to have lost
-                                sense of time and space......logging in to meetings early in the morning while the night
-                                seemed to never end at some places....as our universe started in the bedroom and ended
-                                in the kitchen during the terrible days of lockdown across the globe, LUD opened the
-                                screens into lives of people who joined us from SouthAfrica to Australia to New York to
-                                Zurich to Kerala and Bangalore....breaking barriers and building bridges across the
-                                boundaries defined by geography with only one philosophy...to make this world a better
-                                place! LUD Triennial Conference 2020 became the beacon of hope for all of us involved,
-                                so much so that we continued with the same spirit in organising the Annual Conference in
-                                2021 and Local Conference in 2022 with the same zeal and enthusiasm. The success of
-                                these 3 years is not defined by the 40000+ registrations or views online but by the
-                                leaders nurtured through volunteerism and lives touched that make ordinary days seem
-                                extraordinarily blessed!.
-
-                            </blockquote>
-                            <div class="t-bq-quote-jasper-meta">
-                                <div class="t-bq-quote-jasper-meta-info">
-                                    <div class="t-bq-quote-jasper-author"><cite>Dr. Phinu Jose
-                                        </cite></div>
-                                    <!-- <div class="t-bq-quote-jasper-source"><span>Mental health advocate| Mental health
-                                            professional |Music enthusiast| Musician|
-
-                                        </span></div> -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
-        <div class="col-12">
-            <section class="t-bq-section blog-home2" id="jasper">
-
-                <div class="t-bq-wrapper2 t-bq-wrapper-boxed2">
-                    <div class="t-bq-quote t-bq-quote-jasper">
-                        <div class="t-bq-quote-jasper-pattern">
-                            <!-- <div
-                                    class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
-                                    <span class="d-block"></span></div> -->
-                            <div class="t-bq-quote-jasper-qmark">
-                                &#10077;
-                            </div>
-                        </div>
-
-                        <div class="t-bq-quote-jasper-userpic">
-                            <img src="{% static 'testimonial\CollettOBrien_Debbie2.jpg' %}" alt="">
-                        </div>
-
-                        <div class="t-bq-quote-jasper-base" id="testimonial">
-
-                            <blockquote class="t-bq-quote-jasper-text" cite="Strugatsky Brothers">
-                                In my role, I have worked with and helped coordinate the Let Us Dream Conference at
-                                Binghamton University since 2019 and have been amazed by the impact which this
-                                organization has had across the globe. The Let Us Dream Conferences has allowed
-                                practitioners, learners and community members come together, hone their skills in a
-                                variety of disciplines, and invigorate one another to bring out and strengthen
-                                sentiments of community, empathy and care which is already ingrained in the community
-                                itself. I love recruiting students, faculty members and staff at Binghamton University
-                                to get involved with the Let Us Dream Conferences as it provides an opportunity for
-                                international, interdisciplinary collaboration where you meet others who are passionate,
-                                innovative and driven to educate others about best-practices that will better the lives
-                                of others, while learning how to translate those skills in your own work. Let Us Dream
-                                has endless opportunities for involvement and working with Dean Laura Bronstein, Michael
-                                Kaufmann, Tracy Lyman and Jeff Smith has been such an amazing experience to see the
-                                wonderful work of those in the Binghamton community get recognized on a national- and
-                                global-level. It’s been such an honor to work with such accomplished, hardworking
-                                individuals who exemplify how to be a positive agent of change and empower others to do
-                                the same. I look forward to the continued partnership and collaboration between
-                                Binghamton University and Let Us Dream and how this work will positively change the
-                                local community in the years to come.
-                            </blockquote>
-                            <div class="t-bq-quote-jasper-meta">
-                                <div class="t-bq-quote-jasper-meta-info">
-                                    <div class="t-bq-quote-jasper-author"><cite>Debbie Collett-O’Brien
-                                        </cite></div>
-                                    <div class="t-bq-quote-jasper-source"><span>Let Us Dream Liason - Binghamton
-                                            University
-                                        </span></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
-        <div class="col-12">
-            <section class="t-bq-section blog-home2" id="jasper">
-
-                <div class="t-bq-wrapper2 t-bq-wrapper-boxed2">
-                    <div class="t-bq-quote t-bq-quote-jasper">
-                        <div class="t-bq-quote-jasper-pattern">
-                            <!-- <div
-                                    class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
-                                    <span class="d-block"></span></div> -->
-                            <div class="t-bq-quote-jasper-qmark">
-                                &#10077;
-                            </div>
-                        </div>
-
-                        <div class="t-bq-quote-jasper-userpic">
-                            <img src="{% static 'testimonial\Martin Klien.jpg' %}" alt="">
-                        </div>
-
-                        <div class="t-bq-quote-jasper-base" id="testimonial">
-
-                            <blockquote class="t-bq-quote-jasper-text" cite="Strugatsky Brothers">
-                                60 years ago, on 18 August 1963, Martin Luther King gave his "I have a dream" speech at
-                                the Lincoln Memorial in Washington. It is one of the most famous speeches of the 20th
-                                century. The dream was to fight racial discrimination and to treat all citizens equal
-                                before the law.
-                                The dream of a better society is more relevant than ever. In the 21st century, too,
-                                there is hope of living in a society without discrimination and gender inequality. Hope,
-                                that companies take on social responsibility, produce sustainably and protect the
-                                environment.
-                                Unique about all these dreams is, that they will only be fulfilled, if we stand up for
-                                our convictions, act on them ourselves and convince others of our dreams.
-                                At the "Let us Dream"-conferences we dream together. The cooperation supported by
-                                visionary and committed people from all over the world is not only an important source
-                                of joy and inspiration. It is also a strong motivator for specific measures for
-                                implementation and helps enduring all the obstacles and setbacks along the way.
-
-
-                                Through the international exchange I was lucky to experience creativity and the power of
-                                imagination emerge across borders, so new ideas and innovations could be developed. The
-                                "Let us Dream"-conferences are supported by a community and live from the commitment and
-                                contributions of the volunteers. This is a gift and it would be great, if, at the end of
-                                the 21st century, the project was as well known as the speech mentioned in the
-                                beginning.
-
-                            </blockquote>
-
-                            <div class="t-bq-quote-jasper-meta">
-                                <div class="t-bq-quote-jasper-meta-info">
-                                    <div class="t-bq-quote-jasper-author"><cite>Prof. Dr. Martin Klein
-                                        </cite></div>
-                                    <div class="t-bq-quote-jasper-source"><span>Vice President <br>
-                                            Catholic University of Applied Sciences NRW, Germany
-                                        </span></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
-        <div class="col-md-6" id="proclub">
-            <section class="t-bq-section blog-home2" id="jasper">
-
-                <div class="t-bq-wrapper t-bq-wrapper-boxed">
-                    <div class="t-bq-quote t-bq-quote-jasper" style="min-height: 590px;">
-                        <div class="t-bq-quote-jasper-pattern">
-                            <!-- <div
-                                    class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
-                                    <span class="d-block"></span></div> -->
-                            <div class="t-bq-quote-jasper-qmark">
-                                &#10077;
-                            </div>
-                        </div>
-
-                        <div class="t-bq-quote-jasper-userpic">
-                            <img src="{% static 'testimonial\RajeshPI.jpg' %}" alt="">
-                        </div>
-
-                        <div class="t-bq-quote-jasper-base" id="testimonial">
-
-                            <blockquote class="t-bq-quote-jasper-text" cite="Strugatsky Brothers">
-                                My experience with the Dreams Professional Club has been tremendous. I have been
-                                associated with it right from the beginning. No matter what, I make it a point to attend
-                                all meetings. I must have missed it only a handful of times. I have found the meetings
-                                to be very useful. Since we are all people from different backgrounds, there is so much
-                                diversity and a wide array of perceptions here. The way each person approaches a
-                                challenge or an issue is vastly different, because each person's background, thought
-                                process, style of approach is so different and it gives everyone great learning
-                                opportunities. There is a lot of safety in this space and one can speak one's mind
-                                without worrying whether one is judged or not. When everyone is sharing their life
-                                experiences and not some arbitrary theory, the conversations get very interesting
-                                because they come from a space of great authenticity and vulnerability.
-                            </blockquote>
-                            <div class="t-bq-quote-jasper-meta">
-                                <div class="t-bq-quote-jasper-meta-info">
-                                    <div class="t-bq-quote-jasper-author"><cite>Rajesh P.I</cite></div>
-                                    <div class="t-bq-quote-jasper-source"><span>Founder & Artistic Director, The Actors
-                                            Collective
-                                        </span></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
-        <div class="col-md-6">
-
-            <section class="t-bq-section blog-home2" id="jasper">
-
-                <div class="t-bq-wrapper t-bq-wrapper-boxed">
-                    <div class="t-bq-quote t-bq-quote-jasper" style="min-height: 590px;">
-                        <div class="t-bq-quote-jasper-pattern">
-                            <!-- <div
-                                    class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
-                                    Aug<span class="d-block">27</span>2020</div> -->
-                            <div class="t-bq-quote-jasper-qmark">
-                                &#10077;
-                            </div>
-                        </div>
-
-                        <div class="t-bq-quote-jasper-userpic">
-                            <img src="{% static 'testimonial\ColRanjeevKBabu.jpg' %}" alt="">
-                        </div>
-
-                        <div class="t-bq-quote-jasper-base" id="testimonial">
-
-                            <blockquote class="t-bq-quote-jasper-text" cite="Strugatsky Brothers">
-                                As a member of the DREAMS Professional Club, I have had the privilege of attending
-                                monthly meetings with individuals from diverse professional backgrounds, cultural
-                                orientations, and from across the globe. Despite geographical differences, we are united
-                                by a singular purpose of engaging in thought-provoking discussions. It has been
-                                fascinating to see how our diverse experiences and perspectives have enriched the
-                                conversations and contributed to our collective growth. The club has provided an
-                                excellent opportunity for cross-cultural exchange, and I have personally gained a lot
-                                from my esteemed fellow members. Overall, being part of the DREAMS Professional Club has
-                                been an enriching experience that has broadened my horizons and expanded my professional
-                                network and net-worth!
-                            </blockquote>
-                            <div class="t-bq-quote-jasper-meta">
-                                <div class="t-bq-quote-jasper-meta-info">
-                                    <div class="t-bq-quote-jasper-author"><cite>Colonel Ranjeev K Babu,VSM
-                                        </cite></div>
-                                    <div class="t-bq-quote-jasper-source"><span>Agile Trainer l ICAgile Authorized
-                                            Instructor
-
-                                        </span></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
-
-        <div class="col-md-6" id="leadershipNetwork">
-            <section class="t-bq-section blog-home2" id="jasper">
-
-                <div class="t-bq-wrapper t-bq-wrapper-boxed">
-                    <div class="t-bq-quote t-bq-quote-jasper" style="min-height: 590px;">
-                        <div class="t-bq-quote-jasper-pattern">
-                            <!-- <div
-                                    class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
-                                    <span class="d-block"></span></div> -->
-                            <div class="t-bq-quote-jasper-qmark">
-                                &#10077;
-                            </div>
-                        </div>
-
-                        <div class="t-bq-quote-jasper-userpic">
-                            <img src="{% static 'logo\user.png' %}" alt="">
-                        </div>
-
-                        <div class="t-bq-quote-jasper-base" id="testimonial">
-
-                            <blockquote class="t-bq-quote-jasper-text" cite="Strugatsky Brothers">
-                                My personal experience in the Global Youth Leadership Network has been nothing short of
-                                fantastic. It is such a privilege to be part of a worldwide movement that strives to
-                                empower young minds to be change-makers in this world. I have been able to cultivate new
-                                friendships, and explore interesting topics, all while having a safe space where I can
-                                express my thoughts and views without fear of being labeled as different. The GYLN
-                                promotes diversity and equity in our organization and welcomes all young leaders who
-                                qualify to join us on this journey. I have truly transformed into a better leader
-                                because of the GYLN because it fosters an environment in which one can truly thrive!.
-                            </blockquote>
-                            <div class="t-bq-quote-jasper-meta">
-                                <div class="t-bq-quote-jasper-meta-info">
-                                    <div class="t-bq-quote-jasper-author"><cite>Jotham B. Simon</cite></div>
-                                    <div class="t-bq-quote-jasper-source"><span>GYLN Secretary <br>Dallas, TX (USA)
-                                        </span></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
-        <div class="col-md-6">
-
-            <section class="t-bq-section blog-home2" id="jasper">
-
-                <div class="t-bq-wrapper t-bq-wrapper-boxed">
-                    <div class="t-bq-quote t-bq-quote-jasper" style="min-height: 590px;">
-                        <div class="t-bq-quote-jasper-pattern">
-                            <!-- <div
-                                    class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
-                                    Aug<span class="d-block">27</span>2020</div> -->
-                            <div class="t-bq-quote-jasper-qmark">
-                                &#10077;
-                            </div>
-                        </div>
-
-                        <div class="t-bq-quote-jasper-userpic">
-                            <img src="{% static 'testimonial\Srikar.jpg' %}" alt="">
-                        </div>
-
-                        <div class="t-bq-quote-jasper-base" id="testimonial">
-
-                            <blockquote class="t-bq-quote-jasper-text" cite="Strugatsky Brothers">
-                                My journey with DREAMS has paved the way for my Mastery, starting as a volunteer,
-                                progressing to a mentor, then a chapter coordinator, then an overall program
-                                coordinator, and now a part of the Global Youth Leadership Network (GYLN) as a national
-                                representative. The Success and fulfillment I have achieved in both personal and
-                                professional aspects of my life are a testament to my experiences in this organization.
-                                DREAMS has put me in touch with my skills and passion suitable for a career in
-                                psychology. Something that I would take away and would like to pass down to the next
-                                generations of the organization, in, Rev. Father Lijo’s words “We all have made
-                                sacrifices in our lives, and the time we invest in the organization is one such
-                                sacrifice that we choose to make. It is important to make them count.” We thrive on
-                                commitment and volunteerism
-                            </blockquote>
-                            <div class="t-bq-quote-jasper-meta">
-                                <div class="t-bq-quote-jasper-meta-info">
-                                    <div class="t-bq-quote-jasper-author"><cite>Tirukovela Srikar</cite></div>
-                                    <div class="t-bq-quote-jasper-source"><span>Mentor, DREAMS Bangalore Chapter</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
-
-        <div class="col-md-6" id="conversationClub">
-            <section class="t-bq-section blog-home2" id="jasper">
-
-                <div class="t-bq-wrapper t-bq-wrapper-boxed">
-                    <div class="t-bq-quote t-bq-quote-jasper" style="min-height: 636px;">
-                        <div class="t-bq-quote-jasper-pattern">
-                            <!-- <div
-                                class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
-                                <span class="d-block"></span></div> -->
-                            <div class="t-bq-quote-jasper-qmark">
-                                &#10077;
-                            </div>
-                        </div>
-
-                        <div class="t-bq-quote-jasper-userpic">
-                            <img src="{% static 'testimonial\MichaelKaufmann.png' %}" alt="">
-                        </div>
-
-                        <div class="t-bq-quote-jasper-base" id="testimonial">
-
-                            <blockquote class="t-bq-quote-jasper-text" cite="Strugatsky Brothers">
-                                Isolated by COVID restrictions in 2021 and limited in social contacts, stressed at the
-                                state of the world - joining the DREAMS Conversation Club opened a whole new world of
-                                friends, colleagues and contacts. Be the topic love, colors, food or dreams, the
-                                opportunity to share ideas, feelings and thoughts with an international group of diverse
-                                and engaged people has been immensely enriching for me. Now after COVID - everyone has
-                                busy lives again, not all of us can be there every time- but when we ARE together,
-                                sparks fly, laughter happens and energy is shared via ZOOM from India, to Germany to the
-                                United States and all around the globe.
-                            </blockquote>
-                            <div class="t-bq-quote-jasper-meta">
-                                <div class="t-bq-quote-jasper-meta-info">
-                                    <div class="t-bq-quote-jasper-author"><cite>Mr Michael Kaufmann</cite></div>
-                                    <div class="t-bq-quote-jasper-source"><span>Director, Sam and Myra Ross Institute
-                                            Green Chimneys Children’s Services New York,<br>
-                                            United States Leader from Conversation Club
-                                        </span></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
-        <div class="col-md-6">
-
-            <section class="t-bq-section blog-home2" id="jasper">
-
-                <div class="t-bq-wrapper t-bq-wrapper-boxed">
-                    <div class="t-bq-quote t-bq-quote-jasper" style="min-height: 636px;">
-                        <div class="t-bq-quote-jasper-pattern">
-                            <!-- <div
-                                class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
-                                Aug<span class="d-block">27</span>2020</div> -->
-                            <div class="t-bq-quote-jasper-qmark">
-                                &#10077;
-                            </div>
-                        </div>
-
-                        <div class="t-bq-quote-jasper-userpic">
-                            <img src="{% static 'testimonial\PatsyAHughey.jpg' %}" alt="">
-                        </div>
-
-                        <div class="t-bq-quote-jasper-base" id="testimonial">
-
-                            <blockquote class="t-bq-quote-jasper-text" cite="Strugatsky Brothers">
-                                I am excited to be a part of the DREAM Conversation Club. This experience allows a
-                                global group of professionals to discuss various cultural, societal, and political
-                                topics in a spirit of collaboration and respect for each other’s differences. “I
-                                understand’ these are two of the most powerful words you can say, personally and
-                                professionally. Whether we believe in the power of our daily rituals or hold a
-                                world-shifting viewpoint, acknowledging and respecting the perspectives of others is the
-                                tool that fuels the depth, value, and meaning of our contribution to and relationships
-                                with them. We all have varying opinions and ideas, making monthly conversations more
-                                interesting.
-                                The most rewarding takeaway from being a member of the DREAM Conversation Club is that
-                                when we can use our lens as a point of relatability to support another in their
-                                viewpoint or to provide a unique perspective that may foster an expanded view for them.
-
-                            </blockquote>
-                            <div class="t-bq-quote-jasper-meta">
-                                <div class="t-bq-quote-jasper-meta-info">
-                                    <div class="t-bq-quote-jasper-author"><cite>Patsy A Hughey, Ed. D</cite></div>
-                                    <div class="t-bq-quote-jasper-source"><span>Louisiana Tech University <br>
-                                            Ruston, LA
-                                        </span></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
-        <!-- band section -->
-
-        <div class="col-12" id="dreamsBand">
-            <section class="t-bq-section blog-home2" id="jasper">
-
-                <div class="t-bq-wrapper2 t-bq-wrapper-boxed2">
-                    <div class="t-bq-quote t-bq-quote-jasper">
-                        <div class="t-bq-quote-jasper-pattern">
-                            <!-- <div
-                                    class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
-                                    <span class="d-block"></span></div> -->
-                            <div class="t-bq-quote-jasper-qmark">
-                                &#10077;
-                            </div>
-                        </div>
-
-                        <div class="t-bq-quote-jasper-userpic">
-                            <img src="{% static 'testimonial\AbhishikithGeorge.jpg' %}" alt="">
-                        </div>
-
-                        <div class="t-bq-quote-jasper-base" id="testimonial">
-
-                            <blockquote class="t-bq-quote-jasper-text" cite="Strugatsky Brothers">
-                                DREAMS Band is a group of budding musicians coming together for one vision and mission
-                                to empower the society and holistically grow others around using music as an effective
-                                tool. The band is a balance between a professional and a college band. The freedom to
-                                express and space to grow are the two most important factors I have personally
-                                experienced being a part of the band for the last 4 years. The band really has an impact
-                                on people as the songs the band performs and the performances are very life-centric.
-                                Each performance for me was reliving the success through struggles in life, or
-                                cherishing the past memories.
-                                One of the most memorable moments of my time with the band was my first day in the band.
-                                To have got selected as a keyboardist for the band was a huge surprise in my life and a
-                                turning point to an in depth exploration in the field of music. As soon as I entered the
-                                jam room I could see a few musicians I really looked up to and the space made me feel
-                                very comfortable and I felt belonged. I found a bunch of friends who later in life
-                                turned out to be a strong support system and family away from home.
-                                The vision and mission of the band is what attracted me. Coming from a family involved
-                                in ministry I grew up understanding the importance of bringing a change in the society
-                                using my passion for music. The Band has absolutely put me in the most uncomfortable
-                                situations to mold me to become a good leader and teacher. The functioning in the band
-                                really made me capable of multiple responsibilities which includes coordination and
-                                other soft skills very essential for working under any institution.
-
-                            </blockquote>
-                            <div class="t-bq-quote-jasper-meta">
-                                <div class="t-bq-quote-jasper-meta-info">
-                                    <div class="t-bq-quote-jasper-author"><cite>Abhishikth George John
-                                        </cite></div>
-                                    <div class="t-bq-quote-jasper-source"><span>Music Coordinator/ Choir Director <br>
-                                            CHRIST (Deemed to be University) Central Campus
-
-                                        </span></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
-        <div class="col-md-6">
-            <section class="t-bq-section blog-home2" id="jasper">
-
-                <div class="t-bq-wrapper t-bq-wrapper-boxed">
-                    <div class="t-bq-quote t-bq-quote-jasper" style="min-height: 565px;">
-                        <div class="t-bq-quote-jasper-pattern">
-                            <!-- <div
-                                    class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
-                                    <span class="d-block"></span></div> -->
-                            <div class="t-bq-quote-jasper-qmark">
-                                &#10077;
-                            </div>
-                        </div>
-
-                        <div class="t-bq-quote-jasper-userpic">
-                            <img src="{% static 'testimonial\IbinRigia.jpeg' %}" alt="">
-                        </div>
-
-                        <div class="t-bq-quote-jasper-base" id="testimonial">
-
-                            <blockquote class="t-bq-quote-jasper-text" cite="Strugatsky Brothers">
-                                Being part of the dreams band for me was a journey of self-discovery and holistic
-                                growth. It didn't only help me improve my musical abilities, but it also helped me to
-                                enhance my other skills like teamwork, leadership, decision-making, and social skills.
-                                Being in the same room with hardworking and dedicated individuals had a positive impact
-                                on me, and i was fortunate to have been able to learn so much from all the band members
-                                who were part of dreams band over the years. The most wonderful thing about the dreams
-                                band is that they never look for the best musicians. They instead look for the most
-                                dedicated and focused ones who are looking to grow holistically and are passionate about
-                                the goal of the Let us dream project. This is what sets it apart from any other band out
-                                there.
-                            </blockquote>
-                            <div class="t-bq-quote-jasper-meta">
-                                <div class="t-bq-quote-jasper-meta-info">
-                                    <div class="t-bq-quote-jasper-author"><cite>Mr. Ibin Rigia
-                                        </cite></div>
-                                    <div class="t-bq-quote-jasper-source"><span>Mental health advocate| Mental health
-                                            professional |Music enthusiast| Musician|
-
-                                        </span></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
-
-        
-        <div class="col-md-6" id="reasearch">
-
-            <section class="t-bq-section blog-home2" id="jasper">
-
-                <div class="t-bq-wrapper t-bq-wrapper-boxed">
-                    <div class="t-bq-quote t-bq-quote-jasper" style="min-height: 565px;">
-                        <div class="t-bq-quote-jasper-pattern">
-                            <!-- <div
-                                    class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
-                                    Aug<span class="d-block">27</span>2020</div> -->
-                            <div class="t-bq-quote-jasper-qmark">
-                                &#10077;
-                            </div>
-                        </div>
-
-                        <div class="t-bq-quote-jasper-userpic">
-                            <img src="{% static 'testimonial\Jaden_Elijah_Johnson.jpg' %}" alt="">
-                        </div>
-
-                        <div class="t-bq-quote-jasper-base" id="testimonial">
-
-                            <blockquote class="t-bq-quote-jasper-text" cite="Strugatsky Brothers">
-                                The Dreams Band not alone performs for various events but gives a message to every heart
-                                of
-                                the youth today. The Dreams band creates a Will-to-do motivation to create, to imagine
-                                and to go
-                                beyond what you can do in people's hearts.
-                                The Dreams Band gives a platform to help one another grow, improve their skills, and
-                                share
-                                knowledge and thoughts with the team. It provides a beautiful platform to expose ideas
-                                and
-                                creativity in the group.
-                                The Dreams Band has helped me to put in more ideas and creativity in the Band. The Band
-                                has
-                                given me incredible exposure and experience through various events. There is always a
-                                takeaway
-                                to learn and to grow through the events conducted, and these improve my skills and
-                                knowledge.
-                            </blockquote>
-                            <div class="t-bq-quote-jasper-meta">
-                                <div class="t-bq-quote-jasper-meta-info">
-                                    <div class="t-bq-quote-jasper-author"><cite>Jaden Elijah Johnson</cite></div>
-                                    <div class="t-bq-quote-jasper-source"><span>Music head / DREAMS Band |
-                                            CHRIST (Deemed to be University) Central Campus</span></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
-        <div class="col-12" id="reasearch">
-
-            <section class="t-bq-section blog-home2" id="jasper">
-
-                <div class="t-bq-wrapper2 t-bq-wrapper-boxed">
-                    <div class="t-bq-quote t-bq-quote-jasper">
-                        <div class="t-bq-quote-jasper-pattern">
-                            <!-- <div
-                                    class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
-                                    Aug<span class="d-block">27</span>2020</div> -->
-                            <div class="t-bq-quote-jasper-qmark">
-                                &#10077;
-                            </div>
-                        </div>
-
-                        <div class="t-bq-quote-jasper-userpic">
-                            <img src="{% static 'testimonial\KALIKA_MATHUR.jpg' %}" alt="">
-                        </div>
-
-                        <div class="t-bq-quote-jasper-base" id="testimonial">
-
-                            <blockquote class="t-bq-quote-jasper-text" cite="Strugatsky Brothers">
-                                The DREAMS band is not just another band. It has a vision, a mission, towards which it
-                                strives
-                                hard. It is a part of a bigger, global space, which is inclined wholeheartedly to bring
-                                about a
-                                positive change in society, through a powerful tool, music. DREAMS Band, brings
-                                musicians
-                                from varied backgrounds together, to promote the message of global harmony, peace and
-                                personal development. band performances primarily emphasize on touching souls, as the
-                                songs
-                                chosen, and composed, are based on inspiring and motivating lives. A cardinal feature of
-                                the
-                                band, which certainly sets it apart, is the concept of public interactions. prior to
-                                every song, the
-                                team members interact with the audience based on their personal anecdotes, experiences
-                                and
-                                about the song, which makes it enriching for the audience, and fosters personal growth
-                                and skill
-                                enhancement.
-                                What attracted me most towards joining the DREAMS band was its distinctiveness, in terms
-                                of
-                                performances, its functioning, and the fact that members here, perform solely for their
-                                passion
-                                towards music, and their connection with the bigger vision of the band, and no other
-                                materialistic
-                                objectives.Without a doubt, the DREAMS band has already given so much more than I could
-                                ever imagine.
-                                It has given me the opportunity to nurture the leader in me, the platform for my musical
-                                skills, as
-                                well as the perfect place to build memories and hold on to a lifetime of experiences,
-                                that too, at
-                                such an early step of my college life. I have built an emotional connection with it, and
-                                I can
-                                actually point to one of my personal anecdotes, where young students, after the
-                                performance,
-                                came forward, and presented hand-made tokens of gratitude for each one of us, and
-                                expressed
-                                their dream of becoming a musician one day. This was very overwhelming and has impacted
-                                me
-                                deeply, and I am greatly looking forward to being part of the band, and giving it the
-                                best of my
-                                ability, and contributing to its growth and flourishing.
-                            </blockquote>
-                            <div class="t-bq-quote-jasper-meta">
-                                <div class="t-bq-quote-jasper-meta-info">
-                                    <div class="t-bq-quote-jasper-author"><cite>KALIKA MATHUR</cite></div>
-                                    <div class="t-bq-quote-jasper-source"><span>Organizational Head / DREAMS Band |
-                                            CHRIST (Deemed to be University) Central Campus</span></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
-        
-
-<!-- Research section -->
-<div class="col-md-6" id="reasearch">
-
-    <section class="t-bq-section blog-home2" id="jasper">
-
-        <div class="t-bq-wrapper t-bq-wrapper-boxed">
-            <div class="t-bq-quote t-bq-quote-jasper" style="min-height: 565px;">
-                <div class="t-bq-quote-jasper-pattern">
-                    <!-- <div
-                            class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
-                            Aug<span class="d-block">27</span>2020</div> -->
-                    <div class="t-bq-quote-jasper-qmark">
-                        &#10077;
-                    </div>
-                </div>
-
-                <div class="t-bq-quote-jasper-userpic">
-                    <img src="{% static 'testimonial\PrakashGS.jpg' %}" alt="">
-                </div>
-
-                <div class="t-bq-quote-jasper-base" id="testimonial">
-
-                    <blockquote class="t-bq-quote-jasper-text" cite="Strugatsky Brothers">
-                        DREAMS is a wonderful Afterschool intervention programme I have ever seen as it
-                        works on the idea of a sustainable and replicable model. It is nice to see young
-                        college students and community leaders coming forward for a larger social cause. I
-                        along with young researchers at DREAMS engaged ourselves with a couple of
-                        community-based research at DREAMS and I am sure findings would help the society.
-                        DREAMS is really a life-giving platform to all those who have otherwise never dared
-                        to emerge as a successful and well-groomed individual. I wish the spirit and
-                        dedication of youth energy at DREAMS must be preserved, developed, and nurtured. I
-                        am sure the research series will ensure greater credibility and scientific culture
-                        across all the wings of DREAM.
-                    </blockquote>
-                    <div class="t-bq-quote-jasper-meta">
-                        <div class="t-bq-quote-jasper-meta-info">
-                            <div class="t-bq-quote-jasper-author"><cite>Dr. Prakash G S</cite></div>
-                            <div class="t-bq-quote-jasper-source"><span>Associate Professor | Mentor Let US
-                                    DREAM Research Wing</span></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-</div>
     </div>
 </div>
 
+<!-- Main Content -->
+<div class="container py-5">
+    <!-- Section Header -->
+    <div class="row">
+        <div class="col-12">
+            <div class="section-header" data-aos="fade-up">
+                <h1 class="section-title" style="font-family: 'Playfair Display', serif;">
+                    What People Say
+                </h1>
+                <p class="section-subtitle" style="font-family: 'Inter', sans-serif;">
+                    Discover the transformative experiences and success stories from our community members who have been part of our journey.
+                </p>
+            </div>
+        </div>
+    </div>
 
+    <!-- Testimonials Grid -->
+    <div class="row">
+        <div class="col-12">
+            <div class="masonry-grid">
+                {% for testimonial in testimonials %}
+                <div class="masonry-item" data-aos="fade-up" data-aos-delay="{{ forloop.counter0|add:1|multiply:100 }}">
+                    <div class="card testimonial-card gradient-{{ forloop.counter|gradient_class }} h-100">
+                        <div class="quote-icon">
+                            <i class="bi bi-quote"></i>
+                        </div>
+                        
+                        <div class="card-body p-4">
+                            <!-- Date Badge -->
+                            <div class="d-flex justify-content-between align-items-start mb-4">
+                                <div class="testimonial-date">
+                                    <i class="bi bi-calendar3 me-2"></i>
+                                    {{ testimonial.date|date:"M d, Y" }}
+                                </div>
+                            </div>
+
+                            <!-- Avatar -->
+                            <div class="text-center mb-4">
+                                {% if testimonial.image %}
+                                    <img src="{% static testimonial.image %}" alt="{{ testimonial.name }}t" class="testimonial-avatar">
+                                {% else %}
+                                    <div class="testimonial-avatar d-flex align-items-center justify-content-center bg-light text-dark" style="font-size: 2rem;">
+                                        <i class="bi bi-person"></i>
+                                    </div>
+                                {% endif %}
+                            </div>
+
+                            <!-- Testimonial Text -->
+                            <blockquote class="testimonial-text text-center">
+                                "{{ testimonial.content }}"
+                            </blockquote>
+
+                            <!-- Author Info -->
+                            <div class="text-center mt-4">
+                                <div class="author-name">{{ testimonial.name }}</div>
+                                {% if testimonial.title %}
+                                    <div class="author-title">{{ testimonial.title }}</div>
+                                {% endif %}
+                                {% if testimonial.organization %}
+                                    <div class="author-title">{{ testimonial.organization }}</div>
+                                {% endif %}
+                            </div>
+
+                            
+                           
+                        </div>
+                    </div>
+                </div>
+                {% empty %}
+                <!-- Fallback content if no testimonials -->
+                <div class="col-12">
+                    <div class="text-center py-5">
+                        <i class="bi bi-chat-quote display-1 text-muted"></i>
+                        <h3 class="mt-3 text-muted">No testimonials available yet</h3>
+                        <p class="text-muted">Check back soon for inspiring stories from our community!</p>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    <!-- Call to Action -->
+    
+</div>
+
+<!-- Scripts -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    // Initialize AOS animations
+    AOS.init({
+        duration: 800,
+        easing: 'ease-in-out',
+        once: true,
+        offset: 100
+    });
+
+    // Add smooth scroll behavior
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+
+    // Add loading animation for images
+    document.querySelectorAll('.testimonial-avatar').forEach(img => {
+        if (img.tagName === 'IMG') {
+            img.addEventListener('load', function() {
+                this.style.opacity = '1';
+            });
+            img.style.opacity = '0';
+            img.style.transition = 'opacity 0.3s ease';
+        }
+    });
+</script>
 {% endblock %}

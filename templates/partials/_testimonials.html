@@ -2,113 +2,208 @@
 
 {% block links %}
     <link rel="stylesheet" href="{% static 'css/2025/testimonials.css' %}" type="text/css">
+    <style>
+        .testimonial-card {
+            transition: all 0.3s ease;
+            border: none;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        .testimonial-avatar {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border: 4px solid #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .quote-icon {
+            font-size: 3rem;
+            color: #007bff;
+            opacity: 0.3;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            line-height: 1.6;
+            color: #555;
+        }
+        
+        .author-name {
+            font-weight: 600;
+            color: #333;
+        }
+        
+        .section-title {
+            color: #1e3a8a;
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+        text-align: center;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(45deg, #007bff, #6c757d);
+            border-radius: 2px;
+        }
+        
+        .read-more-btn {
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+        
+        .read-more-btn:hover {
+            transform: translateX(5px);
+        }
+        
+        @media (max-width: 768px) {
+            .testimonial-card {
+                margin-bottom: 2rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
 {% endblock links %}
 
-<!--Testimonials-->
-<div class="container mt-5">
-    <div class="row">
-        <h1 class="text-center mb-5">Testimonials</h1>
+<!-- Testimonials Section -->
+<section class="py-5 bg-white">
+    <div class="container">
+        <!-- Section Header -->
+        <div class="row">
+            <div class="col-12">
+                <h2 class="text-center mb-3 section-title">Testimonials</h2>
+                <p class="lead text-center text-muted mb-5">
+                    Discover what our community members have to say about their experience
+                </p>
+            </div>
+        </div>
         
-        <div class="col-md-4">
-            <section class="t-bq-section blog-home2" id="jasper">
-                <div class="t-bq-wrapper t-bq-wrapper-boxed">
-                    <div class="t-bq-quote t-bq-quote-jasper" style="min-height: 351px;">
-                        <div class="t-bq-quote-jasper-pattern">
-                            <div class="t-bq-quote-jasper-qmark">
-                                &#10077;
-                            </div>
-                        </div>
-
-                        <div class="t-bq-quote-jasper-userpic">
-                            <img src="{% static 'testimonial/Janet.jpg' %}" alt="">
-                        </div>
-
-                        <div class="t-bq-quote-jasper-base mt-3" id="testimonial">
-
-                            <blockquote class="t-bq-quote-jasper-text text-center" cite="Strugatsky Brothers">
-                                I’ve witnessed the program change lives in a way that I have never seen any
-                                program with
-                                similar goals could ever even imagine. Everyone should have a chance to see that they
-                                can do
-                                anything, and I will help in any way I can to make that happen.
-                            </blockquote>
-                            <div class="t-bq-quote-jasper-meta">
-                                <div class="t-bq-quote-jasper-meta-info">
-                                    <div class="t-bq-quote-jasper-author"><cite>Canaan Charrior</cite></div>
-                                </div>
-                            </div>
+        <!-- Testimonials Grid -->
+        <div class="row g-4 mb-5">
+            <!-- Testimonial 1 -->
+            <div class="col-lg-4 col-md-6 col-12">
+                <div class="card testimonial-card h-100 border-0 rounded-4 p-4">
+                    <!-- Quote Icon -->
+                    <div class="text-center mb-3">
+                        <i class="fas fa-quote-left quote-icon"></i>
+                    </div>
+                    
+                    <!-- Avatar -->
+                    <div class="text-center mb-4">
+                        <img src="{% static 'testimonial/Janet.jpg' %}" 
+                             alt="Canaan Charrior" 
+                             class="rounded-circle testimonial-avatar">
+                    </div>
+                    
+                    <!-- Testimonial Content -->
+                    <div class="card-body text-center p-0 flex-grow-1 d-flex flex-column">
+                        <blockquote class="testimonial-text mb-4 flex-grow-1">
+                            I've witnessed the program change lives in a way that I have never seen any
+                            program with similar goals could ever even imagine. Everyone should have a chance to see that they
+                            can do anything, and I will help in any way I can to make that happen.
+                        </blockquote>
+                        
+                        <!-- Author Info -->
+                        <div class="mt-auto">
+                            <div class="author-name h6 mb-1">Canaan Charrior</div>
+                           
                         </div>
                     </div>
                 </div>
-            </section>
-        </div>
-        
-        <div class="col-md-4">
-            <section class="t-bq-section blog-home2" id="jasper">
-                <div class="t-bq-wrapper t-bq-wrapper-boxed">
-                    <div class="t-bq-quote t-bq-quote-jasper" style="min-height: 351px;">
-                        <div class="t-bq-quote-jasper-pattern">
-                            <div class="t-bq-quote-jasper-qmark">
-                                &#10077;
-                            </div>
-                        </div>
-
-                        <div class="t-bq-quote-jasper-userpic">
-                            <img src="{% static 'testimonial/Kaici-Gordon_2.jpeg' %}" alt="">
-                        </div>
-
-                        <div class="t-bq-quote-jasper-base mt-3" id="testimonial">
-
-                            <blockquote class="t-bq-quote-jasper-text text-center" cite="Strugatsky Brothers">
-                                Really innovative concept.. I was looking forward for such curated
-                                content and i got more than i was expecting. I am so far very thrilled with overall
-                                experience and improvement.
-                            </blockquote>
-                            <div class="t-bq-quote-jasper-meta">
-                                <div class="t-bq-quote-jasper-meta-info">
-                                    <div class="t-bq-quote-jasper-author"><cite>Robin Sehon</cite></div>
-                                </div>
-                            </div>
+            </div>
+            
+            <!-- Testimonial 2 -->
+            <div class="col-lg-4 col-md-6 col-12">
+                <div class="card testimonial-card h-100 border-0 rounded-4 p-4">
+                    <!-- Quote Icon -->
+                    <div class="text-center mb-3">
+                        <i class="fas fa-quote-left quote-icon"></i>
+                    </div>
+                    
+                    <!-- Avatar -->
+                    <div class="text-center mb-4">
+                        <img src="{% static 'testimonial/Kaici-Gordon_2.jpeg' %}" 
+                             alt="Robin Sehon" 
+                             class="rounded-circle testimonial-avatar">
+                    </div>
+                    
+                    <!-- Testimonial Content -->
+                    <div class="card-body text-center p-0 flex-grow-1 d-flex flex-column">
+                        <blockquote class="testimonial-text mb-4 flex-grow-1">
+                            Really innovative concept.. I was looking forward for such curated
+                            content and i got more than i was expecting. I am so far very thrilled with overall
+                            experience and improvement.
+                        </blockquote>
+                        
+                        <!-- Author Info -->
+                        <div class="mt-auto">
+                            <div class="author-name h6 mb-1">Robin Sehon</div>
+                            
                         </div>
                     </div>
                 </div>
-            </section>
-        </div>
-        
-        <div class="col-md-4">
-            <section class="t-bq-section blog-home2" id="jasper">
-                <div class="t-bq-wrapper t-bq-wrapper-boxed">
-                    <div class="t-bq-quote t-bq-quote-jasper" style="min-height: 351px;">
-                        <div class="t-bq-quote-jasper-pattern">
-                            <div class="t-bq-quote-jasper-qmark">
-                                &#10077;
-                            </div>
-                        </div>
-
-                        <div class="t-bq-quote-jasper-userpic">
-                            <img src="{% static 'testimonial/Hope-Lenior.png' %}" alt="">
-                        </div>
-
-                        <div class="t-bq-quote-jasper-base mt-3" id="testimonial">
-
-                            <blockquote class="t-bq-quote-jasper-text text-center" cite="Strugatsky Brothers">
-                                I was organizing my closet and came across my DREAMS tshirt. This
-                                reminded me of how much fun I had with your students and how your volunteer team made me
-                                feel extremely welcome. Thank you for allowing me to be a part of the DREAMS.
-                            </blockquote>
-                            <div class="t-bq-quote-jasper-meta">
-                                <div class="t-bq-quote-jasper-meta-info">
-                                    <div class="t-bq-quote-jasper-author"><cite>Hope LeNoir</cite></div>
-                                </div>
-                            </div>
+            </div>
+            
+            <!-- Testimonial 3 -->
+            <div class="col-lg-4 col-md-6 col-12">
+                <div class="card testimonial-card h-100 border-0 rounded-4 p-4">
+                    <!-- Quote Icon -->
+                    <div class="text-center mb-3">
+                        <i class="fas fa-quote-left quote-icon"></i>
+                    </div>
+                    
+                    <!-- Avatar -->
+                    <div class="text-center mb-4">
+                        <img src="{% static 'testimonial/Hope-Lenior.png' %}" 
+                             alt="Hope LeNoir" 
+                             class="rounded-circle testimonial-avatar">
+                    </div>
+                    
+                    <!-- Testimonial Content -->
+                    <div class="card-body text-center p-0 flex-grow-1 d-flex flex-column">
+                        <blockquote class="testimonial-text mb-4 flex-grow-1">
+                            I was organizing my closet and came across my DREAMS tshirt. This
+                            reminded me of how much fun I had with your students and how your volunteer team made me
+                            feel extremely welcome. Thank you for allowing me to be a part of the DREAMS.
+                        </blockquote>
+                        
+                        <!-- Author Info -->
+                        <div class="mt-auto">
+                            <div class="author-name h6 mb-1">Hope LeNoir</div>
+                           
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
         </div>
         
-        <div class="col-md-12 end-0">
-            <a href="{% url 'testimonials' %}" class="end-0 text-decoration-none  float-end">Readmore..</a>
+        <!-- Read More Button -->
+        <div class="row">
+            <div class="col-12">
+                <div class="d-flex justify-content-center justify-content-md-end">
+                    <a href="{% url 'testimonials' %}" class="btn btn-outline-primary btn-lg px-4 py-2 read-more-btn text-decoration-none">
+                        <span class="me-2">Read More</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
         </div>
+        
+        <!-- Optional: Statistics Section -->
+        
     </div>
-</div>
+</section>
