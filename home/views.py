@@ -4,6 +4,7 @@ from django.shortcuts import render, redirect
 from datetime import datetime
 from .location_data import locations_data
 from .testimonials_data import TESTIMONIALS_DATA
+from .conference import CONFERENCE_DATA
 
 
 def index(request):
@@ -66,6 +67,7 @@ def triennialConference2020(request):
 def triennialConference2023(request):
     context = {
         'bgcolor': '#274C7D',
+        "conference_data": CONFERENCE_DATA
     }
     return render(request, 'conference/triennialConference/triennialConference2023.html', context)
 
@@ -121,33 +123,9 @@ def dreams(request, drm):
 
 
 def locations(request, loc):
-    context = locations_data.get(loc)
-    if loc == 'bangalore':
-        
-        return render(request, 'location/location.html',context)
-    elif loc == 'changancherry':
-        return render(request, 'location/india/changancherry.html')
-    elif loc == 'mannanam':
-        return render(request, 'location/india/mannanam.html')
-    elif loc == 'thiruvallam':
-        return render(request, 'location/india/thiruvallam.html')
-    elif loc == 'thiruvananthapuram':
-        return render(request, 'location/india/thiruvananthapuram.html')
-    elif loc == 'chennai':
-        return render(request, 'location/india/chennai.html')
-    elif loc == 'cologne':
-        return render(request, 'location/germany/cologne.html')
-    elif loc == 'bastrope':
-        return render(request, 'location/usa/bastrope.html')
-    elif loc == 'dalias':
-        return render(request, 'location/usa/dalias.html')
-    elif loc == 'lagrande':
-        return render(request, 'location/usa/lagrande.html')
-    elif loc == 'mcallen':
-        return render(request, 'location/usa/mcallen.html')
-    elif loc == 'monroe':
-        return render(request, 'location/usa/monroe.html')
-
+    context = locations_data.get(loc)  
+    return render(request, 'location/location.html',context)
+    
 
 def research(request):
     return render(request, 'research/research.html')
