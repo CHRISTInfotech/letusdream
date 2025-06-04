@@ -579,5 +579,111 @@ locations_data = {
                 }
             ]
         }
+    },
+    # Cologne
+'cologne': {
+    'location': {
+        'name': 'Cologne',
+        'title': 'COLOGNE, Germany',
+        'subtitle': ''
+    },
+    'breadcrumb': [
+        {'name': 'Home', 'url': '/', 'icon': 'fas fa-home'},
+        {'name': 'Germany', 'url': '/#location', 'icon': 'fas fa-flag'},
+        {'name': 'Cologne', 'url': '', 'icon': 'fas fa-map-marker-alt'}
+    ],
+    'programs': [
+        {
+            'id': 'dreams-program',
+            'title': 'DREAMS Program',
+            'description': [
+                "The DREAMS chapter in Germany was started with the visit of Prof. Dr. Martin Klein from the Catholic University of Applied Sciences North Rhine-Westphalia (KatHO NRW), Germany. Prof. Dr. Klein came to know about the DREAMS program on his visit to India and later expressed his interest in pursuing it. The intervention model was introduced to the KatHO NRW and around 25 volunteered to join this service learning project. Ms. Lisa Jungkamp has taken up the initiative to be the co-founder of this new chapter. Under her leadership a few community, faculty volunteers have joined the team for the project implementation.",
+                "More than fifteen college student volunteers have been receiving virtual and face-to-face training on organizing, planning and conducting the summer camps and follow-up program. The student workbook is translated into German. Currently, they are working on formulating the master plan for hosting the first summer camp in April 2021."
+            ],
+            'leadership': [
+                {
+                    'name': 'Ms. Lisa Jungkamp',
+                    'role': 'Project Head',
+                    'initials': 'LJ',
+                    'image': ''
+                },
+                {
+                    'name': 'Dr. Karla Verlinden',
+                    'role': 'Faculty Representative',
+                    'initials': 'KV',
+                    'image': ''
+                },
+                {
+                    'name': 'Fr. George V.',
+                    'role': 'Community Rep',
+                    'initials': 'GV',
+                    'image': ''
+                }
+            ]
+        },
+        {
+            'id': 'dreams-band',
+            'title': 'DREAMS Band',
+            'description': [
+                "The DREAMS Band strives towards making a positive difference in the community by utilizing their musical skills. DREAMS Band is not only an opportunity to sing and motivate the audience but also uses music as a platform to empower communities and make music of their own, which can empower children and youth holistically. It is a band with a meaning and greater goals for the benefit of the society.",
+                "Those who are interested to be a part of the band may contact the respective leaders in each locality."
+            ],
+            'leadership': [
+               
+            ]
+        },
+        {
+            'id': 'pro-club',
+            'title': 'DREAMS Pro Club',
+            'description': [
+                "DREAMS Pro-club is a support group for the personal and professional development of young professionals. Small groups of 10-12 working professionals meet once every month to discuss and implement strategies for their professional growth. The club helps in inculcating values of identity and community belonging among the members. The program aims at enhancing communication skills, generating positive attitudes about self and others, developing leadership, cooperation, and community engagement.",
+                "This platform is still in the works. Those who are interested to take part may contact the respective leaders in each locality."
+            ],
+            'leadership': [
+                
+            ]
+        }
+    ],
+    'impact': {
+        'title': '',
+        'stats': []
+    },
+    'gallery': {
+        'title': 'Gallery',
+        'items': [
+            {
+                'thumbnail': 'locations/chaganacherry/1.png',
+                'video_url': 'https://www.youtube.com/embed/FlVEeAIWCo0',
+                'modal_id': 'exampleModal1'
+            },
+            {
+                'thumbnail': 'locations/chaganacherry/2.png',
+                'video_url': 'https://www.youtube.com/embed/-U7IMk0fOpw',
+                'modal_id': 'exampleModal2'
+            },
+            {
+                'thumbnail': 'locations/chaganacherry/3.png',
+                'video_url': 'https://www.youtube.com/embed/E9i2R2aZ-x8',
+                'modal_id': 'exampleModal3'
+            }
+        ],
+        'fb_text': 'COLOGNE FB GROUP',
+        'fb_url': 'https://www.facebook.com/groups/572930186985919/',
+        'gallery_text': 'COLOGNE GALLERY',
+        'gallery_url': '/photo-gallery'
+    },
+    'contact': {
+        'title': 'Connect With Us',
+        'items': [
+            {'icon': 'fas fa-phone', 'label': 'Phone', 'value': ''},
+            {'icon': 'fas fa-envelope', 'label': 'Email', 'value': 'cologne@letusdream.org'},
+            {
+                'icon': 'fas fa-map-marker-alt',
+                'label': 'Address',
+                'value': 'Catholic University of Applied Sciences of North-Rhine – Wörthstraße 10, 50668 Köln, Germany'
+            }
+        ]
     }
+},
+
 }
