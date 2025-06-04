@@ -86,6 +86,12 @@
     {% block content %}
 
     {% endblock content %}
+    <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" 
+        class="position-fixed bottom-0 end-0 m-4  btn-primary rounded-circle p-3 shadow-lg text-white"
+        style="z-index: 1000; width: 60px; height: 60px; background: linear-gradient(135deg,#0c52a1 0%, #0a4285 100%); border: none;"
+        title="Scroll to Top">
+    <i class="fas fa-arrow-up"></i>
+</button>
 </div>
 
 {% include 'partials/footer.html' %}
