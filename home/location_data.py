@@ -685,5 +685,425 @@ locations_data = {
         ]
     }
 },
+# Bastrop
+'bastrop': {
+    'location': {
+        'name': 'Bastrop',
+        'title': 'BASTROP, Texas, USA',
+        'subtitle': ''
+    },
+    'breadcrumb': [
+        {'name': 'Home', 'url': '/', 'icon': 'fas fa-home'},
+        {'name': 'USA', 'url': '/#location', 'icon': 'fas fa-flag'},
+        {'name': 'Bastrop', 'url': '', 'icon': 'fas fa-map-marker-alt'}
+    ],
+    'programs': [
+        {
+            'id': 'dreams-program',
+            'title': 'DREAMS Program',
+            'description': [
+                "In 2015, a new DREAMS chapter began its journey in Bastrop, Louisiana with the co-founders Officer Gary Guice, Ms. Kathy Leonard, and Ms. Cindy Hendrix. They have organized a few meetings with local adult and youth volunteers for the project introduction, planning and training.",
+                "The program was introduced and recruited volunteers from all five middle schools in Bastrop. The project is hosted by Prairie View Academy. This chapter received a lot of community and local business participation, along with active involvement from schools. The chapter serves around 35 middle school students every year with the help of around 10 youth mentors and more than 12 adult community mentors."
+            ],
+            'leadership': []
+        },
+        {
+            'id': 'dreams-band',
+            'title': 'DREAMS Band',
+            'description': [
+                "The DREAMS Band strives towards making a positive difference in the community by utilizing their musical abilities. DREAMS Band is not only an opportunity to sing and motivate the audience but also uses music as a platform to empower communities and make music of their own, which can empower children and youth holistically. It is a band with a meaning and a greater goal for the benefit of society.",
+                "Those who are interested to be a part of the band may contact the respective leaders in each locality."
+            ],
+            'leadership': []
+        },
+        {
+            'id': 'pro-club',
+            'title': 'DREAMS Pro Club',
+            'description': [
+                "DREAMS Pro-club is a support group for the personal and professional development of young professionals. Small groups of 10–12 working professionals meet once every month to discuss and implement strategies for their professional growth. The club helps in inculcating values of identity and community belonging among the members. The program aims at enhancing communication skills, generating positive attitudes about self and others, developing leadership, cooperation, and community engagement.",
+                "This platform is yet to be initiated. Those who are interested to take a partnership may contact the respective leaders in each locality."
+            ],
+            'leadership': []
+        }
+    ],
+    'impact': {
+        'title': '',
+        'stats': []
+    },
+    'gallery': {
+        'title': 'Gallery',
+        'items': [],
+        'fb_text': 'BASTROP FB GROUP',
+        'fb_url': 'https://www.facebook.com/groups/283795039664795/',
+        'gallery_text': 'BASTROP GALLERY',
+        'gallery_url': '/photo-gallery#popup6'
+    },
+    'contact': {
+        'title': 'Connect With Us',
+        'items': [
+            {'icon': 'fas fa-phone', 'label': 'Phone', 'value': ''},
+            {'icon': 'fas fa-envelope', 'label': 'Email', 'value': 'bastrop@letusdream.org'},
+            {
+                'icon': 'fas fa-map-marker-alt',
+                'label': 'Address',
+                'value': 'Prairie View Academy, 9942 Edwin St, Bastrop, LA 71220'
+            }
+        ]
+    }
+},
+# Dallas
+'dallas': {
+    'location': {
+        'name': 'Dallas',
+        'title': 'DALLAS, Texas, USA',
+        'subtitle': ''
+    },
+    'breadcrumb': [
+        {'name': 'Home', 'url': '/', 'icon': 'fas fa-home'},
+        {'name': 'USA', 'url': '/#location', 'icon': 'fas fa-flag'},
+        {'name': 'Dallas', 'url': '', 'icon': 'fas fa-map-marker-alt'}
+    ],
+    'programs': [
+        {
+            'id': 'dreams-program',
+            'title': 'DREAMS Program',
+            'description': [
+                "The Dallas DREAMS chapter was introduced to the Garland community by Mr. Shaji Thomas and Mr. Johnson Kuriakose, who visited the DREAMS program in Monroe, LA. With the help of Mr. Haridas Thankappan and other friends, they conducted an open dinner musical night on Saturday, April 26th, 2014 to officially inaugurate and welcome more volunteers to the project.",
+                "Mr. Shaji Thomas, Mr. Johnson Kuriakose, and Mr. Haridas Thankappan (co-founders) met with the board members of the India Cultural and Education Center (ICEC). In the first week of August 2014, the Dallas chapter organized its first summer camp at ICEC, serving predominantly second-generation Indian middle schoolers.",
+                "Ms. Brandy Soileau, Ms. Linda Legrand, and Mr. Nicholas Duncun from Louisiana visited and trained the mentors for the first couple of summer camps and follow-up programs. The active involvement of children and their parents made the events a huge success.",
+                "In 2016, ICEC of Dallas TX agreed to collaborate with Let Us Dream, Inc., and Dallas DREAMS was approved as an official service project of the Dallas County Community College District.",
+                "The project serves more than 30 middle school students each year with 12–15 college mentors and over 12 adult community volunteers. Those students who completed the first three-year program now help run the camps and follow-up sessions.",
+                "In 2020, under the leadership of Mr. Leon Tharakan, Mr. Alen Koshy, Mr. Jotham Simon, and Ms. Leah Tharakan, the Dallas youth team implemented the first virtual summer camp."
+            ],
+            'leadership': [
+               
+            ]
+        },
+        {
+            'id': 'dreams-band',
+            'title': 'DREAMS Band',
+            'description': [
+                "The DREAMS Band strives towards making a positive difference in the community by utilizing musical skills. The band was initiated under the leadership of Mr. Shaji Thomas, Mr. Dawn Jose, Mr. Sujan Tharakan, and Mr. Mathew Ozhukayil.",
+                "Mr. Leon Tharakan, Ms. Angela Shaji, and Ms. Leah Tharakan served as youth leaders, organizing performances at summer camps and local events. Their concerts have received wide recognition, and they continue to recruit new members to explore and develop musical talents."
+            ],
+            'leadership': [
+               
+            ]
+        },
+        {
+            'id': 'pro-club',
+            'title': 'DREAMS Pro Club',
+            'description': [
+                "The DREAMS Pro-club is a support group for the personal and professional development of young professionals. Small groups of 10–12 working professionals meet once every month to discuss and implement strategies for personal growth, communication skills, leadership, cooperation, and community engagement.",
+                "The Dallas Pro Club Chapter is yet to be initiated. Those interested in partnering may contact Mr. Johnson Kuriakose for further details."
+            ],
+            'leadership': [
+                
+            ]
+        }
+    ],
+    'impact': {
+        'title': '',
+        'stats': []
+    },
+    'gallery': {
+        'title': 'Gallery',
+        'items': [
+            {
+                'thumbnail': 'locations/dallas/DREAMS DALLAS.png',
+                'video_url': 'https://www.youtube.com/embed/-EAgL1emcx0',
+                'modal_id': 'exampleModal1'
+            },
+            {
+                'thumbnail': 'locations/chaganacherry/1.png',
+                'video_url': 'https://www.youtube.com/embed/9qCBmxmTZHU',
+                'modal_id': 'exampleModal2'
+            },
+            {
+                'thumbnail': 'locations/chaganacherry/1.png',
+                'video_url': 'https://www.youtube.com/embed/7Wnb4cShUZk',
+                'modal_id': 'exampleModal3'
+            }
+        ],
+        'fb_text': 'DALLAS FB GROUP',
+        'fb_url': 'https://www.facebook.com/groups/572930186985919/',
+        'gallery_text': 'DALLAS GALLERY',
+        'gallery_url': '/photo-gallery#popup7'
+    },
+    'contact': {
+        'title': 'Connect With Us',
+        'items': [
+            {'icon': 'fas fa-phone', 'label': 'Phone', 'value': ''},
+            {'icon': 'fas fa-envelope', 'label': 'Email', 'value': 'dallas@letusdream.org'},
+            {
+                'icon': 'fas fa-map-marker-alt',
+                'label': 'Address',
+                'value': 'Dallas, Texas @ India Cultural and Educational Society, Garland, TX (Est 2014).'
+            }
+        ]
+    }
+},
+# La Grande
+'lagrande': {
+    'location': {
+        'name': 'La Grande',
+        'title': 'La Grande, Oregon, USA',
+        'subtitle': ''
+    },
+    'breadcrumb': [
+        {'name': 'Home', 'url': '/', 'icon': 'fas fa-home'},
+        {'name': 'USA', 'url': '/#location', 'icon': 'fas fa-flag'},
+        {'name': 'La Grande', 'url': '', 'icon': 'fas fa-map-marker-alt'}
+    ],
+    'programs': [
+        {
+            'id': 'dreams-program',
+            'title': 'DREAMS Program',
+            'description': [
+                "The Dreams Chapter at La Grande Oregon was co-founded by Fr. Saji Thomas CMI, the pastor of La Grande Lady of the Valley church with the strong support of Mr. Al Adelsberger.",
+                "With the help of Dr. Amanda Villagomes, the DREAMS Intervention Model was introduced to the students, faculty, and local community at Eastern Oregon University on Wednesday, October 17, 2018. Many of them signed up for volunteering for the project.",
+                "Later, Fr. Saji Thomas and Mr. Al Adelsberger had multiple meetings with the school superintendent and principal of La Grande Middle School and the first summer camp of La Grande OR was held from Monday, August 12, 2019 to August 16, 2019 under the leadership of Ms. Suzanne Anderson.",
+                "Zee Koza, Barb Wales, Paul Sankovich, Lyle Schwarz, and Lia Spiegel were the adult community volunteers. Payton Jolley, Sophia Madsen, Mollie Smith, and Brittany Robles were the youth mentors."
+            ],
+            'leadership': [
+               
+            ]
+        },
+        {
+            'id': 'dreams-band',
+            'title': 'DREAMS Band',
+            'description': [
+                "The DREAMS Band strives towards making a positive difference in the community by utilizing their musical skills. DREAMS Band is not only an opportunity to sing and motivate the audience but also uses music as a platform to empower communities and make music of their own, which can empower children and youth holistically. It is a band with a meaning and greater goals for the benefit of the society.",
+                "Those who are interested to be a part of the band may contact the respective leaders in each locality."
+            ],
+            'leadership': []
+        },
+        {
+            'id': 'pro-club',
+            'title': 'DREAMS Pro Club',
+            'description': [
+                "DREAMS Pro-club is a support group for the personal and professional development of young professionals. Small groups of 10-12 working professionals meet once every month to discuss and implement strategies for their professional growth. The club helps in inculcating values of identity and community belonging among the members. The program aims at enhancing communication skills, generating positive attitudes about self and others, developing leadership, cooperation, and community engagement.",
+                "This platform is yet to be initiated. Those who are interested to take a partnership may contact for further details."
+            ],
+            'leadership': []
+        }
+    ],
+    'impact': {
+        'title': '',
+        'stats': []
+    },
+    'gallery': {
+        'title': 'Gallery',
+        'items': [
+            {
+                'thumbnail': 'locations/chaganacherry/1.png',
+                'video_url': 'https://www.youtube.com/embed/FlVEeAIWCo0',
+                'modal_id': 'exampleModal1'
+            },
+            {
+                'thumbnail': 'locations/chaganacherry/2.png',
+                'video_url': 'https://www.youtube.com/embed/-U7IMk0fOpw',
+                'modal_id': 'exampleModal2'
+            },
+            {
+                'thumbnail': 'locations/chaganacherry/3.png',
+                'video_url': 'https://www.youtube.com/embed/E9i2R2aZ-x8',
+                'modal_id': 'exampleModal3'
+            }
+        ],
+        'fb_text': 'LA GRANDE FB GROUP',
+        'fb_url': 'https://www.facebook.com/groups/676199773230295/',
+        'gallery_text': 'LA GRANDE GALLERY',
+        'gallery_url': '/photo-gallery#popup8'
+    },
+    'contact': {
+        'title': 'Connect With Us',
+        'items': [
+            {'icon': 'fas fa-phone', 'label': 'Phone', 'value': ''},
+            {'icon': 'fas fa-envelope', 'label': 'Email', 'value': 'LaGrande@letusdream.org'},
+            {
+                'icon': 'fas fa-map-marker-alt',
+                'label': 'Address',
+                'value': 'La Grande Oregon @ La Grande Middle School (Estd 2019) (1108 Fourth St, La Grande, OR 97850, USA)'
+            }
+        ]
+    }
+},
+# Mc Allen
+'mcallen': {
+    'location': {
+        'name': 'Mc Allen',
+        'title': 'Mc Allen, Texas, USA',
+        'subtitle': ''
+    },
+    'breadcrumb': [
+        {'name': 'Home', 'url': '/', 'icon': 'fas fa-home'},
+        {'name': 'USA', 'url': '/#location', 'icon': 'fas fa-flag'},
+        {'name': 'Mc Allen', 'url': '', 'icon': 'fas fa-map-marker-alt'}
+    ],
+    'programs': [
+        {
+            'id': 'dreams-program',
+            'title': 'DREAMS Program',
+            'description': [
+                "The chapter at LaGrande Oregon was co‐founded by Fr. Saji Thomas CMI, the pastor of Le Grande Valley Church, with the strong support of Mr. Alfred Adulsberg. With the help of Dr. Amanda Vilgomes, the DREAMS Intervention Model was introduced to the students, faculty, and local community at Eastern Oregon University on Wednesday, October 17, 2018. A few of them signed up for volunteering for the project. Fr. Saji Thomas and Mr. Alfred Adulsberg had multiple meetings with the school superintendent and principal of LaGrande Valley Middle School.",
+                "The first summer camp of LaGrande OR was held from Monday… to … under the leadership of Ms. Susan Anderson and Ms. Zee Cosa and a few other community volunteers and around 10 youth mentors. Ms. Karen … is the school representative."
+            ],
+            'leadership': [
+               
+            ]
+        },
+        {
+            'id': 'dreams-band',
+            'title': 'DREAMS Band',
+            'description': [
+                "The DREAMS Band strives towards making a positive difference in the community by utilizing their musical skills. DREAMS Band is not only an opportunity to sing and motivate the audience but also uses music as a platform to empower communities and make music of their own, which can empower children and youth holistically. It is a band with meaning and greater goals for the benefit of society.",
+                "Those who are interested to be a part of the band may contact the respective leaders in each locality."
+            ],
+            'leadership': []
+        },
+        {
+            'id': 'pro-club',
+            'title': 'DREAMS Pro Club',
+            'description': [
+                "DREAMS Pro‐club is a support group for the personal and professional development of young professionals. Small groups of 10‐12 working professionals meet once every month to discuss and implement strategies for their professional growth. The club helps in inculcating values of identity and community belonging among the members. The program aims at enhancing communication skills, generating positive attitudes about self and others, developing leadership, cooperation, and community engagement.",
+                "This platform is yet to be initiated. Those who are interested to take a partnership may contact the respective leaders in each locality."
+            ],
+            'leadership': []
+        }
+    ],
+    'impact': {
+        'title': '',
+        'stats': []
+    },
+    'gallery': {
+        'title': 'Gallery',
+        'items': [
+            {
+                'thumbnail': 'locations/chaganacherry/1.png',
+                'video_url': 'https://www.youtube.com/embed/FlVEeAIWCo0',
+                'modal_id': 'exampleModal1'
+            },
+            {
+                'thumbnail': 'locations/chaganacherry/2.png',
+                'video_url': 'https://www.youtube.com/embed/-U7IMk0fOpw',
+                'modal_id': 'exampleModal2'
+            },
+            {
+                'thumbnail': 'locations/chaganacherry/3.png',
+                'video_url': 'https://www.youtube.com/embed/E9i2R2aZ-x8',
+                'modal_id': 'exampleModal3'
+            }
+        ],
+        'fb_text': 'MC ALLEN FB GROUP',
+        'fb_url': 'https://www.facebook.com/groups/1030574417337323/',
+        'gallery_text': 'MC ALLEN GALLERY',
+        'gallery_url': '/photo-gallery#popup9'
+    },
+    'contact': {
+        'title': 'Connect With Us',
+        'items': [
+            {'icon': 'fas fa-phone',              'label': 'Phone',   'value': ''},
+            {'icon': 'fas fa-envelope',           'label': 'Email',   'value': 'mcallen@letusdream.org'},
+            {
+                'icon': 'fas fa-map-marker-alt',
+                'label': 'Address',
+                'value': 'Proyecto Desarrollo Humano 17617 Sabal Palm Drive; Penitas; Texas-78576.'
+            }
+        ]
+    }
+},
+# Monroe
+'monroe': {
+    'location': {
+        'name': 'Monroe',
+        'title': 'Monroe, Louisiana, USA',
+        'subtitle': ''
+    },
+    'breadcrumb': [
+        {'name': 'Home', 'url': '/', 'icon': 'fas fa-home'},
+        {'name': 'USA', 'url': '/#location', 'icon': 'fas fa-flag'},
+        {'name': 'Monroe', 'url': '', 'icon': 'fas fa-map-marker-alt'}
+    ],
+    'programs': [
+        {
+            'id': 'dreams-program',
+            'title': 'DREAMS Program',
+            'description': [
+                "The chapter in Monroe, Louisiana was established in connection with the implementation of the DREAMS intervention model research by Fr. Lijo Thomas in July 2011 at the University of Louisiana, Monroe. The co-founder of this chapter, Mrs. Maribeth Holzer played a vital role in designing the program. Maribeth redesigned the program by implementing games and team building activities to make the program more fun and meaningful for participants. Later a team of volunteers, Mrs. Angie Opry, Mrs. Janet Breard, Fr. Job Scaria, and additional community volunteers joined the team. Ms. Kaici Gordon was the first youth volunteer to join the team. She, along with many other teens, brought enthusiasm and leadership that participants could relate to.",
+                "In 2012, the program was moved to Ouachita Junior High School in Monroe. The program was shown to be beneficial for under-performing middle school students. The pilot study and another longitudinal study showed that there were significant improvements in self-esteem, motivation, and personal and interpersonal behavior of those who participated in the DREAMS program.",
+                "The Monroe DREAMS Chapter serves approximately 33 students per year with the help of 12 youth mentors and 10 adult community volunteers. Mrs. Kristy Cobb is the school representative of the chapter. She provides a fast-paced program that is full of fun, learning, and self-reflection. Not only does she add fun and enthusiasm to the summer program, she serves as a mentor to participants all through the year.",
+                "In 2012 Ms. Maribeth Holzer further introduced the program with the leadership of Ouachita School System and later it was welcomed by the system and introduced to Ouachita Junior High School, Monroe for the betterment of under-performing middle school students. The pilot study and another longitudinal study showed that there were significant improvements in self-esteem, self-mastery, motivation, locus of control, life-orientation and engagement, academic achievements, and personal and interpersonal behavior of those who participated in the DREAMS program.",
+                "The Monroe DREAMS Chapter serves an average of 33 students with the help of around 12 youth mentors and around 10 adult community volunteers every year. Ms. Kristy Cobb is the school representative of the chapter."
+            ],
+            'leadership': [
+                
+            ]
+        },
+        {
+            'id': 'dreams-band',
+            'title': 'DREAMS Band',
+            'description': [
+                "The DREAMS Band in Monroe, LA strives to make a positive impact in the community by utilizing their musical skills with the help of local musicians and youth musicians. The Monroe DREAMS Band began its journey in 2010 with a mission to build self-confidence in youth through pursuing their musical desires. Local community members provided free piano, guitar, and drum lessons to children and youth every Sunday afternoon at the University of Louisiana Monroe’s Catholic Campus Ministries. Mr. Lamar Trichelle played a significant role in getting the band started. His commitment to the band, along with Mr. Gary Guiniguindo and Kody Chase, made the dream possible. Mrs. Sheila Martin and Mrs. Maribeth Holzer were instrumental in organizing events/concerts and coordinating the parents of the students; eventually leading to a band completely managed by the parents of the band members.",
+                "The band performed several concerts and musical events in and outside of Louisiana. The band performed Christmas Canticles for Shalom, a global TV network, in 2015. Later in 2016, the band published its first educational music album, Math Music, to teach kids mathematical concepts through music. The band performs every year at the Monroe DREAMS Camps.",
+                "To date, more than 135 youth have played in the band and built their musical, psycho-social, and leadership skills for their future success. Presently, the leadership of the band is comprised of Mr. Carlos Tenorio (Music Director), Mrs. Sheila Martin (Parents’ Coordinator), Mr. Abraham Arun (Manager), and Ms. Liza Barkely (Band Lead)."
+            ],
+            'leadership': [
+              
+            ]
+        },
+        {
+            'id': 'pro-club',
+            'title': 'DREAMS Pro Club',
+            'description': [
+                "The DREAMS Pro‐club is a support group for the personal and professional development of young professionals. Small groups of 10–12 working professionals meet once every month to discuss and implement strategies for their professional growth. The club helps in inculcating values of identity and community belonging among the members. The program aims at enhancing communication skills, generating positive attitudes about self and others, developing leadership, cooperation, and community engagement.",
+                "This platform is yet to be initiated. Those who are interested to take a partnership may contact Mr. Abraham Arun for further details."
+            ],
+            'leadership': [
+               
+            ]
+        }
+    ],
+    'impact': {
+        'title': '',
+        'stats': []
+    },
+    'gallery': {
+        'title': 'Gallery',
+        'items': [
+            {
+                'thumbnail': 'locations/chaganacherry/1.png',
+                'video_url': 'https://www.youtube.com/embed/FlVEeAIWCo0',
+                'modal_id': 'exampleModal1'
+            },
+            {
+                'thumbnail': 'locations/chaganacherry/2.png',
+                'video_url': 'https://www.youtube.com/embed/-U7IMk0fOpw',
+                'modal_id': 'exampleModal2'
+            },
+            {
+                'thumbnail': 'locations/chaganacherry/3.png',
+                'video_url': 'https://www.youtube.com/embed/E9i2R2aZ-x8',
+                'modal_id': 'exampleModal3'
+            }
+        ],
+        'fb_text': 'MONROE FB GROUP',
+        'fb_url': 'https://www.facebook.com/groups/3183208815051583/',
+        'gallery_text': 'MONROE GALLERY',
+        'gallery_url': '/photo-gallery#popup10'
+    },
+    'contact': {
+        'title': 'Connect With Us',
+        'items': [
+            {'icon': 'fas fa-phone',              'label': 'Phone',   'value': ''},
+            {'icon': 'fas fa-envelope',           'label': 'Email',   'value': 'monroe@letusdream.org'},
+            {
+                'icon': 'fas fa-map-marker-alt',
+                'label': 'Address',
+                'value': 'Monroe, Louisiana @ Ouachita Junior High School (Est 2012) 5500 Blanks Street, Monroe, LA 71203.'
+            }
+        ]
+    }
+},
 
 }
