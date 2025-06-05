@@ -245,27 +245,42 @@
         border-radius: 2px;
     }
 
+   
+
+    /* Breadcrumb */
+    .breadcrumb-nav {
+        background: white;
+        padding: 1rem 0;
+        border-bottom: 1px solid #e5e7eb;
+    }
+
     .breadcrumb {
-        background: rgba(10, 84, 168, 0.233);
-        border-radius: var(--border-radius);
-        backdrop-filter: blur(10px);
-        border: 1px solid rgba(12, 82, 161, 0.1);
-        --bs-breadcrumb-divider-color: var(--medium-text);
-        --bs-breadcrumb-active-color: var(--secondary-green);
-        padding: 1rem 1.5rem;
+        list-style: none;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin: 0;
+        padding: 0;
     }
 
-    .breadcrumb-item.active {
-        color: var(--secondary-green);
-    }
 
-    .breadcrumb-item a {
-        color: var(--dark-text);
+
+
+
+    .breadcrumb a {
+        color: #3b82f6;
+        text-decoration: none;
         transition: color 0.3s ease;
     }
 
-    .breadcrumb-item a:hover {
-        color: var(--primary-blue);
+    .breadcrumb a:hover {
+        color: #1d4ed8;
+        text-decoration: underline;
+    }
+
+    .breadcrumb .current {
+        color: #6b7280;
+        font-weight: 500;
     }
 
     .timeline-item {

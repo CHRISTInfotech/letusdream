@@ -21,9 +21,10 @@
 
 {% block content %}
 <!-- Breadcrumb Navigation -->
-<nav aria-label="breadcrumb" class="container mt-4 fade-in">
+ <nav aria-label="breadcrumb" class="bg-light py-2 mb-5">
+  <div class="container">
     <ol class="breadcrumb mb-0">
-        <li class="breadcrumb-item ">
+      <li class="breadcrumb-item ">
             <a href="{% url 'main' %}"><i class="fas fa-home me-1"></i>Home</a>
         </li>
         <li class="breadcrumb-item">
@@ -36,7 +37,9 @@
             {{ conference_data.page.subheading }}
         </li>
     </ol>
+  </div>
 </nav>
+
 
 <!-- Hero Section -->
 <div class="container fade-in">
@@ -138,7 +141,7 @@
 
 <!-- Conference Schedule -->
 <div class="container mt-5">
-    <h2 class="section-title display-5 fw-bold fade-in">
+    <h2 class="section-title  fw-bold fade-in">
         <i class="fas fa-calendar-alt me-3"></i>Conference Schedule
     </h2>
     
@@ -231,7 +234,7 @@
 
 <!-- Keynote Speakers -->
 <div class="container mt-5">
-    <h2 class="section-title display-5 fw-bold fade-in">
+    <h2 class="section-title fw-bold fade-in">
         <i class="fas fa-microphone me-3"></i>Keynote Speakers
     </h2>
     
@@ -265,7 +268,7 @@
 
 <!-- Session Chairs -->
 <div class="container mt-5">
-    <h2 class="section-title display-5 fw-bold fade-in">
+    <h2 class="section-title  fw-bold fade-in">
         <i class="fas fa-users me-3"></i>Session Chairs
     </h2>
     
@@ -311,7 +314,7 @@
 
 <!-- Gallery Section -->
 <div class="container mt-5 mb-5">
-    <h2 class="section-title display-5 fw-bold fade-in">
+    <h2 class="section-title  fw-bold fade-in">
         <i class="fas fa-images me-3"></i>Glimpses of Triennial Conference 2020
     </h2>
     
