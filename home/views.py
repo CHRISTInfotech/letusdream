@@ -5,9 +5,13 @@ from datetime import datetime
 from .location_data import locations_data
 from .testimonials_data import TESTIMONIALS_DATA
 from .conference import CONFERENCE_DATA
+from .llfp_2024 import llfp_2024
 
 
 def index(request):
+    context = {
+       'page_title': 'Home',
+    }
     return render(request, 'home/index.html')
 
 
@@ -258,8 +262,9 @@ def sustainability(request):
     return render(request, 'aboutUs/sustainability.html')
 
 
+
 def llfp(request):
-    return render(request, 'courses/llfp2024.html')
+    return render(request, 'courses/llfp2024.html', {'data': llfp_2024})
 
 def contactUs(request):
     return render(request, 'aboutUs/contactus.html')

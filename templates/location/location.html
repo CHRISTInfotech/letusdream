@@ -84,9 +84,15 @@
                             {% for leader in program.leadership %}
                                 {% if leader.name or leader.role or leader.initials %}
                                 <div class="leader-card">
-                                    {% if leader.initials %}
-                                    <div class="leader-avatar">{{ leader.initials }}</div>
+                                     {# Display image if available, otherwise show initials #}
+                                    {% if leader.image %}
+                                        <div class="leader-avatar">
+                                            <img src="{{ leader.image }}" alt="{{ leader.name|default:'Leader' }}" class="leader-image">
+                                        </div>
+                                    {% elif leader.initials %}
+                                        <div class="leader-avatar">{{ leader.initials }}</div>
                                     {% endif %}
+                                    {# Display name and role if available #}
                                     <div class="leader-info">
                                         {% if leader.name %}<h4>{{ leader.name }}</h4>{% endif %}
                                         {% if leader.role %}<p>{{ leader.role }}</p>{% endif %}

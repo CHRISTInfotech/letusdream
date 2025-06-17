@@ -1,0 +1,156 @@
+/* ========================================
+   Header & Footer Overrides (page‐specific)
+   ======================================== */
+
+/* Header Background & Text */
+header {
+  background-color: var(--primary-blue);
+  color: var(--white-text);
+}
+
+/* Margin helper (if you still need a 10px right‐margin) */
+.mr-10px {
+  margin-right: 10px;
+}
+
+/* Wrapper around logo (white background with rounded bottom corners) */
+.background {
+  background-color: var(--white-text);
+  padding: 30px;
+  margin: -30px;
+  border-radius: 0 0 20px 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Increase base font‐size for the menu container */
+.menu {
+  font-size: 18px;
+}
+
+/* Slight padding on each nav‐item */
+.nav-item {
+  padding: 3px;
+}
+
+/* Multilevel dropdown positioning */
+.dropdown-menu li {
+  position: relative;
+}
+
+.dropdown-menu .submenu {
+  display: none;
+  position: absolute;
+  left: 100%;
+  top: -7px;
+}
+
+.dropdown-menu > li:hover > .submenu {
+  display: block;
+}
+
+.dropdown-menu .submenu .dropdown-toggle::after {
+  position: absolute;
+  right: 0;
+  margin-top: 10px;
+}
+
+/* Floats for item-left section */
+.item-left {
+  float: left;
+}
+.item-left img,
+.item-left span.item-info {
+  float: left;
+}
+.item-left span.item-info span {
+  display: block;
+  float: left;
+}
+
+/* Override base.css navbar background */
+.navbar {
+  background: var(--primary-blue) !important;
+}
+
+/* Ensure navbar links remain white */
+.navbar-nav .nav-link {
+  color: var(--white-text) !important;
+}
+
+.navbar-nav .nav-link:hover {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+/* ========================================
+   Footer Overrides & Page‐Specific Styles
+   ======================================== */
+footer {
+  background: var(--primary-blue);
+  color: var(--white-text);
+  min-height: 200px;
+  padding: 50px 50px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+footer .social-icons,
+footer .menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+
+footer .social-icons li,
+footer .menu li {
+  list-style: none;
+}
+
+footer .social-icons li i {
+  font-size: 20px;
+  color: var(--white-text);
+  margin: 0 15px;
+  transition: 0.5s;
+}
+
+footer .social-icons li i:hover {
+  transform: translateY(-10px);
+  color: #82d8d8;
+}
+
+footer .menu li a {
+  font-size: 1.2em;
+  color: var(--white-text);
+  margin: 0 10px;
+  text-decoration: none;
+  opacity: 0.75;
+  transition: 0.5s;
+}
+
+footer .menu li a:hover {
+  opacity: 1;
+  font-size: 1.4em;
+}
+
+footer div {
+  color: var(--white-text);
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  font-size: 0.9em;
+  font-weight: 300;
+}
+
+footer div a {
+  color: #262626;
+  padding: 5px;
+  text-decoration: none;
+}
+
+footer div a:hover {
+  color: var(--white-text);
+}

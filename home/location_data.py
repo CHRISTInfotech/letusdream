@@ -8,8 +8,8 @@ locations_data = {
         },
         'breadcrumb': [
             {'name': 'Home', 'url': '/', 'icon': 'fas fa-home'},
-            {'name': 'India', 'url': '/#location', 'icon': 'fas fa-flag'},
-            {'name': 'Changanacherry', 'url': '', 'icon': 'fas fa-map-marker-alt'}
+            {'name': 'India', 'url': '/#location', 'icon': ''},
+            {'name': 'Changanacherry', 'url': '', 'icon': ''}
         ],
         'programs': [
             {
@@ -92,8 +92,8 @@ locations_data = {
         },
         'breadcrumb': [
             {'name': 'Home', 'url': '/', 'icon': 'fas fa-home'},
-            {'name': 'India', 'url': '/#location', 'icon': 'fas fa-flag'},
-            {'name': 'Chennai', 'url': '', 'icon': 'fas fa-map-marker-alt'}
+            {'name': 'India', 'url': '/#location', 'icon': ''},
+            {'name': 'Chennai', 'url': '', 'icon': ''}
         ],
         'programs': [
             {
@@ -210,8 +210,8 @@ locations_data = {
         },
         'breadcrumb': [
             {'name': 'Home', 'url': '/', 'icon': 'fas fa-home'},
-            {'name': 'India', 'url': '/#location', 'icon': 'fas fa-flag'},
-            {'name': 'Mannanam', 'url': '', 'icon': 'fas fa-map-marker-alt'}
+            {'name': 'India', 'url': '/#location', 'icon': ''},
+            {'name': 'Mannanam', 'url': '', 'icon': ''}
         ],
         'programs': [
             {
@@ -294,8 +294,8 @@ locations_data = {
         },
         'breadcrumb': [
             {'name': 'Home', 'url': '/', 'icon': 'fas fa-home'},
-            {'name': 'India', 'url': '/#location', 'icon': 'fas fa-flag'},
-            {'name': 'Thiruvallam', 'url': '', 'icon': 'fas fa-map-marker-alt'}
+            {'name': 'India', 'url': '/#location', 'icon': ''},
+            {'name': 'Thiruvallam', 'url': '', 'icon': ''}
         ],
         'programs': [
             {
@@ -377,8 +377,8 @@ locations_data = {
         },
         'breadcrumb': [
             {'name': 'Home', 'url': '/', 'icon': 'fas fa-home'},
-            {'name': 'India', 'url': '/#location', 'icon': 'fas fa-flag'},
-            {'name': 'Bangalore', 'url': '', 'icon': 'fas fa-map-marker-alt'}
+            {'name': 'India', 'url': '/#location', 'icon': ''},
+            {'name': 'Bangalore', 'url': '', 'icon': ''}
         ],
         'programs': [
             {
@@ -494,9 +494,9 @@ locations_data = {
         },
         'breadcrumb': [
             {'name': 'Home', 'url': '/', 'icon': 'fas fa-home'},
-            {'name': 'India', 'url': '/#location', 'icon': 'fas fa-flag'},
+            {'name': 'India', 'url': '/#location', 'icon': ''},
             {'name': 'Thiruvananthapuram', 'url': '',
-                'icon': 'fas fa-map-marker-alt'}
+                'icon': ''}
         ],
         'programs': [
             {
@@ -589,8 +589,8 @@ locations_data = {
     },
     'breadcrumb': [
         {'name': 'Home', 'url': '/', 'icon': 'fas fa-home'},
-        {'name': 'Germany', 'url': '/#location', 'icon': 'fas fa-flag'},
-        {'name': 'Cologne', 'url': '', 'icon': 'fas fa-map-marker-alt'}
+        {'name': 'Germany', 'url': '/#location', 'icon': ''},
+        {'name': 'Cologne', 'url': '', 'icon': ''}
     ],
     'programs': [
         {
@@ -694,8 +694,8 @@ locations_data = {
     },
     'breadcrumb': [
         {'name': 'Home', 'url': '/', 'icon': 'fas fa-home'},
-        {'name': 'USA', 'url': '/#location', 'icon': 'fas fa-flag'},
-        {'name': 'Bastrop', 'url': '', 'icon': 'fas fa-map-marker-alt'}
+        {'name': 'USA', 'url': '/#location', 'icon': ''},
+        {'name': 'Bastrop', 'url': '', 'icon': ''}
     ],
     'programs': [
         {
@@ -760,8 +760,8 @@ locations_data = {
     },
     'breadcrumb': [
         {'name': 'Home', 'url': '/', 'icon': 'fas fa-home'},
-        {'name': 'USA', 'url': '/#location', 'icon': 'fas fa-flag'},
-        {'name': 'Dallas', 'url': '', 'icon': 'fas fa-map-marker-alt'}
+        {'name': 'USA', 'url': '/#location', 'icon': ''},
+        {'name': 'Dallas', 'url': '', 'icon': ''}
     ],
     'programs': [
         {
@@ -852,8 +852,8 @@ locations_data = {
     },
     'breadcrumb': [
         {'name': 'Home', 'url': '/', 'icon': 'fas fa-home'},
-        {'name': 'USA', 'url': '/#location', 'icon': 'fas fa-flag'},
-        {'name': 'La Grande', 'url': '', 'icon': 'fas fa-map-marker-alt'}
+        {'name': 'USA', 'url': '/#location', 'icon': ''},
+        {'name': 'La Grande', 'url': '', 'icon': ''}
     ],
     'programs': [
         {
@@ -938,8 +938,8 @@ locations_data = {
     },
     'breadcrumb': [
         {'name': 'Home', 'url': '/', 'icon': 'fas fa-home'},
-        {'name': 'USA', 'url': '/#location', 'icon': 'fas fa-flag'},
-        {'name': 'Mc Allen', 'url': '', 'icon': 'fas fa-map-marker-alt'}
+        {'name': 'USA', 'url': '/#location', 'icon': ''},
+        {'name': 'Mc Allen', 'url': '', 'icon': ''}
     ],
     'programs': [
         {
@@ -1022,8 +1022,8 @@ locations_data = {
     },
     'breadcrumb': [
         {'name': 'Home', 'url': '/', 'icon': 'fas fa-home'},
-        {'name': 'USA', 'url': '/#location', 'icon': 'fas fa-flag'},
-        {'name': 'Monroe', 'url': '', 'icon': 'fas fa-map-marker-alt'}
+        {'name': 'USA', 'url': '/#location', 'icon': ''},
+        {'name': 'Monroe', 'url': '', 'icon': ''}
     ],
     'programs': [
         {
