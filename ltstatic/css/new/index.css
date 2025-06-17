@@ -1,0 +1,133 @@
+    /* Custom carousel styles for centered captions */
+    .carousel-img {
+
+        color: #fff;
+        filter: blur(3px) brightness(0.7);
+        transition: filter 0.5s ease-in-out;
+        object-fit: cover;
+    }
+    
+
+    .carousel-overlay {
+        background: linear-gradient(45deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2));
+    }
+
+    .rounded-custom {
+        border-radius: 5px;
+        overflow: hidden;
+    }
+
+    /* Centered caption styling */
+    .carousel-caption-centered {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        z-index: 10;
+        width: 80%;
+    }
+
+    .carousel-caption-centered h5 {
+        font-size: 2.5rem;
+        font-weight: 300;
+        letter-spacing: 2px;
+        margin-bottom: 0.5rem;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    }
+
+    .carousel-caption-centered h4 {
+        font-size: 4rem;
+        font-weight: 700;
+        letter-spacing: 3px;
+        text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+    }
+
+     .carousel-h4{
+        font-weight: 300;
+        color: #fff !important;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    }
+    .carousel-h5{
+        font-weight: 300;
+        color: var(--secondary-green)!important;
+        
+        letter-spacing: 2px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    }
+
+    /* Responsive text sizing */
+    @media (max-width: 768px) {
+        .carousel-caption-centered {
+            width: 90%;
+        }
+
+        .carousel-caption-centered h5 {
+            font-size: 1.8rem;
+            letter-spacing: 1px;
+        }
+
+        .carousel-caption-centered h4 {
+            font-size: 2.5rem;
+            letter-spacing: 2px;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .carousel-caption-centered h5 {
+            font-size: 1.5rem;
+        }
+
+        .carousel-caption-centered h4 {
+            font-size: 2rem;
+        }
+    }
+
+    /* Enhanced carousel controls */
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 5%;
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    /* Carousel indicators styling */
+    .carousel-indicators [data-bs-target] {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        margin: 0 5px;
+    }
+
+   .partner-logo-wrapper {
+        width: 100%;
+        height: 150px; /* Fixed height for all boxes */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .partner-logo-wrapper:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15) !important;
+    }
+    
+    .partner-logo {
+        max-width: 100%;
+        max-height: 120px; /* Consistent max height for logos */
+        width: auto;
+        height: auto;
+        object-fit: contain;
+    }
+    
+    .carousel-item {
+        min-height: 140px; /* Ensure consistent carousel height */
+    }

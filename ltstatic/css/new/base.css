@@ -91,12 +91,12 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-primary);
   font-weight: var(--font-weight-semibold);
-  color: var(--dark-text);
+  color: var(--primary-blue-dark);
   margin-bottom: 1rem;
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: var(--font-weight-bold);
 }
 
@@ -123,6 +123,10 @@ h6 {
 p {
   margin-bottom: 1rem;
   color: var(--medium-text);
+  
+}
+.justify {
+  text-align: justify;
 }
 
 a {
@@ -180,6 +184,16 @@ a:hover {
   border: 2px solid var(--primary-blue);
   color: var(--primary-blue);
   background: transparent;
+}
+.btn-outline-primary, .btn-outline-secondary, .btn-outline-info, .btn-outline-success,
+.btn-outline-danger, .btn-outline-warning {
+  border: 2px solid ;
+  background: transparent;
+  padding: 0.75rem 1.5rem;
+  font-weight: var(--font-weight-medium);
+  font-size: 0.9rem;
+  border-radius: var(--border-radius-small);
+  transition: var(--transition-normal);
 }
 
 .btn-outline-primary:hover {
@@ -497,17 +511,7 @@ a:hover {
   position: relative;
 }
 
-.section-title::after {
-  content: '';
-  position: absolute;
-  bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 60px;
-  height: 3px;
-  background: var(--gradient-secondary);
-  border-radius: 2px;
-}
+
 
 /* Content Cards */
 .content-card {
