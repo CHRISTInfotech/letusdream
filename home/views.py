@@ -307,3 +307,7 @@ def news_letter_html(request,month,year):
         return render(request, 'newsletters/'+month+'-'+year+'.html',context)
     else:
         return redirect('main')
+    
+
+def human(request):
+    return render(request, 'productions/human.html')

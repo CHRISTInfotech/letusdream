@@ -1,0 +1,451 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}The HUMAN - A Transformative Journey To Heal & Lead{% endblock %}
+
+{% block extraStyles %}
+<style>
+/* Custom CSS Variables - Keep existing color scheme */
+:root {
+  --primary-blue: #0c52a1;
+  --secondary-green: #92ed26;
+  --primary-blue-dark: #0a4285;
+  --secondary-green-dark: #7bc922;
+  --gradient-primary: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-blue-dark) 100%);
+  --gradient-secondary: linear-gradient(135deg, var(--secondary-green) 0%, var(--secondary-green-dark) 100%);
+  --gradient-overlay: linear-gradient(135deg, rgba(12, 82, 161, 0.1) 0%, rgba(146, 237, 38, 0.1) 100%);
+}
+
+/* Hero Section */
+.hero-section {
+  background: var(--gradient-overlay);
+  position: relative;
+  overflow: hidden;
+  min-height: 60vh;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--gradient-overlay);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 700;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero-subtitle {
+  font-size: clamp(1.2rem, 3vw, 1.5rem);
+  font-weight: 500;
+}
+
+/* Section Titles */
+.section-title {
+  font-family: 'Playfair Display', serif;
+  color: var(--primary-blue);
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: var(--gradient-secondary);
+  border-radius: 2px;
+}
+
+/* Session Cards */
+.session-card {
+  transition: all 0.3s ease;
+  border: none;
+  border-top: 5px solid transparent;
+  border-image: var(--gradient-secondary) 1;
+}
+
+.session-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(12, 82, 161, 0.15);
+}
+
+.session-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--gradient-primary);
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+.session-title {
+  font-family: 'Playfair Display', serif;
+  color: var(--primary-blue);
+}
+
+/* SDG Table */
+.sdg-table thead th {
+  background: var(--gradient-primary);
+  color: white;
+  border: none;
+}
+
+.sdg-table tbody tr:nth-child(even) {
+  background-color: rgba(12, 82, 161, 0.02);
+}
+
+/* Concert Section */
+.concert-section {
+  background: var(--gradient-primary);
+}
+
+.concert-title {
+  font-family: 'Playfair Display', serif;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Download Buttons */
+.download-btn {
+  background: var(--gradient-secondary);
+  border: none;
+  color: #333;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.download-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(146, 237, 38, 0.3);
+  color: #333;
+}
+
+/* Event Image */
+.event-image-container {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.event-image-container:hover {
+  transform: translateY(-5px);
+}
+
+.event-image {
+  transition: all 0.3s ease;
+}
+
+.event-image-container:hover .event-image {
+  transform: scale(1.02);
+}
+
+.event-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  transform: translateY(100%);
+  transition: all 0.3s ease;
+}
+
+.event-image-container:hover .event-overlay {
+  transform: translateY(0);
+}
+
+/* Contact Cards */
+.contact-card {
+  border: none;
+  box-shadow: 0 10px 30px rgba(12, 82, 161, 0.08);
+}
+
+/* Fade-in Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeInUp 0.8s ease-out;
+}
+</style>
+{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero-section d-flex align-items-center">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8 col-md-10">
+        <div class="hero-content text-center text-white">
+          <h1 class="hero-title mb-4 fade-in">The HUMAN</h1>
+          <h2 class="hero-subtitle mb-4 fade-in">A Transformative Journey To Heal & Lead</h2>
+          <p class="lead mb-0 fade-in">
+            A One-Day Transformative Workshop to Cultivate Steward Leaders through Music, Dance, Theatre, and Multimedia Expression.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Purpose Section -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <h2 class="section-title text-center mb-5">OUR PURPOSE</h2>
+        
+        <p class="lead text-justify mb-4">
+          In a world increasingly shaped by AI and automation, we risk losing touch with the very essence of our 
+          Humanness - empathy, responsibility, connection and creativity.
+        </p>
+        
+        <div class="card shadow-sm mb-4">
+          <div class="card-body text-center py-4">
+            <h3 class="text-primary mb-3">HUMAN stands for:</h3>
+            <p class="h5 mb-0"><strong>H</strong>armony, <strong>U</strong>nity, <strong>M</strong>indfulness, <strong>A</strong>ction for <strong>N</strong>urturing</p>
+          </div>
+        </div>
+        
+        <p class="lead text-justify mb-4">
+          This Youth-led leadership workshop nurtures the development of value-based leadership among youth through 
+          the 17 United Nations Sustainable Development Goals (SDGs). This one-day transformative leadership workshop 
+          incorporates music, dance, theatre and storytelling to promote the essence of Humanness.
+        </p>
+        
+        <p class="lead text-justify mb-0">
+          Developed under the Let Us Dream, in collaboration with CHRIST (Deemed to be University), Pune Lavasa Campus, 
+          this initiative aims to engage potential student leaders from over 100 academic institutions across the Globe. 
+          Through curated workshops and performances, participants will be mentored and empowered to become SDG Youth 
+          Ambassadors and peer-change agents who will lead The HUMAN Movement.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Sessions Section -->
+<section class="py-5">
+  <div class="container">
+    <h2 class="section-title text-center mb-5">What We Offer</h2>
+    <div class="row g-4">
+      <div class="col-lg-4 col-md-6">
+        <div class="session-card card h-100 shadow-sm text-center p-4">
+          <div class="session-number mx-auto mb-3">1</div>
+          <h3 class="session-title h4 mb-2">Harmony</h3>
+          <p class="text-muted fw-semibold mb-3">Inclusively Coexist</p>
+          <p class="mb-0">Peaceful coexistence, equality</p>
+        </div>
+      </div>
+      
+      <div class="col-lg-4 col-md-6">
+        <div class="session-card card h-100 shadow-sm text-center p-4">
+          <div class="session-number mx-auto mb-3">2</div>
+          <h3 class="session-title h4 mb-2">Unity</h3>
+          <p class="text-muted fw-semibold mb-3">Collaborate for Purpose</p>
+          <p class="mb-0">Togetherness, Collective responsibility</p>
+        </div>
+      </div>
+      
+      <div class="col-lg-4 col-md-6">
+        <div class="session-card card h-100 shadow-sm text-center p-4">
+          <div class="session-number mx-auto mb-3">3</div>
+          <h3 class="session-title h4 mb-2">Mindfulness</h3>
+          <p class="text-muted fw-semibold mb-3">Compliment with Empathy</p>
+          <p class="mb-0">Awareness, Education, Well-being</p>
+        </div>
+      </div>
+      
+      <div class="col-lg-6 col-md-6">
+        <div class="session-card card h-100 shadow-sm text-center p-4">
+          <div class="session-number mx-auto mb-3">4</div>
+          <h3 class="session-title h4 mb-2">Action</h3>
+          <p class="text-muted fw-semibold mb-3">Transform with Compassion</p>
+          <p class="mb-0">Implementation, Innovation</p>
+        </div>
+      </div>
+      
+      <div class="col-lg-6 col-md-6">
+        <div class="session-card card h-100 shadow-sm text-center p-4">
+          <div class="session-number mx-auto mb-3">5</div>
+          <h3 class="session-title h4 mb-2">Nurturing</h3>
+          <p class="text-muted fw-semibold mb-3">Steward Leadership</p>
+          <p class="mb-0">Care, Compassion</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SDG Mapping Section -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <h2 class="section-title text-center mb-5">SESSION DETAILS & SDG MAPPING</h2>
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <div class="card shadow-sm">
+          <div class="table-responsive">
+            <table class="table sdg-table mb-0">
+              <thead>
+                <tr>
+                  <th class="py-3">Session</th>
+                  <th class="py-3">Focus</th>
+                  <th class="py-3">SDGs</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="py-3"><strong>Harmony</strong></td>
+                  <td class="py-3">Peaceful coexistence, equality</td>
+                  <td class="py-3">10, 11, 16, 17</td>
+                </tr>
+                <tr>
+                  <td class="py-3"><strong>Unity</strong></td>
+                  <td class="py-3">Togetherness, Collective responsibility</td>
+                  <td class="py-3">1, 5, 6, 7, 13</td>
+                </tr>
+                <tr>
+                  <td class="py-3"><strong>Mindfulness</strong></td>
+                  <td class="py-3">Awareness, Education, Well-being</td>
+                  <td class="py-3">3, 4, 12, 14, 15, 16</td>
+                </tr>
+                <tr>
+                  <td class="py-3"><strong>Action</strong></td>
+                  <td class="py-3">Implementation, Innovation</td>
+                  <td class="py-3">2, 8, 9, 13</td>
+                </tr>
+                <tr>
+                  <td class="py-3"><strong>Nurturing</strong></td>
+                  <td class="py-3">Care, Compassion</td>
+                  <td class="py-3">1, 2, 3, 4, 5</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Concert Section -->
+<!-- <section class="concert-section py-5 text-white text-center">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <h2 class="concert-title display-4 mb-4">The HUMAN CONCERT</h2>
+        <p class="h4 mb-3">🎶 Catch the Vibe, Join the Tribe!</p>
+        <p class="h4 mb-3">🎤 Live The HUMAN Concert</p>
+        <p class="lead mb-4">Listen. Jam. Lead the Change.</p>
+        <p class="fst-italic">Concludes with The HUMAN Concert</p>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+<!-- Recent Event Gallery Section -->
+<section class="py-5">
+  <div class="container">
+    <h2 class="section-title text-center mb-5">Recent Event Highlights</h2>
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="event-image-container card shadow-sm mb-4">
+          <img src="{% static 'production/human/human.jpeg' %}" alt="HUMAN Workshop Recent Event" class="event-image card-img">
+          <div class="event-overlay p-3">
+            <p class="mb-0 fw-semibold text-center">Recent HUMAN Workshop - Transforming Lives Through Leadership</p>
+          </div>
+        </div>
+        
+        <div class="text-center">
+          <h3 class="h5 text-primary mb-3">Download Resources</h3>
+          <a href="{% static 'production/human/The HUMAN .pdf' %}" class="download-btn btn btn-lg px-4 py-2" target="_blank">
+            📄 Download Workshop PDF
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <h2 class="section-title text-center mb-5">ARE YOU INTERESTED IN HOSTING US AT YOUR SCHOOL OR COLLEGE?</h2>
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="contact-card card shadow-sm text-center p-4 mb-4">
+          <div class="card-body">
+            <p class="mb-3">
+              📧 Contact us at: 
+              <a href="mailto:productions@letusdream.org" class="text-primary text-decoration-none fw-semibold">productions@letusdream.org</a>
+            </p>
+            <p class="mb-0">
+              📞 Contact Number: Ms. Suganya Jeba - 
+              <a href="tel:+919003287643" class="text-primary text-decoration-none fw-semibold">+91 90032 87643</a>
+            </p>
+          </div>
+        </div>
+        <div class="text-center">
+          <p class="h5 text-primary fw-semibold mb-0">
+            Let's build a conscious, creative future together.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
+
+{% block extraScripts %}
+<script>
+// Intersection Observer for smooth animations
+document.addEventListener('DOMContentLoaded', function() {
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  };
+  
+  const observer = new IntersectionObserver(function(entries) {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, observerOptions);
+  
+  // Observe elements for animation
+  document.querySelectorAll('.session-card, .contact-card, .sdg-table, .event-image-container').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(30px)';
+    el.style.transition = 'opacity 0.8s ease-out, transform 0.8s ease-out';
+    observer.observe(el);
+  });
+});
+</script>
+{% endblock %}

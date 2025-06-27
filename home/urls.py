@@ -20,6 +20,7 @@ urlpatterns = [
     path('photo-gallery/', photoGallery, name="photo-gallery"),
     path('youtube-media/', youtubeMedia, name="youtube-media"),
     path('dreams/<str:drm>', dreams, name='dreams'),
+    path('human', human, name='human'),
     path('locations/<str:loc>', locations, name='locations'),
     path('registration_user', registration_user, name='registration_user'),
     path('yclpCourse', yclpCourse, name='yclp-course'),
