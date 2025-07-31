@@ -311,3 +311,6 @@ def news_letter_html(request,month,year):
 
 def human(request):
     return render(request, 'productions/human.html')
+
+def annual_report(request):
+    return render(request, 'newsletters/annual_report.html')

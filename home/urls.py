@@ -57,4 +57,8 @@ urlpatterns = [
     
     path('newsletters/<str:month>/<str:year>',news_letter_html,name='newsletter-page'),
 
+    # REPORTS URLS
+    path('report/annual-report', annual_report, name='annual-report'),
+    path('report', annual_report, name='annual-report'),
+
 ]
