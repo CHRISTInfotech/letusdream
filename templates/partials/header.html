@@ -14,9 +14,12 @@
         </button>
 
         <div class="collapse navbar-collapse justify-content-around" id="navbarSupportedContent">
+            <a href="{% url 'main' %}" class="d-none d-md-block ">
+                <img src="{% static 'logo/logo.png' %}" class="" alt="LET US DREAM" height="100px">
+            </a>
             <ul class="navbar-nav">
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle text-white" data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" data-bs-auto-close="outside"
                        href="#">About Us</a>
                     <ul class="dropdown-menu shadow">
                         <li><a href="{% url 'about-us' %}" class="dropdown-item">Overview</a></li>
@@ -37,32 +40,7 @@
                         </li>
                     </ul>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle text-white" data-bs-toggle="dropdown" data-bs-auto-close="outside"
-                       href="#">Clubs</a>
-                    <ul class="dropdown-menu shadow">
-                        <li>
-                            <a href="{% url 'club-overview' %}" class="dropdown-item">Overview</a>
-                        </li>
-                        <li>
-                            <a href="{% url 'conversation-club' %}" class="dropdown-item">Conversation Club</a>
-                        </li>
-                        <li>
-                            <a href="{% url 'professional-club' %}" class="dropdown-item">Professional Club</a>
-                        </li>
-                        <li>
-                            <a href="{% url 'youthleadership-club' %}" class="dropdown-item">
-                                Global Youth Leardership Network
-                            </a>
-                        </li>
-                        <li>
-                            <a href="{% url 'community-club' %}" class="dropdown-item">Community Hubs</a>
-                        </li>
-                        <li>
-                            <a href="{% url 'growandglow-club' %}" class="dropdown-item"> Grow & Glow Club</a>
-                        </li>
-                    </ul>
-                </li>
+                
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle text-white" data-bs-toggle="dropdown" data-bs-auto-close="outside"
                        href="#">
@@ -94,17 +72,39 @@
                         </li>
                     </ul>
                 </li>
-            </ul>
-            <a href="{% url 'main' %}" class="d-none d-md-block background">
-                <img src="{% static 'logo/logo.png' %}" class="" alt="LET US DREAM" height="100px">
-            </a>
-            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white" data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                       href="#">Clubs</a>
+                    <ul class="dropdown-menu shadow">
+                        <li>
+                            <a href="{% url 'club-overview' %}" class="dropdown-item">Overview</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'conversation-club' %}" class="dropdown-item">Conversation Club</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'professional-club' %}" class="dropdown-item">Professional Club</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'youthleadership-club' %}" class="dropdown-item">
+                                Global Youth Leardership Network
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{% url 'community-club' %}" class="dropdown-item">Community Hubs</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'growandglow-club' %}" class="dropdown-item"> Grow & Glow Club</a>
+                        </li>
+                    </ul>
+                </li>
+            
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle text-white" data-bs-toggle="dropdown" data-bs-auto-close="outside"
                        href="#">Productions</a>
                     <ul class="dropdown-menu shadow">
                         <li><a href="{% url 'dreams' 'band' %}" class="dropdown-item">DREAMS Band</a></li>
-                        <li><a href="{% url 'human' %}" class="dropdown-item">Human</a></li>
+                        <li><a href="{% url 'human' %}" class="dropdown-item">HUMAN</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">

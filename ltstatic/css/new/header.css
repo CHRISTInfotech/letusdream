@@ -4,7 +4,7 @@
 
 /* Header Background & Text */
 header {
-  background-color: var(--primary-blue);
+  background-color: var(--light-bg);
   color: var(--white-text);
 }
 
@@ -69,18 +69,17 @@ header {
 
 /* Override base.css navbar background */
 .navbar {
-  background: var(--primary-blue) !important;
+  background: var(--white-bg) !important;
 }
 
 /* Ensure navbar links remain white */
 .navbar-nav .nav-link {
-  color: var(--white-text) !important;
+  color: var(--primary-blue) !important;
 }
 
 .navbar-nav .nav-link:hover {
-  color: rgba(255, 255, 255, 0.8) !important;
+  color: #4facfe !important;
 }
-
 /* ========================================
    Footer Overrides & Page‐Specific Styles
    ======================================== */
