@@ -34,14 +34,14 @@
     <!-- Open Graph -->
     <meta property="og:type"        content="website">
     <meta property="og:url"         content="{% block og_url %}{{ request.build_absolute_uri }}{% endblock %}">
-    <meta property="og:title"       content="Let Us Dream | {{ page_title|default:'' }}">
+    <meta property="og:title"       content="Let Us Dream">
     <meta property="og:description" content="{% block og_description %}Let Us Dream – Your gateway to innovative solutions{% endblock %}">
     <meta property="og:image"       content="{% block og_image %}{% static 'logo/og-image.png' %}{% endblock %}">
 
     <!-- Twitter -->
     <meta property="twitter:card"        content="summary_large_image">
     <meta property="twitter:url"         content="{% block twitter_url %}{{ request.build_absolute_uri }}{% endblock %}">
-    <meta property="twitter:title"       content="Let Us Dream | {{ title|default:'' }}">
+    <meta property="twitter:title"       content="Let Us Dream">
     <meta property="twitter:description" content="{% block twitter_description %}Let Us Dream – Your gateway to innovative solutions{% endblock %}">
     <meta property="twitter:image"       content="{% block twitter_image %}{% static 'logo/og-image.png' %}{% endblock %}">
 
@@ -49,7 +49,7 @@
     <link rel="apple-touch-icon" href="{% static 'logo/apple-touch-icon.png' %}">
 
     {# Only a single block named “title” from now on #}
-    <title>Let Us Dream | {{ title|default:'' }}</title>
+    <title>Let Us Dream | {% block title %}{% endblock title%}</title>
 
     {% block links %}
     {% endblock links %}
