@@ -2,491 +2,904 @@
 {% load static %}
 
 {% block title %}
-Annual Conferences
+Annual Conferences - Let Us Dream
 {% endblock %}
 
-
 {% block extraStyles %}
-<link rel="stylesheet" href="{% static 'css/annualConference.css' %}" type="text/css">
-<!-- <link rel="stylesheet" href="{% static 'css/louisiana-tech-university.css' %}" type="text/css"> -->
-<link rel="stylesheet" href="{% static 'css/media.css' %}" type="text/css">
-{% endblock extraStyles %}
+<style>
+    .timeline-item {
+        position: relative;
+        padding-left: 2rem;
+        border-left: 3px solid var(--secondary-green);
+        margin-bottom: 2rem;
+    }
 
-{% block links %}
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
-{% endblock links %}
-\
+    .timeline-item::before {
+        content: '';
+        position: absolute;
+        left: -8px;
+        top: 0;
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        background: var(--secondary-green);
+    }
+
+    .feature-icon {
+        width: 50px;
+        height: 50px;
+        flex-shrink: 0;
+        /* Prevents the icon from shrinking */
+        border-radius: var(--border-radius-small);
+        /* Uses your variable from base.css */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+        color: var(--white-text);
+    }
+
+    /* Optional: Add the other gradient backgrounds as helper classes */
+    .bg-gradient-info {
+        background: linear-gradient(135deg, #17a2b8, #138496);
+    }
+
+    .bg-gradient-success {
+        background: linear-gradient(135deg, #28a745, #20873a);
+    }
+
+    .bg-gradient-danger {
+        background: linear-gradient(135deg, #dc3545, #c82333);
+    }
+
+    .location-card {
+        border: 2px solid transparent;
+        transition: var(--transition-normal);
+        cursor: pointer;
+    }
+
+    .location-card:hover {
+        border-color: var(--primary-blue);
+        transform: translateY(-3px);
+    }
+
+
+    .conference-evolution {
+        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        border-radius: var(--border-radius);
+        padding: 3rem;
+    }
+
+    @media (max-width: 768px) {
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            font-size: 1.5rem;
+        }
+
+
+    }
+</style>
+{% endblock extraStyles %}
 
 {% block content %}
 
-<nav aria-label="breadcrumb animated slideInDown" class="cus-breadcrumb breadcrumb-style"
-    style="background-color: rgba(225, 225, 225, 0.38); padding: 10px;">
-    <ol class="breadcrumb container mb-0">
-        <li class="breadcrumb-item">
-            <a class="text-black text-decoration-none" href="{% url 'main' %}">
-                Home
-            </a>
-        </li>
-        <li class="breadcrumb-item">
-            <a class="text-black text-decoration-none" href="{% url 'main' %}Conferences">
-                Conferences
-            </a>
-        </li>
-        <li class="breadcrumb-item  active" aria-current="page">
-            Annual Conferences
-        </li>
-    </ol>
-</nav>
+<!-- Hero Section -->
+<section class="bg-light-gray py-5">
+    <div class="container py-5">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-6 text-center text-lg-start">
+                <h1 class="display-4 fw-bold mb-4 font-primary">Annual Community Conferences</h1>
+                <p class="lead mb-4">Empowering local communities through dialogue, innovation, and collaborative
+                    action. Join the movement that's creating lasting change across the globe.</p>
 
-<div class="container-fluid">
-    <div class="image-container">
-        <!-- <img src="{% static 'Aboutus/aboutUs/Conference_overview.png' %}" class="card-img-top p-3"
-            alt="Conference Overview"> -->
-        <!-- <div class="centered-text">Your Text Here</div> -->
-    </div>
-</div>
-
-<section class="container my-5 py-4">
-    <div class="row justify-content-center">
-        <div class="col-lg-12 text-center">
-            <h1 class="display-3 fw-bold mb-4" style="color: #005b96;">Home Page</h1>
-            <div class="text-justify lh-lg" style=" font-size: 20px;">
-          
-                <p>
-                    The <b>Let Us Dream (LUD) Annual Community Conferences</b> are powerful local gatherings
-                    held each year across India, Germany, South Africa, and beyond. These conferences
-                    celebrate the human spirit—our shared capacity to care, to lead, and to serve.
-                </p>
-                <p>
-                    Each Annual Conference offers a space for dialogue, learning, inspiration, and action—united by a
-                    common mission to empower communities through compassion,
-                    collaboration, and service
-                </p>
-                <p>
-                    Whether you’re a student stepping into service,
-                    a teacher sharing wisdom, a social worker
-                    leading change, or a volunteer looking to give back—<b>this is your space.</b>
-                </p>
-                <p class="mx-5">Ordinary people. Extraordinary change.</p>
             </div>
-        </div>
-        <button class="text-light mb-4"
-            style="background: linear-gradient(90deg, #5a91c5, #002c5e); padding: 10px; width: 170px; border-radius: 12px;">
-            Register Here
-        </button>
-    </div>
-</section>
-
-<section class="container-fluid bg-light py-5">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-6 order-lg-1 order-2 mt-lg-0 mt-4">
-                <h2 class="display-5 fw-bold text-uppercase mb-4" style="color: #85bd76;">Our Story</h2>
-                <div class="pe-lg-5">
-                    <p class="text-secondary-blue lh-lg mb-4">
-                        The Let Us Dream movement began in Monroe, Louisiana
-                        in 2017 with a simple idea: <i>that people who dream for
-                            others create real,</i> lasting change. What started as a
-                        modest university gathering soon grew into an
-                        international wave of community empowerment.
-                    </p>
-                    <p class="text-secondary-blue lh-lg mb-4">
-                        While our <b>Triennial International Conferences</b> unite
-                        chapters globally every three years, the <b>Annual
-                            Community Conferences</b> happen locally, every year on
-                        the ground, in your city, in your community.
-                    </p>
-                    <p class="text-secondary-blue lh-lg mb-4">
-                        Today, these annual conferences are hosted in countries
-                        like <b>India, US, South Africa,</b> adapting to local needs while
-                        staying true to a shared global vision.
-                    </p>
-                    <p class="text-secondary-blue lh-lg mb-4">
-                        Volunteers from the local community including business owners involved in voluntary
-                        community developmental projects, non-profit organizations, philanthropists, social
-                        workers, educators or educational administrators, retired personnel, students, or anyone
-                        interested in contributing to their community development can be a part of the
-                        conference and engage in fruitful dialogues with visionaries through the conference.
-                    </p>
-                </div>
-                <div class="text-center text-lg-start">
-                    <button class="text-light mb-4"
-                        style="background: linear-gradient(90deg, #5a91c5, #002c5e);padding: 12px; width: 120px; border-radius: 12px;">
-                        Read More
-                    </button>
-                </div>
-            </div>
-            <div class="col-lg-6 order-lg-2 order-1">
-                <img src="{% static 'Aboutus/aboutUs/Conference_overview2.png' %}" class="img-fluid rounded shadow"
-                    alt="Conference Overview">
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- <section class="container-fluid py-5">
-    <div class="container">
-        <div class="row align-items-center">
-
-            <div class="col-lg-6 order-lg-2 order-1">
-                <img src="{% static 'Aboutus/aboutUs/Conference_overview2.png' %}" class="img-fluid rounded shadow"
-                    alt="Conference Overview">
-            </div>
-
-            <div class="col-lg-6 order-lg-1 order-2 mt-lg-0 mt-4">
-                <h2 class="display-5 fw-bold text-uppercase mb-4" style="color: #85bd76;">Vision</h2>
-                <div class="pe-lg-5" style="color: #5a91c5;">
-                    <p class="text-secondary-blue lh-lg mb-4">
-                        Empowering local communities for
-                        sustainable global impact and improvement.
-                    </p>
-
-                    <h2 class="display-5 fw-bold text-uppercase mb-4" style="color: #85bd76;">Goal</h2>
-
-                    <p class="text-secondary-blue lh-lg mb-4">
-                        Create a forum to share community efforts and
-                        innovations
-                    </p>
-                    <p class="text-secondary-blue lh-lg mb-4">
-                        Promote volunteerism and youth engagement
-                    </p>
-                    <p class="text-secondary-blue lh-lg mb-4">
-                        Facilitate connections between researchers
-                        and practitioners
-                    </p>
-                    <p class="text-secondary-blue lh-lg mb-4">
-                        Strengthen local leadership and intergenerational
-                        collaboration
-                    </p>
-                    <p class="text-secondary-blue lh-lg mb-4">
-                        Build a network of changemakers committed
-                        to equity and service
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section> -->
-<section class="container-fluid py-5">
-    <div class="container">
-        <div class="row align-items-center">
-
-            <div class="col-lg-6 order-lg-1 order-2">
-                <img src="{% static 'Aboutus/aboutUs/Conference_overview2.png' %}" class="img-fluid rounded shadow"
-                    alt="Conference Overview">
-            </div>
-
-            <div class="col-lg-6 order-lg-2 order-1 mt-lg-0 mt-4">
-
-                <h2 class="display-5 fw-bold text-uppercase mb-4" style="color: #85bd76;">Vision</h2>
-
-                <div class="pe-lg-5" style="color: #5a91c5;">
-                    <p class="text-secondary-blue lh-lg mb-4">
-                        Our Vision is to Empowered local communities for sustainable impact, improvement,
-                        Global Harmony (and Holistic Success).
-                    </p>
-
-                    <h2 class="display-5 fw-bold text-uppercase mb-4" style="color: #85bd76;">Goal</h2>
-                    <ul>
-                        <li>
-                            <p class="text-secondary-blue lh-lg mb-4">
-                                Create a forum to <b>share community efforts</b> and
-                                innovations
-                            </p>
-                        </li>
-                    </ul>
-
-                    <ul>
-                        <li>
-                            <p class="text-secondary-blue lh-lg mb-4">
-                                Promote <b>volunteerism and youth engagement</b>
-                            </p>
-                        </li>
-                    </ul>
-
-                    <ul>
-                        <li>
-                            <p class="text-secondary-blue lh-lg mb-4">
-                                Facilitate connections between <b>researchers
-                                    and practitioners</b>
-                            </p>
-                        </li>
-                    </ul>
-
-                    <ul>
-                        <li>
-                            <p class="text-secondary-blue lh-lg mb-4">
-                                Strengthen <b>local leadership</b> and intergenerational
-                                collaboration
-                            </p>
-                        </li>
-                    </ul>
-
-                    <ul>
-                        <li>
-                            <p class="text-secondary-blue lh-lg mb-4">
-                                Build a network of changemakers committed
-                                to equity and service
-                            </p>
-                        </li>
-                    </ul>
+            <div class="col-lg-6 text-center">
+                <div class="position-relative">
+                    <img src="{% static 'Aboutus/aboutUs/Conference_overview2.png' %}"
+                        class="img-fluid rounded-custom shadow-custom" alt="Conference Overview">
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<div class="container my-5">
-    <h2 class="display-5 text-center fw-bold mb-5" style="color: #005b96;">Host Locations</h2>
-    <div class="row row-cols-1 row-cols-md-3 g-4">
 
-        <div class="col">
-            <div class="card h-100 shadow-sm">
-                <div class="card-body text-center">
-                    <h5 class="card-title">India - Bangalore</h5>
-                    <button class="btn btn-primary mt-2" data-bs-toggle="modal" data-bs-target="#modalBangalore">View
-                        Details</button>
+
+
+<!-- Story Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-6">
+                <div class="pe-lg-4">
+                    <h2 class="display-5 fw-bold text-primary-blue mb-4 font-primary">Our Story</h2>
+                    <div class="timeline-item">
+                        <h5 class="text-primary-blue fw-bold">2017 - The Beginning</h5>
+                        <p class="text-medium lh-lg">The Let Us Dream movement began in Monroe, Louisiana with a simple
+                            idea: <em>that people who dream for others create real, lasting change.</em></p>
+                    </div>
+                    <div class="timeline-item">
+                        <h5 class="text-primary-blue fw-bold">Growth & Expansion</h5>
+                        <p class="text-medium lh-lg">What started as a modest university gathering soon grew into an
+                            international wave of community empowerment.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h5 class="text-primary-blue fw-bold">Dual Conference Structure</h5>
+                        <p class="text-medium lh-lg">While our <strong>Triennial International Conferences</strong>
+                            unite chapters globally every three years, the <strong>Annual Community Conferences</strong>
+                            happen locally, every year on the ground, in your city, in your community.</p>
+                    </div>
+                    <div class="timeline-item mb-0">
+                        <h5 class="text-primary-blue fw-bold">Global Impact Today</h5>
+                        <p class="text-medium lh-lg">Today, these annual conferences are hosted in countries like
+                            <strong>India, US, South Africa,</strong> adapting to local needs while staying true to a
+                            shared global vision.</p>
+                    </div>
+                    <div class="mt-4">
+                        <button class="btn btn-primary hover-lift">
+                            <i class="fas fa-book-open me-2"></i>Read More
+                        </button>
+                    </div>
                 </div>
             </div>
-        </div>
-
-        <div class="col">
-            <div class="card h-100 shadow-sm">
-                <div class="card-body text-center">
-                    <h5 class="card-title">India - Trivandrum</h5>
-                    <button class="btn btn-primary mt-2" data-bs-toggle="modal" data-bs-target="#modalTrivandrum">View
-                        Details</button>
-                </div>
+            <div class="col-lg-6">
+                <img src="{% static 'Aboutus/aboutUs/Conference_overview2.png' %}"
+                    class="img-fluid rounded-custom shadow-custom" alt="Our Journey">
             </div>
         </div>
-
-        <div class="col">
-            <div class="card h-100 shadow-sm">
-                <div class="card-body text-center">
-                    <h5 class="card-title">India - Pune</h5>
-                    <button class="btn btn-primary mt-2" data-bs-toggle="modal" data-bs-target="#modalBangalore">View
-                        Details</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="col">
-            <div class="card h-100 shadow-sm">
-                <div class="card-body text-center">
-                    <h5 class="card-title">India - Hyderabad</h5>
-                    <button class="btn btn-primary mt-2" data-bs-toggle="modal" data-bs-target="#modalBangalore">View
-                        Details</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="col">
-            <div class="card h-100 shadow-sm">
-                <div class="card-body text-center">
-                    <h5 class="card-title">India - Chennai</h5>
-                    <button class="btn btn-primary mt-2" data-bs-toggle="modal" data-bs-target="#modalBangalore">View
-                        Details</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="col">
-            <div class="card h-100 shadow-sm">
-                <div class="card-body text-center">
-                    <h5 class="card-title">India - Kolkata</h5>
-                    <button class="btn btn-primary mt-2" data-bs-toggle="modal" data-bs-target="#modalBangalore">View
-                        Details</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="col">
-            <div class="card h-100 shadow-sm">
-                <div class="card-body text-center">
-                    <h5 class="card-title">India - Delhi</h5>
-                    <button class="btn btn-primary mt-2" data-bs-toggle="modal" data-bs-target="#modalBangalore">View
-                        Details</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="col">
-            <div class="card h-100 shadow-sm">
-                <div class="card-body text-center">
-                    <h5 class="card-title">USA - New York</h5>
-                    <button class="btn btn-primary mt-2" data-bs-toggle="modal" data-bs-target="#modalBangalore">View
-                        Details</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="col">
-            <div class="card h-100 shadow-sm">
-                <div class="card-body text-center">
-                    <h5 class="card-title">USA - Louisiana</h5>
-                    <button class="btn btn-primary mt-2" data-bs-toggle="modal" data-bs-target="#modalLouisiana">View
-                        Details</button>
-                </div>
-            </div>
-        </div>
-
     </div>
-</div>
+</section>
 
+<!-- Vision & Goals Section -->
+<section class="py-5 bg-light-gray">
+    <div class="container">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-6 order-lg-2">
+                <img src="{% static 'Aboutus/aboutUs/Conference_overview2.png' %}"
+                    class="img-fluid rounded-custom shadow-custom" alt="Vision and Goals">
+            </div>
+            <div class="col-lg-6 order-lg-1">
+                <div class="pe-lg-4">
+                    <h2 class="display-5 fw-bold mb-4">Our Vision</h2>
+                    <p class="text-medium fs-5 mb-5 lh-lg">Empowered local communities for sustainable impact,
+                        improvement, Global Harmony and Holistic Success.</p>
+
+                    <h3 class=" fw-bold mb-4 font-primary">Our Goals</h3>
+                    <div class="row g-4">
+                        <div class="col-lg-6 col-md-6 mb-4">
+                            <div class="d-flex align-items-start">
+                                <div class="feature-icon bg-gradient-primary me-3">
+                                    <i class="fas fa-share-alt"></i>
+                                </div>
+                                <div>
+                                    <h6 class="text-primary-blue mb-2">Community Forum</h6>
+                                    <p class="text-medium mb-0">Create a forum to <strong>share community
+                                            efforts</strong> and innovations</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-md-6 mb-4">
+                            <div class="d-flex align-items-start">
+                                <div class="feature-icon bg-gradient-secondary me-3">
+                                    <i class="fas fa-hands-helping"></i>
+                                </div>
+                                <div>
+                                    <h6 class="text-primary-blue mb-2">Youth Engagement</h6>
+                                    <p class="text-medium mb-0">Promote <strong>volunteerism and youth
+                                            engagement</strong></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-md-6 mb-4">
+                            <div class="d-flex align-items-start">
+                                <div class="feature-icon me-3"
+                                    style="background: linear-gradient(135deg, #17a2b8, #138496);">
+                                    <i class="fas fa-network-wired"></i>
+                                </div>
+                                <div>
+                                    <h6 class="text-primary-blue mb-2">Research & Practice</h6>
+                                    <p class="text-medium mb-0">Facilitate connections between <strong>researchers and
+                                            practitioners</strong></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-md-6 mb-4">
+                            <div class="d-flex align-items-start">
+                                <div class="feature-icon me-3"
+                                    style="background: linear-gradient(135deg, #28a745, #20873a);">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <div>
+                                    <h6 class="text-primary-blue mb-2">Leadership Development</h6>
+                                    <p class="text-medium mb-0">Strengthen <strong>local leadership</strong> and
+                                        intergenerational collaboration</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-md-6 mb-4">
+                            <div class="d-flex align-items-start">
+                                <div class="feature-icon me-3"
+                                    style="background: linear-gradient(135deg, #dc3545, #c82333);">
+                                    <i class="fas fa-heart"></i>
+                                </div>
+                                <div>
+                                    <h6 class="text-primary-blue mb-2">Changemaker Network</h6>
+                                    <p class="text-medium mb-0">Build a network of changemakers committed to equity and
+                                        service</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Host Locations Section -->
+<section class="py-5">
+    <div class="container">
+        <h2 class="display-5 text-center fw-bold mb-5 text-primary-blue font-primary">Host Locations</h2>
+        <div class="row g-4">
+            <!-- India Cities -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card location-card h-100 hover-lift">
+                    <div class="card-body text-center p-4">
+                        <div class="feature-icon bg-gradient-primary mb-3">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h5 class="card-title text-primary-blue">India - Bangalore</h5>
+                        <p class="text-medium mb-3">Tech Innovation Hub</p>
+                        <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modalBangalore">
+                            <i class="fas fa-eye me-2"></i>View Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="card location-card h-100 hover-lift">
+                    <div class="card-body text-center p-4">
+                        <div class="feature-icon bg-gradient-secondary mb-3">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h5 class="card-title text-primary-blue">India - Trivandrum</h5>
+                        <p class="text-medium mb-3">Cultural Heritage Center</p>
+                        <button class="btn btn-outline-primary" data-bs-toggle="modal"
+                            data-bs-target="#modalTrivandrum">
+                            <i class="fas fa-eye me-2"></i>View Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="card location-card h-100 hover-lift">
+                    <div class="card-body text-center p-4">
+                        <div class="feature-icon mb-3" style="background: linear-gradient(135deg, #17a2b8, #138496);">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h5 class="card-title text-primary-blue">India - Pune</h5>
+                        <p class="text-medium mb-3">Educational Hub</p>
+                        <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modalPune">
+                            <i class="fas fa-eye me-2"></i>View Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="card location-card h-100 hover-lift">
+                    <div class="card-body text-center p-4">
+                        <div class="feature-icon mb-3" style="background: linear-gradient(135deg, #28a745, #20873a);">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h5 class="card-title text-primary-blue">India - Hyderabad</h5>
+                        <p class="text-medium mb-3">Cyberabad</p>
+                        <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modalHyderabad">
+                            <i class="fas fa-eye me-2"></i>View Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="card location-card h-100 hover-lift">
+                    <div class="card-body text-center p-4">
+                        <div class="feature-icon mb-3" style="background: linear-gradient(135deg, #ffc107, #e0a800);">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h5 class="card-title text-primary-blue">India - Chennai</h5>
+                        <p class="text-medium mb-3">Detroit of India</p>
+                        <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modalChennai">
+                            <i class="fas fa-eye me-2"></i>View Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="card location-card h-100 hover-lift">
+                    <div class="card-body text-center p-4">
+                        <div class="feature-icon mb-3" style="background: linear-gradient(135deg, #dc3545, #c82333);">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h5 class="card-title text-primary-blue">India - Kolkata</h5>
+                        <p class="text-medium mb-3">City of Joy</p>
+                        <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modalKolkata">
+                            <i class="fas fa-eye me-2"></i>View Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="card location-card h-100 hover-lift">
+                    <div class="card-body text-center p-4">
+                        <div class="feature-icon mb-3" style="background: linear-gradient(135deg, #6f42c1, #5a3399);">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h5 class="card-title text-primary-blue">India - Delhi</h5>
+                        <p class="text-medium mb-3">National Capital</p>
+                        <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modalDelhi">
+                            <i class="fas fa-eye me-2"></i>View Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- USA Cities -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card location-card h-100 hover-lift">
+                    <div class="card-body text-center p-4">
+                        <div class="feature-icon mb-3" style="background: linear-gradient(135deg, #fd7e14, #e85d04);">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h5 class="card-title text-primary-blue">USA - New York</h5>
+                        <p class="text-medium mb-3">The Big Apple</p>
+                        <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modalNewYork">
+                            <i class="fas fa-eye me-2"></i>View Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="card location-card h-100 hover-lift">
+                    <div class="card-body text-center p-4">
+                        <div class="feature-icon mb-3" style="background: linear-gradient(135deg, #20c997, #17a085);">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h5 class="card-title text-primary-blue">USA - Louisiana</h5>
+                        <p class="text-medium mb-3">Where It All Began</p>
+                        <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modalLouisiana">
+                            <i class="fas fa-eye me-2"></i>View Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Evolution Section -->
+<section class="py-5 bg-light-gray">
+    <div class="container">
+        <h2 class="display-5 text-center fw-bold mb-5 text-primary-blue font-primary">Our Evolution</h2>
+        <div class="conference-evolution text-center">
+            <img src="{% static 'Aboutus/aboutUs/Annual_conference2.png' %}"
+                class="img-fluid rounded-custom shadow-custom" alt="Conference Evolution">
+        </div>
+    </div>
+</section>
+
+<!-- What to Expect Section -->
+<section class="py-5 text-white">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="display-5 fw-bold font-primary">What To Expect At</h2>
+            <h3 class="display-6 fw-bold font-primary">The Community Conference</h3>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6">
+                <div class="card h-100 border-0 shadow-custom hover-lift">
+                    <div class="card-body p-4 text-center">
+                        <div class="feature-icon bg-gradient-primary mb-4">
+                            <i class="fas fa-microphone-alt"></i>
+                        </div>
+                        <h4 class="h5 mb-3 text-primary-blue">Keynotes & Lived Stories</h4>
+                        <p class="text-medium mb-0">
+                            Listening to speakers and changemakers share powerful narratives of resilience and
+                            service from their own communities.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="card h-100 border-0 shadow-custom hover-lift">
+                    <div class="card-body p-4 text-center">
+                        <div class="feature-icon bg-gradient-secondary mb-4">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h4 class="h5 mb-3 text-primary-blue">Panel Discussions & Focused Dialogues</h4>
+                        <p class="text-medium mb-0">
+                            Dive into pressing issues in Education, Health, and Social Service with interactive
+                            sessions led by field experts and local voices.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="card h-100 border-0 shadow-custom hover-lift">
+                    <div class="card-body p-4 text-center">
+                        <div class="feature-icon mb-4" style="background: linear-gradient(135deg, #ffc107, #e0a800);">
+                            <i class="fas fa-hands-helping"></i>
+                        </div>
+                        <h4 class="h5 mb-3 text-primary-blue">Workshops & Group Activities</h4>
+                        <p class="text-medium mb-0">
+                            Participate in hands-on, workshop-style sessions designed for learning, reflection, and
+                            idea generation.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="card h-100 border-0 shadow-custom hover-lift">
+                    <div class="card-body p-4 text-center">
+                        <div class="feature-icon mb-4" style="background: linear-gradient(135deg, #dc3545, #c82333);">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <h4 class="h5 mb-3 text-primary-blue">Celebrating Changemakers</h4>
+                        <p class="text-medium mb-0">
+                            Honour local heroes making a real difference in their communities through creativity,
+                            courage, and compassion.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="card h-100 border-0 shadow-custom hover-lift">
+                    <div class="card-body p-4 text-center">
+                        <div class="feature-icon mb-4" style="background: linear-gradient(135deg, #17a2b8, #138496);">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                        <h4 class="h5 mb-3 text-primary-blue">Networking & Collaborations</h4>
+                        <p class="text-medium mb-0">
+                            Build relationships with educators, students, social workers, and organizations
+                            committed to service and improvement.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="card h-100 border-0 shadow-custom hover-lift">
+                    <div class="card-body p-4 text-center">
+                        <div class="feature-icon mb-4" style="background: linear-gradient(135deg, #6f42c1, #5a3399);">
+                            <i class="fas fa-store"></i>
+                        </div>
+                        <h4 class="h5 mb-3 text-primary-blue">Stalls & Community Projects</h4>
+                        <p class="text-medium mb-0">
+                            Discover innovative community projects and get inspired to take action in your own
+                            neighborhood.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Who Can Participate Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center">
+                <h2 class="display-5 fw-bold mb-4 text-primary-blue font-primary">Who Can Participate?</h2>
+                <p class="text-medium fs-5 lh-lg mb-5">
+                    Volunteers from the local community including business owners involved in voluntary
+                    community developmental projects, non-profit organizations, philanthropists, social
+                    workers, educators or educational administrators, retired personnel, students, or anyone
+                    interested in contributing to their community development can be a part of the
+                    conference and engage in fruitful dialogues with visionaries.
+                </p>
+                <button class="btn btn-primary btn-lg hover-lift">
+                    <i class="fas fa-user-plus me-2"></i>Register Now
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Modals -->
+<!-- Bangalore Modal -->
 <div class="modal fade" id="modalBangalore" tabindex="-1" aria-labelledby="bangaloreLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="bangaloreLabel">Bangalore - Host Details</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        <div class="modal-content rounded-custom">
+            <div class="modal-header bg-gradient-primary text-white">
+                <h5 class="modal-title font-primary" id="bangaloreLabel">
+                    <i class="fas fa-map-marker-alt me-2"></i>Bangalore - Host Details
+                </h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
             </div>
-            <div class="modal-body">
-                <p><strong>Date:</strong> January 15, 2025</p>
-                <p><strong>Theme:</strong> Innovation in Tech Education</p>
-                <p><strong>Key Speakers:</strong> Dr. A Kumar, Ms. Sreeja Rao</p>
-                <p><strong>Poster:</strong></p>
-                <img src="path-to-bangalore-poster.jpg" alt="Bangalore Poster" class="img-fluid rounded border">
+            <div class="modal-body p-4">
+                <div class="row g-3 mb-4">
+                    <div class="col-md-6">
+                        <strong class="text-primary-blue">Date:</strong>
+                        <p class="mb-0">January 15, 2025</p>
+                    </div>
+                    <div class="col-md-6">
+                        <strong class="text-primary-blue">Theme:</strong>
+                        <p class="mb-0">Innovation in Tech Education</p>
+                    </div>
+                </div>
+                <div class="mb-4">
+                    <strong class="text-primary-blue">Key Speakers:</strong>
+                    <p class="mb-0">Dr. A Kumar, Ms. Sreeja Rao</p>
+                </div>
+                <div class="text-center">
+                    <strong class="text-primary-blue d-block mb-3">Conference Poster:</strong>
+                    <img src="{% static 'Aboutus/aboutUs/Conference_overview2.png' %}" alt="Bangalore Conference Poster"
+                        class="img-fluid rounded-custom shadow">
+                </div>
             </div>
         </div>
     </div>
 </div>
 
+<!-- Trivandrum Modal -->
 <div class="modal fade" id="modalTrivandrum" tabindex="-1" aria-labelledby="trivandrumLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="trivandrumLabel">Trivandrum - Host Details</h5>
+        <div class="modal-content rounded-custom">
+            <div class="modal-header bg-gradient-secondary">
+                <h5 class="modal-title font-primary" id="trivandrumLabel">
+                    <i class="fas fa-map-marker-alt me-2"></i>Trivandrum - Host Details
+                </h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
             </div>
-            <div class="modal-body">
-                <p><strong>Date:</strong> February 10, 2025</p>
-                <p><strong>Theme:</strong> Emerging Trends in AI</p>
-                <p><strong>Key Speakers:</strong> Dr. Priya Menon, Mr. John Paul</p>
-                <p><strong>Poster:</strong></p>
-                <img src="{% static 'Aboutus/aboutUs/Conference_overview2.png' %}" class="img-fluid rounded shadow"
-                    alt="Conference Overview">
+            <div class="modal-body p-4">
+                <div class="row g-3 mb-4">
+                    <div class="col-md-6">
+                        <strong class="text-primary-blue">Date:</strong>
+                        <p class="mb-0">February 10, 2025</p>
+                    </div>
+                    <div class="col-md-6">
+                        <strong class="text-primary-blue">Theme:</strong>
+                        <p class="mb-0">Emerging Trends in AI</p>
+                    </div>
+                </div>
+                <div class="mb-4">
+                    <strong class="text-primary-blue">Key Speakers:</strong>
+                    <p class="mb-0">Dr. Priya Menon, Mr. John Paul</p>
+                </div>
+                <div class="text-center">
+                    <strong class="text-primary-blue d-block mb-3">Conference Poster:</strong>
+                    <img src="{% static 'Aboutus/aboutUs/Conference_overview2.png' %}"
+                        alt="Trivandrum Conference Poster" class="img-fluid rounded-custom shadow">
+                </div>
             </div>
         </div>
     </div>
 </div>
 
-<section class="container py-5">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-12">
-                <h1 class="display-5 fw-bold text-center" style="color: #005b96;">Our Evolution</h1>
-                <img src="{% static 'Aboutus/aboutUs/Annual_conference2.png' %}" class="img-fluid rounded w-100"
-                    alt="Conference Overview">
+
+
+<div class="modal fade" id="modalPune" tabindex="-1" aria-labelledby="puneLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content rounded-custom">
+            <div class="modal-header" style="background: linear-gradient(135deg, #17a2b8, #138496); color: white;">
+                <h5 class="modal-title font-primary" id="puneLabel">
+                    <i class="fas fa-map-marker-alt me-2"></i>Pune - Host Details
+                </h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
             </div>
-        </div>
-    </div>
-</section>
-
-<section class="container-fluid py-5" style="background-color: #05357e;">
-    <div class="container">
-        <div class="row">
-            <h2 class="display-5 mb-4 text-light">What To Expect At</h2>
-            <h2 class="display-5 mb-5 text-light">The Community Conference</h2>
-
-            <div class="row g-4">
-                <div class="col-lg-4 col-md-6">
-                    <div class="card h-100 border-0 shadow-lg">
-                        <div class="card-body p-4 text-center">
-                            <div class="icon-wrapper bg-primary bg-opacity-10 rounded p-3 mb-4 mx-auto w-75">
-                                <i class="fas fa-microphone-alt	fs-3 text-primary"></i>
-                            </div>
-                            <h3 class="h4 mb-3">Keynotes & Lived Stories</h3>
-                            <p class="mb-0">
-                                Listening to speakers and changemakers share powerful narratives of resilience and
-                                service from their own communities.
-                            </p>
-                        </div>
+            <div class="modal-body p-4">
+                <div class="row g-3 mb-4">
+                    <div class="col-md-6">
+                        <strong class="text-primary-blue">Date:</strong>
+                        <p class="mb-0">March 5, 2025</p>
+                    </div>
+                    <div class="col-md-6">
+                        <strong class="text-primary-blue">Theme:</strong>
+                        <p class="mb-0">Educational Innovation</p>
                     </div>
                 </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <div class="card h-100 border-0 shadow-lg">
-                        <div class="card-body p-4 text-center">
-                            <div class="icon-wrapper bg-success bg-opacity-10 rounded  p-3 mb-4 mx-auto w-75">
-                                <i class="fas fa-users fs-3 text-success"></i>
-                            </div>
-                            <h3 class="h4 mb-3">Panel Discussions & Focused Dialogues</h3>
-                            <p class="mb-0">
-                                Dive into pressing issues in Education, Health, and Social Service with interactive
-                                sessions led by field experts and local voices.
-                            </p>
-                        </div>
-                    </div>
+                <div class="mb-4">
+                    <strong class="text-primary-blue">Key Speakers:</strong>
+                    <p class="mb-0">Dr. Rajesh Sharma, Prof. Meera Kulkarni</p>
                 </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <div class="card h-100 border-0 shadow-lg">
-                        <div class="card-body p-4 text-center">
-                            <div class="icon-wrapper bg-warning bg-opacity-10 rounded  p-3 mb-4 mx-auto w-75">
-                                <i class="fas fa-hands-helping fs-3 text-warning"></i>
-                            </div>
-                            <h3 class="h4 mb-3">Workshops & Group Activities</h3>
-                            <p class="mb-0">
-                                Participate in hands-on, workshop-style sessions designed for learning, reflection, and
-                                idea generation.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <div class="card h-100 border-0 shadow-lg">
-                        <div class="card-body p-4 text-center">
-                            <div class="icon-wrapper bg-danger bg-opacity-10 rounded p-3 mb-4 mx-auto w-75">
-                                <i class="fas fa-award fs-3 text-danger"></i>
-                            </div>
-                            <h3 class="h4 mb-3">Celebrating Changemakers</h3>
-                            <p class="mb-0">
-                                Honour local heroes making a real difference in their communities through creativity,
-                                courage, and compassion.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <div class="card h-100 border-0 shadow-lg">
-                        <div class="card-body p-4 text-center">
-                            <div class="icon-wrapper bg-info bg-opacity-10 rounded p-3 mb-4 mx-auto w-75">
-                                <i class="fas fa-network-wired fs-3 text-info"></i>
-                            </div>
-                            <h3 class="h4 mb-3">Networking & Collaborations</h3>
-                            <p class="mb-0">
-                                Build relationships with educators, students, social workers, and organizations
-                                committed to service and improvement.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <div class="card h-100 border-0 shadow-lg">
-                        <div class="card-body p-4 text-center">
-                            <div class="icon-wrapper bg-opacity-10 rounded p-3 mb-4 mx-auto w-75"
-                                style="background-color: #bda0f3">
-                                <i class="fas fa-store fs-3"></i>
-                            </div>
-                            <h3 class="h4 mb-3">Stalls & Community Projects</h3>
-                            <p class="mb-0">
-                                inspired to act.
-                            </p>
-                        </div>
-                    </div>
+                <div class="text-center">
+                    <strong class="text-primary-blue d-block mb-3">Conference Poster:</strong>
+                    <img src="{% static 'Aboutus/aboutUs/Conference_overview2.png' %}" alt="Pune Conference Poster"
+                        class="img-fluid rounded-custom shadow">
                 </div>
             </div>
         </div>
     </div>
-</section>
+</div>
 
-{% endblock %}
+<!-- Hyderabad Modal -->
+<div class="modal fade" id="modalHyderabad" tabindex="-1" aria-labelledby="hyderabadLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content rounded-custom">
+            <div class="modal-header" style="background: linear-gradient(135deg, #28a745, #20873a); color: white;">
+                <h5 class="modal-title font-primary" id="hyderabadLabel">
+                    <i class="fas fa-map-marker-alt me-2"></i>Hyderabad - Host Details
+                </h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body p-4">
+                <div class="row g-3 mb-4">
+                    <div class="col-md-6">
+                        <strong class="text-primary-blue">Date:</strong>
+                        <p class="mb-0">April 12, 2025</p>
+                    </div>
+                    <div class="col-md-6">
+                        <strong class="text-primary-blue">Theme:</strong>
+                        <p class="mb-0">Digital Transformation</p>
+                    </div>
+                </div>
+                <div class="mb-4">
+                    <strong class="text-primary-blue">Key Speakers:</strong>
+                    <p class="mb-0">Dr. Srinivas Reddy, Ms. Kavitha Nair</p>
+                </div>
+                <div class="text-center">
+                    <strong class="text-primary-blue d-block mb-3">Conference Poster:</strong>
+                    <img src="{% static 'Aboutus/aboutUs/Conference_overview2.png' %}" alt="Hyderabad Conference Poster"
+                        class="img-fluid rounded-custom shadow">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Chennai Modal -->
+<div class="modal fade" id="modalChennai" tabindex="-1" aria-labelledby="chennaiLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content rounded-custom">
+            <div class="modal-header" style="background: linear-gradient(135deg, #ffc107, #e0a800); color: black;">
+                <h5 class="modal-title font-primary" id="chennaiLabel">
+                    <i class="fas fa-map-marker-alt me-2"></i>Chennai - Host Details
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body p-4">
+                <div class="row g-3 mb-4">
+                    <div class="col-md-6">
+                        <strong class="text-primary-blue">Date:</strong>
+                        <p class="mb-0">May 8, 2025</p>
+                    </div>
+                    <div class="col-md-6">
+                        <strong class="text-primary-blue">Theme:</strong>
+                        <p class="mb-0">Healthcare Innovation</p>
+                    </div>
+                </div>
+                <div class="mb-4">
+                    <strong class="text-primary-blue">Key Speakers:</strong>
+                    <p class="mb-0">Dr. Ramaswamy, Dr. Lakshmi Prasad</p>
+                </div>
+                <div class="text-center">
+                    <strong class="text-primary-blue d-block mb-3">Conference Poster:</strong>
+                    <img src="{% static 'Aboutus/aboutUs/Conference_overview2.png' %}" alt="Chennai Conference Poster"
+                        class="img-fluid rounded-custom shadow">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Kolkata Modal -->
+<div class="modal fade" id="modalKolkata" tabindex="-1" aria-labelledby="kolkataLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content rounded-custom">
+            <div class="modal-header" style="background: linear-gradient(135deg, #dc3545, #c82333); color: white;">
+                <h5 class="modal-title font-primary" id="kolkataLabel">
+                    <i class="fas fa-map-marker-alt me-2"></i>Kolkata - Host Details
+                </h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body p-4">
+                <div class="row g-3 mb-4">
+                    <div class="col-md-6">
+                        <strong class="text-primary-blue">Date:</strong>
+                        <p class="mb-0">June 15, 2025</p>
+                    </div>
+                    <div class="col-md-6">
+                        <strong class="text-primary-blue">Theme:</strong>
+                        <p class="mb-0">Cultural Heritage & Education</p>
+                    </div>
+                </div>
+                <div class="mb-4">
+                    <strong class="text-primary-blue">Key Speakers:</strong>
+                    <p class="mb-0">Prof. Amitabh Sen, Dr. Ruma Ghosh</p>
+                </div>
+                <div class="text-center">
+                    <strong class="text-primary-blue d-block mb-3">Conference Poster:</strong>
+                    <img src="{% static 'Aboutus/aboutUs/Conference_overview2.png' %}" alt="Kolkata Conference Poster"
+                        class="img-fluid rounded-custom shadow">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Delhi Modal -->
+<div class="modal fade" id="modalDelhi" tabindex="-1" aria-labelledby="delhiLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content rounded-custom">
+            <div class="modal-header" style="background: linear-gradient(135deg, #6f42c1, #5a3399); color: white;">
+                <h5 class="modal-title font-primary" id="delhiLabel">
+                    <i class="fas fa-map-marker-alt me-2"></i>Delhi - Host Details
+                </h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body p-4">
+                <div class="row g-3 mb-4">
+                    <div class="col-md-6">
+                        <strong class="text-primary-blue">Date:</strong>
+                        <p class="mb-0">July 20, 2025</p>
+                    </div>
+                    <div class="col-md-6">
+                        <strong class="text-primary-blue">Theme:</strong>
+                        <p class="mb-0">Policy & Governance</p>
+                    </div>
+                </div>
+                <div class="mb-4">
+                    <strong class="text-primary-blue">Key Speakers:</strong>
+                    <p class="mb-0">Dr. Vikram Singh, Ms. Priya Kapoor</p>
+                </div>
+                <div class="text-center">
+                    <strong class="text-primary-blue d-block mb-3">Conference Poster:</strong>
+                    <img src="{% static 'Aboutus/aboutUs/Conference_overview2.png' %}" alt="Delhi Conference Poster"
+                        class="img-fluid rounded-custom shadow">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- New York Modal -->
+<div class="modal fade" id="modalNewYork" tabindex="-1" aria-labelledby="newYorkLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content rounded-custom">
+            <div class="modal-header" style="background: linear-gradient(135deg, #fd7e14, #e85d04); color: white;">
+                <h5 class="modal-title font-primary" id="newYorkLabel">
+                    <i class="fas fa-map-marker-alt me-2"></i>New York - Host Details
+                </h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body p-4">
+                <div class="row g-3 mb-4">
+                    <div class="col-md-6">
+                        <strong class="text-primary-blue">Date:</strong>
+                        <p class="mb-0">August 25, 2025</p>
+                    </div>
+                    <div class="col-md-6">
+                        <strong class="text-primary-blue">Theme:</strong>
+                        <p class="mb-0">Urban Community Development</p>
+                    </div>
+                </div>
+                <div class="mb-4">
+                    <strong class="text-primary-blue">Key Speakers:</strong>
+                    <p class="mb-0">Dr. Michael Johnson, Prof. Sarah Williams</p>
+                </div>
+                <div class="text-center">
+                    <strong class="text-primary-blue d-block mb-3">Conference Poster:</strong>
+                    <img src="{% static 'Aboutus/aboutUs/Conference_overview2.png' %}" alt="New York Conference Poster"
+                        class="img-fluid rounded-custom shadow">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Louisiana Modal -->
+<div class="modal fade" id="modalLouisiana" tabindex="-1" aria-labelledby="louisianaLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content rounded-custom">
+            <div class="modal-header" style="background: linear-gradient(135deg, #20c997, #17a085); color: white;">
+                <h5 class="modal-title font-primary" id="louisianaLabel">
+                    <i class="fas fa-map-marker-alt me-2"></i>Louisiana - Host Details
+                </h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body p-4">
+                <div class="row g-3 mb-4">
+                    <div class="col-md-6">
+                        <strong class="text-primary-blue">Date:</strong>
+                        <p class="mb-0">September 15, 2025</p>
+                    </div>
+                    <div class="col-md-6">
+                        <strong class="text-primary-blue">Theme:</strong>
+                        <p class="mb-0">Roots & Revival</p>
+                    </div>
+                </div>
+                <div class="mb-4">
+                    <strong class="text-primary-blue">Key Speakers:</strong>
+                    <p class="mb-0">Dr. James Roberts, Ms. Maria Thompson</p>
+                </div>
+                <div class="text-center">
+                    <strong class="text-primary-blue d-block mb-3">Conference Poster:</strong>
+                    <img src="{% static 'Aboutus/aboutUs/Conference_overview2.png' %}" alt="Louisiana Conference Poster"
+                        class="img-fluid rounded-custom shadow">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
+
+{% block scripts %}
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    // Add smooth scrolling and animation effects
+    document.addEventListener('DOMContentLoaded', function () {
+        // Animate stats on scroll
+        const stats = document.querySelectorAll('.stats-counter');
+        const observerOptions = {
+            threshold: 0.5,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const statsObserver = new IntersectionObserver(function (entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const target = entry.target;
+                    const finalValue = target.textContent;
+                    const numValue = parseInt(finalValue.replace(/\D/g, ''));
+
+                    if (numValue) {
+                        animateValue(target, 0, numValue, 2000, finalValue.includes('+'));
+                    }
+                    statsObserver.unobserve(target);
+                }
+            });
+        }, observerOptions);
+
+        stats.forEach(stat => statsObserver.observe(stat));
+
+        // Animate cards on scroll
+        const cards = document.querySelectorAll('.card, .timeline-item');
+        const cardObserver = new IntersectionObserver(function (entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.transform = 'translateY(0)';
+                    entry.target.style.opacity = '1';
+                }
+            });
+        }, { threshold: 0.1 });
+
+        cards.forEach(card => {
+            card.style.transform = 'translateY(30px)';
+            card.style.opacity = '0';
+            card.style.transition = 'all 0.6s ease-out';
+            cardObserver.observe(card);
+        });
+    });
+
+    function animateValue(element, start, end, duration, hasPlus = false) {
+        let startTimestamp = null;
+        const step = (timestamp) => {
+            if (!startTimestamp) startTimestamp = timestamp;
+            const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+            const currentValue = Math.floor(progress * (end - start) + start);
+            element.textContent = currentValue + (hasPlus ? '+' : '');
+            if (progress < 1) {
+                window.requestAnimationFrame(step);
+            }
+        };
+        window.requestAnimationFrame(step);
+    }
+</script>
+{% endblock scripts %}

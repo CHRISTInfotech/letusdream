@@ -3,8 +3,7 @@
    ======================================== */
 
 /* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Libertinus+Sans:ital,wght@0,400;0,700;1,400&display=swap');
 /* ========================================
    CSS CUSTOM PROPERTIES (CSS Variables)
    ======================================== */
@@ -22,7 +21,7 @@
   --dark-gray: #dee2e6;
   
   /* Text Colors */
-  --dark-text: #333333;
+  --dark-text: #000000;
   --medium-text: #666666;
   --light-text: #888888;
   --white-text: #ffffff;
@@ -57,7 +56,7 @@
   
   /* Typography */
   --font-primary: 'Playfair Display', serif;
-  --font-secondary: 'Inter', sans-serif;
+  --font-secondary: 'Libertinus Sans', sans-serif;
   --font-weight-light: 300;
   --font-weight-normal: 400;
   --font-weight-medium: 500;
