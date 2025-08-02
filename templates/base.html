@@ -24,9 +24,9 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-      <!-- … all your meta tags up here …  -->
+    <!-- … all your meta tags up here …  -->
 
-    {# Replace every nested “block title” with the variable page_title #}
+    {# Replace every nested "block title" with the variable page_title #}
     <meta name="description" content="{% block meta_description %}Let Us Dream – Your gateway to innovative solutions{% endblock %}">
     <meta name="keywords"    content="{% block meta_keywords    %}let us dream, innovation, creative solutions{% endblock %}">
     <meta name="author"      content="Let Us Dream">
@@ -48,7 +48,7 @@
     <link rel="shortcut icon" href="{% static 'logo/favicon.png' %}" type="image/x-icon">
     <link rel="apple-touch-icon" href="{% static 'logo/apple-touch-icon.png' %}">
 
-    {# Only a single block named “title” from now on #}
+    {# Only a single block named "title" from now on #}
     <title>Let Us Dream | {% block title %}{% endblock title%}</title>
 
     {% block links %}
@@ -64,10 +64,8 @@
           integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
 
     <!-- Custom CSS -->
-    <!-- <link href="{% static 'css/2025/base.css' %}" rel="stylesheet" type="text/css"/>
-    <link href="{% static 'css/2025/header.css' %}" rel="stylesheet" type="text/css"/> -->
     <link href="{% static 'css/new/base.css' %}" rel="stylesheet" type="text/css"/>
-    <link href="{% static 'css/new/header.css' %}" rel="stylesheet" type="text/css"/>
+    <!-- <link href="{% static 'css/new/header.css' %}" rel="stylesheet" type="text/css"/> -->
 
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet"
@@ -128,12 +126,13 @@
   </div>
 </div>
 
-
+<!-- Fixed Header -->
 {% include 'partials/header.html' %}
 
-<main class="main-content">
-    <!-- Site Notice Banner -->
-    <div class="site-notice-banner">
+<!-- Main Content Area -->
+<main class="main-content mt-5">
+    <!-- Site Notice Banner - First thing after header -->
+    <div id="siteNoticeBanner" class="site-notice-banner">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-10">
@@ -152,11 +151,46 @@
         </div>
     </div>
 
-    <!-- Breadcrumb Section -->
-    {% block breadcrumb %}
-    {% endblock breadcrumb %}
+    <!-- Dynamic Breadcrumb Section -->
+    {% if breadcrumbs %}
+    <div class="breadcrumb-container mt-5">
+        <div class="container mt-3">
+            <nav aria-label="breadcrumb">
+                <div class="breadcrumb-modern">
+                    <ol>
+                        {% for breadcrumb in breadcrumbs %}
+                            {% if not breadcrumb.active %}
+                                <li class="breadcrumb-item">
+                                    {% if breadcrumb.url %}
+                                        <a href="{% url breadcrumb.url %}">
+                                            <i class="{{ breadcrumb.icon }}"></i>
+                                            <span>{{ breadcrumb.name }}</span>
+                                        </a>
+                                    {% else %}
+                                        <a href="">
+                                            <i class="{{ breadcrumb.icon }}"></i>
+                                            <span>{{ breadcrumb.name }}</span>
+                                        </a>
+                                    {% endif %}
+                                </li>
+                                {% if not forloop.last %}
+                                    <li class="breadcrumb-separator">›</li>
+                                {% endif %}
+                            {% else %}
+                                <li class="breadcrumb-item active">
+                                    <i class="{{ breadcrumb.icon }}"></i>
+                                    <span>{{ breadcrumb.name }}</span>
+                                </li>
+                            {% endif %}
+                        {% endfor %}
+                    </ol>
+                </div>
+            </nav>
+        </div>
+    </div>
+    {% endif %}
 
-    <!-- Main Content -->
+    <!-- Page Content Wrapper -->
     <div class="content-wrapper">
         {% block content %}
         {% endblock content %}
@@ -171,6 +205,7 @@
     <i class="fas fa-arrow-up"></i>
 </button>
 
+<!-- Footer -->
 {% include 'partials/footer.html' %}
 
 <!-- Scripts -->
@@ -213,24 +248,47 @@
         }
     });
 
-    // Close banner functionality
+    // Enhanced close banner functionality
     function closeBanner() {
-        const banner = document.querySelector('.site-notice-banner');
-        banner.style.transform = 'translateY(-100%)';
-        setTimeout(() => {
-            banner.style.display = 'none';
-        }, 300);
-        
-        // Store in session storage to remember user's choice
-        sessionStorage.setItem('bannerClosed', 'true');
+        const banner = document.getElementById('siteNoticeBanner');
+        if (banner) {
+            banner.style.transform = 'translateY(-100%)';
+            banner.style.opacity = '0';
+            setTimeout(() => {
+                banner.style.display = 'none';
+                // Adjust body padding if needed
+                adjustBodyPadding();
+            }, 300);
+            
+            // Store in session storage to remember user's choice
+            sessionStorage.setItem('bannerClosed', 'true');
+        }
     }
 
-    // Check if banner was closed
-    document.addEventListener('DOMContentLoaded', function() {
-        if (sessionStorage.getItem('bannerClosed') === 'true') {
-            const banner = document.querySelector('.site-notice-banner');
-            banner.style.display = 'none';
+    // Adjust body padding when banner is closed
+    function adjustBodyPadding() {
+        const banner = document.getElementById('siteNoticeBanner');
+        const body = document.body;
+        
+        if (banner && banner.style.display === 'none') {
+            // Reduce padding since banner is gone
+            const currentPadding = parseInt(getComputedStyle(body).paddingTop);
+            const bannerHeight = 60; // Approximate banner height
+            body.style.paddingTop = Math.max(80, currentPadding - bannerHeight) + 'px';
         }
+    }
+
+    // Check if banner was closed and handle on page load
+    document.addEventListener('DOMContentLoaded', function() {
+        const banner = document.getElementById('siteNoticeBanner');
+        
+        if (sessionStorage.getItem('bannerClosed') === 'true' && banner) {
+            banner.style.display = 'none';
+            adjustBodyPadding();
+        }
+        
+        // Initialize scroll-triggered animations
+        initializeScrollAnimations();
     });
 
     // Smooth scroll for anchor links
@@ -239,34 +297,89 @@
             e.preventDefault();
             const target = document.querySelector(this.getAttribute('href'));
             if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
+                const headerHeight = document.querySelector('header')?.offsetHeight || 80;
+                const targetPosition = target.offsetTop - headerHeight - 20;
+                
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
                 });
             }
         });
     });
 
-    // Add fade-in animation to cards and content
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
+    // Initialize scroll animations
+    function initializeScrollAnimations() {
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
 
-    const observer = new IntersectionObserver(function(entries) {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('fade-in-visible');
-            }
-        });
-    }, observerOptions);
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in-visible');
+                    // Add staggered animation for cards
+                    if (entry.target.classList.contains('card')) {
+                        const delay = Array.from(entry.target.parentNode.children).indexOf(entry.target) * 100;
+                        setTimeout(() => {
+                            entry.target.style.transform = 'translateY(0)';
+                            entry.target.style.opacity = '1';
+                        }, delay);
+                    }
+                }
+            });
+        }, observerOptions);
 
-    // Observe elements with fade-in class
-    document.addEventListener('DOMContentLoaded', function() {
-        document.querySelectorAll('.fade-in, .card, .content-card').forEach(el => {
+        // Observe elements with animation classes
+        document.querySelectorAll('.fade-in, .card, .content-card, .slide-in-left, .slide-in-right, .scale-in').forEach(el => {
             observer.observe(el);
         });
+    }
+
+    // Handle header scroll behavior (optional - for header style changes)
+    let lastScrollTop = 0;
+    window.addEventListener('scroll', function() {
+        const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+        const header = document.querySelector('header');
+        
+        if (header) {
+            if (currentScroll > lastScrollTop && currentScroll > 100) {
+                // Scrolling down - could add class to shrink header
+                header.classList.add('scrolled-down');
+            } else {
+                // Scrolling up
+                header.classList.remove('scrolled-down');
+            }
+            
+            if (currentScroll > 0) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        }
+        
+        lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+    }, false);
+
+    // Prevent layout shift by ensuring proper spacing
+    window.addEventListener('resize', function() {
+        adjustLayoutSpacing();
     });
+
+    function adjustLayoutSpacing() {
+        const header = document.querySelector('header');
+        const mainContent = document.querySelector('.main-content');
+        
+        if (header && mainContent) {
+            const headerHeight = header.offsetHeight;
+            document.documentElement.style.setProperty('--header-height', headerHeight + 'px');
+            document.documentElement.style.setProperty('--header-padding-top', (headerHeight + 20) + 'px');
+        }
+    }
+
+    // Call on load to set initial spacing
+    window.addEventListener('load', adjustLayoutSpacing);
 </script>
 
 {% block extraScripts %}

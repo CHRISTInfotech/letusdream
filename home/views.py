@@ -16,11 +16,21 @@ def index(request):
 
 
 def aboutUs(request):
-    return render(request, 'aboutUs/aboutUs.html')
+    breadcrumbs = [
+        {'name': 'Home', 'url': 'main', 'icon': 'fas fa-home', 'active': False},
+        {'name': 'About Us', 'url': None, 'icon': 'fas fa-info-circle', 'active': False},
+        {'name': 'Overview', 'url': None, 'icon': 'fas fa-eye', 'active': True}
+    ]
+    return render(request, 'aboutUs/aboutUs.html', {'breadcrumbs': breadcrumbs})
 
 
 def leadership(request):
-    return render(request, "aboutUs/leadership.html")
+    breadcrumbs = [
+        {'name': 'Home', 'url': 'main', 'icon': 'fas fa-home', 'active': False},
+        {'name': 'About Us', 'url': None, 'icon': 'fas fa-info-circle', 'active': False},
+        {'name': 'Leadership', 'url': None, 'icon': 'fas fa-user-tie', 'active': True}
+    ]
+    return render(request, "aboutUs/leadership.html", {'breadcrumbs': breadcrumbs})
 
 
 def login(request):
@@ -267,7 +277,12 @@ def llfp(request):
     return render(request, 'courses/llfp2024.html', {'data': llfp_2024})
 
 def contactUs(request):
-    return render(request, 'aboutUs/contactus.html')
+    breadcrumbs = [
+        {'name': 'Home', 'url': 'main', 'icon': 'fas fa-home', 'active': False},
+        {'name': 'About Us', 'url': None, 'icon': 'fas fa-info-circle', 'active': False},
+        {'name': 'Contact Us', 'url': None, 'icon': 'fas fa-address-book', 'active': True}
+    ]
+    return render(request, 'aboutUs/contactus.html', {'breadcrumbs': breadcrumbs})
 
 # CLUB Pages
 

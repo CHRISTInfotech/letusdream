@@ -4,6 +4,7 @@
 
 /* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Libertinus+Sans:ital,wght@0,400;0,700;1,400&display=swap');
+
 /* ========================================
    CSS CUSTOM PROPERTIES (CSS Variables)
    ======================================== */
@@ -16,6 +17,7 @@
   
   /* Background Colors */
   --light-bg: #ffffff;
+  --white-bg: #ffffff;
   --light-gray: #f8f9fa;
   --medium-gray: #e9ecef;
   --dark-gray: #dee2e6;
@@ -62,6 +64,10 @@
   --font-weight-medium: 500;
   --font-weight-semibold: 600;
   --font-weight-bold: 700;
+  
+  /* Layout Variables */
+  --header-height: 80px;
+  --header-padding-top: 100px; /* Adjust based on your header height */
 }
 
 /* ========================================
@@ -82,6 +88,214 @@ body {
   line-height: 1.6;
   font-weight: var(--font-weight-normal);
   overflow-x: hidden;
+  /* Add padding-top to account for fixed header */
+  padding-top: var(--header-padding-top);
+}
+
+/* ========================================
+   HEADER & NAVBAR POSITIONING
+   ======================================== */
+
+/* Ensure header/navbar is fixed at top */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1030;
+  background-color: var(--white-bg);
+  box-shadow: var(--box-shadow-small);
+  transition: var(--transition-normal);
+}
+
+/* Override base.css navbar background */
+.navbar {
+  background: var(--white-bg) !important;
+  min-height: var(--header-height);
+  padding: 1rem 0;
+}
+
+/* Ensure navbar links styling */
+.navbar-nav .nav-link {
+  color: var(--primary-blue) !important;
+  font-weight: var(--font-weight-medium);
+  transition: var(--transition-fast);
+}
+
+.navbar-nav .nav-link:hover {
+  color: var(--primary-blue-dark) !important;
+  transform: translateY(-1px);
+}
+
+/* Header Background & Text */
+.navbar-brand {
+  color: var(--primary-blue) !important;
+  font-weight: var(--font-weight-bold);
+}
+
+/* ========================================
+   MAIN CONTENT POSITIONING
+   ======================================== */
+
+/* Main Content Layout - ensure it starts below header */
+.main-content {
+  min-height: calc(100vh - var(--header-padding-top) - 200px);
+  position: relative;
+  /* Remove any top margin/padding that might conflict */
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.content-wrapper {
+  position: relative;
+  z-index: 1;
+}
+
+/* ========================================
+   SITE NOTICE BANNER POSITIONING
+   ======================================== */
+
+/* Site Notice Banner - ensure it appears at the very top of content */
+.site-notice-banner {
+  background: var(--gradient-primary);
+  color: var(--white-text);
+  padding: 1rem 0;
+  position: relative;
+  box-shadow: var(--box-shadow-small);
+  transition: transform 0.3s ease-out;
+  /* Ensure it's the first thing visible after header */
+  margin-top: 0;
+  margin-bottom: 0;
+  z-index: 1020;
+}
+
+.site-notice-banner h6 {
+  color: var(--white-text);
+  margin-bottom: 0.25rem;
+  font-weight: var(--font-weight-semibold);
+}
+
+.site-notice-banner p {
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 0;
+}
+
+.site-notice-banner .btn-close-white {
+  filter: invert(1) grayscale(100%) brightness(200%);
+  opacity: 0.8;
+  transition: var(--transition-fast);
+}
+
+.site-notice-banner .btn-close-white:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+/* ========================================
+   BREADCRUMB POSITIONING
+   ======================================== */
+
+/* Breadcrumb Container - ensure proper spacing */
+.breadcrumb-container {
+  padding: 1.5rem 0;
+  margin-bottom: 0;
+  /* Ensure it appears directly after the banner */
+  margin-top: 0;
+}
+
+.breadcrumb-modern {
+  border-radius: var(--border-radius-large);
+  padding: 1rem 1.5rem;
+  margin-bottom: 0;
+  
+  backdrop-filter: blur(10px);
+  position: relative;
+  overflow: hidden;
+  
+}
+
+.breadcrumb-modern::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  
+  opacity: 0.3;
+  z-index: 1;
+}
+
+.breadcrumb-modern ol {
+  position: relative;
+  z-index: 2;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.breadcrumb-item {
+  display: flex;
+  align-items: center;
+  font-weight: var(--font-weight-medium);
+  font-size: 0.9rem;
+  transition: var(--transition-normal);
+}
+
+.breadcrumb-item a {
+  color: var(--primary-blue);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius-small);
+  transition: var(--transition-fast);
+  position: relative;
+  background: rgba(255, 255, 255, 0.7);
+  margin-right: 0.5rem;
+}
+
+.breadcrumb-item a:hover {
+  background: var(--primary-blue);
+  color: var(--white-text);
+  transform: translateY(-2px);
+  box-shadow: var(--box-shadow-small);
+}
+
+.breadcrumb-item a i {
+  margin-right: 0.5rem;
+  font-size: 0.85rem;
+}
+
+.breadcrumb-item.active {
+  background: var(--gradient-primary);
+  color: var(--white-text);
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius-small);
+  font-weight: var(--font-weight-semibold);
+  box-shadow: var(--box-shadow-small);
+}
+
+.breadcrumb-item.active i {
+  margin-right: 0.5rem;
+}
+
+.breadcrumb-separator {
+  color: var(--medium-text);
+  margin: 0 0.75rem;
+  font-size: 1.1rem;
+  opacity: 0.6;
+}
+
+.breadcrumb-title {
+  font-family: var(--font-primary);
+  font-size: 1.5rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--dark-text);
+  margin: 0;
 }
 
 /* ========================================
@@ -122,8 +336,8 @@ h6 {
 p {
   margin-bottom: 1rem;
   color: var(--medium-text);
-  
 }
+
 .justify {
   text-align: justify;
 }
@@ -184,9 +398,10 @@ a:hover {
   color: var(--primary-blue);
   background: transparent;
 }
+
 .btn-outline-primary, .btn-outline-secondary, .btn-outline-info, .btn-outline-success,
 .btn-outline-danger, .btn-outline-warning {
-  border: 2px solid ;
+  border: 2px solid;
   background: transparent;
   padding: 0.75rem 1.5rem;
   font-weight: var(--font-weight-medium);
@@ -225,110 +440,6 @@ a:hover {
   padding: 2rem;
 }
 
-
-
-/* Breadcrumb Overrides */
-.breadcrumb {
-  background: var(--gradient-overlay);
-  border-radius: var(--border-radius-small);
-  padding: 1rem 1.5rem;
-  margin-bottom: 2rem;
-  box-shadow: var(--box-shadow-small);
-  backdrop-filter: blur(10px);
-}
-
-.breadcrumb-item {
-  font-weight: var(--font-weight-medium);
-  font-size: 0.9rem;
-}
-
-.breadcrumb-item a {
-  color: var(--primary-blue);
-  text-decoration: none;
-  transition: var(--transition-fast);
-  position: relative;
-}
-
-.breadcrumb-item a:hover {
-  color: var(--primary-blue-dark);
-  text-decoration: none;
-}
-
-.breadcrumb-item a::after {
-  content: '';
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: var(--gradient-secondary);
-  transition: var(--transition-fast);
-}
-
-.breadcrumb-item a:hover::after {
-  width: 100%;
-}
-
-.breadcrumb-item.active {
-  color: var(--dark-text);
-  font-weight: var(--font-weight-semibold);
-}
-
-.breadcrumb-item + .breadcrumb-item::before {
-  content: "›";
-  color: var(--medium-text);
-  font-weight: var(--font-weight-bold);
-  font-size: 1.1rem;
-  margin: 0 0.75rem;
-}
-
-/* Alternative Breadcrumb Styles */
-.breadcrumb-modern {
-  background: var(--card-bg);
-  border: 1px solid var(--medium-gray);
-  border-radius: var(--border-radius-large);
-  padding: 0.75rem 0;
-  margin-bottom: 2rem;
-  box-shadow: none;
-}
-
-.breadcrumb-modern .breadcrumb-item {
-  display: inline-flex;
-  align-items: center;
-  padding: 0.5rem 1rem;
-  border-radius: var(--border-radius-small);
-  transition: var(--transition-fast);
-}
-
-.breadcrumb-modern .breadcrumb-item:hover {
-  background: var(--light-gray);
-}
-
-.breadcrumb-modern .breadcrumb-item.active {
-  background: var(--gradient-primary);
-  color: var(--white-text);
-}
-
-.breadcrumb-minimal {
-  background: transparent;
-  padding: 0.5rem 0;
-  margin-bottom: 1.5rem;
-  box-shadow: none;
-}
-
-.breadcrumb-minimal .breadcrumb-item {
-  font-size: 0.85rem;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-.breadcrumb-minimal .breadcrumb-item + .breadcrumb-item::before {
-  content: "/";
-  color: var(--light-text);
-  margin: 0 0.5rem;
-  font-size: 0.8rem;
-}
-
 /* Form Overrides */
 .form-control {
   border: 2px solid var(--medium-gray);
@@ -364,6 +475,143 @@ a:hover {
 .alert-success {
   background: rgba(146, 237, 38, 0.1);
   color: var(--secondary-green-dark);
+}
+
+/* ========================================
+   HEADER SPECIFIC STYLES
+   ======================================== */
+
+/* Margin helper (if you still need a 10px right‐margin) */
+.mr-10px {
+  margin-right: 10px;
+}
+
+/* Wrapper around logo (white background with rounded bottom corners) */
+.background {
+  background-color: var(--white-text);
+  padding: 30px;
+  margin: -30px;
+  border-radius: 0 0 20px 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Increase base font‐size for the menu container */
+.menu {
+  font-size: 18px;
+}
+
+/* Slight padding on each nav‐item */
+.nav-item {
+  padding: 3px;
+}
+
+/* Multilevel dropdown positioning */
+.dropdown-menu li {
+  position: relative;
+}
+
+.dropdown-menu .submenu {
+  display: none;
+  position: absolute;
+  left: 100%;
+  top: -7px;
+}
+
+.dropdown-menu > li:hover > .submenu {
+  display: block;
+}
+
+.dropdown-menu .submenu .dropdown-toggle::after {
+  position: absolute;
+  right: 0;
+  margin-top: 10px;
+}
+
+/* Floats for item-left section */
+.item-left {
+  float: left;
+}
+.item-left img,
+.item-left span.item-info {
+  float: left;
+}
+.item-left span.item-info span {
+  display: block;
+  float: left;
+}
+
+/* ========================================
+   FOOTER STYLES
+   ======================================== */
+footer {
+  background: var(--primary-blue);
+  color: var(--white-text);
+  min-height: 200px;
+  padding: 50px;
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+footer .social-icons,
+footer .menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+
+footer .social-icons li,
+footer .menu li {
+  list-style: none;
+}
+
+footer .social-icons li i {
+  font-size: 20px;
+  color: var(--white-text);
+  margin: 0 15px;
+  transition: 0.5s;
+}
+
+footer .social-icons li i:hover {
+  transform: translateY(-10px);
+  color: #82d8d8;
+}
+
+footer .menu li a {
+  font-size: 1.2em;
+  color: var(--white-text);
+  margin: 0 10px;
+  text-decoration: none;
+  opacity: 0.75;
+  transition: 0.5s;
+}
+
+footer .menu li a:hover {
+  opacity: 1;
+  font-size: 1.4em;
+}
+
+footer div {
+  color: var(--white-text);
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  font-size: 0.9em;
+  font-weight: 300;
+}
+
+footer div a {
+  color: #262626;
+  padding: 5px;
+  text-decoration: none;
+}
+
+footer div a:hover {
+  color: var(--white-text);
 }
 
 /* ========================================
@@ -510,8 +758,6 @@ a:hover {
   position: relative;
 }
 
-
-
 /* Content Cards */
 .content-card {
   background: var(--card-bg);
@@ -538,28 +784,6 @@ a:hover {
   margin-bottom: 1.5rem;
   color: var(--white-text);
   font-size: 1.5rem;
-}
-
-/* Footer */
-.footer {
-  background: var(--dark-text);
-  color: var(--light-text);
-  padding: 3rem 0 1rem;
-  margin-top: 4rem;
-}
-
-.footer h5 {
-  color: var(--white-text);
-  margin-bottom: 1rem;
-}
-
-.footer a {
-  color: var(--light-text);
-  transition: var(--transition-fast);
-}
-
-.footer a:hover {
-  color: var(--secondary-green);
 }
 
 /* ========================================
@@ -589,47 +813,6 @@ a:hover {
   width: 3rem;
   height: 3rem;
   border-width: 0.3em;
-}
-
-/* Site Notice Banner */
-.site-notice-banner {
-  background: var(--gradient-primary);
-  color: var(--white-text);
-  padding: 1rem 0;
-  position: relative;
-  box-shadow: var(--box-shadow-small);
-  transition: transform 0.3s ease-out;
-}
-
-.site-notice-banner h6 {
-  color: var(--white-text);
-  margin-bottom: 0.25rem;
-}
-
-.site-notice-banner p {
-  color: rgba(255, 255, 255, 0.9);
-  margin-bottom: 0;
-}
-
-.site-notice-banner .btn-close-white {
-  filter: invert(1) grayscale(100%) brightness(200%);
-  opacity: 0.8;
-  transition: var(--transition-fast);
-}
-
-.site-notice-banner .btn-close-white:hover {
-  opacity: 1;
-}
-
-/* Main Content Layout */
-.main-content {
-  min-height: calc(100vh - 200px);
-  position: relative;
-}
-
-.content-wrapper {
-  position: relative;
-  z-index: 1;
 }
 
 /* Enhanced Back to Top Button */
@@ -667,72 +850,6 @@ a:hover {
 
 .back-to-top-btn:active {
   transform: translateY(-2px);
-}
-
-/* Animation Classes */
-.fade-in {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.6s ease-out;
-}
-
-.fade-in-visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.slide-in-left {
-  opacity: 0;
-  transform: translateX(-50px);
-  transition: all 0.6s ease-out;
-}
-
-.slide-in-left.visible {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-.slide-in-right {
-  opacity: 0;
-  transform: translateX(50px);
-  transition: all 0.6s ease-out;
-}
-
-.slide-in-right.visible {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-.scale-in {
-  opacity: 0;
-  transform: scale(0.9);
-  transition: all 0.6s ease-out;
-}
-
-.scale-in.visible {
-  opacity: 1;
-  transform: scale(1);
-}
-
-/* Enhanced Breadcrumb Container */
-.breadcrumb-container {
-  background: var(--light-gray);
-  padding: 1.5rem 0;
-  margin-bottom: 0;
-}
-
-.breadcrumb-container .container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.breadcrumb-title {
-  font-family: var(--font-primary);
-  font-size: 1.5rem;
-  font-weight: var(--font-weight-bold);
-  color: var(--dark-text);
-  margin: 0;
 }
 
 /* Page Header */
@@ -804,10 +921,63 @@ a:hover {
 .cards-grid .card:nth-child(5) { --card-index: 5; }
 .cards-grid .card:nth-child(6) { --card-index: 6; }
 
+/* Animation Classes */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease-out;
+}
+
+.fade-in-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.slide-in-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: all 0.6s ease-out;
+}
+
+.slide-in-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.slide-in-right {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: all 0.6s ease-out;
+}
+
+.slide-in-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.scale-in {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: all 0.6s ease-out;
+}
+
+.scale-in.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
 /* ========================================
    RESPONSIVE DESIGN
    ======================================== */
 @media (max-width: 768px) {
+  :root {
+    --header-padding-top: 120px; /* Increase for mobile */
+  }
+  
+  body {
+    padding-top: var(--header-padding-top);
+  }
+  
   .hero-title {
     font-size: 2.5rem;
   }
@@ -864,9 +1034,34 @@ a:hover {
   .breadcrumb-title {
     font-size: 1.25rem;
   }
+
+  /* Responsive breadcrumb */
+  .breadcrumb-modern ol {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .breadcrumb-separator {
+    display: none;
+  }
+
+  .breadcrumb-item a,
+  .breadcrumb-item.active {
+    width: 100%;
+    justify-content: center;
+  }
 }
 
 @media (max-width: 576px) {
+  :root {
+    --header-padding-top: 140px; /* Further increase for smaller screens */
+  }
+  
+  body {
+    padding-top: var(--header-padding-top);
+  }
+  
   .hero-title {
     font-size: 2rem;
   }
@@ -902,3 +1097,84 @@ a:hover {
     margin-right: 0 !important;
   }
 }
+
+/* ========================================
+   SPECIFIC LAYOUT FIXES
+   ======================================== */
+
+/* Fix for content overlapping header */
+.main-content > .site-notice-banner:first-child {
+  margin-top: 0;
+}
+
+.main-content > .breadcrumb-container:first-child,
+.main-content > .breadcrumb-container:nth-child(2) {
+  margin-top: 0;
+}
+
+/* Ensure proper spacing for content after breadcrumbs */
+.breadcrumb-container + .content-wrapper,
+.breadcrumb-container + * {
+  margin-top: 2rem;
+}
+
+/* If no breadcrumbs, ensure content has proper spacing */
+.main-content .content-wrapper:first-child {
+  padding-top: 2rem;
+}
+
+/* Special handling for when banner is closed */
+.site-notice-banner.d-none + .breadcrumb-container {
+  margin-top: 0;
+}
+
+/* ========================================
+   UTILITY CLASSES FOR SPACING
+   ======================================== */
+
+/* Margin top utilities to override default spacing */
+.mt-header {
+  margin-top: var(--header-padding-top) !important;
+}
+
+.pt-header {
+  padding-top: var(--header-padding-top) !important;
+}
+
+/* No top margin/padding utilities */
+.mt-0-important {
+  margin-top: 0 !important;
+}
+
+.pt-0-important {
+  padding-top: 0 !important;
+}
+
+/* Safe area utilities for content */
+.safe-area-top {
+  padding-top: calc(var(--header-padding-top) + 1rem);
+}
+
+.content-safe {
+  margin-top: 1rem;
+}
+
+/* ========================================
+   DEBUG UTILITIES (Remove in production)
+   ======================================== */
+/*
+.debug-spacing {
+  border: 2px solid red !important;
+  background: rgba(255, 0, 0, 0.1) !important;
+}
+
+.debug-header {
+  border: 2px solid blue !important;
+  background: rgba(0, 0, 255, 0.1) !important;
+}
+
+.debug-content {
+  border: 2px solid green !important;
+  background: rgba(0, 255, 0, 0.1) !important;
+}
+*/
