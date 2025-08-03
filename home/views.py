@@ -71,7 +71,12 @@ def allConferences(request):
 
 
 def triennialConference(request):
-    return render(request, 'conference/triennialConference.html')
+    breadcrumbs = [
+        {'name': 'Home', 'url': 'main', 'icon': 'fas fa-home', 'active': False},
+        {'name': 'Conference', 'url': 'Conferences', 'icon': 'fas fa-calendar', 'active': False},
+        {'name': 'Triennial Conferences', 'url': None, 'icon': 'fas fa-calendar-alt', 'active': True}
+    ]
+    return render(request, 'conference/triennialConference.html', {'breadcrumbs': breadcrumbs,})
 
 
 def triennialConference2020(request):
