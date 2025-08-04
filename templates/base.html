@@ -65,7 +65,6 @@
 
     <!-- Custom CSS -->
     <link href="{% static 'css/new/base.css' %}" rel="stylesheet" type="text/css"/>
-    <!-- <link href="{% static 'css/new/header.css' %}" rel="stylesheet" type="text/css"/> -->
 
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet"
@@ -130,30 +129,12 @@
 {% include 'partials/header.html' %}
 
 <!-- Main Content Area -->
-<main class="main-content mt-5">
-    <!-- Site Notice Banner - First thing after header -->
-    <div id="siteNoticeBanner" class="site-notice-banner">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-10">
-                    <div class="d-flex align-items-center">
-                        <i class="fas fa-tools me-3 text-warning"></i>
-                        <div>
-                            <h6 class="mb-1 fw-bold">Website Under Major Revision</h6>
-                            <p class="mb-0 small">You may find inconsistencies. We are working diligently to fix the designs and revamp the website.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-2 text-end">
-                    <button type="button" class="btn-close btn-close-white" onclick="closeBanner()" aria-label="Close"></button>
-                </div>
-            </div>
-        </div>
-    </div>
+<main class="main-content">
+   
 
     <!-- Dynamic Breadcrumb Section -->
     {% if breadcrumbs %}
-    <div class="breadcrumb-container mt-5">
+    <div class="breadcrumb-container">
         <div class="container mt-3">
             <nav aria-label="breadcrumb">
                 <div class="breadcrumb-modern">

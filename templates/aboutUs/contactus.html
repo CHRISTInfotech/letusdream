@@ -2,84 +2,177 @@
 {% load static %}
 
 {% block title %}
-    Contact US
+    Contact Us
 {% endblock %}
 
 {% block links %}
-    <link rel="stylesheet" href="{% static 'css/2025/contactUs.css' %}" type="text/css">
 {% endblock links %}
 
 {% block content %}
 
-    <div class="container my-5">
-        <h1 class="text-center mb-5">
-            &Prime;Connect with Us - Join Our Community&Prime;
-        </h1>
 
-
-        <div class="row mt-5">
-            <div class="col-sm-12 col-md-6 mb-3">
-                <iframe class=""
-                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d182377.38723339717!2d77.61630833403241!3d12.994592804847882!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae15b277a93807%3A0x88518f37b39dabd0!2sChrist%20University!5e0!3m2!1sen!2sin!4v1687845812683!5m2!1sen!2sin"
-                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade">
-
-                </iframe>
-            </div>
-            <div class="col-sm-12 col-md-6 mb-3">
-
-                <div class=" text-center bg-light-blue p-5">
-                    "Unite our passions for a greater cause. Join hands with Let Us
-                    Dream, making a positive impact together. Together, we can change lives!"
+        <!-- Page Header -->
+    <section class="">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-12">
+                   
+                    <h1 class="display-4 fw-bold mb-2">Connect with Us</h1>
+                    <p class="lead mb-3">
+                        Join Our Community - Let's Make a Difference Together
+                    </p>
                 </div>
-                <div class="row bg-light m-0 p-3 d-flex justify-content-center align-items-center">
-                    <div class="col text-center">
-                        <i class="fa-solid fa-envelope m-2"></i>
-                        <a class="text-decoration-none text-black text-break" href="mailto:office@letusdream.org">
-                            office@letusdream.org
-                        </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Contact Section -->
+    <div class="content-section">
+        <div class="container">
+            <div class="row g-4 align-items-stretch">
+                <!-- Map Section -->
+                <div class="col-lg-6">
+                    <div class="content-card h-100 p-0 overflow-hidden">
+                        <div class="map-container">
+                            <iframe class="w-100 h-100"
+                                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d182377.38723339717!2d77.61630833403241!3d12.994592804847882!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae15b277a93807%3A0x88518f37b39dabd0!2sChrist%20University!5e0!3m2!1sen!2sin!4v1687845812683!5m2!1sen!2sin"
+                                    style="border:0; min-height: 400px;" 
+                                    allowfullscreen="" 
+                                    loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade"
+                                    title="Let Us Dream Location">
+                            </iframe>
+                        </div>
                     </div>
-                    <div class="col text-center  text-break">
-                        <i class="fa-solid fa-phone m-2"></i>
-                        +91 99722 22553
-                    </div>
-                    <div class="col text-center">
-                        <i class="fa-solid fa-globe m-2"></i>
-                        <a href="http://letusdream.org" class="text-decoration-none text-black  text-break"
-                           target="_blank" rel="noopener noreferrer">
-                            letusdream.org
-                        </a>
+                </div>
+
+                <!-- Contact Info Section -->
+                <div class="col-lg-6">
+                    <div class="content-card h-100 d-flex flex-column">
+                        <!-- Inspirational Quote -->
+                        <div class="quote-section bg-gradient-primary text-white rounded-custom p-4 mb-4">
+                            <div class="text-center">
+                                <i class="fas fa-quote-left fa-2x mb-3 opacity-75"></i>
+                                <p class="mb-0 lh-lg text-white">
+                                    "Unite our passions for a greater cause. Join hands with Let Us
+                                    Dream, making a positive impact together. Together, we can change lives!"
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Quick Contact Info -->
+                        <div class="contact-quick-info bg-light-gray rounded-custom p-4 flex-grow-1">
+                            <div class="row g-3 h-100 align-items-center">
+                                <div class="col-12 col-md-4 text-center">
+                                    <div class="contact-item">
+                                        <div class="content-card-icon mx-auto mb-2" style="width: 50px; height: 50px;">
+                                            <i class="fas fa-envelope"></i>
+                                        </div>
+                                        <a class="text-decoration-none text-primary-blue fw-bold small" 
+                                           href="mailto:office@letusdream.org">
+                                            office@letusdream.org
+                                        </a>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-12 col-md-4 text-center">
+                                    <div class="contact-item">
+                                        <div class="content-card-icon mx-auto mb-2 bg-gradient-secondary" style="width: 50px; height: 50px;">
+                                            <i class="fas fa-phone"></i>
+                                        </div>
+                                        <span class="text-primary-blue fw-bold small">+91 99722 22553</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-12 col-md-4 text-center">
+                                    <div class="contact-item">
+                                        <div class="content-card-icon mx-auto mb-2" style="background: linear-gradient(135deg, #28a745 0%, #20c997 100%); width: 50px; height: 50px;">
+                                            <i class="fas fa-globe"></i>
+                                        </div>
+                                        <a href="http://letusdream.org" 
+                                           class="text-decoration-none text-primary-blue fw-bold small"
+                                           target="_blank" rel="noopener noreferrer">
+                                            letusdream.org
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-
-        <div class="row mt-5 mb-5">
-             <div class="col-6 col-md-3 text-center mb-3">
-                <i class="fa fa-phone fs-1 mb-3" aria-hidden="true"></i>
-                <h4 class="text-uppercase">Call Us</h4>
-                <p class="text-center">+91 99722 22553</p>
-            </div>
-             <div class="col-6 col-md-3 text-center mb-3">
-                <i class="fa fa-globe fs-1 mb-3" aria-hidden="true"></i>
-                <h4 class="text-uppercase">Website</h4>
-                <a href="https://letusdream.org" class="text-decoration-none text-dark">
-                    letusdream.org
-                </a>
-            </div>
-             <div class="col-6 col-md-3 text-center mb-3">
-                <i class="fa fa-map-marker fs-1 mb-3" aria-hidden="true"></i>
-                <h4 class="text-uppercase">Location</h4>
-                <p class="text-center">Bangalore</p>
-            </div>
-             <div class="col-6 col-md-3 text-center mb-3">
-                <i class="fa fa-envelope fs-1 mb-3" aria-hidden="true"></i>
-                <h4 class="text-uppercase">Email</h4>
-                <a href="mailto:office@letusdream.org" class="text-decoration-none text-dark">
-                    office@letusdream.org
-                </a>
-            </div>
-        </div>
-
     </div>
+
+    <!-- Contact Methods Section -->
+    <div class="content-section bg-light-gray">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title mb-2">Get In Touch</h2>
+                <p class="text-medium">Multiple ways to connect with our community</p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Call Us -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="content-card text-center hover-lift h-100">
+                        <div class="content-card-icon mx-auto mb-3">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h5 class="text-primary-blue font-primary mb-3">Call Us</h5>
+                        <p class="text-medium mb-3">Speak directly with our team</p>
+                        <a href="tel:+919972222553" class="btn btn-outline-primary">
+                            <i class="fas fa-phone me-2"></i>+91 99722 22553
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Website -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="content-card text-center hover-lift h-100">
+                        <div class="content-card-icon mx-auto mb-3 bg-gradient-secondary">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <h5 class="text-primary-blue font-primary mb-3">Website</h5>
+                        <p class="text-medium mb-3">Explore our online presence</p>
+                        <a href="https://letusdream.org" 
+                           class="btn btn-outline-primary"
+                           target="_blank" rel="noopener noreferrer">
+                            <i class="fas fa-external-link-alt me-2"></i>Visit Website
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Location -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="content-card text-center hover-lift h-100">
+                        <div class="content-card-icon mx-auto mb-3" style="background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h5 class="text-primary-blue font-primary mb-3">Location</h5>
+                        <p class="text-medium mb-3">Find us in the heart of India</p>
+                        <div class="btn btn-outline-primary">
+                            <i class="fas fa-map-marker-alt me-2"></i>Bangalore, India
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Email -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="content-card text-center hover-lift h-100">
+                        <div class="content-card-icon mx-auto mb-3" style="background: linear-gradient(135deg, #28a745 0%, #20c997 100%);">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h5 class="text-primary-blue font-primary mb-3">Email</h5>
+                        <p class="text-medium mb-3">Send us a message anytime</p>
+                        <a href="mailto:office@letusdream.org" class="btn btn-outline-primary">
+                            <i class="fas fa-envelope me-2"></i>Send Email
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 {% endblock %}

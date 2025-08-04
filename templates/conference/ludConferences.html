@@ -2,64 +2,215 @@
 {% load static %}
 
 {% block title %}
-    How to organize Let us Dream Conferences
+    Conference Organisers Manual - How to organize Let us Dream Conferences
 {% endblock %}
 
-
 {% block links %}
-    <link rel="stylesheet" href="{% static 'css/2025/aboutConference.css' %}" type="text/css">
+   
 {% endblock links %}
 
 {% block content %}
-    <nav aria-label="breadcrumb animated slideInDown" class="cus-breadcrumb breadcrumb-style">
-        <ol class="breadcrumb container mb-0 ">
-            <li class="breadcrumb-item">
-                <a class="text-black text-decoration-none" href="{% url 'main' %}">Home</a>
-            </li>
-            <li class="breadcrumb-item">
-                <a class="text-black text-decoration-none">Conference</a>
-            </li>
-            <li class="breadcrumb-item active" aria-current="page">Organiser Kit - Let Us Dream Conferences</li>
-        </ol>
-    </nav>
-
-    <div class="container">
-        <div class="col-12 py-5">
-            <div class="fw-bold fs-4 text-center font">
-                Conference Organisers Manual
-                <hr/>
-            </div>
-            <div class="gallery py-5">
-                <div style="border-radius: 10px;">
-                    <iframe src="https://www.youtube.com/embed/B4nDIrmxppU?list=PLTas59dAb68eBE-jooq5IvMVesYjoqWQU"
-                            allowfullscreen name="tab"
-                            width="100%" height="600px"></iframe>
+    <!-- Page Header -->
+    <section class="">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-8">
+                   
+                    <h1 class="display-4 fw-bold mb-4">Conference Organisers Manual</h1>
+                    <p class="lead mb-0">
+                        Complete guide to organizing successful "Let us Dream" conferences
+                    </p>
                 </div>
-                <div>
-                    <span>
-                        <a href="https://www.youtube.com/embed/B4nDIrmxppU?list=PLTas59dAb68eBE-jooq5IvMVesYjoqWQU"
-                           target="tab"><img src="https://img.youtube.com/vi/B4nDIrmxppU/default.jpg" alt=""></a>
-                        <a href="https://www.youtube.com/embed/chy46TTa-w0?list=PLTas59dAb68eBE-jooq5IvMVesYjoqWQU"
-                           target="tab"><img src="https://img.youtube.com/vi/chy46TTa-w0/default.jpg" alt=""></a>
-                        <a href="https://www.youtube.com/embed/qXfBHnue4pg?list=PLTas59dAb68eBE-jooq5IvMVesYjoqWQU"
-                           target="tab"><img src="https://img.youtube.com/vi/qXfBHnue4pg/default.jpg" alt=""></a>
-                        <a href="https://www.youtube.com/embed/aTmpNM-Cz6k?list=PLTas59dAb68eBE-jooq5IvMVesYjoqWQU"
-                           target="tab"><img src="https://img.youtube.com/vi/aTmpNM-Cz6k/default.jpg" alt=""></a>
-                        <a href="https://www.youtube.com/embed/vbeVBDMN3KU?list=PLTas59dAb68eBE-jooq5IvMVesYjoqWQU"
-                           target="tab"><img src="https://img.youtube.com/vi/vbeVBDMN3KU/default.jpg" alt=""></a>
-                        <a href="https://www.youtube.com/embed/E7cz0D3NTUA?list=PLTas59dAb68eBE-jooq5IvMVesYjoqWQU"
-                           target="tab"><img src="https://img.youtube.com/vi/E7cz0D3NTUA/default.jpg" alt=""></a>
-                        <a href="https://www.youtube.com/embed/BqIUqSOBcUU?list=PLTas59dAb68eBE-jooq5IvMVesYjoqWQU"
-                           target="tab"><img src="https://img.youtube.com/vi/BqIUqSOBcUU/default.jpg" alt=""></a>
-                        <a href="https://www.youtube.com/embed/X6L4Eza3C3Q?list=PLTas59dAb68eBE-jooq5IvMVesYjoqWQU"
-                           target="tab"><img src="https://img.youtube.com/vi/X6L4Eza3C3Q/default.jpg" alt=""></a>
-                        <a href="https://www.youtube.com/embed/EeZeW06i02U?list=PLTas59dAb68eBE-jooq5IvMVesYjoqWQU"
-                           target="tab"><img src="https://img.youtube.com/vi/EeZeW06i02U/default.jpg" alt=""></a>
-                    </span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container">
+
+
+        <!-- Video Info Card -->
+        <!-- <div class="video-info-card fade-in">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <h5 class="text-primary-blue mb-3">
+                        <i class="fas fa-play-circle me-2"></i>Video Training Series
+                    </h5>
+                    <p class="text-medium mb-0">
+                        Learn step-by-step how to organize impactful conferences with our comprehensive video series. 
+                        Each video covers essential aspects of conference planning and execution.
+                    </p>
+                </div>
+                <div class="col-md-4 text-md-end mt-3 mt-md-0">
+                    <div class="d-flex align-items-center justify-content-md-end">
+                        <i class="fas fa-video text-secondary-green me-2"></i>
+                        <span class="fw-semibold">9 Training Videos</span>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+        <!-- Video Gallery -->
+        <div class="video-gallery-container my-5 fade-in">
+            <div class="video-counter">
+                <i class="fas fa-list-ol me-1"></i>
+                Video 1 of 9
+            </div>
+            
+            <!-- Main Video Player -->
+            <div class="main-video-container mt-5">
+                <iframe 
+                    src="https://www.youtube.com/embed/B4nDIrmxppU?list=PLTas59dAb68eBE-jooq5IvMVesYjoqWQU"
+                    allowfullscreen 
+                    name="mainVideoFrame"
+                    class="main-video-frame"
+                    title="Conference Organization Training Video">
+                </iframe>
+            </div>
+
+            <!-- Video Thumbnails -->
+            <div class="video-thumbnails">
+                <h6 class="fw-semibold mb-3 text-center">
+                    <i class="fas fa-th-large me-2"></i>Training Series
+                </h6>
+                
+                <div class="thumbnail-grid">
+                    <!-- Video 1 -->
+                    <div class="video-thumbnail" 
+                         onclick="loadVideo('https://www.youtube.com/embed/B4nDIrmxppU?list=PLTas59dAb68eBE-jooq5IvMVesYjoqWQU', 1)"
+                         title="Introduction to Conference Organization">
+                        <img src="https://img.youtube.com/vi/B4nDIrmxppU/mqdefault.jpg" alt="Video 1">
+                    </div>
+                    
+                    <!-- Video 2 -->
+                    <div class="video-thumbnail" 
+                         onclick="loadVideo('https://www.youtube.com/embed/chy46TTa-w0?list=PLTas59dAb68eBE-jooq5IvMVesYjoqWQU', 2)"
+                         title="Planning and Preparation">
+                        <img src="https://img.youtube.com/vi/chy46TTa-w0/mqdefault.jpg" alt="Video 2">
+                    </div>
+                    
+                    <!-- Video 3 -->
+                    <div class="video-thumbnail" 
+                         onclick="loadVideo('https://www.youtube.com/embed/qXfBHnue4pg?list=PLTas59dAb68eBE-jooq5IvMVesYjoqWQU', 3)"
+                         title="Venue Selection and Setup">
+                        <img src="https://img.youtube.com/vi/qXfBHnue4pg/mqdefault.jpg" alt="Video 3">
+                    </div>
+                    
+                    <!-- Video 4 -->
+                    <div class="video-thumbnail" 
+                         onclick="loadVideo('https://www.youtube.com/embed/aTmpNM-Cz6k?list=PLTas59dAb68eBE-jooq5IvMVesYjoqWQU', 4)"
+                         title="Speaker Management">
+                        <img src="https://img.youtube.com/vi/aTmpNM-Cz6k/mqdefault.jpg" alt="Video 4">
+                    </div>
+                    
+                    <!-- Video 5 -->
+                    <div class="video-thumbnail" 
+                         onclick="loadVideo('https://www.youtube.com/embed/vbeVBDMN3KU?list=PLTas59dAb68eBE-jooq5IvMVesYjoqWQU', 5)"
+                         title="Marketing and Promotion">
+                        <img src="https://img.youtube.com/vi/vbeVBDMN3KU/mqdefault.jpg" alt="Video 5">
+                    </div>
+                    
+                    <!-- Video 6 -->
+                    <div class="video-thumbnail" 
+                         onclick="loadVideo('https://www.youtube.com/embed/E7cz0D3NTUA?list=PLTas59dAb68eBE-jooq5IvMVesYjoqWQU', 6)"
+                         title="Registration and Logistics">
+                        <img src="https://img.youtube.com/vi/E7cz0D3NTUA/mqdefault.jpg" alt="Video 6">
+                    </div>
+                    
+                    <!-- Video 7 -->
+                    <div class="video-thumbnail" 
+                         onclick="loadVideo('https://www.youtube.com/embed/BqIUqSOBcUU?list=PLTas59dAb68eBE-jooq5IvMVesYjoqWQU', 7)"
+                         title="Day of Event Management">
+                        <img src="https://img.youtube.com/vi/BqIUqSOBcUU/mqdefault.jpg" alt="Video 7">
+                    </div>
+                    
+                    <!-- Video 8 -->
+                    <div class="video-thumbnail" 
+                         onclick="loadVideo('https://www.youtube.com/embed/X6L4Eza3C3Q?list=PLTas59dAb68eBE-jooq5IvMVesYjoqWQU', 8)"
+                         title="Technology and AV Setup">
+                        <img src="https://img.youtube.com/vi/X6L4Eza3C3Q/mqdefault.jpg" alt="Video 8">
+                    </div>
+                    
+                    <!-- Video 9 -->
+                    <div class="video-thumbnail" 
+                         onclick="loadVideo('https://www.youtube.com/embed/EeZeW06i02U?list=PLTas59dAb68eBE-jooq5IvMVesYjoqWQU', 9)"
+                         title="Post-Event Follow-up">
+                        <img src="https://img.youtube.com/vi/EeZeW06i02U/mqdefault.jpg" alt="Video 9">
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
+    <!-- Back to Top Button -->
+    <button class="back-to-top-btn" onclick="scrollToTop()">
+        <i class="fas fa-chevron-up"></i>
+    </button>
 
+    <script>
+        // Video loading function
+        function loadVideo(videoUrl, videoNumber) {
+            const iframe = document.querySelector('iframe[name="mainVideoFrame"]');
+            const counter = document.querySelector('.video-counter');
+            
+            // Add loading animation
+            iframe.style.opacity = '0.5';
+            
+            setTimeout(() => {
+                iframe.src = videoUrl;
+                counter.innerHTML = `<i class="fas fa-list-ol me-1"></i>Video ${videoNumber} of 9`;
+                iframe.style.opacity = '1';
+            }, 300);
+            
+            // Update active thumbnail
+            document.querySelectorAll('.video-thumbnail').forEach(thumb => {
+                thumb.classList.remove('active');
+            });
+            event.currentTarget.classList.add('active');
+        }
+
+        // Scroll animations
+        function handleScrollAnimations() {
+            const elements = document.querySelectorAll('.fade-in');
+            const windowHeight = window.innerHeight;
+            
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                
+                if (elementTop < windowHeight - 100) {
+                    element.classList.add('fade-in-visible');
+                }
+            });
+        }
+
+        // Back to top functionality
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        // Show/hide back to top button
+        function handleBackToTopButton() {
+            const backToTopBtn = document.querySelector('.back-to-top-btn');
+            
+            if (window.pageYOffset > 300) {
+                backToTopBtn.classList.add('visible');
+            } else {
+                backToTopBtn.classList.remove('visible');
+            }
+        }
+
+        // Event listeners
+        window.addEventListener('scroll', () => {
+            handleScrollAnimations();
+            handleBackToTopButton();
+        });
+
+        // Initial load
+        document.addEventListener('DOMContentLoaded', () => {
+            handleScrollAnimations();
+        });
+    </script>
 {% endblock %}

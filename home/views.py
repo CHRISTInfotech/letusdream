@@ -39,18 +39,40 @@ def login(request):
 
 
 def media(request):
-    return render(request, 'aboutUs/media.html')
+    breadcrumbs = [
+    {'name': 'Home', 'url': 'main', 'icon': 'fas fa-home', 'active': False},
+    {'name': 'About Us', 'url': None, 'icon': 'fas fa-info-circle', 'active': False},
+    {'name': 'Media', 'url': None, 'icon': 'fas fa-photo-video', 'active': True}
+]
+
+    return render(request, 'aboutUs/media.html', {'breadcrumbs': breadcrumbs})
 
 
 def events(request):
-    return render(request, 'aboutUs/events.html')
+    breadcrumbs = [
+        {'name': 'Home', 'url': 'main', 'icon': 'fas fa-home', 'active': False},
+        {'name': 'About Us', 'url': None, 'icon': 'fas fa-info-circle', 'active': False},
+        {'name': 'Events', 'url': None, 'icon': 'fas fa-calendar-days', 'active': True}
+    ]
+
+    return render(request, 'aboutUs/events.html', {'breadcrumbs': breadcrumbs})
 
 
 def pressRelease(request):
+    breadcrumbs = [
+        {'name': 'Home', 'url': 'main', 'icon': 'fas fa-home', 'active': False},
+        {'name': 'About Us', 'url': None, 'icon': 'fas fa-info-circle', 'active': False},
+        {'name': 'Press Release', 'url': None, 'icon': 'fas fa-newspaper', 'active': True}
+    ]
     return render(request, 'aboutUs/media-view-photo.html')
 
 
 def newsletter(request):
+    breadcrumbs = [
+        {'name': 'Home', 'url': 'main', 'icon': 'fas fa-home', 'active': False},
+        {'name': 'About Us', 'url': None, 'icon': 'fas fa-info-circle', 'active': False},
+        {'name': 'Newsletter', 'url': None, 'icon': 'fas fa-envelope', 'active': True}
+    ]
     return render(request, 'aboutUs/newsletter.html')
 
 
@@ -91,7 +113,12 @@ def triennialConference2023(request):
     return render(request, 'conference/triennialConference/triennialConference2023.html', context)
 
 def howtoConference(request):
-    return render(request,'conference/ludConferences.html')
+    breadcrumbs = [
+        {'name': 'Home', 'url': 'main', 'icon': 'fas fa-home', 'active': False},
+        {'name': 'Conference', 'url': None, 'icon': 'fas fa-calendar-alt', 'active': False},
+        {'name': 'Organiser Kit - Let Us Dream Conferences', 'url': None, 'icon': 'fas fa-box-open', 'active': True}
+    ]
+    return render(request,'conference/ludConferences.html', {'breadcrumbs': breadcrumbs,})
 
 def annualConferences(request, year, location):
     if int(year) == 2024 and location == "stfrancisdesalescollege":
@@ -274,7 +301,13 @@ def testimonials(request):
 
 
 def sustainability(request):
-    return render(request, 'aboutUs/sustainability.html')
+    breadcrumbs = [
+        {'name': 'Home', 'url': 'main', 'icon': 'fas fa-home', 'active': False},
+        {'name': 'About Us', 'url': None, 'icon': 'fas fa-info-circle', 'active': False},
+        {'name': 'Sustainability', 'url': None, 'icon': 'fas fa-leaf', 'active': True}
+    ]
+
+    return render(request, 'aboutUs/sustainability.html', {'breadcrumbs': breadcrumbs})
 
 
 

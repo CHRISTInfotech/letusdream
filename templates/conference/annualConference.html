@@ -29,9 +29,7 @@ Annual Conferences - Let Us Dream
         width: 50px;
         height: 50px;
         flex-shrink: 0;
-        /* Prevents the icon from shrinking */
         border-radius: var(--border-radius-small);
-        /* Uses your variable from base.css */
         display: flex;
         align-items: center;
         justify-content: center;
@@ -39,7 +37,6 @@ Annual Conferences - Let Us Dream
         color: var(--white-text);
     }
 
-    /* Optional: Add the other gradient backgrounds as helper classes */
     .bg-gradient-info {
         background: linear-gradient(135deg, #17a2b8, #138496);
     }
@@ -63,7 +60,6 @@ Annual Conferences - Let Us Dream
         transform: translateY(-3px);
     }
 
-
     .conference-evolution {
         background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
         border-radius: var(--border-radius);
@@ -76,8 +72,6 @@ Annual Conferences - Let Us Dream
             height: 60px;
             font-size: 1.5rem;
         }
-
-
     }
 </style>
 {% endblock extraStyles %}
@@ -92,7 +86,6 @@ Annual Conferences - Let Us Dream
                 <h1 class="display-4 fw-bold mb-4 font-primary">Annual Community Conferences</h1>
                 <p class="lead mb-4">Empowering local communities through dialogue, innovation, and collaborative
                     action. Join the movement that's creating lasting change across the globe.</p>
-
             </div>
             <div class="col-lg-6 text-center">
                 <div class="position-relative">
@@ -103,9 +96,6 @@ Annual Conferences - Let Us Dream
         </div>
     </div>
 </section>
-
-
-
 
 <!-- Story Section -->
 <section class="py-5">
@@ -137,9 +127,9 @@ Annual Conferences - Let Us Dream
                             shared global vision.</p>
                     </div>
                     <div class="mt-4">
-                        <button class="btn btn-primary hover-lift">
+                        <a href="#" class="btn btn-primary hover-lift">
                             <i class="fas fa-book-open me-2"></i>Read More
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -255,9 +245,14 @@ Annual Conferences - Let Us Dream
                         </div>
                         <h5 class="card-title text-primary-blue">India - Bangalore</h5>
                         <p class="text-medium mb-3">Tech Innovation Hub</p>
-                        <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modalBangalore">
-                            <i class="fas fa-eye me-2"></i>View Details
-                        </button>
+                        <p class="text-medium mb-3">
+                            <strong>Date:</strong> January 15, 2025<br>
+                            <strong>Theme:</strong> Innovation in Tech Education<br>
+                            <strong>Speakers:</strong> Dr. A Kumar, Ms. Sreeja Rao
+                        </p>
+                        <a href="#" class="btn btn-outline-primary">
+                            <i class="fas fa-external-link-alt me-2"></i>Learn More
+                        </a>
                     </div>
                 </div>
             </div>
@@ -270,10 +265,14 @@ Annual Conferences - Let Us Dream
                         </div>
                         <h5 class="card-title text-primary-blue">India - Trivandrum</h5>
                         <p class="text-medium mb-3">Cultural Heritage Center</p>
-                        <button class="btn btn-outline-primary" data-bs-toggle="modal"
-                            data-bs-target="#modalTrivandrum">
-                            <i class="fas fa-eye me-2"></i>View Details
-                        </button>
+                        <p class="text-medium mb-3">
+                            <strong>Date:</strong> February 10, 2025<br>
+                            <strong>Theme:</strong> Emerging Trends in AI<br>
+                            <strong>Speakers:</strong> Dr. Priya Menon, Mr. John Paul
+                        </p>
+                        <a href="#" class="btn btn-outline-primary">
+                            <i class="fas fa-external-link-alt me-2"></i>Learn More
+                        </a>
                     </div>
                 </div>
             </div>
@@ -286,9 +285,14 @@ Annual Conferences - Let Us Dream
                         </div>
                         <h5 class="card-title text-primary-blue">India - Pune</h5>
                         <p class="text-medium mb-3">Educational Hub</p>
-                        <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modalPune">
-                            <i class="fas fa-eye me-2"></i>View Details
-                        </button>
+                        <p class="text-medium mb-3">
+                            <strong>Date:</strong> March 5, 2025<br>
+                            <strong>Theme:</strong> Educational Innovation<br>
+                            <strong>Speakers:</strong> Dr. Rajesh Sharma, Prof. Meera Kulkarni
+                        </p>
+                        <a href="#" class="btn btn-outline-primary">
+                            <i class="fas fa-external-link-alt me-2"></i>Learn More
+                        </a>
                     </div>
                 </div>
             </div>
@@ -301,9 +305,14 @@ Annual Conferences - Let Us Dream
                         </div>
                         <h5 class="card-title text-primary-blue">India - Hyderabad</h5>
                         <p class="text-medium mb-3">Cyberabad</p>
-                        <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modalHyderabad">
-                            <i class="fas fa-eye me-2"></i>View Details
-                        </button>
+                        <p class="text-medium mb-3">
+                            <strong>Date:</strong> April 12, 2025<br>
+                            <strong>Theme:</strong> Digital Transformation<br>
+                            <strong>Speakers:</strong> Dr. Srinivas Reddy, Ms. Kavitha Nair
+                        </p>
+                        <a href="#" class="btn btn-outline-primary">
+                            <i class="fas fa-external-link-alt me-2"></i>Learn More
+                        </a>
                     </div>
                 </div>
             </div>
@@ -316,9 +325,14 @@ Annual Conferences - Let Us Dream
                         </div>
                         <h5 class="card-title text-primary-blue">India - Chennai</h5>
                         <p class="text-medium mb-3">Detroit of India</p>
-                        <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modalChennai">
-                            <i class="fas fa-eye me-2"></i>View Details
-                        </button>
+                        <p class="text-medium mb-3">
+                            <strong>Date:</strong> May 8, 2025<br>
+                            <strong>Theme:</strong> Healthcare Innovation<br>
+                            <strong>Speakers:</strong> Dr. Ramaswamy, Dr. Lakshmi Prasad
+                        </p>
+                        <a href="#" class="btn btn-outline-primary">
+                            <i class="fas fa-external-link-alt me-2"></i>Learn More
+                        </a>
                     </div>
                 </div>
             </div>
@@ -331,9 +345,14 @@ Annual Conferences - Let Us Dream
                         </div>
                         <h5 class="card-title text-primary-blue">India - Kolkata</h5>
                         <p class="text-medium mb-3">City of Joy</p>
-                        <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modalKolkata">
-                            <i class="fas fa-eye me-2"></i>View Details
-                        </button>
+                        <p class="text-medium mb-3">
+                            <strong>Date:</strong> June 15, 2025<br>
+                            <strong>Theme:</strong> Cultural Heritage & Education<br>
+                            <strong>Speakers:</strong> Prof. Amitabh Sen, Dr. Ruma Ghosh
+                        </p>
+                        <a href="#" class="btn btn-outline-primary">
+                            <i class="fas fa-external-link-alt me-2"></i>Learn More
+                        </a>
                     </div>
                 </div>
             </div>
@@ -346,9 +365,14 @@ Annual Conferences - Let Us Dream
                         </div>
                         <h5 class="card-title text-primary-blue">India - Delhi</h5>
                         <p class="text-medium mb-3">National Capital</p>
-                        <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modalDelhi">
-                            <i class="fas fa-eye me-2"></i>View Details
-                        </button>
+                        <p class="text-medium mb-3">
+                            <strong>Date:</strong> July 20, 2025<br>
+                            <strong>Theme:</strong> Policy & Governance<br>
+                            <strong>Speakers:</strong> Dr. Vikram Singh, Ms. Priya Kapoor
+                        </p>
+                        <a href="#" class="btn btn-outline-primary">
+                            <i class="fas fa-external-link-alt me-2"></i>Learn More
+                        </a>
                     </div>
                 </div>
             </div>
@@ -362,9 +386,14 @@ Annual Conferences - Let Us Dream
                         </div>
                         <h5 class="card-title text-primary-blue">USA - New York</h5>
                         <p class="text-medium mb-3">The Big Apple</p>
-                        <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modalNewYork">
-                            <i class="fas fa-eye me-2"></i>View Details
-                        </button>
+                        <p class="text-medium mb-3">
+                            <strong>Date:</strong> August 25, 2025<br>
+                            <strong>Theme:</strong> Urban Community Development<br>
+                            <strong>Speakers:</strong> Dr. Michael Johnson, Prof. Sarah Williams
+                        </p>
+                        <a href="#" class="btn btn-outline-primary">
+                            <i class="fas fa-external-link-alt me-2"></i>Learn More
+                        </a>
                     </div>
                 </div>
             </div>
@@ -377,9 +406,14 @@ Annual Conferences - Let Us Dream
                         </div>
                         <h5 class="card-title text-primary-blue">USA - Louisiana</h5>
                         <p class="text-medium mb-3">Where It All Began</p>
-                        <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modalLouisiana">
-                            <i class="fas fa-eye me-2"></i>View Details
-                        </button>
+                        <p class="text-medium mb-3">
+                            <strong>Date:</strong> September 15, 2025<br>
+                            <strong>Theme:</strong> Roots & Revival<br>
+                            <strong>Speakers:</strong> Dr. James Roberts, Ms. Maria Thompson
+                        </p>
+                        <a href="#" class="btn btn-outline-primary">
+                            <i class="fas fa-external-link-alt me-2"></i>Learn More
+                        </a>
                     </div>
                 </div>
             </div>
@@ -513,7 +547,7 @@ Annual Conferences - Let Us Dream
                     interested in contributing to their community development can be a part of the
                     conference and engage in fruitful dialogues with visionaries.
                 </p>
-                <a href="https://cmt.letusdream.org" class="btn btn-primary btn-lg hover-lift">
+                <a href="https://cmt.letusdream.org" class="btn btn-primary btn-lg hover-lift" target="_blank">
                     <i class="fas fa-user-plus me-2"></i>Register Now
                 </a>
             </div>
@@ -521,327 +555,9 @@ Annual Conferences - Let Us Dream
     </div>
 </section>
 
-<!-- Modals -->
-<!-- Bangalore Modal -->
-<div class="modal fade" id="modalBangalore" tabindex="-1" aria-labelledby="bangaloreLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered">
-        <div class="modal-content rounded-custom">
-            <div class="modal-header bg-gradient-primary text-white">
-                <h5 class="modal-title font-primary" id="bangaloreLabel">
-                    <i class="fas fa-map-marker-alt me-2"></i>Bangalore - Host Details
-                </h5>
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
-            </div>
-            <div class="modal-body p-4">
-                <div class="row g-3 mb-4">
-                    <div class="col-md-6">
-                        <strong class="text-primary-blue">Date:</strong>
-                        <p class="mb-0">January 15, 2025</p>
-                    </div>
-                    <div class="col-md-6">
-                        <strong class="text-primary-blue">Theme:</strong>
-                        <p class="mb-0">Innovation in Tech Education</p>
-                    </div>
-                </div>
-                <div class="mb-4">
-                    <strong class="text-primary-blue">Key Speakers:</strong>
-                    <p class="mb-0">Dr. A Kumar, Ms. Sreeja Rao</p>
-                </div>
-                <div class="text-center">
-                    <strong class="text-primary-blue d-block mb-3">Conference Poster:</strong>
-                    <img src="{% static 'Aboutus/aboutUs/Conference_overview2.png' %}" alt="Bangalore Conference Poster"
-                        class="img-fluid rounded-custom shadow">
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Trivandrum Modal -->
-<div class="modal fade" id="modalTrivandrum" tabindex="-1" aria-labelledby="trivandrumLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered">
-        <div class="modal-content rounded-custom">
-            <div class="modal-header bg-gradient-secondary">
-                <h5 class="modal-title font-primary" id="trivandrumLabel">
-                    <i class="fas fa-map-marker-alt me-2"></i>Trivandrum - Host Details
-                </h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-            </div>
-            <div class="modal-body p-4">
-                <div class="row g-3 mb-4">
-                    <div class="col-md-6">
-                        <strong class="text-primary-blue">Date:</strong>
-                        <p class="mb-0">February 10, 2025</p>
-                    </div>
-                    <div class="col-md-6">
-                        <strong class="text-primary-blue">Theme:</strong>
-                        <p class="mb-0">Emerging Trends in AI</p>
-                    </div>
-                </div>
-                <div class="mb-4">
-                    <strong class="text-primary-blue">Key Speakers:</strong>
-                    <p class="mb-0">Dr. Priya Menon, Mr. John Paul</p>
-                </div>
-                <div class="text-center">
-                    <strong class="text-primary-blue d-block mb-3">Conference Poster:</strong>
-                    <img src="{% static 'Aboutus/aboutUs/Conference_overview2.png' %}"
-                        alt="Trivandrum Conference Poster" class="img-fluid rounded-custom shadow">
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-
-<div class="modal fade" id="modalPune" tabindex="-1" aria-labelledby="puneLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered">
-        <div class="modal-content rounded-custom">
-            <div class="modal-header" style="background: linear-gradient(135deg, #17a2b8, #138496); color: white;">
-                <h5 class="modal-title font-primary" id="puneLabel">
-                    <i class="fas fa-map-marker-alt me-2"></i>Pune - Host Details
-                </h5>
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
-            </div>
-            <div class="modal-body p-4">
-                <div class="row g-3 mb-4">
-                    <div class="col-md-6">
-                        <strong class="text-primary-blue">Date:</strong>
-                        <p class="mb-0">March 5, 2025</p>
-                    </div>
-                    <div class="col-md-6">
-                        <strong class="text-primary-blue">Theme:</strong>
-                        <p class="mb-0">Educational Innovation</p>
-                    </div>
-                </div>
-                <div class="mb-4">
-                    <strong class="text-primary-blue">Key Speakers:</strong>
-                    <p class="mb-0">Dr. Rajesh Sharma, Prof. Meera Kulkarni</p>
-                </div>
-                <div class="text-center">
-                    <strong class="text-primary-blue d-block mb-3">Conference Poster:</strong>
-                    <img src="{% static 'Aboutus/aboutUs/Conference_overview2.png' %}" alt="Pune Conference Poster"
-                        class="img-fluid rounded-custom shadow">
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Hyderabad Modal -->
-<div class="modal fade" id="modalHyderabad" tabindex="-1" aria-labelledby="hyderabadLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered">
-        <div class="modal-content rounded-custom">
-            <div class="modal-header" style="background: linear-gradient(135deg, #28a745, #20873a); color: white;">
-                <h5 class="modal-title font-primary" id="hyderabadLabel">
-                    <i class="fas fa-map-marker-alt me-2"></i>Hyderabad - Host Details
-                </h5>
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
-            </div>
-            <div class="modal-body p-4">
-                <div class="row g-3 mb-4">
-                    <div class="col-md-6">
-                        <strong class="text-primary-blue">Date:</strong>
-                        <p class="mb-0">April 12, 2025</p>
-                    </div>
-                    <div class="col-md-6">
-                        <strong class="text-primary-blue">Theme:</strong>
-                        <p class="mb-0">Digital Transformation</p>
-                    </div>
-                </div>
-                <div class="mb-4">
-                    <strong class="text-primary-blue">Key Speakers:</strong>
-                    <p class="mb-0">Dr. Srinivas Reddy, Ms. Kavitha Nair</p>
-                </div>
-                <div class="text-center">
-                    <strong class="text-primary-blue d-block mb-3">Conference Poster:</strong>
-                    <img src="{% static 'Aboutus/aboutUs/Conference_overview2.png' %}" alt="Hyderabad Conference Poster"
-                        class="img-fluid rounded-custom shadow">
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Chennai Modal -->
-<div class="modal fade" id="modalChennai" tabindex="-1" aria-labelledby="chennaiLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered">
-        <div class="modal-content rounded-custom">
-            <div class="modal-header" style="background: linear-gradient(135deg, #ffc107, #e0a800); color: black;">
-                <h5 class="modal-title font-primary" id="chennaiLabel">
-                    <i class="fas fa-map-marker-alt me-2"></i>Chennai - Host Details
-                </h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-            </div>
-            <div class="modal-body p-4">
-                <div class="row g-3 mb-4">
-                    <div class="col-md-6">
-                        <strong class="text-primary-blue">Date:</strong>
-                        <p class="mb-0">May 8, 2025</p>
-                    </div>
-                    <div class="col-md-6">
-                        <strong class="text-primary-blue">Theme:</strong>
-                        <p class="mb-0">Healthcare Innovation</p>
-                    </div>
-                </div>
-                <div class="mb-4">
-                    <strong class="text-primary-blue">Key Speakers:</strong>
-                    <p class="mb-0">Dr. Ramaswamy, Dr. Lakshmi Prasad</p>
-                </div>
-                <div class="text-center">
-                    <strong class="text-primary-blue d-block mb-3">Conference Poster:</strong>
-                    <img src="{% static 'Aboutus/aboutUs/Conference_overview2.png' %}" alt="Chennai Conference Poster"
-                        class="img-fluid rounded-custom shadow">
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Kolkata Modal -->
-<div class="modal fade" id="modalKolkata" tabindex="-1" aria-labelledby="kolkataLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered">
-        <div class="modal-content rounded-custom">
-            <div class="modal-header" style="background: linear-gradient(135deg, #dc3545, #c82333); color: white;">
-                <h5 class="modal-title font-primary" id="kolkataLabel">
-                    <i class="fas fa-map-marker-alt me-2"></i>Kolkata - Host Details
-                </h5>
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
-            </div>
-            <div class="modal-body p-4">
-                <div class="row g-3 mb-4">
-                    <div class="col-md-6">
-                        <strong class="text-primary-blue">Date:</strong>
-                        <p class="mb-0">June 15, 2025</p>
-                    </div>
-                    <div class="col-md-6">
-                        <strong class="text-primary-blue">Theme:</strong>
-                        <p class="mb-0">Cultural Heritage & Education</p>
-                    </div>
-                </div>
-                <div class="mb-4">
-                    <strong class="text-primary-blue">Key Speakers:</strong>
-                    <p class="mb-0">Prof. Amitabh Sen, Dr. Ruma Ghosh</p>
-                </div>
-                <div class="text-center">
-                    <strong class="text-primary-blue d-block mb-3">Conference Poster:</strong>
-                    <img src="{% static 'Aboutus/aboutUs/Conference_overview2.png' %}" alt="Kolkata Conference Poster"
-                        class="img-fluid rounded-custom shadow">
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Delhi Modal -->
-<div class="modal fade" id="modalDelhi" tabindex="-1" aria-labelledby="delhiLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered">
-        <div class="modal-content rounded-custom">
-            <div class="modal-header" style="background: linear-gradient(135deg, #6f42c1, #5a3399); color: white;">
-                <h5 class="modal-title font-primary" id="delhiLabel">
-                    <i class="fas fa-map-marker-alt me-2"></i>Delhi - Host Details
-                </h5>
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
-            </div>
-            <div class="modal-body p-4">
-                <div class="row g-3 mb-4">
-                    <div class="col-md-6">
-                        <strong class="text-primary-blue">Date:</strong>
-                        <p class="mb-0">July 20, 2025</p>
-                    </div>
-                    <div class="col-md-6">
-                        <strong class="text-primary-blue">Theme:</strong>
-                        <p class="mb-0">Policy & Governance</p>
-                    </div>
-                </div>
-                <div class="mb-4">
-                    <strong class="text-primary-blue">Key Speakers:</strong>
-                    <p class="mb-0">Dr. Vikram Singh, Ms. Priya Kapoor</p>
-                </div>
-                <div class="text-center">
-                    <strong class="text-primary-blue d-block mb-3">Conference Poster:</strong>
-                    <img src="{% static 'Aboutus/aboutUs/Conference_overview2.png' %}" alt="Delhi Conference Poster"
-                        class="img-fluid rounded-custom shadow">
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- New York Modal -->
-<div class="modal fade" id="modalNewYork" tabindex="-1" aria-labelledby="newYorkLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered">
-        <div class="modal-content rounded-custom">
-            <div class="modal-header" style="background: linear-gradient(135deg, #fd7e14, #e85d04); color: white;">
-                <h5 class="modal-title font-primary" id="newYorkLabel">
-                    <i class="fas fa-map-marker-alt me-2"></i>New York - Host Details
-                </h5>
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
-            </div>
-            <div class="modal-body p-4">
-                <div class="row g-3 mb-4">
-                    <div class="col-md-6">
-                        <strong class="text-primary-blue">Date:</strong>
-                        <p class="mb-0">August 25, 2025</p>
-                    </div>
-                    <div class="col-md-6">
-                        <strong class="text-primary-blue">Theme:</strong>
-                        <p class="mb-0">Urban Community Development</p>
-                    </div>
-                </div>
-                <div class="mb-4">
-                    <strong class="text-primary-blue">Key Speakers:</strong>
-                    <p class="mb-0">Dr. Michael Johnson, Prof. Sarah Williams</p>
-                </div>
-                <div class="text-center">
-                    <strong class="text-primary-blue d-block mb-3">Conference Poster:</strong>
-                    <img src="{% static 'Aboutus/aboutUs/Conference_overview2.png' %}" alt="New York Conference Poster"
-                        class="img-fluid rounded-custom shadow">
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Louisiana Modal -->
-<div class="modal fade" id="modalLouisiana" tabindex="-1" aria-labelledby="louisianaLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered">
-        <div class="modal-content rounded-custom">
-            <div class="modal-header" style="background: linear-gradient(135deg, #20c997, #17a085); color: white;">
-                <h5 class="modal-title font-primary" id="louisianaLabel">
-                    <i class="fas fa-map-marker-alt me-2"></i>Louisiana - Host Details
-                </h5>
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
-            </div>
-            <div class="modal-body p-4">
-                <div class="row g-3 mb-4">
-                    <div class="col-md-6">
-                        <strong class="text-primary-blue">Date:</strong>
-                        <p class="mb-0">September 15, 2025</p>
-                    </div>
-                    <div class="col-md-6">
-                        <strong class="text-primary-blue">Theme:</strong>
-                        <p class="mb-0">Roots & Revival</p>
-                    </div>
-                </div>
-                <div class="mb-4">
-                    <strong class="text-primary-blue">Key Speakers:</strong>
-                    <p class="mb-0">Dr. James Roberts, Ms. Maria Thompson</p>
-                </div>
-                <div class="text-center">
-                    <strong class="text-primary-blue d-block mb-3">Conference Poster:</strong>
-                    <img src="{% static 'Aboutus/aboutUs/Conference_overview2.png' %}" alt="Louisiana Conference Poster"
-                        class="img-fluid rounded-custom shadow">
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
 {% endblock content %}
 
-{% block scripts %}
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+{% block extraScripts %}
 <script>
     // Add smooth scrolling and animation effects
     document.addEventListener('DOMContentLoaded', function () {
@@ -902,4 +618,4 @@ Annual Conferences - Let Us Dream
         window.requestAnimationFrame(step);
     }
 </script>
-{% endblock scripts %}
+{% endblock extraScripts %}
