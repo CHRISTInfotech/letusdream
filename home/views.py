@@ -64,7 +64,7 @@ def pressRelease(request):
         {'name': 'About Us', 'url': None, 'icon': 'fas fa-info-circle', 'active': False},
         {'name': 'Press Release', 'url': None, 'icon': 'fas fa-newspaper', 'active': True}
     ]
-    return render(request, 'aboutUs/media-view-photo.html')
+    return render(request, 'aboutUs/media-view-photo.html', {'breadcrumbs': breadcrumbs})
 
 
 def newsletter(request):
@@ -73,23 +73,43 @@ def newsletter(request):
         {'name': 'About Us', 'url': None, 'icon': 'fas fa-info-circle', 'active': False},
         {'name': 'Newsletter', 'url': None, 'icon': 'fas fa-envelope', 'active': True}
     ]
-    return render(request, 'aboutUs/newsletter.html')
+    return render(request, 'aboutUs/newsletter.html', {'breadcrumbs': breadcrumbs})
 
 
 def photoGallery(request):
-    return render(request, 'aboutUs/photo-gallery.html')
+    breadcrumbs = [
+        {'name': 'Home', 'url': 'main', 'icon': 'fas fa-home', 'active': False},
+        {'name': 'About Us', 'url': None, 'icon': 'fas fa-info-circle', 'active': False},
+        {'name': 'Photo Gallery', 'url': None, 'icon': 'fas fa-image', 'active': True}
+    ]
+    return render(request, 'aboutUs/photo-gallery.html', {'breadcrumbs': breadcrumbs})
 
 
 def youtubeMedia(request):
-    return render(request, 'aboutUs/media-yt.html')
+    breadcrumbs = [
+        {'name': 'Home', 'url': 'main', 'icon': 'fas fa-home', 'active': False},
+        {'name': 'About Us', 'url': None, 'icon': 'fas fa-info-circle', 'active': False},
+        {'name': 'YouTube Media', 'url': None, 'icon': 'fab fa-youtube', 'active': True}
+    ]
+    return render(request, 'aboutUs/media-yt.html', {'breadcrumbs': breadcrumbs})
 
 
 def aboutConference(request):
-    return render(request, 'conference/aboutConference.html')
+    breadcrumbs = [
+        {'name': 'Home', 'url': 'main', 'icon': 'fas fa-home', 'active': False},
+        {'name': 'Conference', 'url': None, 'icon': 'fas fa-calendar', 'active': False},
+        {'name': 'About Conference', 'url': None, 'icon': 'fas fa-info-circle', 'active': True}
+    ]
+    return render(request, 'conference/aboutConference.html', {'breadcrumbs': breadcrumbs})
 
 
 def allConferences(request):
-    return render(request, 'conference/annualConference.html')
+    breadcrumbs = [
+        {'name': 'Home', 'url': 'main', 'icon': 'fas fa-home', 'active': False},
+        {'name': 'Conference', 'url': None, 'icon': 'fas fa-calendar', 'active': False},
+        {'name': 'Annual Conferences', 'url': None, 'icon': 'fas fa-calendar-alt', 'active': True}
+    ]
+    return render(request, 'conference/annualConference.html', {'breadcrumbs': breadcrumbs})
 
 
 def triennialConference(request):
@@ -102,13 +122,28 @@ def triennialConference(request):
 
 
 def triennialConference2020(request):
-    return render(request, 'conference/triennialConference/triennialConference2020.html')
+    breadcrumbs = [
+    {'name': 'Home', 'url': 'main', 'icon': 'fas fa-home', 'active': False},
+    {'name': 'Conferences', 'url': None, 'icon': 'fas fa-calendar-alt', 'active': False},
+    {'name': 'Triennial Conferences', 'url': 'trriennial-conference', 'icon': 'fas fa-calendar-check', 'active': False},
+    {'name': '2020 Conference', 'url': None, 'icon': 'fas fa-file-alt', 'active': True}
+]
+
+    return render(request, 'conference/triennialConference/triennialConference2020.html', {'breadcrumbs': breadcrumbs,})
 
 
 def triennialConference2023(request):
+    breadcrumbs = [
+    {'name': 'Home', 'url': 'main', 'icon': 'fas fa-home', 'active': False},
+    {'name': 'Conferences', 'url': None, 'icon': 'fas fa-calendar-alt', 'active': False},
+    {'name': 'Triennial Conferences', 'url': 'trriennial-conference', 'icon': 'fas fa-calendar-check', 'active': False},
+    {'name': '2023', 'url': None, 'icon': 'fas fa-file-alt', 'active': True}
+]
+
     context = {
         'bgcolor': '#274C7D',
-        "conference_data": CONFERENCE_DATA
+        "conference_data": CONFERENCE_DATA,
+        'breadcrumbs': breadcrumbs,
     }
     return render(request, 'conference/triennialConference/triennialConference2023.html', context)
 
@@ -162,10 +197,23 @@ def yclpCourse(request):
 
 
 def dreams(request, drm):
+
+
     if drm == 'band':
-        return render(request, 'productions/dreamsBand.html', {'drm': drm})
+        breadcrumbs= [
+    {'name': 'Home', 'url': 'main', 'icon': 'fas fa-home', 'active': False},
+    {'name': 'PRODUCTIONS', 'url': None, 'icon': 'fas fa-film', 'active': False},
+    {'name': 'Dreams Band', 'url': None, 'icon': 'fas fa-music', 'active': True}
+]
+
+        return render(request, 'productions/dreamsBand.html', {'drm': drm,'breadcrumbs': breadcrumbs})
     else:
-        return render(request, 'dreams/dreamsProgram.html', {'drm': drm})
+        breadcrumbs= [
+    {'name': 'Home', 'url': 'main', 'icon': 'fas fa-home', 'active': False},
+    {'name': 'DREAMS', 'url': None, 'icon': 'fas fa-star', 'active': False},
+    {'name': 'DREAMS Program', 'url': None, 'icon': 'fas fa-rocket', 'active': True}
+]
+        return render(request, 'dreams/dreamsProgram.html', {'drm': drm, 'breadcrumbs': breadcrumbs})
 
 
 def locations(request, loc):
