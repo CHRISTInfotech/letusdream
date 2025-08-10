@@ -151,7 +151,7 @@ def howtoConference(request):
     breadcrumbs = [
         {'name': 'Home', 'url': 'main', 'icon': 'fas fa-home', 'active': False},
         {'name': 'Conference', 'url': None, 'icon': 'fas fa-calendar-alt', 'active': False},
-        {'name': 'Organiser Kit - Let Us Dream Conferences', 'url': None, 'icon': 'fas fa-box-open', 'active': True}
+        {'name': 'Conference Resources', 'url': None, 'icon': 'fas fa-box-open', 'active': True}
     ]
     return render(request,'conference/ludConferences.html', {'breadcrumbs': breadcrumbs,})
 
