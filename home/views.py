@@ -59,27 +59,225 @@ def events(request):
 
 
 def pressRelease(request):
+    press_items = [
+        {
+            "date": "Feb 10, 2025",
+            "image": "Aboutus/Media/Press/Press10.jpg",
+            "alt": "Press 10",
+            "link": "Aboutus/Media/Press/Press10.jpg"
+        },
+        {
+            "date": "Dec 2024",
+            "image": "Aboutus/Media/Press/lud news.png",
+            "alt": "LUD News December 2024",
+            "link": "2024/Conference/news/ConversationsToday-December2024.pdf"
+        },
+        {
+            "date": "Jul 25, 2015",
+            "image": "Aboutus/Media/Press/Press2.jpg",
+            "alt": "Press 2",
+            "link": "Aboutus/Media/Press/Press2.jpg"
+        },
+        {
+            "date": "Jul 27, 2016",
+            "image": "Aboutus/Media/Press/Press3.jpg",
+            "alt": "Press 3",
+            "link": "Aboutus/Media/Press/Press3.jpg"
+        },
+        {
+            "date": "Jul 27, 2016",
+            "image": "Aboutus/Media/Press/Press6.jpg",
+            "alt": "Press 6",
+            "link": "Aboutus/Media/Press/Press6.jpg"
+        },
+        {
+            "date": "Nov 02, 2017",
+            "image": "Aboutus/Media/Press/Press7.png",
+            "alt": "Press 7",
+            "link": "Aboutus/Media/Press/Press7.png"
+        },
+        {
+            "date": "Nov 02, 2017",
+            "image": "Aboutus/Media/Press/Press8.png",
+            "alt": "Press 8",
+            "link": "Aboutus/Media/Press/Press8.png"
+        },
+        {
+            "date": "Jul 25, 2018",
+            "image": "Aboutus/Media/Press/Press5.jpeg",
+            "alt": "Press 5",
+            "link": "Aboutus/Media/Press/Press5.jpeg"
+        },
+        {
+            "date": "",
+            "image": "Aboutus/Media/Press/Press1.jpg",
+            "alt": "Press 1",
+            "link": "Aboutus/Media/Press/Press1.jpg"
+        },
+        {
+            "date": "",
+            "image": "Aboutus/Media/Press/Press4.jpeg",
+            "alt": "Press 4",
+            "link": "Aboutus/Media/Press/Press4.jpeg"
+        },
+    ]
     breadcrumbs = [
         {'name': 'Home', 'url': 'main', 'icon': 'fas fa-home', 'active': False},
         {'name': 'About Us', 'url': None, 'icon': 'fas fa-info-circle', 'active': False},
+        {'name': 'Media', 'url': 'media', 'icon': 'fas fa-photo-video', 'active': False},
         {'name': 'Press Release', 'url': None, 'icon': 'fas fa-newspaper', 'active': True}
     ]
-    return render(request, 'aboutUs/media-view-photo.html', {'breadcrumbs': breadcrumbs})
+    return render(request, 'aboutUs/pressRelease.html', {'breadcrumbs': breadcrumbs, 'press_items': press_items})
 
 
 def newsletter(request):
+    newsletters = [
+        {
+            "pdf_url": "2025/newsletter/NewsBulletin_Changanassery.pdf",
+            "image_url": "2025/newsletter/NewsBulletin_Changanassery.png",
+            "title": "News Bulletin Changanassery",
+            "month": "Jan", "day": "15", "year": "2025"
+        },
+        {
+            "pdf_url": "Aboutus/Media/Newsletter/dec2024.png",  # image is same as pdf here
+            "image_url": "Aboutus/Media/Newsletter/dec2024.png",
+            "title": "December 2024 Newsletter",
+            "month": "Jul", "day": "", "year": "2024",
+            "is_url": True, "url_name": "newsletter-page", "url_args": ["december", "2024"]
+        },
+        {
+            "pdf_url": "2024/newsletters/DREAMSJNC2024Newsletter.pdf",
+            "image_url": "2024/newsletters/thumbnails/dreamsjnc24.png",
+            "title": "Dreams JNC 2024",
+            "month": "Jul", "day": "", "year": "2024"
+        },
+        {
+            "pdf_url": "2024/newsletters/DREAMSxKJCMTNewsletter_1.pdf",
+            "image_url": "2024/newsletters/thumbnails/DREAMSxKJCMTNewsletter_1.png",
+            "title": "Dreams x KJCMT Newsletter 1",
+            "month": "Jul", "day": "", "year": "2024"
+        },
+        {
+            "pdf_url": "2024/newsletters/Changanassery_2.pdf",
+            "image_url": "2024/newsletters/thumbnails/Changanassery_2.png",
+            "title": "Changanassery 2",
+            "month": "Jul", "day": "", "year": "2024"
+        },
+        {
+            "pdf_url": "2024/newsletters/Changanassery_1.pdf",
+            "image_url": "2024/newsletters/thumbnails/Changanassery_1.png",
+            "title": "Changanassery 1",
+            "month": "Jul", "day": "", "year": "2024"
+        },
+        {
+            "pdf_url": "Aboutus/Media/Newsletter/LUD Connect 01 - September 2023.pdf",
+            "image_url": "Aboutus/Media/Newsletter/LUD Connect 01 - September 2023.png",
+            "title": "LUD Connect 01",
+            "month": "Sep", "day": "", "year": "2023"
+        },
+        {
+            "pdf_url": "Aboutus/Media/Newsletter/LUD Connect 02 - September 2023.pdf",
+            "image_url": "Aboutus/Media/Newsletter/LUD Connect 02 - September 2023.png",
+            "title": "LUD Connect 02",
+            "month": "Sep", "day": "", "year": "2023"
+        },
+        {
+            "pdf_url": "Aboutus/Media/Newsletter/LUD Connect 03 - October 2023.pdf",
+            "image_url": "Aboutus/Media/Newsletter/LUD Connect 03 - October 2023.png",
+            "title": "LUD Connect 03",
+            "month": "Oct", "day": "", "year": "2023"
+        },
+        {
+            "pdf_url": "Aboutus/Media/Newsletter/Newsletter-1.jpg",
+            "image_url": "Aboutus/Media/Newsletter/Newsletter-1.jpg",
+            "title": "Newsletter 1",
+            "month": "Aug", "day": "27", "year": "2020"
+        },
+        {
+            "pdf_url": "Aboutus/Media/Newsletter/Newsletter-2.jpg",
+            "image_url": "Aboutus/Media/Newsletter/Newsletter-2.jpg",
+            "title": "Newsletter 2",
+            "month": "Oct", "day": "21", "year": "2020"
+        },
+        {
+            "pdf_url": "Aboutus/Media/Newsletter/Newsletter-3.jpg",
+            "image_url": "Aboutus/Media/Newsletter/Newsletter-3.jpg",
+            "title": "Newsletter 3",
+            "month": "Nov", "day": "10", "year": "2020"
+        },
+        {
+            "pdf_url": "Aboutus/Media/Newsletter/Newsletter-4.jpg",
+            "image_url": "Aboutus/Media/Newsletter/Newsletter-4.jpg",
+            "title": "Newsletter 4",
+            "month": "Nov", "day": "22", "year": "2020"
+        },
+        {
+            "pdf_url": "Aboutus/Media/Newsletter/Newsletter-5.jpg",
+            "image_url": "Aboutus/Media/Newsletter/Newsletter-5.jpg",
+            "title": "Newsletter 5",
+            "month": "Nov", "day": "22", "year": "2020"
+        },
+        {
+            "pdf_url": "Aboutus/Media/Newsletter/Newsletter-6.jpg",
+            "image_url": "Aboutus/Media/Newsletter/Newsletter-6.jpg",
+            "title": "Newsletter 6",
+            "month": "Nov", "day": "22", "year": "2020"
+        },
+        {
+            "pdf_url": "Aboutus/Media/Newsletter/Newsletter-7.jpg",
+            "image_url": "Aboutus/Media/Newsletter/Newsletter-7.jpg",
+            "title": "Newsletter 7",
+            "month": "Jun", "day": "03", "year": "2021"
+        },
+        {
+            "pdf_url": "Aboutus/Media/Newsletter/Newsletter-8.jpg",
+            "image_url": "Aboutus/Media/Newsletter/Newsletter-8.jpg",
+            "title": "Newsletter 8",
+            "month": "Oct", "day": "03", "year": "2021"
+        },
+        {
+            "pdf_url": "Aboutus/Media/Newsletter/Newsletter-9.jpg",
+            "image_url": "Aboutus/Media/Newsletter/Newsletter-9.jpg",
+            "title": "Newsletter 9",
+            "month": "Dec", "day": "03", "year": "2021"
+        },
+        {
+            "pdf_url": "Aboutus/Media/Newsletter/Lead_team.pdf",
+            "image_url": "Aboutus/Media/Newsletter/lead_team.png",
+            "title": "Lead Team",
+            "month": "June", "day": "03", "year": "2023"
+        },
+        {
+            "pdf_url": "Aboutus/Media/Newsletter/Newsletter-10.jpg",
+            "image_url": "Aboutus/Media/Newsletter/Newsletter-10.jpg",
+            "title": "Newsletter 10",
+            "month": "May", "day": "13", "year": "2017"
+        },
+        {
+            "pdf_url": "Aboutus/Media/Newsletter/studentExchangeProgram.jpg",
+            "image_url": "Aboutus/Media/Newsletter/studentExchangeProgram.jpg",
+            "title": "Student Exchange Program",
+            "month": "June", "day": "01", "year": "2024"
+        }
+    ]
     breadcrumbs = [
         {'name': 'Home', 'url': 'main', 'icon': 'fas fa-home', 'active': False},
         {'name': 'About Us', 'url': None, 'icon': 'fas fa-info-circle', 'active': False},
+        {'name': 'Media', 'url': 'media', 'icon': 'fas fa-photo-video', 'active': False},
         {'name': 'Newsletter', 'url': None, 'icon': 'fas fa-envelope', 'active': True}
     ]
-    return render(request, 'aboutUs/newsletter.html', {'breadcrumbs': breadcrumbs})
+
+    # Sort newsletters by year and month
+    newsletters.sort(key=lambda x: (x['year'], x['month']), reverse=True)
+    # Render the template with the newsletters and breadcrumbs
+    return render(request, 'aboutUs/newsletter.html', {'breadcrumbs': breadcrumbs, 'newsletters': newsletters})
 
 
 def photoGallery(request):
     breadcrumbs = [
         {'name': 'Home', 'url': 'main', 'icon': 'fas fa-home', 'active': False},
         {'name': 'About Us', 'url': None, 'icon': 'fas fa-info-circle', 'active': False},
+        {'name': 'Media', 'url': 'media', 'icon': 'fas fa-photo-video', 'active': False},
         {'name': 'Photo Gallery', 'url': None, 'icon': 'fas fa-image', 'active': True}
     ]
     return render(request, 'aboutUs/photo-gallery.html', {'breadcrumbs': breadcrumbs})
@@ -89,6 +287,7 @@ def youtubeMedia(request):
     breadcrumbs = [
         {'name': 'Home', 'url': 'main', 'icon': 'fas fa-home', 'active': False},
         {'name': 'About Us', 'url': None, 'icon': 'fas fa-info-circle', 'active': False},
+        {'name': 'Media', 'url': 'media', 'icon': 'fas fa-photo-video', 'active': False},
         {'name': 'YouTube Media', 'url': None, 'icon': 'fab fa-youtube', 'active': True}
     ]
     return render(request, 'aboutUs/media-yt.html', {'breadcrumbs': breadcrumbs})
