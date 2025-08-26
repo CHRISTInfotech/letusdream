@@ -3,145 +3,376 @@
 
 {% block title %} Events {% endblock %}
 
-
 {% block links %}
-    <link rel="stylesheet" href="{% static 'css/2025/media.css' %}" type="text/css"/>
 {% endblock links %}
 
 {% block content %}
-
-    <nav aria-label="breadcrumb animated slideInDown" class="cus-breadcrumb breadcrumb-style">
-        <ol class="breadcrumb container mb-0 ">
-            <li class="breadcrumb-item">
-                <a class="text-black text-decoration-none" href="{% url 'main' %}">Home</a>
-            </li>
-            <li class="breadcrumb-item">
-                <a class="text-black text-decoration-none">About Us</a>
-            </li>
-            <li class="breadcrumb-item active" aria-current="page">Events</li>
-        </ol>
-    </nav>
-
-    <div class="container my-5">
-        <h1 class="mt-4 text-center">EVENTS</h1>
-        <div class="text-center mb-4 fst-italic fs-4">
-            Find out what recently happened in LUD
+    <!-- Page Header -->
+    <section class="">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-12">
+                   
+                    <h1 class="display-4 fw-bold mb-2">Events</h1>
+                    <p class="lead mb-3">
+                        Find out what recently happened in LUD
+                    </p>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <div class="row mt-5 mb-5">
-            <div class="col-xl-3 col-md-6 col-sm-3 mb-4">
-                <div class="text-center bg-light fw-bold mb-3">
-                    Nov 05, 2023
-                </div>
-                <img src="{% static '2024/Reports/DREAMS - NGO.jpg' %}"
-                     class="img-fluid rounded" alt=""/>
+    <!-- Events Grid Section -->
+    <div class="content-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title mb-2">Recent Events & Activities</h2>
+                <p class="text-medium">Explore our latest community programs, workshops, and milestone celebrations</p>
             </div>
-            <div class="col-xl-3 col-md-6 col-sm-3 mb-4">
-                <div class="text-center bg-light fw-bold mb-3">
-                    June 01-09, 2024
+
+            <div class="row g-4 cards-grid">
+                <!-- Event 1 -->
+                <div class="col-xl-3 col-lg-4 col-md-6 fade-in">
+                    <div class="content-card hover-lift h-100">
+                        <div class="event-date bg-gradient-primary text-white rounded-custom-small p-2 mb-3 text-center">
+                            <small class="fw-bold">21st and 22nd September 2024</small>
+                        </div>
+                        <div class="event-image-container mb-3">
+                            <img src="{% static '2024/dreams/Events/event1.png' %}"
+                                 class="img-fluid rounded-custom shadow-custom-small hover-scale w-100"
+                                 alt="September 2024 Event"
+                                 style="height: 200px; object-fit: cover;">
+                        </div>
+                        <div class="event-content">
+                            <h6 class="text-primary-blue mb-2">Community Workshop</h6>
+                            <p class="text-medium small mb-0">Two-day intensive community development workshop</p>
+                        </div>
+                    </div>
                 </div>
-                <img src="{% static '2024/Reports/CV FOLLOW UP SESSION - 2.jpg' %}"
-                     class="img-fluid rounded" alt=""/>
-            </div>
-            <div class="col-xl-3 col-md-6 col-sm-3 mb-4">
-                <div class="text-center bg-light fw-bold mb-3">
-                    March 23, 2024
+
+                <!-- Event 2 -->
+                <div class="col-xl-3 col-lg-4 col-md-6 fade-in">
+                    <div class="content-card hover-lift h-100">
+                        <div class="event-date bg-gradient-primary text-white rounded-custom-small p-2 mb-3 text-center">
+                            <small class="fw-bold">14th September 2024</small>
+                        </div>
+                        <div class="event-image-container mb-3">
+                            <img src="{% static '2024/dreams/Events/event3.jpg' %}"
+                                 class="img-fluid rounded-custom shadow-custom-small hover-scale w-100"
+                                 alt="September 14 Event"
+                                 style="height: 200px; object-fit: cover;">
+                        </div>
+                        <div class="event-content">
+                            <h6 class="text-primary-blue mb-2">Special Program</h6>
+                            <p class="text-medium small mb-0">Community engagement and development session</p>
+                        </div>
+                    </div>
                 </div>
-                <img src="{% static '2024/Reports/INVESTITURE CEREMONY.jpg' %}"
-                     class="img-fluid rounded" alt=""/>
-            </div>
-            <div class="col-xl-3 col-md-6 col-sm-3 mb-4">
-                <div class="text-center bg-light fw-bold mb-3">
-                    June 01-09, 2024
+
+                <!-- Event 3 -->
+                <div class="col-xl-3 col-lg-4 col-md-6 fade-in">
+                    <div class="content-card hover-lift h-100">
+                        <div class="event-date bg-gradient-secondary text-dark rounded-custom-small p-2 mb-3 text-center">
+                            <small class="fw-bold">Nov 05, 2023</small>
+                        </div>
+                        <div class="event-image-container mb-3">
+                            <img src="{% static '2024/Reports/DREAMS - NGO.jpg' %}"
+                                 class="img-fluid rounded-custom shadow-custom-small hover-scale w-100"
+                                 alt="DREAMS NGO Event"
+                                 style="height: 200px; object-fit: cover;">
+                        </div>
+                        <div class="event-content">
+                            <h6 class="text-primary-blue mb-2">DREAMS - NGO</h6>
+                            <p class="text-medium small mb-0">Annual NGO collaboration and networking event</p>
+                        </div>
+                    </div>
                 </div>
-                <img src="{% static '2024/Reports/STUDENT EXCHANGE PROGRAM.jpg' %}"
-                     class="img-fluid rounded" alt=""/>
-            </div>
-            <div class="col-xl-3 col-md-6 col-sm-3 mb-4">
-                <div class="text-center bg-light fw-bold mb-3">
-                    June 29, 2024
+
+                <!-- Event 4 -->
+                <div class="col-xl-3 col-lg-4 col-md-6 fade-in">
+                    <div class="content-card hover-lift h-100">
+                        <div class="event-date bg-gradient-primary text-white rounded-custom-small p-2 mb-3 text-center">
+                            <small class="fw-bold">June 01-09, 2024</small>
+                        </div>
+                        <div class="event-image-container mb-3">
+                            <img src="{% static '2024/Reports/CV FOLLOW UP SESSION - 2.jpg' %}"
+                                 class="img-fluid rounded-custom shadow-custom-small hover-scale w-100"
+                                 alt="CV Follow Up Session"
+                                 style="height: 200px; object-fit: cover;">
+                        </div>
+                        <div class="event-content">
+                            <h6 class="text-primary-blue mb-2">CV Follow Up Session</h6>
+                            <p class="text-medium small mb-0">Week-long career development and mentoring program</p>
+                        </div>
+                    </div>
                 </div>
-                <img src="{% static '2024/Reports/TRAINING SESSION FOR ST. ANTHONY_S NEW MENTORS.jpg' %}"
-                     class="img-fluid rounded" alt=""/>
-            </div>
-            <div class="col-xl-3 col-md-6 col-sm-3 mb-4">
-                <div class="text-center bg-light fw-bold mb-3">
-                    July 06, 2024
+
+                <!-- Event 5 -->
+                <div class="col-xl-3 col-lg-4 col-md-6 fade-in">
+                    <div class="content-card hover-lift h-100">
+                        <div class="event-date bg-gradient-secondary text-dark rounded-custom-small p-2 mb-3 text-center">
+                            <small class="fw-bold">March 23, 2024</small>
+                        </div>
+                        <div class="event-image-container mb-3">
+                            <img src="{% static '2024/Reports/INVESTITURE CEREMONY.jpg' %}"
+                                 class="img-fluid rounded-custom shadow-custom-small hover-scale w-100"
+                                 alt="Investiture Ceremony"
+                                 style="height: 200px; object-fit: cover;">
+                        </div>
+                        <div class="event-content">
+                            <h6 class="text-primary-blue mb-2">Investiture Ceremony</h6>
+                            <p class="text-medium small mb-0">Leadership installation and recognition ceremony</p>
+                        </div>
+                    </div>
                 </div>
-                <img src="{% static '2024/Reports/WORKSHOP.jpg' %}"
-                     class="img-fluid rounded" alt=""/>
-            </div>
-            <div class="col-xl-3 col-md-6 col-sm-3 mb-4">
-                <div class="text-center bg-light fw-bold mb-3">
-                    September 05, 2024
+
+                <!-- Event 6 -->
+                <div class="col-xl-3 col-lg-4 col-md-6 fade-in">
+                    <div class="content-card hover-lift h-100">
+                        <div class="event-date bg-gradient-primary text-white rounded-custom-small p-2 mb-3 text-center">
+                            <small class="fw-bold">June 01-09, 2024</small>
+                        </div>
+                        <div class="event-image-container mb-3">
+                            <img src="{% static '2024/Reports/STUDENT EXCHANGE PROGRAM.jpg' %}"
+                                 class="img-fluid rounded-custom shadow-custom-small hover-scale w-100"
+                                 alt="Student Exchange Program"
+                                 style="height: 200px; object-fit: cover;">
+                        </div>
+                        <div class="event-content">
+                            <h6 class="text-primary-blue mb-2">Student Exchange Program</h6>
+                            <p class="text-medium small mb-0">International student collaboration and learning exchange</p>
+                        </div>
+                    </div>
                 </div>
-                <img src="{% static '2024/Reports/TEACHERS_ DAY 2024.jpg' %}"
-                     class="img-fluid rounded" alt=""/>
-            </div>
-            <div class="col-xl-3 col-md-6 col-sm-3 mb-4">
-                <div class="text-center bg-light fw-bold mb-3">
-                    September 10, 2024
+
+                <!-- Event 7 -->
+                <div class="col-xl-3 col-lg-4 col-md-6 fade-in">
+                    <div class="content-card hover-lift h-100">
+                        <div class="event-date bg-gradient-secondary text-dark rounded-custom-small p-2 mb-3 text-center">
+                            <small class="fw-bold">June 29, 2024</small>
+                        </div>
+                        <div class="event-image-container mb-3">
+                            <img src="{% static '2024/Reports/TRAINING SESSION FOR ST. ANTHONY_S NEW MENTORS.jpg' %}"
+                                 class="img-fluid rounded-custom shadow-custom-small hover-scale w-100"
+                                 alt="Training Session for New Mentors"
+                                 style="height: 200px; object-fit: cover;">
+                        </div>
+                        <div class="event-content">
+                            <h6 class="text-primary-blue mb-2">Mentor Training Session</h6>
+                            <p class="text-medium small mb-0">Training session for St. Anthony's new mentors</p>
+                        </div>
+                    </div>
                 </div>
-                <img src="{% static '2024/Reports/JAM SESSION.jpg' %}"
-                     class="img-fluid rounded" alt=""/>
-            </div>
-            <div class="col-xl-3 col-md-6 col-sm-3 mb-4">
-                <div class="text-center bg-light fw-bold mb-3">
-                    September 11, 2024
+
+                <!-- Event 8 -->
+                <div class="col-xl-3 col-lg-4 col-md-6 fade-in">
+                    <div class="content-card hover-lift h-100">
+                        <div class="event-date bg-gradient-primary text-white rounded-custom-small p-2 mb-3 text-center">
+                            <small class="fw-bold">July 06, 2024</small>
+                        </div>
+                        <div class="event-image-container mb-3">
+                            <img src="{% static '2024/Reports/WORKSHOP.jpg' %}"
+                                 class="img-fluid rounded-custom shadow-custom-small hover-scale w-100"
+                                 alt="Workshop"
+                                 style="height: 200px; object-fit: cover;">
+                        </div>
+                        <div class="event-content">
+                            <h6 class="text-primary-blue mb-2">Skills Development Workshop</h6>
+                            <p class="text-medium small mb-0">Comprehensive skills building and development workshop</p>
+                        </div>
+                    </div>
                 </div>
-                <img src="{% static '2024/Reports/GOALS AND PRINCIPLES TRAINING SESSION.jpg' %}"
-                     class="img-fluid rounded" alt=""/>
-            </div>
-            <div class="col-xl-3 col-md-6 col-sm-3 mb-4">
-                <div class="text-center bg-light fw-bold mb-3">
-                    September 21-22, 2024
+
+                <!-- Event 9 -->
+                <div class="col-xl-3 col-lg-4 col-md-6 fade-in">
+                    <div class="content-card hover-lift h-100">
+                        <div class="event-date bg-gradient-secondary text-dark rounded-custom-small p-2 mb-3 text-center">
+                            <small class="fw-bold">September 05, 2024</small>
+                        </div>
+                        <div class="event-image-container mb-3">
+                            <img src="{% static '2024/Reports/TEACHERS_ DAY 2024.jpg' %}"
+                                 class="img-fluid rounded-custom shadow-custom-small hover-scale w-100"
+                                 alt="Teachers Day 2024"
+                                 style="height: 200px; object-fit: cover;">
+                        </div>
+                        <div class="event-content">
+                            <h6 class="text-primary-blue mb-2">Teachers' Day 2024</h6>
+                            <p class="text-medium small mb-0">Celebrating educators and their contributions to community</p>
+                        </div>
+                    </div>
                 </div>
-                <img src="{% static '2024/Reports/OLT POSTER.jpg' %}"
-                     class="img-fluid rounded" alt=""/>
-            </div>
-            <div class="col-xl-3 col-md-6 col-sm-3 mb-4">
-                <div class="text-center bg-light fw-bold mb-3">
-                    September 28, 2024
+
+                <!-- Event 10 -->
+                <div class="col-xl-3 col-lg-4 col-md-6 fade-in">
+                    <div class="content-card hover-lift h-100">
+                        <div class="event-date bg-gradient-primary text-white rounded-custom-small p-2 mb-3 text-center">
+                            <small class="fw-bold">September 10, 2024</small>
+                        </div>
+                        <div class="event-image-container mb-3">
+                            <img src="{% static '2024/Reports/JAM SESSION.jpg' %}"
+                                 class="img-fluid rounded-custom shadow-custom-small hover-scale w-100"
+                                 alt="JAM Session"
+                                 style="height: 200px; object-fit: cover;">
+                        </div>
+                        <div class="event-content">
+                            <h6 class="text-primary-blue mb-2">JAM Session</h6>
+                            <p class="text-medium small mb-0">Interactive jam session for creative expression and collaboration</p>
+                        </div>
+                    </div>
                 </div>
-                <img src="{% static '2024/Reports/YCLP SESSION - 2ND YEARS .jpg' %}"
-                     class="img-fluid rounded" alt=""/>
-            </div>
-            <div class="col-xl-3 col-md-6 col-sm-3 mb-4">
-                <div class="text-center bg-light fw-bold mb-3">
-                    September 30, 2024
+
+                <!-- Event 11 -->
+                <div class="col-xl-3 col-lg-4 col-md-6 fade-in">
+                    <div class="content-card hover-lift h-100">
+                        <div class="event-date bg-gradient-secondary text-dark rounded-custom-small p-2 mb-3 text-center">
+                            <small class="fw-bold">September 11, 2024</small>
+                        </div>
+                        <div class="event-image-container mb-3">
+                            <img src="{% static '2024/Reports/GOALS AND PRINCIPLES TRAINING SESSION.jpg' %}"
+                                 class="img-fluid rounded-custom shadow-custom-small hover-scale w-100"
+                                 alt="Goals and Principles Training"
+                                 style="height: 200px; object-fit: cover;">
+                        </div>
+                        <div class="event-content">
+                            <h6 class="text-primary-blue mb-2">Goals & Principles Training</h6>
+                            <p class="text-medium small mb-0">Foundation training on organizational goals and principles</p>
+                        </div>
+                    </div>
                 </div>
-                <img src="{% static '2024/Reports/CV CHAPTER CONNECT.jpg' %}"
-                     class="img-fluid rounded" alt=""/>
-            </div>
-            <div class="col-xl-3 col-md-6 col-sm-3 mb-4">
-                <div class="text-center bg-light fw-bold mb-3">
-                    September 30, 2024
+
+                <!-- Event 12 -->
+                <div class="col-xl-3 col-lg-4 col-md-6 fade-in">
+                    <div class="content-card hover-lift h-100">
+                        <div class="event-date bg-gradient-primary text-white rounded-custom-small p-2 mb-3 text-center">
+                            <small class="fw-bold">September 21-22, 2024</small>
+                        </div>
+                        <div class="event-image-container mb-3">
+                            <img src="{% static '2024/Reports/OLT POSTER.jpg' %}"
+                                 class="img-fluid rounded-custom shadow-custom-small hover-scale w-100"
+                                 alt="OLT Event"
+                                 style="height: 200px; object-fit: cover;">
+                        </div>
+                        <div class="event-content">
+                            <h6 class="text-primary-blue mb-2">OLT Program</h6>
+                            <p class="text-medium small mb-0">Two-day Organizational Leadership Training program</p>
+                        </div>
+                    </div>
                 </div>
-                <img src="{% static '2024/Reports/ST ANTHONY - CHAPTER CONNECT.jpg' %}"
-                     class="img-fluid rounded" alt=""/>
-            </div>
-            <div class="col-xl-3 col-md-6 col-sm-3 mb-4">
-                <div class="text-center bg-light fw-bold mb-3">
-                    October 07, 2024
+
+                <!-- Event 13 -->
+                <div class="col-xl-3 col-lg-4 col-md-6 fade-in">
+                    <div class="content-card hover-lift h-100">
+                        <div class="event-date bg-gradient-secondary text-dark rounded-custom-small p-2 mb-3 text-center">
+                            <small class="fw-bold">September 28, 2024</small>
+                        </div>
+                        <div class="event-image-container mb-3">
+                            <img src="{% static '2024/Reports/YCLP SESSION - 2ND YEARS .jpg' %}"
+                                 class="img-fluid rounded-custom shadow-custom-small hover-scale w-100"
+                                 alt="YCLP Session"
+                                 style="height: 200px; object-fit: cover;">
+                        </div>
+                        <div class="event-content">
+                            <h6 class="text-primary-blue mb-2">YCLP Session - 2nd Years</h6>
+                                                        <p class="text-medium small mb-0">Youth Community Leadership Program for second-year participants</p>
+                        </div>
+                    </div>
                 </div>
-                <img src="{% static '2024/Reports/ST. ANTHONY FOLLOW UP - 1.jpg' %}"
-                     class="img-fluid rounded" alt=""/>
-            </div>
-            <div class="col-xl-3 col-md-6 col-sm-3 mb-4">
-                <div class="text-center bg-light fw-bold mb-3">
-                    October 25, 2024
+
+                <!-- Event 14 -->
+                <div class="col-xl-3 col-lg-4 col-md-6 fade-in">
+                    <div class="content-card hover-lift h-100">
+                        <div class="event-date bg-gradient-primary text-white rounded-custom-small p-2 mb-3 text-center">
+                            <small class="fw-bold">September 30, 2024</small>
+                        </div>
+                        <div class="event-image-container mb-3">
+                            <img src="{% static '2024/Reports/CV CHAPTER CONNECT.jpg' %}"
+                                 class="img-fluid rounded-custom shadow-custom-small hover-scale w-100"
+                                 alt="CV Chapter Connect"
+                                 style="height: 200px; object-fit: cover;">
+                        </div>
+                        <div class="event-content">
+                            <h6 class="text-primary-blue mb-2">CV Chapter Connect</h6>
+                            <p class="text-medium small mb-0">Chapter networking and collaboration session</p>
+                        </div>
+                    </div>
                 </div>
-                 <img src="{% static '2024/Reports/SA & CV COLLAB MEET.jpg' %}"
-                     class="img-fluid rounded" alt=""/>
-            </div>
-            <div class="col-xl-3 col-md-6 col-sm-3 mb-4">
-                <div class="text-center bg-light fw-bold mb-3">
-                    November 23, 2024
+
+                <!-- Event 15 -->
+                <div class="col-xl-3 col-lg-4 col-md-6 fade-in">
+                    <div class="content-card hover-lift h-100">
+                        <div class="event-date bg-gradient-secondary text-dark rounded-custom-small p-2 mb-3 text-center">
+                            <small class="fw-bold">September 30, 2024</small>
+                        </div>
+                        <div class="event-image-container mb-3">
+                            <img src="{% static '2024/Reports/ST ANTHONY - CHAPTER CONNECT.jpg' %}"
+                                 class="img-fluid rounded-custom shadow-custom-small hover-scale w-100"
+                                 alt="St Anthony Chapter Connect"
+                                 style="height: 200px; object-fit: cover;">
+                        </div>
+                        <div class="event-content">
+                            <h6 class="text-primary-blue mb-2">St Anthony - Chapter Connect</h6>
+                            <p class="text-medium small mb-0">St Anthony chapter networking and community building</p>
+                        </div>
+                    </div>
                 </div>
-                 <img src="{% static '2024/Reports/FOLLOW UP 2 ST. ANTHONY.jpg' %}"
-                     class="img-fluid rounded" alt=""/>
+
+                <!-- Event 16 -->
+                <div class="col-xl-3 col-lg-4 col-md-6 fade-in">
+                    <div class="content-card hover-lift h-100">
+                        <div class="event-date bg-gradient-primary text-white rounded-custom-small p-2 mb-3 text-center">
+                            <small class="fw-bold">October 07, 2024</small>
+                        </div>
+                        <div class="event-image-container mb-3">
+                            <img src="{% static '2024/Reports/ST. ANTHONY FOLLOW UP - 1.jpg' %}"
+                                 class="img-fluid rounded-custom shadow-custom-small hover-scale w-100"
+                                 alt="St Anthony Follow Up"
+                                 style="height: 200px; object-fit: cover;">
+                        </div>
+                        <div class="event-content">
+                            <h6 class="text-primary-blue mb-2">St. Anthony Follow Up - 1</h6>
+                            <p class="text-medium small mb-0">First follow-up session for St. Anthony program participants</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event 17 -->
+                <div class="col-xl-3 col-lg-4 col-md-6 fade-in">
+                    <div class="content-card hover-lift h-100">
+                        <div class="event-date bg-gradient-secondary text-dark rounded-custom-small p-2 mb-3 text-center">
+                            <small class="fw-bold">October 25, 2024</small>
+                        </div>
+                        <div class="event-image-container mb-3">
+                            <img src="{% static '2024/Reports/SA & CV COLLAB MEET.jpg' %}"
+                                 class="img-fluid rounded-custom shadow-custom-small hover-scale w-100"
+                                 alt="SA & CV Collaboration Meeting"
+                                 style="height: 200px; object-fit: cover;">
+                        </div>
+                        <div class="event-content">
+                            <h6 class="text-primary-blue mb-2">SA & CV Collaboration Meet</h6>
+                            <p class="text-medium small mb-0">Joint collaboration meeting between SA and CV chapters</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event 18 -->
+                <div class="col-xl-3 col-lg-4 col-md-6 fade-in">
+                    <div class="content-card hover-lift h-100">
+                        <div class="event-date bg-gradient-primary text-white rounded-custom-small p-2 mb-3 text-center">
+                            <small class="fw-bold">November 23, 2024</small>
+                        </div>
+                        <div class="event-image-container mb-3">
+                            <img src="{% static '2024/Reports/FOLLOW UP 2 ST. ANTHONY.jpg' %}"
+                                 class="img-fluid rounded-custom shadow-custom-small hover-scale w-100"
+                                 alt="Follow Up 2 St Anthony"
+                                 style="height: 200px; object-fit: cover;">
+                        </div>
+                        <div class="event-content">
+                            <h6 class="text-primary-blue mb-2">Follow Up 2 - St. Anthony</h6>
+                            <p class="text-medium small mb-0">Second follow-up session for St. Anthony program participants</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-
 {% endblock %}

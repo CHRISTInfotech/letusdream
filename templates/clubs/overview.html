@@ -2,255 +2,394 @@
 {% load static %}
 
 {% block title %}
-    Clubs Overview
+Clubs Overview
 {% endblock title %}
 
-
 {% block links %}
-    <link rel="stylesheet" href="{% static 'css/2025/clubs.css' %}" type="text/css">
 {% endblock links %}
 
+{% block extraStyles %}
+{% endblock extraStyles %}
+
 {% block content %}
-
-    <nav aria-label="breadcrumb animated slideInDown" class="cus-breadcrumb breadcrumb-style">
-        <ol class="breadcrumb container mb-0 ">
-            <li class="breadcrumb-item">
-                <a class="text-black text-decoration-none" href="{% url 'main' %}">Home</a>
-            </li>
-            <li class="breadcrumb-item">
-                <a class="text-black text-decoration-none">Clubs</a>
-            </li>
-            <li class="breadcrumb-item active" aria-current="page">Overview</li>
-        </ol>
-    </nav>
-
-    <div class="">
-
-        <img src="{% static '/clubs/1.png' %}" alt="Clubs Overview Image" class="img-fluid" id="expandableImage"
-             style="cursor:pointer;">
-
+<!-- Page Header -->
+    <section class="">
         <div class="container">
-            <div class="row mt-5 mb-5">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-8">
+                   
+                    <h1 class="display-4 fw-bold mb-2">LET US DREAM Clubs</h1>
+                    <p class="lead mb-3">
+                       Vibrant communities for personal and professional growth
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
 
+<!-- Hero Image Section -->
+<div class="content-section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-12">
+                <div class="content-card p-0 overflow-hidden fade-in">
+                    <img src="{% static '/clubs/1.png' %}" alt="Clubs Overview Image"
+                        class="img-fluid w-100 hover-scale" id="expandableImage"
+                        style="cursor: pointer; transition: var(--transition-slow);">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-            <div class="lh-lg justify-content-center text-justify">
-                Welcome to the Let Us Dream (LUD) Clubs! Our clubs are vibrant communities dedicated to personal and
-                professional growth, collaboration,
-                and community engagement. We believe in the transformative power of connection and shared experiences,
-                which
-                inspire individuals to reach their
-                full potential.
+<!-- Welcome Section -->
+<div class="content-section bg-light-gray">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="content-card text-center fade-in">
+                    <div class="content-card-icon mx-auto mb-4">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <p class="text-medium lh-lg justify">
+                        Welcome to the Let Us Dream (LUD) Clubs! Our clubs are vibrant communities dedicated to personal
+                        and
+                        professional growth, collaboration, and community engagement. We believe in the transformative
+                        power of connection and shared experiences,
+                        which inspire individuals to reach their full potential.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Mission Section -->
+<div class="content-section">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="section-title fade-in">Our Mission</h2>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="content-card fade-in">
+                    <p class="text-medium lh-lg justify">
+                        At LUD Clubs, we aim to create inclusive spaces where members can share knowledge, foster
+                        meaningful
+                        relationships, and engage in transformative discussions. We aim to empower individuals to
+                        navigate personal and professional challenges while
+                        promoting a sense of belonging and community.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Why Join Section -->
+<div class="content-section bg-light-gray">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="section-title fade-in">Why Join a Club?</h2>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-lg-6 fade-in">
+                <div class="content-card h-100">
+                    <div class="content-card-icon mb-3">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h5 class="text-primary-blue font-primary mb-3">Networking Opportunities</h5>
+                    <p class="text-medium">
+                        Connect with like-minded individuals from diverse backgrounds and fields, fostering
+                        relationships that can lead to lifelong
+                        friendships and collaborations.
+                    </p>
+                </div>
             </div>
 
-
-            <div class="col mt-5">
-                <div class="fw-bolder fs-2 mb-3 text-center">
-                    Our Mission
+            <div class="col-lg-6 fade-in">
+                <div class="content-card h-100">
+                    <div class="content-card-icon mb-3 bg-gradient-secondary">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h5 class="text-primary-blue font-primary mb-3">Personal Development</h5>
+                    <p class="text-medium">
+                        Participate in engaging activities, workshops, and discussions that enhance your skills, boost
+                        your confidence, and promote
+                        self-reflection. Our clubs are designed to support your journey of self-discovery and growth.
+                    </p>
                 </div>
-                <div class="lh-lg justify-content-center text-justify">
-                    At LUD Clubs, we aim to create inclusive spaces where members can share knowledge, foster meaningful
-                    relationships, and engage in transformative
-                    discussions. We aim to empower individuals to navigate personal and professional challenges while
-                    promoting a sense of belonging and community.
-                </div>
+            </div>
 
-                <div class="fw-bolder fs-2 mb-3 mt-5 text-center">
-                    Why Join a Club?
+            <div class="col-lg-6 fade-in">
+                <div class="content-card h-100">
+                    <div class="content-card-icon mb-3"
+                        style="background: linear-gradient(135deg, #28a745 0%, #20c997 100%);">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h5 class="text-primary-blue font-primary mb-3">Supportive Environment</h5>
+                    <p class="text-medium">
+                        Find a safe space to share experiences, seek advice, and gain inspiration from fellow members.
+                        Our clubs cultivate a culture of
+                        empathy, encouraging open conversations that can lead to personal breakthroughs and collective
+                        wisdom.
+                    </p>
                 </div>
-                <div class="lh-lg">
-                    <ul class="custom-font justify-content-center">
-                        <li>
-                            <span class="fw-bold">Networking Opportunities: </span> Connect with like-minded individuals
-                            from diverse backgrounds and fields, fostering relationships that can lead to lifelong
-                            friendships and collaborations.
-                        </li>
-                        <li>
-                            <span class="fw-bold">Personal Development:</span> Participate in engaging activities,
-                            workshops, and discussions that enhance your skills, boost your confidence, and promote
-                            self-reflection. Our clubs are designed to support your journey of self-discovery and
-                            growth.
-                        </li>
-                        <li>
-                            <span class="fw-bold">Supportive Environment: </span> Find a safe space to share
-                            experiences,
-                            seek advice, and gain inspiration from fellow members. Our clubs cultivate a culture of
-                            empathy,
-                            encouraging open conversations that can lead to personal breakthroughs and collective
-                            wisdom.
-                        </li>
-                        <li>
-                            <span class="fw-bold">Community Engagement: </span>Contribute to initiatives that foster
-                            positive change within the community. Through various projects and outreach efforts, you can
-                            make a meaningful impact while collaborating with others who share your passion for service.
-                        </li>
-                    </ul>
+            </div>
 
+            <div class="col-lg-6 fade-in">
+                <div class="content-card h-100">
+                    <div class="content-card-icon mb-3"
+                        style="background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h5 class="text-primary-blue font-primary mb-3">Community Engagement</h5>
+                    <p class="text-medium">
+                        Contribute to initiatives that foster positive change within the community. Through various
+                        projects and outreach efforts, you can
+                        make a meaningful impact while collaborating with others who share your passion for service.
+                    </p>
                 </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-                <div class="fw-bolder fs-2 mb-3 text-center mt-5">
-                    The Club Experience
+<!-- Club Experience Section -->
+<div class="content-section">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="section-title fade-in">The Club Experience</h2>
+        </div>
 
-                </div>
-                <div class="lh-lg text-center">
-                    <div class="text-justify lh-lg">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="content-card fade-in">
+                    <p class="text-medium lh-lg justify mb-4">
                         Joining a LUD Club means becoming part of a dynamic and diverse network of individuals committed
                         to
-                        continuous learning and improvement. Each club
-                        offers a unique blend of activities tailored to its members' interests, ensuring that every
+                        continuous learning and improvement. Each club offers a unique blend of activities tailored to
+                        its members' interests, ensuring that every
                         gathering is both enriching and enjoyable.
-                    </div>
+                    </p>
 
-                    <div class="text-justify lh-lg">
+                    <p class="text-medium lh-lg justify">
                         From insightful discussions and workshops to casual meetups and collaborative projects, our
                         clubs
-                        provide a well-rounded experience that
-                        encourages participation and engagement. We understand that every member has unique aspirations,
-                        and
-                        our clubs are dedicated to supporting each
-                        individual's journey.
-                    </div>
-                </div>
-
-                <div class="fw-bolder fs-2 mb-3 text-center mt-5">
-                    Get Involved
-
-                </div>
-                <div class="lh-lg text-center">
-                    <div class="lh-lg text-justify">
-                        We invite you to explore our clubs and become a part of our vibrant community. Whether you’re
-                        looking to grow personally,
-                        professionally, or socially, our clubs offer a unique opportunity to connect, learn, and thrive
-                        together.
-                    </div>
-
-                    <div class="lh-lg text-justify">
-                        Join us on this journey of growth and discovery, and together, let’s unlock our potential and
-                        make a
-                        difference in our lives
-                        and the lives of others!
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="row mt-5 mb-5">
-            <div class="col-12">
-                <div class="text-center fw-bolder fs-2">
-                    Clubs
-                </div>
-            </div>
-            <div class="row row-cols-1 row-cols-md-3 g-4">
-                <div class="col text-center ">
-                    <a href="{% url 'conversation-club' %}" class="text-decoration-none">
-                        <div class="card">
-                            <img src="{% static '/clubs/conversation.png' %}" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Conversation Club</h5>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col text-center">
-                    <a href="{% url 'professional-club' %}" class="text-decoration-none">
-                        <div class="card">
-                            <img src="{% static '/clubs/professional.png' %}" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Professional Club</h5>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col text-center">
-                    <a href="{% url 'youthleadership-club' %}" class="text-decoration-none">
-                        <div class="card">
-                            <img src="{% static '/clubs/GYLN.png' %}" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Global Youth Leadership Network </h5>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="col text-center">
-                    <a href="{% url 'community-club' %}" class="text-decoration-none ">
-                        <div class="card">
-                            <img src="{% static '/clubs/community hubs.png' %}" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Community Club</h5>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col text-center">
-                    <a href="{% url 'growandglow-club' %}" class="text-decoration-none">
-                        <div class="card">
-                            <img src="{% static '/clubs/21.png' %}" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Grow and Glow Club</h5>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-
-
-            </div>
-        </div>
-
-
-        <!-- Leadership section -->
-
-        <div class="row mt-5 mb-5">
-            <div class="col-12">
-                <div class="text-center fw-bolder fs-2">
-                    Leadership Team
-                </div>
-            </div>
-            <div class="row justify-content-center g-4">
-                <div class="col-md-3 text-center">
-                    <img src="{% static 'Aboutus/leadership/Courses_1.png' %}" class="img-thumbnail rounded" alt=""
-                         style="width: 150px; height: auto;">
-                    <div class="mt-3 text-center">
-                        <div class="fw-bolder">Col Ranjeev K Babu
-                        </div>
-                        <small class="fst-italic">Strategic and Executive Senior Lead</small>
-                    </div>
-                </div>
-                <div class="col-md-3 text-center">
-                    <img src="{% static '/clubs/leadership/Mr. Ayush Paul.png' %}" class="img-thumbnail rounded" alt=""
-                         style="width: 150px; height: auto;">
-                    <div class="mt-3 text-center">
-                        <div class="fw-bolder">
-                            Mr. Ayush Paul
-                        </div>
-                        <small class="fst-italic">
-                            Global Strategic and Executive Youth Lead
-                        </small>
-                    </div>
-                </div>
-                <div class="col-md-3 text-center">
-                    <img src="{% static '/clubs/leadership/Ms. Deeksha.png' %}" class="img-thumbnail rounded" alt=""
-                         style="width: 150px; height: auto;">
-                    <div class="mt-3 text-center">
-                        <div class="fw-bolder">Ms. Deeksha Dinesh</div>
-                        <small class="fst-italic">Media Activities Youth Lead</small>
-                    </div>
+                        provide a well-rounded experience that encourages participation and engagement. We understand
+                        that every member has unique aspirations,
+                        and our clubs are dedicated to supporting each individual's journey.
+                    </p>
                 </div>
             </div>
         </div>
-
-
-        <div class="row my-5">
-            <div class="col-12 mt-5">
-                <div class="text-center fw-bolder fs-2">
-                    Contact
-                </div>
-                <div class="text-center mt-4 fw-bold fs-6 mb-5">
-                    <i class="fa-solid fa-envelope"></i> club@letusdream.org
-                </div>
-            </div>
-        </div>
-
     </div>
+</div>
 
+<!-- Get Involved Section -->
+<div class="content-section bg-light-gray">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="section-title fade-in">Get Involved</h2>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="content-card text-center fade-in">
+                    <p class="text-medium lh-lg justify mb-4">
+                        We invite you to explore our clubs and become a part of our vibrant community. Whether you're
+                        looking to grow personally, professionally, or socially, our clubs offer a unique opportunity to
+                        connect, learn, and thrive
+                        together.
+                    </p>
+
+                    <p class="text-medium lh-lg justify mb-4">
+                        Join us on this journey of growth and discovery, and together, let's unlock our potential and
+                        make a difference in our lives and the lives of others!
+                    </p>
+
+                    <a href="mailto:club@letusdream.org" class="btn btn-primary btn-lg">
+                        <i class="fas fa-envelope me-2"></i>Join Our Community
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Clubs Grid Section -->
+<div class="content-section">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="section-title fade-in mb-2">Our Clubs</h2>
+            <p class="text-medium fade-in">Discover the perfect club for your interests and goals</p>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6 fade-in">
+                <a href="{% url 'conversation-club' %}" class="text-decoration-none">
+                    <div class="content-card hover-lift h-100 text-center">
+                        <img src="{% static '/clubs/conversation.png' %}" class="img-fluid rounded-custom mb-3"
+                            alt="Conversation Club" style="height: 200px; object-fit: cover; width: 100%;">
+                        <h5 class="text-primary-blue font-primary">Conversation Club</h5>
+                        <p class="text-medium small">Enhance your communication skills through meaningful conversations
+                        </p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-lg-4 col-md-6 fade-in">
+                <a href="{% url 'professional-club' %}" class="text-decoration-none">
+                    <div class="content-card hover-lift h-100 text-center">
+                        <img src="{% static '/clubs/professional.png' %}" class="img-fluid rounded-custom mb-3"
+                            alt="Professional Club" style="height: 200px; object-fit: cover; width: 100%;">
+                        <h5 class="text-primary-blue font-primary">Professional Club</h5>
+                        <p class="text-medium small">Advance your career through professional development and networking
+                        </p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-lg-4 col-md-6 fade-in">
+                <a href="{% url 'youthleadership-club' %}" class="text-decoration-none">
+                    <div class="content-card hover-lift h-100 text-center">
+                        <img src="{% static '/clubs/GYLN.png' %}" class="img-fluid rounded-custom mb-3"
+                            alt="Global Youth Leadership Network"
+                            style="height: 200px; object-fit: cover; width: 100%;">
+                        <h5 class="text-primary-blue font-primary">Global Youth Leadership Network</h5>
+                        <p class="text-medium small">Develop leadership skills and connect with young leaders worldwide
+                        </p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-lg-4 col-md-6 fade-in">
+                <a href="{% url 'community-club' %}" class="text-decoration-none">
+                    <div class="content-card hover-lift h-100 text-center">
+                        <img src="{% static '/clubs/community hubs.png' %}" class="img-fluid rounded-custom mb-3"
+                            alt="Community Club" style="height: 200px; object-fit: cover; width: 100%;">
+                        <h5 class="text-primary-blue font-primary">Community Club</h5>
+                        <p class="text-medium small">Engage in community service and make a positive local impact</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-lg-4 col-md-6 fade-in">
+                <a href="{% url 'growandglow-club' %}" class="text-decoration-none">
+                    <div class="content-card hover-lift h-100 text-center">
+                        <img src="{% static '/clubs/21.png' %}" class="img-fluid rounded-custom mb-3"
+                            alt="Grow and Glow Club" style="height: 200px; object-fit: cover; width: 100%;">
+                        <h5 class="text-primary-blue font-primary">Grow and Glow Club</h5>
+                        <p class="text-medium small">Focus on personal growth and inner transformation</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Leadership Team Section -->
+<div class="content-section bg-light-gray">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="section-title fade-in mb-2">Leadership Team</h2>
+            <p class="text-medium fade-in">Meet the dedicated leaders driving our club initiatives</p>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+            <div class="col-lg-4 col-md-6 fade-in">
+                <div class="content-card card hover-lift h-100 text-center">
+                    <img src="{% static 'Aboutus/leadership/Courses_1.png' %}" class="people-avatar"
+                        alt="Col Ranjeev K Babu">
+                    <h5 class="text-primary-blue font-primary">Col Ranjeev K Babu</h5>
+                    <p class="text-medium">Strategic and Executive Senior Lead</p>
+                   
+
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 fade-in">
+                <div class="content-card card hover-lift h-100 text-center">
+                    <img src="{% static '/clubs/leadership/Mr. Ayush Paul.png' %}" class="people-avatar"
+                        alt="Mr. Ayush Paul">
+                    <h5 class="text-primary-blue font-primary">Mr. Ayush Paul</h5>
+                    <p class="text-medium">Global Strategic and Executive Youth Lead</p>
+                    
+
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 fade-in">
+                <div class="content-card card hover-lift h-100 text-center">
+                    <img src="{% static '/clubs/leadership/Ms. Deeksha.png' %}" class="people-avatar"
+                        alt="Ms. Deeksha Dinesh">
+                    <h5 class="text-primary-blue font-primary">Ms. Deeksha Dinesh</h5>
+                    <p class="text-medium">Media Activities Youth Lead</p>
+                    
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock content %}
+
+{% block extraScripts %}
+<script>
+    // Enhanced scroll animations with intersection observer
+    document.addEventListener('DOMContentLoaded', function () {
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function (entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    // Add stagger delay for multiple elements
+                    const index = Array.from(entry.target.parentNode.children).indexOf(entry.target);
+                    entry.target.style.transitionDelay = `${index * 0.1}s`;
+                }
+            });
+        }, observerOptions);
+
+        // Observe all fade-in elements
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Expandable image functionality
+        const expandableImage = document.getElementById('expandableImage');
+        if (expandableImage) {
+            expandableImage.addEventListener('click', function () {
+                if (this.style.transform === 'scale(1.5)') {
+                    this.style.transform = 'scale(1)';
+                    this.style.zIndex = '1';
+                    this.style.position = 'relative';
+                } else {
+                    this.style.transform = 'scale(1.5)';
+                    this.style.zIndex = '1000';
+                    this.style.position = 'relative';
+                }
+            });
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    });
+</script>
+{% endblock extraScripts %}

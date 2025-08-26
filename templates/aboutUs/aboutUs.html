@@ -2,288 +2,322 @@
 {% load static %}
 
 {% block title %}
-    About Us
+About Us
 {% endblock %}
 
 {% block links %}
-    <link rel="stylesheet" href="{% static 'css/2025/about-us.css' %}" type="text/css">
 {% endblock links %}
-
 
 {% block content %}
 
-    <section>
-
-        <div class="cus-breadcrumb breadcrumb-style" aria-label="breadcrumb animated slideInDown">
-            <ol class="breadcrumb container mb-0">
-                <li class="breadcrumb-item">
-                    <a class="text-black text-decoration-none" href="{% url 'main' %}">Home</a>
-                </li>
-                <li class="breadcrumb-item">
-                    <a class="text-black text-decoration-none">About Us</a>
-                </li>
-                <li class="breadcrumb-item  active " aria-current="page">Overview</li>
-            </ol>
-        </div>
-
-
+    <!-- Page Header -->
+    <section class="">
         <div class="container">
-            <div class="row">
-
-                <div class="col-lg-12 mt-5 mb-5 text-center">
-                    <h1 class="text-center">
-                        Let Us Dream Story
-                    </h1>
-                    <div class="text-center fst-italic fs-4 text-muted">
-                        A journey of transforming dreams into action
-                    </div>
-                </div>
-
-                <div class="col-sm-12 col-md-6">
-                    <p class="lh-lg">
-                        LET US DREAM is a locally rooted and globally established Not-for-Profit Organization. It was
-                        conceived with the idea to create holistically developed communities world over. It has strived
-                        for this since its inception. We, at LET US DREAM, firmly vouch in the idea of a global family,
-                        where each individual and each society works interdependently to create a sustainable world. The
-                        program is composed of likeminded people from all ethnic groups around the world to support,
-                        guide, and lead this vision of holistic development in the growth of individuals and the
-                        society.
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-8">
+                   
+                    <h1 class="display-4 fw-bold mb-4">Let Us Dream Story</h1>
+                    <p class="lead mb-3">
+                       A journey of transforming dreams into action
                     </p>
-
-                    <p class="lh-lg">
-                        LET US DREAM operates using an impactful and effective community-based working model that join
-                        people together while also bridging community organizations together. LET US DREAM aids,
-                        nurtures, and hones the untapped potentials of individuals in the psycho-social leadership
-                        aspects of life. LET US DREAM, through rigorous research and continuous evaluation, strives to
-                        accomplish this vision through its four unique projects:
-                    </p>
-                </div>
-                <div class="col-sm-12 col-md-6">
-                    <iframe class="" src="https://www.youtube.com/embed/ojd_qrni2Zc"
-                            title="YouTube video player"
-                            width="100%" height="400px"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen>
-                    </iframe>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="container">
-            <div class="row bg-light text-center my-4">
-                <div class="col-12 mt-4 fw-bold">
-                    Let Us Dream accomplishes this vision through its four unique projects:
-                </div>
-
-                <div class="col-12 my-2 mt-4 row d-flex align-items-center justify-content-center">
-                    <div class="col-sm-4 col-md-2 mb-4">
-                        <a href="{% url 'dreams' 'program' %}" class="text-decoration-none mt-2">
-                            <img src="{% static 'home/programs/Program.png' %}"
-                                 class="img-thumbnail mx-auto d-block"
-                                 alt="DREAMS Program">
-                            DREAMS Program
-                        </a>
-                    </div>
-                    <div class="col-sm-4 col-md-2 mb-4">
-                        <a href="{% url 'dreams' 'program' %}" class="text-decoration-none mt-2">
-                            <img src="{% static 'home/programs/Band.png' %}"
-                                 class="img-thumbnail mx-auto d-block"
-                                 alt="DREAMS Band">
-                            DREAMS Band
-                        </a>
-                    </div>
-                    <div class="col-sm-4 col-md-2 mb-4">
-                        <a href="{% url 'dreams' 'program' %}" class="text-decoration-none mt-2">
-                            <img src="{% static 'home/programs/Club.png' %}"
-                                 class="img-thumbnail mx-auto d-block"
-                                 alt="DREAMS Band">
-                            DREAMS Pro Club
-                        </a>
-                    </div>
-                    <div class="col-sm-4 col-md-2 mb-4">
-                        <a href="{% url 'dreams' 'program' %}" class="text-decoration-none mt-2">
-                            <img src="{% static 'home/programs/Conference.png' %}"
-                                 class="img-thumbnail mx-auto d-block"
-                                 alt="DREAMS Band">
-                            DREAMS Conferences
-                        </a>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-        <div class="container p-0 mt-5">
-            <p class="text-justify lh-lg">
-                Mahatma Gandhi’s philosophy of “Be the Change you wish to see in the World” has been our motto and a
-                guiding principle since our inception. The LET US DREAM team has always been inspired by the quote of
-                the Saint of the Gutters, Mother Teresa. She said, “What we are doing is just a drop in the ocean. But
-                if that drop was not in the ocean, I think the ocean would be less because of that missing drop.”
-            </p>
-            <p class="text-justify lh-lg">
-                Inspired thus, LET US DREAM extends an invitation to every individual to join this global community in
-                order to raise and uplift our societies to progressive and better living standards so that we and the
-                generations to come may reap the benefits of the seeds we sow today. Each of us is called to act as a
-                catalyst to positively impact another person in our life’s time. Each of us has the power to foster
-                positive change, which will have a spiralling impact to make the world a better place.
-            </p>
-        </div>
-
-        <div class="container my-5">
-            <h2 class="text-center mb-3 mt-4">
-                Goals, Vision, Mission & Core Values
-            </h2>
-
-            <div class="row g-4 mt-3">
-                <div class="col-md-6 col-lg-3">
-                    <div class="card mission-card h-100 border-0 ">
-                        <div class="card-body text-center p-1">
-                            <div class="icon-wrapper bg-success bg-opacity-10 rounded-3 p-3 mb-3 mx-auto">
-                                <i class="fa-solid fa-lightbulb text-success fs-3 mt-3"></i>
-                                <h5 class="card-title mb-4">Core Values</h5>
-                                <ul class="core-values text-start ps-3">
-                                    <li>Inclusive Collaboration</li>
-                                    <li>Passion for Service & Stewardship</li>
-                                    <li>Talent Development & Mutual Empowerment</li>
-                                    <li>Continuous Commitment for Improvement & Innovation</li>
-                                    <li>Global Perspective and Social Commitment</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-3">
-                    <div class="card mission-card h-100 border-0">
-                        <div class="card-body text-center p-1">
-                            <div class="icon-wrapper bg-success bg-opacity-10 rounded-3 p-3 mb-3 mx-auto">
-                                <i class="fa-solid fa-eye text-success fs-3 mt-3"></i>
-                                <h5 class="card-title mb-4">Vision</h5>
-                                <p class="card-text">
-                                    Empowering Communities for Global Harmony <br>(and Holistic Success).
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-3">
-                    <div class="card mission-card h-100 border-0">
-                        <div class="card-body text-center p-1">
-                            <div class="icon-wrapper bg-success bg-opacity-10 rounded-3 p-3 mb-3 mx-auto">
-                                <i class="fa-solid fa-rocket text-success fs-3 mt-3"></i>
-                                <h5 class="card-title mb-4">Mission</h5>
-                                <ul class="core-values text-start ps-3">
-                                    <li>Promote the hidden talents for the holistic success of youth and
-                                        adults
-                                    </li>
-                                    <li>Enhance collaboration for sustainable achievements of
-                                        communities
-                                    </li>
-                                    <li>Create diverse platform for opportunities and support system
-                                        where unidentified/struggling individuals to be empowered
-                                    </li>
-                                    <li>Develop social commitment and responsibilities with a global
-                                        outlook
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-3">
-                    <div class="card mission-card h-100 border-0">
-                        <div class="card-body text-center p-1">
-                            <div class="icon-wrapper bg-success bg-opacity-10 rounded-3 p-3 mb-3 mx-auto">
-                                <i class="fa-solid fa-bullseye text-success fs-3 mt-3"></i>
-                                <h5 class="card-title mb-4">Goal</h5>
-                                <ul class="goal-list text-start ps-3">
-                                    <li>The goal of Let Us DREAMS is the holistic development of youth
-                                        through clear and realistic goal setting in life.
-                                    </li>
-                                    <li>Focus will be on the physical, psychological, emotional, social,
-                                        spiritual, and leadership aspects of each individual.
-                                    </li>
-                                    <li>The aim is to form a group of socially responsible, mature, and
-                                        successful teenagers in three years.
-                                    </li>
-                                    <li>The program seeks to develop and hone the youth so they can take
-                                        their place in society.
-                                    </li>
-                                    <li>The ultimate goal is for the youth to lead and contribute to the
-                                        growth of society.
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="container">
-            <h2 class="text-center mb-3">
-                Empowering Communities
-            </h2>
-            <div class="row mt-5 mb-5">
-                <div class="col-lg-9 col-md-9">
-                    <p class="text-justify lh-lg">
-                        The LET US DREAM organizational culture is rooted in the universal human values after the vision
-                        of St. Kuriakose Elias Chavara, that is, the integral formation of a person and commitment to
-                        the society. We as humans have so much to offer to the society. Success of each individual,
-                        strengthens and acts a s foundation for the society to grow in. We believe humanity to be one
-                        global family, tied together, where our excellence and holistic success as an individual or as a
-                        society is interdependent on each other. Growing in the holistic view of life, we would like to
-                        DREAM together and grow together
-                    </p>
-                    <p class="text-justify lh-lg">
-                        Finding his own confidence through music, Father Reverend Lijo Thomas Pathickal, CMI, wanted to
-                        assist people to help children who are under confident, shy and struggle to showcase their
-                        capabilities. The drive to share his insights with others like him and helping them realize
-                        their full potential led him to forming the DREAM Program. The journey for developing and
-                        implementing the programme has been through turbulent and testing times but the sheer will power
-                        and the conviction of Rev Fr Lijo Thomas to help the others has helped the project stay afloat
-                        for many years now.
-                    </p>
-                    <p class="text-justify lh-lg">
-                        The Project gradually expanded but the turning point came in 2010, while he was pursuing his
-                        Ph.D. in Educational Leadership, at the University of Louisiana, Monroe. His mentor at the time,
-                        Dr Pauline Leonard, a professor at Louisiana Tech University, suggested that DREAM had the
-                        potential of being developed into a working, scientific model and that was the moment the
-                        project steered towards the direction it is flowing in today. It has become a 3-year
-                        curriculum-based community mentoring project, for schools and colleges. Each year focuses on the
-                        development of skills and leadership, both at the personal and at the communal levels. The
-                        program is further designed to encourage children, especially those with low self-confidence, to
-                        rise up to their maximum potential, while also motivating others to do the same around them.
-                        Through a 3-stage developmental model, <strong>DREAM</strong> helps individuals to work through
-                        <strong>D</strong>esire, <strong>R</strong>eadiness, <strong>E</strong>mpowerment, and
-                        <strong>A</strong>ction, to attain <strong>M</strong>astery for success.
-                    </p>
-                    <p class="text-justify lh-lg">
-                        A motivation and an inspiration, Father Reverend Lijo Thomas Pathickal has purposed his life to
-                        helping others grow.
-                    </p>
-                </div>
-                <div class="col-lg-3 col-md-3">
-                    <div class="rounded">
-                        <a href="https://www.facebook.com/lijo.pathickal.5" target="_blank">
-                            <img src="{% static '2025/about-us/aboutus-lijo.png' %}" class="card-img-top p-3"
-                                 alt="Dr. Fr. Lijo Thomas CMI">
-                        </a>
-                        <div class="card-body text-center">
-                            <div class="text-brown fw-bold">
-                                Dr. Fr. Lijo Thomas CMI
-                            </div>
-                            <div class="text-violet">
-                                Founder/Director
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
     </section>
 
+<!-- Main Story Section -->
+<div class="content-section">
+    <div class="container">
+        <div class="row g-4 align-items-center">
+            <div class="col-lg-6">
+                <div class="content-card ">
+                    <p class="justify">
+                        LET US DREAM is a locally rooted and globally established Not-for-Profit Organization. It was
+                        conceived with the idea to create holistically developed communities world over. It has strived
+                        for this since its inception. We, at LET US DREAM, firmly vouch in the idea of a global family,
+                        where each individual and each society works interdependently to create a sustainable world.
+                    </p>
+
+                    <p class="justify">
+                        The program is composed of likeminded people from all ethnic groups around the world to support,
+                        guide, and lead this vision of holistic development in the growth of individuals and the
+                        society.
+                    </p>
+
+                    <p class="justify">
+                        LET US DREAM operates using an impactful and effective community-based working model that join
+                        people together while also bridging community organizations together. LET US DREAM aids,
+                        nurtures, and hones the untapped potentials of individuals in the psycho-social leadership
+                        aspects of life.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="video-container ">
+
+                    <iframe class="main-video-frame" src="https://www.youtube.com/embed/ojd_qrni2Zc"
+                        title="Let Us Dream Story"
+                        allow="accelerometer; autoplay; clipboard-write;  picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="content-section">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="section-title">Our Six Unique Projects</h2>
+            <p class="text-medium">Let Us Dream accomplishes this vision through its transformative initiatives</p>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+            <!-- DREAMS Intervention Program (DIP) -->
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="content-card text-center ">
+                    <div class="content-card-icon mx-auto">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <a href="{% url 'dreams' 'program' %}" class="text-decoration-none">
+                        <img src="{% static 'home/programs/Program.png' %}" 
+                             class="img-fluid rounded-custom mb-3"
+                             alt="DREAMS Intervention Program" 
+                             style="max-height: 120px; object-fit: contain;">
+                        <h5 class="text-primary-blue">DREAMS Intervention Program (DIP)</h5>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Community Conferences -->
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="content-card text-center ">
+                    <div class="content-card-icon mx-auto bg-gradient-secondary">
+                        <i class="fas fa-microphone"></i>
+                    </div>
+                    <a href="{% url 'annualConference' %}" class="text-decoration-none">
+                        <img src="{% static 'home/programs/Conference.png' %}" 
+                             class="img-fluid rounded-custom mb-3"
+                             alt="Community Conferences" 
+                             style="max-height: 120px; object-fit: contain;">
+                        <h5 class="text-primary-blue">Community Conferences</h5>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Productions -->
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="content-card text-center ">
+                    <div class="content-card-icon mx-auto" style="background: linear-gradient(135deg, #ffc107 0%, #ff8f00 100%);">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <a href="{% url 'dreams' 'band' %}" class="text-decoration-none">
+                        <img src="{% static 'home/programs/Band.png' %}" 
+                             class="img-fluid rounded-custom mb-3"
+                             alt="Productions" 
+                             style="max-height: 120px; object-fit: contain;">
+                        <h5 class="text-primary-blue">Productions</h5>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Clubs -->
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="content-card text-center ">
+                    <div class="content-card-icon mx-auto" style="background: linear-gradient(135deg, #28a745 0%, #20c997 100%);">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <a href="{% url 'dreams' 'proclub' %}" class="text-decoration-none">
+                        <img src="{% static 'home/programs/Club.png' %}" 
+                             class="img-fluid rounded-custom mb-3"
+                             alt="Clubs" 
+                             style="max-height: 120px; object-fit: contain;">
+                        <h5 class="text-primary-blue">Clubs</h5>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Fellowship -->
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="content-card text-center ">
+                    <div class="content-card-icon mx-auto" style="background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <a href="{% url 'llfp' %}" class="text-decoration-none">
+                        <img src="{% static 'home/programs/Fellowship.jpg' %}" 
+                             class="img-fluid rounded-custom mb-3"
+                             alt="Fellowship" 
+                             style="max-height: 120px; object-fit: contain;">
+                        <h5 class="text-primary-blue">Fellowship</h5>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Research -->
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="content-card text-center ">
+                    <div class="content-card-icon mx-auto" style="background: linear-gradient(135deg, #6c757d 0%, #495057 100%);">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <a href="{% url 'research' %}" class="text-decoration-none">
+                        <img src="{% static 'home/programs/research.png' %}" 
+                             class="img-fluid rounded-custom mb-3"
+                             alt="Research" 
+                             style="max-height: 120px; object-fit: contain;">
+                        <h5 class="text-primary-blue">Research</h5>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Vision & Mission Section -->
+<div class="content-section ">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="section-title">Goals, Vision, Mission & Core Values</h2>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-md-12">
+                
+                    <img src="{% static 'Aboutus/aboutUs/about us.png' %}"
+                        class="img-fluid rounded-custom shadow-custom" alt="Goals, Vision, Mission & Core Values">
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Philosophy Section -->
+<div class="content-section bg-light-gray">
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-lg-12">
+            <div class="content-card mt-3">
+                <div class="row align-items-center">
+                    <div class="col-md-2 text-center mb-3 mb-md-0">
+                        <div class="content-card-icon mx-auto">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                    </div>
+                    <div class="col-md-10">
+                        <blockquote class="blockquote mb-0">
+                            <p class="justify">
+                                Mahatma Gandhi's philosophy of "Be the Change you wish to see in the World" has been our
+                                motto and a
+                                guiding principle since our inception. The LET US DREAM team has always been inspired by
+                                the quote of
+                                the Saint of the Gutters, Mother Teresa: "What we are doing is just a drop in the ocean.
+                                But
+                                if that drop was not in the ocean, I think the ocean would be less because of that
+                                missing drop."
+                            </p>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-card mt-4">
+                <p class="lead justify">
+                    Inspired thus, LET US DREAM extends an invitation to every individual to join this global community
+                    in
+                    order to raise and uplift our societies to progressive and better living standards so that we and
+                    the
+                    generations to come may reap the benefits of the seeds we sow today. Each of us is called to act as
+                    a
+                    catalyst to positively impact another person in our life's time. Each of us has the power to foster
+                    positive change, which will have a spiralling impact to make the world a better place.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<!-- Empowering Communities Section -->
+<div class="content-section">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="section-title mb-2">Empowering Communities</h2>
+            <p class="text-medium">The story behind our mission and the visionary who started it all</p>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-lg-12">
+                <div class="content-card">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <p class="justify">
+                                The LET US DREAM organizational culture is rooted in the universal human values after
+                                the vision
+                                of St. Kuriakose Elias Chavara, that is, the integral formation of a person and
+                                commitment to
+                                the society. We as humans have so much to offer to the society. Success of each
+                                individual,
+                                strengthens and acts as foundation for the society to grow in. We believe humanity to be
+                                one
+                                global family, tied together, where our excellence and holistic success as an individual
+                                or as a
+                                society is interdependent on each other.
+                            </p>
+
+                            <div class="section-divider"></div>
+
+                            <p class="justify">
+                                Finding his own confidence through music, Father Reverend Lijo Thomas Pathickal, CMI,
+                                wanted to
+                                assist people to help children who are under confident, shy and struggle to showcase
+                                their
+                                capabilities. The drive to share his insights with others like him and helping them
+                                realize
+                                their full potential led him to forming the DREAM Program.
+                            </p>
+
+                            <p class="justify">
+                                The Project gradually expanded but the turning point came in 2010, while he was pursuing
+                                his
+                                Ph.D. in Educational Leadership, at the University of Louisiana, Monroe. His mentor at
+                                the time,
+                                Dr Pauline Leonard, a professor at Louisiana Tech University, suggested that DREAM had
+                                the
+                                potential of being developed into a working, scientific model.
+                            </p>
+
+                            <div class="alert alert-primary">
+                                <div class="row align-items-center">
+                                    <div class="col-md-2 text-center">
+                                        <i class="fas fa-lightbulb fa-3x text-primary-blue"></i>
+                                    </div>
+                                    <div class="col-md-10">
+                                        <p class="mb-0">
+                                            Through a 3-stage developmental model, <strong>DREAM</strong> helps
+                                            individuals to work through
+                                            <strong class="text-primary-blue">D</strong>esire,
+                                            <strong class="text-primary-blue">R</strong>eadiness,
+                                            <strong class="text-primary-blue">E</strong>mpowerment, and
+                                            <strong class="text-primary-blue">A</strong>ction, to attain
+                                            <strong class="text-primary-blue">M</strong>astery for success.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <p class="justify">
+                                A motivation and an inspiration, Father Reverend Lijo Thomas Pathickal has purposed his
+                                life to
+                                helping others grow.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}
