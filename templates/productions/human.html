@@ -45,7 +45,7 @@
   /* Hero background gradient */
   .hero-bg {
     background: var(--gradient-overlay);
-    min-height: 70vh;
+    min-height: 40vh;
   }
 
   /* Glass effect for hero content */
@@ -137,13 +137,14 @@
   .social-linkedin {
     background: #0077b5;
   }
-   .team-avatar {
-            width: 120px;
-            height: 120px;
-            object-fit: cover;
-            border-radius: 50%;
-            border: 5px solid var(--secondary-green);
-        }
+
+  .team-avatar {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid var(--secondary-green);
+  }
 
   .social-instagram {
     background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
@@ -207,147 +208,15 @@
   }
 
   /* Beautiful Instagram Reel Section */
-        .reel-section {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            position: relative;
-            overflow: hidden;
-        }
+  .reel-section {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  }
 
-        .reel-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(45deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
-            z-index: 1;
-        }
-
-        .reel-container {
-            position: relative;
-            z-index: 2;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .reel-wrapper {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(20px);
-            border-radius: 25px;
-            padding: 20px;
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            transition: all 0.3s ease;
-        }
-
-        .reel-wrapper:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 35px 70px rgba(0, 0, 0, 0.2);
-        }
-
-        /* Hide Instagram text and branding */
-        .instagram-embed {
-            border-radius: 20px;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .instagram-embed blockquote {
-            border-radius: 20px !important;
-            box-shadow: none !important;
-            border: none !important;
-            background: transparent !important;
-        }
-
-        /* Custom overlay to hide Instagram text */
-        .text-overlay {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 80px;
-            background: linear-gradient(transparent, rgba(255,255,255,0.95));
-            z-index: 10;
-            pointer-events: none;
-        }
-
-        .reel-title {
-            color: white;
-            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-            margin-bottom: 2rem;
-        }
-
-        .floating-elements {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            z-index: 1;
-        }
-
-        .floating-elements::before,
-        .floating-elements::after {
-            content: '';
-            position: absolute;
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.1);
-            animation: float 6s ease-in-out infinite;
-        }
-
-        .floating-elements::before {
-            top: 10%;
-            left: -100px;
-            animation-delay: -2s;
-        }
-
-        .floating-elements::after {
-            bottom: 10%;
-            right: -100px;
-            animation-delay: -4s;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0px) rotate(0deg); }
-            50% { transform: translateY(-20px) rotate(180deg); }
-        }
-
-        .play-indicator {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 80px;
-            height: 80px;
-            background: rgba(255, 255, 255, 0.9);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2rem;
-            color: var(--primary-blue);
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            z-index: 5;
-            pointer-events: none;
-        }
-
-        .reel-wrapper:hover .play-indicator {
-            opacity: 1;
-        }
-
-        @media (max-width: 768px) {
-            .reel-container {
-                padding: 0 15px;
-            }
-            
-            .reel-wrapper {
-                padding: 15px;
-                border-radius: 20px;
-            }
-        }
+  .reel-title {
+    color: white;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    margin-bottom: 2rem;
+  }
 </style>
 {% endblock %}
 
@@ -377,55 +246,93 @@
 </section>
 
 <section class="reel-section py-5 position-relative">
-    <div class="floating-elements"></div>
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-12">
-                <h2 class="font-playfair text-center mb-5 display-6 fw-bold reel-title">
-                    Experience The HUMAN Journey
-                </h2>
-                <div class="reel-container">
-                    <div class="reel-wrapper position-relative">
-                        <div class="play-indicator">
-                            ▶
-                        </div>
-                        <div class="instagram-embed">
-                            <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/DMRwk3noD13/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:20px; box-shadow:none; margin: 0; max-width:100%; min-width:326px; padding:0; width:100%;">
-                                <div style="padding:16px;">
-                                    <a href="https://www.instagram.com/reel/DMRwk3noD13/?utm_source=ig_embed&amp;utm_campaign=loading" style="background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank">
-                                        <div style="display: flex; flex-direction: row; align-items: center;">
-                                            <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div>
-                                            <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;">
-                                                <div style="background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div>
-                                                <div style="background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div>
-                                            </div>
-                                        </div>
-                                        <div style="padding: 19% 0;"></div>
-                                        <div style="display:block; height:50px; margin:0 auto 12px; width:50px;">
-                                            <svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink">
-                                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                                    <g transform="translate(-511.000000, -20.000000)" fill="#000000">
-                                                        <g>
-                                                            <path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path>
-                                                        </g>
-                                                    </g>
-                                                </g>
-                                            </svg>
-                                        </div>
-                                        <div style="padding-top: 8px;">
-                                            <div style="color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px; display: none;">View this post on Instagram</div>
-                                        </div>
-                                        <div style="padding: 12.5% 0;"></div>
-                                    </a>
-                                    <p style="display: none;">Hidden Instagram text</p>
-                                </div>
-                            </blockquote>
-                        </div>
-                        <div class="text-overlay"></div>
-                    </div>
-                </div>
-            </div>
+  <div class="floating-elements"></div>
+  <div class="container">
+    <div class="row">
+      <div class="font-playfair text-center mb-5 display-6 fw-bold reel-title col-12">
+        The HUMAN Movement:
+        <div class="fs-4 fw-normal mt-2">
+          A Global Youth Initiative for a Sustainable Future
         </div>
+      </div>
+      <div class="col-12 text-white text-center">
+
+        <div class="mb-3">
+          The HUMAN, standing for Harmony, Unity, Mindfulness, and Action for Nurturing. This innovative initiative aims
+          to develop 100,000 Youth Ambassadors dedicated to promoting the United Nations Sustainable Development Goals
+          (SDGs) across the globe. As artificial intelligence (AI) and the Internet of Things (IoT) increasingly shape
+          every facet of modern existence, the HUMAN initiative emerges as a call to remember and restore the unique
+          human qualities that risk being overshadowed amid rapid technologisation. This youth-driven movement stresses
+          the growing disconnect from the very values that define our species, warning that without conscious effort,
+          even our own existence as humans could become obsolete. The HUMAN movement calls today’s youth to recognise
+          their role as stewards of Mother Earth, charged with nurturing and caring for one another.
+        </div>
+
+        <a class="text-decoration-none text-white" data-bs-toggle="collapse" href="#humanMovementText" role="button"
+          aria-expanded="false" aria-controls="humanMovementText">
+          -- Read More --
+        </a>
+        <div class="collapse mb-3" id="humanMovementText">
+          <div class="mb-3">
+            The HUMAN movement is deeply rooted in the timeless philosophies and teachings of ancient and diverse
+            civilizations, offering wisdom to guide a modern world in flux. At its core is the Indian maxim Vasudhaiva
+            Kutumbakam, meaning “The World Is One Family,” which highlights our interconnectedness and shared
+            responsibility. Building on this foundation, the movement embraces philosophies such as Africa’s Ubuntu (“I
+            am
+            because we are”), Korea’s Hongik Ingan (“benefiting all humankind”), and principles from Indonesia’s
+            Pancasila
+            and Tanzania’s Ujamaa that promote community and social justice. It also draws from spiritual and ethical
+            teachings like Greece’s Henosis (“Unity and Oneness”), Judaism’s Tikkun Olam (“healing the world”), Japan’s
+            Wabi-Sabi (“beauty of transience”), Hawaii’s Aloha (“greeting”), and Sweden’s Lagom (“just right”), all
+            emphasizing harmony, respect, and balance. Together, these shared values form the foundation of the movement
+            and are beautifully reflected in its theme song, “The HUMAN Family,” which calls on all humankind to nurture
+            and care for one another.
+          </div>
+
+          <div class="mb-3">
+            The HUMAN movement features a meticulously designed, one-day workshop guiding participants through five core
+            sessions: Harmony, Unity, Mindfulness, Action, and Nurturing. The day opens with a call for harmonious and
+            inclusive coexistence, embracing all species and the natural world, laying the foundation for unity that
+            encourages youth to look beyond personal gain and unite with a shared purpose for greater societal impact.
+            Mindfulness lies at the heart of the workshop, inviting participants to live with intention and compassion,
+            rising above the noise of information overload. The organising team highlights that today’s challenge is not
+            a
+            lack of awareness but a shortage of meaningful action and heartfelt engagement. In the Action session, youth
+            are urged to move beyond words and social media soundbites by committing to one of the 17 Sustainable
+            Development Goals, taking active responsibility to drive change in their communities. The program concludes
+            with Nurturing, exploring humanity’s ultimate purpose and calling participants to become ‘Steward Leaders’
+            who
+            care deeply for the Earth, fellow humans, and all living beings.
+          </div>
+
+          <div class="mb-3">
+            The HUMAN movement distinguishes itself through its creative and artistic use of music, theatre, group
+            activities, and discussion to deeply engage youth. Through original compositions from the HUMAN albums, the
+            workshop profoundly expresses the true essence of nurturing: being a helping hand to those struggling, a
+            gentle touch for the lost and weak, and sustenance for those in need. These songs serve as powerful tools
+            that
+            inspire reflection and help participants embody the core values of harmony, unity, mindfulness, action, and
+            nurturing. Launched at CHRIST (Deemed to be University), the project is now expanding to hundreds of schools
+            and colleges nationwide and globally, aiming to nurture a generation of empathetic, engaged youth committed
+            to
+            building a sustainable and harmonious future. In a world increasingly shaped by artificial intellegence
+            (AI),
+            the HUMAN movement serves as an important reminder of the essence of humanity, urging everyone to embrace
+            collective responsibility and unite in building a more compassionate and sustainable future for both people
+            and the planet.
+          </div>
+        </div>
+        <div class="row d-flex justify-content-center g-3 mt-2">
+          <div class="col-sm-6 col-md-3">
+            <img src="{% static 'production/human/human_1.png' %}" alt="HUMAN Movement Image 1"
+              class="img-fluid shadow-md">
+          </div>
+          <div class="col-sm-6 col-md-3">
+            <img src="{% static 'production/human/human_2.png' %}" alt="HUMAN Movement Image 1"
+              class="img-fluid shadow-md">
+          </div>
+        </div>
+      </div>
     </div>
 </section>
 
@@ -641,206 +548,118 @@
 </section>
 
 <!-- Core Team Section -->
- <section class="py-5">
-        <div class="container">
-            <h2 class="font-playfair text-primary-blue text-center mb-5 display-5 fw-bold position-relative section-title">
-                Core Council
-            </h2>
-            <div class="row g-4 justify-content-center">
-                <!-- Team Member 1 - Jake -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="card h-100 text-center p-4 border-0 rounded-4 hover-lift transition-all duration-300">
-                        <div class="d-flex justify-content-center mb-3">
-                            <img src="{% static 'logo/user.png' %}" 
-                                 alt="Jake S. Thomas" class="team-avatar">
-                        </div>
-                        <h4 class="h5 text-primary-blue mb-1 font-playfair fw-bold">Ms. Jake S. Thomas</h4>
-                        <p class="text-muted mb-3 fw-semibold">Creative Producer & Logistics Coordinator</p>
-                        <div class="d-flex justify-content-center gap-3">
-                            <!-- <a href="https://linkedin.com/in/jakethomas" target="_blank"
-                               class="social-linkedin text-white rounded-circle d-flex align-items-center justify-content-center hover-scale transition-all duration-300"
-                               style="width: 45px; height: 45px;">
-                                <i class="fab fa-linkedin-in"></i>
-                            </a>
-                            <a href="https://instagram.com/jakethomas" target="_blank"
-                               class="social-instagram text-white rounded-circle d-flex align-items-center justify-content-center hover-scale transition-all duration-300"
-                               style="width: 45px; height: 45px;">
-                                <i class="fab fa-instagram"></i>
-                            </a> -->
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Team Member 2 - John -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="card h-100 text-center p-4 border-0 rounded-4 hover-lift transition-all duration-300">
-                        <div class="d-flex justify-content-center mb-3">
-                            <img src="{% static 'logo/user.png' %}" 
-                                 alt="John Steward Raj J" class="team-avatar">
-                        </div>
-                        <h4 class="h5 text-primary-blue mb-1 font-playfair fw-bold">Mr. John Steward Raj J</h4>
-                        <p class="text-muted mb-3 fw-semibold">Programme & Workshop Coordinator</p>
-                        <div class="d-flex justify-content-center gap-3">
-                            <!-- <a href="https://linkedin.com/in/johnstewardraj" target="_blank"
-                               class="social-linkedin text-white rounded-circle d-flex align-items-center justify-content-center hover-scale transition-all duration-300"
-                               style="width: 45px; height: 45px;">
-                                <i class="fab fa-linkedin-in"></i>
-                            </a>
-                            <a href="https://instagram.com/johnstewardraj" target="_blank"
-                               class="social-instagram text-white rounded-circle d-flex align-items-center justify-content-center hover-scale transition-all duration-300"
-                               style="width: 45px; height: 45px;">
-                                <i class="fab fa-instagram"></i>
-                            </a> -->
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Team Member 3 - Anshul -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="card h-100 text-center p-4 border-0 rounded-4 hover-lift transition-all duration-300">
-                        <div class="d-flex justify-content-center mb-3">
-                            <img src="{% static 'logo/user.png' %}" 
-                                 alt="Anshul Dawar" class="team-avatar">
-                        </div>
-                        <h4 class="h5 text-primary-blue mb-1 font-playfair fw-bold">Mr. Anshul Dawar</h4>
-                        <p class="text-muted mb-3 fw-semibold">Music Director – The HUMAN Album</p>
-                        <div class="d-flex justify-content-center gap-3">
-                            <!-- <a href="https://linkedin.com/in/anshuldawar" target="_blank"
-                               class="social-linkedin text-white rounded-circle d-flex align-items-center justify-content-center hover-scale transition-all duration-300"
-                               style="width: 45px; height: 45px;">
-                                <i class="fab fa-linkedin-in"></i>
-                            </a>
-                            <a href="https://instagram.com/anshuldawar" target="_blank"
-                               class="social-instagram text-white rounded-circle d-flex align-items-center justify-content-center hover-scale transition-all duration-300"
-                               style="width: 45px; height: 45px;">
-                                <i class="fab fa-instagram"></i>
-                            </a> -->
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Team Member 4 - Kareem -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="card h-100 text-center p-4 border-0 rounded-4 hover-lift transition-all duration-300">
-                        <div class="d-flex justify-content-center mb-3">
-                            <img src="{% static 'logo/user.png' %}" 
-                                 alt="Abdul Kareem M.A" class="team-avatar">
-                        </div>
-                        <h4 class="h5 text-primary-blue mb-1 font-playfair fw-bold">Mr. Abdul Kareem M.A</h4>
-                        <p class="text-muted mb-3 fw-semibold">Workshop & Sessions Facilitator</p>
-                        <div class="d-flex justify-content-center gap-3">
-                            <!-- <a href="https://linkedin.com/in/abdulkareem" target="_blank"
-                               class="social-linkedin text-white rounded-circle d-flex align-items-center justify-content-center hover-scale transition-all duration-300"
-                               style="width: 45px; height: 45px;">
-                                <i class="fab fa-linkedin-in"></i>
-                            </a>
-                            <a href="https://instagram.com/abdulkareem" target="_blank"
-                               class="social-instagram text-white rounded-circle d-flex align-items-center justify-content-center hover-scale transition-all duration-300"
-                               style="width: 45px; height: 45px;">
-                                <i class="fab fa-instagram"></i>
-                            </a> -->
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Team Member 5 - Norma -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="card h-100 text-center p-4 border-0 rounded-4 hover-lift transition-all duration-300">
-                        <div class="d-flex justify-content-center mb-3">
-                            <img src="{% static 'logo/user.png' %}" 
-                                 alt="Norma" class="team-avatar">
-                        </div>
-                        <h4 class="h5 text-primary-blue mb-1 font-playfair fw-bold">Ms. Norma</h4>
-                        <p class="text-muted mb-3 fw-semibold">Assistant Producer – Workshop Operations</p>
-                        <div class="d-flex justify-content-center gap-3">
-                            <!-- <a href="https://linkedin.com/in/norma" target="_blank"
-                               class="social-linkedin text-white rounded-circle d-flex align-items-center justify-content-center hover-scale transition-all duration-300"
-                               style="width: 45px; height: 45px;">
-                                <i class="fab fa-linkedin-in"></i>
-                            </a>
-                            <a href="https://instagram.com/norma" target="_blank"
-                               class="social-instagram text-white rounded-circle d-flex align-items-center justify-content-center hover-scale transition-all duration-300"
-                               style="width: 45px; height: 45px;">
-                                <i class="fab fa-instagram"></i>
-                            </a> -->
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Team Member 6 - Shankar -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="card h-100 text-center p-4 border-0 rounded-4 hover-lift transition-all duration-300">
-                        <div class="d-flex justify-content-center mb-3">
-                            <img src="{% static 'logo/user.png' %}" 
-                                 alt="Shankara Raman A. I" class="team-avatar">
-                        </div>
-                        <h4 class="h5 text-primary-blue mb-1 font-playfair fw-bold">Mr. Shankara Raman A. I</h4>
-                        <p class="text-muted mb-3 fw-semibold">Head of Movement Arts & Choreography</p>
-                        <div class="d-flex justify-content-center gap-3">
-                            <!-- <a href="https://linkedin.com/in/shankararaman" target="_blank"
-                               class="social-linkedin text-white rounded-circle d-flex align-items-center justify-content-center hover-scale transition-all duration-300"
-                               style="width: 45px; height: 45px;">
-                                <i class="fab fa-linkedin-in"></i>
-                            </a>
-                            <a href="https://instagram.com/shankararaman" target="_blank"
-                               class="social-instagram text-white rounded-circle d-flex align-items-center justify-content-center hover-scale transition-all duration-300"
-                               style="width: 45px; height: 45px;">
-                                <i class="fab fa-instagram"></i>
-                            </a> -->
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Team Member 7 - Pooja -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="card h-100 text-center p-4 border-0 rounded-4 hover-lift transition-all duration-300">
-                        <div class="d-flex justify-content-center mb-3">
-                            <img src="{% static 'logo/user.png' %}" 
-                                 alt="Pooja P." class="team-avatar">
-                        </div>
-                        <h4 class="h5 text-primary-blue mb-1 font-playfair fw-bold">Ms. Pooja P.</h4>
-                        <p class="text-muted mb-3 fw-semibold">Operations & Coordination Manager</p>
-                        <div class="d-flex justify-content-center gap-3">
-                            <!-- <a href="https://linkedin.com/in/pooja" target="_blank"
-                               class="social-linkedin text-white rounded-circle d-flex align-items-center justify-content-center hover-scale transition-all duration-300"
-                               style="width: 45px; height: 45px;">
-                                <i class="fab fa-linkedin-in"></i>
-                            </a>
-                            <a href="https://instagram.com/pooja" target="_blank"
-                               class="social-instagram text-white rounded-circle d-flex align-items-center justify-content-center hover-scale transition-all duration-300"
-                               style="width: 45px; height: 45px;">
-                                <i class="fab fa-instagram"></i>
-                            </a> -->
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Team Member 8 - Devansh -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="card h-100 text-center p-4 border-0 rounded-4 hover-lift transition-all duration-300">
-                        <div class="d-flex justify-content-center mb-3">
-                            <img src="{% static 'logo/user.png' %}" 
-                                 alt="Devansh" class="team-avatar">
-                        </div>
-                        <h4 class="h5 text-primary-blue mb-1 font-playfair fw-bold">Mr. Devansh</h4>
-                        <p class="text-muted mb-3 fw-semibold">Media & Digital Content Lead</p>
-                        <div class="d-flex justify-content-center gap-3">
-                            <!-- <a href="https://linkedin.com/in/devansh" target="_blank"
-                               class="social-linkedin text-white rounded-circle d-flex align-items-center justify-content-center hover-scale transition-all duration-300"
-                               style="width: 45px; height: 45px;">
-                                <i class="fab fa-linkedin-in"></i>
-                            </a>
-                            <a href="https://instagram.com/devansh" target="_blank"
-                               class="social-instagram text-white rounded-circle d-flex align-items-center justify-content-center hover-scale transition-all duration-300"
-                               style="width: 45px; height: 45px;">
-                                <i class="fab fa-instagram"></i>
-                            </a> -->
-                        </div>
-                    </div>
-                </div>
-            </div>
+<section class="py-5">
+  <div class="container">
+    <h2 class="font-playfair text-primary-blue text-center mb-5 display-5 fw-bold position-relative section-title">
+      Core Council
+    </h2>
+    <div class="row g-4 justify-content-center">
+      <!-- Team Member 1 - Jake -->
+      <div class="col-lg-4 col-md-6">
+        <div class="card h-100 text-center p-4 border-0 rounded-4 hover-lift transition-all duration-300">
+          <div class="d-flex justify-content-center mb-3">
+            <img src="{% static 'logo/user.png' %}" alt="Jake S. Thomas" class="team-avatar">
+          </div>
+          <h4 class="h5 text-primary-blue mb-1 font-playfair fw-bold">Ms. Jake S. Thomas</h4>
+          <p class="text-muted mb-3 fw-semibold">Creative Producer & Logistics Coordinator</p>
+          <div class="d-flex justify-content-center gap-3">
+          </div>
         </div>
-    </section>
+      </div>
+
+      <!-- Team Member 2 - John -->
+      <div class="col-lg-4 col-md-6">
+        <div class="card h-100 text-center p-4 border-0 rounded-4 hover-lift transition-all duration-300">
+          <div class="d-flex justify-content-center mb-3">
+            <img src="{% static 'logo/user.png' %}" alt="John Steward Raj J" class="team-avatar">
+          </div>
+          <h4 class="h5 text-primary-blue mb-1 font-playfair fw-bold">Mr. John Steward Raj J</h4>
+          <p class="text-muted mb-3 fw-semibold">Programme & Workshop Coordinator</p>
+          <div class="d-flex justify-content-center gap-3">
+          </div>
+        </div>
+      </div>
+
+      <!-- Team Member 3 - Anshul -->
+      <div class="col-lg-4 col-md-6">
+        <div class="card h-100 text-center p-4 border-0 rounded-4 hover-lift transition-all duration-300">
+          <div class="d-flex justify-content-center mb-3">
+            <img src="{% static 'logo/user.png' %}" alt="Anshul Dawar" class="team-avatar">
+          </div>
+          <h4 class="h5 text-primary-blue mb-1 font-playfair fw-bold">Mr. Anshul Dawar</h4>
+          <p class="text-muted mb-3 fw-semibold">Music Director – The HUMAN Album</p>
+          <div class="d-flex justify-content-center gap-3">
+          </div>
+        </div>
+      </div>
+
+      <!-- Team Member 4 - Kareem -->
+      <div class="col-lg-4 col-md-6">
+        <div class="card h-100 text-center p-4 border-0 rounded-4 hover-lift transition-all duration-300">
+          <div class="d-flex justify-content-center mb-3">
+            <img src="{% static 'logo/user.png' %}" alt="Abdul Kareem M.A" class="team-avatar">
+          </div>
+          <h4 class="h5 text-primary-blue mb-1 font-playfair fw-bold">Mr. Abdul Kareem M.A</h4>
+          <p class="text-muted mb-3 fw-semibold">Workshop & Sessions Facilitator</p>
+          <div class="d-flex justify-content-center gap-3">
+          </div>
+        </div>
+      </div>
+
+      <!-- Team Member 5 - Norma -->
+      <div class="col-lg-4 col-md-6">
+        <div class="card h-100 text-center p-4 border-0 rounded-4 hover-lift transition-all duration-300">
+          <div class="d-flex justify-content-center mb-3">
+            <img src="{% static 'logo/user.png' %}" alt="Norma" class="team-avatar">
+          </div>
+          <h4 class="h5 text-primary-blue mb-1 font-playfair fw-bold">Ms. Norma</h4>
+          <p class="text-muted mb-3 fw-semibold">Assistant Producer – Workshop Operations</p>
+          <div class="d-flex justify-content-center gap-3">
+          </div>
+        </div>
+      </div>
+
+      <!-- Team Member 6 - Shankar -->
+      <div class="col-lg-4 col-md-6">
+        <div class="card h-100 text-center p-4 border-0 rounded-4 hover-lift transition-all duration-300">
+          <div class="d-flex justify-content-center mb-3">
+            <img src="{% static 'logo/user.png' %}" alt="Shankara Raman A. I" class="team-avatar">
+          </div>
+          <h4 class="h5 text-primary-blue mb-1 font-playfair fw-bold">Mr. Shankara Raman A. I</h4>
+          <p class="text-muted mb-3 fw-semibold">Head of Movement Arts & Choreography</p>
+          <div class="d-flex justify-content-center gap-3">
+          </div>
+        </div>
+      </div>
+
+      <!-- Team Member 7 - Pooja -->
+      <div class="col-lg-4 col-md-6">
+        <div class="card h-100 text-center p-4 border-0 rounded-4 hover-lift transition-all duration-300">
+          <div class="d-flex justify-content-center mb-3">
+            <img src="{% static 'logo/user.png' %}" alt="Pooja P." class="team-avatar">
+          </div>
+          <h4 class="h5 text-primary-blue mb-1 font-playfair fw-bold">Ms. Pooja P.</h4>
+          <p class="text-muted mb-3 fw-semibold">Operations & Coordination Manager</p>
+          <div class="d-flex justify-content-center gap-3">
+          </div>
+        </div>
+      </div>
+
+      <!-- Team Member 8 - Devansh -->
+      <div class="col-lg-4 col-md-6">
+        <div class="card h-100 text-center p-4 border-0 rounded-4 hover-lift transition-all duration-300">
+          <div class="d-flex justify-content-center mb-3">
+            <img src="{% static 'logo/user.png' %}" alt="Devansh" class="team-avatar">
+          </div>
+          <h4 class="h5 text-primary-blue mb-1 font-playfair fw-bold">Mr. Devansh</h4>
+          <p class="text-muted mb-3 fw-semibold">Media & Digital Content Lead</p>
+          <div class="d-flex justify-content-center gap-3">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- Recent Event Gallery Section -->
 <section class="py-5 bg-light">
@@ -849,7 +668,7 @@
       Recent Event Highlights
     </h2>
     <div class="row justify-content-center">
-      <div class="col-lg-8 col-xl-6">
+      <div class="col-sm-6 col-xl-6">
         <div class="card mb-4 border-0 rounded-4 overflow-hidden hover-lift transition-all duration-300">
           <div class="position-relative">
             <img src="{% static 'production/human/human.jpeg' %}" alt="HUMAN Workshop Recent Event"
@@ -870,6 +689,96 @@
             <i class="fas fa-download me-2"></i>Download Workshop PDF
           </a>
         </div>
+      </div>
+      <div class="col-sm-6 col-xl-6">
+        <blockquote class="instagram-media" data-instgrm-captioned
+          data-instgrm-permalink="https://www.instagram.com/reel/DMRwk3noD13/?utm_source=ig_embed&amp;utm_campaign=loading"
+          data-instgrm-version="14"
+          style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
+          <div style="padding:16px;"> <a
+              href="https://www.instagram.com/reel/DMRwk3noD13/?utm_source=ig_embed&amp;utm_campaign=loading"
+              style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;"
+              target="_blank">
+              <div style=" display: flex; flex-direction: row; align-items: center;">
+                <div
+                  style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;">
+                </div>
+                <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;">
+                  <div
+                    style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;">
+                  </div>
+                  <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;">
+                  </div>
+                </div>
+              </div>
+              <div style="padding: 19% 0;"></div>
+              <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px"
+                  viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg"
+                  xmlns:xlink="https://www.w3.org/1999/xlink">
+                  <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <g transform="translate(-511.000000, -20.000000)" fill="#000000">
+                      <g>
+                        <path
+                          d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631">
+                        </path>
+                      </g>
+                    </g>
+                  </g>
+                </svg></div>
+              <div style="padding-top: 8px;">
+                <div
+                  style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">
+                  View this post on Instagram</div>
+              </div>
+              <div style="padding: 12.5% 0;"></div>
+              <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;">
+                <div>
+                  <div
+                    style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);">
+                  </div>
+                  <div
+                    style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;">
+                  </div>
+                  <div
+                    style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);">
+                  </div>
+                </div>
+                <div style="margin-left: 8px;">
+                  <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;">
+                  </div>
+                  <div
+                    style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)">
+                  </div>
+                </div>
+                <div style="margin-left: auto;">
+                  <div
+                    style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);">
+                  </div>
+                  <div
+                    style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);">
+                  </div>
+                  <div
+                    style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);">
+                  </div>
+                </div>
+              </div>
+              <div
+                style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;">
+                <div
+                  style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;">
+                </div>
+                <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;">
+                </div>
+              </div>
+            </a>
+            <p
+              style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">
+              <a href="https://www.instagram.com/reel/DMRwk3noD13/?utm_source=ig_embed&amp;utm_campaign=loading"
+                style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;"
+                target="_blank">A post shared by The HUMAN (@the_human_lud)</a></p>
+          </div>
+        </blockquote>
+        <script async src="//www.instagram.com/embed.js"></script>
       </div>
     </div>
   </div>
@@ -906,42 +815,17 @@
 {% endblock %}
 
 {% block extraScripts %}
-<script async src="//www.instagram.com/embed.js"></script>
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-    // Wait for Instagram embed to load
-    setTimeout(function() {
-        // Hide Instagram branding and text elements
-        const instagramEmbed = document.querySelector('.instagram-embed');
-        if (instagramEmbed) {
-            // Hide text elements within the Instagram embed
-            const textElements = instagramEmbed.querySelectorAll('div[style*="color:#3897f0"], p');
-            textElements.forEach(el => {
-                if (el.textContent.includes('View this post on Instagram') || 
-                    el.textContent.includes('A post shared by')) {
-                    el.style.display = 'none';
-                }
-            });
-        }
-    }, 2000);
+  const toggleBtn = document.getElementById('toggleBtn');
+  const collapseEl = document.getElementById('humanMovementText');
 
-    // Add smooth scroll animation
-    const observer = new IntersectionObserver(function(entries) {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-            }
-        });
-    }, { threshold: 0.1 });
+  collapseEl.addEventListener('show.bs.collapse', () => {
+    toggleBtn.textContent = 'View Less';
+  });
 
-    document.querySelectorAll('.reel-wrapper, .section-title').forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(30px)';
-        el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
-        observer.observe(el);
-    });
-});
+  collapseEl.addEventListener('hide.bs.collapse', () => {
+    toggleBtn.textContent = 'View More';
+  });
 </script>
 <script>
   // Enhanced Intersection Observer for smooth animations
