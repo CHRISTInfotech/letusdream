@@ -217,6 +217,45 @@
     text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
     margin-bottom: 2rem;
   }
+
+  /* Media coverage styling */
+  .media-link {
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    padding: 15px 20px;
+    border-radius: 12px;
+    text-decoration: none !important;
+    display: block;
+    height: 100%;
+  }
+
+  .media-link:hover {
+    border-color: var(--secondary-green);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(139, 201, 76, 0.3);
+  }
+
+  .media-source {
+    font-weight: 600;
+    color: var(--primary-blue);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+  }
+
+  .media-title {
+    color: var(--dark-text);
+    font-weight: 500;
+    line-height: 1.4;
+    margin-bottom: 0;
+  }
+
+  .external-link-icon {
+    color: var(--secondary-green);
+    font-size: 1.1rem;
+    margin-left: 8px;
+  }
 </style>
 {% endblock %}
 
@@ -258,7 +297,7 @@
       The DREAMS Band is thrilled to share the theme song, 
       The HUMAN Family, of our new album The HUMAN.
       <br/>
-      _🎧We’d love for you to listen, watch, and share it with your friends and loved ones. 
+      _🎧We'd love for you to listen, watch, and share it with your friends and loved ones. 
       Your support means the world to us.
     </div>
   </div>
@@ -292,7 +331,7 @@
               unique human qualities that risk being overshadowed amid rapid technologisation. This youth-driven
               movement stresses the growing disconnect from the very values that define our species, warning that
               without
-              conscious effort, even our own existence as humans could become obsolete. The HUMAN movement calls today’s
+              conscious effort, even our own existence as humans could become obsolete. The HUMAN movement calls today's
               youth to
               recognise their role as stewards of Mother Earth, charged with nurturing and caring for one another.
             </div>
@@ -300,19 +339,19 @@
             <div class="mb-3">
               The HUMAN movement is deeply rooted in the timeless philosophies and teachings of ancient and diverse
               civilizations, offering wisdom to guide a modern world in flux. At its core is the Indian maxim Vasudhaiva
-              Kutumbakam, meaning “The World Is One Family,” which highlights our interconnectedness and shared
-              responsibility. Building on this foundation, the movement embraces philosophies such as Africa’s Ubuntu
-              (“I
+              Kutumbakam, meaning "The World Is One Family," which highlights our interconnectedness and shared
+              responsibility. Building on this foundation, the movement embraces philosophies such as Africa's Ubuntu
+              ("I
               am
-              because we are”), Korea’s Hongik Ingan (“benefiting all humankind”), and principles from Indonesia’s
+              because we are"), Korea's Hongik Ingan ("benefiting all humankind"), and principles from Indonesia's
               Pancasila
-              and Tanzania’s Ujamaa that promote community and social justice. It also draws from spiritual and ethical
-              teachings like Greece’s Henosis (“Unity and Oneness”), Judaism’s Tikkun Olam (“healing the world”),
-              Japan’s
-              Wabi-Sabi (“beauty of transience”), Hawaii’s Aloha (“greeting”), and Sweden’s Lagom (“just right”), all
+              and Tanzania's Ujamaa that promote community and social justice. It also draws from spiritual and ethical
+              teachings like Greece's Henosis ("Unity and Oneness"), Judaism's Tikkun Olam ("healing the world"),
+              Japan's
+              Wabi-Sabi ("beauty of transience"), Hawaii's Aloha ("greeting"), and Sweden's Lagom ("just right"), all
               emphasizing harmony, respect, and balance. Together, these shared values form the foundation of the
               movement
-              and are beautifully reflected in its theme song, “The HUMAN Family,” which calls on all humankind to
+              and are beautifully reflected in its theme song, "The HUMAN Family," which calls on all humankind to
               nurture
               and care for one another.
             </div>
@@ -330,12 +369,12 @@
             inclusive coexistence, embracing all species and the natural world, laying the foundation for unity that
             encourages youth to look beyond personal gain and unite with a shared purpose for greater societal impact.
             Mindfulness lies at the heart of the workshop, inviting participants to live with intention and compassion,
-            rising above the noise of information overload. The organising team highlights that today’s challenge is not
+            rising above the noise of information overload. The organising team highlights that today's challenge is not
             a
             lack of awareness but a shortage of meaningful action and heartfelt engagement. In the Action session, youth
             are urged to move beyond words and social media soundbites by committing to one of the 17 Sustainable
             Development Goals, taking active responsibility to drive change in their communities. The program concludes
-            with Nurturing, exploring humanity’s ultimate purpose and calling participants to become ‘Steward Leaders’
+            with Nurturing, exploring humanity's ultimate purpose and calling participants to become 'Steward Leaders'
             who
             care deeply for the Earth, fellow humans, and all living beings.
           </div>
@@ -359,6 +398,52 @@
         </div>
       </div>
     </div>
+</section>
+
+<!-- Media Coverage Section -->
+<section class="py-5 bg-white">
+  <div class="container">
+    <h2 class="font-playfair text-primary-blue text-center mb-5 display-5 fw-bold position-relative section-title">
+      Featured in Media
+    </h2>
+    <div class="row g-4 justify-content-center">
+      <!-- Media Link 1 -->
+      <div class="col-lg-4 col-md-6">
+        <a href="https://www.punekarnews.in/the-human-movement-a-global-youth-initiative-for-a-sustainable-future/" 
+           target="_blank" class="media-link bg-light h-100">
+          <div class="media-source">Punekar News</div>
+          <h5 class="media-title">
+            The HUMAN Movement: A Global Youth Initiative for a Sustainable Future
+            <i class="fas fa-external-link-alt external-link-icon"></i>
+          </h5>
+        </a>
+      </div>
+
+      <!-- Media Link 2 -->
+      <div class="col-lg-4 col-md-6">
+        <a href="https://ibcworldnews.com/2025/08/26/global-youth-movement-the-human-champions-harmony-and-sustainability/" 
+           target="_blank" class="media-link bg-light h-100">
+          <div class="media-source">IBC World News</div>
+          <h5 class="media-title">
+            Global Youth Movement: The HUMAN Champions Harmony and Sustainability
+            <i class="fas fa-external-link-alt external-link-icon"></i>
+          </h5>
+        </a>
+      </div>
+
+      <!-- Media Link 3 -->
+      <div class="col-lg-4 col-md-6">
+        <a href="https://education.economictimes.indiatimes.com/news/higher-education/the-human-movement-empowering-youth-for-a-sustainable-future/123526690" 
+           target="_blank" class="media-link bg-light h-100">
+          <div class="media-source">Economic Times Education</div>
+          <h5 class="media-title">
+            The HUMAN Movement: Empowering Youth for a Sustainable Future
+            <i class="fas fa-external-link-alt external-link-icon"></i>
+          </h5>
+        </a>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- Purpose Section -->
@@ -583,7 +668,7 @@
       <div class="col-lg-3 col-md-3">
         <div class="card h-100 text-center p-4 border-0 rounded-4 hover-lift transition-all duration-300">
           <div class="d-flex justify-content-center mb-3">
-            <img src="{% static 'logo/user.png' %}" alt="Jake S. Thomas" class="team-avatar">
+            <img src="{% static '2025/human/jake.jpeg' %}" alt="Jake S. Thomas" class="team-avatar">
           </div>
           <h4 class="h5 text-primary-blue mb-1 font-playfair fw-bold">Ms. Jake S. Thomas</h4>
           <p class="text-muted mb-3 fw-semibold">Creative Producer & Logistics Coordinator</p>
@@ -596,7 +681,7 @@
       <div class="col-lg-3 col-md-3">
         <div class="card h-100 text-center p-4 border-0 rounded-4 hover-lift transition-all duration-300">
           <div class="d-flex justify-content-center mb-3">
-            <img src="{% static 'logo/user.png' %}" alt="John Steward Raj J" class="team-avatar">
+            <img src="{% static '2025/human/john.jpeg' %}" alt="John Steward Raj J" class="team-avatar">
           </div>
           <h4 class="h5 text-primary-blue mb-1 font-playfair fw-bold">Mr. John Steward Raj J</h4>
           <p class="text-muted mb-3 fw-semibold">Programme & Workshop Coordinator</p>
@@ -609,10 +694,22 @@
       <div class="col-lg-3 col-md-3">
         <div class="card h-100 text-center p-4 border-0 rounded-4 hover-lift transition-all duration-300">
           <div class="d-flex justify-content-center mb-3">
-            <img src="{% static 'logo/user.png' %}" alt="Anshul Dawar" class="team-avatar">
+            <img src="{% static '2025/human/anshul.jpeg' %}" alt="Anshul Dawar" class="team-avatar">
           </div>
           <h4 class="h5 text-primary-blue mb-1 font-playfair fw-bold">Mr. Anshul Dawar</h4>
           <p class="text-muted mb-3 fw-semibold">Music Director – The HUMAN Album</p>
+          <div class="d-flex justify-content-center gap-3">
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-3">
+        <div class="card h-100 text-center p-4 border-0 rounded-4 hover-lift transition-all duration-300">
+          <div class="d-flex justify-content-center mb-3">
+            <img src="{% static '2025/human/sudarshan.jpeg' %}" alt="Devansh" class="team-avatar">
+          </div>
+          <h4 class="h5 text-primary-blue mb-1 font-playfair fw-bold">Mr. Sudharsan M </h4>
+          <p class="text-muted mb-3 fw-semibold">Creative Director</p>
           <div class="d-flex justify-content-center gap-3">
           </div>
         </div>
@@ -622,7 +719,7 @@
       <div class="col-lg-3 col-md-3">
         <div class="card h-100 text-center p-4 border-0 rounded-4 hover-lift transition-all duration-300">
           <div class="d-flex justify-content-center mb-3">
-            <img src="{% static 'logo/user.png' %}" alt="Abdul Kareem M.A" class="team-avatar">
+            <img src="{% static '2025/human/kareem.jpeg' %}" alt="Abdul Kareem M.A" class="team-avatar">
           </div>
           <h4 class="h5 text-primary-blue mb-1 font-playfair fw-bold">Mr. Abdul Kareem M.A</h4>
           <p class="text-muted mb-3 fw-semibold">Workshop & Sessions Facilitator</p>
@@ -635,7 +732,7 @@
       <div class="col-lg-3 col-md-3">
         <div class="card h-100 text-center p-4 border-0 rounded-4 hover-lift transition-all duration-300">
           <div class="d-flex justify-content-center mb-3">
-            <img src="{% static 'logo/user.png' %}" alt="Norma" class="team-avatar">
+            <img src="{% static '2025/human/norma.jpeg' %}" alt="Norma" class="team-avatar">
           </div>
           <h4 class="h5 text-primary-blue mb-1 font-playfair fw-bold">Ms. Norma</h4>
           <p class="text-muted mb-3 fw-semibold">Assistant Producer – Workshop Operations</p>
@@ -648,9 +745,9 @@
       <div class="col-lg-3 col-md-3">
         <div class="card h-100 text-center p-4 border-0 rounded-4 hover-lift transition-all duration-300">
           <div class="d-flex justify-content-center mb-3">
-            <img src="{% static 'logo/user.png' %}" alt="Shankara Raman A. I" class="team-avatar">
+            <img src="{% static '2025/human/sankar.jpeg' %}" alt="Shankara Raman A. I" class="team-avatar">
           </div>
-          <h4 class="h5 text-primary-blue mb-1 font-playfair fw-bold">Mr. Shankara Raman A. I</h4>
+          <h4 class="h5 text-primary-blue mb-1 font-playfair fw-bold">Mr. Sankara Raman A I</h4>
           <p class="text-muted mb-3 fw-semibold">Head of Movement Arts & Choreography</p>
           <div class="d-flex justify-content-center gap-3">
           </div>
@@ -661,7 +758,7 @@
       <div class="col-lg-3 col-md-3">
         <div class="card h-100 text-center p-4 border-0 rounded-4 hover-lift transition-all duration-300">
           <div class="d-flex justify-content-center mb-3">
-            <img src="{% static 'logo/user.png' %}" alt="Pooja P." class="team-avatar">
+            <img src="{% static '2025/human/pooja.jpeg' %}" alt="Pooja P." class="team-avatar">
           </div>
           <h4 class="h5 text-primary-blue mb-1 font-playfair fw-bold">Ms. Pooja P.</h4>
           <p class="text-muted mb-3 fw-semibold">Operations & Coordination Manager</p>
@@ -671,17 +768,6 @@
       </div>
 
       <!-- Team Member 8 - Devansh -->
-      <div class="col-lg-3 col-md-3">
-        <div class="card h-100 text-center p-4 border-0 rounded-4 hover-lift transition-all duration-300">
-          <div class="d-flex justify-content-center mb-3">
-            <img src="{% static 'logo/user.png' %}" alt="Devansh" class="team-avatar">
-          </div>
-          <h4 class="h5 text-primary-blue mb-1 font-playfair fw-bold">Mr. Devansh</h4>
-          <p class="text-muted mb-3 fw-semibold">Media & Digital Content Lead</p>
-          <div class="d-flex justify-content-center gap-3">
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 </section>
