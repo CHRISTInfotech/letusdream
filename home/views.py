@@ -614,3 +614,6 @@ def human(request):
 
 def annual_report(request):
     return render(request, 'newsletters/annual_report.html')
+
+def conclave(request):
+    return render(request, 'conference/conclave.html')

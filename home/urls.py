@@ -37,6 +37,7 @@ urlpatterns = [
 
     # CONFERENCE URLS
     path('conferences', aboutConference, name='Conferences'),
+    path('conclave', conclave, name='conclave'),
     path('annualConference', allConferences, name='annualConference'),
     path('trriennialConference', triennialConference, name='trriennial-conference'),
     path('triennial-conference-2020', triennialConference2020, name='tc-2020'),
