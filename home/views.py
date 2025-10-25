@@ -673,13 +673,17 @@ def locations(request, loc):
 
 
 def research(request):
-    return render(request, "research/research.html")
+    breadcrumbs = [
+        {"name": "Home", "url": "main", "icon": "fas fa-home", "active": False},
+        {"name": "Research", "url": "research", "icon": "fa-solid fa-book", "active": False},
+    ]
+    return render(request, "research/research.html",{"breadcrumbs": breadcrumbs})
 
 
 def publications(request):
     breadcrumbs = [
         {"name": "Home", "url": "main", "icon": "fas fa-home", "active": False},
-        {"name": "Research", "url": None, "icon": "fa-solid fa-book", "active": False},
+        {"name": "Research", "url": "research", "icon": "fa-solid fa-book", "active": False},
         {
             "name": "Publications",
             "url": None,
