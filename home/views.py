@@ -754,27 +754,56 @@ def contactUs(request):
 
 
 def club_overview(request):
-    return render(request, "clubs/overview.html")
+    breadcrumbs = [
+        {"name": "Home", "url": "main", "icon": "fas fa-home", "active": False},
+        {"name": "Clubs", "url": "club-overview", "icon": "fa-solid fa-cubes-stacked", "active": True},
+    ]
+    return render(request, "clubs/overview.html", {"breadcrumbs": breadcrumbs})
 
 
 def community_club(request):
-    return render(request, "clubs/community.html")
+    breadcrumbs = [
+        {"name": "Home", "url": "main", "icon": "fas fa-home", "active": False},
+        {"name": "Clubs", "url": "club-overview", "icon": "fa-solid fa-cubes-stacked", "active": False},
+        {"name": "Community Hubs", "url": "community-club", "icon": "fa-solid fa-people-arrows", "active": True},
+    ]
+    return render(request, "clubs/community.html", {"breadcrumbs": breadcrumbs})
 
 
 def conversation_club(request):
-    return render(request, "clubs/conversation.html")
+    breadcrumbs = [
+        {"name": "Home", "url": "main", "icon": "fas fa-home", "active": False},
+        {"name": "Clubs", "url": "club-overview", "icon": "fa-solid fa-cubes-stacked", "active": False},
+        {"name": "Conversation Club", "url": "conversation-club", "icon": "fa-solid fa-people-arrows", "active": True},
+    ]
+    return render(request, "clubs/conversation.html", {"breadcrumbs": breadcrumbs})
 
 
 def professional_club(request):
-    return render(request, "clubs/professional.html")
+    breadcrumbs = [
+        {"name": "Home", "url": "main", "icon": "fas fa-home", "active": False},
+        {"name": "Clubs", "url": "club-overview", "icon": "fa-solid fa-cubes-stacked", "active": False},
+        {"name": "Professional Club", "url": "professional-club", "icon": "fa-solid fa-people-arrows", "active": True},
+    ]
+    return render(request, "clubs/professional.html", {"breadcrumbs": breadcrumbs})
 
 
 def growandglow_club(request):
-    return render(request, "clubs/selfhelp.html")
+    breadcrumbs = [
+        {"name": "Home", "url": "main", "icon": "fas fa-home", "active": False},
+        {"name": "Clubs", "url": "club-overview", "icon": "fa-solid fa-cubes-stacked", "active": False},
+        {"name": "Grow and Glow Club", "url": "growandglow-club", "icon": "fa-solid fa-people-arrows", "active": True},
+    ]
+    return render(request, "clubs/selfhelp.html", {"breadcrumbs": breadcrumbs})
 
 
 def youthleadership_club(request):
-    return render(request, "clubs/youthleadership.html")
+    breadcrumbs = [
+        {"name": "Home", "url": "main", "icon": "fas fa-home", "active": False},
+        {"name": "Clubs", "url": "club-overview", "icon": "fa-solid fa-cubes-stacked", "active": False},
+        {"name": "Global Youth Leadership Network", "url": "youthleadership-club", "icon": "fa-solid fa-people-arrows", "active": True},
+    ]
+    return render(request, "clubs/youthleadership.html", {"breadcrumbs": breadcrumbs})
 
 
 def error_pages(request, exception=None):
