@@ -622,7 +622,17 @@ def annualConferences(request, year, location):
 
 
 def yclpCourse(request):
-    return render(request, "courses/yclpCourse.html")
+    breadcrumbs = [
+        {"name": "Home", "url": "main", "icon": "fas fa-home", "active": False},
+        {"name": "Courses", "url": None, "icon": "fas fa-calendar", "active": False},
+        {
+            "name": "Young Community Leaders Program",
+            "url": None,
+            "icon": "fas fa-calendar-alt",
+            "active": True,
+        },
+    ]
+    return render(request, "courses/yclpCourse.html", {"breadcrumbs": breadcrumbs})
 
 
 def dreams(request, drm):
@@ -675,7 +685,7 @@ def locations(request, loc):
 def research(request):
     breadcrumbs = [
         {"name": "Home", "url": "main", "icon": "fas fa-home", "active": False},
-        {"name": "Research", "url": "research", "icon": "fa-solid fa-book", "active": False},
+        {"name": "Research", "url": "research", "icon": "fa-solid fa-book", "active": True},
     ]
     return render(request, "research/research.html",{"breadcrumbs": breadcrumbs})
 
@@ -728,7 +738,17 @@ def sustainability(request):
 
 
 def llfp(request):
-    return render(request, "courses/llfp2024.html", {"data": llfp_2024})
+    breadcrumbs = [
+        {"name": "Home", "url": "main", "icon": "fas fa-home", "active": False},
+        {"name": "Courses", "url": None, "icon": "fas fa-calendar", "active": False},
+        {
+            "name": "Leadership Fellowship Program",
+            "url": None,
+            "icon": "fas fa-calendar-alt",
+            "active": True,
+        },
+    ]
+    return render(request, "courses/llfp2024.html", {"data": llfp_2024, "breadcrumbs": breadcrumbs})
 
 
 def contactUs(request):
@@ -823,7 +843,17 @@ def news_letter_html(request, month, year):
 
 
 def human(request):
-    return render(request, "productions/human.html")
+    breadcrumbs = [
+        {"name": "Home", "url": "main", "icon": "fas fa-home", "active": False},
+        {"name": "Productions", "url": None, "icon": "fas fa-calendar", "active": False},
+        {
+            "name": "The HUMAN",
+            "url": None,
+            "icon": "fas fa-calendar-alt",
+            "active": True,
+        },
+    ]
+    return render(request, "productions/human.html", {"breadcrumbs": breadcrumbs})
 
 
 def annual_report(request):
@@ -831,4 +861,14 @@ def annual_report(request):
 
 
 def conclave(request):
-    return render(request, "conference/conclave.html")
+    breadcrumbs = [
+        {"name": "Home", "url": "main", "icon": "fas fa-home", "active": False},
+        {"name": "Conference", "url": None, "icon": "fas fa-calendar", "active": False},
+        {
+            "name": "Conclaves",
+            "url": None,
+            "icon": "fas fa-calendar-alt",
+            "active": True,
+        },
+    ]
+    return render(request, "conference/conclave.html", {"breadcrumbs": breadcrumbs})
