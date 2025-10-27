@@ -172,6 +172,22 @@ def pressRelease(request):
 def newsletter(request):
     newsletters = [
         {
+            "pdf_url": "newsletters/2025/2025vol2.pdf",
+            "image_url": "newsletters/2025/2025vol2.png",
+            "title": "Conference Newsletter 2025",
+            "month": "Oct",
+            "day": "15",
+            "year": "2025",
+        },
+        {
+            "pdf_url": "newsletters/2025/2025vol1.pdf",
+            "image_url": "newsletters/2025/2025vol1.png",
+            "title": "Conference Newsletter 2025",
+            "month": "Oct",
+            "day": "15",
+            "year": "2025",
+        },
+        {
             "pdf_url": "2025/newsletter/NewsBulletin_Changanassery.pdf",
             "image_url": "2025/newsletter/NewsBulletin_Changanassery.png",
             "title": "News Bulletin Changanassery",
