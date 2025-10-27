@@ -21,6 +21,7 @@ urlpatterns = [
     path('youtube-media/', youtubeMedia, name="youtube-media"),
     path('dreams/<str:drm>', dreams, name='dreams'),
     path('human', human, name='human'),
+    path('sonic-sanctuaries', sonicSanctuaries, name='sonic-sanctuaries'),
     path('locations/<str:loc>', locations, name='locations'),
     path('yclpCourse', yclpCourse, name='yclp-course'),
     path('research', research, name='research'),

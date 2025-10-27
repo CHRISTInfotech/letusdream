@@ -701,15 +701,25 @@ def locations(request, loc):
 def research(request):
     breadcrumbs = [
         {"name": "Home", "url": "main", "icon": "fas fa-home", "active": False},
-        {"name": "Research", "url": "research", "icon": "fa-solid fa-book", "active": True},
+        {
+            "name": "Research",
+            "url": "research",
+            "icon": "fa-solid fa-book",
+            "active": True,
+        },
     ]
-    return render(request, "research/research.html",{"breadcrumbs": breadcrumbs})
+    return render(request, "research/research.html", {"breadcrumbs": breadcrumbs})
 
 
 def publications(request):
     breadcrumbs = [
         {"name": "Home", "url": "main", "icon": "fas fa-home", "active": False},
-        {"name": "Research", "url": "research", "icon": "fa-solid fa-book", "active": False},
+        {
+            "name": "Research",
+            "url": "research",
+            "icon": "fa-solid fa-book",
+            "active": False,
+        },
         {
             "name": "Publications",
             "url": None,
@@ -717,9 +727,7 @@ def publications(request):
             "active": True,
         },
     ]
-    return render(
-        request, "research/publications.html", {"breadcrumbs": breadcrumbs}
-    )
+    return render(request, "research/publications.html", {"breadcrumbs": breadcrumbs})
 
 
 def calender(request):
@@ -764,7 +772,11 @@ def llfp(request):
             "active": True,
         },
     ]
-    return render(request, "courses/llfp2024.html", {"data": llfp_2024, "breadcrumbs": breadcrumbs})
+    return render(
+        request,
+        "courses/llfp2024.html",
+        {"data": llfp_2024, "breadcrumbs": breadcrumbs},
+    )
 
 
 def contactUs(request):
@@ -792,7 +804,12 @@ def contactUs(request):
 def club_overview(request):
     breadcrumbs = [
         {"name": "Home", "url": "main", "icon": "fas fa-home", "active": False},
-        {"name": "Clubs", "url": "club-overview", "icon": "fa-solid fa-cubes-stacked", "active": True},
+        {
+            "name": "Clubs",
+            "url": "club-overview",
+            "icon": "fa-solid fa-cubes-stacked",
+            "active": True,
+        },
     ]
     return render(request, "clubs/overview.html", {"breadcrumbs": breadcrumbs})
 
@@ -800,8 +817,18 @@ def club_overview(request):
 def community_club(request):
     breadcrumbs = [
         {"name": "Home", "url": "main", "icon": "fas fa-home", "active": False},
-        {"name": "Clubs", "url": "club-overview", "icon": "fa-solid fa-cubes-stacked", "active": False},
-        {"name": "Community Hubs", "url": "community-club", "icon": "fa-solid fa-people-arrows", "active": True},
+        {
+            "name": "Clubs",
+            "url": "club-overview",
+            "icon": "fa-solid fa-cubes-stacked",
+            "active": False,
+        },
+        {
+            "name": "Community Hubs",
+            "url": "community-club",
+            "icon": "fa-solid fa-people-arrows",
+            "active": True,
+        },
     ]
     return render(request, "clubs/community.html", {"breadcrumbs": breadcrumbs})
 
@@ -809,8 +836,18 @@ def community_club(request):
 def conversation_club(request):
     breadcrumbs = [
         {"name": "Home", "url": "main", "icon": "fas fa-home", "active": False},
-        {"name": "Clubs", "url": "club-overview", "icon": "fa-solid fa-cubes-stacked", "active": False},
-        {"name": "Conversation Club", "url": "conversation-club", "icon": "fa-solid fa-people-arrows", "active": True},
+        {
+            "name": "Clubs",
+            "url": "club-overview",
+            "icon": "fa-solid fa-cubes-stacked",
+            "active": False,
+        },
+        {
+            "name": "Conversation Club",
+            "url": "conversation-club",
+            "icon": "fa-solid fa-people-arrows",
+            "active": True,
+        },
     ]
     return render(request, "clubs/conversation.html", {"breadcrumbs": breadcrumbs})
 
@@ -818,8 +855,18 @@ def conversation_club(request):
 def professional_club(request):
     breadcrumbs = [
         {"name": "Home", "url": "main", "icon": "fas fa-home", "active": False},
-        {"name": "Clubs", "url": "club-overview", "icon": "fa-solid fa-cubes-stacked", "active": False},
-        {"name": "Professional Club", "url": "professional-club", "icon": "fa-solid fa-people-arrows", "active": True},
+        {
+            "name": "Clubs",
+            "url": "club-overview",
+            "icon": "fa-solid fa-cubes-stacked",
+            "active": False,
+        },
+        {
+            "name": "Professional Club",
+            "url": "professional-club",
+            "icon": "fa-solid fa-people-arrows",
+            "active": True,
+        },
     ]
     return render(request, "clubs/professional.html", {"breadcrumbs": breadcrumbs})
 
@@ -827,8 +874,18 @@ def professional_club(request):
 def growandglow_club(request):
     breadcrumbs = [
         {"name": "Home", "url": "main", "icon": "fas fa-home", "active": False},
-        {"name": "Clubs", "url": "club-overview", "icon": "fa-solid fa-cubes-stacked", "active": False},
-        {"name": "Grow and Glow Club", "url": "growandglow-club", "icon": "fa-solid fa-people-arrows", "active": True},
+        {
+            "name": "Clubs",
+            "url": "club-overview",
+            "icon": "fa-solid fa-cubes-stacked",
+            "active": False,
+        },
+        {
+            "name": "Grow and Glow Club",
+            "url": "growandglow-club",
+            "icon": "fa-solid fa-people-arrows",
+            "active": True,
+        },
     ]
     return render(request, "clubs/selfhelp.html", {"breadcrumbs": breadcrumbs})
 
@@ -836,8 +893,18 @@ def growandglow_club(request):
 def youthleadership_club(request):
     breadcrumbs = [
         {"name": "Home", "url": "main", "icon": "fas fa-home", "active": False},
-        {"name": "Clubs", "url": "club-overview", "icon": "fa-solid fa-cubes-stacked", "active": False},
-        {"name": "Global Youth Leadership Network", "url": "youthleadership-club", "icon": "fa-solid fa-people-arrows", "active": True},
+        {
+            "name": "Clubs",
+            "url": "club-overview",
+            "icon": "fa-solid fa-cubes-stacked",
+            "active": False,
+        },
+        {
+            "name": "Global Youth Leadership Network",
+            "url": "youthleadership-club",
+            "icon": "fa-solid fa-people-arrows",
+            "active": True,
+        },
     ]
     return render(request, "clubs/youthleadership.html", {"breadcrumbs": breadcrumbs})
 
@@ -861,7 +928,12 @@ def news_letter_html(request, month, year):
 def human(request):
     breadcrumbs = [
         {"name": "Home", "url": "main", "icon": "fas fa-home", "active": False},
-        {"name": "Productions", "url": None, "icon": "fas fa-calendar", "active": False},
+        {
+            "name": "Productions",
+            "url": None,
+            "icon": "fas fa-calendar",
+            "active": False,
+        },
         {
             "name": "The HUMAN",
             "url": None,
@@ -870,6 +942,27 @@ def human(request):
         },
     ]
     return render(request, "productions/human.html", {"breadcrumbs": breadcrumbs})
+
+
+def sonicSanctuaries(request):
+    breadcrumbs = [
+        {"name": "Home", "url": "main", "icon": "fas fa-home", "active": False},
+        {
+            "name": "Productions",
+            "url": None,
+            "icon": "fas fa-calendar",
+            "active": False,
+        },
+        {
+            "name": "Sonic Sanctuaries",
+            "url": None,
+            "icon": "fas fa-calendar-alt",
+            "active": True,
+        },
+    ]
+    return render(
+        request, "productions/sonicSanctuaries.html", {"breadcrumbs": breadcrumbs}
+    )
 
 
 def annual_report(request):
