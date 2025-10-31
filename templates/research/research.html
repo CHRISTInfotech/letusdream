@@ -6,425 +6,84 @@ RESEARCH - Dreams Initiative
 {% endblock %}
 
 {% block extraStyles %}
-<link rel="stylesheet" href="{% static 'css/research.css' %}" type="text/css">
-<style>
-    :root {
-        --primary-blue: #0c52a1;
-        --secondary-green: #92ed26;
-        --light-bg: #ffffff;
-        --light-gray: #f8f9fa;
-        --medium-gray: #e9ecef;
-        --dark-text: #333333;
-        --medium-text: #666666;
-        --light-text: #888888;
-        --card-bg: rgba(255, 255, 255, 0.95);
-        --card-shadow: rgba(12, 82, 161, 0.08);
-        --gradient-primary: linear-gradient(135deg, var(--primary-blue) 0%, #0a4285 100%);
-        --gradient-secondary: linear-gradient(135deg, var(--secondary-green) 0%, #7bc922 100%);
-        --box-shadow: 0 10px 30px var(--card-shadow);
-        --border-radius: 15px;
-        --stagger: 0.2;
-    }
-    
-    .hero-section {
-        background: var(--gradient-primary);
-        padding: 100px 0 80px;
-        position: relative;
-        overflow: hidden;
-    }
-    
-    .hero-section::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="2" fill="rgba(255,255,255,0.1)"/></svg>') repeat;
-        opacity: 0.3;
-    }
-    
-    .hero-content {
-        position: relative;
-        z-index: 2;
-    }
-    
-    .section-title {
-        color: var(--primary-blue);
-        font-weight: 700;
-        margin-bottom: 2rem;
-        position: relative;
-    }
-    
-    .section-title::after {
-        content: '';
-        position: absolute;
-        bottom: -10px;
-        left: 0;
-        width: 60px;
-        height: 3px;
-        background: var(--secondary-green);
-        border-radius: 2px;
-    }
-    
-    .research-card {
-        background: var(--card-bg);
-        border-radius: var(--border-radius);
-        box-shadow: var(--box-shadow);
-        transition: all 0.3s ease;
-        border: none;
-        overflow: hidden;
-        margin-bottom: 2rem;
-    }
-    
-    .research-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 15px 35px rgba(12, 82, 161, 0.15);
-    }
-    
-    .research-card .card-img-top {
-        height: 250px;
-        object-fit: cover;
-        transition: transform 0.3s ease;
-    }
-    
-    .research-card:hover .card-img-top {
-        transform: scale(1.05);
-    }
-    
-    .researcher-card {
-        background: var(--card-bg);
-        border-radius: 20px;
-        padding: 2rem;
-        text-align: center;
-        box-shadow: var(--box-shadow);
-        transition: all 0.3s ease;
-        border: none;
-        height: 100%;
-    }
-    
-    .researcher-card:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 20px 40px rgba(12, 82, 161, 0.2);
-    }
-    
-    .researcher-img {
-        width: 120px;
-        height: 120px;
-        object-fit: cover;
-        border-radius: 50%;
-        border: 4px solid var(--secondary-green);
-        margin-bottom: 1.5rem;
-        transition: all 0.3s ease;
-    }
-    
-    .researcher-card:hover .researcher-img {
-        border-color: var(--primary-blue);
-        transform: scale(1.05);
-    }
-    
-    .stats-section {
-        background: var(--light-gray);
-        padding: 80px 0;
-    }
-    
-    .stat-item {
-        text-align: center;
-        padding: 2rem;
-        background: var(--light-bg);
-        border-radius: var(--border-radius);
-        box-shadow: var(--box-shadow);
-        margin-bottom: 2rem;
-        transition: all 0.3s ease;
-    }
-    
-    .stat-item:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 15px 35px var(--card-shadow);
-    }
-    
-    .stat-number {
-        font-size: 3rem;
-        font-weight: 700;
-        color: var(--secondary-green);
-        margin-bottom: 0.5rem;
-    }
-    
-    .testimonial-card {
-        border: none;
-        box-shadow: var(--box-shadow);
-        border-radius: var(--border-radius);
-        transition: all 0.3s ease;
-        background: var(--card-bg);
-    }
-    
-    .testimonial-card:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 15px 35px var(--card-shadow);
-    }
-    
-    .quote-icon {
-        font-size: 3rem;
-        color: var(--primary-blue);
-        opacity: 0.3;
-        position: absolute;
-        top: -10px;
-        left: 20px;
-    }
-    
-    .author-img {
-        width: 80px;
-        height: 80px;
-        border-radius: 50%;
-        object-fit: cover;
-        border: 4px solid var(--light-bg);
-        box-shadow: var(--box-shadow);
-    }
-    
-    .section-title {
-        position: relative;
-        display: inline-block;
-        padding-bottom: 1rem;
-    }
-    
-    .section-title::after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 60px;
-        height: 3px;
-        background: var(--gradient-secondary);
-        border-radius: 2px;
-    }
-    
-    .social-links a {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        width: 40px;
-        height: 40px;
-        background: var(--light-gray);
-        color: var(--primary-blue);
-        border-radius: 50%;
-        text-decoration: none;
-        margin: 0 5px;
-        transition: all 0.3s ease;
-    }
-    
-    .social-links a:hover {
-        background: var(--secondary-green);
-        color: var(--light-bg);
-        transform: translateY(-2px);
-    }
-    
-    .breadcrumb-custom {
-        background: var(--card-bg);
-        backdrop-filter: blur(10px);
-        border-radius: 50px;
-        padding: 1rem 2rem;
-        margin-bottom: 0;
-        box-shadow: var(--box-shadow);
-    }
-    
-    .btn-primary-custom {
-        background: var(--gradient-primary);
-        border: none;
-        border-radius: 50px;
-        padding: 12px 30px;
-        font-weight: 600;
-        transition: all 0.3s ease;
-        color: var(--light-bg);
-    }
-    
-    .btn-primary-custom:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 8px 25px rgba(12, 82, 161, 0.3);
-        background: linear-gradient(135deg, #0a4285 0%, var(--primary-blue) 100%);
-    }
-    
-    .btn-secondary-custom {
-        background: var(--gradient-secondary);
-        border: none;
-        border-radius: 50px;
-        padding: 12px 30px;
-        font-weight: 600;
-        transition: all 0.3s ease;
-        color: var(--dark-text);
-    }
-    
-    .btn-secondary-custom:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 8px 25px rgba(146, 237, 38, 0.3);
-        background: linear-gradient(135deg, #7bc922 0%, var(--secondary-green) 100%);
-    }
-    
-    .current-research-item {
-        background: var(--card-bg);
-        border-left: 4px solid var(--secondary-green);
-        padding: 1.5rem;
-        margin-bottom: 1rem;
-        border-radius: 0 10px 10px 0;
-        box-shadow: var(--box-shadow);
-        transition: all 0.3s ease;
-    }
-    
-    .current-research-item:hover {
-        transform: translateX(5px);
-        box-shadow: 0 15px 35px var(--card-shadow);
-        border-left-color: var(--primary-blue);
-    }
-    
-    /* Additional utility classes */
-    .text-primary-blue {
-        color: var(--primary-blue) !important;
-    }
-    
-    .text-secondary-green {
-        color: var(--secondary-green) !important;
-    }
-    
-    .bg-primary-blue {
-        background-color: var(--primary-blue) !important;
-    }
-    
-    .bg-secondary-green {
-        background-color: var(--secondary-green) !important;
-    }
-    
-    .bg-gradient-primary {
-        background: var(--gradient-primary) !important;
-    }
-    
-    .bg-gradient-secondary {
-        background: var(--gradient-secondary) !important;
-    }
-    
-    @media (max-width: 768px) {
-        .hero-section {
-            padding: 60px 0 40px;
-        }
-        
-        .researcher-card {
-            padding: 1.5rem;
-        }
-        
-        .researcher-img {
-            width: 100px;
-            height: 100px;
-        }
-        
-        .stat-number {
-            font-size: 2.5rem;
-        }
-        
-        .testimonial-card {
-            padding: 2rem;
-        }
-        
-        .current-research-item {
-            padding: 1rem;
-        }
-    }
-</style>
 {% endblock extraStyles %}
 
 {% block links %}
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 {% endblock links %}
 
 {% block content %}
-<!-- Hero Section -->
-<!-- Hero Section -->
-<section class="hero-section">
-    <div class="container">
-        <!-- Breadcrumb -->
-        <nav aria-label="breadcrumb" class="mb-4">
-            <ol class="breadcrumb breadcrumb-custom">
-                <li class="breadcrumb-item">
-                    <a href="{% url 'main' %}" class="text-decoration-none text-dark">
-                        <i class="fas fa-home me-1"></i>Home
+<section class="container">
+
+    <div class="hero-content text-white">
+        <div class="row align-items-center">
+            <div class="col-lg-7">
+                <h1 class="display-3 fw-bold mb-4">LUD interventions evaluation studies</h1>
+                <p class="lead mb-4 fs-5">
+                    Advancing scientific understanding through rigorous evaluation of programs
+                    and their transformative impact on participants and communities worldwide.
+                </p>
+                <div class="d-flex flex-wrap gap-3 mb-4">
+                    <span class="badge bg-light text-dark px-3 py-2 fs-6">Community Conferences</span>
+                    <span class="badge bg-light text-dark px-3 py-2 fs-6">Professional Club</span>
+                    <span class="badge bg-light text-dark px-3 py-2 fs-6">Music Band</span>
+                    <span class="badge bg-light text-dark px-3 py-2 fs-6">Global Youth Leadership</span>
+                </div>
+                <div class="badge bg-dark text-white px-3 py-2 fs-6">
+                    <a href="{% url 'publications' %}" class="text-decoration-none text-white">
+                        <i class="fas fa-rocket me-2"></i> Explore Research
                     </a>
-                </li>
-                <li class="breadcrumb-item active" aria-current="page">Research</li>
-            </ol>
-        </nav>
-        
-        <div class="hero-content text-white">
-            <div class="row align-items-center">
-                <div class="col-lg-7">
-                    <h1 class="display-3 fw-bold mb-4">Dreams Research</h1>
-                    <p class="lead mb-4 fs-5">
-                        Advancing scientific understanding through rigorous evaluation of programs 
-                        and their transformative impact on participants and communities worldwide.
-                    </p>
-                    <div class="d-flex flex-wrap gap-3 mb-4">
-                        <span class="badge bg-light text-dark px-3 py-2 fs-6">Community Conferences</span>
-                        <span class="badge bg-light text-dark px-3 py-2 fs-6">Professional Club</span>
-                        <span class="badge bg-light text-dark px-3 py-2 fs-6">Music Band</span>
-                        <span class="badge bg-light text-dark px-3 py-2 fs-6">Global Youth Leadership</span>
-                    </div>
-                    <button class="btn btn-primary-custom btn-lg">
-                        <i class="fas fa-rocket me-2"></i>Explore Research
-                    </button>
                 </div>
-                <div class="col-lg-5 text-center d-none d-lg-block">
-                    <img src="{% static 'Research/Dreams-RESEARCH.png' %}" 
-                         alt="Dreams Research" 
-                         class="img-fluid" 
-                         style="max-height: 400px; filter: drop-shadow(0 10px 30px rgba(0,0,0,0.3));">
-                </div>
+            </div>
+            <div class="col-lg-5 text-center d-none d-lg-block">
+                <img src="{% static 'Research/Dreams-RESEARCH.png' %}" alt="Dreams Research" class="img-fluid"
+                    style="max-height: 400px; filter: drop-shadow(0 10px 30px rgba(0,0,0,0.3));">
             </div>
         </div>
     </div>
+    </div>
 </section>
-
-<!-- Research Areas Section -->
-
 
 <!-- Research Overview Section -->
 <section class="py-5">
     <div class="container">
         <div class="row">
-            <div class="col-lg-8 mx-auto text-center mb-5">
-                <h2 class="section-title display-5">Our Research Mission</h2>
-                <p class="lead text-muted">
-                    The 'Let Us Dream' research team is committed to the scientific evaluation of programs 
-                    and their impact on participants as well as the audience. Our multidisciplinary team 
-                    undertakes high-quality research that contributes to the overall improvement and 
+            <div class="col-lg-8 mx-auto text-center p-4 mb-2">
+                <h2 class="">Research Mission</h2>
+                <p class="text-muted lead fs-5">
+                    The 'Let Us Dream' research team is committed to the scientific evaluation of programs
+                    and their impact on participants as well as the audience. Our multidisciplinary team
+                    undertakes high-quality research that contributes to the overall improvement and
                     efficacy of our programs.
                 </p>
             </div>
         </div>
-        
-        <div class="row g-4">
-            <div class="col-md-6 col-lg-3">
-                <div class="stat-item">
-                    <div class="stat-number">5+</div>
-                    <h5 class="fw-bold">Research Areas</h5>
+
+        <div class="row row-cols-2 row-cols-md-4 g-4 text-center">
+            <div class="col">
+                <div class="border rounded-3 p-4 h-100">
+                    <div class="fs-1 fw-bolder">5+</div>
+                    <div class="fw-bold fs-3">Research Areas</div>
                     <p class="text-muted mb-0">Comprehensive study domains</p>
                 </div>
             </div>
-            <div class="col-md-6 col-lg-3">
-                <div class="stat-item">
-                    <div class="stat-number">10+</div>
-                    <h5 class="fw-bold">Expert Researchers</h5>
+            <div class="col">
+                <div class="border rounded-3 p-4 h-100">
+                    <div class="fs-1 fw-bolder">10+</div>
+                    <div class="fw-bold fs-3">Expert Researchers</div>
                     <p class="text-muted mb-0">International collaboration</p>
                 </div>
             </div>
-            <div class="col-md-6 col-lg-3">
-                <div class="stat-item">
-                    <div class="stat-number">3</div>
-                    <h5 class="fw-bold">Current Studies</h5>
+            <div class="col">
+                <div class="border rounded-3 p-4 h-100">
+                    <div class="fs-1 fw-bolder">3</div>
+                    <div class="fw-bold fs-3">Current Studies</div>
                     <p class="text-muted mb-0">Ongoing research projects</p>
                 </div>
             </div>
-            <div class="col-md-6 col-lg-3">
-                <div class="stat-item">
-                    <div class="stat-number">100+</div>
-                    <h5 class="fw-bold">Participants</h5>
+            <div class="col">
+                <div class="border rounded-3 p-4 h-100">
+                    <div class="fs-1 fw-bolder">100+</div>
+                    <div class="fw-bold fs-3">Participants</div>
                     <p class="text-muted mb-0">Global reach and impact</p>
                 </div>
             </div>
@@ -432,450 +91,340 @@ RESEARCH - Dreams Initiative
     </div>
 </section>
 
-<!-- Research Areas Section -->
 <section class="py-5 bg-light">
+    <!-- Section Header -->
+    <div class="text-center mb-5">
+        <h2 class="display-5 fw-bold text-success">Research Areas</h2>
+        <p class="lead text-muted mx-auto">
+            Explore our comprehensive research domains that drive innovation and positive change
+        </p>
+    </div>
+
+    <!-- Research Cards -->
     <div class="container">
-        <div class="row mb-5">
-            <div class="col-lg-8 mx-auto text-center">
-                <h2 class="section-title display-5">Research Areas</h2>
-                <p class="lead text-muted">
-                    Explore our comprehensive research domains that drive innovation and positive change
-                </p>
-            </div>
-        </div>
-        
         <!-- DREAMS Intervention -->
-        <div class="research-card mb-5">
-            <div class="row g-0">
+        <div class="research-card shadow-sm mb-5 bg-white rounded-4 overflow-hidden">
+            <div class="row g-0 align-items-center">
                 <div class="col-lg-5">
-                    <img src="{% static 'Research/LUD-BG-1.jpg' %}" 
-                         class="card-img-top h-100" 
-                         alt="DREAMS Intervention">
+                    <img src="{% static 'Research/LUD-BG-1.jpg' %}" class="img-fluid h-100 w-100 object-fit-cover"
+                        alt="DREAMS Intervention">
                 </div>
-                <div class="col-lg-7">
-                    <div class="card-body p-4 p-lg-5">
-                        <h3 class="card-title text-success fw-bold mb-3">
-                            <i class="fas fa-lightbulb me-2"></i>DREAMS Intervention
-                        </h3>
-                        <p class="card-text">
-                            Understanding how our program transforms students' self-perception, social skills, 
-                            and leadership abilities. We analyze the impact on school participants, college 
-                            peer mentors, and senior leadership team members.
-                        </p>
-                        <ul class="list-unstyled">
-                            <li><i class="fas fa-check text-success me-2"></i>Personal development assessment</li>
-                            <li><i class="fas fa-check text-success me-2"></i>Leadership skill evaluation</li>
-                            <li><i class="fas fa-check text-success me-2"></i>Community impact analysis</li>
-                        </ul>
-                    </div>
+                <div class="col-lg-7 p-4 p-lg-5">
+                    <h3 class="text-success fw-bold mb-3">
+                        <i class="fas fa-lightbulb me-2"></i>DREAMS Intervention
+                    </h3>
+                    <p class="text-muted">
+                        Understanding how our program transforms students' self-perception, social skills,
+                        and leadership abilities. We analyze the impact on school participants, college
+                        peer mentors, and senior leadership team members.
+                    </p>
+                    <ul class="list-unstyled mb-0 text-muted">
+                        <li><i class="fas fa-check text-success me-2"></i>Personal development assessment</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Leadership skill evaluation</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Community impact analysis</li>
+                    </ul>
                 </div>
             </div>
         </div>
-        
+
         <!-- Community Conference -->
-        <div class="research-card mb-5">
-            <div class="row g-0">
-                <div class="col-lg-7">
-                    <div class="card-body p-4 p-lg-5">
-                        <h3 class="card-title text-success fw-bold mb-3">
-                            <i class="fas fa-users me-2"></i>Community Conference
-                        </h3>
-                        <p class="card-text">
-                            Evaluating the effect of conferences on local communities, understanding cultural 
-                            differences, and analyzing diverse collaborative models from a global perspective.
-                        </p>
-                        <ul class="list-unstyled">
-                            <li><i class="fas fa-check text-success me-2"></i>Cultural diversity studies</li>
-                            <li><i class="fas fa-check text-success me-2"></i>Social entrepreneurship skills</li>
-                            <li><i class="fas fa-check text-success me-2"></i>Community initiative growth</li>
-                        </ul>
-                    </div>
-                </div>
+        <div class="research-card shadow-sm mb-5 bg-white rounded-4 overflow-hidden">
+            <div class="row g-0 align-items-center flex-lg-row-reverse">
                 <div class="col-lg-5">
-                    <img src="{% static 'Research/IMG_7663-min.jpeg' %}" 
-                         class="card-img-top h-100" 
-                         alt="Community Conference">
+                    <img src="{% static 'Research/IMG_7663-min.jpeg' %}" class="img-fluid h-100 w-100 object-fit-cover"
+                        alt="Community Conference">
+                </div>
+                <div class="col-lg-7 p-4 p-lg-5">
+                    <h3 class="text-success fw-bold mb-3">
+                        <i class="fas fa-users me-2"></i>Community Conference
+                    </h3>
+                    <p class="text-muted">
+                        Evaluating the effect of conferences on local communities, understanding cultural
+                        differences, and analyzing diverse collaborative models from a global perspective.
+                    </p>
+                    <ul class="list-unstyled text-muted mb-0">
+                        <li><i class="fas fa-check text-success me-2"></i>Cultural diversity studies</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Social entrepreneurship skills</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Community initiative growth</li>
+                    </ul>
                 </div>
             </div>
         </div>
-        
+
         <!-- Professional Club -->
-        <div class="research-card mb-5">
-            <div class="row g-0">
+        <div class="research-card shadow-sm mb-5 bg-white rounded-4 overflow-hidden">
+            <div class="row g-0 align-items-center">
                 <div class="col-lg-5">
-                    <img src="{% static 'card/DREAMS-Pro-Club.jpeg' %}" 
-                         class="card-img-top h-100" 
-                         alt="Professional Club">
+                    <img src="{% static 'card/DREAMS-Pro-Club.jpeg' %}" class="img-fluid h-100 w-100 object-fit-cover"
+                        alt="Professional Club">
                 </div>
-                <div class="col-lg-7">
-                    <div class="card-body p-4 p-lg-5">
-                        <h3 class="card-title text-success fw-bold mb-3">
-                            <i class="fas fa-briefcase me-2"></i>Professional Club
-                        </h3>
-                        <p class="card-text">
-                            Analyzing the impact of our one-year mutual mentoring club meetings on members' 
-                            personal, social, and leadership skills across different countries and populations.
-                        </p>
-                        <ul class="list-unstyled">
-                            <li><i class="fas fa-check text-success me-2"></i>Holistic development assessment</li>
-                            <li><i class="fas fa-check text-success me-2"></i>Work-life balance analysis</li>
-                            <li><i class="fas fa-check text-success me-2"></i>Cross-cultural comparison</li>
-                        </ul>
-                    </div>
+                <div class="col-lg-7 p-4 p-lg-5">
+                    <h3 class="text-success fw-bold mb-3">
+                        <i class="fas fa-briefcase me-2"></i>Professional Club
+                    </h3>
+                    <p class="text-muted">
+                        Analyzing the impact of our one-year mutual mentoring club meetings on members'
+                        personal, social, and leadership skills across different countries and populations.
+                    </p>
+                    <ul class="list-unstyled text-muted mb-0">
+                        <li><i class="fas fa-check text-success me-2"></i>Holistic development assessment</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Work-life balance analysis</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Cross-cultural comparison</li>
+                    </ul>
                 </div>
             </div>
         </div>
-        
+
         <!-- Music Band -->
-        <div class="research-card mb-5">
-            <div class="row g-0">
-                <div class="col-lg-7">
-                    <div class="card-body p-4 p-lg-5">
-                        <h3 class="card-title text-success fw-bold mb-3">
-                            <i class="fas fa-music me-2"></i>Music Band
-                        </h3>
-                        <p class="card-text">
-                            Investigating how music band intervention transforms students' self-perception, 
-                            social and leadership skills, and analyzing the transformation among the audience.
-                        </p>
-                        <ul class="list-unstyled">
-                            <li><i class="fas fa-check text-success me-2"></i>Creative expression impact</li>
-                            <li><i class="fas fa-check text-success me-2"></i>Leadership through arts</li>
-                            <li><i class="fas fa-check text-success me-2"></i>Audience transformation</li>
-                        </ul>
-                    </div>
-                </div>
+        <div class="research-card shadow-sm mb-5 bg-white rounded-4 overflow-hidden">
+            <div class="row g-0 align-items-center flex-lg-row-reverse">
                 <div class="col-lg-5">
-                    <img src="{% static 'Research/DREAMS-BAND678-scaled.jpg' %}" 
-                         class="card-img-top h-100" 
-                         alt="Music Band">
+                    <img src="{% static 'Research/DREAMS-BAND678-scaled.jpg' %}"
+                        class="img-fluid h-100 w-100 object-fit-cover" alt="Music Band">
+                </div>
+                <div class="col-lg-7 p-4 p-lg-5">
+                    <h3 class="text-success fw-bold mb-3">
+                        <i class="fas fa-music me-2"></i>Music Band
+                    </h3>
+                    <p class="text-muted">
+                        Investigating how music band intervention transforms students' self-perception,
+                        social and leadership skills, and analyzing the transformation among the audience.
+                    </p>
+                    <ul class="list-unstyled text-muted mb-0">
+                        <li><i class="fas fa-check text-success me-2"></i>Creative expression impact</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Leadership through arts</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Audience transformation</li>
+                    </ul>
                 </div>
             </div>
         </div>
-        
+
         <!-- Global Youth Leadership Training -->
-        <div class="research-card">
-            <div class="row g-0">
+        <div class="research-card shadow-sm bg-white rounded-4 overflow-hidden">
+            <div class="row g-0 align-items-center">
                 <div class="col-lg-5">
-                    <img src="{% static 'Research/LUD-BG-1.jpg' %}" 
-                         class="card-img-top h-100" 
-                         alt="Youth Leadership">
+                    <img src="{% static 'Research/LUD-BG-1.jpg' %}" class="img-fluid h-100 w-100 object-fit-cover"
+                        alt="Youth Leadership">
                 </div>
-                <div class="col-lg-7">
-                    <div class="card-body p-4 p-lg-5">
-                        <h3 class="card-title text-success fw-bold mb-3">
-                            <i class="fas fa-globe me-2"></i>Global Youth Leadership Training
-                        </h3>
-                        <p class="card-text">
-                            Examining how the Young Community Leadership Program (YCLP) impacts youth leaders' 
-                            effectiveness in creating authentic and united communities through international sessions.
-                        </p>
-                        <ul class="list-unstyled">
-                            <li><i class="fas fa-check text-success me-2"></i>Youth leadership effectiveness</li>
-                            <li><i class="fas fa-check text-success me-2"></i>Community unity building</li>
-                            <li><i class="fas fa-check text-success me-2"></i>Inclusive mindset development</li>
-                        </ul>
-                    </div>
+                <div class="col-lg-7 p-4 p-lg-5">
+                    <h3 class="text-success fw-bold mb-3">
+                        <i class="fas fa-globe me-2"></i>Global Youth Leadership Training
+                    </h3>
+                    <p class="text-muted">
+                        Examining how the Young Community Leadership Program (YCLP) impacts youth leaders'
+                        effectiveness in creating authentic and united communities through international sessions.
+                    </p>
+                    <ul class="list-unstyled text-muted mb-0">
+                        <li><i class="fas fa-check text-success me-2"></i>Youth leadership effectiveness</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Community unity building</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Inclusive mindset development</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+
 
 <!-- Current Research Section -->
 <section class="py-5">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-8 mx-auto">
-                <h2 class="section-title display-5 text-center mb-5">Current Research Projects</h2>
-                
-                <div class="current-research-item">
-                    <h5 class="fw-bold text-success mb-2">
-                        <i class="fas fa-research me-2"></i>Peer Mentor Experiences Study
-                    </h5>
-                    <p class="mb-0">
-                        Analyzing the experiences of peer mentors in the DREAMS Intervention Program 
-                        and their journey in mentoring others.
-                    </p>
+        <div class="text-center mb-5">
+            <h2 class="display-5 fw-bold text-success">Current Research Projects</h2>
+            <p class="lead text-muted mx-auto" style="max-width: 700px;">
+                Ongoing studies exploring leadership, mentoring, and educational transformation through our DREAMS
+                initiatives.
+            </p>
+        </div>
+
+        <div class="row g-4">
+            <!-- Project 1 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="card-body text-center p-4">
+                        <div class="bg-success bg-opacity-10 text-success rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
+                            style="width:60px; height:60px;">
+                            <i class="fas fa-research fa-lg"></i>
+                        </div>
+                        <h5 class="card-title fw-bold text-success mb-2">
+                            Peer Mentor Experiences Study
+                        </h5>
+                        <p class="card-text text-muted mb-0">
+                            Analyzing the experiences of peer mentors in the DREAMS Intervention Program
+                            and their journey in mentoring others.
+                        </p>
+                    </div>
                 </div>
-                
-                <div class="current-research-item">
-                    <h5 class="fw-bold text-success mb-2">
-                        <i class="fas fa-chart-line me-2"></i>Leadership Skill Development Analysis
-                    </h5>
-                    <p class="mb-0">
-                        Investigating growth and leadership skill experiences of peer mentors 
-                        participating in the DREAMS Intervention Program.
-                    </p>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="card-body text-center p-4">
+                        <div class="bg-success bg-opacity-10 text-success rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
+                            style="width:60px; height:60px;">
+                            <i class="fas fa-chart-line fa-lg"></i>
+                        </div>
+                        <h5 class="card-title fw-bold text-success mb-2">
+                            Leadership Skill Development Analysis
+                        </h5>
+                        <p class="card-text text-muted mb-0">
+                            Investigating growth and leadership skill experiences of peer mentors
+                            participating in the DREAMS Intervention Program.
+                        </p>
+                    </div>
                 </div>
-                
-                <div class="current-research-item">
-                    <h5 class="fw-bold text-success mb-2">
-                        <i class="fas fa-balance-scale me-2"></i>Comparative Efficacy Study (PhD Research)
-                    </h5>
-                    <p class="mb-0">
-                        A comprehensive comparative study on the efficacy of DREAMS Educational 
-                        Intervention Program versus PERMA PRP Educational Intervention Program.
-                    </p>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="card-body text-center p-4">
+                        <div class="bg-success bg-opacity-10 text-success rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
+                            style="width:60px; height:60px;">
+                            <i class="fas fa-balance-scale fa-lg"></i>
+                        </div>
+                        <h5 class="card-title fw-bold text-success mb-2">
+                            Comparative Efficacy Study (PhD Research)
+                        </h5>
+                        <p class="card-text text-muted mb-0">
+                            A comprehensive comparative study on the efficacy of DREAMS Educational
+                            Intervention Program versus PERMA PRP Educational Intervention Program.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
 
 <!-- Researchers Section -->
 <section class="py-5 bg-light">
     <div class="container">
-        <div class="row mb-5">
-            <div class="col-lg-8 mx-auto text-center">
-                <h2 class="section-title display-5">Our Research Team</h2>
-                <p class="lead text-muted">
-                    Meet our distinguished international team of researchers and scholars
-                </p>
-            </div>
-        </div>
-        
-        <div class="row g-4">
-            <!-- Dr Carl L. Thameling -->
-            <div class="col-lg-3 col-md-6">
-                <div class="researcher-card">
-                    <img src="{% static 'Research/Dr-carl.jpg' %}" 
-                         alt="Dr Carl L. Thameling" 
-                         class="researcher-img">
-                    <h5 class="fw-bold mb-2">Dr Carl L. Thameling</h5>
-                    <p class="text-muted small mb-3">University of Louisiana at Monroe, USA</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Dr Angela L. Curl -->
-            <div class="col-lg-3 col-md-6">
-                <div class="researcher-card">
-                    <img src="{% static 'Research/LUD-Angela-Curl.jpg' %}" 
-                         alt="Dr Angela L. Curl" 
-                         class="researcher-img">
-                    <h5 class="fw-bold mb-2">Dr Angela L. Curl</h5>
-                    <p class="text-muted small mb-3">Miami University, Ohio, USA</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Dr Laura R. Bronstein -->
-            <div class="col-lg-3 col-md-6">
-                <div class="researcher-card">
-                    <img src="{% static 'Research/LUD-Laura.jpg' %}" 
-                         alt="Dr Laura R. Bronstein" 
-                         class="researcher-img">
-                    <h5 class="fw-bold mb-2">Dr Laura R. Bronstein</h5>
-                    <p class="text-muted small mb-3">Binghamton University, New York, USA</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Dr Vijaya.R -->
-            <div class="col-lg-3 col-md-6">
-                <div class="researcher-card">
-                    <img src="{% static 'Research/Vijaya-LUD.jpg' %}" 
-                         alt="Dr Vijaya.R" 
-                         class="researcher-img">
-                    <h5 class="fw-bold mb-2">Dr Vijaya.R</h5>
-                    <p class="text-muted small mb-3">CHRIST (Deemed to be University) Bangalore, INDIA</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Additional researchers in a second row -->
-            <div class="col-lg-3 col-md-6">
-                <div class="researcher-card">
-                    <img src="{% static 'Research/blank-profile-picture-973460_1280.png' %}" 
-                         alt="Dr Tyler E Conzone" 
-                         class="researcher-img">
-                    <h5 class="fw-bold mb-2">Dr Tyler E. Conzone</h5>
-                    <p class="text-muted small mb-3">Research Collaborator</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-lg-3 col-md-6">
-                <div class="researcher-card">
-                    <img src="{% static 'Research/LUD-Sharon.jpg' %}" 
-                         alt="Dr Sharon Custer" 
-                         class="researcher-img">
-                    <h5 class="fw-bold mb-2">Dr Sharon Custer</h5>
-                    <p class="text-muted small mb-3">Miami University, Ohio, USA</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-lg-3 col-md-6">
-                <div class="researcher-card">
-                    <img src="{% static 'Research/Mayo-Suzanne-Mynette-min.png' %}" 
-                         alt="Dr Suzanne Mayo-Theus" 
-                         class="researcher-img">
-                    <h5 class="fw-bold mb-2">Dr Suzanne Mayo-Theus</h5>
-                    <p class="text-muted small mb-3">Grambling State University, LA, USA</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-github"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-lg-3 col-md-6">
-                <div class="researcher-card">
-                    <img src="{% static 'Research/MatthewsT-photo-min.png' %}" 
-                         alt="Dr Matthews T" 
-                         class="researcher-img">
-                    <h5 class="fw-bold mb-2">Dr Matthews T</h5>
-                    <p class="text-muted small mb-3">Grambling State University, LA, USA</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Testimonial Section -->
-<!-- Testimonials Section -->
-<section class="py-5">
-    <div class="container">
         <div class="text-center mb-5">
-            <h2 class="section-title">Testimonials</h2>
-            <p class="text-muted mt-3">What our mentors and researchers say about Dreams</p>
+            <h2 class="display-5 fw-bold text-success">Our Research Team</h2>
+            <p class="lead text-muted mx-auto" style="max-width: 700px;">
+                Meet our distinguished international team of researchers and scholars
+            </p>
         </div>
-        
-        <div class="row justify-content-center">
-            <div class="col-lg-8">
-                <div class="testimonial-card card p-4 position-relative">
-                    <div class="quote-icon">"</div>
-                    
+
+        <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-4">
+            <!-- Dr Carl L. Thameling -->
+            <div class="col">
+                <div class="card border-0 shadow-sm text-center h-100">
+                    <div class="ratio ratio-1x1">
+                        <img src="{% static 'Research/Dr-carl.jpg' %}" class="card-img-top object-fit-cover"
+                            alt="Dr Carl L. Thameling">
+                    </div>
                     <div class="card-body">
-                        <blockquote class="blockquote mb-4" id="testimonial-text">
-                            DREAMS is a wonderful Afterschool intervention programme I have ever seen as it
-                            works on the idea of a sustainable and replicable model. It is nice to see young
-                            college students and community leaders coming forward for a larger social cause. I
-                            along with young researchers at DREAMS engaged ourselves with a couple of
-                            community-based research at DREAMS and I am sure findings would help the society.
-                            DREAMS is really a life-giving platform to all those who have otherwise never dared
-                            to emerge as a successful and well-groomed individual. I wish the spirit and
-                            dedication of youth energy at DREAMS must be preserved, developed, and nurtured. I
-                            am sure the research series will ensure greater credibility and scientific culture
-                            across all the wings of DREAM.
-                        </blockquote>
-                        
-                        <div class="d-flex align-items-center">
-                            <img src="{% static 'testimonial/PrakashGS.jpg' %}" 
-                                 alt="Dr. Prakash G S" 
-                                 class="author-img me-3">
-                            <div>
-                                <h6 class="mb-1 fw-bold">Dr. Prakash G S</h6>
-                                <small class="text-muted">Associate Professor | Mentor Let US DREAM Research Wing</small>
-                            </div>
-                        </div>
+                        <h5 class="fw-bold mb-1">Dr Carl L. Thameling</h5>
+                        <div class="text-muted">University of Louisiana at Monroe, USA</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dr Angela L. Curl -->
+            <div class="col">
+                <div class="card border-0 shadow-sm text-center h-100">
+                    <div class="ratio ratio-1x1">
+                        <img src="{% static 'Research/LUD-Angela-Curl.jpg' %}" class="card-img-top object-fit-cover"
+                            alt="Dr Angela L. Curl">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="fw-bold mb-1">Dr Angela L. Curl</h5>
+                        <div class="text-muted">Miami University, Ohio, USA</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dr Laura R. Bronstein -->
+            <div class="col">
+                <div class="card border-0 shadow-sm text-center h-100">
+                    <div class="ratio ratio-1x1">
+                        <img src="{% static 'Research/LUD-Laura.jpg' %}" class="card-img-top object-fit-cover"
+                            alt="Dr Laura R. Bronstein">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="fw-bold mb-1">Dr Laura R. Bronstein</h5>
+                        <div class="text-muted">Binghamton University, New York, USA</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dr Vijaya.R -->
+            <div class="col">
+                <div class="card border-0 shadow-sm text-center h-100">
+                    <div class="ratio ratio-1x1">
+                        <img src="{% static 'Research/Vijaya-LUD.jpg' %}" class="card-img-top object-fit-cover"
+                            alt="Dr Vijaya.R">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="fw-bold mb-1">Dr Vijaya R.</h5>
+                        <div class="text-muted">CHRIST (Deemed to be University), Bangalore, India</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dr Tyler E. Conzone -->
+            <div class="col">
+                <div class="card border-0 shadow-sm text-center h-100">
+                    <div class="ratio ratio-1x1">
+                        <img src="{% static 'Research/blank-profile-picture-973460_1280.png' %}"
+                            class="card-img-top object-fit-cover" alt="Dr Tyler E Conzone">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="fw-bold mb-1">Dr Tyler E. Conzone</h5>
+                        <div class="text-muted">Research Collaborator</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dr Sharon Custer -->
+            <div class="col">
+                <div class="card border-0 shadow-sm text-center h-100">
+                    <div class="ratio ratio-1x1">
+                        <img src="{% static 'Research/LUD-Sharon.jpg' %}" class="card-img-top object-fit-cover"
+                            alt="Dr Sharon Custer">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="fw-bold mb-1">Dr Sharon Custer</h5>
+                        <div class="text-muted">Miami University, Ohio, USA</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dr Suzanne Mayo-Theus -->
+            <div class="col">
+                <div class="card border-0 shadow-sm text-center h-100">
+                    <div class="ratio ratio-1x1">
+                        <img src="{% static 'Research/Mayo-Suzanne-Mynette-min.png' %}"
+                            class="card-img-top object-fit-cover" alt="Dr Suzanne Mayo-Theus">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="fw-bold mb-1">Dr Suzanne Mayo-Theus</h5>
+                        <div class="text-muted">Grambling State University, LA, USA</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dr Matthews T -->
+            <div class="col">
+                <div class="card border-0 shadow-sm text-center h-100">
+                    <div class="ratio ratio-1x1">
+                        <img src="{% static 'Research/MatthewsT-photo-min.png' %}" class="card-img-top object-fit-cover"
+                            alt="Dr Matthews T">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="fw-bold mb-1">Dr Matthews T.</h5>
+                        <div class="text-muted">Grambling State University, LA, USA</div>
                     </div>
                 </div>
             </div>
         </div>
-        
-        <!-- Additional testimonials can be added here in a carousel or grid -->
-        <div class="text-center mt-4">
-            <a href="{% url 'testimonials' %}" class="btn btn-outline-primary">
-                View All Testimonials <i class="fas fa-arrow-right ms-1"></i>
-            </a>
-        </div>
     </div>
 </section>
 
-
-
-<script>
-$(document).ready(function() {
-    // Testimonial text truncation
-    var maxLength = 200;
-    var $testimonial = $('#testimonial-text');
-    var fullText = $testimonial.text().trim();
-    
-    if (fullText.length > maxLength) {
-        var truncatedText = fullText.substring(0, maxLength) + '...';
-        $testimonial.text(truncatedText);
-        
-        // Add read more button
-        $testimonial.after(
-            '<div class="mt-3">' +
-            '<button class="btn btn-link p-0 read-more-btn" type="button">' +
-            'Read More <i class="fas fa-chevron-down ms-1"></i>' +
-            '</button></div>'
-        );
-        
-        // Toggle functionality
-        $('.read-more-btn').on('click', function() {
-            var $btn = $(this);
-            var $icon = $btn.find('i');
-            
-            if ($btn.text().trim().startsWith('Read More')) {
-                $testimonial.text(fullText);
-                $btn.html('Read Less <i class="fas fa-chevron-up ms-1"></i>');
-            } else {
-                $testimonial.text(truncatedText);
-                $btn.html('Read More <i class="fas fa-chevron-down ms-1"></i>');
-            }
-        });
-    }
-    
-    // Smooth scrolling for internal links
-    $('a[href^="#"]').on('click', function(event) {
-        var target = $(this.getAttribute('href'));
-        if(target.length) {
-            event.preventDefault();
-            $('html, body').stop().animate({
-                scrollTop: target.offset().top - 100
-            }, 1000);
-        }
-    });
-    
-    // Add animation on scroll (optional)
-    $(window).on('scroll', function() {
-        $('.research-card, .testimonial-card').each(function() {
-            var elementTop = $(this).offset().top;
-            var elementBottom = elementTop + $(this).outerHeight();
-            var viewportTop = $(window).scrollTop();
-            var viewportBottom = viewportTop + $(window).height();
-            
-            if (elementBottom > viewportTop && elementTop < viewportBottom) {
-                $(this).addClass('animate__animated animate__fadeInUp');
-            }
-        });
-    });
-});
-</script>
 
 {% endblock %}

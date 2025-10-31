@@ -2,577 +2,297 @@
 {% load static %}
 
 {% block title %}
-    {{ data.page.title }}
+{{ data.page.title }}
 {% endblock %}
 
 {% block extraStyles %}
-    <link rel="stylesheet" href="{% static 'css/2024/llfp.css' %}" type="text/css">
-    <style>
-        :root {
-            --primary-blue: #0c52a1;
-            --secondary-green: #92ed26;
-            --light-bg: #ffffff;
-            --light-gray: #f8f9fa;
-            --medium-gray: #e9ecef;
-            --dark-text: #333333;
-            --medium-text: #666666;
-            --light-text: #888888;
-            --card-bg: rgba(255, 255, 255, 0.95);
-            --card-shadow: rgba(12, 82, 161, 0.08);
-            --gradient-primary: linear-gradient(135deg, var(--primary-blue) 0%, #0a4285 100%);
-            --gradient-secondary: linear-gradient(135deg, var(--secondary-green) 0%, #7bc922 100%);
-            --box-shadow: 0 10px 30px var(--card-shadow);
-            --border-radius: 15px;
-            --stagger: 0.2;
-        }
-
-        .primary-blue { background-color: var(--primary-blue) !important; }
-        .secondary-green { background-color: var(--secondary-green) !important; }
-        .text-primary-blue { color: var(--primary-blue) !important; }
-        .text-secondary-green { color: var(--secondary-green) !important; }
-        .gradient-primary { background: var(--gradient-primary) !important; }
-        .gradient-secondary { background: var(--gradient-secondary) !important; }
-        
-        .card-custom {
-            background: var(--card-bg);
-            box-shadow: var(--box-shadow);
-            border-radius: var(--border-radius);
-            border: none;
-            backdrop-filter: blur(10px);
-        }
-
-        .btn-custom-primary {
-            background: var(--gradient-primary);
-            border: none;
-            border-radius: 50px;
-            padding: 12px 30px;
-            font-weight: 600;
-            color: white;
-            transition: all 0.3s ease;
-        }
-
-        .btn-custom-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 15px 35px rgba(12, 82, 161, 0.3);
-            color: white;
-        }
-
-        .btn-custom-secondary {
-            background: var(--gradient-secondary);
-            border: none;
-            border-radius: 50px;
-            padding: 12px 30px;
-            font-weight: 600;
-            color: var(--dark-text);
-            transition: all 0.3s ease;
-        }
-
-        .btn-custom-secondary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 15px 35px rgba(146, 237, 38, 0.3);
-            color: var(--dark-text);
-        }
-
-        .hero-section {
-            background: linear-gradient(135deg, var(--light-bg) 0%, var(--light-gray) 100%);
-            padding: 80px 0;
-        }
-
-        .welcome-card {
-            background: var(--gradient-secondary);
-            border-radius: var(--border-radius);
-            padding: 2rem;
-            color: var(--dark-text);
-            font-weight: 500;
-        }
-
-        .leader-card {
-            background: var(--card-bg);
-            border-radius: var(--border-radius);
-            padding: 1.5rem;
-            box-shadow: var(--box-shadow);
-            transition: all 0.3s ease;
-            height: 100%;
-        }
-
-        .leader-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 40px var(--card-shadow);
-        }
-
-        .fellowship-section {
-            background: var(--gradient-primary);
-            color: white;
-            padding: 80px 0;
-        }
-
-        .contact-section {
-            background: var(--gradient-primary);
-            color: white;
-            padding: 60px 0;
-        }
-
-        .contact-item {
-            text-align: center;
-            padding: 2rem;
-            border-radius: var(--border-radius);
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            transition: all 0.3s ease;
-        }
-
-        .contact-item:hover {
-            background: rgba(255, 255, 255, 0.2);
-            transform: translateY(-5px);
-        }
-
-        .contact-item i {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            color: var(--secondary-green);
-        }
-
-        .accordion-custom .accordion-item {
-            border: none;
-            margin-bottom: 1rem;
-            border-radius: var(--border-radius);
-            overflow: hidden;
-            box-shadow: var(--box-shadow);
-        }
-
-        .accordion-custom .accordion-header button {
-            background: var(--gradient-primary);
-            color: white;
-            border: none;
-            font-weight: 600;
-        }
-
-        .accordion-custom .accordion-header button:not(.collapsed) {
-            background: var(--gradient-secondary);
-            color: var(--dark-text);
-        }
-
-        .process-image {
-            border-radius: var(--border-radius);
-            box-shadow: var(--box-shadow);
-            transition: all 0.3s ease;
-        }
-
-        .process-image:hover {
-            transform: scale(1.05);
-        }
-
-        @media (max-width: 768px) {
-            .hero-section {
-                padding: 40px 0;
-            }
-            
-            .fellowship-section,
-            .contact-section {
-                padding: 40px 0;
-            }
-        }
-    </style>
 {% endblock %}
 
 {% block content %}
-    <!-- Breadcrumb -->
-    <nav aria-label="breadcrumb" class="py-3" style="margin-top: 100px;">
-        <div class="container">
-            <ol class="breadcrumb bg-transparent mb-0">
-                <li class="breadcrumb-item">
-                    <a class="text-decoration-none text-primary-blue fw-medium" href="{% url 'main' %}">
-                        <i class="fas fa-home me-1"></i>Home
-                    </a>
-                </li>
-                <li class="breadcrumb-item">
-                    <span class="text-medium-text">Courses</span>
-                </li>
-                <li class="breadcrumb-item active text-primary-blue fw-bold" aria-current="page">
-                    LLFP
-                </li>
-            </ol>
+
+<!-- Hero Section -->
+<div class="container">
+    <div class="row justify-content-center text-center mb-5">
+        <div class="col-lg-10">
+            <h1 class="display-4 fw-bold text-primary-blue mb-4">
+                {{ data.hero.headline }}
+            </h1>
+            <p class="lead text-medium-text mb-4 fs-3">
+                <em>{{ data.hero.subheadline }}</em>
+            </p>
         </div>
-    </nav>
+    </div>
 
-    <!-- Hero Section -->
-    <section class="hero-section">
-        <div class="container">
-            <div class="row justify-content-center text-center mb-5">
-                <div class="col-lg-10">
-                    <h1 class="display-4 fw-bold text-primary-blue mb-4">
-                        {{ data.hero.headline }}
-                    </h1>
-                    <p class="lead text-medium-text mb-4 fs-3">
-                        <em>{{ data.hero.subheadline }}</em>
-                    </p>
-                    <a href="{{ data.hero.apply_link }}" target="_blank" 
-                       class="btn btn-custom-primary btn-lg">
-                        <i class="fas fa-hand-pointer me-2"></i>
-                        Apply Now
-                    </a>
-                </div>
-            </div>
-
-            <div class="row align-items-center g-4">
-                <div class="col-lg-4 col-md-6">
-                    <div class="welcome-card h-100 d-flex align-items-center">
-                        <p class="mb-0 lh-lg">{{ data.hero.welcome_message }}</p>
-                    </div>
-                </div>
-                <div class="col-lg-8 col-md-6">
-                    <div class="text-center">
-                        <img src="{% static data.hero.image %}" 
-                             class="img-fluid rounded-4 shadow-lg" 
-                             style="max-height: 500px; object-fit: cover;"
-                             alt="LLFP Program">
-                    </div>
-                </div>
+    <div class="row align-items-center g-4">
+        <div class="col-lg-4 col-md-6">
+            <div class="welcome-card h-100 d-flex align-items-center">
+                <p class="mb-0 lh-lg">{{ data.hero.welcome_message }}</p>
             </div>
         </div>
-    </section>
+        <div class="col-lg-8 col-md-6">
+            <div class="text-center">
+                <img src="{% static data.hero.image %}" class="img-fluid rounded-4"
+                    style="max-height: 500px; object-fit: cover;" alt="LLFP Program">
+            </div>
+        </div>
+    </div>
+</div>
 
-    <!-- Application Process & Who Is It For -->
-    <section class="py-5">
-        <div class="container">
-            <div class="row g-4 align-items-center">
-                {% for img in data.application_process.images %}
-                    <div class="col-lg-3 col-md-6">
-                        <img src="{% static img %}" 
-                             class="img-fluid process-image w-100" 
-                             alt="Application Process {{ forloop.counter }}">
-                    </div>
-                {% endfor %}
-                <div class="col-lg-3 col-md-6">
-                    <div class="card-custom p-4 h-100">
-                        <h3 class="text-primary-blue fw-bold mb-3">
-                            {{ data.application_process.who_for.title }}
-                        </h3>
-                        <p class="lh-lg text-medium-text mb-0">
-                            {{ data.application_process.who_for.text }}
-                        </p>
-                    </div>
+<!-- Application Process & Who Is It For -->
+<section class="py-5 bg-light mt-5">
+  <div class="container">
+    <h2 class="text-center text-primary fw-bold mb-5 display-6">Application Process & Who Is It For</h2>
+    <div class="row g-4 align-items-center justify-content-center">
+      {% for img in data.application_process.images %}
+      <div class="col-lg-3 col-md-6">
+        <div class="card border-0 shadow-sm h-100 overflow-hidden">
+          <img src="{% static img %}" class="img-fluid w-100 rounded-3" alt="Application Process {{ forloop.counter }}">
+        </div>
+      </div>
+      {% endfor %}
+      <div class="col-lg-3 col-md-6">
+        <div class="card border-0 shadow-sm p-4 h-100">
+          <h3 class="text-primary fw-bold mb-3">{{ data.application_process.who_for.title }}</h3>
+          <p class="lh-lg text-muted mb-0">{{ data.application_process.who_for.text }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Eligibility -->
+<section class="py-5">
+  <div class="container">
+    <h2 class="text-center text-primary fw-bold mb-5 display-6">Eligibility</h2>
+    <div class="row g-4 justify-content-center">
+      {% for img in data.eligibility.images %}
+      <div class="col-lg-4 col-md-6">
+        <div class="card border-0 shadow-sm h-100 overflow-hidden">
+          <img src="{% static img %}" class="img-fluid w-100 rounded-3" alt="Eligibility {{ forloop.counter }}">
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- Leadership Council -->
+<section class="py-5">
+  <div class="container">
+    <h2 class="text-center text-primary fw-bold mb-5 display-5">Leadership Council</h2>
+    <div class="row g-4">
+      {% for leader in data.leadership_council %}
+      <div class="col-lg-6 col-md-6">
+        <div class="card border-0 shadow-sm p-3 h-100">
+          <div class="row align-items-center g-3">
+            <div class="col-4">
+              <img src="{% static leader.image %}" class="img-fluid rounded-3 shadow-sm" alt="{{ leader.name }}">
+            </div>
+            <div class="col-8">
+              <h5 class="fw-bold text-primary mb-1">{{ leader.name }}</h5>
+              <p class="text-muted mb-1">{{ leader.role }}</p>
+              <p class="small text-secondary mb-0">{{ leader.affiliation }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- Executive Lead & Student Leaders -->
+<section class="py-5">
+  <div class="container">
+    <div class="row g-4">
+
+      <!-- Executive Lead -->
+      <div class="col-lg-4">
+        <div class="card border-0 shadow-sm p-4 h-100 text-center">
+          <h3 class="text-primary fw-bold mb-4">Executive Lead</h3>
+          <div class="d-flex flex-column align-items-center">
+            <img src="{% static data.executive_lead.image %}" class="img-fluid rounded-circle border border-3 border-primary mb-3" style="width: 120px; height: 120px; object-fit: cover;" alt="{{ data.executive_lead.name }}">
+            <h5 class="fw-bold text-primary mb-1">{{ data.executive_lead.name }}</h5>
+            <p class="text-muted mb-1">{{ data.executive_lead.title }}</p>
+            <p class="small text-secondary mb-0">{{ data.executive_lead.affiliation }}</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Student Leaders -->
+      <div class="col-lg-8">
+        <div class="card border-0 shadow-sm p-4 h-100">
+          <h3 class="text-primary fw-bold mb-4">Executive Student Leaders</h3>
+          <div class="row g-3">
+            {% for student in data.student_leaders %}
+            <div class="col-md-6">
+              <div class="card border-0 shadow-sm p-3 h-100">
+                <div class="row align-items-center g-3">
+                  <div class="col-4">
+                    <img src="{% static student.image %}" class="img-fluid rounded-3" alt="{{ student.name }}">
+                  </div>
+                  <div class="col-8">
+                    <h6 class="fw-bold text-primary mb-1">{{ student.name }}</h6>
+                    <p class="text-muted mb-1 small">{{ student.title }}</p>
+                    <p class="text-secondary small mb-0">{{ student.affiliation }}</p>
+                  </div>
                 </div>
+              </div>
             </div>
+            {% endfor %}
+          </div>
         </div>
-    </section>
+      </div>
 
-    <!-- Eligibility -->
-    <section class="py-5 bg-light">
-        <div class="container">
-            <div class="row g-4">
-                {% for img in data.eligibility.images %}
-                    <div class="col-lg-4 col-md-6">
-                        <img src="{% static img %}" 
-                             class="img-fluid process-image w-100" 
-                             alt="Eligibility {{ forloop.counter }}">
-                    </div>
-                {% endfor %}
-            </div>
-        </div>
-    </section>
+    </div>
+  </div>
+</section>
 
-    <!-- Leadership Council -->
-    <section class="py-5">
-        <div class="container">
-            <h2 class="text-center text-primary-blue fw-bold mb-5 display-5">
-                Leadership Council
-            </h2>
-            <div class="row g-4">
-                {% for leader in data.leadership_council %}
-                    <div class="col-lg-6 col-md-6">
-                        <div class="leader-card">
-                            <div class="row align-items-center">
-                                <div class="col-4">
-                                    <img src="{% static leader.image %}" 
-                                         class="img-fluid rounded-3" 
-                                         alt="{{ leader.name }}">
-                                </div>
-                                <div class="col-8">
-                                    <h5 class="fw-bold text-primary-blue mb-1">
-                                        {{ leader.name }}
-                                    </h5>
-                                    <p class="text-medium-text mb-1">{{ leader.role }}</p>
-                                    <p class="text-light-text small mb-0">
-                                        {{ leader.affiliation }}
-                                    </p>
+
+
+<!-- FAQ, Tips, Selection Process -->
+<section class="py-5">
+    <div class="container">
+
+        <h2 class="fw-bold text-center mb-5">Frequently Asked Questions</h2>
+        <div class="accordion accordion-custom" id="data-faq">
+            <!-- FAQ Section -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq"
+                        aria-expanded="true" aria-controls="faq">
+                        <i class="fas fa-question-circle me-2"></i>
+                        Frequently Asked Questions
+                    </button>
+                </h2>
+                <div id="faq" class="accordion-collapse collapse show">
+                    <div class="accordion-body">
+                        <div class="accordion accordion-flush" id="faqAccordion">
+                            {% for item in data.faq %}
+                            <div class="accordion-item mb-3 rounded-3 shadow-sm">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#faq-{{ forloop.counter }}" aria-expanded="false">
+                                        <span class="badge bg-primary me-2">{{ forloop.counter }}</span>
+                                        {{ item.question }}
+                                    </button>
+                                </h2>
+                                <div id="faq-{{ forloop.counter }}" class="accordion-collapse collapse"
+                                    data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">{{ item.answer }}</div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                {% endfor %}
-            </div>
-        </div>
-    </section>
-
-    <!-- Executive Lead & Student Leaders -->
-    <section class="py-5 bg-light">
-        <div class="container">
-            <div class="row g-4">
-                <!-- Executive Lead -->
-                <div class="col-lg-4">
-                    <div class="card-custom p-4 h-100">
-                        <h3 class="text-primary-blue fw-bold mb-4">Executive Lead</h3>
-                        <div class="row align-items-center">
-                            <div class="col-4">
-                                <img src="{% static data.executive_lead.image %}" 
-                                     class="img-fluid rounded-3" 
-                                     alt="{{ data.executive_lead.name }}">
-                            </div>
-                            <div class="col-8">
-                                <h5 class="fw-bold text-primary-blue mb-1">
-                                    {{ data.executive_lead.name }}
-                                </h5>
-                                <p class="text-medium-text mb-1">
-                                    {{ data.executive_lead.title }}
-                                </p>
-                                <p class="text-light-text small mb-0">
-                                    {{ data.executive_lead.affiliation }}
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Student Leaders -->
-                <div class="col-lg-8">
-                    <div class="card-custom p-4 h-100">
-                        <h3 class="text-primary-blue fw-bold mb-4">
-                            Executive Student Leaders
-                        </h3>
-                        <div class="row g-3">
-                            {% for student in data.student_leaders %}
-                                <div class="col-md-6">
-                                    <div class="row align-items-center">
-                                        <div class="col-4">
-                                            <img src="{% static student.image %}" 
-                                                 class="img-fluid rounded-3" 
-                                                 alt="{{ student.name }}">
-                                        </div>
-                                        <div class="col-8">
-                                            <h6 class="fw-bold text-primary-blue mb-1">
-                                                {{ student.name }}
-                                            </h6>
-                                            <p class="text-medium-text mb-1 small">
-                                                {{ student.title }}
-                                            </p>
-                                            <p class="text-light-text small mb-0">
-                                                {{ student.affiliation }}
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
                             {% endfor %}
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Our Fellows -->
-    <section class="fellowship-section">
-        <div class="container">
-            <h2 class="text-center fw-bold mb-5 display-5">OUR FELLOWS</h2>
-            <div class="row g-4 justify-content-center">
-                {% for fellow in data.fellows %}
-                    <div class="col-lg-5 col-md-6">
-                        <div class="card-custom p-4 h-100">
-                            <div class="row align-items-start">
-                                <div class="col-4">
-                                    <img src="{% static fellow.image %}" 
-                                         class="img-fluid rounded-3" 
-                                         alt="{{ fellow.name }}">
-                                </div>
-                                <div class="col-8 position-relative">
-                                    <!-- Modal trigger -->
-                                    <button type="button" 
-                                            class="btn btn-custom-secondary btn-sm mb-3"
-                                            data-bs-toggle="modal" 
-                                            data-bs-target="#fellowModal-{{ forloop.counter }}">
-                                        <i class="fas fa-comment me-1"></i>
-                                        Read Story
+            <!-- Tips Section -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#tips">
+                        <i class="fas fa-lightbulb me-2"></i>
+                        Tips for Applying
+                    </button>
+                </h2>
+                <div id="tips" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        <div class="accordion accordion-flush" id="tipsAccordion">
+                            {% for tip in data.tips %}
+                            <div class="accordion-item mb-3 rounded-3 shadow-sm">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#tip-{{ forloop.counter }}">
+                                        <span class="badge bg-success me-2">{{ forloop.counter }}</span>
+                                        {{ tip.question }}
                                     </button>
-                                    
-                                    <h5 class="fw-bold text-primary-blue mb-1">
-                                        {{ fellow.name }}
-                                    </h5>
-                                    <p class="text-medium-text mb-1">{{ fellow.title }}</p>
-                                    <p class="text-light-text small mb-0">
-                                        {{ fellow.affiliation }}
-                                    </p>
+                                </h2>
+                                <div id="tip-{{ forloop.counter }}" class="accordion-collapse collapse"
+                                    data-bs-parent="#tipsAccordion">
+                                    <div class="accordion-body">{{ tip.answer }}</div>
                                 </div>
                             </div>
-                            
-                            <!-- Modal -->
-                            <div class="modal fade" id="fellowModal-{{ forloop.counter }}" 
-                                 tabindex="-1" aria-hidden="true">
-                                <div class="modal-dialog {% if fellow.modal.size == 'xl' %}modal-xl{% else %}modal-lg{% endif %} modal-dialog-centered">
-                                    <div class="modal-content">
-                                        <div class="modal-header gradient-primary text-white">
-                                            <div class="modal-title">
-                                                <h4 class="fw-bold mb-1">{{ fellow.modal.title }}</h4>
-                                                <p class="mb-0"><em>by {{ fellow.modal.author }}</em></p>
-                                            </div>
-                                            <button type="button" class="btn-close btn-close-white" 
-                                                    data-bs-dismiss="modal"></button>
-                                        </div>
-                                        <div class="modal-body p-4">
-                                            <div class="lh-lg mb-4">{{ fellow.modal.body }}</div>
-                                            <div class="text-end">
-                                                <strong>- {{ fellow.modal.author }}</strong>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            {% endfor %}
                         </div>
                     </div>
-                {% endfor %}
+                </div>
             </div>
-        </div>
-    </section>
 
-    <!-- FAQ, Tips, Selection Process -->
-    <section class="py-5">
-        <div class="container">
-            <div class="accordion accordion-custom" id="data-faq">
-                <!-- FAQ Section -->
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button" type="button" 
-                                data-bs-toggle="collapse" data-bs-target="#faq"
-                                aria-expanded="true" aria-controls="faq">
-                            <i class="fas fa-question-circle me-2"></i>
-                            Frequently Asked Questions
-                        </button>
-                    </h2>
-                    <div id="faq" class="accordion-collapse collapse show">
-                        <div class="accordion-body">
-                            <div class="accordion accordion-flush" id="faqAccordion">
-                                {% for item in data.faq %}
-                                    <div class="accordion-item mb-3 rounded-3 shadow-sm">
-                                        <h2 class="accordion-header">
-                                            <button class="accordion-button collapsed" type="button"
-                                                    data-bs-toggle="collapse"
-                                                    data-bs-target="#faq-{{ forloop.counter }}"
-                                                    aria-expanded="false">
-                                                <span class="badge bg-primary me-2">{{ forloop.counter }}</span>
-                                                {{ item.question }}
-                                            </button>
-                                        </h2>
-                                        <div id="faq-{{ forloop.counter }}"
-                                             class="accordion-collapse collapse"
-                                             data-bs-parent="#faqAccordion">
-                                            <div class="accordion-body">{{ item.answer }}</div>
-                                        </div>
-                                    </div>
-                                {% endfor %}
+            <!-- Selection Process Section -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#selection">
+                        <i class="fas fa-clipboard-check me-2"></i>
+                        Selection Process
+                    </button>
+                </h2>
+                <div id="selection" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        <div class="row align-items-center g-4">
+                            <div class="col-lg-7">
+                                <p class="lh-lg text-medium-text">
+                                    {{ data.selection.description }}
+                                </p>
                             </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Tips Section -->
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" 
-                                data-bs-toggle="collapse" data-bs-target="#tips">
-                            <i class="fas fa-lightbulb me-2"></i>
-                            Tips for Applying
-                        </button>
-                    </h2>
-                    <div id="tips" class="accordion-collapse collapse">
-                        <div class="accordion-body">
-                            <div class="accordion accordion-flush" id="tipsAccordion">
-                                {% for tip in data.tips %}
-                                    <div class="accordion-item mb-3 rounded-3 shadow-sm">
-                                        <h2 class="accordion-header">
-                                            <button class="accordion-button collapsed" type="button"
-                                                    data-bs-toggle="collapse"
-                                                    data-bs-target="#tip-{{ forloop.counter }}">
-                                                <span class="badge bg-success me-2">{{ forloop.counter }}</span>
-                                                {{ tip.question }}
-                                            </button>
-                                        </h2>
-                                        <div id="tip-{{ forloop.counter }}"
-                                             class="accordion-collapse collapse"
-                                             data-bs-parent="#tipsAccordion">
-                                            <div class="accordion-body">{{ tip.answer }}</div>
-                                        </div>
-                                    </div>
-                                {% endfor %}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Selection Process Section -->
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" 
-                                data-bs-toggle="collapse" data-bs-target="#selection">
-                            <i class="fas fa-clipboard-check me-2"></i>
-                            Selection Process
-                        </button>
-                    </h2>
-                    <div id="selection" class="accordion-collapse collapse">
-                        <div class="accordion-body">
-                            <div class="row align-items-center g-4">
-                                <div class="col-lg-7">
-                                    <p class="lh-lg text-medium-text">
-                                        {{ data.selection.description }}
-                                    </p>
-                                </div>
-                                <div class="col-lg-5">
-                                    <img src="{% static data.selection.image %}" 
-                                         class="img-fluid rounded-4 shadow-lg" 
-                                         alt="Selection Process">
-                                </div>
+                            <div class="col-lg-5">
+                                <img src="{% static data.selection.image %}" class="img-fluid rounded-4 shadow-lg"
+                                    alt="Selection Process">
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Contact CTA -->
-    <section class="contact-section">
-        <div class="container">
-            <div class="row g-4 mb-5">
-                <div class="col-lg-4 col-md-6">
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <h4 class="fw-bold mb-2">Find Us</h4>
-                        <p class="mb-0">{{ data.contact.find_us }}</p>
+<!-- Contact CTA -->
+<section class="contact-section py-5 bg-light">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold">Contact Us</h2>
+            <hr class="mx-auto" style="width: 80px; height: 3px; background-color: #0d6efd; border: none;" />
+        </div>
+
+        <div class="row g-4">
+            <!-- Find Us -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card shadow-sm border-0 text-center h-100 p-4">
+                    <div class="mb-3">
+                        <i class="fas fa-map-marker-alt fa-2x text-primary"></i>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <h4 class="fw-bold mb-2">Call Us</h4>
-                        {% for phone in data.contact.call_us %}
-                            <p class="mb-1">{{ phone }}</p>
-                        {% endfor %}
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-12">
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <h4 class="fw-bold mb-2">Mail Us</h4>
-                        <p class="mb-0">{{ data.contact.mail_us }}</p>
-                    </div>
+                    <h4 class="fw-bold mb-2">Find Us</h4>
+                    <p class="text-muted mb-0">{{ data.contact.find_us }}</p>
                 </div>
             </div>
-            
-            <div class="text-center">
-                <a href="{{ data.hero.apply_link }}" target="_blank" 
-                   class="btn btn-custom-secondary btn-lg">
-                    <i class="fas fa-hand-pointer me-2"></i>
-                    Apply Now
-                </a>
+
+            <!-- Call Us -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card shadow-sm border-0 text-center h-100 p-4">
+                    <div class="mb-3">
+                        <i class="fas fa-phone fa-2x text-success"></i>
+                    </div>
+                    <h4 class="fw-bold mb-2">Call Us</h4>
+                    {% for phone in data.contact.call_us %}
+                    <p class="text-muted mb-1">{{ phone }}</p>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <!-- Mail Us -->
+            <div class="col-lg-4 col-md-12">
+                <div class="card shadow-sm border-0 text-center h-100 p-4">
+                    <div class="mb-3">
+                        <i class="fas fa-envelope fa-2x text-danger"></i>
+                    </div>
+                    <h4 class="fw-bold mb-2">Mail Us</h4>
+                    <p class="text-muted mb-0">{{ data.contact.mail_us }}</p>
+                </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 {% endblock %}
