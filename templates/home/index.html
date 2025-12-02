@@ -12,76 +12,98 @@ Home
 {% block content %}
 <!-- Enhanced Hero Carousel -->
 <section class="text-white text-center ">
-    <div id="carouselExampleFade" class="carousel slide carousel-fade position-relative mt-2" data-bs-ride="carousel"
-        data-bs-interval="5000">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="0" class="active"
-                aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="1"
-                aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="2"
-                aria-label="Slide 3"></button>
-            <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="3"
-                aria-label="Slide 4"></button>
-            <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="4"
-                aria-label="Slide 5"></button>
-        </div>
-        <div class="carousel-inner rounded-custom">
+    <div class="container-fluid">
+        <div class="row align-items-center">
+            <!-- Logo column col-4  -->
+            <div class="col-md-4 col-12 order-md-2 order-2">
+                <div class="position-relative text-center py-4 py-md-0">
+                    <a href="{% url 'main' %}" class="d-block">
+                        <img src="{% static 'logo/logo.png' %}" class="img-fluid" alt="LET US DREAM" style="max-height: 150px;">
+                    </a>
 
-            <div class="carousel-item active">
-                <img src="{% static 'home/banner/2.png' %}" class="d-block w-100 carousel-img"
-                    alt="DREAMS Program Banner 2">
-                <div class="carousel-overlay"></div>
-                <div class="carousel-caption-centered text-white">
-                    <h5 class="carousel-h5">Welcome to</h5>
-                    <h4 class="carousel-h4">LET US DREAM</h4>
+                    <div>
+                        <h2 class="fw-bold text-uppercase mb-0 mt-2">LET US DREAM </h2>
+                    </div>
                 </div>
             </div>
-            <div class="carousel-item">
-                <img src="{% static 'home/banner/3.png' %}" class="d-block w-100 carousel-img"
-                    alt="DREAMS Program Banner 3">
-                <div class="carousel-overlay"></div>
-                <div class="carousel-caption-centered text-white">
-                    <h5 class="carousel-h5">Welcome to</h5>
-                    <h4 class="carousel-h4">LET US DREAM</h4>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="{% static 'home/banner/4.png' %}" class="d-block w-100 carousel-img"
-                    alt="DREAMS Program Banner 4">
-                <div class="carousel-overlay"></div>
-                <div class="carousel-caption-centered text-white">
-                    <h5 class="carousel-h5">Welcome to</h5>
-                    <h4 class="carousel-h4">LET US DREAM</h4>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="{% static 'home/banner/img2.png' %}" class="d-block w-100 carousel-img"
-                    alt="DREAMS Program Banner 5">
-                <div class="carousel-overlay"></div>
-                <div class="carousel-caption-centered text-white">
-                    <h5 class="carousel-h5">Welcome to</h5>
-                    <h4 class="carousel-h4">LET US DREAM</h4>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="{% static 'home/banner/img1.png' %}" class="d-block w-100 carousel-img"
-                    alt="DREAMS Program Banner 6">
-                <div class="carousel-overlay"></div>
-                <div class="carousel-caption-centered text-white">
-                    <h5 class="carousel-h5">Welcome to</h5>
-                    <h4 class="carousel-h4">LET US DREAM</h4>
+
+            <!-- Carousel column col-8  -->
+            <div class="col-md-8 col-12 order-md-1 order-1 mb-3 mb-md-0">
+                <div id="carouselExampleFade" class="carousel slide carousel-fade position-relative mt-2"
+                    data-bs-ride="carousel" data-bs-interval="5000">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="0" class="active"
+                            aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="3"
+                            aria-label="Slide 4"></button>
+                        <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="4"
+                            aria-label="Slide 5"></button>
+                    </div>
+
+                    <div class="carousel-inner rounded-custom">
+                        <div class="carousel-item active">
+                            <img src="{% static 'home/banner/2.png' %}" class="d-block w-100 carousel-img"
+                                alt="DREAMS Program Banner 2">
+                            <div class="carousel-overlay"></div>
+                            <div class="carousel-caption-centered text-white">
+                                <!-- <h5 class="carousel-h5">Welcome to</h5>
+                                <h4 class="carousel-h4">LET US DREAM</h4> -->
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{% static 'home/banner/3.png' %}" class="d-block w-100 carousel-img"
+                                alt="DREAMS Program Banner 3">
+                            <div class="carousel-overlay"></div>
+                            <div class="carousel-caption-centered text-white">
+                                <!-- <h5 class="carousel-h5">Welcome to</h5>
+                                <h4 class="carousel-h4">LET US DREAM</h4> -->
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{% static 'home/banner/4.png' %}" class="d-block w-100 carousel-img"
+                                alt="DREAMS Program Banner 4">
+                            <div class="carousel-overlay"></div>
+                            <div class="carousel-caption-centered text-white">
+                                <!-- <h5 class="carousel-h5">Welcome to</h5>
+                                <h4 class="carousel-h4">LET US DREAM</h4> -->
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{% static 'home/banner/img2.png' %}" class="d-block w-100 carousel-img"
+                                alt="DREAMS Program Banner 5">
+                            <div class="carousel-overlay"></div>
+                            <div class="carousel-caption-centered text-white">
+                                <!-- <h5 class="carousel-h5">Welcome to</h5>
+                                <h4 class="carousel-h4">LET US DREAM</h4> -->
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{% static 'home/banner/img1.png' %}" class="d-block w-100 carousel-img"
+                                alt="DREAMS Program Banner 6">
+                            <div class="carousel-overlay"></div>
+                            <div class="carousel-caption-centered text-white">
+                                <!-- <h5 class="carousel-h5">Welcome to</h5>
+                                <h4 class="carousel-h4">LET US DREAM</h4> -->
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
                 </div>
             </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
     </div>
 </section>
 

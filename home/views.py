@@ -172,6 +172,14 @@ def pressRelease(request):
 def newsletter(request):
     newsletters = [
         {
+            "pdf_url": "2025/newsletter/Kerala Newsletter.pdf",
+            "image_url": "2025/newsletter/Keralanewsletterface.png",
+            "title": "Kerala Newsletter 2025-26",
+            "month": "Dec",
+            "day": "2",
+            "year": "2025",
+        },
+        {
             "pdf_url": "newsletters/2025/2025vol2.pdf",
             "image_url": "newsletters/2025/2025vol2.png",
             "title": "Conference Newsletter 2025",
@@ -376,8 +384,28 @@ def newsletter(request):
         {"name": "Newsletter", "url": None, "icon": "fas fa-envelope", "active": True},
     ]
 
-    # Sort newsletters by year and month
-    newsletters.sort(key=lambda x: (x["year"], x["month"]), reverse=True)
+    # Month mapping
+    month_order = {
+        "Jan": 1, "Feb": 2, "Mar": 3, "Apr": 4,
+        "May": 5, "Jun": 6, "Jul": 7, "Aug": 8,
+        "Sep": 9, "Oct": 10, "Nov": 11, "Dec": 12
+    }
+
+    def safe_int(value):
+        try:
+            return int(value)
+        except (ValueError, TypeError):
+            return 0
+
+    newsletters.sort(
+        key=lambda x: (
+            safe_int(x.get("year")),
+            month_order.get(x.get("month", ""), 0),
+            safe_int(x.get("day"))
+        ),
+        reverse=True
+    )
+
     # Render the template with the newsletters and breadcrumbs
     return render(
         request,

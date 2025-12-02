@@ -23,6 +23,30 @@
             </div>
         </div>
     </section>
+
+    <!-- Anual Report -->
+    <div class="content-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title mb-2">Annual Reports</h2>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="content-card text-center hover-lift h-100">
+                        <div class="publication-date bg-gradient-secondary text-dark rounded-custom-small p-2 mb-3">
+                            <small class="fw-bold">Annual Report 2024-25</small>
+                        </div>
+                        <a href="{% url 'annual-report' %}"
+                           class="text-decoration-none" target="_blank">
+                            <img src="{% static 'Annual Reports/img.png' %}" alt="Summer Camp 2025" class="img-fluid rounded-custom shadow-custom-small hover-scale">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Publications Section -->
     <div class="content-section">
         <div class="container">
@@ -313,6 +337,21 @@
 
             <div class="row g-4">
 
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="content-card text-center hover-lift h-100">
+                        <div class="publication-date bg-gradient-secondary text-dark rounded-custom-small p-2 mb-3">
+                            <small class="fw-bold">Kerala Newsletter 2025-26</small>
+                        </div>
+                        <a href="{% static '2025/newsletter/Kerala Newsletter.pdf' %}"
+                           target="_blank"
+                           class="text-decoration-none">
+                            <img src="{% static '2025/newsletter/Keralanewsletterface.png' %}"
+                                class="img-fluid rounded-custom shadow-custom-small hover-scale" 
+                                alt="Kerala Newsletter November 2025">
+                        </a>                        
+                    </div>
+                </div>
+
                  <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="content-card text-center hover-lift h-100">
                         <div class="publication-date bg-gradient-secondary text-dark rounded-custom-small p-2 mb-3">
@@ -356,7 +395,7 @@
                 </div>
 
                
-                <div class="col-lg-3 col-md-6 col-sm-6">
+                <!-- <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="content-card text-center hover-lift h-100">
                         <div class="publication-date bg-gradient-secondary text-dark rounded-custom-small p-2 mb-3">
                             <small class="fw-bold">Oct 21, 2020</small>
@@ -366,7 +405,7 @@
                              alt="December 2024 Newsletter">
                        
                     </div>
-                </div>
+                </div> -->
             </div>
             <div class="row mt-5">
             <div class="col-12">
