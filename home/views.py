@@ -140,6 +140,73 @@ def pressRelease(request):
             "alt": "Press 4",
             "link": "Aboutus/Media/Press/Press4.jpeg",
         },
+        {
+            "date": "Dec 2024",
+            "image": "Aboutus/Media/Press/IMG-20251208-WA0023.jpg",
+            "alt": "Newspaper Clipping",
+            "link": "Aboutus/Media/Press/IMG-20251208-WA0023.jpg",
+        },
+        {
+            "date": "Dec 2024",
+            "image": "Aboutus/Media/Press/IMG-20251208-WA0024.jpg",
+            "alt": "Newspaper Clipping",
+            "link": "Aboutus/Media/Press/IMG-20251208-WA0024.jpg",
+        },
+        {
+            "date": "Dec 2024",
+            "image": "Aboutus/Media/Press/IMG-20251208-WA0022.jpg",
+            "alt": "Newspaper Clipping",
+            "link": "Aboutus/Media/Press/IMG-20251208-WA0022.jpg",
+        },
+        {
+            "date": "Dec 2024",
+            "image": "Aboutus/Media/Press/unnamed.jpg",
+            "alt": "Newspaper Clipping",
+            "link": "Aboutus/Media/Press/unnamed.jpg",
+        },
+        {
+            "date": "Dec 2024",
+            "image": "Aboutus/Media/Press/IMG-20251208-WA0021.jpg",
+            "alt": "Newspaper Clipping",
+            "link": "Aboutus/Media/Press/IMG-20251208-WA0021.jpg",
+        },
+        {
+            "date": "Dec 2024",
+            "image": "Aboutus/Media/Press/unnamed (1).jpg",
+            "alt": "Newspaper Clipping",
+            "link": "Aboutus/Media/Press/unnamed (1).jpg",
+        },
+        {
+            "date": "Dec 2024",
+            "image": "Aboutus/Media/Press/IMG-20251208-WA0020.jpg",
+            "alt": "Newspaper Clipping",
+            "link": "Aboutus/Media/Press/IMG-20251208-WA0020.jpg",
+        },
+        {
+            "date": "Dec 2024",
+            "image": "Aboutus/Media/Press/IMG-20251208-WA0027.jpg",
+            "alt": "Newspaper Clipping",
+            "link": "Aboutus/Media/Press/IMG-20251208-WA0027.jpg",
+        },
+        {
+            "date": "Dec 2024",
+            "image": "Aboutus/Media/Press/IMG-20251208-WA0019.jpg",
+            "alt": "Newspaper Clipping",
+            "link": "Aboutus/Media/Press/IMG-20251208-WA0019.jpg",
+        },
+        {
+            "date": "Dec 2024",
+            "image": "Aboutus/Media/Press/IMG-20251208-WA0018.jpg",
+            "alt": "Newspaper Clipping",
+            "link": "Aboutus/Media/Press/IMG-20251208-WA0018.jpg",
+        },
+        {
+            "date": "Dec 2024",
+            "image": "Aboutus/Media/Press/IMG-20251208-WA0025.jpg",
+            "alt": "Newspaper Clipping",
+            "link": "Aboutus/Media/Press/IMG-20251208-WA0025.jpg",
+        },
+
     ]
     breadcrumbs = [
         {"name": "Home", "url": "main", "icon": "fas fa-home", "active": False},
