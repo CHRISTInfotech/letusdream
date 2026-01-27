@@ -23,6 +23,30 @@
             </div>
         </div>
     </section>
+
+    <!-- Anual Report -->
+    <div class="content-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title mb-2">Annual Reports</h2>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="content-card text-center hover-lift h-100">
+                        <div class="publication-date bg-gradient-secondary text-dark rounded-custom-small p-2 mb-3">
+                            <small class="fw-bold">Annual Report 2024-25</small>
+                        </div>
+                        <a href="{% url 'annual-report' %}"
+                           class="text-decoration-none" target="_blank">
+                            <img src="{% static 'Annual Reports/img.png' %}" alt="Summer Camp 2025" class="img-fluid rounded-custom shadow-custom-small hover-scale">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Publications Section -->
     <div class="content-section">
         <div class="container">
@@ -92,6 +116,16 @@
                     </div>
                 </div>
             </div>
+            <!-- <div class="row mt-5">
+            <div class="col-12">
+                <div class="d-flex justify-content-center justify-content-md-end">
+                    <a href="{% url 'testimonials' %}" class="btn btn-outline-primary btn-lg px-4 py-2 read-more-btn text-decoration-none">
+                        <span class="me-2">Read More</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div> -->
         </div>
     </div>
 
@@ -152,6 +186,16 @@
                     </div>
                 </div>
             </div>
+            <div class="row mt-5">
+            <div class="col-12">
+                <div class="d-flex justify-content-center justify-content-md-end">
+                    <a href="{% url 'press-release' %}" class="btn btn-outline-primary btn-lg px-4 py-2 read-more-btn text-decoration-none">
+                        <span class="me-2">Read More</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
         </div>
     </div>
 
@@ -215,6 +259,16 @@
                     </div>
                 </div>
             </div>
+            <!-- <div class="row mt-5">
+                <div class="col-12">
+                    <div class="d-flex justify-content-center justify-content-md-end">
+                        <a href="{% url 'testimonials' %}" class="btn btn-outline-primary btn-lg px-4 py-2 read-more-btn text-decoration-none">
+                            <span class="me-2">Read More</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div> -->
         </div>
     </div>
 
@@ -260,6 +314,16 @@
                     </div>
                 </div>
             </div>
+            <!-- <div class="row mt-5">
+            <div class="col-12">
+                <div class="d-flex justify-content-center justify-content-md-end">
+                    <a href="{% url 'testimonials' %}" class="btn btn-outline-primary btn-lg px-4 py-2 read-more-btn text-decoration-none">
+                        <span class="me-2">Read More</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div> -->
         </div>
     </div>
 
@@ -272,6 +336,52 @@
             </div>
 
             <div class="row g-4">
+
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="content-card text-center hover-lift h-100">
+                        <div class="publication-date bg-gradient-secondary text-dark rounded-custom-small p-2 mb-3">
+                            <small class="fw-bold">Kerala Newsletter 2025-26</small>
+                        </div>
+                        <a href="{% static '2025/newsletter/Kerala Newsletter.pdf' %}"
+                           target="_blank"
+                           class="text-decoration-none">
+                            <img src="{% static '2025/newsletter/Keralanewsletterface.png' %}"
+                                class="img-fluid rounded-custom shadow-custom-small hover-scale" 
+                                alt="Kerala Newsletter November 2025">
+                        </a>                        
+                    </div>
+                </div>
+
+                 <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="content-card text-center hover-lift h-100">
+                        <div class="publication-date bg-gradient-secondary text-dark rounded-custom-small p-2 mb-3">
+                            <small class="fw-bold">Nov 2025</small>
+                        </div>
+                        <a href="{% static 'newsletters/2025/2025vol2.pdf' %}"
+                           target="_blank"
+                           class="text-decoration-none">
+                            <img src="{% static 'newsletters/2025/2025vol2.png' %}"
+                                 class="img-fluid rounded-custom shadow-custom-small hover-scale" 
+                                 alt="Conference Newsletter Volume 2">
+                        </a>                        
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="content-card text-center hover-lift h-100">
+                        <div class="publication-date bg-gradient-secondary text-dark rounded-custom-small p-2 mb-3">
+                            <small class="fw-bold">Nov 2025</small>
+                        </div>
+                        <a href="{% static 'newsletters/2025/2025vol1.pdf' %}"
+                           target="_blank"
+                           class="text-decoration-none">
+                            <img src="{% static 'newsletters/2025/2025vol1.png' %}"
+                                 class="img-fluid rounded-custom shadow-custom-small hover-scale" 
+                                 alt="Conference Newsletter Volume 1">
+                        </a>                        
+                    </div>
+                </div>
+
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="content-card text-center hover-lift h-100">
                         <div class="publication-date bg-gradient-secondary text-dark rounded-custom-small p-2 mb-3">
@@ -285,7 +395,7 @@
                 </div>
 
                
-                <div class="col-lg-3 col-md-6 col-sm-6">
+                <!-- <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="content-card text-center hover-lift h-100">
                         <div class="publication-date bg-gradient-secondary text-dark rounded-custom-small p-2 mb-3">
                             <small class="fw-bold">Oct 21, 2020</small>
@@ -295,36 +405,18 @@
                              alt="December 2024 Newsletter">
                        
                     </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="content-card text-center hover-lift h-100">
-                        <div class="publication-date bg-gradient-secondary text-dark rounded-custom-small p-2 mb-3">
-                            <small class="fw-bold">Nov 2024</small>
-                        </div>
-                        <a href="{% static '2024/newsletters/DREAMSJNC2024Newsletter.pdf' %}"
-                           target="_blank"
-                           class="text-decoration-none">
-                            <img src="{% static '2024/newsletters/thumbnails/dreamsjnc24.png' %}"
-                                 class="img-fluid rounded-custom shadow-custom-small hover-scale" 
-                                 alt="DREAMS JNC 2024 Newsletter">
-                        </a>
-                        
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="content-card text-center hover-lift h-100">
-                        <div class="publication-date bg-gradient-secondary text-dark rounded-custom-small p-2 mb-3">
-                            <small class="fw-bold">Sept 28, 2023</small>
-                        </div>
-                        <img src="{% static 'Aboutus/Media/Newsletter/Newsletter-11.jpg' %}"
-                             class="img-fluid rounded-custom shadow-custom-small hover-scale" 
-                             alt="Newsletter Issue 11">
-                        
-                    </div>
+                </div> -->
+            </div>
+            <div class="row mt-5">
+            <div class="col-12">
+                <div class="d-flex justify-content-center justify-content-md-end">
+                    <a href="{% url 'newsletter' %}" class="btn btn-outline-primary btn-lg px-4 py-2 read-more-btn text-decoration-none">
+                        <span class="me-2">Read More</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
                 </div>
             </div>
+        </div>
         </div>
     </div>
 {% endblock %}

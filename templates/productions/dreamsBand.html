@@ -6,22 +6,9 @@ Dream Band
 {% endblock %}
 
 {% block extraStyles %}
-<link rel="stylesheet" href="{% static 'css/dreamsBand.css' %}" type="text/css">
-<style>
-    .object-fit-cover {
-        object-fit: cover;
-    }
-
-    .t-bq-quote-jasper-text {
-        margin-top: 1.5rem;
-    }
-</style>
 {% endblock extraStyles %}
 
 {% block links %}
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-    crossorigin="anonymous"></script>
 {% endblock links %}
 
 {% block content %}
@@ -299,205 +286,106 @@ Dream Band
     </div>
 </div>
 
-<div class="container mt-3 mb-5">
+<div class="container py-5">
     <div class="row">
-
-        <div class="text-uppercase mb-3 fs-3">
+        <div class="col-12 text-uppercase fs-3 fw-bold mb-4 text-center">
             Video Gallery
-            <hr />
+            <hr class="mx-auto" style="width: 80px; height: 3px; background-color: #007bff; border: none;" />
         </div>
 
-        <div class="col-12 mb-4 mt-2">
-            <div class="gallery">
-                <div>
-                    <iframe src="https://www.youtube.com/embed/Ux9nD9YuGv0" allowfullscreen frameborder="0"
-                        name="tab"></iframe>
-                </div>
-                <div>
-                    <span>
-                        <a href="https://www.youtube.com/embed/Ux9nD9YuGv0" target="tab">
-                            <img src="https://img.youtube.com/vi/Ux9nD9YuGv0/default.jpg" alt="">
-                        </a>
-                        <a href="https://www.youtube.com/embed/E9i2R2aZ-x8" target="tab">
-                            <img src="https://img.youtube.com/vi/E9i2R2aZ-x8/default.jpg" alt="">
-                        </a>
-                        <a href="https://www.youtube.com/embed/m4I74ChX-J8" target="tab">
-                            <img src="https://img.youtube.com/vi/m4I74ChX-J8/default.jpg" alt="">
-                        </a>
-                        <a href="https://www.youtube.com/embed/FlVEeAIWCo0" target="tab">
-                            <img src="https://img.youtube.com/vi/FlVEeAIWCo0/default.jpg" alt="">
-                        </a>
-                        <a href="https://www.youtube.com/embed/LfzJvlfVmOc" target="tab">
-                            <img src="https://img.youtube.com/vi/LfzJvlfVmOc/default.jpg" alt="">
-                        </a>
-                        <a href="https://www.youtube.com/embed/7yjVTzgK030" target="tab">
-                            <img src="https://img.youtube.com/vi/7yjVTzgK030/default.jpg" alt="">
-                        </a>
-                        <a href="https://www.youtube.com/embed/ZggPjSqBT7k" target="tab">
-                            <img src="https://img.youtube.com/vi/ZggPjSqBT7k/default.jpg" alt="">
-                        </a>
-                        <a href="https://www.youtube.com/embed/jw_64W0Ygx4" target="tab">
-                            <img src="https://img.youtube.com/vi/jw_64W0Ygx4/default.jpg" alt="">
-                        </a>
-                    </span>
-                </div>
+        <!-- Main Video Player -->
+        <div class="col-12 mb-4">
+            <div class="ratio ratio-16x9 mb-4 border rounded shadow-sm">
+                <iframe id="mainVideo" src="https://www.youtube.com/embed/Ux9nD9YuGv0" title="Video Player"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <!-- Thumbnails in a single row -->
+        <div class="col-12 overflow-auto">
+            <div class="d-flex flex-nowrap gap-3 pb-2">
+                <img src="https://img.youtube.com/vi/Ux9nD9YuGv0/mqdefault.jpg"
+                    class="img-fluid rounded shadow-sm border" style="cursor:pointer; width:180px;"
+                    onclick="changeVideo('Ux9nD9YuGv0')" alt="Video Thumbnail">
+                <img src="https://img.youtube.com/vi/E9i2R2aZ-x8/mqdefault.jpg"
+                    class="img-fluid rounded shadow-sm border" style="cursor:pointer; width:180px;"
+                    onclick="changeVideo('E9i2R2aZ-x8')" alt="Video Thumbnail">
+                <img src="https://img.youtube.com/vi/m4I74ChX-J8/mqdefault.jpg"
+                    class="img-fluid rounded shadow-sm border" style="cursor:pointer; width:180px;"
+                    onclick="changeVideo('m4I74ChX-J8')" alt="Video Thumbnail">
+                <img src="https://img.youtube.com/vi/FlVEeAIWCo0/mqdefault.jpg"
+                    class="img-fluid rounded shadow-sm border" style="cursor:pointer; width:180px;"
+                    onclick="changeVideo('FlVEeAIWCo0')" alt="Video Thumbnail">
+                <img src="https://img.youtube.com/vi/LfzJvlfVmOc/mqdefault.jpg"
+                    class="img-fluid rounded shadow-sm border" style="cursor:pointer; width:180px;"
+                    onclick="changeVideo('LfzJvlfVmOc')" alt="Video Thumbnail">
+                <img src="https://img.youtube.com/vi/7yjVTzgK030/mqdefault.jpg"
+                    class="img-fluid rounded shadow-sm border" style="cursor:pointer; width:180px;"
+                    onclick="changeVideo('7yjVTzgK030')" alt="Video Thumbnail">
+                <img src="https://img.youtube.com/vi/ZggPjSqBT7k/mqdefault.jpg"
+                    class="img-fluid rounded shadow-sm border" style="cursor:pointer; width:180px;"
+                    onclick="changeVideo('ZggPjSqBT7k')" alt="Video Thumbnail">
+                <img src="https://img.youtube.com/vi/jw_64W0Ygx4/mqdefault.jpg"
+                    class="img-fluid rounded shadow-sm border" style="cursor:pointer; width:180px;"
+                    onclick="changeVideo('jw_64W0Ygx4')" alt="Video Thumbnail">
             </div>
         </div>
     </div>
 </div>
 
-<!-- <div class="container mt-5">
-        <div class="row">
-            <div class=" text-uppercase mb-4 fs-3 fw-bolder">
-                testimonials
-                <hr/>
-            </div>
-            <div class="col-6">
-                <section class="t-bq-section blog-home2" id="jasper">
-                    <div class="t-bq-wrapper t-bq-wrapper-boxed">
-                        <div class="t-bq-quote t-bq-quote-jasper">
-                            <div class="t-bq-quote-jasper-pattern">
-                                <div class="t-bq-quote-jasper-qmark">
-                                    &#10077;
-                                </div>
-                            </div>
-                            <div class="t-bq-quote-jasper-userpic">
-                                <img src="{% static 'testimonial\AbhishikithGeorge.jpg' %}" alt="">
-                            </div>
-                            <div class="t-bq-quote-jasper-base" id="testimonial">
-                                <blockquote class="t-bq-quote-jasper-text" cite="Strugatsky Brothers">
-                                    DREAMS Band is a group of budding musicians coming together for one vision and
-                                    mission to empower the society and holistically grow others around using music
-                                    as an
-                                    effective tool. The band is a balance between a professional and a college band.
-                                </blockquote>
-                                <div class="t-bq-quote-jasper-meta">
-                                    <div class="t-bq-quote-jasper-meta-info">
-                                        <div class="t-bq-quote-jasper-author">
-                                            Abhishikth George John
-                                        </div>
-                                        <div class="t-bq-quote-jasper-source">
-                                            Choir Director, CHRIST (Deemed to be University) Central Campus
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </div>
-            <div class="col-6">
-                <section class="t-bq-section blog-home2" id="jasper">
-                    <div class="t-bq-wrapper t-bq-wrapper-boxed">
-                        <div class="t-bq-quote t-bq-quote-jasper">
-                            <div class="t-bq-quote-jasper-pattern">
-                                <div class="t-bq-quote-jasper-qmark">
-                                    &#10077;
-                                </div>
-                            </div>
-                            <div class="t-bq-quote-jasper-userpic">
-                                <img src="{% static 'testimonial\IbinRigia.jpeg' %}" alt="">
-                            </div>
-                            <div class="t-bq-quote-jasper-base" id="testimonial">
-                                <blockquote class="t-bq-quote-jasper-text" cite="Strugatsky Brothers">
-                                    Being part of the dreams band for me was a journey of self-discovery and
-                                    holistic
-                                    growth. It didn't only help me improve my musical abilities, but it also helped
-                                    me
-                                    to enhance my other skills like teamwork, leadership, decision-making, and
-                                    social
-                                    skills.
-                                </blockquote>
-                                <div class="t-bq-quote-jasper-meta">
-                                    <div class="t-bq-quote-jasper-meta-info">
-                                        <div class="t-bq-quote-jasper-author">
-                                            Mr. Ibin Rigia
-                                        </div>
-                                        <div class="t-bq-quote-jasper-source">
-                                            Mental health advocate & professional | Music enthusiast | Musician
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </div>
-        </div>
-    </div> -->
-<div class="container mt-5">
-    <div class="row">
-        <div class="text-uppercase mb-4 fs-3 fw-bolder">
-            testimonials
-            <hr />
-        </div>
-        <div class="col-md-6 mb-4">
-            <section class="t-bq-section blog-home2" id="jasper">
-                <div class="t-bq-wrapper t-bq-wrapper-boxed">
-                    <div class="t-bq-quote t-bq-quote-jasper">
-                        <div class="t-bq-quote-jasper-pattern">
-                            <div class="t-bq-quote-jasper-qmark">
-                                &#10077;
-                            </div>
-                        </div>
-                        <div class="t-bq-quote-jasper-userpic ratio ratio-1x1 w-25 mx-auto">
-                            <img src="{% static 'testimonial/AbhishikithGeorge.jpg' %}"
-                                class="img-fluid rounded-circle object-fit-cover" alt="John">
-                        </div>
-                        <div class="t-bq-quote-jasper-base" id="testimonial">
-                            <blockquote class="t-bq-quote-jasper-text" cite="Strugatsky Brothers">
-                                DREAMS Band is a group of budding musicians coming together for one vision and
-                                mission to empower the society and holistically grow others around using music
-                                as an effective tool.
-                            </blockquote>
-                            <div class="t-bq-quote-jasper-meta">
-                                <div class="t-bq-quote-jasper-meta-info">
-                                    <div class="t-bq-quote-jasper-author">
-                                        John
-                                    </div>
-                                    <div class="t-bq-quote-jasper-source">
-                                        Choir Director
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
-        <div class="col-md-6 mb-4">
-            <section class="t-bq-section blog-home2" id="jasper">
-                <div class="t-bq-wrapper t-bq-wrapper-boxed">
-                    <div class="t-bq-quote t-bq-quote-jasper">
-                        <div class="t-bq-quote-jasper-pattern">
-                            <div class="t-bq-quote-jasper-qmark">
-                                &#10077;
-                            </div>
-                        </div>
-                        <div class="t-bq-quote-jasper-userpic ratio ratio-1x1 w-25 mx-auto">
-                            <img src="{% static 'testimonial/IbinRigia.jpeg' %}"
-                                class="img-fluid rounded-circle object-fit-cover" alt="Rigia">
-                        </div>
-                        <div class="t-bq-quote-jasper-base" id="testimonial">
-                            <blockquote class="t-bq-quote-jasper-text" cite="Strugatsky Brothers">
-                                Being part of the dreams band for me was a journey of self-discovery and
-                                holistic growth. It didn't only help me improve my musical abilities...
-                            </blockquote>
-                            <div class="t-bq-quote-jasper-meta">
-                                <div class="t-bq-quote-jasper-meta-info">
-                                    <div class="t-bq-quote-jasper-author">
-                                        Rigia
-                                    </div>
-                                    <div class="t-bq-quote-jasper-source">
-                                        Mental health advocate
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
+
+<div class="container py-5">
+  <div class="row">
+    <div class="text-uppercase mb-4 fs-3 fw-bolder text-center">
+      Testimonials
+      <hr class="mx-auto" style="width: 80px; height: 3px; background-color: #0d6efd; border: none;" />
     </div>
+
+    <!-- Testimonial 1 -->
+    <div class="col-md-6 mb-4">
+      <div class="card shadow-sm border-0 h-100 text-center p-4">
+        <div class="position-relative mb-3">
+          <div class="display-4 text-primary position-absolute top-0 start-50 translate-middle-x opacity-25">
+            &#10077;
+          </div>
+          <img src="{% static 'testimonial/AbhishikithGeorge.jpg' %}" class="img-fluid rounded-circle border border-3 border-primary mx-auto mt-3" style="width: 120px; height: 120px; object-fit: cover;" alt="John">
+        </div>
+        <blockquote class="blockquote mb-3 fst-italic">
+          DREAMS Band is a group of budding musicians coming together for one vision and mission to empower the society and holistically grow others around using music as an effective tool.
+        </blockquote>
+        <div class="blockquote-footer mt-2">
+          <strong>John</strong><br />
+          <small class="text-muted">Choir Director</small>
+        </div>
+      </div>
+    </div>
+
+    <!-- Testimonial 2 -->
+    <div class="col-md-6 mb-4">
+      <div class="card shadow-sm border-0 h-100 text-center p-4">
+        <div class="position-relative mb-3">
+          <div class="display-4 text-primary position-absolute top-0 start-50 translate-middle-x opacity-25">
+            &#10077;
+          </div>
+          <img src="{% static 'testimonial/IbinRigia.jpeg' %}" class="img-fluid rounded-circle border border-3 border-primary mx-auto mt-3" style="width: 120px; height: 120px; object-fit: cover;" alt="Rigia">
+        </div>
+        <blockquote class="blockquote mb-3 fst-italic">
+          Being part of the dreams band for me was a journey of self-discovery and holistic growth. It didn't only help me improve my musical abilities but also nurtured my confidence and leadership.
+        </blockquote>
+        <div class="blockquote-footer mt-2">
+          <strong>Rigia</strong><br />
+          <small class="text-muted">Mental Health Advocate</small>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
+
+
+<script>
+    function changeVideo(videoId) {
+        const mainVideo = document.getElementById('mainVideo');
+        mainVideo.src = `https://www.youtube.com/embed/${videoId}`;
+    }
+</script>
 {% endblock %}

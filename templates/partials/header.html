@@ -1,9 +1,9 @@
 {% load static %}
-<header class="p-1 menu fixed-top m-0">
+<header class="menu fixed-top m-0 px-4 px-sm-0">
 
     <nav class="navbar navbar-expand-lg" id="navbar">
 
-        <a href="{% url 'main' %}" class="d-block d-md-none mr-10px" >
+        <a href="{% url 'main' %}" class="d-block d-md-none" >
             <img src="{% static 'logo/logo.png' %}" class="" alt="LET US DREAM" height="100px">
         </a>
 
@@ -38,6 +38,11 @@
                         <li>
                             <a href="{% url 'dreams' 'program' %}" class="dropdown-item">DREAMS Intervention Program (DIP)</a>
                         </li>
+                        <li>
+                            <a href="{% url 'yclp-course' %}" class="dropdown-item">
+                                Young Community Leadership Program (YCLP)
+                            </a>
+                        </li>
                     </ul>
                 </li>
                 
@@ -52,12 +57,17 @@
                         </li>
                         <li>
                             <a href="{% url 'annualConference' %}" class="dropdown-item">
-                                Annual Conferences
+                                Annual Community Conferences
                             </a>
                         </li>
                         <li>
                             <a href="{% url 'trriennial-conference' %}" class="dropdown-item">
-                                Triennial Conferences
+                                Triennial International Conference
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{% url 'conclave' %}" class="dropdown-item">
+                                Leadership Conclave
                             </a>
                         </li>
                         <li>
@@ -105,19 +115,15 @@
                     <ul class="dropdown-menu shadow">
                         <li><a href="{% url 'dreams' 'band' %}" class="dropdown-item">DREAMS Band</a></li>
                         <li><a href="{% url 'human' %}" class="dropdown-item">The HUMAN</a></li>
+                        <li><a href="{% url 'sonic-sanctuaries' %}" class="dropdown-item">Sonic Sanctuaries</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle text-white" data-bs-toggle="dropdown" data-bs-auto-close="outside"
                        href="#">
-                        Courses
+                        Fellowship
                     </a>
                     <ul class="dropdown-menu shadow">
-                        <li>
-                            <a href="{% url 'yclp-course' %}" class="dropdown-item">
-                                Young Community Leadership Program (YCLP)
-                            </a>
-                        </li>
                         <li><a href="{% url 'llfp' %}" class="dropdown-item">Leadership Fellowship (LLFP)</a></li>
                     </ul>
                 </li>
@@ -131,7 +137,7 @@
 
                     </ul>
                 </li>
-                <li class="nav-item dropdown">
+                <!-- <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle text-white" data-bs-toggle="dropdown" data-bs-auto-close="outside"
                        href="#">Locations</a>
                     <ul class="dropdown-menu shadow">
@@ -182,7 +188,7 @@
                             </ul>
                         </li>
                     </ul>
-                </li>
+                </li> -->
             </ul>
         </div>
 
