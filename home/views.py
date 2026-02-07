@@ -5,6 +5,7 @@ from datetime import datetime
 from .location_data import locations_data
 from .testimonials_data import TESTIMONIALS_DATA
 from .conference import CONFERENCE_DATA
+from .conference_2026 import CONFERENCE_DATA26
 from .llfp_2024 import llfp_2024
 
 
@@ -238,6 +239,14 @@ def pressRelease(request):
 
 def newsletter(request):
     newsletters = [
+        {
+            "pdf_url": "newsletters/2025/Dreams Newsletter MIC 2025-26.pdf",
+            "image_url": "newsletters/2025/Dreams Newsletter MIC 2025-26.png",
+            "title": "Dreams Newsletter MIC 2025-26",
+            "month": "Feb",
+            "day": "07",
+            "year": "2026",
+        },
         {
             "pdf_url": "2025/newsletter/Kerala Newsletter.pdf",
             "image_url": "2025/newsletter/Keralanewsletterface.png",
@@ -640,6 +649,36 @@ def triennialConference2023(request):
     }
     return render(
         request, "conference/triennialConference/triennialConference2023.html", context
+    )
+
+
+def triennialConference2026(request):
+
+    
+    breadcrumbs = [
+        {"name": "Home", "url": "main", "icon": "fas fa-home", "active": False},
+        {
+            "name": "Conferences",
+            "url": None,
+            "icon": "fas fa-calendar-alt",
+            "active": False,
+        },
+        {
+            "name": "Triennial Conferences",
+            "url": "trriennial-conference",
+            "icon": "fas fa-calendar-check",
+            "active": False,
+        },
+        {"name": "2026", "url": None, "icon": "fas fa-file-alt", "active": True},
+    ]
+
+    context = {
+        "bgcolor": "#274C7D",
+        "conference_data": CONFERENCE_DATA26,
+        "breadcrumbs": breadcrumbs,
+    }
+    return render(
+        request, "conference/triennialConference/triennialConference2026.html", context
     )
 
 

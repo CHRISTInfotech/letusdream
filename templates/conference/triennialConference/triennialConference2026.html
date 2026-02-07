@@ -1,0 +1,237 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+{{ conference_data.page.subheading }}
+{% endblock title %}
+
+{% block content %}
+
+<!-- Page Header -->
+{% if conference_data.page.main_heading or conference_data.page.subheading %}
+<section>
+    <div class="container">
+        <div class="page-header-content text-center mb-5">
+
+            {% if conference_data.page.logo %}
+                <img src="{% static conference_data.page.logo %}"
+                     height="120"
+                     alt="{{ conference_data.page.main_heading }}"
+                     class="mb-4 fade-in">
+            {% endif %}
+
+            {% if conference_data.page.main_heading %}
+                <h1 class="display-4 fw-bold mb-3 fade-in">
+                    {{ conference_data.page.main_heading }}
+                </h1>
+            {% endif %}
+
+            {% if conference_data.page.subheading %}
+                <h2 class="fade-in">
+                    {{ conference_data.page.subheading }}
+                </h2>
+            {% endif %}
+
+            {% if conference_data.page.tagline %}
+                <p class="text-medium fade-in mb-4">
+                    {{ conference_data.page.tagline }}
+                </p>
+            {% endif %}
+
+            {% if conference_data.page.details %}
+                <p class="text-light fade-in mb-4">
+                    {{ conference_data.page.details }}
+                </p>
+            {% endif %}
+
+            {% if conference_data.page.registration_link %}
+                <a href="{{ conference_data.page.registration_link }}"
+                   class="btn btn-primary btn-lg fade-in"
+                   target="_blank">
+                    {{ conference_data.page.registration_button_text|default:"Register Now" }}
+                </a>
+            {% endif %}
+        </div>
+    </div>
+</section>
+{% endif %}
+
+<!-- Theme -->
+{% if conference_data.theme.heading or conference_data.theme.paragraphs %}
+<div class="content-section">
+    <div class="container">
+        <div class="content-card fade-in">
+
+            {% if conference_data.theme.section_title %}
+                <span class="badge bg-gradient-primary text-white fs-6 px-3 py-2">
+                    {{ conference_data.theme.section_title }}
+                </span>
+            {% endif %}
+
+            {% if conference_data.theme.heading %}
+                <h2 class="text-primary-blue font-primary my-4">
+                    {{ conference_data.theme.heading }}
+                </h2>
+            {% endif %}
+
+            {% for para in conference_data.theme.paragraphs %}
+                <p class="text-medium lh-lg">{{ para }}</p>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endif %}
+
+<!-- More Details -->
+{% if conference_data.more_details %}
+<div class="content-section bg-light-gray">
+    <div class="container">
+        <div class="content-card fade-in">
+            <h3 class="text-primary-blue font-primary mb-4">
+                <i class="fas fa-info-circle me-2"></i>More Details
+            </h3>
+            <div class="d-grid gap-3">
+                {% for item in conference_data.more_details %}
+                    <a href="{% static item.url %}"
+                       class="btn btn-outline-primary text-start"
+                       target="_blank">
+                        <i class="fas fa-download me-2"></i>
+                        {{ item.label }}
+                    </a>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}
+
+<!-- Schedule -->
+{% if conference_data.schedule.day_one.sessions or conference_data.schedule.day_two.sessions or conference_data.schedule.day_three.sessions %}
+<div class="content-section bg-light-gray">
+    <div class="container text-center">
+        <h2 class="section-title fade-in mb-4">
+            <i class="fas fa-calendar-alt me-3"></i>Conference Schedule
+        </h2>
+    </div>
+</div>
+{% endif %}
+
+<!-- Keynote Speakers -->
+{% if conference_data.keynote_speakers %}
+<div class="content-section">
+    <div class="container">
+        <h2 class="section-title text-center mb-5">
+            <i class="fas fa-microphone me-3"></i>Keynote Speakers
+        </h2>
+
+        {% for speaker in conference_data.keynote_speakers %}
+            <div class="content-card mb-4 fade-in">
+                <div class="row align-items-center">
+                    <div class="col-md-4 text-center">
+                        {% if speaker.image %}
+                            <img src="{% static speaker.image %}"
+                                 class="people-avatar mb-3"
+                                 alt="{{ speaker.name }}">
+                        {% endif %}
+                        <h5>{{ speaker.name }}</h5>
+                        <small>{{ speaker.category }} | {{ speaker.date }}</small>
+                    </div>
+                    <div class="col-md-8">
+                        <p class="text-medium lh-lg">{{ speaker.description }}</p>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endif %}
+
+<!-- Session Chairs -->
+{% if conference_data.session_chairs %}
+{% with has_chairs=False %}
+    {% for _, chairs in conference_data.session_chairs.items %}
+        {% if chairs %}
+            {% with has_chairs=True %}{% endwith %}
+        {% endif %}
+    {% endfor %}
+
+    {% if has_chairs %}
+    <div class="content-section bg-light-gray">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">
+                <i class="fas fa-users me-3"></i>Session Chairs
+            </h2>
+
+            {% for category, chairs in conference_data.session_chairs.items %}
+                {% if chairs %}
+                    <h3 class="text-center mb-4">{{ category }}</h3>
+                    <div class="row g-4 mb-5">
+                        {% for chair in chairs %}
+                            <div class="col-md-4 text-center fade-in">
+                                <div class="content-card h-100">
+                                    {% if chair.image %}
+                                        <img src="{% static chair.image %}"
+                                             class="people-avatar mb-3"
+                                             alt="{{ chair.name }}">
+                                    {% endif %}
+                                    <h5>{{ chair.name }}</h5>
+                                    <p class="text-medium">{{ chair.affiliation }}</p>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+    {% endif %}
+{% endwith %}
+{% endif %}
+
+<!-- Gallery -->
+{% if conference_data.gallery.main_iframe and conference_data.gallery.thumbnails %}
+<div class="content-section bg-light-gray">
+    <div class="container">
+        <h2 class="section-title text-center mb-5">
+            <i class="fas fa-images me-3"></i>Conference Glimpses
+        </h2>
+
+        <iframe src="{{ conference_data.gallery.main_iframe }}"
+                class="w-100"
+                height="450"
+                allowfullscreen></iframe>
+    </div>
+</div>
+{% endif %}
+{% if conference_data.engagement.options %}
+<div class="content-section">
+    <div class="container">
+        <div class="content-card fade-in text-center">
+
+            {% if conference_data.engagement.heading %}
+                <h2 class="section-title mb-3">
+                    {{ conference_data.engagement.heading }}
+                </h2>
+            {% endif %}
+
+            {% if conference_data.engagement.subheading %}
+                <p class="text-medium mb-4">
+                    {{ conference_data.engagement.subheading }}
+                </p>
+            {% endif %}
+
+            <div class="d-flex flex-wrap justify-content-center gap-3">
+                {% for option in conference_data.engagement.options %}
+                    <span class="badge bg-gradient-primary text-white px-4 py-2 fs-6">
+                        {{ option }}
+                    </span>
+                {% endfor %}
+            </div>
+
+        </div>
+    </div>
+</div>
+{% endif %}
+
+
+{% endblock %}
