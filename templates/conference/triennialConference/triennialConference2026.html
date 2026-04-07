@@ -9,46 +9,49 @@
 
 <!-- Page Header -->
 {% if conference_data.page.main_heading or conference_data.page.subheading %}
-<section>
-    <div class="container">
-        <div class="page-header-content text-center mb-5">
+<section class="py-5 text-center">
+    <div class="container py-5">
+        <div class="page-header-content mb-5">
 
             {% if conference_data.page.logo %}
                 <img src="{% static conference_data.page.logo %}"
-                     height="120"
+                     height="140"
                      alt="{{ conference_data.page.main_heading }}"
-                     class="mb-4 fade-in">
+                     class="mb-5 fade-in shadow-sm rounded-circle p-2 bg-white">
             {% endif %}
 
             {% if conference_data.page.main_heading %}
-                <h1 class="display-4 fw-bold mb-3 fade-in">
+                <h1 class="display-3 fw-bold mb-3 fade-in text-primary-blue">
                     {{ conference_data.page.main_heading }}
                 </h1>
             {% endif %}
 
             {% if conference_data.page.subheading %}
-                <h2 class="fade-in">
+                <h2 class="display-6 fw-semibold mb-4 fade-in opacity-75">
                     {{ conference_data.page.subheading }}
                 </h2>
             {% endif %}
 
             {% if conference_data.page.tagline %}
-                <p class="text-medium fade-in mb-4">
+                <div class="h4 fw-medium fade-in mb-5 text-medium mx-auto" style="max-width: 800px; line-height: 1.4;">
                     {{ conference_data.page.tagline }}
-                </p>
+                </div>
             {% endif %}
 
-            {% if conference_data.page.details %}
-                <p class="text-light fade-in mb-4">
-                    {{ conference_data.page.details }}
-                </p>
-            {% endif %}
+            <div class="hosting-details-box fade-in mb-5 p-4 rounded-4 shadow-sm mx-auto" style="max-width: 600px; background: #f0f7ff; border: 1px solid #cce3ff;">
+                <div class="text-uppercase small fw-bold text-primary mb-2" style="letter-spacing: 2px;">Hosted BY</div>
+                <div class="h4 fw-bold text-primary-blue mb-3">Christ University, Bangalore, India</div>
+                <div class="d-flex justify-content-center align-items-center gap-3 text-medium">
+                    <i class="fas fa-calendar-alt text-primary"></i>
+                    <span class="fw-semibold">November 19 - 21, 2026</span>
+                </div>
+            </div>
 
             {% if conference_data.page.registration_link %}
                 <a href="{{ conference_data.page.registration_link }}"
-                   class="btn btn-primary btn-lg fade-in"
+                   class="btn btn-primary btn-lg px-5 py-3 rounded-pill shadow-lg hover-lift fade-in"
                    target="_blank">
-                    {{ conference_data.page.registration_button_text|default:"Register Now" }}
+                    <i class="fas fa-user-plus me-2"></i>{{ conference_data.page.registration_button_text|default:"Register Now" }}
                 </a>
             {% endif %}
         </div>

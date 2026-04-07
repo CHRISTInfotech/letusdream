@@ -5,20 +5,19 @@ CONFERENCE_DATA26 = {
     "page": {
         "title": "Triennial International Community Conference 2026",
         "logo": "logo/logo.png",
-        "main_heading": "LET US DREAM",
-        "subheading": "2026",
-        "tagline": "Empowering Communities",
-        "details": "CHRIST University, Bangalore, India | November 19 - 21, 2026",
+        "main_heading": "Triennial International Community Conference 2026",
+        "subheading": "Local Wisdom, Global Influence",
+        "tagline": "Resilient Glocal Communities for Meaningful Humanity",
+        "details": "Hosted BY Christ University, Bangalore, India | November 19 - 21, 2026",
         "registration_link": "https://cmt.letusdream.org/one_time_registration/e3c2ffb2-39ea-44bc-a173-233f01dc8cb1"
     },
 
     # Conference Theme Section
     "theme": {
         "section_title": "Conference Theme",
-        "heading": "Empowering Communities",
+        "heading": "Local Wisdom, Global Influence",
         "paragraphs": [
-            "Join global educators, community leaders, and changemakers for the third convening of this event as we celebrate shared impact and collaboration.",
-            "A global gathering of ideas, innovation, and inspiration, united by the spirit of shaping communities worldwide."
+            "Resilient Glocal Communities for Meaningful Humanity",
         ]
     },
 
@@ -66,7 +65,7 @@ CONFERENCE_DATA26 = {
 
     # Host Universities Section
     "host_universities": {
-        "logos_image": ""
+        "logos_image": "2025/conference/CHRIST_UNIVERSITY_2024.JPG"
     },
 
     # Glimpses / Gallery Section
