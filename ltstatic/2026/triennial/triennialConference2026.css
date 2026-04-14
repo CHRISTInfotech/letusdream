@@ -1,0 +1,737 @@
+.conference-2026-page {
+  background: #ffffff;
+  color: #0b1220;
+  font-size: 16px;
+}
+
+.conference-2026-page .container {
+  position: relative;
+  z-index: 2;
+}
+
+.conference-2026-page section {
+  position: relative;
+  overflow: hidden;
+}
+
+.conference-2026-page .section-shell {
+  padding: 4rem 0;
+}
+
+.conference-2026-page > .section-shell:first-of-type {
+  padding-top: 0;
+}
+
+.conference-2026-page > .section-shell:first-of-type .hero-panel {
+  padding-top: 1rem;
+}
+
+.conference-2026-page .section-heading-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  min-height: 60px;
+  padding: 0.7rem 1.6rem;
+  border-radius: 999px;
+  background: rgba(12, 82, 161, 0.08);
+  color: #0c52a1;
+  font-size: clamp(1.35rem, 3vw, 2.25rem);
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.conference-2026-page .section-heading-row,
+.conference-2026-page .about-heading-row {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  width: 100%;
+}
+
+.conference-2026-page .section-heading-pill-plain,
+.conference-2026-page .about-heading-pill {
+  background: transparent;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.conference-2026-page .section-heading-line,
+.conference-2026-page .about-heading-line {
+  flex: 1;
+  height: 0;
+  border-top: 2px solid rgba(12, 82, 161, 0.35);
+  margin-left: 16px;
+}
+
+.conference-2026-page .section-heading-pill i {
+  font-size: 0.95em;
+}
+
+.conference-2026-page .hero-panel,
+.conference-2026-page .about-card,
+.conference-2026-page .glass-card,
+.conference-2026-page .theme-card,
+.conference-2026-page .testimonial-card,
+.conference-2026-page .contact-card {
+  border-radius: 8px;
+  background: #ffffff;
+  border: none;
+  box-shadow: none;
+}
+
+.conference-2026-page .hero-panel,
+.conference-2026-page .about-card,
+.conference-2026-page .theme-card,
+.conference-2026-page .contact-card {
+  padding: 2rem;
+}
+
+.conference-2026-page .hero-panel {
+  text-align: center;
+}
+
+.conference-2026-page .hero-main-content {
+  margin-bottom: 0.75rem;
+}
+
+.conference-2026-page .hero-main-title {
+  margin: 0 0 0.65rem;
+  color: #0c52a1;
+  font-size: clamp(2rem, 3.6vw, 3.05rem);
+  line-height: 1.02;
+  font-weight: 800;
+  letter-spacing: 0;
+  font-family: var(--font-primary);
+  display: inline-block;
+}
+
+.conference-2026-page .hero-main-subtitle {
+  margin: 0;
+  color: rgba(11, 18, 32, 0.74);
+  font-size: clamp(1.05rem, 2.2vw, 1.75rem);
+  line-height: 1.35;
+  font-weight: 700;
+  letter-spacing: 3px;
+  font-family: var(--font-secondary);
+  font-style: italic;
+  max-width: 60rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.conference-2026-page .hero-secondary-content {
+  margin-bottom: 2rem;
+}
+
+/* Requested: blue shade + title case (no forced uppercase) */
+.conference-2026-page .hero-secondary-content .hero-title {
+  margin: 30px 0 0.35rem;
+  color: #1b4f93;
+  font-size: clamp(1.8rem, 3.2vw, 2.65rem);
+  line-height: 1.05;
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
+.conference-2026-page .hero-secondary-content .hero-subtitle {
+  margin: 0;
+  color: rgba(27, 79, 147, 0.85);
+  font-size: clamp(1.05rem, 2.2vw, 1.65rem);
+  line-height: 1.3;
+  font-weight: 700;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.conference-2026-page .hero-meta {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  justify-items: center;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.conference-2026-page .meta-box {
+  padding: 1rem 1.1rem;
+  border-radius: 8px;
+  background: #ffffff;
+  border: 2px dotted rgba(12, 82, 161, 0.55);
+  box-shadow: none;
+  text-align: center;
+  width: 100%;
+}
+
+.conference-2026-page .meta-box-action {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.6rem;
+}
+
+.conference-2026-page .meta-cta {
+  border-radius: 8px;
+  padding: 0.55rem 0.9rem;
+  font-weight: 800;
+  font-size: 12px;
+  line-height: 1.2;
+}
+
+.conference-2026-page .meta-label {
+  margin-bottom: 0.3rem;
+  color: rgba(11, 18, 32, 0.55);
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.conference-2026-page .meta-value {
+  color: #0b1220;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.conference-2026-page .hero-copy {
+  margin-bottom: 1.5rem;
+  color: rgba(11, 18, 32, 0.78);
+  line-height: 1.8;
+  max-width: 60rem;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 18px;
+}
+
+.conference-2026-page .hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+  justify-content: center;
+}
+
+.conference-2026-page .hero-actions .btn,
+.conference-2026-page .contact-actions .btn {
+  border-radius: 8px;
+}
+
+.conference-2026-page .highlight-strip {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.conference-2026-page .highlight-item {
+  padding: 1rem;
+  border-radius: 8px;
+  background: #ffffff;
+  border: 2px dotted rgba(12, 82, 161, 0.55);
+  box-shadow: none;
+  text-align: center;
+}
+
+.conference-2026-page .highlight-value {
+  display: block;
+  color: #a9e43e;
+  font-size: 50px;
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.conference-2026-page .highlight-label {
+  color: rgba(11, 18, 32, 0.62);
+  font-size: 20px;
+}
+
+.conference-2026-page .about-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.conference-2026-page .about-card p,
+.conference-2026-page .theme-card p,
+.conference-2026-page .glass-card p,
+.conference-2026-page .testimonial-card p {
+  margin-bottom: 0;
+  color: rgba(11, 18, 32, 0.82);
+  line-height: 1.75;
+}
+
+.conference-2026-page .vision-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.conference-2026-page .vision-card {
+  min-height: 100%;
+  padding: 1.5rem;
+  border-radius: 8px;
+  background: rgba(146, 237, 38, 0.10);
+  border: 1px solid rgba(12, 82, 161, 0.12);
+  color: #0b1220;
+}
+
+.conference-2026-page .vision-card h3 {
+  margin-bottom: 0.9rem;
+  color: #a9e43e;
+  font-size: 1.8rem;
+}
+
+.conference-2026-page .history-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.conference-2026-page .history-card {
+  height: 100%;
+  padding: 1.5rem;
+  border-radius: 8px;
+  background: rgba(12, 82, 161, 0.04);
+  border: 2px dotted rgba(12, 82, 161, 0.35);
+  box-shadow: none;
+}
+
+.conference-2026-page .history-year {
+  margin-bottom: 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.35rem 0.7rem;
+  border-radius: 8px;
+  background: rgba(12, 82, 161, 0.08);
+  color: #0c52a1;
+  font-size: 1.6rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.conference-2026-page .history-title {
+  margin-bottom: 0.8rem;
+  color: #0b1220;
+  font-size: 1.02rem;
+  font-weight: 800;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.conference-2026-page .history-card ul,
+.conference-2026-page .bullets {
+  margin: 0;
+  padding-left: 1.15rem;
+  color: rgba(11, 18, 32, 0.82);
+  line-height: 1.7;
+}
+
+.conference-2026-page .history-card ul {
+  list-style-position: outside;
+}
+
+.conference-2026-page .history-card li::marker {
+  color: rgba(12, 82, 161, 0.9);
+  font-weight: 800;
+}
+
+.conference-2026-page .big-picture-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.conference-2026-page .glass-card {
+  padding: 1.5rem;
+}
+
+/* Big Picture styling */
+.conference-2026-page .big-picture-grid .glass-card {
+  background: rgba(12, 82, 161, 0.04);
+  border: 2px dotted rgba(12, 82, 161, 0.35);
+  border-radius: 8px;
+}
+
+.conference-2026-page .big-picture-grid .wide-card {
+  background: rgba(146, 237, 38, 0.08);
+  border-color: rgba(12, 82, 161, 0.28);
+}
+
+.conference-2026-page .big-picture-grid .card-title {
+  margin-bottom: 1rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 2px solid rgba(12, 82, 161, 0.18);
+  color: #0c52a1;
+  font-size: 1.25rem;
+  text-transform: none;
+}
+
+.conference-2026-page .big-picture-grid .bullets {
+  padding-left: 1.1rem;
+  margin-top: 0.25rem;
+}
+
+.conference-2026-page .big-picture-left-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.conference-2026-page .big-picture-right-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.conference-2026-page .big-picture-grid .bullets li + li {
+  margin-top: 0.35rem;
+}
+
+.conference-2026-page .big-picture-grid .bullets li::marker {
+  color: rgba(12, 82, 161, 0.9);
+  font-weight: 800;
+}
+
+.conference-2026-page .card-title {
+  margin-bottom: 0.85rem;
+  color: #0b1220;
+  font-size: 1.6rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.conference-2026-page .theme-header {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.conference-2026-page .theme-heading {
+  margin: 0.8rem 0 0.35rem;
+  color: #0c52a1;
+  font-size: clamp(1.7rem, 4vw, 2.4rem);
+  font-weight: 800;
+  text-transform: none;
+  letter-spacing: 0;
+  font-family: var(--font-primary);
+  display: inline-block;
+  line-height: 1.05;
+}
+
+.conference-2026-page .theme-tagline {
+  color: rgba(11, 18, 32, 0.74);
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: none;
+  font-family: var(--font-secondary);
+  font-style: italic;
+  letter-spacing: 4px;
+}
+
+.conference-2026-page .theme-card p + p {
+  margin-top: 1rem;
+}
+
+.conference-2026-page .theme-card p {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.conference-2026-page .committee-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.conference-2026-page .committee-card {
+  padding: 1.5rem 1.2rem;
+  background: transparent;
+  text-align: center;
+}
+
+.conference-2026-page .committee-role {
+  min-height: 44px;
+  margin-bottom: 1rem;
+  color: #0b1220;
+  font-size: 1rem;
+  font-weight: 800;
+  line-height: 1.2;
+  text-transform: none;
+}
+
+.conference-2026-page .committee-photo {
+  width: 128px;
+  height: 128px;
+  margin: 0 auto 1rem;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid rgba(169, 228, 62, 0.8);
+  background: rgba(12, 82, 161, 0.06);
+}
+
+.conference-2026-page .committee-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.conference-2026-page .committee-name {
+  margin-bottom: 0.4rem;
+  color: #0b1220;
+  font-size: 1.1rem;
+  font-weight: 800;
+}
+
+.conference-2026-page .committee-designation,
+.conference-2026-page .committee-email {
+  color: rgba(11, 18, 32, 0.72);
+  line-height: 1.55;
+  font-size: 0.93rem;
+}
+
+.conference-2026-page .committee-email {
+  margin-top: 0.35rem;
+  word-break: break-word;
+}
+
+.conference-2026-page .advisory-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.conference-2026-page .advisory-card {
+  padding: 1.3rem;
+  border-radius: 8px;
+  background: #ffffff;
+  border: none;
+  box-shadow: none;
+}
+
+.conference-2026-page .advisory-name {
+  margin-bottom: 0.45rem;
+  color: #0b1220;
+  font-size: 1.02rem;
+  font-weight: 800;
+}
+
+.conference-2026-page .advisory-designation,
+.conference-2026-page .advisory-email {
+  color: rgba(11, 18, 32, 0.72);
+  line-height: 1.6;
+}
+
+.conference-2026-page .logo-wall {
+  padding: 1.5rem;
+  border-radius: 8px;
+  background: transparent;
+}
+
+.conference-2026-page .logo-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 1rem;
+  align-items: center;
+}
+
+.conference-2026-page .logo-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 118px;
+  padding: 0.85rem;
+  border-radius: 8px;
+  background: rgba(12, 82, 161, 0.04);
+}
+
+.conference-2026-page .logo-item img {
+  max-width: 100%;
+  max-height: 74px;
+  object-fit: contain;
+  display: block;
+}
+
+.conference-2026-page .testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.conference-2026-page .testimonial-card {
+  position: relative;
+  padding: 2rem;
+  border: 2px dotted rgba(12, 82, 161, 0.55);
+  height: 100%;
+}
+
+.conference-2026-page .testimonial-card::before {
+  content: "\201C";
+  position: absolute;
+  top: 0.9rem;
+  left: 0.9rem;
+  color: #0c52a1;
+  font-size: 6rem;
+  line-height: 1;
+  font-weight: 800;
+}
+
+.conference-2026-page .testimonial-card > p {
+  margin-top: 1.6rem;
+}
+
+.conference-2026-page .testimonial-name {
+  margin-top: 1rem;
+  color: #0b1220;
+  font-size: 1.05rem;
+  font-weight: 800;
+}
+
+.conference-2026-page .testimonial-title {
+  color: rgba(11, 18, 32, 0.70);
+}
+
+.conference-2026-page .contact-card {
+  margin-top: 2rem;
+}
+
+.conference-2026-page .contact-card h3 {
+  margin-bottom: 1.25rem;
+  color: #0c52a1;
+  font-size: clamp(1.75rem, 4vw, 2.8rem);
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.conference-2026-page .contact-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.conference-2026-page .contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.95rem 1rem;
+  border-radius: 8px;
+  border: 2px dotted rgba(12, 82, 161, 0.35);
+  background: rgba(12, 82, 161, 0.03);
+  color: rgba(11, 18, 32, 0.82);
+  line-height: 1.65;
+}
+
+.conference-2026-page .contact-item i {
+  width: 38px;
+  height: 38px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background: rgba(12, 82, 161, 0.08);
+  color: #0c52a1;
+  font-size: 1.15rem;
+}
+
+.conference-2026-page .contact-item--address {
+  grid-column: 1 / -1;
+  align-items: flex-start;
+}
+
+.conference-2026-page .contact-link {
+  color: rgba(11, 18, 32, 0.82);
+  text-decoration: none;
+  font-weight: 700;
+  word-break: break-word;
+}
+
+.conference-2026-page .contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+}
+
+@media (max-width: 1199px) {
+  .conference-2026-page .committee-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .conference-2026-page .logo-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 991px) {
+  .conference-2026-page .section-shell {
+    padding: 3rem 0;
+  }
+
+  .conference-2026-page .highlight-strip,
+  .conference-2026-page .history-grid,
+  .conference-2026-page .big-picture-grid,
+  .conference-2026-page .committee-grid,
+  .conference-2026-page .advisory-grid,
+  .conference-2026-page .logo-grid,
+  .conference-2026-page .testimonial-grid,
+  .conference-2026-page .vision-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 767px) {
+  .conference-2026-page .hero-panel,
+  .conference-2026-page .about-card,
+  .conference-2026-page .theme-card,
+  .conference-2026-page .contact-card {
+    padding: 1.5rem;
+  }
+
+  .conference-2026-page .section-heading-pill {
+    width: 100%;
+    justify-content: center;
+    font-size: 1.4rem;
+    text-align: center;
+  }
+
+  .conference-2026-page .section-heading-row,
+  .conference-2026-page .about-heading-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .conference-2026-page .section-heading-line,
+  .conference-2026-page .about-heading-line {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .conference-2026-page .hero-meta {
+    grid-template-columns: 1fr;
+  }
+
+  .conference-2026-page .contact-list {
+    grid-template-columns: 1fr;
+  }
+
+  .conference-2026-page .contact-item--address {
+    grid-column: auto;
+  }
+
+  .conference-2026-page .highlight-strip,
+  .conference-2026-page .history-grid,
+  .conference-2026-page .big-picture-grid,
+  .conference-2026-page .committee-grid,
+  .conference-2026-page .advisory-grid,
+  .conference-2026-page .logo-grid,
+  .conference-2026-page .testimonial-grid,
+  .conference-2026-page .vision-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .conference-2026-page .hero-actions .btn,
+  .conference-2026-page .contact-actions .btn {
+    width: 100%;
+  }
+}

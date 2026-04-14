@@ -2,239 +2,361 @@
 {% load static %}
 
 {% block title %}
-{{ conference_data.page.subheading }}
+{{ conference_data.page.title }}
 {% endblock title %}
 
+{% block extraStyles %}
+<link rel="stylesheet" href="{% static '2026/triennial/triennialConference2026.css' %}">
+{% endblock extraStyles %}
+
 {% block content %}
+<div class="conference-2026-page">
+    <section class="section-shell">
+        <div class="container">
+            <div class="hero-panel">
+                <div class="row g-4 align-items-center">
+                    <div class="col-lg-12">
 
-<!-- Page Header -->
-{% if conference_data.page.main_heading or conference_data.page.subheading %}
-<section class="py-5 text-center">
-    <div class="container py-5">
-        <div class="page-header-content mb-5">
+                        <div class="hero-secondary-content">
+                            <div class="hero-title font-primary">Let Us Dream</div>
+                            <div class="hero-subtitle">Triennial International Community Conference 2026</div>
+                        </div>
 
-            {% if conference_data.page.logo %}
-                <img src="{% static conference_data.page.logo %}"
-                     height="140"
-                     alt="{{ conference_data.page.main_heading }}"
-                     class="mb-5 fade-in shadow-sm rounded-circle p-2 bg-white">
-            {% endif %}
+                        <div class="hero-main-content mt-5">
+                            <h1 class="hero-main-title">Local Wisdom, Global Influence</h1>
+                            <h2 class="hero-main-subtitle">Resilient Glocal Communities for Meaningful Humanity</h2>
+                        </div>
 
-            {% if conference_data.page.main_heading %}
-                <h1 class="display-3 fw-bold mb-3 fade-in text-primary-blue">
-                    {{ conference_data.page.main_heading }}
-                </h1>
-            {% endif %}
+                        <p class="hero-copy mt-5">
+                            Join a confluence of speakers, universities, community partners, and volunteers for a
+                            transnational gathering shaped by local wisdom, meaningful service, and collaborative
+                            action.
+                        </p>
 
-            {% if conference_data.page.subheading %}
-                <h2 class="display-6 fw-semibold mb-4 fade-in opacity-75">
-                    {{ conference_data.page.subheading }}
-                </h2>
-            {% endif %}
-
-            {% if conference_data.page.tagline %}
-                <div class="h4 fw-medium fade-in mb-5 text-medium mx-auto" style="max-width: 800px; line-height: 1.4;">
-                    {{ conference_data.page.tagline }}
+                        <div class="hero-meta">
+                            <div class="meta-box">
+                                <div class="meta-label">Dates</div>
+                                <div class="meta-value">{{ conference_data.page.dates }}</div>
+                            </div>
+                            <div class="meta-box">
+                                <div class="meta-label">Hosted By</div>
+                                <div class="meta-value">{{ conference_data.page.venue }}</div>
+                            </div>
+                            <div class="meta-box meta-box-action">
+                                <a href="{{ conference_data.page.registration_link }}"
+                                    class="btn btn-light btn-sm meta-cta" target="_blank" rel="noopener">
+                                    <i class="fas fa-user-plus me-2"></i>
+                                    Register Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            {% endif %}
 
-            <div class="hosting-details-box fade-in mb-5 p-4 rounded-4 shadow-sm mx-auto" style="max-width: 600px; background: #f0f7ff; border: 1px solid #cce3ff;">
-                <div class="text-uppercase small fw-bold text-primary mb-2" style="letter-spacing: 2px;">Hosted BY</div>
-                <div class="h4 fw-bold text-primary-blue mb-3">Christ University, Bangalore, India</div>
-                <div class="d-flex justify-content-center align-items-center gap-3 text-medium">
-                    <i class="fas fa-calendar-alt text-primary"></i>
-                    <span class="fw-semibold">November 19 - 21, 2026</span>
+                <div class="highlight-strip">
+                    <div class="highlight-item">
+                        <span class="highlight-value">{{ conference_data.highlights.speakers }}</span>
+                        <span class="highlight-label">Speakers</span>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="highlight-value">{{ conference_data.highlights.countries }}</span>
+                        <span class="highlight-label">Countries</span>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="highlight-value">{{ conference_data.highlights.universities }}</span>
+                        <span class="highlight-label">Universities</span>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="highlight-value">
+                            {{ conference_data.highlights.community_service_organizations }}
+                        </span>
+                        <span class="highlight-label">Community Partners</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-shell">
+        <div class="container">
+            <div class="mb-4">
+                <div class="section-heading-row">
+                    <div class="section-heading-pill section-heading-pill-plain">
+                        <i class="fas fa-info-circle"></i>
+                        <span>{{ conference_data.about.heading }}</span>
+                    </div>
+                    <div class="section-heading-line" aria-hidden="true"></div>
                 </div>
             </div>
 
-            {% if conference_data.page.registration_link %}
-                <a href="{{ conference_data.page.registration_link }}"
-                   class="btn btn-primary btn-lg px-5 py-3 rounded-pill shadow-lg hover-lift fade-in"
-                   target="_blank">
-                    <i class="fas fa-user-plus me-2"></i>{{ conference_data.page.registration_button_text|default:"Register Now" }}
-                </a>
-            {% endif %}
+            <div class="about-grid">
+                <div class="vision-grid">
+                    <div class="vision-card">
+                        <h3 class="font-primary">About The Conference</h3>
+                        <p>{{ conference_data.about.intro }}</p>
+                    </div>
+                    <div class="vision-card">
+                        <h3 class="font-primary">Why Triennial 2026</h3>
+                        <p>{{ conference_data.about.overview }}</p>
+                    </div>
+                </div>
+                <div class="vision-grid">
+                    <div class="vision-card">
+                        <h3 class="font-primary">Our Vision</h3>
+                        <p>{{ conference_data.about.vision }}</p>
+                    </div>
+                    <div class="vision-card">
+                        <h3 class="font-primary">Our Mission</h3>
+                        <p>{{ conference_data.about.mission }}</p>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-</section>
-{% endif %}
+    </section>
 
-<!-- Theme -->
-{% if conference_data.theme.heading or conference_data.theme.paragraphs %}
-<div class="content-section">
-    <div class="container">
-        <div class="content-card fade-in">
+    <section class="section-shell">
+        <div class="container">
+            <div class="mb-4">
+                <div class="section-heading-row">
+                    <div class="section-heading-pill section-heading-pill-plain">
+                        <i class="fas fa-hourglass-half"></i>
+                        <span>History</span>
+                    </div>
+                    <div class="section-heading-line" aria-hidden="true"></div>
+                </div>
+            </div>
 
-            {% if conference_data.theme.section_title %}
-                <span class="badge bg-gradient-primary text-white fs-6 px-3 py-2">
-                    {{ conference_data.theme.section_title }}
-                </span>
-            {% endif %}
+            <div class="history-grid">
+                {% for item in conference_data.history %}
+                <div class="history-card">
+                    <div class="history-year">{{ item.year }}</div>
+                    <div class="history-title">{{ item.title }}</div>
+                    <ul>
+                        {% for point in item.points %}
+                        <li>{{ point }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                {% endfor %}
+            </div>
 
-            {% if conference_data.theme.heading %}
-                <h2 class="text-primary-blue font-primary my-4">
-                    {{ conference_data.theme.heading }}
-                </h2>
-            {% endif %}
+            <div class="mt-5">
+                <div class="section-heading-row">
+                    <div class="section-heading-pill section-heading-pill-plain">
+                        <i class="fas fa-hand-holding-heart"></i>
+                        <span>The Big Picture</span>
+                    </div>
+                    <div class="section-heading-line" aria-hidden="true"></div>
+                </div>
+            </div>
 
-            {% for para in conference_data.theme.paragraphs %}
-                <p class="text-medium lh-lg">{{ para }}</p>
-            {% endfor %}
+            <div class="big-picture-grid">
+                <div class="big-picture-left-stack">
+                    <div class="glass-card wide-card">
+                        <div class="card-title">Who Can Participate?</div>
+                        <ul class="bullets">
+                            {% for item in conference_data.big_picture.who_can_participate %}
+                            <li>{{ item }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+
+                    {% if conference_data.big_picture.how_to_participate %}
+                    <div class="glass-card wide-card">
+                        <div class="card-title">How To Participate</div>
+                        <ul class="bullets">
+                            {% for item in conference_data.big_picture.how_to_participate %}
+                            <li>{{ item }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    {% endif %}
+                </div>
+
+                <div class="big-picture-right-stack">
+                    <div class="glass-card">
+                        <div class="card-title">Unique Value Propositions</div>
+                        <ul class="bullets">
+                            {% for item in conference_data.big_picture.unique_value_propositions %}
+                            <li>{{ item }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+
+                    <div class="glass-card">
+                        <div class="card-title">What Is In It For You?</div>
+                        <ul class="bullets">
+                            {% for item in conference_data.big_picture.benefits %}
+                            <li>{{ item }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-</div>
-{% endif %}
+    </section>
 
-<!-- More Details -->
-{% if conference_data.more_details %}
-<div class="content-section bg-light-gray">
-    <div class="container">
-        <div class="content-card fade-in">
-            <h3 class="text-primary-blue font-primary mb-4">
-                <i class="fas fa-info-circle me-2"></i>More Details
-            </h3>
-            <div class="d-grid gap-3">
-                {% for item in conference_data.more_details %}
-                    <a href="{% static item.url %}"
-                       class="btn btn-outline-primary text-start"
-                       target="_blank">
-                        <i class="fas fa-download me-2"></i>
-                        {{ item.label }}
-                    </a>
+    <section class="section-shell">
+        <div class="container">
+            <div class="mb-4">
+                <div class="section-heading-row">
+                    <div class="section-heading-pill section-heading-pill-plain">
+                        <i class="fas fa-file-signature"></i>
+                        <span>{{ conference_data.theme_concept_note.heading }}</span>
+                    </div>
+                    <div class="section-heading-line" aria-hidden="true"></div>
+                </div>
+            </div>
+            <div class="theme-card ">
+                <div class="theme-header mb-5">
+                    <div class="theme-heading">{{ conference_data.theme_concept_note.subheading }}</div>
+                    <div class="theme-tagline">{{ conference_data.theme_concept_note.tagline }}</div>
+                </div>
+                {% for paragraph in conference_data.theme_concept_note.paragraphs %}
+                <p>{{ paragraph }}</p>
                 {% endfor %}
             </div>
         </div>
-    </div>
-</div>
-{% endif %}
+    </section>
 
-<!-- Schedule -->
-{% if conference_data.schedule.day_one.sessions or conference_data.schedule.day_two.sessions or conference_data.schedule.day_three.sessions %}
-<div class="content-section bg-light-gray">
-    <div class="container text-center">
-        <h2 class="section-title fade-in mb-4">
-            <i class="fas fa-calendar-alt me-3"></i>Conference Schedule
-        </h2>
-    </div>
-</div>
-{% endif %}
-
-<!-- Keynote Speakers -->
-{% if conference_data.keynote_speakers %}
-<div class="content-section">
-    <div class="container">
-        <h2 class="section-title text-center mb-5">
-            <i class="fas fa-microphone me-3"></i>Keynote Speakers
-        </h2>
-
-        {% for speaker in conference_data.keynote_speakers %}
-            <div class="content-card mb-4 fade-in">
-                <div class="row align-items-center">
-                    <div class="col-md-4 text-center">
-                        {% if speaker.image %}
-                            <img src="{% static speaker.image %}"
-                                 class="people-avatar mb-3"
-                                 alt="{{ speaker.name }}">
-                        {% endif %}
-                        <h5>{{ speaker.name }}</h5>
-                        <small>{{ speaker.category }} | {{ speaker.date }}</small>
+    {% for section in conference_data.core_committee_sections %}
+    <section class="section-shell">
+        <div class="container">
+            <div class="mb-4">
+                <div class="section-heading-row">
+                    <div class="section-heading-pill section-heading-pill-plain">
+                        <i class="fas fa-hands-helping"></i>
+                        <span>{{ section.title }}</span>
                     </div>
-                    <div class="col-md-8">
-                        <p class="text-medium lh-lg">{{ speaker.description }}</p>
-                    </div>
+                    <div class="section-heading-line" aria-hidden="true"></div>
                 </div>
             </div>
-        {% endfor %}
-    </div>
-</div>
-{% endif %}
 
-<!-- Session Chairs -->
-{% if conference_data.session_chairs %}
-{% with has_chairs=False %}
-    {% for _, chairs in conference_data.session_chairs.items %}
-        {% if chairs %}
-            {% with has_chairs=True %}{% endwith %}
-        {% endif %}
+            <div class="committee-grid">
+                {% for member in section.members %}
+                <div class="committee-card">
+                    <div class="committee-role">{{ member.role }}</div>
+                    <div class="committee-photo">
+                        <img src="{% static member.image %}" alt="{{ member.name }}">
+                    </div>
+                    <div class="committee-name">{{ member.name }}</div>
+                    <div class="committee-designation">{{ member.designation }}</div>
+                    <div class="committee-email">{{ member.email }}</div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
     {% endfor %}
 
-    {% if has_chairs %}
-    <div class="content-section bg-light-gray">
+    <section class="section-shell">
         <div class="container">
-            <h2 class="section-title text-center mb-5">
-                <i class="fas fa-users me-3"></i>Session Chairs
-            </h2>
-
-            {% for category, chairs in conference_data.session_chairs.items %}
-                {% if chairs %}
-                    <h3 class="text-center mb-4">{{ category }}</h3>
-                    <div class="row g-4 mb-5">
-                        {% for chair in chairs %}
-                            <div class="col-md-4 text-center fade-in">
-                                <div class="content-card h-100">
-                                    {% if chair.image %}
-                                        <img src="{% static chair.image %}"
-                                             class="people-avatar mb-3"
-                                             alt="{{ chair.name }}">
-                                    {% endif %}
-                                    <h5>{{ chair.name }}</h5>
-                                    <p class="text-medium">{{ chair.affiliation }}</p>
-                                </div>
-                            </div>
-                        {% endfor %}
+            <div class="mb-4">
+                <div class="section-heading-row">
+                    <div class="section-heading-pill section-heading-pill-plain">
+                        <i class="fas fa-user-friends"></i>
+                        <span>Advisory Team</span>
                     </div>
-                {% endif %}
-            {% endfor %}
-        </div>
-    </div>
-    {% endif %}
-{% endwith %}
-{% endif %}
-
-<!-- Gallery -->
-{% if conference_data.gallery.main_iframe and conference_data.gallery.thumbnails %}
-<div class="content-section bg-light-gray">
-    <div class="container">
-        <h2 class="section-title text-center mb-5">
-            <i class="fas fa-images me-3"></i>Conference Glimpses
-        </h2>
-
-        <iframe src="{{ conference_data.gallery.main_iframe }}"
-                class="w-100"
-                height="450"
-                allowfullscreen></iframe>
-    </div>
-</div>
-{% endif %}
-{% if conference_data.engagement.options %}
-<div class="content-section">
-    <div class="container">
-        <div class="content-card fade-in text-center">
-
-            {% if conference_data.engagement.heading %}
-                <h2 class="section-title mb-3">
-                    {{ conference_data.engagement.heading }}
-                </h2>
-            {% endif %}
-
-            {% if conference_data.engagement.subheading %}
-                <p class="text-medium mb-4">
-                    {{ conference_data.engagement.subheading }}
-                </p>
-            {% endif %}
-
-            <div class="d-flex flex-wrap justify-content-center gap-3">
-                {% for option in conference_data.engagement.options %}
-                    <span class="badge bg-gradient-primary text-white px-4 py-2 fs-6">
-                        {{ option }}
-                    </span>
-                {% endfor %}
+                    <div class="section-heading-line" aria-hidden="true"></div>
+                </div>
             </div>
 
+            <div class="advisory-grid">
+                {% for member in conference_data.advisory_team %}
+                <div class="advisory-card">
+                    <div class="advisory-name">{{ member.name }}</div>
+                    <div class="advisory-designation">{{ member.designation }}</div>
+                    {% if member.email %}
+                    <div class="advisory-email">{{ member.email }}</div>
+                    {% endif %}
+                </div>
+                {% endfor %}
+            </div>
         </div>
-    </div>
+    </section>
+
+    <section class="section-shell">
+        <div class="container">
+            <div class="mb-4">
+                <div class="section-heading-row">
+                    <div class="section-heading-pill section-heading-pill-plain">
+                        <i class="fas fa-network-wired"></i>
+                        <span>Partnering Organizations</span>
+                    </div>
+                    <div class="section-heading-line" aria-hidden="true"></div>
+                </div>
+            </div>
+
+            <div class="logo-wall">
+                <div class="logo-grid">
+                    {% for logo in conference_data.partners %}
+                    <div class="logo-item">
+                        <img src="{% static logo.image %}" alt="{{ logo.name }}">
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-shell">
+        <div class="container">
+            <div class="mb-4">
+                <div class="section-heading-row">
+                    <div class="section-heading-pill section-heading-pill-plain">
+                        <i class="fas fa-comments"></i>
+                        <span>Testimonials</span>
+                    </div>
+                    <div class="section-heading-line" aria-hidden="true"></div>
+                </div>
+            </div>
+
+            <div class="testimonial-grid">
+                {% for item in conference_data.testimonials %}
+                <div class="testimonial-card">
+                    <p>{{ item.quote }}</p>
+                    <div class="testimonial-name">{{ item.name }}</div>
+                    <div class="testimonial-title">{{ item.title }}</div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <section class="section-shell">
+        <div class="container">
+            <div class="section-heading-row mb-4">
+                <div class="section-heading-pill section-heading-pill-plain">
+                    <i class="fas fa-address-book"></i>
+                    <span>Contact Us</span>
+                </div>
+                <div class="section-heading-line" aria-hidden="true"></div>
+            </div>
+            <div class="contact-list">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <a class="contact-link" href="mailto:{{ conference_data.contact.email }}">
+                        {{ conference_data.contact.email }}
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <div>
+                        <a class="contact-link" href="tel:{{ conference_data.contact.phone|cut:' ' }}">
+                        {{ conference_data.contact.phone }}
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-item contact-item--address">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        {{ conference_data.contact.address }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </div>
-{% endif %}
-
-
 {% endblock %}
