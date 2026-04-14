@@ -9,10 +9,12 @@ from .llfp_2024 import llfp_2024
 
 
 def index(request):
+    featured_testimonials = [t for t in TESTIMONIALS_DATA if t.get('featured', False)][:3]
     context = {
         "page_title": "Home",
+        "testimonials": featured_testimonials
     }
-    return render(request, "home/index.html")
+    return render(request, "home/index.html", context)
 
 
 def aboutUs(request):
