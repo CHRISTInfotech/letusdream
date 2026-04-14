@@ -5,6 +5,7 @@ from datetime import datetime
 from .location_data import locations_data
 from .testimonials_data import TESTIMONIALS_DATA
 from .conference import CONFERENCE_DATA
+from .conference_2026 import CONFERENCE_DATA26
 from .llfp_2024 import llfp_2024
 
 
@@ -142,6 +143,73 @@ def pressRelease(request):
             "alt": "Press 4",
             "link": "Aboutus/Media/Press/Press4.jpeg",
         },
+        {
+            "date": "Dec 2024",
+            "image": "Aboutus/Media/Press/IMG-20251208-WA0023.jpg",
+            "alt": "Newspaper Clipping",
+            "link": "Aboutus/Media/Press/IMG-20251208-WA0023.jpg",
+        },
+        {
+            "date": "Dec 2024",
+            "image": "Aboutus/Media/Press/IMG-20251208-WA0024.jpg",
+            "alt": "Newspaper Clipping",
+            "link": "Aboutus/Media/Press/IMG-20251208-WA0024.jpg",
+        },
+        {
+            "date": "Dec 2024",
+            "image": "Aboutus/Media/Press/IMG-20251208-WA0022.jpg",
+            "alt": "Newspaper Clipping",
+            "link": "Aboutus/Media/Press/IMG-20251208-WA0022.jpg",
+        },
+        {
+            "date": "Dec 2024",
+            "image": "Aboutus/Media/Press/unnamed.jpg",
+            "alt": "Newspaper Clipping",
+            "link": "Aboutus/Media/Press/unnamed.jpg",
+        },
+        {
+            "date": "Dec 2024",
+            "image": "Aboutus/Media/Press/IMG-20251208-WA0021.jpg",
+            "alt": "Newspaper Clipping",
+            "link": "Aboutus/Media/Press/IMG-20251208-WA0021.jpg",
+        },
+        {
+            "date": "Dec 2024",
+            "image": "Aboutus/Media/Press/unnamed (1).jpg",
+            "alt": "Newspaper Clipping",
+            "link": "Aboutus/Media/Press/unnamed (1).jpg",
+        },
+        {
+            "date": "Dec 2024",
+            "image": "Aboutus/Media/Press/IMG-20251208-WA0020.jpg",
+            "alt": "Newspaper Clipping",
+            "link": "Aboutus/Media/Press/IMG-20251208-WA0020.jpg",
+        },
+        {
+            "date": "Dec 2024",
+            "image": "Aboutus/Media/Press/IMG-20251208-WA0027.jpg",
+            "alt": "Newspaper Clipping",
+            "link": "Aboutus/Media/Press/IMG-20251208-WA0027.jpg",
+        },
+        {
+            "date": "Dec 2024",
+            "image": "Aboutus/Media/Press/IMG-20251208-WA0019.jpg",
+            "alt": "Newspaper Clipping",
+            "link": "Aboutus/Media/Press/IMG-20251208-WA0019.jpg",
+        },
+        {
+            "date": "Dec 2024",
+            "image": "Aboutus/Media/Press/IMG-20251208-WA0018.jpg",
+            "alt": "Newspaper Clipping",
+            "link": "Aboutus/Media/Press/IMG-20251208-WA0018.jpg",
+        },
+        {
+            "date": "Dec 2024",
+            "image": "Aboutus/Media/Press/IMG-20251208-WA0025.jpg",
+            "alt": "Newspaper Clipping",
+            "link": "Aboutus/Media/Press/IMG-20251208-WA0025.jpg",
+        },
+
     ]
     breadcrumbs = [
         {"name": "Home", "url": "main", "icon": "fas fa-home", "active": False},
@@ -173,6 +241,22 @@ def pressRelease(request):
 
 def newsletter(request):
     newsletters = [
+        {
+            "pdf_url": "newsletters/2025/Dreams Newsletter MIC 2025-26.pdf",
+            "image_url": "newsletters/2025/Dreams Newsletter MIC 2025-26.png",
+            "title": "Dreams Newsletter MIC 2025-26",
+            "month": "Feb",
+            "day": "07",
+            "year": "2026",
+        },
+        {
+            "pdf_url": "2025/newsletter/Kerala Newsletter.pdf",
+            "image_url": "2025/newsletter/Keralanewsletterface.png",
+            "title": "Kerala Newsletter 2025-26",
+            "month": "Dec",
+            "day": "2",
+            "year": "2025",
+        },
         {
             "pdf_url": "newsletters/2025/2025vol2.pdf",
             "image_url": "newsletters/2025/2025vol2.png",
@@ -378,8 +462,28 @@ def newsletter(request):
         {"name": "Newsletter", "url": None, "icon": "fas fa-envelope", "active": True},
     ]
 
-    # Sort newsletters by year and month
-    newsletters.sort(key=lambda x: (x["year"], x["month"]), reverse=True)
+    # Month mapping
+    month_order = {
+        "Jan": 1, "Feb": 2, "Mar": 3, "Apr": 4,
+        "May": 5, "Jun": 6, "Jul": 7, "Aug": 8,
+        "Sep": 9, "Oct": 10, "Nov": 11, "Dec": 12
+    }
+
+    def safe_int(value):
+        try:
+            return int(value)
+        except (ValueError, TypeError):
+            return 0
+
+    newsletters.sort(
+        key=lambda x: (
+            safe_int(x.get("year")),
+            month_order.get(x.get("month", ""), 0),
+            safe_int(x.get("day"))
+        ),
+        reverse=True
+    )
+
     # Render the template with the newsletters and breadcrumbs
     return render(
         request,
@@ -547,6 +651,36 @@ def triennialConference2023(request):
     }
     return render(
         request, "conference/triennialConference/triennialConference2023.html", context
+    )
+
+
+def triennialConference2026(request):
+
+    
+    breadcrumbs = [
+        {"name": "Home", "url": "main", "icon": "fas fa-home", "active": False},
+        {
+            "name": "Conferences",
+            "url": None,
+            "icon": "fas fa-calendar-alt",
+            "active": False,
+        },
+        {
+            "name": "Triennial Conferences",
+            "url": "trriennial-conference",
+            "icon": "fas fa-calendar-check",
+            "active": False,
+        },
+        {"name": "2026", "url": None, "icon": "fas fa-file-alt", "active": True},
+    ]
+
+    context = {
+        "bgcolor": "#274C7D",
+        "conference_data": CONFERENCE_DATA26,
+        "breadcrumbs": breadcrumbs,
+    }
+    return render(
+        request, "conference/triennialConference/triennialConference2026.html", context
     )
 
 

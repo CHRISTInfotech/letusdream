@@ -2,7 +2,8 @@
     .carousel-img {
 
         color: #fff;
-        filter: blur(3px) brightness(0.7);
+        /* filter: blur(3px) brightness(0.7); */
+        filter: brightness(0.7);
         transition: filter 0.5s ease-in-out;
         object-fit: cover;
     }

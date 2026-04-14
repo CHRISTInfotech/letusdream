@@ -10,37 +10,73 @@ Community Conferences - Let Us Dream
 
 <div class="container py-5 mt-5">
     <div class="page-header-content fade-in">
-        <h1 class="text-center">Community Conferences</h1>
+        <h1 class="text-center">Let Us Dream Conferences</h1>
         <p class="text-center page-subtitle text-medium">
-            Fostering community empowerment through compassion, collaboration, and service
+            Empowering communities through compassion, collaboration, and service
         </p>
     </div>
 </div>
-<!-- History Section -->
-<div class="content-section bg-light-gray">
+
+
+<!-- Conference Types Cards - Moved to End -->
+<div class="content-section">
     <div class="container">
-        <div class="row align-items-center">
-            <div class="col-sm-12 col-md-8 ">
-                <h2 class="font-primary mb-4 text-primary-blue">History of LUD Conferences</h2>
-                <p class="text-medium justify mb-0">
-                    The first Let Us Dream conference was launched in 2017 to inspire community service.
-                    From then on, all conferences organized have provided a platform to learn, share, and celebrate acts
-                    of volunteerism. The first Triennial International Conference was conducted virtually in 2020 during
-                    the pandemic. It highlighted resilience and strength, showcasing community initiatives from around
-                    the world. The conference targets both younger and older generations, introducing them to various
-                    community service opportunities and models. Through discussions and presentations, attendees gain
-                    insights and recommendations for positive community development. Currently, conferences are
-                    organized around the world. This includes multiple locations in India and USA, and countries like
-                    Germany, Nepal, South Africa, and more.
-                </p>
+        <h2 class="font-primary text-primary-blue text-center mb-5">Our Conference Types</h2>
+        <div class="row cards-grid">
+            <div class="col-sm-12 col-md-6 mb-4">
+                <a href="{% url 'annualConference' %}" class="text-decoration-none">
+                    <div class="card content-card hover-lift fade-in h-100">
+                        <div class="text-center">
+                            <img src="{% static '2025/conference/overview/c1.png' %}"
+                                class="img-fluid rounded-custom mb-3" alt="Annual Conferences">
+                        </div>
+                        <div class="card-body text-center d-flex flex-column">
+                            <h3 class="card-title font-primary mb-3">Annual Conferences</h3>
+                            <p class="text-medium mb-3 flex-grow-1">
+                                Make a difference together! Attend our annual conferences held around the world.
+                            </p>
+                            <div class="text-light fst-italic">
+                                <ul class="list-unstyled mb-0">
+                                    <li class="mb-1">• Connect with volunteering opportunities</li>
+                                    <li class="mb-1">• Build your social and professional network</li>
+                                    <li class="mb-1">• Create a space to share ideas and skills</li>
+                                    <li>• Learn from leading, unsung heroes tackling problems</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </a>
             </div>
-            <div class="col-sm-12 col-md-4 text-center">
-                <img src="{% static '2025/conference/overview/history.png' %}" class="img-fluid rounded-custom"
-                    alt="Conference History">
+            <div class="col-sm-12 col-md-6 mb-4">
+                <a href="{% url 'trriennial-conference' %}" class="text-decoration-none">
+                    <div class="card content-card hover-lift fade-in h-100">
+                        <div class="text-center">
+                            <img src="{% static '2025/conference/overview/c2.png' %}"
+                                class="img-fluid rounded-custom mb-3" alt="Triennial Conferences">
+                        </div>
+                        <div class="card-body text-center d-flex flex-column">
+                            <h3 class="card-title font-primary mb-3">Triennial Conferences</h3>
+                            <p class="text-medium mb-3 flex-grow-1">
+                                Connect globally, act locally! Our international conference happens once every three
+                                years.
+                                It brings together service initiatives from around the world.
+                            </p>
+                            <div class="text-light fst-italic">
+                                <ul class="list-unstyled mb-0">
+                                    <li class="mb-1">• Collaborate and network with like-minded people</li>
+                                    <li class="mb-1">• Learn how to make a positive impact in your community</li>
+                                    <li>• Celebrate unsung heroes</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </a>
             </div>
         </div>
     </div>
 </div>
+
+
 
 <!-- Vision & Mission Section -->
 <div class="content-section">
@@ -85,6 +121,8 @@ Community Conferences - Let Us Dream
         </div>
     </div>
 </div>
+
+
 
 <!-- Objectives Section -->
 <div class="content-section bg-light-gray">
@@ -148,6 +186,33 @@ Community Conferences - Let Us Dream
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- History Section -->
+<div class="content-section bg-light-gray">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-sm-12 col-md-8 ">
+                <h2 class="font-primary mb-4 text-primary-blue">History of LUD Conferences</h2>
+                <p class="text-medium justify mb-0">
+                    The first Let Us Dream conference was launched in 2017 to inspire community service.
+                    From then on, all conferences organized have provided a platform to learn, share, and celebrate acts
+                    of volunteerism. The first Triennial International Conference was conducted virtually in 2020 during
+                    the pandemic. It highlighted resilience and strength, showcasing community initiatives from around
+                    the world. The conference targets both younger and older generations, introducing them to various
+                    community service opportunities and models. Through discussions and presentations, attendees gain
+                    insights and recommendations for positive community development. Currently, conferences are
+                    organized around the world. This includes multiple locations in India and USA, and countries like
+                    Germany, Nepal, South Africa, and more.
+                </p>
+            </div>
+            <div class="col-sm-12 col-md-4 text-center">
+                <img src="{% static '2025/conference/overview/history.png' %}" class="img-fluid rounded-custom"
+                    alt="Conference History">
             </div>
         </div>
     </div>
@@ -245,64 +310,6 @@ Community Conferences - Let Us Dream
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Conference Types Cards - Moved to End -->
-<div class="content-section">
-    <div class="container">
-        <h2 class="font-primary text-primary-blue text-center mb-5">Our Conference Types</h2>
-        <div class="row cards-grid">
-            <div class="col-sm-12 col-md-6 mb-4">
-                <a href="{% url 'annualConference' %}" class="text-decoration-none">
-                    <div class="card content-card hover-lift fade-in h-100">
-                        <div class="text-center">
-                            <img src="{% static '2025/conference/overview/c1.png' %}"
-                                class="img-fluid rounded-custom mb-3" alt="Annual Conferences">
-                        </div>
-                        <div class="card-body text-center d-flex flex-column">
-                            <h3 class="card-title font-primary mb-3">Annual Conferences</h3>
-                            <p class="text-medium mb-3 flex-grow-1">
-                                Make a difference together! Attend our annual conferences held around the world.
-                            </p>
-                            <div class="text-light fst-italic">
-                                <ul class="list-unstyled mb-0">
-                                    <li class="mb-1">• Connect with volunteering opportunities</li>
-                                    <li class="mb-1">• Build your social and professional network</li>
-                                    <li class="mb-1">• Create a space to share ideas and skills</li>
-                                    <li>• Learn from leading, unsung heroes tackling problems</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-sm-12 col-md-6 mb-4">
-                <a href="{% url 'trriennial-conference' %}" class="text-decoration-none">
-                    <div class="card content-card hover-lift fade-in h-100">
-                        <div class="text-center">
-                            <img src="{% static '2025/conference/overview/c2.png' %}"
-                                class="img-fluid rounded-custom mb-3" alt="Triennial Conferences">
-                        </div>
-                        <div class="card-body text-center d-flex flex-column">
-                            <h3 class="card-title font-primary mb-3">Triennial Conferences</h3>
-                            <p class="text-medium mb-3 flex-grow-1">
-                                Connect globally, act locally! Our international conference happens once every three
-                                years.
-                                It brings together service initiatives from around the world.
-                            </p>
-                            <div class="text-light fst-italic">
-                                <ul class="list-unstyled mb-0">
-                                    <li class="mb-1">• Collaborate and network with like-minded people</li>
-                                    <li class="mb-1">• Learn how to make a positive impact in your community</li>
-                                    <li>• Celebrate unsung heroes</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </a>
             </div>
         </div>
     </div>
