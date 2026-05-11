@@ -1,0 +1,370 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Google Tag Manager -->
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-NL9PNT7J');
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- … all your meta tags up here …  -->
+
+    {# Replace every nested "block title" with the variable page_title #}
+    <meta name="description" content="{% block meta_description %}Let Us Dream – Your gateway to innovative solutions{% endblock %}">
+    <meta name="keywords"    content="{% block meta_keywords    %}let us dream, innovation, creative solutions{% endblock %}">
+    <meta name="author"      content="Let Us Dream">
+
+    <!-- Open Graph -->
+    <meta property="og:type"        content="website">
+    <meta property="og:url"         content="{% block og_url %}{{ request.build_absolute_uri }}{% endblock %}">
+    <meta property="og:title"       content="Let Us Dream">
+    <meta property="og:description" content="{% block og_description %}Let Us Dream – Your gateway to innovative solutions{% endblock %}">
+    <meta property="og:image"       content="{% block og_image %}{% static 'logo/og-image.png' %}{% endblock %}">
+
+    <!-- Twitter -->
+    <meta property="twitter:card"        content="summary_large_image">
+    <meta property="twitter:url"         content="{% block twitter_url %}{{ request.build_absolute_uri }}{% endblock %}">
+    <meta property="twitter:title"       content="Let Us Dream">
+    <meta property="twitter:description" content="{% block twitter_description %}Let Us Dream – Your gateway to innovative solutions{% endblock %}">
+    <meta property="twitter:image"       content="{% block twitter_image %}{% static 'logo/og-image.png' %}{% endblock %}">
+
+    <link rel="shortcut icon" href="{% static 'logo/favicon.png' %}" type="image/x-icon">
+    <link rel="apple-touch-icon" href="{% static 'logo/apple-touch-icon.png' %}">
+
+    {# Only a single block named "title" from now on #}
+    <title>Let Us Dream | {% block title %}{% endblock title%}</title>
+
+    {% block links %}
+    {% endblock links %}
+
+    <!-- Preload critical fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+
+    <!-- Custom CSS -->
+    <link href="{% static 'css/new/base.css' %}" rel="stylesheet" type="text/css"/>
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet"
+          type="text/css"/>
+
+    <!-- Extra styles block -->
+    {% block extraStyles %}
+    {% endblock extraStyles %}
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-V9DT8ZQ7HF"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+        gtag('config', 'G-V9DT8ZQ7HF');
+    </script>
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Let Us Dream",
+      "url": "{{ request.build_absolute_uri }}",
+      "logo": "{% static 'logo/logo.png' %}",
+      "description": "Your gateway to innovative solutions and creative excellence"
+    }
+    </script>
+
+</head>
+
+<body ondragstart="return false">
+
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NL9PNT7J" height="0" width="0"
+            style="display:none;visibility:hidden">
+    </iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!-- Loading Spinner -->
+<div id="loadingSpinner" class="loading-spinner">
+  <div class="spinner-content text-center">
+    {# Logo at top of spinner #}
+    <div class="">
+        <img src="{% static 'logo/logo.png' %}" alt="Let Us Dream Logo" class="spinner-logo img-fluid"
+         loading="lazy" decoding="async"
+         style="width: 150px; margin-bottom: 1rem;">
+    </div>
+
+    <p class="mt-2 text-primary-blue">Loading...</p>
+  </div>
+</div>
+
+<!-- Fixed Header -->
+{% include 'partials/header.html' %}
+
+<!-- Main Content Area -->
+<main class="main-content">
+   
+
+    <!-- Dynamic Breadcrumb Section -->
+    {% if breadcrumbs %}
+    <div class="breadcrumb-container">
+        <div class="container mt-3">
+            <nav aria-label="breadcrumb">
+                <div class="breadcrumb-modern">
+                    <ol>
+                        {% for breadcrumb in breadcrumbs %}
+                            {% if not breadcrumb.active %}
+                                <li class="breadcrumb-item">
+                                    {% if breadcrumb.url %}
+                                        <a href="{% url breadcrumb.url %}">
+                                            <i class="{{ breadcrumb.icon }}"></i>
+                                            <span>{{ breadcrumb.name }}</span>
+                                        </a>
+                                    {% else %}
+                                        <a href="">
+                                            <i class="{{ breadcrumb.icon }}"></i>
+                                            <span>{{ breadcrumb.name }}</span>
+                                        </a>
+                                    {% endif %}
+                                </li>
+                                {% if not forloop.last %}
+                                    <li class="breadcrumb-separator">›</li>
+                                {% endif %}
+                            {% else %}
+                                <li class="breadcrumb-item active">
+                                    <i class="{{ breadcrumb.icon }}"></i>
+                                    <span>{{ breadcrumb.name }}</span>
+                                </li>
+                            {% endif %}
+                        {% endfor %}
+                    </ol>
+                </div>
+            </nav>
+        </div>
+    </div>
+    {% endif %}
+
+    <!-- Page Content Wrapper -->
+    <div class="content-wrapper">
+        {% block content %}
+        {% endblock content %}
+    </div>
+</main>
+
+<!-- Back to Top Button -->
+<button id="backToTopBtn" onclick="scrollToTop()" 
+    class="back-to-top-btn"
+    title="Scroll to Top"
+    aria-label="Scroll to top of page">
+    <i class="fas fa-arrow-up"></i>
+</button>
+
+<!-- Footer -->
+{% include 'partials/footer.html' %}
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.min.js"
+        integrity="sha384-RuyvpeZCxMJCqVUGFI0Do1mQrods/hhxYlcVfGPOfQtPJh0JCw12tUAZ/Mv10S7D"
+        crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Custom JavaScript -->
+<script>
+    // Loading spinner
+    window.addEventListener('load', function() {
+        const spinner = document.getElementById('loadingSpinner');
+        if (spinner) {
+            spinner.style.opacity = '0';
+            setTimeout(() => {
+                spinner.style.display = 'none';
+            }, 300);
+        }
+    });
+
+    // Back to top functionality
+    function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }
+
+    // Show/hide back to top button
+    window.addEventListener('scroll', function() {
+        const backToTopBtn = document.getElementById('backToTopBtn');
+        if (window.pageYOffset > 300) {
+            backToTopBtn.classList.add('visible');
+        } else {
+            backToTopBtn.classList.remove('visible');
+        }
+    });
+
+    // Enhanced close banner functionality
+    function closeBanner() {
+        const banner = document.getElementById('siteNoticeBanner');
+        if (banner) {
+            banner.style.transform = 'translateY(-100%)';
+            banner.style.opacity = '0';
+            setTimeout(() => {
+                banner.style.display = 'none';
+                // Adjust body padding if needed
+                adjustBodyPadding();
+            }, 300);
+            
+            // Store in session storage to remember user's choice
+            sessionStorage.setItem('bannerClosed', 'true');
+        }
+    }
+
+    // Adjust body padding when banner is closed
+    function adjustBodyPadding() {
+        const banner = document.getElementById('siteNoticeBanner');
+        const body = document.body;
+        
+        if (banner && banner.style.display === 'none') {
+            // Reduce padding since banner is gone
+            const currentPadding = parseInt(getComputedStyle(body).paddingTop);
+            const bannerHeight = 60; // Approximate banner height
+            body.style.paddingTop = Math.max(80, currentPadding - bannerHeight) + 'px';
+        }
+    }
+
+    // Check if banner was closed and handle on page load
+    document.addEventListener('DOMContentLoaded', function() {
+        const banner = document.getElementById('siteNoticeBanner');
+        
+        if (sessionStorage.getItem('bannerClosed') === 'true' && banner) {
+            banner.style.display = 'none';
+            adjustBodyPadding();
+        }
+        
+        // Initialize scroll-triggered animations
+        initializeScrollAnimations();
+    });
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                const headerHeight = document.querySelector('header')?.offsetHeight || 80;
+                const targetPosition = target.offsetTop - headerHeight - 20;
+                
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+
+    // Initialize scroll animations
+    function initializeScrollAnimations() {
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in-visible');
+                    // Add staggered animation for cards
+                    if (entry.target.classList.contains('card')) {
+                        const delay = Array.from(entry.target.parentNode.children).indexOf(entry.target) * 100;
+                        setTimeout(() => {
+                            entry.target.style.transform = 'translateY(0)';
+                            entry.target.style.opacity = '1';
+                        }, delay);
+                    }
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements with animation classes
+        document.querySelectorAll('.fade-in, .card, .content-card, .slide-in-left, .slide-in-right, .scale-in').forEach(el => {
+            observer.observe(el);
+        });
+    }
+
+    // Handle header scroll behavior (optional - for header style changes)
+    let lastScrollTop = 0;
+    window.addEventListener('scroll', function() {
+        const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+        const header = document.querySelector('header');
+        
+        if (header) {
+            if (currentScroll > lastScrollTop && currentScroll > 100) {
+                // Scrolling down - could add class to shrink header
+                header.classList.add('scrolled-down');
+            } else {
+                // Scrolling up
+                header.classList.remove('scrolled-down');
+            }
+            
+            if (currentScroll > 0) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        }
+        
+        lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+    }, false);
+
+    // Prevent layout shift by ensuring proper spacing
+    window.addEventListener('resize', function() {
+        adjustLayoutSpacing();
+    });
+
+    function adjustLayoutSpacing() {
+        const header = document.querySelector('header');
+        const mainContent = document.querySelector('.main-content');
+        
+        if (header && mainContent) {
+            const headerHeight = header.offsetHeight;
+            document.documentElement.style.setProperty('--header-height', headerHeight + 'px');
+            document.documentElement.style.setProperty('--header-padding-top', (headerHeight + 20) + 'px');
+        }
+    }
+
+    // Call on load to set initial spacing
+    window.addEventListener('load', adjustLayoutSpacing);
+</script>
+
+{% block extraScripts %}
+{% endblock extraScripts %}
+
+</body>
+</html>

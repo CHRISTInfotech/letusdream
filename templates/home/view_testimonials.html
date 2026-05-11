@@ -1,0 +1,333 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load custom_filters %}
+{% block title %}
+Testimonials
+{% endblock %}
+
+{% block extraStyles %}
+<link rel="stylesheet" href="{% static 'css/2025/testimonials.css' %}" type="text/css">
+<style>
+    .testimonial-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border: none;
+        border-radius: 20px;
+        overflow: hidden;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        position: relative;
+    }
+    
+    .testimonial-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    }
+    
+    .testimonial-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+        pointer-events: none;
+    }
+    
+    .testimonial-avatar {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        border: 4px solid rgba(255,255,255,0.3);
+        object-fit: cover;
+        margin: 0 auto;
+        display: block;
+    }
+    
+    .quote-icon {
+        font-size: 3rem;
+        color: rgba(255,255,255,0.3);
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+    
+    .testimonial-date {
+        background: rgba(255,255,255,0.2);
+        backdrop-filter: blur(10px);
+        border-radius: 10px;
+        padding: 8px 12px;
+        font-size: 0.8rem;
+        font-weight: 600;
+    }
+    
+    .testimonial-text {
+        line-height: 1.6;
+        font-size: 1rem;
+        margin: 20px 0;
+    }
+    
+    .author-name {
+        font-weight: 700;
+        font-size: 1.1rem;
+        margin-bottom: 5px;
+    }
+    
+    .author-title {
+        font-size: 0.9rem;
+        opacity: 0.8;
+        font-style: italic;
+    }
+    
+    .section-header {
+        text-align: center;
+        margin-bottom: 4rem;
+    }
+    
+    .section-title {
+        font-size: 3rem;
+        font-weight: 700;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        margin-bottom: 1rem;
+    }
+    
+    .section-subtitle {
+        font-size: 1.2rem;
+        color: #6c757d;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    
+    .breadcrumb-custom {
+        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        border-radius: 15px;
+        padding: 1rem 2rem;
+        margin-bottom: 3rem;
+    }
+    
+    .breadcrumb-custom .breadcrumb-item a {
+        color: #495057;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s ease;
+    }
+    
+    .breadcrumb-custom .breadcrumb-item a:hover {
+        color: #667eea;
+    }
+    
+    .masonry-grid {
+        column-count: 1;
+        column-gap: 2rem;
+    }
+    
+    @media (min-width: 768px) {
+        .masonry-grid {
+            column-count: 2;
+        }
+    }
+    
+    @media (min-width: 1200px) {
+        .masonry-grid {
+            column-count: 2;
+        }
+    }
+    
+    .masonry-item {
+        break-inside: avoid;
+        margin-bottom: 2rem;
+        display: inline-block;
+        width: 100%;
+    }
+    
+.gradient-1 {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #ffffff; /* White for high contrast on dark blues */
+}
+
+.gradient-2 {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    color: #2b0b0e; /* Deep maroon for contrast on pinks */
+}
+
+.gradient-3 {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    color: #0a2e4a; /* Navy blue for contrast on light blues */
+}
+
+.gradient-4 {
+    background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+    color: #00331a; /* Dark green for contrast on bright greens */
+}
+
+.gradient-5 {
+    background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+    color: #4a1c03; /* Dark brown-orange for contrast on peach/yellow */
+}
+
+.gradient-6 {
+    background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+    color: #2a3b4d; /* Dark blue-gray for contrast on pastels */
+}
+/* For gradients 1-3 (darker backgrounds) */
+
+</style>
+{% endblock extraStyles %}
+
+{% block links %}
+<!--Google font-->
+
+<!-- Bootstrap Icons -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+
+<!-- AOS Animation -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+{% endblock links %}
+
+{% block content %}
+<!-- Breadcrumb -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <nav aria-label="breadcrumb" class="breadcrumb-custom" data-aos="fade-down">
+                <ol class="breadcrumb mb-0">
+                    <li class="breadcrumb-item">
+                        <a href="{% url 'main' %}">
+                            <i class="bi bi-house-door me-2"></i>Home
+                        </a>
+                    </li>
+                    <li class="breadcrumb-item active" aria-current="page">
+                        <i class="bi bi-chat-quote me-2"></i>Testimonials
+                    </li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+</div>
+
+<!-- Main Content -->
+<div class="container py-5">
+    <!-- Section Header -->
+    <div class="row">
+        <div class="col-12">
+            <div class="section-header" data-aos="fade-up">
+                <h1 class="section-title" style="font-family: 'Playfair Display', serif;">
+                    What People Say
+                </h1>
+                <p class="section-subtitle" style="font-family: 'Inter', sans-serif;">
+                    Discover the transformative experiences and success stories from our community members who have been part of our journey.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Testimonials Grid -->
+    <div class="row">
+        <div class="col-12">
+            <div class="masonry-grid">
+                {% for testimonial in testimonials %}
+                <div class="masonry-item" data-aos="fade-up" data-aos-delay="{{ forloop.counter0|add:1|multiply:100 }}">
+                    <div class="card testimonial-card gradient-{{ forloop.counter|gradient_class }} h-100">
+                        <div class="quote-icon">
+                            <i class="bi bi-quote"></i>
+                        </div>
+                        
+                        <div class="card-body p-4">
+                            <!-- Date Badge -->
+                            <div class="d-flex justify-content-between align-items-start mb-4">
+                                <div class="testimonial-date">
+                                    <i class="bi bi-calendar3 me-2"></i>
+                                    {{ testimonial.date|date:"M d, Y" }}
+                                </div>
+                            </div>
+
+                            <!-- Avatar -->
+                            <div class="text-center mb-4">
+                                {% if testimonial.image %}
+                                    <img src="{% static testimonial.image %}" alt="{{ testimonial.name }}t" class="testimonial-avatar">
+                                {% else %}
+                                    <div class="testimonial-avatar d-flex align-items-center justify-content-center bg-light text-dark" style="font-size: 2rem;">
+                                        <i class="bi bi-person"></i>
+                                    </div>
+                                {% endif %}
+                            </div>
+
+                            <!-- Testimonial Text -->
+                            <blockquote class="testimonial-text text-center">
+                                "{{ testimonial.content }}"
+                            </blockquote>
+
+                            <!-- Author Info -->
+                            <div class="text-center mt-4">
+                                <div class="author-name">{{ testimonial.name }}</div>
+                                {% if testimonial.title %}
+                                    <div class="author-title">{{ testimonial.title }}</div>
+                                {% endif %}
+                                {% if testimonial.organization %}
+                                    <div class="author-title">{{ testimonial.organization }}</div>
+                                {% endif %}
+                            </div>
+
+                            
+                           
+                        </div>
+                    </div>
+                </div>
+                {% empty %}
+                <!-- Fallback content if no testimonials -->
+                <div class="col-12">
+                    <div class="text-center py-5">
+                        <i class="bi bi-chat-quote display-1 text-muted"></i>
+                        <h3 class="mt-3 text-muted">No testimonials available yet</h3>
+                        <p class="text-muted">Check back soon for inspiring stories from our community!</p>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    <!-- Call to Action -->
+    
+</div>
+
+<!-- Scripts -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    // Initialize AOS animations
+    AOS.init({
+        duration: 800,
+        easing: 'ease-in-out',
+        once: true,
+        offset: 100
+    });
+
+    // Add smooth scroll behavior
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+
+    // Add loading animation for images
+    document.querySelectorAll('.testimonial-avatar').forEach(img => {
+        if (img.tagName === 'IMG') {
+            img.addEventListener('load', function() {
+                this.style.opacity = '1';
+            });
+            img.style.opacity = '0';
+            img.style.transition = 'opacity 0.3s ease';
+        }
+    });
+</script>
+{% endblock %}

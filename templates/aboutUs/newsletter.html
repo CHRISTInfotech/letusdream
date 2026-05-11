@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+Newsletter
+{% endblock %}
+
+
+{% block extraStyles %}
+{% endblock extraStyles %}
+
+{% block links %}
+
+
+{% endblock links %}
+{% block content %}
+<!-- Page Header -->
+<section class="">
+    <div class="container">
+        <div class="row justify-content-center text-center">
+            <div class="col-lg-12">
+
+                <h1 class="display-4 fw-bold mb-4">Newsletters</h1>
+                <p class="lead mb-3">
+                    Stay updated with our latest community news and program updates.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="container blog-home2 mb-5">
+
+
+
+    <!-- Responsive Bootstrap Grid -->
+    <div class="row gx-4 gy-5">
+        <!-- Example repeated — replace URLs & images with your data -->
+        
+ {% for n in newsletters %}
+        <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+            <div class="card position-relative shadow-custom-hover rounded-custom h-100 overflow-hidden">
+                {% if n.is_url %}
+                    <a href="{% url n.url_name n.url_args.0 n.url_args.1 %}" target="_blank">
+                        <img src="{% static n.image_url %}" alt="{{ n.title }}" class="card-img-top img-fluid">
+                    </a>
+                {% else %}
+                    <a href="{% static n.pdf_url %}" target="_blank">
+                        <img src="{% static n.image_url %}" alt="{{ n.title }}" class="card-img-top img-fluid">
+                    </a>
+                {% endif %}
+                <div class="date-pos bg-gradient-primary text-white px-3 py-1 rounded-custom position-absolute">
+                    {{ n.month }}<span class="d-block">{{ n.day }}</span>{{ n.year }}
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+       
+
+    </div>
+</div>
+{% endblock %}

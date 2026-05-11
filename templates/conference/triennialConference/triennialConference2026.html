@@ -1,0 +1,362 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+{{ conference_data.page.title }}
+{% endblock title %}
+
+{% block extraStyles %}
+<link rel="stylesheet" href="{% static '2026/triennial/triennialConference2026.css' %}">
+{% endblock extraStyles %}
+
+{% block content %}
+<div class="conference-2026-page">
+    <section class="section-shell">
+        <div class="container">
+            <div class="hero-panel">
+                <div class="row g-4 align-items-center">
+                    <div class="col-lg-12">
+
+                        <div class="hero-secondary-content">
+                            <div class="hero-title font-primary">Let Us Dream</div>
+                            <div class="hero-subtitle">Triennial International Community Conference 2026</div>
+                        </div>
+
+                        <div class="hero-main-content mt-5">
+                            <h1 class="hero-main-title">Local Wisdom, Global Influence</h1>
+                            <h2 class="hero-main-subtitle">Resilient Glocal Communities for Meaningful Humanity</h2>
+                        </div>
+
+                        <p class="hero-copy mt-5">
+                            Join a confluence of speakers, universities, community partners, and volunteers for a
+                            transnational gathering shaped by local wisdom, meaningful service, and collaborative
+                            action.
+                        </p>
+
+                        <div class="hero-meta">
+                            <div class="meta-box">
+                                <div class="meta-label">Dates</div>
+                                <div class="meta-value">{{ conference_data.page.dates }}</div>
+                            </div>
+                            <div class="meta-box">
+                                <div class="meta-label">Hosted By</div>
+                                <div class="meta-value">{{ conference_data.page.venue }}</div>
+                            </div>
+                            <div class="meta-box meta-box-action">
+                                <a href="{{ conference_data.page.registration_link }}"
+                                    class="btn btn-light btn-sm meta-cta" target="_blank" rel="noopener">
+                                    <i class="fas fa-user-plus me-2"></i>
+                                    Register Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="highlight-strip">
+                    <div class="highlight-item">
+                        <span class="highlight-value">{{ conference_data.highlights.speakers }}</span>
+                        <span class="highlight-label">Speakers</span>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="highlight-value">{{ conference_data.highlights.countries }}</span>
+                        <span class="highlight-label">Countries</span>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="highlight-value">{{ conference_data.highlights.universities }}</span>
+                        <span class="highlight-label">Universities</span>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="highlight-value">
+                            {{ conference_data.highlights.community_service_organizations }}
+                        </span>
+                        <span class="highlight-label">Community Partners</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-shell">
+        <div class="container">
+            <div class="mb-4">
+                <div class="section-heading-row">
+                    <div class="section-heading-pill section-heading-pill-plain">
+                        <i class="fas fa-info-circle"></i>
+                        <span>{{ conference_data.about.heading }}</span>
+                    </div>
+                    <div class="section-heading-line" aria-hidden="true"></div>
+                </div>
+            </div>
+
+            <div class="about-grid">
+                <div class="vision-grid">
+                    <div class="vision-card">
+                        <h3 class="font-primary">About The Conference</h3>
+                        <p>{{ conference_data.about.intro }}</p>
+                    </div>
+                    <div class="vision-card">
+                        <h3 class="font-primary">Why Triennial 2026</h3>
+                        <p>{{ conference_data.about.overview }}</p>
+                    </div>
+                </div>
+                <div class="vision-grid">
+                    <div class="vision-card">
+                        <h3 class="font-primary">Our Vision</h3>
+                        <p>{{ conference_data.about.vision }}</p>
+                    </div>
+                    <div class="vision-card">
+                        <h3 class="font-primary">Our Mission</h3>
+                        <p>{{ conference_data.about.mission }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-shell">
+        <div class="container">
+            <div class="mb-4">
+                <div class="section-heading-row">
+                    <div class="section-heading-pill section-heading-pill-plain">
+                        <i class="fas fa-hourglass-half"></i>
+                        <span>History</span>
+                    </div>
+                    <div class="section-heading-line" aria-hidden="true"></div>
+                </div>
+            </div>
+
+            <div class="history-grid">
+                {% for item in conference_data.history %}
+                <div class="history-card">
+                    <div class="history-year">{{ item.year }}</div>
+                    <div class="history-title">{{ item.title }}</div>
+                    <ul>
+                        {% for point in item.points %}
+                        <li>{{ point }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                {% endfor %}
+            </div>
+
+            <div class="mt-5">
+                <div class="section-heading-row">
+                    <div class="section-heading-pill section-heading-pill-plain">
+                        <i class="fas fa-hand-holding-heart"></i>
+                        <span>The Big Picture</span>
+                    </div>
+                    <div class="section-heading-line" aria-hidden="true"></div>
+                </div>
+            </div>
+
+            <div class="big-picture-grid">
+                <div class="big-picture-left-stack">
+                    <div class="glass-card wide-card">
+                        <div class="card-title">Who Can Participate?</div>
+                        <ul class="bullets">
+                            {% for item in conference_data.big_picture.who_can_participate %}
+                            <li>{{ item }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+
+                    {% if conference_data.big_picture.how_to_participate %}
+                    <div class="glass-card wide-card">
+                        <div class="card-title">How To Participate</div>
+                        <ul class="bullets">
+                            {% for item in conference_data.big_picture.how_to_participate %}
+                            <li>{{ item }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    {% endif %}
+                </div>
+
+                <div class="big-picture-right-stack">
+                    <div class="glass-card">
+                        <div class="card-title">Unique Value Propositions</div>
+                        <ul class="bullets">
+                            {% for item in conference_data.big_picture.unique_value_propositions %}
+                            <li>{{ item }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+
+                    <div class="glass-card">
+                        <div class="card-title">What Is In It For You?</div>
+                        <ul class="bullets">
+                            {% for item in conference_data.big_picture.benefits %}
+                            <li>{{ item }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-shell">
+        <div class="container">
+            <div class="mb-4">
+                <div class="section-heading-row">
+                    <div class="section-heading-pill section-heading-pill-plain">
+                        <i class="fas fa-file-signature"></i>
+                        <span>{{ conference_data.theme_concept_note.heading }}</span>
+                    </div>
+                    <div class="section-heading-line" aria-hidden="true"></div>
+                </div>
+            </div>
+            <div class="theme-card ">
+                <div class="theme-header mb-5">
+                    <div class="theme-heading">{{ conference_data.theme_concept_note.subheading }}</div>
+                    <div class="theme-tagline">{{ conference_data.theme_concept_note.tagline }}</div>
+                </div>
+                {% for paragraph in conference_data.theme_concept_note.paragraphs %}
+                <p>{{ paragraph }}</p>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    {% for section in conference_data.core_committee_sections %}
+    <section class="section-shell">
+        <div class="container">
+            <div class="mb-4">
+                <div class="section-heading-row">
+                    <div class="section-heading-pill section-heading-pill-plain">
+                        <i class="fas fa-hands-helping"></i>
+                        <span>{{ section.title }}</span>
+                    </div>
+                    <div class="section-heading-line" aria-hidden="true"></div>
+                </div>
+            </div>
+
+            <div class="committee-grid">
+                {% for member in section.members %}
+                <div class="committee-card">
+                    <div class="committee-role">{{ member.role }}</div>
+                    <div class="committee-photo">
+                        <img src="{% static member.image %}" alt="{{ member.name }}">
+                    </div>
+                    <div class="committee-name">{{ member.name }}</div>
+                    <div class="committee-designation">{{ member.designation }}</div>
+                    <div class="committee-email">{{ member.email }}</div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    {% endfor %}
+
+    <section class="section-shell">
+        <div class="container">
+            <div class="mb-4">
+                <div class="section-heading-row">
+                    <div class="section-heading-pill section-heading-pill-plain">
+                        <i class="fas fa-user-friends"></i>
+                        <span>Advisory Team</span>
+                    </div>
+                    <div class="section-heading-line" aria-hidden="true"></div>
+                </div>
+            </div>
+
+            <div class="advisory-grid">
+                {% for member in conference_data.advisory_team %}
+                <div class="advisory-card">
+                    <div class="advisory-name">{{ member.name }}</div>
+                    <div class="advisory-designation">{{ member.designation }}</div>
+                    {% if member.email %}
+                    <div class="advisory-email">{{ member.email }}</div>
+                    {% endif %}
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <section class="section-shell">
+        <div class="container">
+            <div class="mb-4">
+                <div class="section-heading-row">
+                    <div class="section-heading-pill section-heading-pill-plain">
+                        <i class="fas fa-network-wired"></i>
+                        <span>Partnering Organizations</span>
+                    </div>
+                    <div class="section-heading-line" aria-hidden="true"></div>
+                </div>
+            </div>
+
+            <div class="logo-wall">
+                <div class="logo-grid">
+                    {% for logo in conference_data.partners %}
+                    <div class="logo-item">
+                        <img src="{% static logo.image %}" alt="{{ logo.name }}">
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-shell">
+        <div class="container">
+            <div class="mb-4">
+                <div class="section-heading-row">
+                    <div class="section-heading-pill section-heading-pill-plain">
+                        <i class="fas fa-comments"></i>
+                        <span>Testimonials</span>
+                    </div>
+                    <div class="section-heading-line" aria-hidden="true"></div>
+                </div>
+            </div>
+
+            <div class="testimonial-grid">
+                {% for item in conference_data.testimonials %}
+                <div class="testimonial-card">
+                    <p>{{ item.quote }}</p>
+                    <div class="testimonial-name">{{ item.name }}</div>
+                    <div class="testimonial-title">{{ item.title }}</div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <section class="section-shell">
+        <div class="container">
+            <div class="section-heading-row mb-4">
+                <div class="section-heading-pill section-heading-pill-plain">
+                    <i class="fas fa-address-book"></i>
+                    <span>Contact Us</span>
+                </div>
+                <div class="section-heading-line" aria-hidden="true"></div>
+            </div>
+            <div class="contact-list">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <a class="contact-link" href="mailto:{{ conference_data.contact.email }}">
+                        {{ conference_data.contact.email }}
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <div>
+                        <a class="contact-link" href="tel:{{ conference_data.contact.phone|cut:' ' }}">
+                        {{ conference_data.contact.phone }}
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-item contact-item--address">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        {{ conference_data.contact.address }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+{% endblock %}

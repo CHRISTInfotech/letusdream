@@ -1,0 +1,126 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'css/2025/testimonials.css' %}" type="text/css">
+<style>
+    .testimonial-card {
+        transition: all 0.3s ease;
+        border: none;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .testimonial-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .testimonial-avatar {
+        width: 80px;
+        height: 80px;
+        object-fit: cover;
+        border: 4px solid #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .quote-icon {
+        font-size: 3rem;
+        color: #007bff;
+        opacity: 0.3;
+    }
+
+    .testimonial-text {
+        font-style: italic;
+        line-height: 1.6;
+        color: #555;
+    }
+
+    .author-name {
+        font-weight: 600;
+        color: #333;
+    }
+
+    .section-title {
+        color: #1e3a8a;
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+
+    .read-more-btn {
+        transition: all 0.3s ease;
+        font-weight: 500;
+    }
+
+    .read-more-btn:hover {
+        transform: translateX(5px);
+    }
+
+    @media (max-width: 768px) {
+        .testimonial-card {
+            margin-bottom: 2rem;
+        }
+
+        .section-title {
+            font-size: 2rem;
+        }
+    }
+</style>
+
+<!-- Testimonials Section -->
+<section class="py-5 bg-white">
+    <div class="container">
+        <!-- Section Header -->
+        <div class="row">
+            <div class="col-12">
+                <h1 class="text-center mb-3 section-title">Testimonials</h1>
+                <p class="lead text-center text-muted mb-5">
+                    Discover what our community members have to say about their experience
+                </p>
+            </div>
+        </div>
+
+        <!-- Testimonials Grid -->
+        <div class="row g-4 mb-5">
+            {% for testimonial in testimonials %}
+            <div class="col-lg-4 col-md-6 col-12">
+                <div class="card testimonial-card h-100 border-0 rounded-4 p-4">
+                    <!-- Quote Icon -->
+                    <div class="text-center mb-3">
+                        <i class="fas fa-quote-left quote-icon"></i>
+                    </div>
+
+                    <!-- Avatar -->
+                    <div class="text-center mb-4">
+                        <img src="{% static testimonial.image %}"
+                             alt="{{ testimonial.name }}"
+                             class="rounded-circle testimonial-avatar">
+                    </div>
+
+                    <!-- Testimonial Content -->
+                    <div class="card-body text-center p-0 flex-grow-1 d-flex flex-column">
+                        <blockquote class="testimonial-text mb-4 flex-grow-1">
+                            {{ testimonial.content|truncatechars:300 }}
+                        </blockquote>
+
+                        <!-- Author Info -->
+                        <div class="mt-auto">
+                            <div class="author-name h6 mb-1">{{ testimonial.name }}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <!-- Read More Button -->
+        <div class="row">
+            <div class="col-12">
+                <div class="d-flex justify-content-center justify-content-md-end">
+                    <a href="{% url 'testimonials' %}" class="btn btn-outline-primary btn-lg px-4 py-2 read-more-btn text-decoration-none">
+                        <span class="me-2">Read More</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>

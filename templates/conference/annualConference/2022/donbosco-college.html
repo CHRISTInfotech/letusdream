@@ -1,0 +1,228 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    DON BOSCO COLLEGE
+{% endblock %}
+
+{% block extraStyles %}
+    <link rel="stylesheet" href="{% static 'css/stannes-college.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/louisiana-tech-university.css' %}" type="text/css">
+
+{% endblock extraStyles %}
+
+{% block content %}
+
+    <nav aria-label="breadcrumb animated slideInDown" class="cus-breadcrumb">
+        <ol class="breadcrumb text-uppercase mb-0 bg-white">
+            <li class="breadcrumb-item"><a class="text-black text-decoration-none" href="{% url 'main' %}">Home</a></li>
+            <li class="breadcrumb-item"><a class="text-black text-decoration-none">Conferences</a></li>
+            <li class="breadcrumb-item"><a class="text-black text-decoration-none"
+                                           href="{% url 'annualConference' %}">Annual Conference</a></li>
+            <li class="breadcrumb-item  active" aria-current="page">Don Bosco College</li>
+        </ol>
+    </nav>
+
+    <h1 class="mb-4  fw-bold text-center fs-1 text-green text-uppercase heading-h3 mt-5">Don Bosco College
+        Conference</h1>
+
+
+    <div class="conainer text-center m-5">
+        <a href="{% static 'conference/annual/chennai/DonboscoCollege/broshures/DonBoscoChennai_15Oct22.pdf' %}"
+           class="btn btn-outline-success"
+           download>Event
+            Details</a>
+    </div>
+
+
+    <div class="container">
+
+        <div class="row py-5">
+            <div class="col-md-12">
+                <div class="main-timeline">
+                    <a href="#" class="timeline">
+                        <div class="timeline-icon"><i class="fa-solid fa-globe"></i></div>
+                        <div class="timeline-content">
+                            <h3 class="title">HISTORY</h3>
+                            <p class="description">
+                                Volunteers from the local community including business owners involved in voluntary
+                                community developmental projects, non-profit organizations, philanthropists, social
+                                workers,
+                                educators or educational administrators, retired personnel, students, or anyone
+                                interested
+                                in contributing to their community development can be a part of the conference and
+                                engage in
+                                fruitful dialogues with visionaries through the conference.
+                            </p>
+                        </div>
+                    </a>
+                    <a href="#" class="timeline">
+                        <div class="timeline-icon"><i class="fa-regular fa-lightbulb"></i></div>
+                        <div class="timeline-content">
+                            <h3 class="title pl-5">VISION</h3>
+                            <p class="description pl-5 ">
+                                Our Vision is to Empowered local communities for sustainable impact, improvement, Global
+                                Harmony (and Holistic Success).
+                            </p>
+                        </div>
+                    </a>
+                    <a href="#" class="timeline">
+                        <div class="timeline-icon"><i class="fa-solid fa-rocket"></i></div>
+                        <div class="timeline-content">
+                            <h3 class="title">GOAL</h3>
+                            <p class="description">
+                                The Let Us Dream Conference was established in 2017 for the purpose of providing a forum
+                                for
+                                sharing experiences with successes and challenges in community improvement organizations
+                                and
+                                efforts. Broad conference goals are to
+                            <ul>
+                                <li>Improve networking and collaboration among all those interested in community
+                                    improvement
+                                    organizations and programs.
+                                </li>
+                                <li>Promote volunteerism and empower all those involved in community improvement
+                                    organizations and initiatives, including employees, volunteers, post-secondary
+                                    students,
+                                    researchers, and practitioners.
+                                </li>
+                                <li>Create a professional learning organization dedicated to improving local communities
+                                    and
+                                    characterized by a culture of shared researcher and practitioner knowledge, skills,
+                                    theories, and best practices.
+                                </li>
+                            </ul>
+                            </p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Previous Conferences -->
+    <div class="container mt-5 pt-5 pb-5">
+        <div class="row text-center">
+            <h1 class="text-green text-center my-5 text-uppercase fw-bold">
+                Past Conferences
+            </h1>
+        </div>
+    </div>
+    <div class="previous-conference  pt-5 mb-5 pb-5">
+
+        <section class="timeline-wrapper mt-5 pt-5 mb-5 pb-5">
+            <div class="middle-line"></div>
+
+            <div class="box box-top">
+                <div class="date">
+                    <p>2022</p>
+
+                </div>
+                <div class="box-content">
+                    <img src="/ltstatic/conference/annual/chennai/DonboscoCollege/2022.jpg"
+                         class="w-100 h-100 rounded "/>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Gallery -->
+    <div class="section-member-popup mt-5 pt-5">
+        <div class="container container-member-popup  mb-5 mt-5 pt-5">
+            <div class="col-md-12 text-center mb-5">
+                <h1 class="big-heading text-uppercase mb-5">KEYNOTE SPEAKER</h1>
+            </div>
+            <div class="card">
+                <div class="imgBx">
+                    <img src="{% static 'conference/annual/chennai/DonboscoCollege/img1.jpg' %}" alt="">
+                    <h5 class="text-center pt-3 text-info fw-bolder">Fr. Francis Xavier, SJ</h5>
+                </div>
+                <div class="content">
+                </div>
+            </div>
+            <div class="card">
+                <div class="imgBx">
+                    <img src="{% static 'conference/annual/chennai/DonboscoCollege/img2.png' %}" alt=""
+                         class="text-center">
+                    <h5 class="text-center pt-3 text-info fw-bolder">Dr. Christodas Gandhi IAS</h5>
+                </div>
+                <div class="content">
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container p-5">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h1 class="big-heading text-uppercase">Conference Core Committee</h1>
+            </div>
+            <div class="col-lg-4">
+                <div class="d-flex justify-content-center align-items-center p-5 m-2 rounded-lg flex-column">
+                    <div class="person-img d-flex justify-content-center">
+                        <img src="{% static 'conference/annual/chennai/DonboscoCollege/image-089.jpg' %}" alt=""
+                             class="img-fluid rounded-circle shadow p-1 w-50 h-50">
+                    </div>
+                    <div class="person-name my-2">
+                        <h6 class="text-info fw-bolder">Rev. Dr. Joseph Jeyaraj SDB</h6>
+                    </div>
+                    <div class="info">
+                        <p class="text-dark text-center">
+                            Conference Planning chair
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="d-flex justify-content-center align-items-center p-5 m-2 rounded-lg flex-column">
+                    <div class="person-img d-flex justify-content-center">
+                        <img src="{% static 'conference/annual/chennai/DonboscoCollege/image-099.jpg' %}" alt=""
+                             class="img-fluid rounded-circle shadow p-1 w-50 h-50">
+                    </div>
+                    <div class="person-name my-2">
+                        <h6 class="text-info fw-bolder">Fr. Praveen Peter SDB</h6>
+                    </div>
+                    <div class="info">
+                        <p class="text-dark text-center">
+                            Conference Co-chair
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="d-flex justify-content-center align-items-center p-5 m-2 rounded-lg flex-column">
+                    <div class="person-img d-flex justify-content-center">
+                        <img src="{% static 'conference/annual/chennai/DonboscoCollege/image-098.jpg' %}" alt=""
+                             class=" rounded-circle shadow p-1 w-50 h-50">
+                    </div>
+                    <div class="person-name my-2">
+                        <h6 class="text-info fw-bolder">A. Mary Dayana</h6>
+                    </div>
+                    <div class="info">
+                        <p class="text-dark text-center">
+                            Conference Co-chair
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="d-flex justify-content-center align-items-center p-5 m-2 rounded-lg flex-column">
+                    <div class="person-img d-flex justify-content-center">
+                        <img src="{% static 'conference/annual/chennai/DonboscoCollege/image-090.jpg' %}" alt=""
+                             class=" rounded-circle shadow p-1  w-50 h-50">
+                    </div>
+                    <div class="person-name my-2">
+                        <h6 class="text-info fw-bolder">Mr. David SR</h6>
+                    </div>
+                    <div class="info">
+                        <p class="text-dark text-center">
+                            Conference Co-chair
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}

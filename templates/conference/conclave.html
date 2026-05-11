@@ -1,0 +1,189 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+Annual Conferences - Let Us Dream
+{% endblock %}
+
+{% block extraStyles %}
+<style>
+    .timeline-item {
+        position: relative;
+        padding-left: 2rem;
+        border-left: 3px solid var(--secondary-green);
+        margin-bottom: 2rem;
+    }
+
+    .timeline-item::before {
+        content: '';
+        position: absolute;
+        left: -8px;
+        top: 0;
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        background: var(--secondary-green);
+    }
+
+    .feature-icon {
+        width: 50px;
+        height: 50px;
+        flex-shrink: 0;
+        border-radius: var(--border-radius-small);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+        color: var(--white-text);
+    }
+
+    .bg-gradient-info {
+        background: linear-gradient(135deg, #17a2b8, #138496);
+    }
+
+    .bg-gradient-success {
+        background: linear-gradient(135deg, #28a745, #20873a);
+    }
+
+    .bg-gradient-danger {
+        background: linear-gradient(135deg, #dc3545, #c82333);
+    }
+
+    .location-card {
+        border: 2px solid transparent;
+        transition: var(--transition-normal);
+        cursor: pointer;
+    }
+
+    .location-card:hover {
+        border-color: var(--primary-blue);
+        transform: translateY(-3px);
+    }
+
+    .conference-evolution {
+        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        border-radius: var(--border-radius);
+        padding: 3rem;
+    }
+
+    @media (max-width: 768px) {
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            font-size: 1.5rem;
+        }
+    }
+</style>
+{% endblock extraStyles %}
+
+{% block content %}
+
+<!-- Hero Section -->
+<section class="bg-light-gray py-5">
+    <div class="container py-5">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-8 text-center text-lg-start">
+                <h1 class="display-4 fw-bold mb-4 font-primary">Annual Servant Leadership Conclave</h1>
+                <p class="lead mb-4">
+                    Servant Leadership Conclave is a platform that brings together leaders, educators,
+                    and changemakers committed to leading through service. The conclave fosters collaboration,
+                    reflection, and action-oriented dialogue, empowering participants to inspire others, build inclusive
+                    communities, and embody leadership rooted in empathy, vision, and collective growth.
+                </p>
+            </div>
+            <div class="col-lg-4 text-center">
+                <div class="position-relative">
+                    <img src="{% static '2025/conference/conclave/cover.png' %}"
+                        class="img-fluid rounded-custom shadow-custom" alt="Conference Overview">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- What to Expect Section -->
+<section class="py-5 text-white">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="display-5 fw-bold font-primary">Host Locations</h2>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6">
+                <div class="card h-100 border-0 shadow-custom hover-lift">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Bangalore, India</h5>
+                        <p class="card-text">30-31 Janurary 2026.</p>
+                    </div>
+                    <img src="{% static '2025/conference/conclave/slc_bgr_2026.png' %}" class="card-img-top" alt="Location 1">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% endblock content %}
+
+{% block extraScripts %}
+<script>
+    // Add smooth scrolling and animation effects
+    document.addEventListener('DOMContentLoaded', function () {
+        // Animate stats on scroll
+        const stats = document.querySelectorAll('.stats-counter');
+        const observerOptions = {
+            threshold: 0.5,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const statsObserver = new IntersectionObserver(function (entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const target = entry.target;
+                    const finalValue = target.textContent;
+                    const numValue = parseInt(finalValue.replace(/\D/g, ''));
+
+                    if (numValue) {
+                        animateValue(target, 0, numValue, 2000, finalValue.includes('+'));
+                    }
+                    statsObserver.unobserve(target);
+                }
+            });
+        }, observerOptions);
+
+        stats.forEach(stat => statsObserver.observe(stat));
+
+        // Animate cards on scroll
+        const cards = document.querySelectorAll('.card, .timeline-item');
+        const cardObserver = new IntersectionObserver(function (entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.transform = 'translateY(0)';
+                    entry.target.style.opacity = '1';
+                }
+            });
+        }, { threshold: 0.1 });
+
+        cards.forEach(card => {
+            card.style.transform = 'translateY(30px)';
+            card.style.opacity = '0';
+            card.style.transition = 'all 0.6s ease-out';
+            cardObserver.observe(card);
+        });
+    });
+
+    function animateValue(element, start, end, duration, hasPlus = false) {
+        let startTimestamp = null;
+        const step = (timestamp) => {
+            if (!startTimestamp) startTimestamp = timestamp;
+            const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+            const currentValue = Math.floor(progress * (end - start) + start);
+            element.textContent = currentValue + (hasPlus ? '+' : '');
+            if (progress < 1) {
+                window.requestAnimationFrame(step);
+            }
+        };
+        window.requestAnimationFrame(step);
+    }
+</script>
+{% endblock extraScripts %}

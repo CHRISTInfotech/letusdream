@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    Flip Book
+{% endblock title %}
+
+{% block extraStyles %}
+<link rel="stylesheet" href="{% static 'css/flipbook.css' %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf_viewer.min.css" integrity="sha512-MTt1T2DF1IKCXWidEXFcUQZg3SQZqdXMmNXNctm23kKAPcJtkPWlGz36ieXIvEpt8G0J1uhKa8XXkYV1JyC9Tw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+{% endblock extraStyles %}
+
+{% block content %}
+<div class="container py-5 d-flex justify-content-center align-items-center my-5">
+    <div class="flipbook-container">
+        <div id="flipbook" data-url="{% static 'flipbook/LUD Booklet_Edited Version.pdf' %}">
+            <!-- Pages will be dynamically added here -->
+        </div>
+        <div class="controls">
+            <button id="prev" class="btn btn-primary">Previous</button>
+            <button id="reset" class="btn btn-secondary">Reset</button>
+            <button id="next" class="btn btn-primary">Next</button>
+        </div>
+    </div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.worker.min.js" integrity="sha512-P4czHqcxmgci7QIhI48N1GmF+rWm4PGB/GQ8/GZvJC6rgzssgX0meArUqH2WRfeDfurya5HxKd5uYLPDntEZ/Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf_viewer.min.js" integrity="sha512-GO6MrF8lQGZm0pr/PEl+IC1cIHzjig4/Rus9iu7Fs6bV7WQ/iB9McHtNmpk2haaXAsbPVvU5EVYMVI7e3hjczg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="{% static 'js/flipbook.js' %}"></script>
+{% endblock content %}

@@ -1,0 +1,705 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+Annual Conferences - Let Us Dream
+{% endblock %}
+
+{% block extraStyles %}
+<style>
+    .timeline-item {
+        position: relative;
+        padding-left: 2rem;
+        border-left: 3px solid var(--secondary-green);
+        margin-bottom: 2rem;
+    }
+
+    .timeline-item::before {
+        content: '';
+        position: absolute;
+        left: -8px;
+        top: 0;
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        background: var(--secondary-green);
+    }
+
+    .feature-icon {
+        width: 50px;
+        height: 50px;
+        flex-shrink: 0;
+        border-radius: var(--border-radius-small);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+        color: var(--white-text);
+    }
+
+    .bg-gradient-info {
+        background: linear-gradient(135deg, #17a2b8, #138496);
+    }
+
+    .bg-gradient-success {
+        background: linear-gradient(135deg, #28a745, #20873a);
+    }
+
+    .bg-gradient-danger {
+        background: linear-gradient(135deg, #dc3545, #c82333);
+    }
+
+    .location-card {
+        border: 2px solid transparent;
+        transition: var(--transition-normal);
+        cursor: pointer;
+    }
+
+    .location-card:hover {
+        border-color: var(--primary-blue);
+        transform: translateY(-3px);
+    }
+
+    .conference-evolution {
+        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        border-radius: var(--border-radius);
+        padding: 3rem;
+    }
+
+    @media (max-width: 768px) {
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            font-size: 1.5rem;
+        }
+    }
+</style>
+{% endblock extraStyles %}
+
+{% block content %}
+
+<!-- Hero Section -->
+<section class="bg-light-gray py-5">
+    <div class="container py-5">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-6 text-center text-lg-start">
+                <h1 class="display-4 fw-bold mb-4 font-primary">Annual Community Conferences</h1>
+                <p class="lead mb-4">Empowering local communities through dialogue, innovation, and collaborative
+                    action. Join the movement that's creating lasting change across the globe.</p>
+            </div>
+            <div class="col-lg-6 text-center">
+                <div class="position-relative">
+                    <img src="{% static '2025/conference/BANGALORE_CONF_2024.JPG' %}"
+                        class="img-fluid rounded-custom shadow-custom" alt="Conference Overview">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Story Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-6">
+                <div class="pe-lg-4">
+                    <h2 class="display-5 fw-bold text-primary-blue mb-4 font-primary">Our Story</h2>
+                    <div class="timeline-item">
+                        <h5 class="text-primary-blue fw-bold">2017 - The Beginning</h5>
+                        <p class="text-medium lh-lg">The Let Us Dream movement began in Monroe, Louisiana with a simple
+                            idea: <em>that people who dream for others create real, lasting change.</em></p>
+                    </div>
+                    <div class="timeline-item">
+                        <h5 class="text-primary-blue fw-bold">Growth & Expansion</h5>
+                        <p class="text-medium lh-lg">What started as a modest university gathering soon grew into an
+                            international wave of community empowerment.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h5 class="text-primary-blue fw-bold">Dual Conference Structure</h5>
+                        <p class="text-medium lh-lg">While our <strong>Triennial International Conferences</strong>
+                            unite chapters globally every three years, the <strong>Annual Community Conferences</strong>
+                            happen locally, every year on the ground, in your city, in your community.</p>
+                    </div>
+                    <div class="timeline-item mb-0">
+                        <h5 class="text-primary-blue fw-bold">Global Impact Today</h5>
+                        <p class="text-medium lh-lg">Today, these annual conferences are hosted in countries like
+                            <strong>India, US, South Africa,</strong> adapting to local needs while staying true to a
+                            shared global vision.
+                        </p>
+                    </div>
+                    <!-- <div class="mt-4">
+                        <a href="#" class="btn btn-primary hover-lift">
+                            <i class="fas fa-book-open me-2"></i>Read More
+                        </a>
+                    </div> -->
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <img src="{% static '2025/conference/BINGHAMTON UNIVERSITY_CONF_ 2024.jpg' %}"
+                    class="img-fluid rounded-custom shadow-custom" alt="Our Journey">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Vision & Goals Section -->
+<section class="py-5 bg-light-gray">
+    <div class="container">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-6 order-lg-2">
+                <img src="{% static '2025/conference/TRIVANDRUM_CONF_2024.JPG' %}"
+                    class="img-fluid rounded-custom shadow-custom" alt="Vision and Goals">
+            </div>
+            <div class="col-lg-6 order-lg-1">
+                <div class="pe-lg-4">
+                    <h2 class="display-5 fw-bold mb-4">Our Vision</h2>
+                    <p class="text-medium fs-5 mb-5 lh-lg">Empowered local communities for sustainable impact,
+                        improvement, Global Harmony and Holistic Success.</p>
+
+                    <h3 class=" fw-bold mb-4 font-primary">Our Goals</h3>
+                    <div class="row g-4">
+                        <div class="col-lg-6 col-md-6 mb-4">
+                            <div class="d-flex align-items-start">
+                                <div class="feature-icon bg-gradient-primary me-3">
+                                    <i class="fas fa-share-alt"></i>
+                                </div>
+                                <div>
+                                    <h6 class="text-primary-blue mb-2">Community Forum</h6>
+                                    <p class="text-medium mb-0">Create a forum to <strong>share community
+                                            efforts</strong> and innovations</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-md-6 mb-4">
+                            <div class="d-flex align-items-start">
+                                <div class="feature-icon bg-gradient-secondary me-3">
+                                    <i class="fas fa-hands-helping"></i>
+                                </div>
+                                <div>
+                                    <h6 class="text-primary-blue mb-2">Youth Engagement</h6>
+                                    <p class="text-medium mb-0">Promote <strong>volunteerism and youth
+                                            engagement</strong></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-md-6 mb-4">
+                            <div class="d-flex align-items-start">
+                                <div class="feature-icon me-3"
+                                    style="background: linear-gradient(135deg, #17a2b8, #138496);">
+                                    <i class="fas fa-network-wired"></i>
+                                </div>
+                                <div>
+                                    <h6 class="text-primary-blue mb-2">Research & Practice</h6>
+                                    <p class="text-medium mb-0">Facilitate connections between <strong>researchers and
+                                            practitioners</strong></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-md-6 mb-4">
+                            <div class="d-flex align-items-start">
+                                <div class="feature-icon me-3"
+                                    style="background: linear-gradient(135deg, #28a745, #20873a);">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <div>
+                                    <h6 class="text-primary-blue mb-2">Leadership Development</h6>
+                                    <p class="text-medium mb-0">Strengthen <strong>local leadership</strong> and
+                                        intergenerational collaboration</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-md-6 mb-4">
+                            <div class="d-flex align-items-start">
+                                <div class="feature-icon me-3"
+                                    style="background: linear-gradient(135deg, #dc3545, #c82333);">
+                                    <i class="fas fa-heart"></i>
+                                </div>
+                                <div>
+                                    <h6 class="text-primary-blue mb-2">Changemaker Network</h6>
+                                    <p class="text-medium mb-0">Build a network of changemakers committed to equity and
+                                        service</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Host Locations Section -->
+<!-- Host Locations Section -->
+<section class="py-5">
+    <div class="container">
+        <h2 class="display-5 text-center fw-bold mb-5 text-primary-blue font-primary">Host Locations 2025</h2>
+        <div class="row g-4">
+
+            <div class="col-lg-4 col-md-6">
+                <div class="card location-card h-100 hover-lift">
+                    <div class="card-body text-center p-4">
+                        <div class="feature-icon mb-3" style="background: linear-gradient(135deg, #17a2b8, #138496);">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h5 class="card-title text-primary-blue">India - Pune</h5>
+                        <p class="text-medium mb-3"><strong>Venue:</strong> Christ College, Pune</p>
+                        <p class="text-medium mb-0"><strong>Date:</strong> April 18 2026 09:00 AM to 01:00 PM</p>
+                        <a href="https://cmt.letusdream.org/conference_details/df5b0138-e4ba-44cb-9ddb-dacd09f6d53a"
+                            target="_blank" class="btn btn-outline-primary btn-sm mt-3 hover-lift">
+                            <i class="fas fa-info-circle me-2"></i>Know More
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="card location-card h-100 hover-lift">
+                    <div class="card-body text-center p-4">
+                        <div class="feature-icon bg-gradient-secondary mb-3">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h5 class="card-title text-primary-blue">USA - Louisiana</h5>
+                        <p class="text-medium mb-3"><strong>Venue:</strong> University of Louisiana</p>
+                        <p class="text-medium mb-0"><strong>Date:</strong> 30/10/2025</p>
+                        <a href="https://cmt.letusdream.org/conference_details/2f17bcb1-1557-452c-be85-8629fce6ac54"
+                            target="_blank" class="btn btn-outline-primary btn-sm mt-3 hover-lift">
+                            <i class="fas fa-info-circle me-2"></i>Know More
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="card location-card h-100 hover-lift">
+                    <div class="card-body text-center p-4">
+                        <div class="feature-icon mb-3" style="background: linear-gradient(135deg, #ffc107, #e0a800);">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h5 class="card-title text-primary-blue">USA - New York</h5>
+                        <p class="text-medium mb-3"><strong>Venue:</strong> Binghamton University</p>
+                        <p class="text-medium mb-0"><strong>Date:</strong> 7/11/2025</p>
+                        <a href="https://cmt.letusdream.org/conference_details/76a825ff-719c-4a52-86d8-5c53446bb6e3"
+                            target="_blank" class="btn btn-outline-primary btn-sm mt-3 hover-lift">
+                            <i class="fas fa-info-circle me-2"></i>Know More
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="card location-card h-100 hover-lift">
+                    <div class="card-body text-center p-4">
+                        <div class="feature-icon mb-3" style="background: linear-gradient(135deg, #28a745, #20873a);">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h5 class="card-title text-primary-blue">India - Bengaluru</h5>
+                        <p class="text-medium mb-3"><strong>Venue:</strong> Presidency University</p>
+                        <p class="text-medium mb-0"><strong>Date:</strong> 8/11/2025</p>
+                        <a href="https://cmt.letusdream.org/conference_details/adcc1c26-7dde-4631-a56b-e24161ac01b6"
+                            target="_blank" class="btn btn-outline-primary btn-sm mt-3 hover-lift">
+                            <i class="fas fa-info-circle me-2"></i>Know More
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="card location-card h-100 hover-lift">
+                    <div class="card-body text-center p-4">
+                        <div class="feature-icon bg-gradient-primary mb-3">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h5 class="card-title text-primary-blue">India - Hyderabad</h5>
+                        <p class="text-medium mb-3"><strong>Venue:</strong> BVRIT College</p>
+                        <p class="text-medium mb-0"><strong>Date:</strong> 15/11/2025</p>
+                        <a href="https://cmt.letusdream.org/conference_details/f4eadcb9-f77b-4044-b0ed-574d8a6fdc09"
+                            target="_blank" class="btn btn-outline-primary btn-sm mt-3 hover-lift">
+                            <i class="fas fa-info-circle me-2"></i>Know More
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="card location-card h-100 hover-lift">
+                    <div class="card-body text-center p-4">
+                        <div class="feature-icon mb-3" style="background: linear-gradient(135deg, #fd7e14, #e85d04);">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h5 class="card-title text-primary-blue">India - Chennai</h5>
+                        <p class="text-medium mb-3"><strong>Venue:</strong> Stella Maris College</p>
+                        <p class="text-medium mb-0"><strong>Date:</strong> 22/11/2025</p>
+                        <a href="https://cmt.letusdream.org/conference_details/f64da27a-ffae-4828-95ee-c6d58e9a3a04"
+                            target="_blank" class="btn btn-outline-primary btn-sm mt-3 hover-lift">
+                            <i class="fas fa-info-circle me-2"></i>Know More
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="card location-card h-100 hover-lift">
+                    <div class="card-body text-center p-4">
+                        <div class="feature-icon mb-3" style="background: linear-gradient(135deg, #20c997, #17a085);">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h5 class="card-title text-primary-blue">India - Trivandrum</h5>
+                        <p class="text-medium mb-3"><strong>Venue:</strong> CHRIST Nodal Office</p>
+                        <p class="text-medium mb-0"><strong>Date:</strong> 29/11/2025</p>
+                        <a href="https://cmt.letusdream.org/conference_details/ee1dcd89-dbc1-4dc4-b08a-1508315f5d2c"
+                            target="_blank" class="btn btn-outline-primary btn-sm mt-3 hover-lift">
+                            <i class="fas fa-info-circle me-2"></i>Know More
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="card location-card h-100 hover-lift">
+                    <div class="card-body text-center p-4">
+                        <div class="feature-icon mb-3  bg-gradient-secondary">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h5 class="card-title text-primary-blue">India - Delhi</h5>
+                        <p class="text-medium mb-3"><strong>Venue:</strong> Hansraj College</p>
+                        <p class="text-medium mb-0"><strong>Date:</strong> 15/11/2025</p>
+                        <a href="https://cmt.letusdream.org/conference_details/7ca18e16-3103-46c2-bdd3-0edb6eccbe73"
+                            target="_blank" class="btn btn-outline-primary btn-sm mt-3 hover-lift">
+                            <i class="fas fa-info-circle me-2"></i>Know More
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Evolution Section -->
+<!-- <section class="py-5 bg-light-gray">
+    <div class="container">
+        <h2 class="display-5 text-center fw-bold mb-5 text-primary-blue font-primary">Our Evolution</h2>
+        <div class="conference-evolution text-center">
+           
+            <img src="{% static 'Aboutus/aboutUs/Annual_conference2.png' %}"
+                class="img-fluid rounded-custom shadow-custom" alt="Conference Evolution">
+        </div>
+    </div>
+</section> -->
+
+<!-- What to Expect Section -->
+<section class="py-5 text-white">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="display-5 fw-bold font-primary">What To Expect At</h2>
+            <h3 class="display-6 fw-bold font-primary">The Community Conference</h3>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6">
+                <div class="card h-100 border-0 shadow-custom hover-lift">
+                    <div class="card-body p-4 text-center">
+                        <div class="feature-icon bg-gradient-primary mb-4">
+                            <i class="fas fa-microphone-alt"></i>
+                        </div>
+                        <h4 class="h5 mb-3 text-primary-blue">Keynotes & Lived Stories</h4>
+                        <p class="text-medium mb-0">
+                            Listening to speakers and changemakers share powerful narratives of resilience and
+                            service from their own communities.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="card h-100 border-0 shadow-custom hover-lift">
+                    <div class="card-body p-4 text-center">
+                        <div class="feature-icon bg-gradient-secondary mb-4">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h4 class="h5 mb-3 text-primary-blue">Panel Discussions & Focused Dialogues</h4>
+                        <p class="text-medium mb-0">
+                            Dive into pressing issues in Education, Health, and Social Service with interactive
+                            sessions led by field experts and local voices.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="card h-100 border-0 shadow-custom hover-lift">
+                    <div class="card-body p-4 text-center">
+                        <div class="feature-icon mb-4" style="background: linear-gradient(135deg, #ffc107, #e0a800);">
+                            <i class="fas fa-hands-helping"></i>
+                        </div>
+                        <h4 class="h5 mb-3 text-primary-blue">Workshops & Group Activities</h4>
+                        <p class="text-medium mb-0">
+                            Participate in hands-on, workshop-style sessions designed for learning, reflection, and
+                            idea generation.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="card h-100 border-0 shadow-custom hover-lift">
+                    <div class="card-body p-4 text-center">
+                        <div class="feature-icon mb-4" style="background: linear-gradient(135deg, #dc3545, #c82333);">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <h4 class="h5 mb-3 text-primary-blue">Celebrating Changemakers</h4>
+                        <p class="text-medium mb-0">
+                            Honour local heroes making a real difference in their communities through creativity,
+                            courage, and compassion.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="card h-100 border-0 shadow-custom hover-lift">
+                    <div class="card-body p-4 text-center">
+                        <div class="feature-icon mb-4" style="background: linear-gradient(135deg, #17a2b8, #138496);">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                        <h4 class="h5 mb-3 text-primary-blue">Networking & Collaborations</h4>
+                        <p class="text-medium mb-0">
+                            Build relationships with educators, students, social workers, and organizations
+                            committed to service and improvement.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="card h-100 border-0 shadow-custom hover-lift">
+                    <div class="card-body p-4 text-center">
+                        <div class="feature-icon mb-4" style="background: linear-gradient(135deg, #6f42c1, #5a3399);">
+                            <i class="fas fa-store"></i>
+                        </div>
+                        <h4 class="h5 mb-3 text-primary-blue">Stalls & Community Projects</h4>
+                        <p class="text-medium mb-0">
+                            Discover innovative community projects and get inspired to take action in your own
+                            neighborhood.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Who Can Participate Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center">
+                <h2 class="display-5 fw-bold mb-4 text-primary-blue font-primary">Who Can Participate?</h2>
+                <p class="text-medium fs-5 lh-lg mb-5">
+                    Volunteers from the local community including business owners involved in voluntary
+                    community developmental projects, non-profit organizations, philanthropists, social
+                    workers, educators or educational administrators, retired personnel, students, or anyone
+                    interested in contributing to their community development can be a part of the
+                    conference and engage in fruitful dialogues with visionaries.
+                </p>
+                <a href="https://cmt.letusdream.org" class="btn btn-primary btn-lg hover-lift" target="_blank">
+                    <i class="fas fa-user-plus me-2"></i>Register Now
+                </a>
+
+                <!-- Resources Section -->
+                <div class="row g-4 mt-5">
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-custom hover-lift">
+                            <div class="card-body text-center p-4">
+                                <div class="feature-icon bg-gradient-primary mb-3 mx-auto">
+                                    <i class="fas fa-file-pdf"></i>
+                                </div>
+                                <h5 class="card-title text-primary-blue mb-3">Conference Brochure</h5>
+                                <p class="text-medium mb-3">Download our comprehensive conference brochure</p>
+                                <a href="{% static '2025/conference/LUD Community Conferences 2025 Overall Brochure.pdf' %}"
+                                    class="btn btn-outline-primary" target="_blank">
+                                    <i class="fas fa-external-link-alt me-2"></i>View
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-custom hover-lift">
+                            <div class="card-body text-center p-4">
+                                <div class="feature-icon bg-gradient-secondary mb-3 mx-auto">
+                                    <i class="fas fa-newspaper"></i>
+                                </div>
+                                <h5 class="card-title text-primary-blue mb-3">Newsletter Vol. 1</h5>
+                                <p class="text-medium mb-3">Read our latest community updates and stories</p>
+                                <a href="https://letusdream.org/ltstatic/newsletters/2025/2025vol1.pdf"
+                                    class="btn btn-outline-primary" target="_blank">
+                                    <i class="fas fa-external-link-alt me-2"></i>View
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-custom hover-lift">
+                            <div class="card-body text-center p-4">
+                                <div class="feature-icon bg-gradient-secondary mb-3 mx-auto">
+                                    <i class="fas fa-newspaper"></i>
+                                </div>
+                                <h5 class="card-title text-primary-blue mb-3">Newsletter Vol. 2</h5>
+                                <p class="text-medium mb-3">Discover more inspiring changemaker stories</p>
+                                <a href="https://letusdream.org/ltstatic/newsletters/2025/2025vol2.pdf"
+                                    class="btn btn-outline-primary" target="_blank">
+                                    <i class="fas fa-external-link-alt me-2"></i>View
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Past Conferences Section -->
+<section class="py-5 bg-light-gray">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="display-5 fw-bold text-primary-blue font-primary">Experience Past Conferences</h2>
+            <p class="text-medium fs-5">Watch highlights and live streams from our previous conferences</p>
+        </div>
+
+        <div class="row g-4">
+            <!-- Louisiana Tech 2022 -->
+            <div class="col-lg-6">
+                <div class="card h-100 border-0 shadow-custom hover-lift">
+                    <div class="ratio ratio-16x9">
+                       
+                        <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/t0A4db_5QoM?si=8GpqeLiewROEoYU8"
+                            title="Louisiana Tech University Conference 2022" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="rounded-top"></iframe>
+                    </div>
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="feature-icon bg-gradient-primary me-3"
+                                style="width: 40px; height: 40px; font-size: 1rem;">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h5 class="card-title text-primary-blue mb-0">Louisiana Tech University</h5>
+                                <p class="text-medium mb-0"><small>2022 Conference</small></p>
+                            </div>
+                        </div>
+                        <p class="text-medium mb-0">Experience the energy and inspiration from our Louisiana Tech
+                            University conference.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Grambling State 2024 -->
+            <div class="col-lg-6">
+                <div class="card h-100 border-0 shadow-custom hover-lift">
+                    <div class="ratio ratio-16x9">
+
+                            <iframe src="https://www.youtube.com/embed/s36fCtfx8wM?si=XuYwyTOxZDxA2wQ_" title="Grambling State University Conference 2024" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen
+                            class="rounded-top"></iframe>
+                    </div>
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="feature-icon bg-gradient-secondary me-3"
+                                style="width: 40px; height: 40px; font-size: 1rem;">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h5 class="card-title text-primary-blue mb-0">Grambling State University</h5>
+                                <p class="text-medium mb-0"><small>2024 Conference</small></p>
+                            </div>
+                        </div>
+                        <p class="text-medium mb-0">Join us for highlights from our most recent conference at Grambling
+                            State University.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Call to Action -->
+        <div class="text-center mt-5">
+            <p class="text-medium fs-5 mb-3">Want to see more conference content?</p>
+            <a href="https://www.youtube.com/@letusdream8275" class="btn btn-primary hover-lift" target="_blank">
+                <i class="fab fa-youtube me-2"></i>Visit Our YouTube Channel
+            </a>
+        </div>
+    </div>
+</section>
+{% endblock content %}
+
+{% block extraScripts %}
+<script>
+    // Add smooth scrolling and animation effects
+    document.addEventListener('DOMContentLoaded', function () {
+        // Animate stats on scroll
+        const stats = document.querySelectorAll('.stats-counter');
+        const observerOptions = {
+            threshold: 0.5,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const statsObserver = new IntersectionObserver(function (entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const target = entry.target;
+                    const finalValue = target.textContent;
+                    const numValue = parseInt(finalValue.replace(/\D/g, ''));
+
+                    if (numValue) {
+                        animateValue(target, 0, numValue, 2000, finalValue.includes('+'));
+                    }
+                    statsObserver.unobserve(target);
+                }
+            });
+        }, observerOptions);
+
+        stats.forEach(stat => statsObserver.observe(stat));
+
+        // Animate cards on scroll
+        const cards = document.querySelectorAll('.card, .timeline-item');
+        const cardObserver = new IntersectionObserver(function (entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.transform = 'translateY(0)';
+                    entry.target.style.opacity = '1';
+                }
+            });
+        }, { threshold: 0.1 });
+
+        cards.forEach(card => {
+            card.style.transform = 'translateY(30px)';
+            card.style.opacity = '0';
+            card.style.transition = 'all 0.6s ease-out';
+            cardObserver.observe(card);
+        });
+    });
+
+    function animateValue(element, start, end, duration, hasPlus = false) {
+        let startTimestamp = null;
+        const step = (timestamp) => {
+            if (!startTimestamp) startTimestamp = timestamp;
+            const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+            const currentValue = Math.floor(progress * (end - start) + start);
+            element.textContent = currentValue + (hasPlus ? '+' : '');
+            if (progress < 1) {
+                window.requestAnimationFrame(step);
+            }
+        };
+        window.requestAnimationFrame(step);
+    }
+</script>
+{% endblock extraScripts %}

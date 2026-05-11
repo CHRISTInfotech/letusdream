@@ -1,0 +1,257 @@
+
+h1 {
+    text-align: center;
+    font-weight: bolder !important;
+    color: #0a7b79;
+}
+
+
+.gallery {
+  display: flex;
+  flex-flow: wrap;
+  /* border: solid rgb(240, 240, 240); */
+}
+.gallery div {
+  flex: 150px;
+  position: relative;
+  text-align: center;
+  border-radius: 5px;
+}
+.gallery div:nth-of-type(1) {
+  flex: 10000 1 300px;
+}
+.gallery div::before {
+  content: "";
+  display: block;
+  padding-top: 100px;
+}
+.gallery div:nth-of-type(1)::before {
+  padding-top: 56.25%;
+}
+.gallery iframe,
+.gallery span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+.gallery a {
+  display: inline-block;
+  margin-top: 5px;
+}
+.gallery a:last-child {
+  margin-bottom: 5px;
+}
+.gallery iframe,
+.gallery img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+.video-box {
+    margin: 0 1%;
+    flex-grow: 1;
+    flex-basis: 0;
+    transition: .5s;
+}
+
+.video-box iframe {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .5s;
+}
+
+.video-box:hover {
+    flex-basis: 50%;
+}
+
+.active {
+    flex-basis: 50%;
+}
+
+.gallery:hover .active {
+    flex-basis: 0;
+}
+
+.video-box:nth-child(1):hover {
+    flex-basis: 50%;
+}
+
+.container-fluid {
+    padding: 4% 15%;
+}
+
+.colored-section {
+
+    color: #7ca8a1;
+}
+
+.img1 {
+    width: 110% !important;
+    height: 100% !important;
+}
+
+
+.myimages {
+    display: flex;
+    overflow: hidden;
+    height: 50vw;
+    background: #333;
+}
+
+.myimages img {
+    min-width: 325px !important;
+    max-width: 100%;
+    vertical-align: middle;
+    border: 2px solid white;
+    box-sizing: border-box;
+    transition: opacity .2s;
+}
+
+.myimages:hover img {
+    opacity: 0.5;
+}
+
+.myimages img:hover {
+    opacity: 1;
+}
+
+.first-column {
+    animation: var(--animation, none) 16s infinite linear;
+}
+
+.first-column:hover {
+    animation-play-state: paused;
+}
+
+.first-column:nth-of-type(odd) {
+    align-self: flex-end;
+    --direction: 50%;
+}
+
+@keyframes slide {
+    to {
+        -webkit-transform: translateY(var(--direction, -50%));
+        transform: translateY(var(--direction, -50%));
+    }
+}
+
+.btn-1 {
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 0 15px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #d3f2e9;
+    background: #d3f2e9;
+    color: #0a7b79;
+   
+}
+
+.btn-1:hover {
+    background: transparent;
+    border: 2px solid #0a7b79   ;
+}
+
+.text-black {
+    text-decoration: none !important;
+}
+
+
+
+.cus-con-fl {
+    margin-top: 7%;
+    margin-bottom: 5%;
+    background-color: #0a7b79;
+}
+
+.cus-fa-1 {
+    margin-top: 15%;
+    margin-left: 60%;
+}
+
+.fa-cus {
+    margin-top: 15%;
+}
+
+.cus-he {
+    height: 500px;
+}
+
+
+
+/*---------------------------------------------------------------------- /
+CARDS
+----------------------------------------------------------------------- */
+
+.card {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    margin-bottom: 30px;
+    border-radius: 6px;
+    color: rgba(0, 0, 0, 0.87);
+    background: #fff;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    min-height: 671px;
+}
+
+.card .card-image {
+    height: 60%;
+    position: relative;
+    overflow: hidden;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: -30px;
+    border-radius: 6px;
+    box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+}
+
+.card .card-image img {
+    width: 100%;
+    height: 100%;
+    min-height: 394px;
+    border-radius: 6px;
+    pointer-events: none;
+}
+
+.card .card-image .card-caption {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.3em;
+    text-shadow: 0 2px 5px rgba(33, 33, 33, 0.5);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.table {
+    margin-bottom: 0px;
+}
+
+.card .table {
+    padding: 15px 30px;
+}
+
+.card-blog {
+    margin-top: 30px;
+}
+
+.card-blog .card-caption {
+    margin-top: 5px;
+}
+
+.card-blog .card-image + .category {
+    margin-top: 20px;
+}
+
+

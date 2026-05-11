@@ -1,0 +1,264 @@
+{% load static %}
+
+<style>
+        .stats-card {
+        transition: all 0.3s ease;
+        border: none;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    }
+    
+    .stats-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    }
+    
+    .stats-icon {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 20px;
+        font-size: 32px;
+        color: white;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .stats-icon::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(45deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.3) 100%);
+        border-radius: 50%;
+    }
+    
+    .stats-icon i {
+        position: relative;
+        z-index: 1;
+    }
+    
+    .icon-students {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+    
+    .icon-participants {
+        background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    }
+    
+    .icon-leadership {
+        background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    }
+    
+    .icon-families {
+        background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+    }
+    
+    .icon-years {
+        background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+    }
+    
+    .stats-number {
+        font-size: 2.5rem;
+        font-weight: 700;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        margin-bottom: 10px;
+    }
+    
+    .stats-label {
+        font-size: 1.1rem;
+        font-weight: 500;
+        color: #6c757d;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    
+    .stats-divider {
+        width: 50px;
+        height: 3px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        margin: 15px auto;
+        border-radius: 2px;
+    }
+    
+    .counter-animate {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.6s ease;
+    }
+    
+    .counter-animate.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+    /* Responsive adjustments for 5 cards */
+    @media (min-width: 1200px) {
+        .col-stats {
+            flex: 0 0 20%;
+            max-width: 20%;
+        }
+    }
+    
+    @media (max-width: 1199px) and (min-width: 768px) {
+        .col-stats:nth-child(5) {
+            flex: 0 0 50%;
+            max-width: 50%;
+            margin: 0 auto;
+        }
+    }
+</style>
+
+<div class="container">
+    <h1 class="text-center mt-5">
+        Our Impact
+    </h1>
+
+    <div class="text-center fs-5">
+        Join us in fostering international collaboration and deepening global awareness of innovative community improvement models, research-based interventions, and sustainable best practices.
+        At Let Us Dream, we believe that fundamental transformation begins when people from diverse backgrounds come together with purpose and compassion.
+    </div>
+
+    <div class="row mt-5 mb-5 g-4 justify-content-center" id="stats-section">
+        <div class="col-sm-6 col-lg-3 col-xl-2 col-stats">
+            <div class="card stats-card h-100 counter-animate">
+                <div class="card-body text-center p-4">
+                    <div class="stats-icon icon-students">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <div class="stats-number" data-target="1614">0</div>
+                    <div class="stats-divider"></div>
+                    <div class="stats-label">Students</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-sm-6 col-lg-3 col-xl-2 col-stats">
+            <div class="card stats-card h-100 counter-animate">
+                <div class="card-body text-center p-4">
+                    <div class="stats-icon icon-participants">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="stats-number" data-target="3029">0</div>
+                    <div class="stats-divider"></div>
+                    <div class="stats-label">Participants</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-sm-6 col-lg-3 col-xl-2 col-stats">
+            <div class="card stats-card h-100 counter-animate">
+                <div class="card-body text-center p-4">
+                    <div class="stats-icon icon-leadership">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <div class="stats-number" data-target="246">0</div>
+                    <div class="stats-divider"></div>
+                    <div class="stats-label">Leadership</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-sm-6 col-lg-3 col-xl-2 col-stats">
+            <div class="card stats-card h-100 counter-animate">
+                <div class="card-body text-center p-4">
+                    <div class="stats-icon icon-families">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stats-number" data-target="3185">0</div>
+                    <div class="stats-divider"></div>
+                    <div class="stats-label">Families</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-sm-6 col-lg-3 col-xl-2 col-stats">
+            <div class="card stats-card h-100 counter-animate">
+                <div class="card-body text-center p-4">
+                    <div class="stats-icon icon-years">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <div class="stats-number" data-target="25">0</div>
+                    <div class="stats-divider"></div>
+                    <div class="stats-label">Years</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Function to animate numbers
+    function animateNumber(element, start, end, duration) {
+        const startTime = performance.now();
+        const startValue = start;
+        const endValue = end;
+        
+        function updateNumber(currentTime) {
+            const elapsed = currentTime - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            
+            // Use easing function for smooth animation
+            const easeOutQuart = 1 - Math.pow(1 - progress, 4);
+            const current = Math.floor(startValue + (endValue - startValue) * easeOutQuart);
+            
+            // Format number with commas
+            element.textContent = current.toLocaleString();
+            
+            if (progress < 1) {
+                requestAnimationFrame(updateNumber);
+            } else {
+                element.textContent = endValue.toLocaleString();
+            }
+        }
+        
+        requestAnimationFrame(updateNumber);
+    }
+    
+    // Intersection Observer for triggering animations when section is visible
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Add visible class to cards for entrance animation
+                const cards = entry.target.querySelectorAll('.counter-animate');
+                cards.forEach((card, index) => {
+                    setTimeout(() => {
+                        card.classList.add('visible');
+                    }, index * 150); // Stagger the card animations
+                });
+                
+                // Start number animations
+                const numberElements = entry.target.querySelectorAll('.stats-number');
+                numberElements.forEach((element, index) => {
+                    const targetValue = parseInt(element.getAttribute('data-target'));
+                    setTimeout(() => {
+                        animateNumber(element, 0, targetValue, 2000); // 2 second animation
+                    }, index * 300); // Stagger the number animations
+                });
+                
+                // Stop observing after animation has started
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.3 // Trigger when 30% of the section is visible
+    });
+    
+    // Start observing the stats section
+    const statsSection = document.getElementById('stats-section');
+    if (statsSection) {
+        observer.observe(statsSection);
+    }
+});
+</script>

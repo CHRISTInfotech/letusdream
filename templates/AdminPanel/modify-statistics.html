@@ -1,0 +1,93 @@
+{% extends 'head.html' %}
+
+
+{% block title %}
+Admin | Modify Statistics
+{% endblock title %}
+
+{% block content %}
+
+
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item "><a class="text-black text-decoration-none">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Modify Statistics</li>
+    </ol>
+</nav>
+
+<h1 class="h2">Statistics</h1>
+<div class="row">
+    <div class="col-12 col-xl-8 mb-4 mb-lg-0">
+        <div class="card">
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                
+                                <th scope="col">Field name</th>
+                                <th scope="col">Count</th>
+                                <th scope="col"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                               
+                                <td>Students</td>
+                                <td>
+                                    <div class="col-sm-10">
+                                        <input type="number" class="form-control" id="colFormLabel">
+                                      </div>
+                                </td>
+                                <td><a href="#" class="btn btn-sm btn-primary">Update</a></td>
+                            </tr>
+                            <tr>
+                                
+                                <td>Participants</td>
+                                <td>
+                                    <div class="col-sm-10">
+                                        <input type="number" class="form-control" id="colFormLabel">
+                                      </div>
+                                </td>
+                                <td><a href="#" class="btn btn-sm btn-primary">Update</a></td>
+                                
+                            </tr>
+                            <tr>
+                              
+                                <td>Leadership</td>
+                                <td>
+                                    <div class="col-sm-10">
+                                        <input type="number" class="form-control" id="colFormLabel">
+                                      </div>
+                                </td>
+                                <td><a href="#" class="btn btn-sm btn-primary">Update</a></td>
+                             
+                            </tr>
+                            <tr>
+                              
+                                <td>Families</td>
+                                <td>
+                                    <div class="col-sm-10">
+                                        <input type="number" class="form-control" id="colFormLabel">
+                                      </div>
+                                </td>
+                                <td><a href="#" class="btn btn-sm btn-primary">Update</a></td>
+                                
+                            </tr>
+ 
+                        </tbody>
+                    </table>
+                </div>
+                <a href="#" class="btn btn-block btn-light">Update all</a>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+
+
+
+
+{% endblock content %}

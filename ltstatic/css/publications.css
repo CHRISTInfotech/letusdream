@@ -1,0 +1,23 @@
+
+h1 {
+    text-align: center;
+    color: #0a7b79;
+    font-weight: bolder !important;
+}
+
+.section {
+    margin-top: 150px;
+    min-height: 500px;
+}
+
+div.dataTables_wrapper div.dataTables_length select {
+    width: 75px;
+    height: 40px;
+    display: inline-block;
+}
+
+thead input {
+    width: 100%;
+    padding: 3px;
+    box-sizing: border-box;
+}

@@ -1,0 +1,113 @@
+.view-container {
+
+    position: relative;
+    min-height: 100vh;
+
+}
+
+.view-container h1 {
+    font-size: 3rem;
+    font-weight: bolder;
+    padding: 15px;
+    color: #0a7b79;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.view-container .image-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 10px;
+}
+
+.view-container .image-container .image {
+    height: 150px;
+    width: 250px;
+    border: 10px solid #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .1);
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.view-container .image-container .image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: .2s linear;
+}
+
+.view-container .image-container .image:hover img {
+    transform: scale(1.1);
+}
+
+.view-container .popup-image {
+    position: fixed;
+    top: 5%;
+    left: 0;
+    background: rgba(0, 0, 0, 0.9);
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: none;
+}
+
+.view-container .popup-image span {
+    position: absolute;
+    top: 10%;
+    right: 10px;
+    font-size: 40px;
+    font-weight: bolder;
+    color: #fff;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.view-container .popup-image img {
+    position: absolute;
+    top: 53%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    width: 60%;
+    height: 80%;
+}
+
+@media(max-width:768px) {
+    .view-container .popup-image img {
+        width: 95%;
+
+    }
+}
+
+
+
+.blog-home2 .font-weight-medium {
+    font-weight: 500;
+  }
+  .blog-home2 .text-themecolor {
+    color: #316ce8;
+  }
+  
+  
+  
+  
+  .blog-home2 .date-pos {
+    right: 10px;
+    top: 10px;
+  }
+  
+  .blog-home2 .date-pos span {
+    font-size: 30px;
+    line-height: 30px;
+  }
+  .blog-home2 .bg-info-gradiant {
+      background: #188ef4;
+      background: -webkit-linear-gradient(legacy-direction(to right), #188ef4 0%, #316ce8 100%);
+      background: -webkit-gradient(linear, left top, right top, from(#188ef4), to(#316ce8));
+      background: -webkit-linear-gradient(left, #188ef4 0%, #316ce8 100%);
+      background: -o-linear-gradient(left, #188ef4 0%, #316ce8 100%);
+      background: linear-gradient(to right, #188ef4 0%, #316ce8 100%);
+  }
+  

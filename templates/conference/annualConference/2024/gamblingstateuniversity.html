@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+Grambling State Univsersity, Grambling
+{% endblock %}
+
+{% block extraStyles %}
+{% endblock extraStyles %}
+
+
+{% block links %}
+{% endblock links %}
+
+
+{% block content %}
+
+<nav aria-label="breadcrumb animated slideInDown" class="cus-breadcrumb">
+    <ol class="breadcrumb text-uppercase mb-0 bg-white">
+        <li class="breadcrumb-item"><a class="text-black text-decoration-none" href="{% url 'main' %}">Home</a></li>
+        <li class="breadcrumb-item"><a class="text-black text-decoration-none">Conferences</a></li>
+        <li class="breadcrumb-item"><a class="text-black text-decoration-none"
+                href="{% url 'annualConference' %}">Annual Conference</a></li>
+        <li class="breadcrumb-item  active" aria-current="page">Grambling State University, Grambling</li>
+    </ol>
+</nav>
+
+<h1 class="mb-4  fw-bold text-center fs-1 text-green text-uppercase heading-h3 mt-5">
+    Grambling State University, Grambling
+</h1>
+
+<div class="container">
+    <div class="mt-5 mb-5 text-center">
+        <div class="fw-bold mb-3">
+            Let Us Dream Conference at Grambling State Promotes Unity and Cultural Competence
+        </div>
+        <div>
+            <a href="https://www.gram.edu/news/index.php/2024/11/06/let-us-dream-conference-at-grambling-state-promotes-unity-and-cultural-competence/"
+                target="_blank" class="text-decoration-none">
+                <i class="fa-solid fa-up-right-from-square"></i>
+                Read More on Conference in News
+            </a>
+        </div>
+    </div>
+
+    <div class="mt-5 mb-5 text-center">
+        <div class="fw-bold mb-3">
+            "2024 Let Us Dream (LUD) Conference, a global initiative that fosters collaboration and drives meaningful
+            change across various sectors"
+        </div>
+        <div>
+            <a href="https://www.linkedin.com/posts/dr-fr-jose-c-c-2a33b0292_letusdream-globalcollaboration-communityimpact-activity-7260147522080235520-gEMY?utm_source=share&utm_medium=member_android"
+                target="_blank" class="text-decoration-none">
+                <i class="fa-solid fa-up-right-from-square"></i>
+                LinkedIn post by Fr Jose CC
+            </a>
+        </div>
+
+        <div class="row">
+            <div class="col-12 mt-5">
+                <iframe width="1280" height="720" src="https://www.youtube.com/embed/s36fCtfx8wM"
+                    title="Let Us Dream Conference 2024" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="col-12 mt-5">
+                <iframe src="https://www.youtube.com/embed/-u_rI3b3OCU?autoplay=1" width="100%" height="500px"
+                    frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+{% endblock %}

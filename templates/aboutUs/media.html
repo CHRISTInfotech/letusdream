@@ -1,0 +1,437 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    Media
+{% endblock %}
+
+{% block links %}
+{% endblock links %}
+
+{% block content %}
+    <!-- Page Header -->
+    <section class="">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-12">
+                   
+                    <h1 class="display-4 fw-bold mb-4">Media Center</h1>
+                    <p class="lead mb-3">
+                       Social Networks aren't about websites. They're about experiences
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Anual Report -->
+    <div class="content-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title mb-2">Annual Reports</h2>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="content-card text-center hover-lift h-100">
+                        <div class="publication-date bg-gradient-secondary text-dark rounded-custom-small p-2 mb-3">
+                            <small class="fw-bold">Annual Report 2024-25</small>
+                        </div>
+                        <a href="{% url 'annual-report' %}"
+                           class="text-decoration-none" target="_blank">
+                            <img src="{% static 'Annual Reports/img.png' %}" alt="Summer Camp 2025" class="img-fluid rounded-custom shadow-custom-small hover-scale">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Publications Section -->
+    <div class="content-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title mb-2">Publications</h2>
+                <p class="text-medium">Explore our latest research, reports, and community insights</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="content-card text-center hover-lift h-100">
+                        <div class="publication-date bg-gradient-primary text-white rounded-custom-small p-2 mb-3">
+                            <small class="fw-bold">Aug 01, 2025</small>
+                        </div>
+                        <a href="https://drive.google.com/file/d/1NAn1EU-_P9L1bj9gGXPlW5miqoM0hwc3/view?usp=sharing"
+                           class="text-decoration-none" target="_blank">
+                            <img src="{% static 'Publications/summercamp2025.png' %}"
+                                 alt="Summer Camp 2025" 
+                                 class="img-fluid rounded-custom shadow-custom-small hover-scale">
+                        </a>
+                        
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="content-card text-center hover-lift h-100">
+                        <div class="publication-date bg-gradient-primary text-white rounded-custom-small p-2 mb-3">
+                            <small class="fw-bold">Nov 05, 2023</small>
+                        </div>
+                        <a href="{% static 'Publications/SilverJubile.pdf' %}"
+                           class="text-decoration-none" target="_blank">
+                            <img src="{% static 'Publications/SilverJubileThumpnail.png' %}"
+                                 alt="Silver Jubilee" 
+                                 class="img-fluid rounded-custom shadow-custom-small hover-scale">
+                        </a>
+                        
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="content-card text-center hover-lift h-100">
+                        <div class="publication-date bg-gradient-primary text-white rounded-custom-small p-2 mb-3">
+                            <small class="fw-bold">Nov 05, 2023</small>
+                        </div>
+                        <a href="{% static 'Publications/Proceedings.pdf' %}"
+                           class="text-decoration-none" target="_blank">
+                            <img src="{% static 'Publications/ProceedingsThumpnail.png' %}"
+                                 alt="Conference Proceedings" 
+                                 class="img-fluid rounded-custom shadow-custom-small hover-scale">
+                        </a>
+                        
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="content-card text-center hover-lift h-100">
+                        <div class="publication-date bg-gradient-primary text-white rounded-custom-small p-2 mb-3">
+                            <small class="fw-bold">Nov 05, 2023</small>
+                        </div>
+                        <a href="https://drive.google.com/file/d/1mgFBqXMw9gSV8D5vAzKGG6W_TGu2_LhK/view?pli=1"
+                           class="text-decoration-none" target="_blank">
+                            <img src="{% static 'Publications/DreamsThumpnail.png' %}"
+                                 alt="DREAMS Publication" 
+                                 class="img-fluid rounded-custom shadow-custom-small hover-scale">
+                        </a>
+                        
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="row mt-5">
+            <div class="col-12">
+                <div class="d-flex justify-content-center justify-content-md-end">
+                    <a href="{% url 'testimonials' %}" class="btn btn-outline-primary btn-lg px-4 py-2 read-more-btn text-decoration-none">
+                        <span class="me-2">Read More</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div> -->
+        </div>
+    </div>
+
+    <!-- Press Release Section -->
+    <div class="content-section bg-light-gray">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title mb-2">Press Release</h2>
+                <p class="text-medium">Latest news and media coverage of our initiatives</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="content-card text-center hover-lift h-100">
+                        <div class="publication-date bg-gradient-secondary text-dark rounded-custom-small p-2 mb-3">
+                            <small class="fw-bold">Dec 25, 2024</small>
+                        </div>
+                        <img src="{% static 'Aboutus/Media/Press/lud news.png' %}" 
+                             class="img-fluid rounded-custom shadow-custom-small hover-scale"
+                             alt="Latest News">
+                        
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="content-card text-center hover-lift h-100">
+                        <div class="publication-date bg-gradient-secondary text-dark rounded-custom-small p-2 mb-3">
+                            <small class="fw-bold">Jul 25, 2015</small>
+                        </div>
+                        <img src="{% static 'Aboutus/Media/Press/tumb3.jpg' %}" 
+                             class="img-fluid rounded-custom shadow-custom-small hover-scale"
+                             alt="Press Coverage 2015">
+                       
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="content-card text-center hover-lift h-100">
+                        <div class="publication-date bg-gradient-secondary text-dark rounded-custom-small p-2 mb-3">
+                            <small class="fw-bold">Jul 27, 2016</small>
+                        </div>
+                        <img src="{% static 'Aboutus/Media/Press/tumb1.jpg' %}" 
+                             class="img-fluid rounded-custom shadow-custom-small hover-scale"
+                             alt="Press Coverage 2016">
+                        
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="content-card text-center hover-lift h-100">
+                        <div class="publication-date bg-gradient-secondary text-dark rounded-custom-small p-2 mb-3">
+                            <small class="fw-bold">Nov 02, 2017</small>
+                        </div>
+                        <img src="{% static 'Aboutus/Media/Press/tumb2.png' %}" 
+                             class="img-fluid rounded-custom shadow-custom-small hover-scale"
+                             alt="Press Coverage 2017">
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-5">
+            <div class="col-12">
+                <div class="d-flex justify-content-center justify-content-md-end">
+                    <a href="{% url 'press-release' %}" class="btn btn-outline-primary btn-lg px-4 py-2 read-more-btn text-decoration-none">
+                        <span class="me-2">Read More</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- Videos Section -->
+    <div class="content-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title mb-2">Videos</h2>
+                <p class="text-medium">Watch our community impact stories and program highlights</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="content-card hover-lift h-100">
+                        <div class="video-container">
+                            <div class="main-video-container">
+                                <iframe src="https://www.youtube.com/embed/cq7T8uUdPDQ" 
+                                        class="main-video-frame"
+                                        style="height: 250px;"
+                                        title="Let Us Dream Video 1"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen>
+                                </iframe>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="content-card hover-lift h-100">
+                        <div class="video-container">
+                            <div class="main-video-container">
+                                <iframe src="https://www.youtube.com/embed/cW_X3EKxkwg" 
+                                        class="main-video-frame"
+                                        style="height: 250px;"
+                                        title="Let Us Dream Video 2"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen>
+                                </iframe>
+                            </div>
+                        </div>
+                       
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="content-card hover-lift h-100">
+                        <div class="video-container">
+                            <div class="main-video-container">
+                                <iframe src="https://www.youtube.com/embed/n1lFnIgQSq8" 
+                                        class="main-video-frame"
+                                        style="height: 250px;"
+                                        title="Let Us Dream Video 3"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen>
+                                </iframe>
+                            </div>
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="row mt-5">
+                <div class="col-12">
+                    <div class="d-flex justify-content-center justify-content-md-end">
+                        <a href="{% url 'testimonials' %}" class="btn btn-outline-primary btn-lg px-4 py-2 read-more-btn text-decoration-none">
+                            <span class="me-2">Read More</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </div>
+
+    <!-- Photo Gallery Section -->
+    <div class="content-section bg-light-gray">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title mb-2">Photo Gallery</h2>
+                <p class="text-medium">Capturing moments from our community programs and events</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="content-card text-center hover-lift h-100">
+                        <img src="{% static 'Aboutus/Media/photoGallery/thum1.jpg' %}"
+                             class="img-fluid rounded-custom shadow-custom-small hover-scale mb-3"
+                             alt="Bangalore Gallery">
+                        <div class="gallery-label bg-gradient-primary text-white rounded-custom-small p-2">
+                            <small class="fw-bold">Bangalore Gallery</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="content-card text-center hover-lift h-100">
+                        <img src="{% static 'Aboutus/Media/photoGallery/thum2.jpg' %}"
+                             class="img-fluid rounded-custom shadow-custom-small hover-scale mb-3"
+                             alt="Changanacherry Gallery">
+                        <div class="gallery-label bg-gradient-primary text-white rounded-custom-small p-2">
+                            <small class="fw-bold">Changanacherry Gallery</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="content-card text-center hover-lift h-100">
+                        <img src="{% static 'Aboutus/Media/photoGallery/thum3.jpg' %}"
+                             class="img-fluid rounded-custom shadow-custom-small hover-scale mb-3"
+                             alt="Mannanam Gallery">
+                        <div class="gallery-label bg-gradient-primary text-white rounded-custom-small p-2">
+                            <small class="fw-bold">Mannanam Gallery</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="row mt-5">
+            <div class="col-12">
+                <div class="d-flex justify-content-center justify-content-md-end">
+                    <a href="{% url 'testimonials' %}" class="btn btn-outline-primary btn-lg px-4 py-2 read-more-btn text-decoration-none">
+                        <span class="me-2">Read More</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div> -->
+        </div>
+    </div>
+
+    <!-- Newsletters Section -->
+    <div class="content-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title mb-2">Newsletters</h2>
+                <p class="text-medium">Stay updated with our latest community news and program updates</p>
+            </div>
+
+            <div class="row g-4">
+
+                 <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="content-card text-center hover-lift h-100">
+                        <div class="publication-date bg-gradient-secondary text-dark rounded-custom-small p-2 mb-3">
+                            <small class="fw-bold">Dreams Newsletter MIC 2025-26</small>
+                        </div>
+                        <a href="{% static 'newsletters/2025/Dreams Newsletter MIC 2025-26.pdf' %}"
+                           target="_blank"
+                           class="text-decoration-none">
+                            <img src="{% static 'newsletters/2025/Dreams Newsletter MIC 2025-26.png' %}"
+                                class="img-fluid rounded-custom shadow-custom-small hover-scale" 
+                                alt="Dreams Newsletter MIC 2025-26">
+                        </a>                        
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="content-card text-center hover-lift h-100">
+                        <div class="publication-date bg-gradient-secondary text-dark rounded-custom-small p-2 mb-3">
+                            <small class="fw-bold">Kerala Newsletter 2025-26</small>
+                        </div>
+                        <a href="{% static '2025/newsletter/Kerala Newsletter.pdf' %}"
+                           target="_blank"
+                           class="text-decoration-none">
+                            <img src="{% static '2025/newsletter/Keralanewsletterface.png' %}"
+                                class="img-fluid rounded-custom shadow-custom-small hover-scale" 
+                                alt="Kerala Newsletter November 2025">
+                        </a>                        
+                    </div>
+                </div>
+
+                 <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="content-card text-center hover-lift h-100">
+                        <div class="publication-date bg-gradient-secondary text-dark rounded-custom-small p-2 mb-3">
+                            <small class="fw-bold">Nov 2025</small>
+                        </div>
+                        <a href="{% static 'newsletters/2025/2025vol2.pdf' %}"
+                           target="_blank"
+                           class="text-decoration-none">
+                            <img src="{% static 'newsletters/2025/2025vol2.png' %}"
+                                 class="img-fluid rounded-custom shadow-custom-small hover-scale" 
+                                 alt="Conference Newsletter Volume 2">
+                        </a>                        
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="content-card text-center hover-lift h-100">
+                        <div class="publication-date bg-gradient-secondary text-dark rounded-custom-small p-2 mb-3">
+                            <small class="fw-bold">Nov 2025</small>
+                        </div>
+                        <a href="{% static 'newsletters/2025/2025vol1.pdf' %}"
+                           target="_blank"
+                           class="text-decoration-none">
+                            <img src="{% static 'newsletters/2025/2025vol1.png' %}"
+                                 class="img-fluid rounded-custom shadow-custom-small hover-scale" 
+                                 alt="Conference Newsletter Volume 1">
+                        </a>                        
+                    </div>
+                </div>
+<!-- 
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="content-card text-center hover-lift h-100">
+                        <div class="publication-date bg-gradient-secondary text-dark rounded-custom-small p-2 mb-3">
+                            <small class="fw-bold">Sept 28, 2023</small>
+                        </div>
+                        <img src="{% static '2025/newsletter/NewsBulletin_Changanassery.png' %}"
+                             class="img-fluid rounded-custom shadow-custom-small hover-scale" 
+                             alt="Changanassery Newsletter">
+                        
+                    </div>
+                </div> -->
+
+               
+                <!-- <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="content-card text-center hover-lift h-100">
+                        <div class="publication-date bg-gradient-secondary text-dark rounded-custom-small p-2 mb-3">
+                            <small class="fw-bold">Oct 21, 2020</small>
+                        </div>
+                        <img src="{% static 'Aboutus/Media/Newsletter/dec2024.png' %}"
+                             class="img-fluid rounded-custom shadow-custom-small hover-scale" 
+                             alt="December 2024 Newsletter">
+                       
+                    </div>
+                </div> -->
+            </div>
+            <div class="row mt-5">
+            <div class="col-12">
+                <div class="d-flex justify-content-center justify-content-md-end">
+                    <a href="{% url 'newsletter' %}" class="btn btn-outline-primary btn-lg px-4 py-2 read-more-btn text-decoration-none">
+                        <span class="me-2">Read More</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+{% endblock %}

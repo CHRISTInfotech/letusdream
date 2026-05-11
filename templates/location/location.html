@@ -1,0 +1,176 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}{% if location.name %}{{ location.name|upper }}{% endif %}{% endblock %}
+
+{% block extraStyles %}
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="{% static 'css/location.css' %}" type="text/css">
+{% endblock extraStyles %}
+
+{% block content %}
+
+{# Breadcrumb Navigation #}
+{% if breadcrumb %}
+<nav aria-label="breadcrumb" class="bg-light py-2 mb-5">
+  <div class="container">
+    <ol class="breadcrumb mb-0">
+      {% for item in breadcrumb %}
+      <li class="breadcrumb-item {% if forloop.last %}active{% endif %}">
+        {% if item.url %}
+          <a href="{{ item.url }}"><i class="{{ item.icon }} me-1"></i>{{ item.name }}</a>
+        {% else %}
+          <i class="{{ item.icon }} me-1"></i>{{ item.name }}
+        {% endif %}
+      </li>
+      {% endfor %}
+    </ol>
+  </div>
+</nav>
+{% endif %}
+
+<div class="container modern-page">
+    {# Header Section #}
+    {% if location.title or location.subtitle %}
+    <header class="page-header">
+        <div class="header-content">
+            {% if location.title %}<h1>{{ location.title }}</h1>{% endif %}
+            {% if location.subtitle %}<p class="subtitle">{{ location.subtitle }}</p>{% endif %}
+        </div>
+    </header>
+    {% endif %}
+
+    {# Navigation Pills #}
+    {% if programs %}
+    <div class="page-container">
+        <nav class="nav-pills">
+            {% for program in programs %}
+                {% if program.id and program.title %}
+                <a href="#{{ program.id }}" class="nav-pill {% if forloop.first %}active{% endif %}">
+                    {{ program.title }}
+                </a>
+                {% endif %}
+            {% endfor %}
+        </nav>
+    </div>
+    {% endif %}
+
+    {# Main Content #}
+    <div class="page-container">
+        <div class="main-content">
+            {# Left Column - Program Descriptions #}
+            <div>
+                {% if programs %}
+                    {% for program in programs %}
+                        {% if program.id and program.description %}
+                        <section id="{{ program.id }}" class="program-section">
+                            <h2>{{ program.title }}</h2>
+                            {% for paragraph in program.description %}
+                                <p>{{ paragraph }}</p>
+                            {% endfor %}
+                        </section>
+                        {% endif %}
+                    {% endfor %}
+                {% endif %}
+            </div>
+
+            {# Right Column - Leadership #}
+            <aside>
+                {% if programs %}
+                    {% for program in programs %}
+                        {% if program.title and program.leadership %}
+                        <section class="leadership-section">
+                            <h3 class="leadership-title">{{ program.title }} Leadership</h3>
+                            {% for leader in program.leadership %}
+                                {% if leader.name or leader.role or leader.initials %}
+                                <div class="leader-card">
+                                     {# Display image if available, otherwise show initials #}
+                                    {% if leader.image %}
+                                        <div class="leader-avatar">
+                                            <img src="{{ leader.image }}" alt="{{ leader.name|default:'Leader' }}" class="leader-image">
+                                        </div>
+                                    {% elif leader.initials %}
+                                        <div class="leader-avatar">{{ leader.initials }}</div>
+                                    {% endif %}
+                                    {# Display name and role if available #}
+                                    <div class="leader-info">
+                                        {% if leader.name %}<h4>{{ leader.name }}</h4>{% endif %}
+                                        {% if leader.role %}<p>{{ leader.role }}</p>{% endif %}
+                                    </div>
+                                </div>
+                                {% endif %}
+                            {% endfor %}
+                        </section>
+                        {% endif %}
+                    {% endfor %}
+                {% endif %}
+            </aside>
+        </div>
+
+        {# Impact Section #}
+        {% if impact and impact.title and impact.stats %}
+        <section class="impact-section">
+            <h2 class="impact-title">{{ impact.title }}</h2>
+            <div class="impact-grid">
+                {% for stat in impact.stats %}
+                    {% if stat.number or stat.label %}
+                    <div class="impact-card">
+                        {% if stat.number %}<span class="impact-number">{{ stat.number }}</span>{% endif %}
+                        {% if stat.label %}<h3>{{ stat.label }}</h3>{% endif %}
+                    </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </section>
+        {% endif %}
+
+        {# Gallery Section #}
+        {% if gallery %}
+            {% if gallery.gallery_url or gallery.fb_url %}
+        <section class="gallery-section">
+            {% if gallery.title %}<h2 class="gallery-title">{{ gallery.title }}</h2>{% endif %}
+            <div class="gallery-actions">
+                {% if gallery.gallery_url and gallery.gallery_text %}
+                <a href="{{ gallery.gallery_url }}" class="btn btn-primary">
+                    <i class="fas fa-images"></i>
+                    {{ gallery.gallery_text }}
+                </a>
+                {% endif %}
+                {% if gallery.fb_url and gallery.fb_text %}
+                <a href="{{ gallery.fb_url }}" class="btn btn-outline">
+                    <i class="fab fa-facebook"></i>
+                    {{ gallery.fb_text }}
+                </a>
+                {% endif %}
+            </div>
+        </section>
+            {% endif %}
+        {% endif %}
+
+        {# Testimonials Section #}
+        {% include 'partials/_testimonials.html' %}
+
+        {# Contact Section #}
+        {% if contact and contact.items %}
+        <section class="contact-section">
+            {% if contact.title %}<h2 class="contact-title">{{ contact.title }}</h2>{% endif %}
+            <div class="contact-grid">
+                {% for item in contact.items %}
+                    {% if item.label and item.value %}
+                    <div class="contact-item">
+                        {% if item.icon %}
+                        <div class="contact-icon">
+                            <i class="{{ item.icon }}"></i>
+                        </div>
+                        {% endif %}
+                        <h4>{{ item.label }}</h4>
+                        <p>{{ item.value }}</p>
+                    </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </section>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}
