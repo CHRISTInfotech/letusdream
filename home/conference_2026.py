@@ -173,10 +173,10 @@ CONFERENCE_DATA26 = {
                 },
                 {
                     "role": "Health Convener",
-                    "name": "Ms. Amritha K",
-                    "designation": "Founder and Managing Director, Stepping Stones Center",
-                    "email": "amritha@steppingstonescenter.in",
-                    "image": "2026/triennial/TeamPhotos/K Amritha.jpg",
+                    "name": "Susan Abraham Joseph",
+                    "designation": "Er. Susan Joseph : M Tech\nDy. Chief Engineer(Retd.), KSEB",
+                    "email": "",
+                    "image": "2026/triennial/TeamPhotos/Susan Abraham Joseph.jpg",
                 },
                 {
                     "role": "Health Global Convener",

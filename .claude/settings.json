@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(Get-ChildItem -Path \"c:\\\\Projects\\\\letusdream\" -Depth 2)",
+      "Bash(Select-Object FullName)"
+    ]
+  }
+}
