@@ -244,11 +244,7 @@
                         <img src="{% static member.image %}" alt="{{ member.name }}">
                     </div>
                     <div class="committee-name">{{ member.name }}</div>
-<<<<<<< HEAD
-                    <div class="committee-designation">{{ member.designation }}</div>
-=======
                     <div class="committee-designation">{{ member.designation|linebreaksbr }}</div>
->>>>>>> a8bba6c046d3528162cbe43d2b3ff5bed7bb1973
                     <div class="committee-email">{{ member.email }}</div>
                 </div>
                 {% endfor %}
