@@ -1,72 +1,68 @@
 {% load static %}
 
-{% block links %}
-    <link rel="stylesheet" href="{% static 'css/2025/testimonials.css' %}" type="text/css">
-    <style>
-        .testimonial-card {
-            transition: all 0.3s ease;
-            border: none;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        
-        .testimonial-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-        }
-        
-        .testimonial-avatar {
-            width: 80px;
-            height: 80px;
-            object-fit: cover;
-            border: 4px solid #fff;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        
-        .quote-icon {
-            font-size: 3rem;
-            color: #007bff;
-            opacity: 0.3;
-        }
-        
-        .testimonial-text {
-            font-style: italic;
-            line-height: 1.6;
-            color: #555;
-        }
-        
-        .author-name {
-            font-weight: 600;
-            color: #333;
-        }
-        
-        .section-title {
-            color: #1e3a8a;
-        
+<link rel="stylesheet" href="{% static 'css/2025/testimonials.css' %}" type="text/css">
+<style>
+    .testimonial-card {
+        transition: all 0.3s ease;
+        border: none;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .testimonial-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .testimonial-avatar {
+        width: 80px;
+        height: 80px;
+        object-fit: cover;
+        border: 4px solid #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .quote-icon {
+        font-size: 3rem;
+        color: #007bff;
+        opacity: 0.3;
+    }
+
+    .testimonial-text {
+        font-style: italic;
+        line-height: 1.6;
+        color: #555;
+    }
+
+    .author-name {
+        font-weight: 600;
+        color: #333;
+    }
+
+    .section-title {
+        color: #1e3a8a;
         margin-bottom: 2rem;
         text-align: center;
+    }
+
+    .read-more-btn {
+        transition: all 0.3s ease;
+        font-weight: 500;
+    }
+
+    .read-more-btn:hover {
+        transform: translateX(5px);
+    }
+
+    @media (max-width: 768px) {
+        .testimonial-card {
+            margin-bottom: 2rem;
         }
-        
-        
-        .read-more-btn {
-            transition: all 0.3s ease;
-            font-weight: 500;
+
+        .section-title {
+            font-size: 2rem;
         }
-        
-        .read-more-btn:hover {
-            transform: translateX(5px);
-        }
-        
-        @media (max-width: 768px) {
-            .testimonial-card {
-                margin-bottom: 2rem;
-            }
-            
-            .section-title {
-                font-size: 2rem;
-            }
-        }
-    </style>
-{% endblock links %}
+    }
+</style>
 
 <!-- Testimonials Section -->
 <section class="py-5 bg-white">
@@ -80,106 +76,40 @@
                 </p>
             </div>
         </div>
-        
+
         <!-- Testimonials Grid -->
         <div class="row g-4 mb-5">
-            <!-- Testimonial 1 -->
+            {% for testimonial in testimonials %}
             <div class="col-lg-4 col-md-6 col-12">
                 <div class="card testimonial-card h-100 border-0 rounded-4 p-4">
                     <!-- Quote Icon -->
                     <div class="text-center mb-3">
                         <i class="fas fa-quote-left quote-icon"></i>
                     </div>
-                    
+
                     <!-- Avatar -->
                     <div class="text-center mb-4">
-                        <img src="{% static 'testimonial/Janet.jpg' %}" 
-                             alt="Canaan Charrior" 
+                        <img src="{% static testimonial.image %}"
+                             alt="{{ testimonial.name }}"
                              class="rounded-circle testimonial-avatar">
                     </div>
-                    
+
                     <!-- Testimonial Content -->
                     <div class="card-body text-center p-0 flex-grow-1 d-flex flex-column">
                         <blockquote class="testimonial-text mb-4 flex-grow-1">
-                            I've witnessed the program change lives in a way that I have never seen any
-                            program with similar goals could ever even imagine. Everyone should have a chance to see that they
-                            can do anything, and I will help in any way I can to make that happen.
+                            {{ testimonial.content|truncatechars:300 }}
                         </blockquote>
-                        
+
                         <!-- Author Info -->
                         <div class="mt-auto">
-                            <div class="author-name h6 mb-1">Canaan Charrior</div>
-                           
+                            <div class="author-name h6 mb-1">{{ testimonial.name }}</div>
                         </div>
                     </div>
                 </div>
             </div>
-            
-            <!-- Testimonial 2 -->
-            <div class="col-lg-4 col-md-6 col-12">
-                <div class="card testimonial-card h-100 border-0 rounded-4 p-4">
-                    <!-- Quote Icon -->
-                    <div class="text-center mb-3">
-                        <i class="fas fa-quote-left quote-icon"></i>
-                    </div>
-                    
-                    <!-- Avatar -->
-                    <div class="text-center mb-4">
-                        <img src="{% static 'testimonial/Kaici-Gordon_2.jpeg' %}" 
-                             alt="Robin Sehon" 
-                             class="rounded-circle testimonial-avatar">
-                    </div>
-                    
-                    <!-- Testimonial Content -->
-                    <div class="card-body text-center p-0 flex-grow-1 d-flex flex-column">
-                        <blockquote class="testimonial-text mb-4 flex-grow-1">
-                            Really innovative concept.. I was looking forward for such curated
-                            content and i got more than i was expecting. I am so far very thrilled with overall
-                            experience and improvement.
-                        </blockquote>
-                        
-                        <!-- Author Info -->
-                        <div class="mt-auto">
-                            <div class="author-name h6 mb-1">Robin Sehon</div>
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Testimonial 3 -->
-            <div class="col-lg-4 col-md-6 col-12">
-                <div class="card testimonial-card h-100 border-0 rounded-4 p-4">
-                    <!-- Quote Icon -->
-                    <div class="text-center mb-3">
-                        <i class="fas fa-quote-left quote-icon"></i>
-                    </div>
-                    
-                    <!-- Avatar -->
-                    <div class="text-center mb-4">
-                        <img src="{% static 'testimonial/Hope-Lenior.png' %}" 
-                             alt="Hope LeNoir" 
-                             class="rounded-circle testimonial-avatar">
-                    </div>
-                    
-                    <!-- Testimonial Content -->
-                    <div class="card-body text-center p-0 flex-grow-1 d-flex flex-column">
-                        <blockquote class="testimonial-text mb-4 flex-grow-1">
-                            I was organizing my closet and came across my DREAMS tshirt. This
-                            reminded me of how much fun I had with your students and how your volunteer team made me
-                            feel extremely welcome. Thank you for allowing me to be a part of the DREAMS.
-                        </blockquote>
-                        
-                        <!-- Author Info -->
-                        <div class="mt-auto">
-                            <div class="author-name h6 mb-1">Hope LeNoir</div>
-                           
-                        </div>
-                    </div>
-                </div>
-            </div>
+            {% endfor %}
         </div>
-        
+
         <!-- Read More Button -->
         <div class="row">
             <div class="col-12">
@@ -191,8 +121,6 @@
                 </div>
             </div>
         </div>
-        
-        <!-- Optional: Statistics Section -->
-        
+
     </div>
 </section>
