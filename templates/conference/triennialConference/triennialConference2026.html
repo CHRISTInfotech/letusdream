@@ -1,362 +1,621 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title %}
-{{ conference_data.page.title }}
-{% endblock title %}
+{% block title %}{{ conference_data.page.title }}{% endblock title %}
 
 {% block extraStyles %}
 <link rel="stylesheet" href="{% static '2026/triennial/triennialConference2026.css' %}">
+<style>
+  /* ── Fill any gap between header & hero with same navy ── */
+  body { background-color: #0c2852 !important; }
+
+  /* ── Breadcrumb overlaid ON the hero — floats inside the hero dark field ── */
+  .main-content { position: relative; margin-top: -20px; }
+  .breadcrumb-container {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important; right: 0 !important;
+    z-index: 20 !important;
+    box-shadow: none !important;   /* no shadow when sitting inside hero */
+  }
+  /* hero fills from right below navbar — breadcrumb floats over the top 59px */
+  .breadcrumb-container + .content-wrapper,
+  .breadcrumb-container + * { margin-top: 0 !important; }
+
+  /* ══════════════════════════════════════
+     BREADCRUMB  —  premium hero-style bar
+  ══════════════════════════════════════ */
+  .breadcrumb-container {
+    background: linear-gradient(140deg, #0c2852 0%, #0e3470 55%, #0a2a5e 100%);
+    padding: 0 !important;
+    margin: 0 !important;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 6px 32px rgba(0,0,0,0.40);
+  }
+
+  /* Hero grid-line overlay */
+  .breadcrumb-container::before {
+    content: '';
+    position: absolute; inset: 0;
+    pointer-events: none;
+    background-image:
+      linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+    background-size: 56px 56px;
+    z-index: 0;
+  }
+
+  /* No bottom border/glow line on breadcrumb */
+
+  /* Ambient blue-orb glow (top-right, like hero orb-1) */
+  .breadcrumb-container .container::before {
+    content: '';
+    position: absolute;
+    top: -60px; right: -60px;
+    width: 220px; height: 220px;
+    background: radial-gradient(circle, rgba(12,82,161,.35) 0%, transparent 70%);
+    filter: blur(50px);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .breadcrumb-container .container {
+    position: relative; z-index: 2;
+    margin-top: 0 !important;
+    padding-top: 1.5rem;
+    padding-bottom: 0.75rem;
+  }
+
+  .breadcrumb-modern {
+    background: transparent !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+    backdrop-filter: none !important;
+  }
+  .breadcrumb-modern::before { display: none; }
+
+  /* ── Crumb items ── */
+  .breadcrumb-item a {
+    background: rgba(255,255,255,.05) !important;
+    color: rgba(255,255,255,.72) !important;
+    border: 1px solid rgba(255,255,255,.09) !important;
+    border-radius: 8px !important;
+    font-size: .75rem !important;
+    font-weight: 600;
+    letter-spacing: .07em;
+    text-transform: uppercase;
+    padding: 7px 16px !important;
+    transition: all .25s cubic-bezier(.4,0,.2,1) !important;
+    backdrop-filter: blur(8px);
+  }
+  .breadcrumb-item a i {
+    color: #92ed26 !important;
+    font-size: .72rem !important;
+    margin-right: 6px !important;
+  }
+  .breadcrumb-item a:hover {
+    background: rgba(146,237,38,.10) !important;
+    color: #92ed26 !important;
+    border-color: rgba(146,237,38,.30) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 18px rgba(146,237,38,.18) !important;
+  }
+
+  /* ── Active (current page) ── */
+  .breadcrumb-item.active {
+    background: rgba(146,237,38,.12) !important;
+    color: #92ed26 !important;
+    border: 1px solid rgba(146,237,38,.32) !important;
+    border-radius: 8px !important;
+    font-size: .75rem !important;
+    font-weight: 700;
+    letter-spacing: .07em;
+    text-transform: uppercase;
+    padding: 7px 16px !important;
+    box-shadow: 0 0 20px rgba(146,237,38,.16), inset 0 0 12px rgba(146,237,38,.06) !important;
+  }
+  .breadcrumb-item.active i {
+    color: #92ed26 !important;
+    margin-right: 6px !important;
+  }
+
+  /* ── Separator ── */
+  .breadcrumb-separator {
+    color: rgba(146,237,38,.45) !important;
+    font-size: .9rem;
+    opacity: 1 !important;
+    margin: 0 !important;
+  }
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 {% endblock extraStyles %}
 
 {% block content %}
 <div class="conference-2026-page">
-    <section class="section-shell">
-        <div class="container">
-            <div class="hero-panel">
-                <div class="row g-4 align-items-center">
-                    <div class="col-lg-12">
 
-                        <div class="hero-secondary-content">
-                            <div class="hero-title font-primary">LET US DREAM</div>
-                            <div class="hero-subtitle">Triennial International Community Conference 2026</div>
-                        </div>
+  <!-- ══════════════════════════════════════
+       HERO
+  ══════════════════════════════════════ -->
+  <section class="lud-hero">
+    <div class="lud-hero__grid-lines" aria-hidden="true"></div>
+    <div class="lud-hero__orb lud-hero__orb--1" aria-hidden="true"></div>
+    <div class="lud-hero__orb lud-hero__orb--2" aria-hidden="true"></div>
 
-                        <div class="hero-main-content mt-5">
-                            <h1 class="hero-main-title">Local Wisdom, Global Influence</h1>
-                            <h2 class="hero-main-subtitle">Resilient Glocal Communities for Meaningful Humanity</h2>
-                        </div>
+    <div class="container position-relative" style="z-index:2">
+      <div class="row align-items-center gy-5">
 
-                        <p class="hero-copy mt-5">
-                            Join a confluence of speakers, universities, community partners, and volunteers for a
-                            transnational gathering shaped by local wisdom, meaningful service, and collaborative
-                            action.
-                        </p>
+        <!-- Left copy -->
+        <div class="col-lg-7">
+          <div class="lud-hero__badge">
+            <span class="lud-hero__badge-dot"></span>
+            3rd Triennial International Community Conference
+          </div>
+          <p class="lud-hero__eyebrow">
+            <i class="fas fa-calendar-alt me-2"></i>
+            {{ conference_data.page.dates }} &nbsp;·&nbsp;
+            <i class="fas fa-map-marker-alt mx-2"></i>
+            {{ conference_data.page.venue }}
+          </p>
+          <h1 class="lud-hero__title font-primary">
+            LET US<em>DREAM</em>
+          </h1>
+          <h2 class="lud-hero__subtitle">{{ conference_data.page.theme }}</h2>
+          <p class="lud-hero__tagline">{{ conference_data.page.tagline }}</p>
 
-                        <div class="hero-meta">
-                            <div class="meta-box">
-                                <div class="meta-label">Dates</div>
-                                <div class="meta-value">{{ conference_data.page.dates }}</div>
-                            </div>
-                            <div class="meta-box">
-                                <div class="meta-label">Hosted By</div>
-                                <div class="meta-value">{{ conference_data.page.venue }}</div>
-                            </div>
-                            <div class="meta-box meta-box-action">
-                                <a href="{{ conference_data.page.registration_link }}"
-                                    class="btn btn-light btn-sm meta-cta" target="_blank" rel="noopener">
-                                    <i class="fas fa-user-plus me-2"></i>
-                                    Register Now
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="highlight-strip">
-                    <div class="highlight-item">
-                        <span class="highlight-value">{{ conference_data.highlights.speakers }}</span>
-                        <span class="highlight-label">Speakers</span>
-                    </div>
-                    <div class="highlight-item">
-                        <span class="highlight-value">{{ conference_data.highlights.countries }}</span>
-                        <span class="highlight-label">Countries</span>
-                    </div>
-                    <div class="highlight-item">
-                        <span class="highlight-value">{{ conference_data.highlights.universities }}</span>
-                        <span class="highlight-label">Universities</span>
-                    </div>
-                    <div class="highlight-item">
-                        <span class="highlight-value">
-                            {{ conference_data.highlights.community_service_organizations }}
-                        </span>
-                        <span class="highlight-label">Community Partners</span>
-                    </div>
-                </div>
+          <div class="lud-hero__meta-row">
+            <div class="lud-hero__meta-chip">
+              <i class="fas fa-calendar-check"></i>
+              <span>{{ conference_data.page.dates }}</span>
             </div>
+            <div class="lud-hero__meta-chip">
+              <i class="fas fa-university"></i>
+              <span>{{ conference_data.page.venue }}</span>
+            </div>
+            <div class="lud-hero__meta-chip">
+              <i class="fas fa-users"></i>
+              <span>150+ Volunteers · 8 Countries</span>
+            </div>
+          </div>
+
+          <div class="lud-hero__cta-group">
+            <a href="{{ conference_data.page.registration_link }}" class="lud-btn lud-btn--accent" target="_blank" rel="noopener">
+              <i class="fas fa-user-plus"></i> Register for Free
+            </a>
+            <a href="#about" class="lud-btn lud-btn--outline">
+              <i class="fas fa-info-circle"></i> Learn More
+            </a>
+          </div>
         </div>
-    </section>
 
-    <section class="section-shell">
-        <div class="container">
-            <div class="mb-4">
-                <div class="section-heading-row">
-                    <div class="section-heading-pill section-heading-pill-plain">
-                        <i class="fas fa-info-circle"></i>
-                        <span>{{ conference_data.about.heading }}</span>
-                    </div>
-                    <div class="section-heading-line" aria-hidden="true"></div>
-                </div>
-            </div>
-
-            <div class="about-grid">
-                <div class="vision-grid">
-                    <div class="vision-card">
-                        <h3 class="font-primary">About The Conference</h3>
-                        <p>{{ conference_data.about.intro }}</p>
-                    </div>
-                    <div class="vision-card">
-                        <h3 class="font-primary">Why Triennial 2026</h3>
-                        <p>{{ conference_data.about.overview }}</p>
-                    </div>
-                </div>
-                <div class="vision-grid">
-                    <div class="vision-card">
-                        <h3 class="font-primary">Our Vision</h3>
-                        <p>{{ conference_data.about.vision }}</p>
-                    </div>
-                    <div class="vision-card">
-                        <h3 class="font-primary">Our Mission</h3>
-                        <p>{{ conference_data.about.mission }}</p>
-                    </div>
-                </div>
-            </div>
+        <!-- Right faded logo -->
+        <div class="col-lg-5 d-flex align-items-center justify-content-center">
+          <div class="lud-hero__faded-logo" aria-hidden="true">
+            <img src="{% static 'logo/logo.png' %}" alt="">
+          </div>
         </div>
-    </section>
+      </div><!-- /row -->
 
-    <section class="section-shell">
-        <div class="container">
-            <div class="mb-4">
-                <div class="section-heading-row">
-                    <div class="section-heading-pill section-heading-pill-plain">
-                        <i class="fas fa-hourglass-half"></i>
-                        <span>History</span>
-                    </div>
-                    <div class="section-heading-line" aria-hidden="true"></div>
-                </div>
+      <!-- Stats strip -->
+      <div class="lud-stats">
+        <div class="row g-0 text-center">
+          <div class="col-6 col-md-3">
+            <div class="lud-stats__item">
+              <div class="lud-stats__val">{{ conference_data.highlights.speakers }}</div>
+              <div class="lud-stats__lbl">Speakers</div>
             </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="lud-stats__item">
+              <div class="lud-stats__val">{{ conference_data.highlights.countries }}</div>
+              <div class="lud-stats__lbl">Countries</div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="lud-stats__item">
+              <div class="lud-stats__val">{{ conference_data.highlights.universities }}</div>
+              <div class="lud-stats__lbl">Universities</div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="lud-stats__item">
+              <div class="lud-stats__val">{{ conference_data.highlights.community_service_organizations }}</div>
+              <div class="lud-stats__lbl">Community Partners</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!-- /container -->
+  </section>
 
-            <div class="history-grid">
-                {% for item in conference_data.history %}
-                <div class="history-card">
-                    <div class="history-year">{{ item.year }}</div>
-                    <div class="history-title">{{ item.title }}</div>
+  <!-- ══════════════════════════════════════
+       ABOUT
+  ══════════════════════════════════════ -->
+  <section class="lud-section" id="about">
+    <div class="container">
+      <div class="lud-section__head fade-up mb-5">
+        <span class="lud-label">
+          <i class="fas fa-info-circle me-2"></i>{{ conference_data.about.heading }}
+        </span>
+        <h2 class="lud-section__title font-primary">About the <em>Conference</em></h2>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3 fade-up">
+          <div class="lud-vcard">
+            <div class="lud-vcard__icon"><i class="fas fa-info-circle"></i></div>
+            <h4 class="font-primary">About LUD</h4>
+            <p>{{ conference_data.about.intro }}</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 fade-up">
+          <div class="lud-vcard">
+            <div class="lud-vcard__icon"><i class="fas fa-star"></i></div>
+            <h4 class="font-primary">Why Triennial 2026</h4>
+            <p>{{ conference_data.about.overview }}</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 fade-up">
+          <div class="lud-vcard">
+            <div class="lud-vcard__icon"><i class="fas fa-eye"></i></div>
+            <h4 class="font-primary">Our Vision</h4>
+            <p>{{ conference_data.about.vision }}</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 fade-up">
+          <div class="lud-vcard">
+            <div class="lud-vcard__icon"><i class="fas fa-bullseye"></i></div>
+            <h4 class="font-primary">Our Mission</h4>
+            <p>{{ conference_data.about.mission }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       HISTORY
+  ══════════════════════════════════════ -->
+  <section class="lud-section lud-section--alt" id="history">
+    <div class="container">
+      <div class="lud-section__head fade-up mb-5">
+        <span class="lud-label"><i class="fas fa-hourglass-half me-2"></i>History</span>
+        <h2 class="lud-section__title font-primary">Our <em>History</em></h2>
+      </div>
+      <div class="lud-timeline">
+        {% for item in conference_data.history %}
+        <div class="lud-timeline__item fade-up {% if forloop.last %}lud-timeline__item--current{% endif %}">
+          <div class="lud-timeline__dot"></div>
+          <div class="lud-timeline__card {% if forloop.last %}lud-timeline__card--current{% endif %}">
+            <div class="lud-timeline__year">{{ item.year }}</div>
+            <div class="lud-timeline__venue">{{ item.title }}</div>
+            <ul>
+              {% for point in item.points %}
+              <li>{{ point }}</li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       BIG PICTURE
+  ══════════════════════════════════════ -->
+  <section class="lud-section">
+    <div class="container">
+      <div class="lud-section__head fade-up mb-5">
+        <span class="lud-label"><i class="fas fa-hand-holding-heart me-2"></i>The Big Picture</span>
+        <h2 class="lud-section__title font-primary">Who Can <em>Participate?</em></h2>
+      </div>
+      <div class="row g-4">
+        <div class="col-lg-5 fade-up">
+          <div class="lud-dark-card h-100">
+            <h4 class="font-primary"><i class="fas fa-users me-2"></i>Who Can Participate</h4>
+            <ul>
+              {% for item in conference_data.big_picture.who_can_participate %}
+              <li>{{ item }}</li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-7">
+          <div class="row g-4 h-100">
+            <div class="col-12 fade-up">
+              <div class="lud-dark-card lud-dark-card--gradient">
+                <h4 class="font-primary"><i class="fas fa-gem me-2"></i>Unique Value Propositions</h4>
+                <div class="row">
+                  <div class="col-sm-6">
                     <ul>
-                        {% for point in item.points %}
-                        <li>{{ point }}</li>
-                        {% endfor %}
+                      {% for item in conference_data.big_picture.unique_value_propositions %}
+                      {% if forloop.counter <= 4 %}
+                      <li>{{ item }}</li>
+                      {% endif %}
+                      {% endfor %}
                     </ul>
+                  </div>
+                  <div class="col-sm-6">
+                    <ul>
+                      {% for item in conference_data.big_picture.unique_value_propositions %}
+                      {% if forloop.counter > 4 %}
+                      <li {% if forloop.last %}class="lud-dark-card__free"{% endif %}>{{ item }}</li>
+                      {% endif %}
+                      {% endfor %}
+                    </ul>
+                  </div>
                 </div>
-                {% endfor %}
+              </div>
             </div>
-
-            <div class="mt-5">
-                <div class="section-heading-row">
-                    <div class="section-heading-pill section-heading-pill-plain">
-                        <i class="fas fa-hand-holding-heart"></i>
-                        <span>The Big Picture</span>
-                    </div>
-                    <div class="section-heading-line" aria-hidden="true"></div>
-                </div>
-            </div>
-
-            <div class="big-picture-grid">
-                <div class="big-picture-left-stack">
-                    <div class="glass-card wide-card">
-                        <div class="card-title">Who Can Participate?</div>
-                        <ul class="bullets">
-                            {% for item in conference_data.big_picture.who_can_participate %}
-                            <li>{{ item }}</li>
-                            {% endfor %}
-                        </ul>
-                    </div>
-
-                    {% if conference_data.big_picture.how_to_participate %}
-                    <div class="glass-card wide-card">
-                        <div class="card-title">How To Participate</div>
-                        <ul class="bullets">
-                            {% for item in conference_data.big_picture.how_to_participate %}
-                            <li>{{ item }}</li>
-                            {% endfor %}
-                        </ul>
-                    </div>
-                    {% endif %}
-                </div>
-
-                <div class="big-picture-right-stack">
-                    <div class="glass-card">
-                        <div class="card-title">Unique Value Propositions</div>
-                        <ul class="bullets">
-                            {% for item in conference_data.big_picture.unique_value_propositions %}
-                            <li>{{ item }}</li>
-                            {% endfor %}
-                        </ul>
-                    </div>
-
-                    <div class="glass-card">
-                        <div class="card-title">What Is In It For You?</div>
-                        <ul class="bullets">
-                            {% for item in conference_data.big_picture.benefits %}
-                            <li>{{ item }}</li>
-                            {% endfor %}
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="section-shell">
-        <div class="container">
-            <div class="mb-4">
-                <div class="section-heading-row">
-                    <div class="section-heading-pill section-heading-pill-plain">
-                        <i class="fas fa-file-signature"></i>
-                        <span>{{ conference_data.theme_concept_note.heading }}</span>
-                    </div>
-                    <div class="section-heading-line" aria-hidden="true"></div>
-                </div>
-            </div>
-            <div class="theme-card ">
-                <div class="theme-header mb-5">
-                    <div class="theme-heading">{{ conference_data.theme_concept_note.subheading }}</div>
-                    <div class="theme-tagline">{{ conference_data.theme_concept_note.tagline }}</div>
-                </div>
-                {% for paragraph in conference_data.theme_concept_note.paragraphs %}
-                <p>{{ paragraph }}</p>
-                {% endfor %}
-            </div>
-        </div>
-    </section>
-
-    {% for section in conference_data.core_committee_sections %}
-    <section class="section-shell">
-        <div class="container">
-            <div class="mb-4">
-                <div class="section-heading-row">
-                    <div class="section-heading-pill section-heading-pill-plain">
-                        <i class="fas fa-hands-helping"></i>
-                        <span>{{ section.title }}</span>
-                    </div>
-                    <div class="section-heading-line" aria-hidden="true"></div>
-                </div>
-            </div>
-
-            <div class="committee-grid">
-                {% for member in section.members %}
-                <div class="committee-card">
-                    <div class="committee-role">{{ member.role }}</div>
-                    <div class="committee-photo">
-                        <img src="{% static member.image %}" alt="{{ member.name }}">
-                    </div>
-                    <div class="committee-name">{{ member.name }}</div>
-                    <div class="committee-designation">{{ member.designation|linebreaksbr }}</div>
-                    <div class="committee-email">{{ member.email }}</div>
-                </div>
-                {% endfor %}
-            </div>
-        </div>
-    </section>
-    {% endfor %}
-
-    <section class="section-shell">
-        <div class="container">
-            <div class="mb-4">
-                <div class="section-heading-row">
-                    <div class="section-heading-pill section-heading-pill-plain">
-                        <i class="fas fa-user-friends"></i>
-                        <span>Advisory Team</span>
-                    </div>
-                    <div class="section-heading-line" aria-hidden="true"></div>
-                </div>
-            </div>
-
-            <div class="advisory-grid">
-                {% for member in conference_data.advisory_team %}
-                <div class="advisory-card">
-                    <div class="advisory-name">{{ member.name }}</div>
-                    <div class="advisory-designation">{{ member.designation }}</div>
-                    {% if member.email %}
-                    <div class="advisory-email">{{ member.email }}</div>
-                    {% endif %}
-                </div>
-                {% endfor %}
-            </div>
-        </div>
-    </section>
-
-    <section class="section-shell">
-        <div class="container">
-            <div class="mb-4">
-                <div class="section-heading-row">
-                    <div class="section-heading-pill section-heading-pill-plain">
-                        <i class="fas fa-network-wired"></i>
-                        <span>Partnering Organizations</span>
-                    </div>
-                    <div class="section-heading-line" aria-hidden="true"></div>
-                </div>
-            </div>
-
-            <div class="logo-wall">
-                <div class="logo-grid">
-                    {% for logo in conference_data.partners %}
-                    <div class="logo-item">
-                        <img src="{% static logo.image %}" alt="{{ logo.name }}">
-                    </div>
+            <div class="col-12 fade-up">
+              <div class="lud-dark-card lud-dark-card--deep">
+                <h4 class="font-primary"><i class="fas fa-gift me-2"></i>What Is In It For You?</h4>
+                <ul>
+                  {% for item in conference_data.big_picture.benefits %}
+                  <li>{{ item }}</li>
+                  {% endfor %}
+                </ul>
+                {% if conference_data.big_picture.how_to_participate %}
+                <div class="mt-3 pt-3" style="border-top:1px solid rgba(255,255,255,0.1)">
+                  <h6 class="font-primary" style="color:var(--lud-accent);margin-bottom:10px">How To Participate</h6>
+                  <ul>
+                    {% for item in conference_data.big_picture.how_to_participate %}
+                    <li>{{ item }}</li>
                     {% endfor %}
+                  </ul>
                 </div>
+                {% endif %}
+              </div>
             </div>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <section class="section-shell">
-        <div class="container">
-            <div class="mb-4">
-                <div class="section-heading-row">
-                    <div class="section-heading-pill section-heading-pill-plain">
-                        <i class="fas fa-comments"></i>
-                        <span>Testimonials</span>
-                    </div>
-                    <div class="section-heading-line" aria-hidden="true"></div>
-                </div>
-            </div>
+  <!-- ══════════════════════════════════════
+       THEME CONCEPT NOTE  (dark section — all text explicitly white)
+  ══════════════════════════════════════ -->
+  <section class="lud-section lud-section--dark" id="theme">
+    <div class="container">
+      <div class="row gy-5 align-items-start">
 
-            <div class="testimonial-grid">
-                {% for item in conference_data.testimonials %}
-                <div class="testimonial-card">
-                    <p>{{ item.quote }}</p>
-                    <div class="testimonial-name">{{ item.name }}</div>
-                    <div class="testimonial-title">{{ item.title }}</div>
-                </div>
-                {% endfor %}
+        <!-- Sticky side panel -->
+        <div class="col-lg-4 fade-up">
+          <span class="lud-label lud-label--light">
+            <i class="fas fa-file-signature me-2"></i>
+            {{ conference_data.theme_concept_note.heading }}
+          </span>
+          <h2 class="lud-section__title lud-section__title--white font-primary">
+            {{ conference_data.theme_concept_note.subheading }}
+          </h2>
+          <p class="lud-theme-tagline">{{ conference_data.theme_concept_note.tagline }}</p>
+
+          <!-- HUMANity pills -->
+          <div class="mt-4">
+            <p class="lud-theme-pills-label">HUMANity Framework</p>
+            <div class="lud-theme-pills">
+              <span class="lud-theme-pill"><i class="fas fa-music me-1"></i>Harmony</span>
+              <span class="lud-theme-pill"><i class="fas fa-link me-1"></i>Unity</span>
+              <span class="lud-theme-pill"><i class="fas fa-brain me-1"></i>Mindfulness</span>
+              <span class="lud-theme-pill"><i class="fas fa-bolt me-1"></i>Action</span>
+              <span class="lud-theme-pill"><i class="fas fa-seedling me-1"></i>Nurturing</span>
             </div>
+          </div>
+
+          <!-- Free banner -->
+          <div class="lud-free-banner mt-4">
+            <i class="fas fa-hand-holding-heart lud-free-banner__icon"></i>
+            <div>
+              <h5 class="font-primary lud-free-banner__title">Always Free</h5>
+              <p class="lud-free-banner__text">Let Us Dream Conferences are FREE. Your participation and community outreach is the celebration!</p>
+            </div>
+          </div>
         </div>
-    </section>
 
-    <section class="section-shell">
-        <div class="container">
-            <div class="section-heading-row mb-4">
-                <div class="section-heading-pill section-heading-pill-plain">
-                    <i class="fas fa-address-book"></i>
-                    <span>Contact Us</span>
-                </div>
-                <div class="section-heading-line" aria-hidden="true"></div>
-            </div>
-            <div class="contact-list">
-                <div class="contact-item">
-                    <i class="fas fa-envelope"></i>
-                    <div>
-                        <a class="contact-link" href="mailto:{{ conference_data.contact.email }}">
-                        {{ conference_data.contact.email }}
-                        </a>
-                    </div>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-phone-alt"></i>
-                    <div>
-                        <a class="contact-link" href="tel:{{ conference_data.contact.phone|cut:' ' }}">
-                        {{ conference_data.contact.phone }}
-                        </a>
-                    </div>
-                </div>
-                <div class="contact-item contact-item--address">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <div>
-                        {{ conference_data.contact.address }}
-                    </div>
-                </div>
-            </div>
+        <!-- Concept paragraphs -->
+        <div class="col-lg-8 fade-up">
+          {% for paragraph in conference_data.theme_concept_note.paragraphs %}
+          <div class="lud-concept-block">
+            <p>{{ paragraph }}</p>
+          </div>
+          {% endfor %}
         </div>
-    </section>
-</div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       CORE COMMITTEE  (Django loop — keeps {% static member.image %})
+  ══════════════════════════════════════ -->
+  {% for section in conference_data.core_committee_sections %}
+  <section class="lud-section {% if forloop.counter|divisibleby:2 %}lud-section--alt{% endif %}">
+    <div class="container">
+      <div class="lud-section__head fade-up mb-5">
+        <span class="lud-label"><i class="fas fa-hands-helping me-2"></i>{{ section.title }}</span>
+        <h2 class="lud-section__title font-primary">Core <em>Committee</em></h2>
+      </div>
+      <div class="row g-4">
+        {% for member in section.members %}
+        <div class="col-6 col-md-4 col-lg-3 fade-up">
+          <div class="lud-committee-card">
+            <span class="lud-committee-card__role">{{ member.role }}</span>
+            <div class="lud-committee-card__photo">
+              <img src="{% static member.image %}" alt="{{ member.name }}" loading="lazy">
+            </div>
+            <div class="lud-committee-card__name font-primary">{{ member.name }}</div>
+            <div class="lud-committee-card__org">{{ member.designation|linebreaksbr }}</div>
+            <div class="lud-committee-card__email">{{ member.email }}</div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+  {% endfor %}
+
+  <!-- ══════════════════════════════════════
+       ADVISORY TEAM
+  ══════════════════════════════════════ -->
+  <section class="lud-section lud-section--alt">
+    <div class="container">
+      <div class="lud-section__head fade-up mb-5">
+        <span class="lud-label"><i class="fas fa-user-friends me-2"></i>Advisory Team</span>
+        <h2 class="lud-section__title font-primary">Advisory <em>Team</em></h2>
+      </div>
+      <div class="row g-3">
+        {% for member in conference_data.advisory_team %}
+        <div class="col-sm-6 col-lg-4 fade-up">
+          <div class="lud-advisory-card">
+            <div class="lud-advisory-card__name font-primary">{{ member.name }}</div>
+            <div class="lud-advisory-card__org">{{ member.designation }}</div>
+            {% if member.email %}
+            <div class="lud-advisory-card__email">{{ member.email }}</div>
+            {% endif %}
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       PARTNERS
+  ══════════════════════════════════════ -->
+  <section class="lud-section" id="partners">
+    <div class="container">
+      <div class="lud-section__head fade-up mb-5">
+        <span class="lud-label"><i class="fas fa-network-wired me-2"></i>Partnering Organizations</span>
+        <h2 class="lud-section__title font-primary">Partnering <em>Organizations</em></h2>
+      </div>
+      <div class="lud-logo-wall">
+        {% for logo in conference_data.partners %}
+        <div class="lud-logo-item fade-up">
+          <img src="{% static logo.image %}" alt="{{ logo.name }}" loading="lazy">
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       TESTIMONIALS
+  ══════════════════════════════════════ -->
+  <section class="lud-section lud-section--alt" id="testimonials">
+    <div class="container">
+      <div class="lud-section__head fade-up mb-5">
+        <span class="lud-label"><i class="fas fa-comments me-2"></i>Testimonials</span>
+        <h2 class="lud-section__title font-primary">What <em>Participants Say</em></h2>
+      </div>
+      <div class="row g-4">
+        {% for item in conference_data.testimonials %}
+        <div class="col-md-6 fade-up">
+          <div class="lud-testimonial">
+            <p class="lud-testimonial__text">{{ item.quote }}</p>
+            <div class="lud-testimonial__author font-primary">{{ item.name }}</div>
+            <div class="lud-testimonial__from">{{ item.title }}</div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       CONTACT
+  ══════════════════════════════════════ -->
+  <section class="lud-section lud-section--contact" id="contact">
+    <div class="container">
+      <div class="row gy-5 align-items-center">
+        <div class="col-lg-5 fade-up">
+          <span class="lud-label lud-label--light"><i class="fas fa-address-book me-2"></i>Contact Us</span>
+          <h2 class="lud-section__title lud-section__title--white font-primary">Get In <em style="color:var(--lud-accent)">Touch</em></h2>
+          <p class="lud-contact-lead">Reach out to join the movement. Registration is free—your participation is the contribution.</p>
+          <div class="lud-social-row mt-4">
+            <a href="https://www.instagram.com/letusdream" class="lud-social-btn" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+            <a href="https://twitter.com/LetUsDream5" class="lud-social-btn" target="_blank" rel="noopener"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.youtube.com/@letusdream" class="lud-social-btn" target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.facebook.com/letusdreamsconference" class="lud-social-btn" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.linkedin.com/company/letusdream" class="lud-social-btn" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+          <div class="mt-4">
+            <a href="{{ conference_data.page.registration_link }}" class="lud-btn lud-btn--accent" target="_blank" rel="noopener">
+              <i class="fas fa-user-plus"></i> Register for Free
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-7 fade-up">
+          <div class="row g-3">
+            <div class="col-12">
+              <div class="lud-contact-card">
+                <div class="lud-contact-card__icon"><i class="fas fa-envelope"></i></div>
+                <div>
+                  <div class="lud-contact-card__label">Email</div>
+                  <div class="lud-contact-card__value">
+                    <a href="mailto:{{ conference_data.contact.email }}">{{ conference_data.contact.email }}</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="lud-contact-card">
+                <div class="lud-contact-card__icon"><i class="fas fa-phone-alt"></i></div>
+                <div>
+                  <div class="lud-contact-card__label">Phone</div>
+                  <div class="lud-contact-card__value">
+                    <a href="tel:{{ conference_data.contact.phone|cut:' ' }}">{{ conference_data.contact.phone }}</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="lud-contact-card">
+                <div class="lud-contact-card__icon"><i class="fas fa-map-marker-alt"></i></div>
+                <div>
+                  <div class="lud-contact-card__label">Address</div>
+                  <div class="lud-contact-card__value">{{ conference_data.contact.address }}</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div><!-- /conference-2026-page -->
 {% endblock %}
+
+{% block extraScripts %}
+<script>
+(function () {
+  'use strict';
+  const observerOptions = {
+    threshold: 0.08,
+    rootMargin: '0px 0px -40px 0px'
+  };
+
+  const observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  function initFadeUp() {
+    document.querySelectorAll('.conference-2026-page .fade-up').forEach(function (el) {
+      observer.observe(el);
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initFadeUp);
+  } else {
+    initFadeUp();
+  }
+})();
+</script>
+{% endblock extraScripts %}
