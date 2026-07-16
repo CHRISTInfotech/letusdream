@@ -1,3 +1,12 @@
+const STATIC_BASE_PATH = "/ltstatic/2026/triennial";
+
+function staticImagePath(folder, file) {
+  if (!file) return "";
+
+  const folderPath = folder ? `${folder}/` : "";
+  return encodeURI(`${STATIC_BASE_PATH}/${folderPath}${file}`);
+}
+
 const partners = [
   "Louisiana Tech University.png",
   "Katho University.png",
@@ -155,7 +164,7 @@ function renderPartners() {
   const row2 = document.querySelector("#partnersMarqueeRow2");
   const partnerCard = (file) => `
     <div class="partner-logo-card">
-      <img src="Our Partners/${file}" alt="${altFromFile(file)}" loading="lazy">
+      <img src="${staticImagePath("Our Partners", file)}" alt="${altFromFile(file)}" loading="lazy">
     </div>
   `;
 
@@ -163,7 +172,7 @@ function renderPartners() {
     grid.innerHTML = partners.map((file) => `
     <div class="col-6 col-md-4 col-lg-3 col-xl-2">
       <div class="partner-card">
-        <img src="{% static '2026/triennial/Our Partners/${file}' %}" alt="${altFromFile(file)}" loading="lazy">
+        <img src="${staticImagePath("Our Partners", file)}" alt="${altFromFile(file)}" loading="lazy">
       </div>
     </div>
   `).join("");
@@ -179,22 +188,31 @@ function renderPartners() {
 
 function renderMembers(target, members, folder) {
   const grid = document.querySelector(target);
-  const isCore = target === "#coreGrid";
+  if (!grid) return;
+
   const isCommitteeStyle = target === "#coreGrid" || target === "#advisoryGrid";
-  grid.innerHTML = members.map((member) => `
-    <div class="${isCommitteeStyle ? "col-md-6 col-lg-4" : "col-sm-6 col-lg-4 col-xl-3"}">
-      <article class="member-card">
-        ${isCommitteeStyle && member.role ? `<span class="member-role">${member.role}</span>` : ""}
-        <img class="member-photo" src="{% static '2026/triennial/${folder}/${member.img}' %}" alt="${member.name}" loading="lazy">
-        <div class="member-body">
-          ${!isCommitteeStyle && member.role ? `<span class="member-role">${member.role}</span>` : ""}
-          <h3>${member.name}</h3>
-          <p>${member.title}</p>
-          ${member.email ? `<a href="mailto:${member.email}">${member.email}</a>` : ""}
-        </div>
-      </article>
-    </div>
-  `).join("");
+
+  grid.innerHTML = members.map((member) => {
+    const email = member.email ? member.email.trim() : "";
+    const photo = member.img
+      ? `<img class="member-photo" src="${staticImagePath(folder, member.img)}" alt="${member.name}" loading="lazy">`
+      : "";
+
+    return `
+      <div class="${isCommitteeStyle ? "col-md-6 col-lg-4" : "col-sm-6 col-lg-4 col-xl-3"}">
+        <article class="member-card">
+          ${isCommitteeStyle && member.role ? `<span class="member-role">${member.role}</span>` : ""}
+          ${photo}
+          <div class="member-body">
+            ${!isCommitteeStyle && member.role ? `<span class="member-role">${member.role}</span>` : ""}
+            <h3>${member.name}</h3>
+            <p>${member.title}</p>
+            ${email ? `<a href="mailto:${email}">${email}</a>` : ""}
+          </div>
+        </article>
+      </div>
+    `;
+  }).join("");
 }
 
 function renderTestimonials() {
