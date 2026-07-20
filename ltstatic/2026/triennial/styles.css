@@ -850,6 +850,14 @@ footer {
   box-shadow: 0 22px 60px rgba(15, 61, 122, .12);
 }
 
+@media (min-width: 992px) {
+  .theme-stats-card {
+    width: 96%;
+    margin-left: 0;
+    margin-right: auto;
+  }
+}
+
 .theme-stats-card > div {
   min-height: 116px;
   display: flex;

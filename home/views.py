@@ -657,27 +657,27 @@ def triennialConference2023(request):
 def triennialConference2026(request):
 
     
-    breadcrumbs = [
-        {"name": "Home", "url": "main", "icon": "fas fa-home", "active": False},
-        {
-            "name": "Conferences",
-            "url": None,
-            "icon": "fas fa-calendar-alt",
-            "active": False,
-        },
-        {
-            "name": "Triennial Conferences",
-            "url": "trriennial-conference",
-            "icon": "fas fa-calendar-check",
-            "active": False,
-        },
-        {"name": "2026", "url": None, "icon": "fas fa-file-alt", "active": True},
-    ]
+    # breadcrumbs = [
+    #     {"name": "Home", "url": "main", "icon": "fas fa-home", "active": False},
+    #     {
+    #         "name": "Conferences",
+    #         "url": None,
+    #         "icon": "fas fa-calendar-alt",
+    #         "active": False,
+    #     },
+    #     {
+    #         "name": "Triennial Conferences",
+    #         "url": "trriennial-conference",
+    #         "icon": "fas fa-calendar-check",
+    #         "active": False,
+    #     },
+    #     {"name": "2026", "url": None, "icon": "fas fa-file-alt", "active": True},
+    # ]
 
     context = {
-        "bgcolor": "#274C7D",
+        # "bgcolor": "#274C7D",
         "conference_data": CONFERENCE_DATA26,
-        "breadcrumbs": breadcrumbs,
+        # "breadcrumbs": breadcrumbs,
     }
     return render(
         request, "conference/triennialConference/triennialConference2026.html", context
