@@ -8,9 +8,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Let Us Dream | Triennial International Community Conference 2026</title>
   <meta name="description" content="Triennial International Community Conference 2026 by Let Us Dream.">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800;900&display=swap"
@@ -18,21 +18,21 @@
   <link rel="stylesheet" href="{% static '2026/triennial/styles.css' %}">
 </head>
 
-<body>
+<body class="overflow-x-hidden">
   <nav class="navbar navbar-expand-xl fixed-top conference-nav">
     <div class="container-xxl">
-      <a class="navbar-brand d-flex align-items-center" href="{% url 'main' %}" aria-label="Let Us Dream">
-        <img class="brand-logo" src="{% static '2026/triennial/Patterns/LUD logo.png' %}" alt="Let Us Dream">
+      <a class="navbar-brand d-flex align-items-center p-0 me-0" href="{% url 'main' %}" aria-label="Let Us Dream">
+        <img class="brand-logo d-block" src="{% static '2026/triennial/Patterns/LUD logo.png' %}" alt="Let Us Dream">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
         aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="mainNav">
-        <ul class="navbar-nav ms-auto mb-2 mb-xl-0">
+      <div class="collapse navbar-collapse flex-grow-0" id="mainNav">
+        <ul class="navbar-nav ms-auto mb-2 mb-xl-0 align-items-xl-center">
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="https://letusdream.org/about-us" role="button" data-bs-toggle="dropdown"
-              aria-expanded="false">About Us</a>
+            <a class="nav-link dropdown-toggle" href="https://letusdream.org/about-us" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">About Us</a>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="https://letusdream.org/about-us">Overview</a></li>
               <li><a class="dropdown-item" href="https://letusdream.org/leadership">Leadership</a></li>
@@ -43,40 +43,47 @@
             </ul>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="https://letusdream.org/dreams/program" role="button" data-bs-toggle="dropdown"
-              aria-expanded="false">DREAMS</a>
+            <a class="nav-link dropdown-toggle" href="https://letusdream.org/dreams/program" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">DREAMS</a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="https://letusdream.org/dreams/program">DREAMS Intervention Program (DIP)</a></li>
-              <li><a class="dropdown-item" href="https://letusdream.org/yclpCourse">Young Community Leadership Program (YCLP)</a></li>
+              <li><a class="dropdown-item" href="https://letusdream.org/dreams/program">DREAMS Intervention Program
+                  (DIP)</a></li>
+              <li><a class="dropdown-item" href="https://letusdream.org/yclpCourse">Young Community Leadership Program
+                  (YCLP)</a></li>
             </ul>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="https://letusdream.org/conferences" role="button" data-bs-toggle="dropdown"
-              aria-expanded="false">Conferences</a>
+            <a class="nav-link dropdown-toggle" href="https://letusdream.org/conferences" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">Conferences</a>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="https://letusdream.org/conferences">Overview</a></li>
-              <li><a class="dropdown-item" href="https://letusdream.org/annualConference">Annual Community Conferences</a></li>
-              <li><a class="dropdown-item" href="https://letusdream.org/trriennialConference">Triennial International Conferences</a></li>
+              <li><a class="dropdown-item" href="https://letusdream.org/annualConference">Annual Community
+                  Conferences</a></li>
+              <li><a class="dropdown-item" href="https://letusdream.org/trriennialConference">Triennial International
+                  Conferences</a></li>
               <li><a class="dropdown-item" href="https://letusdream.org/conclave">Leadership Conclave</a></li>
-              <li><a class="dropdown-item" href="https://cmt.letusdream.org/" target="_blank" rel="noopener">Register</a></li>
-              <li><a class="dropdown-item" href="https://letusdream.org/run-lud-conference">Conference Resources</a></li>
+              <li><a class="dropdown-item" href="https://cmt.letusdream.org/" target="_blank"
+                  rel="noopener">Register</a></li>
+              <li><a class="dropdown-item" href="https://letusdream.org/run-lud-conference">Conference Resources</a>
+              </li>
             </ul>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="https://letusdream.org/clubs/overview" role="button" data-bs-toggle="dropdown"
-              aria-expanded="false">Clubs</a>
+            <a class="nav-link dropdown-toggle" href="https://letusdream.org/clubs/overview" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">Clubs</a>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="https://letusdream.org/clubs/overview">Overview</a></li>
               <li><a class="dropdown-item" href="https://letusdream.org/clubs/conversation">Conversation Club</a></li>
               <li><a class="dropdown-item" href="https://letusdream.org/clubs/professional">Professional Club</a></li>
-              <li><a class="dropdown-item" href="https://letusdream.org/clubs/youth-leadership">Global Youth Leadership Network</a></li>
+              <li><a class="dropdown-item" href="https://letusdream.org/clubs/youth-leadership">Global Youth Leadership
+                  Network</a></li>
               <li><a class="dropdown-item" href="https://letusdream.org/clubs/community">Community Hubs</a></li>
               <li><a class="dropdown-item" href="https://letusdream.org/clubs/growandglow">Grow &amp; Glow Club</a></li>
             </ul>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="https://letusdream.org/dreams/band" role="button" data-bs-toggle="dropdown"
-              aria-expanded="false">Productions</a>
+            <a class="nav-link dropdown-toggle" href="https://letusdream.org/dreams/band" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">Productions</a>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="https://letusdream.org/dreams/band">DREAMS Band</a></li>
               <li><a class="dropdown-item" href="https://letusdream.org/human">The HUMAN</a></li>
@@ -84,15 +91,16 @@
             </ul>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="https://letusdream.org/llfp" role="button" data-bs-toggle="dropdown"
-              aria-expanded="false">Fellowship</a>
+            <a class="nav-link dropdown-toggle" href="https://letusdream.org/llfp" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">Fellowship</a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="https://letusdream.org/llfp">Leadership Fellowship Program(LLFP)</a></li>
+              <li><a class="dropdown-item" href="https://letusdream.org/llfp">Leadership Fellowship Program(LLFP)</a>
+              </li>
             </ul>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="https://letusdream.org/llfp" role="button" data-bs-toggle="dropdown"
-              aria-expanded="false">Research</a>
+            <a class="nav-link dropdown-toggle" href="https://letusdream.org/llfp" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">Research</a>
             <ul class="dropdown-menu dropdown-menu-end">
               <li><a class="dropdown-item" href="https://letusdream.org/llfp">Research</a></li>
               <li><a class="dropdown-item" href="https://letusdream.org/publications">Publications</a></li>
@@ -103,44 +111,50 @@
     </div>
   </nav>
 
-  <main id="home">
+  <main id="home" class="overflow-x-hidden">
     <!-- Updated Hero Section -->
     <section class="hero-section image-section text-white">
-        <div class="container-xxl position-relative">
-          <div class="row align-items-center min-vh-100 py-5">
-            <div class="col-lg-8 col-xl-7 hero-copy">
-              <p class="hero-kicker">LET US DREAM</p>
-              <h1 class="hero-title">
-                <span>Triennial International</span>
-                <span>Community Conference</span>
-                <span>2026</span>
-              </h1>
-              <div class="hero-theme mb-4">
-                <h2 class="hero-subtitle mb-2 mt-4">Local Wisdom. Global Influence.</h2>
-                <span class="hero-underline" aria-hidden="true"></span>
-                <p class="hero-tagline mb-0 fst-italic">Resilient Glocal Communities for Meaningful Humanity</p>
-              </div>
-              <div class="d-flex flex-wrap gap-3 hero-meta mb-5">
-                <div class="hero-meta-card">
-                  <span class="hero-meta-icon"><i class="bi bi-calendar" aria-hidden="true"></i></span>
-                  <strong>November 19-21, 2026</strong>
-                </div>
-                <div class="hero-meta-card hero-location-card">
-                  <span class="hero-meta-icon"><i class="bi bi-geo-alt" aria-hidden="true"></i></span>
-                  <div>
-                    <strong>CHRIST (DEEMED TO BE UNIVERSITY)</strong>
-                    <small>Bangalore, India</small>
-                  </div>
-                  <span class="hero-meta-arrow"><i class="bi bi-arrow-up-right" aria-hidden="true"></i></span>
-                </div>
-              </div>
-              <a class="btn btn-primary hero-register-btn" href="https://cmt.letusdream.org/one_time_registration/e3c2ffb2-39ea-44bc-a173-233f01dc8cb1" target="_blank" rel="noopener">
-                Register for FREE <i class="bi bi-arrow-right" aria-hidden="true"></i>
-              </a>
+      <div class="container-xxl position-relative">
+        <div class="row align-items-center min-vh-100 py-5">
+          <div class="col-lg-8 col-xl-7 hero-copy">
+            <p class="hero-kicker mb-3">LET US DREAM</p>
+            <h1 class="hero-title mb-0">
+              <span class="d-block">3rd Triennial International</span>
+              <span class="d-block">Community Conference 2026</span>
+
+            </h1>
+            <span class="hero-underline d-block" aria-hidden="true"></span>
+
+            <div class="hero-theme mb-4">
+              <h2 class="hero-subtitle mb-2 mt-4">Local Wisdom. Global Influence.</h2>
+              <p class="hero-tagline mb-0 fst-italic">Resilient Glocal Communities for Meaningful Humanity</p>
             </div>
+            <div class="d-flex flex-wrap gap-3 hero-meta mb-5">
+              <div class="hero-meta-card">
+                <span class="hero-meta-icon d-inline-flex align-items-center justify-content-center rounded-circle"><i
+                    class="bi bi-calendar" aria-hidden="true"></i></span>
+                <strong>November 19-21, 2026</strong>
+              </div>
+              <div class="hero-meta-card hero-location-card">
+                <span class="hero-meta-icon d-inline-flex align-items-center justify-content-center rounded-circle"><i
+                    class="bi bi-geo-alt" aria-hidden="true"></i></span>
+                <div>
+                  <strong>CHRIST (DEEMED TO BE UNIVERSITY)</strong>
+                  <small>Bangalore, India</small>
+                </div>
+                <span class="hero-meta-arrow d-inline-flex align-items-center justify-content-center rounded-circle"><i
+                    class="bi bi-arrow-up-right" aria-hidden="true"></i></span>
+              </div>
+            </div>
+            <a class="btn btn-primary hero-register-btn d-inline-flex align-items-center justify-content-center"
+              href="https://cmt.letusdream.org/one_time_registration/e3c2ffb2-39ea-44bc-a173-233f01dc8cb1"
+              target="_blank" rel="noopener">
+              Register for FREE <i class="bi bi-arrow-right" aria-hidden="true"></i>
+            </a>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
     <section id="about" class="section-pad about-section">
       <div class="container-xxl">
@@ -149,41 +163,54 @@
           <div class="col-lg-5">
             <p class="section-copy">The Triennial International Community Conference 2026 brings together educators,
               researchers, practitioners, students, and community leaders from around the world to explore innovative
-              approaches to community engagement, social transformation, and sustainable development. Through dialogue, 
+              approaches to community engagement, social transformation, and sustainable development. Through dialogue,
               collaboration, and shared learning, participants will co-create solutions that strengthen resilient glocal
               communities and promote meaningful humanity.</p>
-            <a class="btn btn-outline-primary about-learn-btn" href="#theme">
+            <a class="btn btn-outline-primary about-learn-btn d-inline-flex align-items-center justify-content-center mt-4"
+              href="#theme">
               Learn More About Us <i class="bi bi-arrow-right" aria-hidden="true"></i>
             </a>
           </div>
           <div class="col-lg-7">
             <div class="row g-3">
               <div class="col-sm-6">
-                <article class="feature-card h-100">
-                  <span class="feature-icon"><i class="bi bi-globe" aria-hidden="true"></i></span>
-                  <h3>Global Perspectives</h3>
-                  <p>Engage with educators, researchers, and community leaders worldwide.</p>
+                <article
+                  class="feature-card h-100 text-center d-flex flex-column align-items-center justify-content-center">
+                  <span
+                    class="feature-icon d-inline-flex align-items-center justify-content-center rounded-circle mx-auto mb-3"><i
+                      class="bi bi-globe" aria-hidden="true"></i></span>
+                  <h3 class="mb-3">Global Perspectives</h3>
+                  <p class="mb-0">Engage with educators, researchers, and community leaders worldwide.</p>
                 </article>
               </div>
               <div class="col-sm-6">
-                <article class="feature-card h-100">
-                  <span class="feature-icon"><i class="fa-thin fa-handshake handshake-fa-icon" aria-hidden="true"></i></span>
-                  <h3>Collaborative Action</h3>
-                  <p>Build partnerships that inspire meaningful community transformation.</p>
+                <article
+                  class="feature-card h-100 text-center d-flex flex-column align-items-center justify-content-center">
+                  <span
+                    class="feature-icon d-inline-flex align-items-center justify-content-center rounded-circle mx-auto mb-3"><i
+                      class="fa-thin fa-handshake handshake-fa-icon" aria-hidden="true"></i></span>
+                  <h3 class="mb-3">Collaborative Action</h3>
+                  <p class="mb-0">Build partnerships that inspire meaningful community transformation.</p>
                 </article>
               </div>
               <div class="col-sm-6">
-                <article class="feature-card h-100">
-                  <span class="feature-icon"><i class="bi bi-mortarboard" aria-hidden="true"></i></span>
-                  <h3>Research &amp; Practice</h3>
-                  <p>Connect academic insights with real-world community impact initiatives.</p>
+                <article
+                  class="feature-card h-100 text-center d-flex flex-column align-items-center justify-content-center">
+                  <span
+                    class="feature-icon d-inline-flex align-items-center justify-content-center rounded-circle mx-auto mb-3"><i
+                      class="bi bi-mortarboard" aria-hidden="true"></i></span>
+                  <h3 class="mb-3">Research &amp; Practice</h3>
+                  <p class="mb-0">Connect academic insights with real-world community impact initiatives.</p>
                 </article>
               </div>
               <div class="col-sm-6">
-                <article class="feature-card h-100">
-                  <span class="feature-icon"><i class="bi bi-lightbulb" aria-hidden="true"></i></span>
-                  <h3>Sustainable Innovation</h3>
-                  <p>Explore innovative solutions for resilient glocal communities.</p>
+                <article
+                  class="feature-card h-100 text-center d-flex flex-column align-items-center justify-content-center">
+                  <span
+                    class="feature-icon d-inline-flex align-items-center justify-content-center rounded-circle mx-auto mb-3"><i
+                      class="bi bi-lightbulb" aria-hidden="true"></i></span>
+                  <h3 class="mb-3">Sustainable Innovation</h3>
+                  <p class="mb-0">Explore innovative solutions for resilient glocal communities.</p>
                 </article>
               </div>
             </div>
@@ -196,35 +223,39 @@
       <div class="container-xxl">
         <div class="theme-head text-center mx-auto">
           <h6 class="theme-eyebrow">THEME CONCEPT</h6>
-          <h2 class="theme-title">
-            <span>Local Wisdom.</span>
-            <span>Global Influence</span>
+          <h2 class="theme-title mb-0">
+            <span class="d-block">Local Wisdom.</span>
+            <span class="d-block">Global Influence</span>
           </h2>
-          <p class="mt-4">A global gathering celebrating how local communities, volunteers, and youth leaders create meaningful
+          <p class="mt-4 mb-0">A global gathering celebrating how local communities, volunteers, and youth leaders
+            create meaningful
             change through collective action and shared humanity.</p>
         </div>
 
         <div class="row g-4 align-items-stretch theme-card-grid">
           <div class="col-lg-4 theme-focus-col">
-            <article class="theme-card theme-focus-card h-100 text-center">
-              <p class="theme-focus-kicker">2026 SPECIAL FOCUS</p>
-              <h3>
-                <span>United Nations</span>
-                <span>International Year of Volunteers</span>
-                <span>for Sustainable Development</span>
-                <span class="hero-underline-small text-center mt-3 "></span>
+            <article class="theme-card theme-focus-card h-100 text-center d-flex flex-column overflow-hidden">
+              <p class="theme-focus-kicker align-self-center rounded-pill mb-4">2026 SPECIAL FOCUS</p>
+              <h3 class="mb-0">
+                <span class="d-block">United Nations</span>
+                <span class="d-block">International Year of Volunteers</span>
+                <span class="d-block">for Sustainable Development</span>
+                <span class="hero-underline-small d-block text-center mt-3 mx-auto"></span>
               </h3>
-              <p>The conference aligns with the global call to celebrate volunteerism as a force for sustainable and
+              <p class="mb-0">The conference aligns with the global call to celebrate volunteerism as a force for
+                sustainable and
                 equitable communities.</p>
-              <img src="{% static '2026/triennial/Patterns/peoplestanding.avif' %}" alt="People standing together" loading="lazy">
+              <img class="d-block mt-auto" src="{% static '2026/triennial/Patterns/peoplestanding.avif' %}"
+                alt="People standing together" loading="lazy">
             </article>
           </div>
 
           <div class="col-md-6 col-lg-4 theme-mini-col">
             <div class="d-flex flex-column gap-4 h-100">
-              <article class="theme-card theme-mini-card">
-                <span class="theme-card-icon">
-                  <svg class="theme-svg-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <article class="theme-card theme-mini-card d-flex flex-column">
+                <span
+                  class="theme-card-icon d-inline-flex align-items-center justify-content-center rounded-circle mb-3">
+                  <svg class="theme-svg-icon d-block" viewBox="0 0 24 24" aria-hidden="true">
                     <path d="M7.2 14.3c1.5.2 2.9.8 4.1 1.8" />
                     <path d="M16.8 14.3c-1.5.2-2.9.8-4.1 1.8" />
                     <path d="M4.5 12.4v2.1c0 1.3.7 2.5 1.9 3.1l3.7 1.9" />
@@ -235,13 +266,15 @@
                     <path d="M12 8c0-2.4-1.8-4.3-4.3-4.7-.4 2.5 1.1 4.8 3.5 5.4" />
                   </svg>
                 </span>
-                <h3>Rooted in Local Wisdom</h3>
-                <p>Meaningful solutions often emerge naturally from communities, neighborhoods, and local experiences.
+                <h3 class="mb-3">Rooted in Local Wisdom</h3>
+                <p class="mb-0">Meaningful solutions often emerge naturally from communities, neighborhoods, and local
+                  experiences.
                 </p>
               </article>
-              <article class="theme-card theme-mini-card ">
-                <span class="theme-card-icon">
-                  <svg class="theme-svg-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <article class="theme-card theme-mini-card d-flex flex-column">
+                <span
+                  class="theme-card-icon d-inline-flex align-items-center justify-content-center rounded-circle mb-3">
+                  <svg class="theme-svg-icon d-block" viewBox="0 0 24 24" aria-hidden="true">
                     <circle cx="12" cy="7" r="2.7" />
                     <circle cx="6.4" cy="9.2" r="2.2" />
                     <circle cx="17.6" cy="9.2" r="2.2" />
@@ -250,57 +283,64 @@
                     <path d="M21.2 18.8c-.4-2.6-2.3-4-4.5-4.1" />
                   </svg>
                 </span>
-                <h3>The Glocal Spirit</h3>
-                <p>Connecting grassroots perspectives with global collaboration to build a more equitable future.</p>
+                <h3 class="mb-3">The Glocal Spirit</h3>
+                <p class="mb-0">Connecting grassroots perspectives with global collaboration to build a more equitable
+                  future.</p>
               </article>
             </div>
           </div>
 
           <div class="col-md-6 col-lg-4 theme-mini-col">
             <div class="d-flex flex-column gap-4 h-100">
-              <article class="theme-card theme-mini-card ">
-                <span class="theme-card-icon">
-                  <svg class="theme-svg-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <article class="theme-card theme-mini-card d-flex flex-column">
+                <span
+                  class="theme-card-icon d-inline-flex align-items-center justify-content-center rounded-circle mb-3">
+                  <svg class="theme-svg-icon d-block" viewBox="0 0 24 24" aria-hidden="true">
                     <circle cx="12" cy="12" r="8.5" />
                     <path d="M3.8 10.5c2 .2 3.3.8 4 1.8.8 1.1.5 2.3 1.7 2.8 1 .4 1.8-.4 2.6.2.8.7.1 2.1.9 3" />
                     <path d="M14.8 4.2c-.7 1.3-.6 2.4.4 3 .9.6 2 .1 2.8.9.7.7.4 1.7 1.8 2.1" />
                     <path d="M8.1 5.5c1.2.3 1.7 1 1.6 2-.1.8-.9 1.1-.7 1.8.2.8 1.4.8 2.1.7" />
                   </svg>
                 </span>
-                <h3>Global Influence</h3>
-                <p>Stories and ideas shared locally can inspire transformation across countries and cultures.</p>
+                <h3 class="mb-3">Global Influence</h3>
+                <p class="mb-0">Stories and ideas shared locally can inspire transformation across countries and
+                  cultures.</p>
               </article>
-              <article class="theme-card theme-mini-card ">
-                <span class="theme-card-icon">
-                  <svg class="theme-svg-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <article class="theme-card theme-mini-card d-flex flex-column">
+                <span
+                  class="theme-card-icon d-inline-flex align-items-center justify-content-center rounded-circle mb-3">
+                  <svg class="theme-svg-icon d-block" viewBox="0 0 24 24" aria-hidden="true">
                     <path d="M5 15h4.5l2.2-2.2c.5-.5 1.3-.5 1.8 0s.5 1.3 0 1.8L11.8 16.3" />
                     <path d="M4 18h7.7c1.1 0 2.1-.4 2.9-1.2L20 11.5" />
-                    <path d="M8.5 6.8c0-1.4 1.1-2.5 2.5-2.5.8 0 1.5.4 2 1 .5-.6 1.2-1 2-1 1.4 0 2.5 1.1 2.5 2.5 0 2.6-4.5 5.2-4.5 5.2S8.5 9.4 8.5 6.8Z" />
+                    <path
+                      d="M8.5 6.8c0-1.4 1.1-2.5 2.5-2.5.8 0 1.5.4 2 1 .5-.6 1.2-1 2-1 1.4 0 2.5 1.1 2.5 2.5 0 2.6-4.5 5.2-4.5 5.2S8.5 9.4 8.5 6.8Z" />
                   </svg>
                 </span>
-                <h3>HUMANity</h3>
-                <p>Harmony, Unity, Mindfulness, and Action for Nurturing communities through volunteerism.</p>
+                <h3 class="mb-3">HUMANity</h3>
+                <p class="mb-0"> <b>H</b>armony, <b>U</b>nity, <b>M</b>indfulness, and <b>A</b>ction for
+                  <b>N</b>urturing communities through volunteerism.
+                </p>
               </article>
             </div>
           </div>
         </div>
 
-        <div class="theme-stats-card">
-          <div>
-            <strong>50+</strong>
-            <span>Speakers</span>
+        <div class="theme-stats-card d-grid">
+          <div class="d-flex flex-column align-items-center justify-content-center text-center">
+            <strong class="d-block">50+</strong>
+            <span class="d-block">Speakers</span>
           </div>
-          <div>
-            <strong>10+</strong>
-            <span>Countries</span>
+          <div class="d-flex flex-column align-items-center justify-content-center text-center">
+            <strong class="d-block">10+</strong>
+            <span class="d-block">Countries</span>
           </div>
-          <div>
-            <strong>25+</strong>
-            <span>Universities</span>
+          <div class="d-flex flex-column align-items-center justify-content-center text-center">
+            <strong class="d-block">25+</strong>
+            <span class="d-block">Universities</span>
           </div>
-          <div>
-            <strong>50+</strong>
-            <span>Community Partners</span>
+          <div class="d-flex flex-column align-items-center justify-content-center text-center">
+            <strong class="d-block">50+</strong>
+            <span class="d-block">Community Partners</span>
           </div>
         </div>
       </div>
@@ -309,83 +349,125 @@
     <section id="tracks" class="section-pad image-section tracks-section">
       <div class="container-xxl">
         <div class="tracks-head text-center mx-auto">
-          <h6>PROGRAM TRACKS</h6>
-          <h2><span>Three Days. Three Themes.</span></h2>
-          <h2><span>One Shared</span> <span>Purpose</span><span>.</span></h2>
-          <p>Each day of the conference explores a key dimension of community transformation through dialogue,
+          <h6 class="mb-3">PROGRAM TRACKS</h6>
+          <h2 class="mb-0"><span>Three Days. Three Themes.</span></h2>
+          <h2 class="mb-0"><span>One Shared</span> <span>Purpose</span><span>.</span></h2>
+          <p class="mb-0">Each day of the conference explores a key dimension of community transformation through
+            dialogue,
             storytelling, research, and collaborative action.</p>
         </div>
 
-        <div class="track-stack">
-          <article class="track-card track-day-1">
-            <div class="track-main">
-              <div class="track-icon"><i class="bi bi-mortarboard" aria-hidden="true"></i></div>
+        <div class="track-stack d-flex flex-column">
+          <article class="track-card track-day-1 rounded-3">
+
+            <div class="track-main d-grid align-items-center">
+              <div class="d-flex flex-column align-items-center justify-content-center text-center w-100">
+                <div class="track-icon d-inline-flex align-items-center justify-content-center rounded-circle"><i
+                    class="bi bi-mortarboard" aria-hidden="true"></i>
+
+                </div>
+                <div
+                  class="track-day d-inline-flex align-items-center justify-content-center rounded-2 my-3 w-100 py-3 text-white"
+                  style="background-color:#0f70dc ;">DAY 1</div>
+
+              </div>
+
+
               <div class="track-content">
-                <span class="track-day">DAY 1</span>
-                <h3>Education: Rethinking Learning Ecosystems - A GLocal Multigenerational Approach</h3>
-                <p>By addressing the limitations of conventional education we consequently promote deeper learning,
+                <h3 class="mb-3">Education: Rethinking Learning Ecosystems - A GLocal Multigenerational Approach</h3>
+                <p class="mb-0">By addressing the limitations of conventional education we consequently promote deeper
+                  learning,
                   creativity, and access. With an emphasis on holistic approaches to educational systems and spaces,
                   discussions will focus on exploring alternative educational structures with a multigenerational lens
                   that considers global reach and local designs.</p>
               </div>
             </div>
-            <div class="track-features track-features-8">
-              <div><i class="bi bi-mortarboard" aria-hidden="true"></i><span>Non-conventional Education</span></div>
-              <div><i class="bi bi-buildings" aria-hidden="true"></i><span>Spaces</span></div>
-              <div><i class="bi bi-globe-americas" aria-hidden="true"></i><span>Global Reach</span></div>
-              <div><i class="bi bi-gear" aria-hidden="true"></i><span>Systemic designs</span></div>
-              <div><i class="bi bi-lightbulb" aria-hidden="true"></i><span>Creativity</span></div>
-              <div><i class="bi bi-book" aria-hidden="true"></i><span>Learning</span></div>
-              <div><i class="bi bi-globe2" aria-hidden="true"></i><span>Access</span></div>
-              <div><i class="bi bi-universal-access-circle" aria-hidden="true"></i><span>Holistic Approaches</span></div>
+            <div class="track-features track-features-8 d-grid">
+              <div class="d-flex flex-column align-items-center justify-content-center text-center"><i
+                  class="bi bi-mortarboard" aria-hidden="true"></i><span>Non-conventional Education</span></div>
+              <div class="d-flex flex-column align-items-center justify-content-center text-center"><i
+                  class="bi bi-buildings" aria-hidden="true"></i><span>Spaces</span></div>
+              <div class="d-flex flex-column align-items-center justify-content-center text-center"><i
+                  class="bi bi-globe-americas" aria-hidden="true"></i><span>Global Reach</span></div>
+              <div class="d-flex flex-column align-items-center justify-content-center text-center"><i
+                  class="bi bi-gear" aria-hidden="true"></i><span>Systemic designs</span></div>
+              <div class="d-flex flex-column align-items-center justify-content-center text-center"><i
+                  class="bi bi-lightbulb" aria-hidden="true"></i><span>Creativity</span></div>
+              <div class="d-flex flex-column align-items-center justify-content-center text-center"><i
+                  class="bi bi-book" aria-hidden="true"></i><span>Learning</span></div>
+              <div class="d-flex flex-column align-items-center justify-content-center text-center"><i
+                  class="bi bi-globe2" aria-hidden="true"></i><span>Access</span></div>
+              <div class="d-flex flex-column align-items-center justify-content-center text-center"><i
+                  class="bi bi-universal-access-circle" aria-hidden="true"></i><span>Holistic Approaches</span></div>
             </div>
           </article>
 
-          <article class="track-card track-day-2">
-            <div class="track-main">
-              <div class="track-icon"><i class="bi bi-heart-pulse" aria-hidden="true"></i></div>
+          <article class="track-card track-day-2 rounded-3">
+            <div class="track-main d-grid align-items-center">
+              <div class="d-flex flex-column align-items-center justify-content-center text-center w-100">
+                <div class="track-icon d-inline-flex align-items-center justify-content-center rounded-circle"><i
+                    class="bi bi-heart-pulse" aria-hidden="true"></i></div>
+                <span
+                  class="track-day d-inline-flex align-items-center justify-content-center rounded-2 my-3 w-100 py-3 text-white"
+                  style="background-color:#2b7d20 ;">DAY 2</span>
+              </div>
+
               <div class="track-content">
-                <span class="track-day">DAY 2</span>
-                <h3>Health: Building Holistic Health - Local Wisdom meets Digital Reality</h3>
-                <p>The possibility to democratize safe and wholesome solutions to health care issues using digital
-                  platforms in a local context is the challenge of our times. The urgency to empower healthcare providers
+                <h3 class="mb-3">Health: Building Holistic Health - Local Wisdom meets Digital Reality</h3>
+                <p class="mb-0">The possibility to democratize safe and wholesome solutions to health care issues using
+                  digital
+                  platforms in a local context is the challenge of our times. The urgency to empower healthcare
+                  providers
                   with distribution of knowledge and resources on the ground in order to make healthcare more accessible
                   is the priority for decision makers of today.</p>
               </div>
             </div>
-            <div class="track-features track-features-5">
-              <div><i class="bi bi-clipboard-heart" aria-hidden="true"></i><span>Wholesome Health</span></div>
-              <div><i class="bi bi-globe" aria-hidden="true"></i><span>Accessibility</span></div>
-              <div><i class="bi bi-heart-pulse" aria-hidden="true"></i><span>Physical Care</span></div>
-              <div>
-                <svg class="track-custom-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <div class="track-features track-features-5 d-grid">
+              <div class="d-flex flex-column align-items-center justify-content-center text-center"><i
+                  class="bi bi-clipboard-heart" aria-hidden="true"></i><span>Wholesome Health</span></div>
+              <div class="d-flex flex-column align-items-center justify-content-center text-center"><i
+                  class="bi bi-globe" aria-hidden="true"></i><span>Accessibility</span></div>
+              <div class="d-flex flex-column align-items-center justify-content-center text-center"><i
+                  class="bi bi-heart-pulse" aria-hidden="true"></i><span>Physical Care</span></div>
+              <div class="d-flex flex-column align-items-center justify-content-center text-center">
+                <svg class="track-custom-icon d-block" viewBox="0 0 24 24" aria-hidden="true">
                   <path d="M4 7h8" />
                   <path d="M4 12h7" />
                   <path d="M4 17h9" />
-                  <path d="M16.8 8.5c.5-.7 1.2-1.1 2-1.1 1.3 0 2.4 1.1 2.4 2.4 0 2.4-4.4 4.8-4.4 4.8s-4.4-2.4-4.4-4.8c0-1.3 1.1-2.4 2.4-2.4.8 0 1.5.4 2 1.1Z" />
+                  <path
+                    d="M16.8 8.5c.5-.7 1.2-1.1 2-1.1 1.3 0 2.4 1.1 2.4 2.4 0 2.4-4.4 4.8-4.4 4.8s-4.4-2.4-4.4-4.8c0-1.3 1.1-2.4 2.4-2.4.8 0 1.5.4 2 1.1Z" />
                 </svg>
                 <span>Digital Health Literacy</span>
               </div>
-              <div><i class="bi bi-virus2" aria-hidden="true"></i><span>Mental Wellbeing</span></div>
+              <div class="d-flex flex-column align-items-center justify-content-center text-center"><i
+                  class="bi bi-virus2" aria-hidden="true"></i><span>Mental Wellbeing</span></div>
             </div>
           </article>
 
-          <article class="track-card track-day-3">
-            <div class="track-main">
-              <div class="track-icon"><i class="bi bi-people" aria-hidden="true"></i></div>
+          <article class="track-card track-day-3 rounded-3">
+            <div class="track-main d-grid align-items-center">
+              <div class="d-flex flex-column align-items-center justify-content-center text-center w-100">
+                <div class="track-icon d-inline-flex align-items-center justify-content-center rounded-circle"><i
+                    class="bi bi-people" aria-hidden="true"></i></div>
+                <span
+                  class="track-day d-inline-flex align-items-center justify-content-center rounded-2 my-3 w-100 py-3 text-white"
+                  style="background-color:#c66800 ;">DAY 3</span>
+              </div>
+
               <div class="track-content">
-                <span class="track-day">DAY 3</span>
-                <h3>Social: Bridging Heritage and Equity: Empowering Communities Through Indigenous Knowledge for
+                <h3 class="mb-3">Social: Bridging Heritage and Equity: Empowering Communities Through Indigenous
+                  Knowledge for
                   Resilient Futures</h3>
-                <p>Highlights how local knowledge, cultural identity, and equitable systems can address global
+                <p class="mb-0">Highlights how local knowledge, cultural identity, and equitable systems can address
+                  global
                   challenges. It connects grassroots realities with global discourse, fostering inclusive development,
                   preserving heritage, and enabling communities to co-create adaptive, context-driven solutions across
                   diverse social and economic landscapes.</p>
               </div>
             </div>
-            <div class="track-features track-features-5">
-              <div>
-                <svg class="track-custom-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <div class="track-features track-features-5 d-grid">
+              <div class="d-flex flex-column align-items-center justify-content-center text-center">
+                <svg class="track-custom-icon d-block" viewBox="0 0 24 24" aria-hidden="true">
                   <path d="M12 3v18" />
                   <path d="M6 6h12" />
                   <path d="M8 6 4.5 13h7L8 6Z" />
@@ -394,10 +476,14 @@
                 </svg>
                 <span>Equity</span>
               </div>
-              <div><i class="bi bi-buildings" aria-hidden="true"></i><span>Heritage</span></div>
-              <div><i class="bi bi-globe-americas" aria-hidden="true"></i><span>Cultural Identity</span></div>
-              <div><i class="fa-thin fa-handshake handshake-fa-icon" aria-hidden="true"></i><span>Inclusivity</span></div>
-              <div><i class="bi bi-book" aria-hidden="true"></i><span>Indigenous Knowledge</span></div>
+              <div class="d-flex flex-column align-items-center justify-content-center text-center"><i
+                  class="bi bi-buildings" aria-hidden="true"></i><span>Heritage</span></div>
+              <div class="d-flex flex-column align-items-center justify-content-center text-center"><i
+                  class="bi bi-globe-americas" aria-hidden="true"></i><span>Cultural Identity</span></div>
+              <div class="d-flex flex-column align-items-center justify-content-center text-center"><i
+                  class="fa-thin fa-handshake handshake-fa-icon" aria-hidden="true"></i><span>Inclusivity</span></div>
+              <div class="d-flex flex-column align-items-center justify-content-center text-center"><i
+                  class="bi bi-book" aria-hidden="true"></i><span>Indigenous Knowledge</span></div>
             </div>
           </article>
         </div>
@@ -408,46 +494,52 @@
       <div class="container-xxl">
         <div class="why-head text-center mx-auto">
           <h6 class="fw-bold">WHY ATTEND</h6>
-          <h2>From Dreamers to Doers</h2>
-          <h2>to <span>Changemakers</span></h2>
-          <p>The Let Us Dream Triennial International Community Conference 2026 brings together volunteers, educators,
-            researchers, youth leaders, community organizations, and institutions committed to creating meaningful impact
+          <h2 class="mb-0">From Dreamers to Doers</h2>
+          <h2 class="mb-0">to <span>Changemakers</span></h2>
+          <p class="mb-0">The Let Us Dream Triennial International Community Conference 2026 brings together volunteers,
+            educators,
+            researchers, youth leaders, community organizations, and institutions committed to creating meaningful
+            impact
             through collective action.</p>
         </div>
 
         <div class="row g-4 why-card-row">
           <div class="col-lg-6">
-            <article class="why-card h-100">
-              <div class="why-card-head">
-                <span class="why-eye"><i class="bi bi-eye" aria-hidden="true"></i></span>
+            <article class="why-card h-100 rounded-4 border-start">
+              <div class="why-card-head d-flex align-items-start gap-4 mb-4">
+                <span
+                  class="why-eye d-inline-flex align-items-center justify-content-center rounded-circle flex-shrink-0"><i
+                    class="bi bi-eye" aria-hidden="true"></i></span>
                 <div>
-                  <h3 class="fw-bold">WHO CAN PARTICIPATE?</h3>
-                  <span class="why-underline" aria-hidden="true"></span>
+                  <h3 class="fw-bold mb-2">WHO CAN PARTICIPATE?</h3>
+                  <span class="why-underline d-block" aria-hidden="true"></span>
                 </div>
               </div>
-              <ul class="why-check-list">
+              <ul class="why-check-list list-unstyled d-flex flex-column mb-0">
                 <li>Community volunteers and changemakers</li>
                 <li>Non-profit organizations, social workers, and philanthropists</li>
                 <li>Educators, researchers, and academic leaders</li>
                 <li>University students, youth leaders, and mentors</li>
                 <li>Community partners and development practitioners</li>
-                <li>Professionals committed to creating social impact</li>
+                <li>Professionals and retirees</li>
               </ul>
             </article>
           </div>
           <div class="col-lg-6">
-            <article class="why-card h-100">
-              <div class="why-card-head">
-                <span class="why-eye"><i class="bi bi-eye" aria-hidden="true"></i></span>
+            <article class="why-card h-100 rounded-4 border-start">
+              <div class="why-card-head d-flex align-items-start gap-4 mb-4">
+                <span
+                  class="why-eye d-inline-flex align-items-center justify-content-center rounded-circle flex-shrink-0"><i
+                    class="bi bi-eye" aria-hidden="true"></i></span>
                 <div>
-                  <h3 class="fw-bold">UNIQUE VALUE PROPOSITIONS</h3>
-                  <span class="why-underline" aria-hidden="true"></span>
+                  <h3 class="fw-bold mb-2">UNIQUE VALUE PROPOSITIONS</h3>
+                  <span class="why-underline d-block" aria-hidden="true"></span>
                 </div>
               </div>
-              <ul class="why-check-list">
+              <ul class="why-check-list list-unstyled d-flex flex-column mb-0">
                 <li>Globally connected, locally rooted perspectives</li>
                 <li>Bridges research, practice, and community action</li>
-                <li>Promotes solution-focused collaboration</li>
+                <li>Bringing solution focussed changemakers together</li>
                 <li>Celebrates volunteerism and youth leadership</li>
                 <li>Builds inclusive networks across sectors</li>
                 <li>Free and accessible for all participants</li>
@@ -455,25 +547,36 @@
             </article>
           </div>
           <div class="col-12">
-            <article class="why-card why-benefits-card">
-              <div class="why-card-head">
-                <span class="why-eye"><i class="bi bi-eye" aria-hidden="true"></i></span>
+            <article class="why-card why-benefits-card rounded-4 border-start bg-white">
+              <div class="why-card-head d-flex align-items-start gap-4 mb-4">
+                <span
+                  class="why-eye d-inline-flex align-items-center justify-content-center rounded-circle flex-shrink-0"><i
+                    class="bi bi-eye" aria-hidden="true"></i></span>
                 <div>
-                  <h3 class="fw-bold">WHAT'S IN IT FOR YOU?</h3>
-                  <span class="why-underline" aria-hidden="true"></span>
+                  <h3 class="fw-bold mb-2">HOW WE SUPPORT YOU</h3>
+                  <span class="why-underline d-block" aria-hidden="true"></span>
+                  <p class="mb-0 mt-3 text-muted">Our conference team is here to guide your journey before, during,
+                    and after TICC 2026.</p>
                 </div>
               </div>
-              <div class="why-benefits-grid">
-                <div><i class="bi bi-person-workspace" aria-hidden="true"></i><span>Learn from global speakers and community leaders</span></div>
-                <div><i class="bi bi-chat-left-text" aria-hidden="true"></i><span>Exchange ideas and best practices</span></div>
-                <div>
-                  <i class="fa-thin fa-handshake handshake-fa-icon why-fa-icon" aria-hidden="true"></i>
-                  <span>Build meaningful collaborations</span>
+              <div class="why-benefits-grid d-grid text-center">
+                <div class="d-flex flex-column align-items-center justify-content-start"><i
+                    class="bi bi-person-workspace" aria-hidden="true"></i><span>Get step-by-step guidance for
+                    registration and participation</span></div>
+                <div class="d-flex flex-column align-items-center justify-content-start"><i class="bi bi-chat-left-text"
+                    aria-hidden="true"></i><span>Connect directly with the organizing team for quick support</span>
                 </div>
-                <div><i class="bi bi-lightbulb" aria-hidden="true"></i><span>Discover innovative community solutions</span></div>
-                <div><i class="bi bi-journal-text" aria-hidden="true"></i><span>Share your own impact stories</span></div>
-                <div>
-                  <svg class="why-group-icon" viewBox="0 0 64 64" aria-hidden="true">
+                <div class="d-flex flex-column align-items-center justify-content-start">
+                  <i class="fa-thin fa-handshake handshake-fa-icon why-fa-icon" aria-hidden="true"></i>
+                  <span>Explore partnership and collaboration opportunities</span>
+                </div>
+                <div class="d-flex flex-column align-items-center justify-content-start"><i class="bi bi-lightbulb"
+                    aria-hidden="true"></i><span>Receive practical updates on sessions and conference logistics</span>
+                </div>
+                <div class="d-flex flex-column align-items-center justify-content-start"><i class="bi bi-journal-text"
+                    aria-hidden="true"></i><span>Access important announcements, schedules, and resources</span></div>
+                <div class="d-flex flex-column align-items-center justify-content-start">
+                  <svg class="why-group-icon d-block" viewBox="0 0 64 64" aria-hidden="true">
                     <circle cx="32" cy="18" r="7" />
                     <circle cx="18" cy="24" r="6" />
                     <circle cx="46" cy="24" r="6" />
@@ -481,7 +584,7 @@
                     <path d="M6 50c1-7.5 5-12 11-12" />
                     <path d="M58 50c-1-7.5-5-12-11-12" />
                   </svg>
-                  <span>Share your own impact stories</span>
+                  <span>Join a global network of educators, volunteers, and changemakers</span>
                 </div>
               </div>
             </article>
@@ -490,18 +593,19 @@
       </div>
     </section>
 
-    <section id="partners" class="section-pad image-section partners-section">
+    <section id="partners" class="section-pad image-section partners-section overflow-hidden">
       <div class="container-xxl">
         <div class="partners-head text-center mx-auto">
-          <h6 >OUR PARTNERS</h6>
-          <h2 >Working Together for</h2>
-          <h2 ><span>Greater</span> <span>Impact</span></h2>
-          <p>Collaborating with institutions, organizations, and communities to create meaningful and lasting change.</p>
+          <h6 class="mb-0">OUR PARTNERS</h6>
+          <h2 class="mb-0">Working Together for</h2>
+          <h2 class="mb-0"><span>Greater</span> <span>Impact</span></h2>
+          <p class="mb-0">Collaborating with institutions, organizations, and communities to create meaningful and
+            lasting change.</p>
         </div>
       </div>
-      <div class="partners-marquee-wrap">
-        <div class="partners-marquee partners-marquee-left" id="partnersMarqueeRow1"></div>
-        <div class="partners-marquee partners-marquee-right" id="partnersMarqueeRow2"></div>
+      <div class="partners-marquee-wrap d-flex flex-column overflow-hidden mx-auto">
+        <div class="partners-marquee partners-marquee-left d-flex align-items-center" id="partnersMarqueeRow1"></div>
+        <div class="partners-marquee partners-marquee-right d-flex align-items-center" id="partnersMarqueeRow2"></div>
       </div>
       <div class="container-xxl">
         <div class="row g-3 partners-grid visually-hidden" id="partnersGrid">
@@ -512,9 +616,10 @@
     <section id="committee" class="section-pad committee-section image-section">
       <div class="container-xxl">
         <div class="committee-head text-center mx-auto">
-          <h6>CORE COMMITTEE</h6>
-          <h2><span>Meet Our</span> <span>Organizing Committee</span></h2>
-          <p>A diverse team of educators, researchers, community leaders and professionals working together to shape
+          <h6 class="mb-0">CORE COMMITTEE</h6>
+          <h2 class="mb-3"><span>Meet Our</span> <span>Organizing Committee</span></h2>
+          <p class="mb-0">A diverse team of educators, researchers, community leaders and professionals working together
+            to shape
             TICC 2026.</p>
         </div>
         <div class="row g-4" id="coreGrid"></div>
@@ -524,9 +629,10 @@
     <section id="advisory" class="section-pad image-section advisory-section">
       <div class="container-xxl">
         <div class="advisory-head text-center mx-auto">
-          <h6>ADVISORY COMMITTEE</h6>
-          <h2><span>Guiding Vision. Shaping</span> <span>Impact.</span></h2>
-          <p>Our Advisory Committee brings together distinguished scholars, practitioners, community leaders, and global
+          <h6 class="mb-0">ADVISORY COMMITTEE</h6>
+          <h2 class="mb-3"><span>Guiding Vision. Shaping</span> <span>Impact.</span></h2>
+          <p class="mb-0">Our Advisory Committee brings together distinguished scholars, practitioners, community
+            leaders, and global
             experts who provide strategic direction and guidance for the Triennial International Community Conference
             2026.</p>
         </div>
@@ -534,84 +640,145 @@
       </div>
     </section>
 
-    <section class="section-pad image-section testimonials-section">
+    <section class="section-pad image-section testimonials-section overflow-hidden">
       <div class="container-xxl">
         <div class="testimonials-head text-center mx-auto">
-          <h6>TESTIMONIALS</h6>
-          <h2>Voices of Impact.</h2>
-          <h2><span>Stories of</span> <span>Transformation</span></h2>
-          <p>Hear from educators, researchers, community leaders, and changemakers who have experienced the power of
+          <h6 class="mb-0">TESTIMONIALS</h6>
+          <h2 class="mb-0">Voices of Impact.</h2>
+          <h2 class="mb-0"><span>Stories of</span> <span>Transformation</span></h2>
+          <p class="mb-0">Hear from educators, researchers, community leaders, and changemakers who have experienced the
+            power of
             collaboration, compassion, and collective action through the Let Us Dream movement.</p>
         </div>
       </div>
-      <div class="testimonials-marquee-wrap">
-        <div class="testimonials-marquee" id="testimonialsMarquee"></div>
+      <div class="testimonials-marquee-wrap mx-auto overflow-hidden">
+        <div class="testimonials-marquee d-flex" id="testimonialsMarquee"></div>
       </div>
     </section>
 
     <section id="contact" class="section-pad image-section contact-section">
       <div class="container-xxl">
         <div class="contact-head text-center mx-auto">
-          <h6>GET IN TOUCH</h6>
-          <h2 class="fw-bold">Let's Build Meaningful</h2>
-          <h2 class="fw-bold">Connections.</h2>
-          <p>Whether you're interested in participating, partnering, presenting research, or learning more about the
+          <h6 class="mb-0">GET IN TOUCH</h6>
+          <h2 class="fw-bold mb-0">Let's Build Meaningful</h2>
+          <h2 class="fw-bold mb-0">Connections.</h2>
+          <p class="mb-0">Whether you're interested in participating, partnering, presenting research, or learning more
+            about the
             conference, our team is here to help.</p>
         </div>
 
-        <div class="row g-4 contact-card-row">
+        <div class="row g-4 contact-card-row mx-auto">
           <div class="col-lg-6">
-            <article class="contact-card contact-info-card">
-              <span class="contact-icon"><i class="bi bi-envelope" aria-hidden="true"></i></span>
-              <h3>EMAIL</h3>
-              <span class="contact-underline" aria-hidden="true"></span>
-              <p>conference@letusdream.org</p>
+            <article
+              class="contact-card contact-info-card d-flex flex-column align-items-center justify-content-center text-center rounded-4">
+              <span class="contact-icon d-inline-flex align-items-center justify-content-center rounded-circle mb-4"><i
+                  class="bi bi-envelope" aria-hidden="true"></i></span>
+              <h3 class="mb-3">EMAIL</h3>
+              <span class="contact-underline d-block mb-4" aria-hidden="true"></span>
+              <p class="mb-0">conference@letusdream.org</p>
             </article>
           </div>
           <div class="col-lg-6">
-            <article class="contact-card contact-info-card">
-              <span class="contact-icon"><i class="bi bi-telephone" aria-hidden="true"></i></span>
-              <h3>PHONE</h3>
-              <span class="contact-underline" aria-hidden="true"></span>
-              <p>+91 99722 22553</p>
+            <article
+              class="contact-card contact-info-card d-flex flex-column align-items-center justify-content-center text-center rounded-4">
+              <span class="contact-icon d-inline-flex align-items-center justify-content-center rounded-circle mb-4"><i
+                  class="bi bi-telephone" aria-hidden="true"></i></span>
+              <h3 class="mb-3">PHONE</h3>
+              <span class="contact-underline d-block mb-4" aria-hidden="true"></span>
+              <p class="mb-0">+91 99722 22553</p>
             </article>
           </div>
           <div class="col-12">
-            <article class="contact-card contact-info-card contact-address-card">
-              <span class="contact-icon"><i class="bi bi-geo-alt" aria-hidden="true"></i></span>
-              <h3>ADDRESS</h3>
-              <span class="contact-underline" aria-hidden="true"></span>
-              <p>Central Campus, CHRIST (Deemed to be University), Hosur Road, Bangalore - India 560 029</p>
+            <article
+              class="contact-card contact-info-card contact-address-card d-flex flex-column align-items-center justify-content-center text-center rounded-4">
+              <span class="contact-icon d-inline-flex align-items-center justify-content-center rounded-circle mb-4"><i
+                  class="bi bi-geo-alt" aria-hidden="true"></i></span>
+              <h3 class="mb-3">ADDRESS</h3>
+              <span class="contact-underline d-block mb-4" aria-hidden="true"></span>
+              <p class="mb-0">Central Campus, CHRIST (Deemed to be University), Hosur Road, Bangalore - India 560 029
+              </p>
+              <div class="text-center mt-4">
+                <a class="btn btn-primary btn-lg contact-register-btn d-inline-flex align-items-center justify-content-center"
+                  href="https://cmt.letusdream.org/one_time_registration/e3c2ffb2-39ea-44bc-a173-233f01dc8cb1"
+                  target="_blank" rel="noopener">
+                  Register for FREE <i class="bi bi-arrow-right" aria-hidden="true"></i>
+                </a>
+              </div>
+
+            </article>
+
+          </div>
+          <div class="col-12">
+            <article class="d-flex align-items-center flex-column justify-content-center bg-white rounded-4 p-4 p-lg-5 text-center shadow-sm border">
+              <h class="text-uppercase  fw-bold  mb-2" style="color: #73b72b!important;">Hosted In</h>
+              <span class="contact-underline d-block mb-4" aria-hidden="true"></span>
+              <h3 class="display-6 fw-bold text-primary mb-4">Bengaluru</h3>
+
+               <p class="mb-0 fs-5">A city where education, innovation, culture and diverse communities come together,
+                      creating an inspiring environment for meaningful global conversations.</p>
+              <div class="row row-cols-1 row-cols-md-4 g-3 w-100 mb-3">
+                
+                <div class="col">
+                  <div class=" rounded-3 p-3 text-center">
+                    <span class="d-inline-flex align-items-center justify-content-center fs-2 mb-3" style="color:#89c552;">
+                      <i class="fa-regular fa-lightbulb"></i>
+                    </span>
+                    <p class="mb-0">A global centre for technology, social innovation, and creative problem-solving.</p>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="  rounded-3 p-3 text-center">
+                    <span class="d-inline-flex align-items-center justify-content-center fs-2 mb-3" style="color:#89c552;">
+                      <i class="fa-solid fa-graduation-cap"></i>
+                    </span>
+                    <p class="mb-0">Home to leading universities, research institutions, and a thriving academic community.</p>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="  rounded-3 p-3 text-center">
+                    <span class="d-inline-flex align-items-center justify-content-center fs-2 mb-3" style="color:#89c552;">
+                      <i class="fa-solid fa-people-group"></i>
+                    </span>
+                    <p class="mb-0">A vibrant city where people, traditions, and ideas from across the world converge.</p>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="  rounded-3 p-3 text-center">
+                    <span class="d-inline-flex align-items-center justify-content-center fs-2 mb-3" style="color:#89c552;">
+                      <i class="fa-solid fa-handshake"></i>
+                    </span>
+                    <p class="mb-0">An environment that encourages meaningful dialogue, partnerships, and collective impact.</p>
+                  </div>
+                </div>
+              </div>
             </article>
           </div>
         </div>
 
-        <div class="text-center mt-4">
-          <a class="btn btn-primary btn-lg contact-register-btn" href="https://cmt.letusdream.org/one_time_registration/e3c2ffb2-39ea-44bc-a173-233f01dc8cb1" target="_blank" rel="noopener">
-            Register for FREE <i class="bi bi-arrow-right" aria-hidden="true"></i>
-          </a>
-        </div>
+
       </div>
     </section>
   </main>
 
-  <footer class="footer image-section">
-    <div class="container-xxl footer-inner">
+  <footer class="footer image-section text-white overflow-hidden">
+    <div class="container-xxl footer-inner position-relative">
       <div class="row g-5 align-items-start footer-top mt-5">
         <div class="col-lg-6">
-          <a class="footer-logo-link" href="#home" aria-label="Let Us Dream">
+          <a class="footer-logo-link d-inline-flex mb-4" href="#home" aria-label="Let Us Dream">
             <img src="{% static '2026/triennial/Patterns/LUD logo.png' %}" alt="Let Us Dream">
           </a>
-          <p class="footer-intro">Empowering youth leadership through research, mentorship, and global collaboration.</p>
+          <p class="footer-intro mb-0">Empowering youth leadership through research, mentorship, and global
+            collaboration.</p>
         </div>
         <div class="col-lg-5 offset-lg-1">
           <div class="footer-newsletter">
-            <h3>Newsletter</h3>
-            <p>Sign in to newsletter and never miss update.</p>
-            <form class="footer-newsletter-form">
+            <h3 class="mb-2">Newsletter</h3>
+            <p class="mb-3">Sign in to newsletter and never miss update.</p>
+            <form class="footer-newsletter-form d-flex align-items-center gap-2">
               <label class="visually-hidden" for="newsletterEmail">Email address</label>
-              <input id="newsletterEmail" type="email" placeholder="name@email.com">
-              <button type="submit" aria-label="Submit newsletter email">
+              <input class="flex-grow-1" id="newsletterEmail" type="email" placeholder="name@email.com">
+              <button class="d-inline-flex align-items-center justify-content-center rounded-circle flex-shrink-0"
+                type="submit" aria-label="Submit newsletter email">
                 <i class="bi bi-arrow-right" aria-hidden="true"></i>
               </button>
             </form>
@@ -619,63 +786,69 @@
         </div>
       </div>
 
-      <div class="row g-4 footer-links-row">
+      <div class="row g-4 footer-links-row mt-1">
         <div class="col-12 col-md-4 col-lg">
-          <h4>ABOUT US</h4>
-          <a href="https://letusdream.org/about-us">Overview</a>
-          <a href="https://letusdream.org/sustainability">Sustainability</a>
-          <a href="https://letusdream.org/media">Media</a>
-          <a href="https://letusdream.org/contactUs/">Contact Us</a>
+          <h4 class="mb-3">ABOUT US</h4>
+          <a class="d-block mb-3" href="https://letusdream.org/about-us">Overview</a>
+          <a class="d-block mb-3" href="https://letusdream.org/sustainability">Sustainability</a>
+          <a class="d-block mb-3" href="https://letusdream.org/media">Media</a>
+          <a class="d-block mb-3" href="https://letusdream.org/contactUs/">Contact Us</a>
         </div>
         <div class="col-12 col-md-4 col-lg">
-          <h4>DREAMS</h4>
-          <a href="https://letusdream.org/contactUs/">DREAMS Programs</a>
-          <a href="https://letusdream.org/contactUs/">DREAMS Band</a>
+          <h4 class="mb-3">DREAMS</h4>
+          <a class="d-block mb-3" href="https://letusdream.org/contactUs/">DREAMS Programs</a>
+          <a class="d-block mb-3" href="https://letusdream.org/contactUs/">DREAMS Band</a>
         </div>
         <div class="col-12 col-md-4 col-lg">
-          <h4>CLUBS</h4>
-          <a href="https://letusdream.org/clubs/overview">Overview</a>
-          <a href="https://letusdream.org/clubs/professional">Professional Club</a>
-          <a href="https://letusdream.org/clubs/conversation">Conversation Club</a>
-          <a href="https://letusdream.org/clubs/youth-leadership">Youth Leadership Network</a>
-          <a href="https://letusdream.org/clubs/growandglow">Grow &amp; Glow Clubs</a>
-          <a href="https://letusdream.org/clubs/community">Community Hubs</a>
+          <h4 class="mb-3">CLUBS</h4>
+          <a class="d-block mb-3" href="https://letusdream.org/clubs/overview">Overview</a>
+          <a class="d-block mb-3" href="https://letusdream.org/clubs/professional">Professional Club</a>
+          <a class="d-block mb-3" href="https://letusdream.org/clubs/conversation">Conversation Club</a>
+          <a class="d-block mb-3" href="https://letusdream.org/clubs/youth-leadership">Youth Leadership Network</a>
+          <a class="d-block mb-3" href="https://letusdream.org/clubs/growandglow">Grow &amp; Glow Clubs</a>
+          <a class="d-block mb-3" href="https://letusdream.org/clubs/community">Community Hubs</a>
         </div>
         <div class="col-12 col-md-4 col-lg">
-          <h4>CONFERENCES</h4>
-          <a href="https://letusdream.org/conferences">Overview</a>
-          <a href="https://letusdream.org/annualConference">Annual Conferences</a>
-          <a href="https://letusdream.org/trriennialConference">Triennial Conferences</a>
+          <h4 class="mb-3">CONFERENCES</h4>
+          <a class="d-block mb-3" href="https://letusdream.org/conferences">Overview</a>
+          <a class="d-block mb-3" href="https://letusdream.org/annualConference">Annual Conferences</a>
+          <a class="d-block mb-3" href="https://letusdream.org/trriennialConference">Triennial Conferences</a>
         </div>
         <div class="col-12 col-md-4 col-lg">
-          <h4>RESEARCH</h4>
-          <a href="https://letusdream.org/research">Research</a>
-          <a href="https://letusdream.org/publications">Publications</a>
+          <h4 class="mb-3">RESEARCH</h4>
+          <a class="d-block mb-3" href="https://letusdream.org/research">Research</a>
+          <a class="d-block mb-3" href="https://letusdream.org/publications">Publications</a>
         </div>
       </div>
 
       <div class="footer-divider"></div>
 
-      <div class="footer-social text-center">
-        <p>Connect with Let Us Dream</p>
-        <div class="footer-social-links">
-          <a href="https://www.instagram.com/letus.dream/" aria-label="Instagram">
+      <div class="footer-social text-center d-flex flex-column align-items-center">
+        <p class="mb-3">Connect with Let Us Dream</p>
+        <div class="footer-social-links d-inline-flex align-items-center gap-4">
+          <a class="mb-0" href="https://www.instagram.com/letus.dream/" aria-label="Instagram">
             <i class="bi bi-instagram" aria-hidden="true"></i>
           </a>
-          <a href="http://facebook.com/ludreams.ludreams/" aria-label="Facebook">
+          <a class="mb-0" href="http://facebook.com/ludreams.ludreams/" aria-label="Facebook">
             <i class="bi bi-facebook" aria-hidden="true"></i>
           </a>
-          <a href="https://x.com/LetUsDream5?s=08" aria-label="X">
+          <a class="mb-0" href="https://x.com/LetUsDream5?s=08" aria-label="X">
             <i class="bi bi-twitter-x" aria-hidden="true"></i>
           </a>
         </div>
       </div>
     </div>
 
-    <div class="footer-word-marquee" aria-hidden="true">
-      <div class="footer-word-track">
-        <span>Together</span><i class="bi bi-asterisk"></i><span>Hope</span><i class="bi bi-asterisk"></i><span>Unity</span><i class="bi bi-asterisk"></i><span>Care</span><i class="bi bi-asterisk"></i><span>Impact</span><i class="bi bi-asterisk"></i><span>Growth</span><i class="bi bi-asterisk"></i><span>Trust</span><i class="bi bi-asterisk"></i>
-        <span>Together</span><i class="bi bi-asterisk"></i><span>Hope</span><i class="bi bi-asterisk"></i><span>Unity</span><i class="bi bi-asterisk"></i><span>Care</span><i class="bi bi-asterisk"></i><span>Impact</span><i class="bi bi-asterisk"></i><span>Growth</span><i class="bi bi-asterisk"></i><span>Trust</span><i class="bi bi-asterisk"></i>
+    <div class="footer-word-marquee mx-auto overflow-hidden" aria-hidden="true">
+      <div class="footer-word-track d-flex align-items-center">
+        <span>Together</span><i class="bi bi-asterisk"></i><span>Hope</span><i
+          class="bi bi-asterisk"></i><span>Unity</span><i class="bi bi-asterisk"></i><span>Care</span><i
+          class="bi bi-asterisk"></i><span>Impact</span><i class="bi bi-asterisk"></i><span>Growth</span><i
+          class="bi bi-asterisk"></i><span>Trust</span><i class="bi bi-asterisk"></i>
+        <span>Together</span><i class="bi bi-asterisk"></i><span>Hope</span><i
+          class="bi bi-asterisk"></i><span>Unity</span><i class="bi bi-asterisk"></i><span>Care</span><i
+          class="bi bi-asterisk"></i><span>Impact</span><i class="bi bi-asterisk"></i><span>Growth</span><i
+          class="bi bi-asterisk"></i><span>Trust</span><i class="bi bi-asterisk"></i>
       </div>
     </div>
   </footer>
