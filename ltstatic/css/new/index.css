@@ -1,10 +1,27 @@
     /* Custom carousel styles for centered captions */
     .carousel-img {
-
+        width: 100%;
+        height: 100%;
+        display: block;
         color: #fff;
         /* filter: blur(3px) brightness(0.7); */
         filter: brightness(0.7);
         transition: filter 0.5s ease-in-out;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    #carouselExampleFade .carousel-inner {
+        height: 460px;
+    }
+
+    #carouselExampleFade .carousel-item {
+        height: 460px;
+    }
+
+    #carouselExampleFade .carousel-item img {
+        width: 100%;
+        height: 100%;
         object-fit: cover;
     }
 
@@ -135,4 +152,18 @@
     .carousel-item {
         min-height: 140px;
         /* Ensure consistent carousel height */
+    }
+
+    @media (max-width: 992px) {
+        #carouselExampleFade .carousel-inner,
+        #carouselExampleFade .carousel-item {
+            height: 360px;
+        }
+    }
+
+    @media (max-width: 576px) {
+        #carouselExampleFade .carousel-inner,
+        #carouselExampleFade .carousel-item {
+            height: 240px;
+        }
     }
