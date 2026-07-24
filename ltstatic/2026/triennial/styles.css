@@ -141,6 +141,14 @@ footer {
 }
 
 @media (min-width: 768px) {
+  .theme-title span {
+    display: inline !important;
+  }
+
+  .theme-title span:first-child {
+    margin-right: .25em;
+  }
+
   .container-xxl {
     padding-left: clamp(2rem, 3.8vw, 5rem);
     padding-right: clamp(2rem, 3.8vw, 5rem);
@@ -732,6 +740,10 @@ footer {
     margin-left: 0;
     margin-right: auto;
   }
+
+  .theme-stats-card > div + div {
+    border-left: 1px solid rgba(15, 61, 122, .18);
+  }
 }
 
 .theme-stats-card > div {
@@ -898,7 +910,7 @@ footer {
 }
 
 .track-day-1 .track-features {
-  border-color: rgba(255,255,255,.25);
+  border-color: rgba(15, 77, 167, .28);
 }
 
 .track-day-1 p {
@@ -1594,6 +1606,14 @@ footer {
   background: #73B72B;
 }
 
+.host-city-title {
+  color: #0F3D7A;
+}
+
+.host-city-feature + .host-city-feature {
+  border-left: 1px solid rgba(15, 61, 122, .18);
+}
+
 .contact-info-card p {
   color: #0F3D7A;
   font-size: 1.45rem;
@@ -1827,8 +1847,15 @@ footer {
   }
 
   .hero-copy {
-    padding-left: .9rem;
+    padding-left: 0;
     padding-right: 0;
+    text-align: center;
+  }
+
+  .hero-kicker {
+    font-size: clamp(1.8rem, 11.5vw, 2.25rem);
+    letter-spacing: .08em;
+    white-space: nowrap;
   }
 
   .hero-title {
@@ -1843,7 +1870,7 @@ footer {
   }
 
   .hero-theme {
-    padding-left: 1.45rem;
+    padding-left: 0;
     max-width: 100%;
     margin-bottom: 23rem !important;
   }
@@ -1851,8 +1878,7 @@ footer {
   .hero-underline {
     width: 96px;
     height: 4px;
-    margin-top: 1rem;
-    margin-bottom: 1.2rem;
+    margin: 1rem auto 1.2rem;
   }
 
   .hero-tagline {
@@ -1901,6 +1927,10 @@ footer {
     text-align: center;
   }
 
+  .about-heading span {
+    display: block;
+  }
+
   .about-section .row {
     --bs-gutter-y: 1.7rem;
   }
@@ -1912,10 +1942,10 @@ footer {
   }
 
   .about-section .btn {
-    display: flex;
+    display: flex !important;
     width: fit-content;
     max-width: 100%;
-    margin: 1.8rem auto 0;
+    margin: 1.8rem auto 0 !important;
     padding: .9rem 1.4rem;
     border-radius: 16px !important;
   }
@@ -1945,6 +1975,24 @@ footer {
     font-size: 2.25rem;
   }
 
+  .theme-development-break {
+    display: block;
+  }
+
+  .theme-card,
+  .theme-mini-card {
+    text-align: center;
+  }
+
+  .theme-card-icon {
+    align-self: center;
+  }
+
+  .theme-mini-card h3::after {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .committee-head h2,
   .advisory-head h2 {
     white-space: normal;
@@ -1962,12 +2010,18 @@ footer {
   }
 
   .track-card {
-    padding: 24px;
+    padding: 22px 24px;
   }
 
   .track-main {
     grid-template-columns: 1fr;
-    gap: 18px;
+    gap: 22px;
+  }
+
+  .track-main > div:first-child {
+    flex-direction: row !important;
+    justify-content: flex-start !important;
+    gap: 24px;
   }
 
   .track-icon {
@@ -1976,12 +2030,35 @@ footer {
     font-size: 2.65rem;
   }
 
+  .track-day-1 .track-icon {
+    border: 5px solid rgba(15, 112, 220, .28);
+  }
+
   .track-card h3 {
-    font-size: 1.45rem;
+    font-size: 1.5rem;
+    line-height: 1.08;
+  }
+
+  .track-card p {
+    font-size: .92rem;
+    line-height: 1.45;
+  }
+
+  .track-day {
+    width: auto !important;
+    margin: 0 !important;
+    padding: 1.05rem .7rem !important;
+    font-size: 1.75rem;
+  }
+
+  .track-content {
+    padding-top: 0;
+    border-top: 0;
   }
 
   .track-features-8,
   .track-features-5 {
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -2007,8 +2084,39 @@ footer {
   }
 
   .why-benefits-grid {
-    grid-template-columns: repeat(2, 1fr);
-    row-gap: 28px;
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding-left: 0;
+  }
+
+  .why-benefits-card .why-card-head {
+    display: block;
+    text-align: center;
+  }
+
+  .why-benefits-card .why-eye {
+    display: none;
+  }
+
+  .why-benefits-card .why-underline {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .why-benefits-grid div {
+    min-height: 0;
+    padding: 0 8px;
+    border-right: 0;
+  }
+
+  .why-benefits-grid i,
+  .why-benefits-grid .why-group-icon {
+    margin-bottom: 14px;
+  }
+
+  .why-benefits-grid span {
+    font-size: 1rem;
+    line-height: 1.7;
   }
 
   .why-benefits-grid div:nth-child(2n) {
@@ -2044,6 +2152,11 @@ footer {
 
   .contact-info-card p {
     font-size: 1.18rem;
+  }
+
+  .host-city-feature + .host-city-feature {
+    border-top: 0;
+    border-left: 0;
   }
 
   .footer {
@@ -2120,7 +2233,7 @@ footer {
   }
 
   .hero-theme {
-    padding-left: 1.15rem;
+    padding-left: 0;
     margin-bottom: 21.5rem !important;
   }
 
