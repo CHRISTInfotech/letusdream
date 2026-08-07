@@ -10,11 +10,17 @@ Home
 {% endblock links %}
 
 {% block content %}
-<!-- Enhanced Hero Carousel -->
+
 <section class="text-white text-center ">
     <div class="container-fluid">
         <div class="row align-items-center">
-            <!-- Logo column col-4  -->
+
+            <!-- <div class="col-md-12">
+                <a href="{% url 'tc-2026' %}" class="d-block">
+                    <img src="{% static 'home/banner/TICCWebsiteBanner.png' %}" class="img-fluid w-100" alt="DREAMS Program Banner 1">
+                </a>
+            </div>
+             -->
             <div class="col-md-4 col-12 order-md-2 order-2">
                 <div class="position-relative text-center py-4 py-md-0">
                     <a href="{% url 'main' %}" class="d-block">
@@ -28,14 +34,14 @@ Home
                 </div>
             </div>
 
-            <!-- Carousel column col-8  -->
+           
             <div class="col-md-8 col-12 order-md-1 order-1 mb-3 mb-md-0">
                 <div id="carouselExampleFade" class="carousel slide carousel-fade position-relative mt-2"
                     data-bs-ride="carousel" data-bs-interval="5000">
                     <div class="carousel-indicators">
                         <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="0" class="active"
                             aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="1"
+                        <!-- <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="1"
                             aria-label="Slide 2"></button>
                         <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="2"
                             aria-label="Slide 3"></button>
@@ -43,16 +49,17 @@ Home
                             aria-label="Slide 4"></button>
                         <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="4"
                             aria-label="Slide 5"></button>
+                        <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="5"
+                            aria-label="Slide 6"></button> -->
                     </div>
 
                     <div class="carousel-inner rounded-custom">
-                        <div class="carousel-item active">
+                        <!-- <div class="carousel-item active">
                             <img src="{% static 'home/banner/2.png' %}" class="d-block w-100 carousel-img"
                                 alt="DREAMS Program Banner 2">
                             <div class="carousel-overlay"></div>
                             <div class="carousel-caption-centered text-white">
-                                <!-- <h5 class="carousel-h5">Welcome to</h5>
-                                <h4 class="carousel-h4">LET US DREAM</h4> -->
+                                
                             </div>
                         </div>
                         <div class="carousel-item">
@@ -60,8 +67,7 @@ Home
                                 alt="DREAMS Program Banner 3">
                             <div class="carousel-overlay"></div>
                             <div class="carousel-caption-centered text-white">
-                                <!-- <h5 class="carousel-h5">Welcome to</h5>
-                                <h4 class="carousel-h4">LET US DREAM</h4> -->
+                                
                             </div>
                         </div>
                         <div class="carousel-item">
@@ -69,8 +75,7 @@ Home
                                 alt="DREAMS Program Banner 4">
                             <div class="carousel-overlay"></div>
                             <div class="carousel-caption-centered text-white">
-                                <!-- <h5 class="carousel-h5">Welcome to</h5>
-                                <h4 class="carousel-h4">LET US DREAM</h4> -->
+                                
                             </div>
                         </div>
                         <div class="carousel-item">
@@ -78,8 +83,7 @@ Home
                                 alt="DREAMS Program Banner 5">
                             <div class="carousel-overlay"></div>
                             <div class="carousel-caption-centered text-white">
-                                <!-- <h5 class="carousel-h5">Welcome to</h5>
-                                <h4 class="carousel-h4">LET US DREAM</h4> -->
+                                
                             </div>
                         </div>
                         <div class="carousel-item">
@@ -87,10 +91,20 @@ Home
                                 alt="DREAMS Program Banner 6">
                             <div class="carousel-overlay"></div>
                             <div class="carousel-caption-centered text-white">
-                                <!-- <h5 class="carousel-h5">Welcome to</h5>
-                                <h4 class="carousel-h4">LET US DREAM</h4> -->
+                                
+                            </div>
+                        </div> -->
+                        <div class="carousel-item active">
+                            <a href="{% url 'tc-2026' %}">
+                            <img src="{% static 'home/banner/TICCWebsiteBanner.png' %}" class="d-block w-100 carousel-img"
+                                alt="DREAMS Program Banner 6">
+                                </a>
+                            <div class="carousel-overlay"></div>
+                            <div class="carousel-caption-centered text-white">
+                                
                             </div>
                         </div>
+                        
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
                         data-bs-slide="prev">
@@ -108,7 +122,7 @@ Home
     </div>
 </section>
 
-<!-- Hero Section -->
+
 <section class="bg-light py-5 text-white text-center">
     <div class="container">
         <h1 class="fw-bold mb-3 font-primary">Empowering Communities</h1>
@@ -154,8 +168,8 @@ Home
     </div>
 </section>
 
-<!-- Programs Section -->
-<!-- Programs Section -->
+
+
 <section class="py-5 bg-light" id="dreamProgram">
     <div class="container">
         <div class="row justify-content-center mb-5">
@@ -166,11 +180,11 @@ Home
         </div>
 
         <div class="row g-4 cards-grid">
-            <!-- DREAMS Program Card -->
+            
             <div class="col-lg-6 col-xl-4 fade-in">
                 <div class="card h-100 program-card border-0 shadow-sm">
                     <div class="card-img-wrapper position-relative overflow-hidden">
-                        <img src="{% static 'home/programs/Program.png' %}" class="card-img-top program-img"
+                        <img src="{% static 'stock/DIP .jpg' %}" class="card-img-top program-img"
                             alt="DREAMS Program">
                         <div class="card-img-overlay d-flex align-items-end">
                             <div class="program-icon bg-primary text-white rounded-circle p-3">
@@ -198,11 +212,11 @@ Home
                 </div>
             </div>
 
-            <!-- Community Conferences Card -->
+            
             <div class="col-lg-6 col-xl-4 fade-in">
                 <div class="card h-100 program-card border-0 shadow-sm">
                     <div class="card-img-wrapper position-relative overflow-hidden">
-                        <img src="{% static '/home/programs/Conference.png' %}" class="card-img-top program-img"
+                        <img src="{% static 'stock/conference.png' %}" class="card-img-top program-img"
                             alt="Community Conferences">
                         <div class="card-img-overlay d-flex align-items-end">
                             <div class="program-icon bg-info text-white rounded-circle p-3">
@@ -228,11 +242,11 @@ Home
                 </div>
             </div>
 
-            <!-- DREAMS Band Card -->
+            
             <div class="col-lg-6 col-xl-4 fade-in">
                 <div class="card h-100 program-card border-0 shadow-sm">
                     <div class="card-img-wrapper position-relative overflow-hidden">
-                        <img src="{% static '/home/programs/Band.png' %}" class="card-img-top program-img"
+                        <img src="{% static 'stock/band.jpg' %}" class="card-img-top program-img"
                             alt="DREAMS Band">
                         <div class="card-img-overlay d-flex align-items-end">
                             <div class="program-icon bg-warning text-dark rounded-circle p-3">
@@ -258,11 +272,11 @@ Home
             </div>
 
 
-            <!-- DREAMS Pro Club Card -->
+            
             <div class="col-lg-6 col-xl-4 fade-in">
                 <div class="card h-100 program-card border-0 shadow-sm">
                     <div class="card-img-wrapper position-relative overflow-hidden">
-                        <img src="{% static '/home/programs/Club.png' %}" class="card-img-top program-img"
+                        <img src="{% static 'stock/Clubs.jpg' %}" class="card-img-top program-img"
                             alt="DREAMS Pro Club">
                         <div class="card-img-overlay d-flex align-items-end">
                             <div class="program-icon bg-success text-white rounded-circle p-3">
@@ -290,7 +304,7 @@ Home
             </div>
 
 
-            <!-- Fellowship Card -->
+            
             <div class="col-lg-6 col-xl-4 fade-in">
                 <div class="card h-100 program-card border-0 shadow-sm">
                     <div class="card-img-wrapper position-relative overflow-hidden">
@@ -320,7 +334,7 @@ Home
                 </div>
             </div>
 
-            <!-- Research Card -->
+            
             <div class="col-lg-6 col-xl-4 fade-in">
                 <div class="card h-100 program-card border-0 shadow-sm">
                     <div class="card-img-wrapper position-relative overflow-hidden">
@@ -352,7 +366,7 @@ Home
         </div>
     </div>
 </section>
-<!-- Upcoming Events Section -->
+
 <section class="py-5 bg-primary-subtle" id="conference">
     <div class="container">
         <div class="row justify-content-center mb-5">
@@ -372,8 +386,8 @@ Home
                         <div
                             class="event-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center">
                             <div class="text-center text-white">
-                                <!-- <i class="fas fa-calendar-alt fs-1 mb-3"></i> -->
-                                <!-- <h5 class="fw-bold">May 25, 2025</h5> -->
+                                
+                                
                             </div>
                         </div>
                     </div>
@@ -387,8 +401,7 @@ Home
                         <div
                             class="event-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center">
                             <div class="text-center text-white">
-                                <!-- <i class="fas fa-users fs-1 mb-3"></i>
-                                <h5 class="fw-bold">Community Meet</h5> -->
+                                
                             </div>
                         </div>
                     </div>
@@ -402,8 +415,7 @@ Home
                         <div
                             class="event-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center">
                             <div class="text-center text-white">
-                                <!-- <i class="fas fa-handshake fs-1 mb-3"></i>
-                                <h5 class="fw-bold">Partnership</h5> -->
+                                
                             </div>
                         </div>
                     </div>
@@ -413,7 +425,7 @@ Home
     </div>
 </section>
 
-<!-- Partnering Organizations Section -->
+
 <section class="py-5 bg-primary-subtle">
     <div class="container">
         <div class="row justify-content-center mb-5">
@@ -423,11 +435,11 @@ Home
             </div>
         </div>
 
-        <!-- Partners Carousel -->
+        
         <div class="mb-5">
             <div id="partnersCarousel" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
-                    <!-- Slide 1 - NGOs -->
+                    
                     <div class="carousel-item active">
                         <div class="row g-4 align-items-center">
                             <div class="col-lg-2 col-md-4 col-6">
@@ -471,7 +483,7 @@ Home
                         </div>
                     </div>
 
-                    <!-- Slide 2 - Universities Mix 1 -->
+                    
                     <div class="carousel-item">
                         <div class="row g-4">
                             <div class="col-lg-2 col-md-4 col-6">
@@ -513,7 +525,7 @@ Home
                         </div>
                     </div>
 
-                    <!-- Slide 3 - Universities Mix 2 -->
+                    
                     <div class="carousel-item">
                         <div class="row g-4">
                             <div class="col-lg-2 col-md-4 col-6">
@@ -546,18 +558,12 @@ Home
                                         class="img-fluid partner-logo" alt="Louisiana">
                                 </div>
                             </div>
-                            <!-- <div class="col-lg-2 col-md-4 col-6">
-                                <div class="partner-logo-wrapper p-3 bg-light rounded-3 shadow-sm">
-                                    <div class="text-muted">
-                                        <i class="fas fa-plus fs-2"></i>
-                                    </div>
-                                </div>
-                            </div> -->
+                            
                         </div>
                     </div>
                 </div>
 
-                <!-- Carousel Indicators -->
+                
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#partnersCarousel" data-bs-slide-to="0" class="active"
                         aria-current="true" aria-label="Slide 1"></button>
@@ -574,7 +580,7 @@ Home
 {% include 'partials/_globalPresence.html' %}
 {% include 'partials/_countDetails.html' %}
 
-<!-- Newsletter Section -->
+
 <section class="py-5 bg-primary-subtle">
     <div class="container">
         <div class="row justify-content-center mb-5">
@@ -670,7 +676,7 @@ Home
 </section>
 
 
-<!-- Scroll to Top Button -->
+
 <button id="scrollTopBtn" class="btn btn-primary position-fixed rounded-circle shadow-lg"
     style="bottom: 2rem; right: 2rem; width: 60px; height: 60px; z-index: 1000; display: none;">
     <i class="fas fa-arrow-up"></i>
