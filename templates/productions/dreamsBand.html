@@ -167,7 +167,7 @@ Dream Band
                     tabindex="0">
                     <div class="row g-0">
                         <div class="col-md-6">
-                            <img src="{% static 'DreamsProgram/band/Dreams-Programme-png.png' %}" class="img-fluid"
+                            <img src="{% static 'stock/Band(1).jpg' %}" class="img-fluid"
                                 alt="...">
                         </div>
                         <div class="col-md-6 px-3">
@@ -295,9 +295,18 @@ Dream Band
 
         <!-- Main Video Player -->
         <div class="col-12 mb-4">
-            <div class="ratio ratio-16x9 mb-4 border rounded shadow-sm">
-                <iframe id="mainVideo" src="https://www.youtube.com/embed/Ux9nD9YuGv0" title="Video Player"
+            <div class="ratio ratio-16x9 mb-3 border rounded shadow-sm">
+                <iframe id="mainVideo" src="https://www.youtube-nocookie.com/embed/Ux9nD9YuGv0" title="Video Player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
                     allowfullscreen></iframe>
+            </div>
+            <div class="text-center">
+                <a id="watchOnYoutubeBtn" href="https://www.youtube.com/watch?v=Ux9nD9YuGv0" target="_blank"
+                    class="btn btn-outline-danger fw-semibold px-4 py-2 rounded-pill hover-lift transition-all duration-300">
+                    <i class="fab fa-youtube me-2"></i>Watch on YouTube
+                </a>
             </div>
         </div>
 
@@ -385,7 +394,12 @@ Dream Band
 <script>
     function changeVideo(videoId) {
         const mainVideo = document.getElementById('mainVideo');
-        mainVideo.src = `https://www.youtube.com/embed/${videoId}`;
+        mainVideo.src = `https://www.youtube-nocookie.com/embed/${videoId}`;
+        
+        const watchOnYoutubeBtn = document.getElementById('watchOnYoutubeBtn');
+        if (watchOnYoutubeBtn) {
+            watchOnYoutubeBtn.href = `https://www.youtube.com/watch?v=${videoId}`;
+        }
     }
 </script>
 {% endblock %}
