@@ -62,8 +62,10 @@ def media(request):
         },
         {"name": "Media", "url": None, "icon": "fas fa-photo-video", "active": True},
     ]
+    
+    recent_newsletters = get_sorted_newsletters()[:4]
 
-    return render(request, "aboutUs/media.html", {"breadcrumbs": breadcrumbs})
+    return render(request, "aboutUs/media.html", {"breadcrumbs": breadcrumbs, "newsletters": recent_newsletters})
 
 
 def events(request):
@@ -239,8 +241,72 @@ def pressRelease(request):
     )
 
 
-def newsletter(request):
+def get_sorted_newsletters():
     newsletters = [
+        {
+            "pdf_url": "newsletters/2026/ticc-8th-issue (1).pdf",
+            "image_url": "newsletters/2026/issue 8 coverpage.png",
+            "title": "TICC 2026 Edition 1 Vol 8",
+            "month": "Aug",
+            "day": "19",
+            "year": "2026",
+        },
+        {
+            "pdf_url": "newsletters/2026/ticc-volume-1-issue-7.pdf",
+            "image_url": "newsletters/2026/issue 7 coverpage.png",
+            "title": "TICC 2026 Edition 1 Vol 7",
+            "month": "Aug",
+            "day": "9",
+            "year": "2026",
+        },
+        {
+            "pdf_url": "newsletters/2026/ticc-2026-volume-1-issue-6.pdf",
+            "image_url": "newsletters/2026/issue 6 coverpage.png",
+            "title": "TICC 2026 Edition 1 Vol 6",
+            "month": "Aug",
+            "day": "3",
+            "year": "2026",
+        },
+        {
+            "pdf_url": "newsletters/2026/ticc-issue-5-2026.pdf",
+            "image_url": "newsletters/2026/issue 5 coverpage.png",
+            "title": "TICC 2026 Edition 1 Vol 5",
+            "month": "July",
+            "day": "23",
+            "year": "2026",
+        },
+        {
+            "pdf_url": "newsletters/2026/ticc-issue-4-2026.pdf",
+            "image_url": "newsletters/2026/issue 4 coverpage.png",
+            "title": "TICC 2026 Edition 1 Vol 4",
+            "month": "July",
+            "day": "16",
+            "year": "2026",
+        },
+        {
+            "pdf_url": "newsletters/2026/ticc-2026 issue 3.pdf",
+            "image_url": "newsletters/2026/issue 3 coverpage.png",
+            "title": "TICC 2026 Edition 1 Vol 3",
+            "month": "July",
+            "day": "9",
+            "year": "2026",
+        },
+        {
+            "pdf_url": "newsletters/2026/ticc-volume-1-issue-2_final-2.pdf",
+            "image_url": "newsletters/2026/ticc-volume-1-issue-2_final-2 cover foto.png",
+            "title": "TICC 2026 Edition 1 Vol 2",
+            "month": "June",
+            "day": "29",
+            "year": "2026",
+        },
+        {
+            "pdf_url": "newsletters/2026/ticc-2026-edition-1-vol-1-final.pdf",
+            "image_url": "newsletters/2026/ticc-2026 vol1 cover page.png",
+            "title": "TICC 2026 Edition 1 Vol 1",
+            "month": "June",
+            "day": "22",
+            "year": "2026",
+        },
         {
             "pdf_url": "newsletters/2025/Dreams Newsletter MIC 2025-26.pdf",
             "image_url": "newsletters/2025/Dreams Newsletter MIC 2025-26.png",
@@ -445,27 +511,9 @@ def newsletter(request):
             "year": "2024",
         },
     ]
-    breadcrumbs = [
-        {"name": "Home", "url": "main", "icon": "fas fa-home", "active": False},
-        {
-            "name": "About Us",
-            "url": None,
-            "icon": "fas fa-info-circle",
-            "active": False,
-        },
-        {
-            "name": "Media",
-            "url": "media",
-            "icon": "fas fa-photo-video",
-            "active": False,
-        },
-        {"name": "Newsletter", "url": None, "icon": "fas fa-envelope", "active": True},
-    ]
-
-    # Month mapping
     month_order = {
         "Jan": 1, "Feb": 2, "Mar": 3, "Apr": 4,
-        "May": 5, "Jun": 6, "Jul": 7, "Aug": 8,
+        "May": 5, "Jun": 6, "June": 6, "Jul": 7, "July": 7, "Aug": 8,
         "Sep": 9, "Oct": 10, "Nov": 11, "Dec": 12
     }
 
@@ -483,6 +531,27 @@ def newsletter(request):
         ),
         reverse=True
     )
+    return newsletters
+
+def newsletter(request):
+    newsletters = get_sorted_newsletters()
+    
+    breadcrumbs = [
+        {"name": "Home", "url": "main", "icon": "fas fa-home", "active": False},
+        {
+            "name": "About Us",
+            "url": None,
+            "icon": "fas fa-info-circle",
+            "active": False,
+        },
+        {
+            "name": "Media",
+            "url": "media",
+            "icon": "fas fa-photo-video",
+            "active": False,
+        },
+        {"name": "Newsletter", "url": None, "icon": "fas fa-envelope", "active": True},
+    ]
 
     # Render the template with the newsletters and breadcrumbs
     return render(

@@ -337,90 +337,34 @@
 
             <div class="row g-4">
 
-                 <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="content-card text-center hover-lift h-100">
-                        <div class="publication-date bg-gradient-secondary text-dark rounded-custom-small p-2 mb-3">
-                            <small class="fw-bold">Dreams Newsletter MIC 2025-26</small>
-                        </div>
-                        <a href="{% static 'newsletters/2025/Dreams Newsletter MIC 2025-26.pdf' %}"
-                           target="_blank"
-                           class="text-decoration-none">
-                            <img src="{% static 'newsletters/2025/Dreams Newsletter MIC 2025-26.png' %}"
-                                class="img-fluid rounded-custom shadow-custom-small hover-scale" 
-                                alt="Dreams Newsletter MIC 2025-26">
-                        </a>                        
-                    </div>
-                </div>
-
+                {% for n in newsletters %}
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="content-card text-center hover-lift h-100">
                         <div class="publication-date bg-gradient-secondary text-dark rounded-custom-small p-2 mb-3">
-                            <small class="fw-bold">Kerala Newsletter 2025-26</small>
+                            <small class="fw-bold">{{ n.title }}</small>
                         </div>
-                        <a href="{% static '2025/newsletter/Kerala Newsletter.pdf' %}"
+                        {% if n.is_url %}
+                        <a href="{% url n.url_name n.url_args.0 n.url_args.1 %}"
                            target="_blank"
                            class="text-decoration-none">
-                            <img src="{% static '2025/newsletter/Keralanewsletterface.png' %}"
-                                class="img-fluid rounded-custom shadow-custom-small hover-scale" 
-                                alt="Kerala Newsletter November 2025">
-                        </a>                        
-                    </div>
-                </div>
-
-                 <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="content-card text-center hover-lift h-100">
-                        <div class="publication-date bg-gradient-secondary text-dark rounded-custom-small p-2 mb-3">
-                            <small class="fw-bold">Nov 2025</small>
-                        </div>
-                        <a href="{% static 'newsletters/2025/2025vol2.pdf' %}"
-                           target="_blank"
-                           class="text-decoration-none">
-                            <img src="{% static 'newsletters/2025/2025vol2.png' %}"
+                            <img src="{% static n.image_url %}"
                                  class="img-fluid rounded-custom shadow-custom-small hover-scale" 
-                                 alt="Conference Newsletter Volume 2">
+                                 style="aspect-ratio: 3/4; object-fit: cover; object-position: top; width: 100%;"
+                                 alt="{{ n.title }}">
                         </a>                        
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="content-card text-center hover-lift h-100">
-                        <div class="publication-date bg-gradient-secondary text-dark rounded-custom-small p-2 mb-3">
-                            <small class="fw-bold">Nov 2025</small>
-                        </div>
-                        <a href="{% static 'newsletters/2025/2025vol1.pdf' %}"
+                        {% else %}
+                        <a href="{% static n.pdf_url %}"
                            target="_blank"
                            class="text-decoration-none">
-                            <img src="{% static 'newsletters/2025/2025vol1.png' %}"
+                            <img src="{% static n.image_url %}"
                                  class="img-fluid rounded-custom shadow-custom-small hover-scale" 
-                                 alt="Conference Newsletter Volume 1">
+                                 style="aspect-ratio: 3/4; object-fit: cover; object-position: top; width: 100%;"
+                                 alt="{{ n.title }}">
                         </a>                        
+                        {% endif %}
                     </div>
                 </div>
-<!-- 
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="content-card text-center hover-lift h-100">
-                        <div class="publication-date bg-gradient-secondary text-dark rounded-custom-small p-2 mb-3">
-                            <small class="fw-bold">Sept 28, 2023</small>
-                        </div>
-                        <img src="{% static '2025/newsletter/NewsBulletin_Changanassery.png' %}"
-                             class="img-fluid rounded-custom shadow-custom-small hover-scale" 
-                             alt="Changanassery Newsletter">
-                        
-                    </div>
-                </div> -->
-
-               
-                <!-- <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="content-card text-center hover-lift h-100">
-                        <div class="publication-date bg-gradient-secondary text-dark rounded-custom-small p-2 mb-3">
-                            <small class="fw-bold">Oct 21, 2020</small>
-                        </div>
-                        <img src="{% static 'Aboutus/Media/Newsletter/dec2024.png' %}"
-                             class="img-fluid rounded-custom shadow-custom-small hover-scale" 
-                             alt="December 2024 Newsletter">
-                       
-                    </div>
-                </div> -->
+                {% endfor %}
             </div>
             <div class="row mt-5">
             <div class="col-12">

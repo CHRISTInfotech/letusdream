@@ -41,11 +41,11 @@ Newsletter
             <div class="card position-relative shadow-custom-hover rounded-custom h-100 overflow-hidden">
                 {% if n.is_url %}
                     <a href="{% url n.url_name n.url_args.0 n.url_args.1 %}" target="_blank">
-                        <img src="{% static n.image_url %}" alt="{{ n.title }}" class="card-img-top img-fluid">
+                        <img src="{% static n.image_url %}" alt="{{ n.title }}" class="card-img-top img-fluid" style="aspect-ratio: 3/4; object-fit: cover; object-position: top; width: 100%;">
                     </a>
                 {% else %}
                     <a href="{% static n.pdf_url %}" target="_blank">
-                        <img src="{% static n.image_url %}" alt="{{ n.title }}" class="card-img-top img-fluid">
+                        <img src="{% static n.image_url %}" alt="{{ n.title }}" class="card-img-top img-fluid" style="aspect-ratio: 3/4; object-fit: cover; object-position: top; width: 100%;">
                     </a>
                 {% endif %}
                 <div class="date-pos bg-gradient-primary text-white px-3 py-1 rounded-custom position-absolute">
