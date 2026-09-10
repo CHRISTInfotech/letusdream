@@ -6,7 +6,7 @@ Home
 {% endblock title %}
 
 {% block links %}
-<link rel="stylesheet" href="{% static 'css/new/index.css' %}" type="text/css">
+<link rel="stylesheet" href="{% static 'css/new/index.css' %}?v=4" type="text/css">
 {% endblock links %}
 
 {% block content %}
@@ -122,6 +122,48 @@ Home
     </div>
 </section>
 
+<!-- LUD TICC 2026 Conference Countdown Section -->
+<section class="conference-countdown-section">
+    <div class="container">
+        <div class="countdown-card-wrapper">
+            <div class="countdown-header text-center">
+                <p class="countdown-subtext">Days left for Third International Community Conference &bull; November 19–21, 2026</p>
+            </div>
+
+            <div class="countdown-timer-container" role="timer" aria-live="polite">
+                <div class="countdown-unit">
+                    <span class="countdown-number" id="cd-days">--</span>
+                    <span class="countdown-label">DAYS</span>
+                </div>
+                <span class="countdown-colon">:</span>
+                <div class="countdown-unit">
+                    <span class="countdown-number" id="cd-hours">--</span>
+                    <span class="countdown-label">HOURS</span>
+                </div>
+                <span class="countdown-colon">:</span>
+                <div class="countdown-unit">
+                    <span class="countdown-number" id="cd-minutes">--</span>
+                    <span class="countdown-label">MINUTES</span>
+                </div>
+                <span class="countdown-colon">:</span>
+                <div class="countdown-unit">
+                    <span class="countdown-number countdown-seconds" id="cd-seconds">--</span>
+                    <span class="countdown-label">SECONDS</span>
+                </div>
+            </div>
+
+            <div class="countdown-action">
+                <div class="countdown-dates-badge">
+                    <i class="fa-regular fa-calendar-days text-primary me-1"></i>
+                    <strong>November 19–21, 2026</strong> &bull; Bengaluru, India
+                </div>
+                <a href="{% url 'tc-2026' %}" class="countdown-cta-btn">
+                    Register for LUD TICC 2026 <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
 
 <section class="bg-light py-5 text-white text-center">
     <div class="container">
@@ -683,3 +725,43 @@ Home
 </button>
 
 {% endblock content %}
+
+{% block extraScripts %}
+<script>
+    (function () {
+        // Target Date: November 19, 2026, 09:00:00 AM IST (+05:30)
+        const targetDate = new Date('2026-11-19T09:00:00+05:30').getTime();
+
+        const daysEl = document.getElementById('cd-days');
+        const hoursEl = document.getElementById('cd-hours');
+        const minutesEl = document.getElementById('cd-minutes');
+        const secondsEl = document.getElementById('cd-seconds');
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const difference = targetDate - now;
+
+            if (difference <= 0) {
+                if (daysEl) daysEl.textContent = '00';
+                if (hoursEl) hoursEl.textContent = '00';
+                if (minutesEl) minutesEl.textContent = '00';
+                if (secondsEl) secondsEl.textContent = '00';
+                return;
+            }
+
+            const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+            if (daysEl) daysEl.textContent = days < 10 ? '0' + days : days;
+            if (hoursEl) hoursEl.textContent = hours < 10 ? '0' + hours : hours;
+            if (minutesEl) minutesEl.textContent = minutes < 10 ? '0' + minutes : minutes;
+            if (secondsEl) secondsEl.textContent = seconds < 10 ? '0' + seconds : seconds;
+        }
+
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+    })();
+</script>
+{% endblock extraScripts %}

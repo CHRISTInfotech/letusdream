@@ -155,6 +155,7 @@
     }
 
     @media (max-width: 992px) {
+
         #carouselExampleFade .carousel-inner,
         #carouselExampleFade .carousel-item {
             height: 360px;
@@ -162,8 +163,185 @@
     }
 
     @media (max-width: 576px) {
+
         #carouselExampleFade .carousel-inner,
         #carouselExampleFade .carousel-item {
             height: 240px;
+        }
+    }
+
+    /* ========================================================
+       Conference Countdown Section (Between Hero Banner & Content)
+       ======================================================== */
+    .conference-countdown-section {
+        background: #ffffff;
+        padding: 24px 0 20px;
+    }
+
+    .countdown-card-wrapper {
+        max-width: 680px;
+        margin: 0 auto;
+        background: transparent;
+        border: none !important;
+        box-shadow: none !important;
+        text-align: center;
+    }
+
+    .countdown-card-wrapper:hover {
+        box-shadow: none !important;
+        transform: none !important;
+    }
+
+    .countdown-header .countdown-heading {
+        font-size: 1.15rem;
+        font-weight: 700;
+        color: #0c52a1;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        margin-bottom: 4px;
+    }
+
+    .countdown-header .countdown-subtext {
+        font-size: 0.88rem;
+        color: #000000;
+        margin-bottom: 10px;
+    }
+
+    .countdown-timer-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+        margin: 10px 0 8px;
+    }
+
+    .countdown-unit {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-width: 80px;
+    }
+
+    .countdown-number {
+        font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        font-size: 3.25rem;
+        font-weight: 700;
+        line-height: 1;
+        color: #111827;
+        letter-spacing: -1px;
+    }
+
+    .countdown-seconds {
+        color: #e53935 !important;
+    }
+
+    .countdown-colon {
+        font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #111827;
+        line-height: 1;
+        padding-bottom: 18px;
+        user-select: none;
+    }
+
+    .countdown-label {
+        font-size: 0.75rem;
+        font-weight: 700;
+        color: #64748b;
+        letter-spacing: 2px;
+        margin-top: 6px;
+        text-transform: uppercase;
+    }
+
+    .countdown-action {
+        margin-top: 14px;
+        padding-top: 10px;
+        border-top: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+        flex-wrap: wrap;
+    }
+
+    .countdown-dates-badge {
+        font-size: 0.88rem;
+        color: #475569;
+        font-weight: 500;
+    }
+
+    .countdown-cta-btn {
+        background: linear-gradient(135deg, #0c52a1 0%, #0a4285 100%);
+        color: #ffffff !important;
+        border: none;
+        border-radius: 25px;
+        padding: 7px 22px;
+        font-size: 0.85rem;
+        font-weight: 600;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        box-shadow: 0 4px 14px rgba(12, 82, 161, 0.22);
+        transition: all 0.25s ease;
+    }
+
+    .countdown-cta-btn:hover {
+        background: linear-gradient(135deg, #0a4285 0%, #072e5c 100%);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 18px rgba(12, 82, 161, 0.32);
+    }
+
+    @media (max-width: 768px) {
+        .conference-countdown-section {
+            padding: 20px 0 16px;
+        }
+
+        .countdown-card-wrapper {
+            padding: 18px 14px 14px;
+            margin: 0 10px;
+        }
+
+        .countdown-number {
+            font-size: 2.25rem;
+        }
+
+        .countdown-colon {
+            font-size: 1.85rem;
+            padding-bottom: 14px;
+        }
+
+        .countdown-unit {
+            min-width: 55px;
+        }
+
+        .countdown-label {
+            font-size: 0.65rem;
+            letter-spacing: 1px;
+        }
+
+        .countdown-action {
+            flex-direction: column;
+            gap: 10px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .countdown-number {
+            font-size: 1.75rem;
+        }
+
+        .countdown-colon {
+            font-size: 1.4rem;
+            padding-bottom: 10px;
+        }
+
+        .countdown-unit {
+            min-width: 42px;
+        }
+
+        .countdown-label {
+            font-size: 0.58rem;
         }
     }
