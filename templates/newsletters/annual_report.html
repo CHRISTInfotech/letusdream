@@ -1,47 +1,199 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title %}
-Annual Report 2024-25
-{% endblock %}
-
-{% block extraStyles %}
-{% endblock extraStyles %}
+{% block title %}Annual Reports{% endblock %}
 
 {% block links %}
+<link rel="stylesheet" href="{% static 'css/new/media.css' %}?v=3" type="text/css">
+<style>
+    .report-page-header {
+        padding: 1.5rem 0 1rem 0;
+        background: #ffffff;
+        border-bottom: 1px solid var(--media-border);
+    }
+    .report-tab-pill {
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: var(--media-text-muted);
+        padding: 0.45rem 1.1rem;
+        border-radius: 9999px;
+        background: #f1f5f9;
+        border: 1px solid transparent;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+    }
+    .report-tab-pill:hover {
+        color: var(--media-primary);
+        background: var(--media-primary-light);
+    }
+    .report-tab-pill.active {
+        color: #ffffff;
+        background: var(--media-primary);
+        border-color: var(--media-primary);
+    }
+    .embed-wrapper {
+        position: relative;
+        width: 100%;
+        height: 0;
+        padding-top: 141.4286%;
+        padding-bottom: 0;
+        box-shadow: var(--media-shadow-md);
+        margin-top: 1.25rem;
+        margin-bottom: 1rem;
+        overflow: hidden;
+        border-radius: var(--media-radius);
+        border: 1px solid var(--media-border);
+        background: #f8fafc;
+    }
+    .embed-wrapper iframe {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        border: none;
+        padding: 0;
+        margin: 0;
+    }
+    .report-action-bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+        padding: 0.85rem 1.25rem;
+        background: #ffffff;
+        border: 1px solid var(--media-border);
+        border-radius: var(--media-radius-sm);
+        margin-bottom: 2.5rem;
+    }
+</style>
 {% endblock links %}
 
 {% block content %}
-<nav aria-label="breadcrumb animated slideInDown" class="cus-breadcrumb mt-5">
-    <ol class="breadcrumb text-uppercase mb-0 bg-white">
-        <li class="breadcrumb-item"><a class="text-black text-decoration-none" href="{% url 'main' %}">Home</a></li>
-        <li class="breadcrumb-item"><a class="text-black text-decoration-none">Reports</a></li>
-        <li class="breadcrumb-item  active" aria-current="page">Annual Report 2024-25</li>
-    </ol>
-</nav>
+<div class="media-page-wrapper">
+    <!-- Header -->
+    <header class="report-page-header">
+        <div class="container text-center">
+            <span class="media-kicker">Let Us Dream • Official Publications</span>
+            <h1 class="media-hero-title mb-2">Annual Reports</h1>
+            <p class="media-hero-lead mb-3">
+                Comprehensive overview of our community transformation programs, research initiatives, and global impact.
+            </p>
 
-<div class="container">
-    <div class="row mb-5">
-        <div class="col-12">
-            <h1 class=" text-center mt-4 mb-3">Annual Report 2024-25</h1>
+            <!-- Tab Switcher for Editions -->
+            <div class="d-flex justify-content-center gap-2 mt-2">
+                <button type="button" class="report-tab-pill active" id="tabBtn2025" onclick="switchReport('2025')">
+                    <i class="fas fa-award"></i> Annual Report 2025–26 (Latest)
+                </button>
+                <button type="button" class="report-tab-pill" id="tabBtn2024" onclick="switchReport('2024')">
+                    <i class="far fa-file-alt"></i> Annual Report 2024–25
+                </button>
+            </div>
         </div>
-        <div class="col-12">
-            <div style="position: relative; width: 100%; height: 0; padding-top: 141.4286%;
- padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
- border-radius: 8px; will-change: transform;">
+    </header>
+
+    <div class="container py-4">
+        <!-- 2025-26 Report Panel -->
+        <div id="reportPanel2025">
+            <div class="d-flex justify-content-between align-items-baseline mb-2">
+                <div>
+                    <h2 class="media-section-title">Annual Report 2025–26</h2>
+                    <p class="media-section-desc">Interactive digital flipbook & official PDF release</p>
+                </div>
+                <span class="badge bg-primary text-white px-2 py-1 rounded-pill" style="font-size: 0.75rem;">
+                    Latest Release
+                </span>
+            </div>
+
+            <div class="embed-wrapper">
                 <iframe loading="lazy"
-                    style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
-                    src="https://www.canva.com/design/DAGupzylQWI/dvoaEg_d5X5LHPbK8UZu5Q/view?embed"
+                    src="https://www.canva.com/design/DAHTZ1Zmj6U/jvAyIzCYCQkY94dfJQP00Q/view?embed"
+                    title="Let Us Dream Annual Report 2025-26"
                     allowfullscreen="allowfullscreen" allow="fullscreen">
                 </iframe>
             </div>
-            <a href="https://www.canva.com/design/DAGupzylQWI/dvoaEg_d5X5LHPbK8UZu5Q/view"
-                target="_blank" rel="noopener">[Published] LUD Annual Report 2024-2025</a> by Office LUD
 
-            <a href="https://drive.google.com/file/d/1rtAAUbP24Omia82I3tayFHEdIe7OFQ6_/view?usp=sharing" 
-                class="float-end" target="_blank" rel="noopener"><i class="fa fa-download"></i> Download PDF</a>
+            <div class="report-action-bar">
+                <div>
+                    <a href="https://canva.link/2rom0jk250eo7i3" target="_blank" rel="noopener" class="card-doc-link">
+                        <i class="fas fa-external-link-alt"></i>
+                        <span>Open Fullscreen in Canva</span>
+                    </a>
+                    <span class="text-muted ms-2" style="font-size: 0.8rem;">by Office LUD</span>
+                </div>
+                <div>
+                    <a href="https://drive.google.com/drive/folders/1EunfqqSvI9Jkx6yoUofpo50rOaKBG8y-?usp=sharing" 
+                       target="_blank" rel="noopener" class="btn-media-primary">
+                        <i class="fas fa-download"></i>
+                        <span>Download PDF (Google Drive)</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2024-25 Report Panel -->
+        <div id="reportPanel2024" style="display: none;">
+            <div class="d-flex justify-content-between align-items-baseline mb-2">
+                <div>
+                    <h2 class="media-section-title">Annual Report 2024–25</h2>
+                    <p class="media-section-desc">Previous edition interactive digital flipbook</p>
+                </div>
+                <span class="badge bg-secondary text-white px-2 py-1 rounded-pill" style="font-size: 0.75rem;">
+                    2024–25 Archive
+                </span>
+            </div>
+
+            <div class="embed-wrapper">
+                <iframe loading="lazy"
+                    src="https://www.canva.com/design/DAGupzylQWI/dvoaEg_d5X5LHPbK8UZu5Q/view?embed"
+                    title="Let Us Dream Annual Report 2024-25"
+                    allowfullscreen="allowfullscreen" allow="fullscreen">
+                </iframe>
+            </div>
+
+            <div class="report-action-bar">
+                <div>
+                    <a href="https://www.canva.com/design/DAGupzylQWI/dvoaEg_d5X5LHPbK8UZu5Q/view" target="_blank" rel="noopener" class="card-doc-link">
+                        <i class="fas fa-external-link-alt"></i>
+                        <span>Open Fullscreen in Canva</span>
+                    </a>
+                    <span class="text-muted ms-2" style="font-size: 0.8rem;">by Office LUD</span>
+                </div>
+                <div>
+                    <a href="https://drive.google.com/file/d/1rtAAUbP24Omia82I3tayFHEdIe7OFQ6_/view?usp=sharing" 
+                       target="_blank" rel="noopener" class="btn-media-primary">
+                        <i class="fas fa-download"></i>
+                        <span>Download PDF (Google Drive)</span>
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
 </div>
 
+<script>
+    function switchReport(year) {
+        const p2025 = document.getElementById('reportPanel2025');
+        const p2024 = document.getElementById('reportPanel2024');
+        const b2025 = document.getElementById('tabBtn2025');
+        const b2024 = document.getElementById('tabBtn2024');
+
+        if (year === '2025') {
+            p2025.style.display = 'block';
+            p2024.style.display = 'none';
+            b2025.classList.add('active');
+            b2024.classList.remove('active');
+        } else {
+            p2025.style.display = 'none';
+            p2024.style.display = 'block';
+            b2024.classList.add('active');
+            b2025.classList.remove('active');
+        }
+    }
+</script>
 {% endblock %}

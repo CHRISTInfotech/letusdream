@@ -133,9 +133,10 @@
    
 
     <!-- Dynamic Breadcrumb Section -->
+    {% block breadcrumb_section %}
     {% if breadcrumbs %}
     <div class="breadcrumb-container">
-        <div class="container mt-3">
+        <div class="container mt-2 mb-1">
             <nav aria-label="breadcrumb">
                 <div class="breadcrumb-modern">
                     <ol>
@@ -170,6 +171,7 @@
         </div>
     </div>
     {% endif %}
+    {% endblock breadcrumb_section %}
 
     <!-- Page Content Wrapper -->
     <div class="content-wrapper">
