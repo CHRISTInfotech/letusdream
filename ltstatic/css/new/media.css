@@ -4,7 +4,7 @@
    ========================================================== */
 
 :root {
-  --media-bg: #fbfcfd;
+  --media-bg: #ffffff;
   --media-card-bg: #ffffff;
   --media-border: #e8ecf1;
   --media-border-hover: #cbd5e1;
@@ -24,7 +24,7 @@
 
 /* Base Page Wrapper */
 .media-page-wrapper {
-  background-color: var(--media-bg);
+  background-color: #ffffff !important;
   min-height: 100vh;
   color: var(--media-text-dark);
 }
@@ -739,6 +739,778 @@
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
+}
+
+/* ==========================================================
+   CONTACT PAGE STYLES
+   ========================================================== */
+.contact-info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.contact-info-item:last-child {
+  border-bottom: none;
+}
+
+.contact-info-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 8px;
+  background: var(--media-primary-light);
+  color: var(--media-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+  flex-shrink: 0;
+}
+
+.contact-form-control {
+  width: 100%;
+  border: 1px solid var(--media-border);
+  border-radius: var(--media-radius-sm);
+  padding: 0.55rem 0.85rem;
+  font-size: 0.88rem;
+  color: var(--media-text-dark);
+  background: #ffffff;
+  transition: var(--media-transition);
+}
+
+.contact-form-control:focus {
+  border-color: var(--media-primary);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(12, 82, 161, 0.1);
+}
+
+.contact-main-card {
+  background: #f8fafc;
+  border: none !important;
+  border-radius: var(--media-radius);
+  overflow: hidden;
+  box-shadow: none !important;
+  transition: none !important;
+}
+
+.contact-main-card:hover {
+  transform: none !important;
+  box-shadow: none !important;
+  border-color: transparent !important;
+}
+
+.contact-region-card {
+  background: #f8fafc;
+  border: none !important;
+  border-radius: var(--media-radius);
+  padding: 1.5rem 1.25rem;
+  text-align: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: none !important;
+  transition: none !important;
+}
+
+.contact-region-card:hover {
+  border: none !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
+
+/* Contact page specific: pure white background and no separating lines */
+.contact-page-wrapper {
+  background-color: #ffffff !important;
+}
+
+.contact-page-wrapper .media-hero {
+  background-color: #ffffff !important;
+  border-bottom: none !important;
+}
+
+.contact-page-wrapper .media-section {
+  background-color: #ffffff !important;
+  border-top: none !important;
+  border-bottom: none !important;
+}
+
+.contact-page-wrapper .media-section.bg-subtle {
+  background-color: #ffffff !important;
+}
+
+/* Contact page specific card rules to ensure zero borders and no hover behaviour */
+.contact-page-wrapper .minimal-card,
+.contact-page-wrapper .contact-main-card,
+.contact-page-wrapper .contact-region-card {
+  border: none !important;
+  box-shadow: none !important;
+  transform: none !important;
+  transition: none !important;
+}
+
+.contact-page-wrapper .minimal-card:hover,
+.contact-page-wrapper .contact-main-card:hover,
+.contact-page-wrapper .contact-region-card:hover {
+  border: none !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
+
+.contact-region-flag {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #ffffff;
+  color: var(--media-primary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+  margin-bottom: 0.75rem;
+}
+
+/* ==========================================================
+   SUSTAINABILITY PAGE STYLES (SDG Goals & Program Alignment)
+   ========================================================== */
+.sustainability-page-wrapper {
+  background-color: #ffffff !important;
+}
+
+.sustainability-page-wrapper .media-hero,
+.sustainability-page-wrapper .media-section {
+  background-color: #ffffff !important;
+  border-top: none !important;
+  border-bottom: none !important;
+}
+
+.sustainability-page-wrapper .border-top {
+  border-top: none !important;
+}
+
+.sustainability-page-wrapper .border-bottom {
+  border-bottom: none !important;
+}
+
+.sustainability-page-wrapper .accordion-body,
+.sustainability-page-wrapper .sdg-accordion .accordion-item,
+.sustainability-page-wrapper .sdg-accordion .accordion-button,
+.sustainability-page-wrapper .sdg-accordion .accordion-button:not(.collapsed),
+.sustainability-page-wrapper .sdg-impact-card,
+.sustainability-page-wrapper .sdg-badge-tile,
+.sustainability-page-wrapper .minimal-card,
+.sustainability-page-wrapper .spotlight-card {
+  background-color: #ffffff !important;
+}
+
+.sdg-simple-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 0.25rem;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  transition: none !important;
+  transform: none !important;
+}
+
+.sdg-simple-item:hover {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
+
+.sdg-overview-card {
+  background: #ffffff;
+  border: 1px solid var(--media-border);
+  border-radius: var(--media-radius);
+  padding: 1.5rem;
+  box-shadow: var(--media-shadow-sm);
+  margin-bottom: 2rem;
+}
+
+.sdg-badge-tile {
+  background: #ffffff;
+  border: 1px solid var(--media-border);
+  border-radius: var(--media-radius-sm);
+  padding: 0.75rem 0.5rem;
+  text-align: center;
+  transition: var(--media-transition);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.sdg-badge-tile:hover {
+  border-color: var(--media-primary);
+  background: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: var(--media-shadow-sm);
+}
+
+.sdg-badge-tile img {
+  width: 58px;
+  height: 58px;
+  object-fit: contain;
+  border-radius: 6px;
+  margin-bottom: 0.4rem;
+}
+
+.sdg-badge-tile span {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--media-text-dark);
+  line-height: 1.25;
+}
+
+.sdg-accordion .accordion-item {
+  background: #ffffff;
+  border: 1px solid var(--media-border);
+  border-radius: var(--media-radius) !important;
+  margin-bottom: 0.85rem;
+  overflow: hidden;
+  box-shadow: var(--media-shadow-sm);
+  transition: var(--media-transition);
+}
+
+.sdg-accordion .accordion-item:hover {
+  border-color: var(--media-border-hover);
+}
+
+.sdg-accordion .accordion-button {
+  background: #ffffff;
+  color: var(--media-text-dark);
+  font-weight: 700;
+  padding: 1.1rem 1.4rem;
+  font-size: 1.05rem;
+  box-shadow: none !important;
+}
+
+.sdg-accordion .accordion-button:not(.collapsed) {
+  background: #f8fafc;
+  color: var(--media-primary);
+  border-bottom: 1px solid var(--media-border);
+}
+
+.sdg-accordion .accordion-button::after {
+  filter: grayscale(1) opacity(0.7);
+  transition: transform 0.25s ease;
+}
+
+.sdg-accordion .accordion-button:not(.collapsed)::after {
+  filter: none;
+}
+
+.sdg-header-title {
+  font-size: 1.08rem;
+  font-weight: 700;
+  color: var(--media-text-dark);
+}
+
+.sdg-header-sub {
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--media-text-muted);
+}
+
+.sdg-icon-pill-row {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  flex-wrap: wrap;
+}
+
+.sdg-icon-pill-row img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+.sdg-impact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.sdg-impact-card {
+  background: #ffffff;
+  border: 1px solid var(--media-border);
+  border-radius: var(--media-radius-sm);
+  padding: 1rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  transition: var(--media-transition);
+}
+
+.sdg-impact-card:hover {
+  border-color: var(--media-border-hover);
+}
+
+.sdg-impact-img {
+  width: 52px;
+  height: 52px;
+  border-radius: 6px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.sdg-impact-title {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--media-text-dark);
+  margin-bottom: 0.3rem;
+  line-height: 1.3;
+}
+
+.sdg-impact-desc {
+  font-size: 0.82rem;
+  color: var(--media-text-muted);
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
+/* ==========================================================
+   ABOUT US - OVERVIEW PAGE STYLES
+   ========================================================== */
+.overview-page-wrapper {
+  background-color: #ffffff !important;
+}
+
+.overview-page-wrapper .media-hero,
+.overview-page-wrapper .media-section {
+  background-color: #ffffff !important;
+  border-top: none !important;
+  border-bottom: none !important;
+}
+
+/* Overview Narrative Story Card */
+.overview-story-box {
+  font-size: 0.95rem;
+  line-height: 1.75;
+  color: #334155;
+}
+
+.overview-story-highlight {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+  padding: 0.85rem 1rem;
+  background: #f8fafc;
+  border-left: 3px solid var(--media-primary);
+  border-radius: 0 var(--media-radius-sm) var(--media-radius-sm) 0;
+  margin: 1.25rem 0;
+}
+
+.overview-video-container {
+  border-radius: var(--media-radius);
+  overflow: hidden;
+  box-shadow: var(--media-shadow-md);
+  border: 1px solid var(--media-border);
+  background: #000000;
+}
+
+/* Six Transformative Initiatives Cards */
+.overview-initiative-card {
+  background: #ffffff;
+  border: 1px solid var(--media-border);
+  border-radius: var(--media-radius);
+  padding: 1.5rem 1.25rem;
+  text-align: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: var(--media-transition);
+  text-decoration: none !important;
+  color: var(--media-text-dark);
+  position: relative;
+}
+
+.overview-initiative-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--media-primary);
+  box-shadow: var(--media-shadow-hover);
+  color: var(--media-primary);
+}
+
+.overview-initiative-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: var(--media-primary-light);
+  color: var(--media-primary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  margin-bottom: 0.85rem;
+  transition: var(--media-transition);
+}
+
+.overview-initiative-card:hover .overview-initiative-icon {
+  background: var(--media-primary);
+  color: #ffffff;
+}
+
+.overview-initiative-img {
+  max-height: 95px;
+  max-width: 100%;
+  object-fit: contain;
+  margin-bottom: 0.85rem;
+  transition: transform 0.25s ease;
+}
+
+.overview-initiative-card:hover .overview-initiative-img {
+  transform: scale(1.04);
+}
+
+.overview-initiative-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--media-text-dark);
+  margin-bottom: 0.35rem;
+  line-height: 1.3;
+}
+
+.overview-initiative-desc {
+  font-size: 0.82rem;
+  color: var(--media-text-muted);
+  line-height: 1.5;
+  margin-bottom: 0.85rem;
+}
+
+.overview-initiative-link {
+  margin-top: auto;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--media-primary);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.overview-initiative-card:hover .overview-initiative-link {
+  color: var(--media-primary-hover);
+}
+
+/* Tree Diagram Container */
+.overview-tree-card {
+  background: #ffffff;
+  border: 1px solid var(--media-border);
+  border-radius: var(--media-radius);
+  padding: 1.5rem;
+  box-shadow: var(--media-shadow-sm);
+  text-align: center;
+}
+
+.overview-tree-img {
+  max-height: 700px;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+/* Philosophy Quote Cards */
+.overview-quote-card {
+  background: #f8fafc;
+  border-left: 4px solid var(--media-primary);
+  border-radius: 0 var(--media-radius) var(--media-radius) 0;
+  padding: 1.35rem 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.overview-quote-text {
+  font-size: 0.95rem;
+  color: #1e293b;
+  line-height: 1.65;
+  font-style: italic;
+  margin-bottom: 0.5rem;
+}
+
+.overview-quote-author {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--media-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* DREAM Model Grid */
+.dream-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+}
+
+@media (max-width: 991px) {
+  .dream-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .dream-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.dream-step-card {
+  background: #ffffff;
+  border: 1px solid var(--media-border);
+  border-radius: var(--media-radius);
+  padding: 1.35rem 1rem;
+  text-align: center;
+  transition: var(--media-transition);
+}
+
+.dream-step-card:hover {
+  border-color: var(--media-primary);
+  box-shadow: var(--media-shadow-md);
+  transform: translateY(-3px);
+}
+
+.dream-step-letter {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--media-primary-light);
+  color: var(--media-primary);
+  font-size: 1.25rem;
+  font-weight: 800;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.65rem;
+}
+
+.dream-step-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--media-text-dark);
+  margin-bottom: 0.3rem;
+}
+
+.dream-step-desc {
+  font-size: 0.78rem;
+  color: var(--media-text-muted);
+  line-height: 1.45;
+  margin-bottom: 0;
+}
+
+/* ==========================================================
+   ABOUT US - LEADERSHIP COUNCIL PAGE STYLES
+   ========================================================== */
+.leadership-page-wrapper {
+  background-color: #ffffff !important;
+}
+
+.leadership-page-wrapper .media-hero,
+.leadership-page-wrapper .media-section {
+  background-color: #ffffff !important;
+  border-top: none !important;
+  border-bottom: none !important;
+}
+
+/* Founder Spotlight Card */
+.founder-spotlight-card {
+  background: #ffffff;
+  border: 1px solid var(--media-border);
+  border-radius: var(--media-radius);
+  padding: 2rem;
+  box-shadow: var(--media-shadow-sm);
+  transition: var(--media-transition);
+}
+
+.founder-spotlight-card:hover {
+  border-color: var(--media-border-hover);
+  box-shadow: var(--media-shadow-md);
+}
+
+.founder-portrait {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #ffffff;
+  box-shadow: 0 4px 14px rgba(12, 82, 161, 0.12);
+  margin-bottom: 1rem;
+}
+
+.founder-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--media-text-dark);
+  margin-bottom: 0.25rem;
+}
+
+.founder-role {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--media-primary);
+  margin-bottom: 0;
+}
+
+.founder-quote-text {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: #334155;
+  font-style: italic;
+  position: relative;
+}
+
+/* Department Container & Headings */
+.leadership-dept-card {
+  background: #ffffff;
+  border: 1px solid var(--media-border);
+  border-radius: var(--media-radius);
+  padding: 1.5rem;
+  margin-bottom: 1.75rem;
+  box-shadow: var(--media-shadow-sm);
+  transition: var(--media-transition);
+}
+
+.leadership-dept-card:hover {
+  border-color: var(--media-border-hover);
+}
+
+.leadership-dept-header {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding-bottom: 0.85rem;
+  margin-bottom: 1.25rem;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.leadership-dept-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--media-text-dark);
+  margin-bottom: 0;
+}
+
+/* Leadership Member Card */
+.leader-card {
+  background: #f8fafc;
+  border: 1px solid #edf2f7;
+  border-radius: var(--media-radius-sm);
+  padding: 1.25rem 1rem;
+  text-align: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: var(--media-transition);
+}
+
+.leader-card:hover {
+  background: #ffffff;
+  border-color: var(--media-primary);
+  box-shadow: var(--media-shadow-hover);
+  transform: translateY(-3px);
+}
+
+.leader-avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #ffffff;
+  box-shadow: var(--media-shadow-sm);
+  margin-bottom: 0.85rem;
+  transition: transform 0.25s ease;
+}
+
+.leader-card:hover .leader-avatar {
+  transform: scale(1.05);
+}
+
+.leader-role-badge {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 0.2rem 0.65rem;
+  border-radius: 20px;
+  margin-bottom: 0.5rem;
+}
+
+.badge-senior {
+  background: #eef4fc;
+  color: #0c52a1;
+}
+
+.badge-youth {
+  background: #ecfdf5;
+  color: #059669;
+}
+
+.badge-trustee {
+  background: #f5f3ff;
+  color: #7c3aed;
+}
+
+.leader-name {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--media-text-dark);
+  margin-bottom: 0.25rem;
+  line-height: 1.3;
+}
+
+.leader-title {
+  font-size: 0.8rem;
+  color: var(--media-primary);
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+  line-height: 1.35;
+}
+
+.leader-affiliation {
+  font-size: 0.76rem;
+  color: var(--media-text-muted);
+  line-height: 1.4;
+  margin-bottom: 0.85rem;
+  min-height: 2.2em;
+}
+
+.leader-contact-actions {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.leader-contact-btn {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1px solid var(--media-border);
+  color: var(--media-text-muted);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  text-decoration: none;
+  transition: var(--media-transition);
+}
+
+.leader-contact-btn:hover {
+  background: var(--media-primary);
+  color: #ffffff;
+  border-color: var(--media-primary);
+  transform: translateY(-1px);
 }
 
 /* ==========================================================

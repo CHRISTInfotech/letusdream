@@ -31,6 +31,7 @@ urlpatterns = [
     path('sustainability', sustainability, name='sustainability'),
     path('llfp', llfp, name='llfp'),
     path('contactUs/', contactUs, name='conatctUs'),
+    path('contactUs/', contactUs, name='contactUs'),
 
     # CONFERENCE URLS
     path('conferences', aboutConference, name='Conferences'),

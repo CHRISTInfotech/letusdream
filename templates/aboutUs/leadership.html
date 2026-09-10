@@ -1,428 +1,572 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title %}
-Leadership
-{% endblock %}
+{% block title %}Leadership Council | Let Us Dream{% endblock %}
 
 {% block links %}
+<link rel="stylesheet" href="{% static 'css/new/media.css' %}?v=14" type="text/css">
 {% endblock links %}
 
+{# Suppress standalone breadcrumb row to eliminate wasted vertical space #}
+{% block breadcrumb_section %}{% endblock breadcrumb_section %}
+
 {% block content %}
+<div class="media-page-wrapper leadership-page-wrapper">
+    <!-- Minimalist Page Hero with Integrated Breadcrumb -->
+    <section class="media-hero">
+        <div class="container">
+            {% if breadcrumbs %}
+            <nav aria-label="breadcrumb" class="media-hero-breadcrumb">
+                <ol class="breadcrumb-minimal">
+                    {% for breadcrumb in breadcrumbs %}
+                        {% if not breadcrumb.active %}
+                            <li class="breadcrumb-item-min">
+                                {% if breadcrumb.url %}
+                                    <a href="{% url breadcrumb.url %}">
+                                        <i class="{{ breadcrumb.icon }}"></i>
+                                        <span>{{ breadcrumb.name }}</span>
+                                    </a>
+                                {% else %}
+                                    <span>
+                                        <i class="{{ breadcrumb.icon }}"></i>
+                                        <span>{{ breadcrumb.name }}</span>
+                                    </span>
+                                {% endif %}
+                            </li>
+                            <li class="breadcrumb-sep-min">/</li>
+                        {% else %}
+                            <li class="breadcrumb-item-min active">
+                                <i class="{{ breadcrumb.icon }}"></i>
+                                <span>{{ breadcrumb.name }}</span>
+                            </li>
+                        {% endif %}
+                    {% endfor %}
+                </ol>
+            </nav>
+            {% endif %}
 
-<!-- Page Header -->
-<section class="">
-    <div class="container">
-        <div class="row justify-content-center text-center">
-            <div class="col-lg-12">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-8 col-md-10">
+                    <span class="media-kicker">Let Us Dream • Governance & Council</span>
+                    <h1 class="media-hero-title">Leadership Council</h1>
+                    <p class="media-hero-lead">
+                        Meet the dedicated scholars, visionary trustees, and passionate youth leaders driving our global movement.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                <h1 class="display-4 fw-bold">Leadership Council</h1>
-                <p class="lead mb-5">
-                    Meet the visionary leaders driving our transformative initiatives
+    <!-- Quick Navigation Sticky Jump Pills -->
+    <div class="media-nav-wrapper">
+        <div class="container">
+            <div class="media-nav-scroll justify-content-start justify-content-md-center">
+                <a href="#founder" class="media-pill active">
+                    <i class="fas fa-user-tie me-1"></i>Founder & Director
+                </a>
+                <a href="#governance" class="media-pill">
+                    <i class="fas fa-shield-alt me-1"></i>Trustees & Finance
+                </a>
+                <a href="#programs" class="media-pill">
+                    <i class="fas fa-graduation-cap me-1"></i>Core Programs
+                </a>
+                <a href="#fellowship-research" class="media-pill">
+                    <i class="fas fa-microscope me-1"></i>Fellowship & Research
+                </a>
+                <a href="#operations-alliances" class="media-pill">
+                    <i class="fas fa-cogs me-1"></i>Operations & Alliances
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 1. Founder & Director Spotlight Section -->
+    <section id="founder" class="media-section pt-4 pb-4">
+        <div class="container">
+            <div class="founder-spotlight-card">
+                <div class="row align-items-center g-4">
+                    <div class="col-lg-4 text-center">
+                        <img src="{% static 'Aboutus/leadership/Founder.png' %}" 
+                             alt="Dr Fr Lijo Thomas, CMI" 
+                             class="founder-portrait img-fluid">
+                        <h3 class="founder-name">Dr Fr Lijo Thomas, CMI</h3>
+                        <span class="badge bg-primary text-white px-3 py-1 mb-2" style="font-size: 0.76rem; font-weight: 600;">
+                            Founder & Director
+                        </span>
+                        <div class="text-muted small">Let Us Dream Worldwide</div>
+                    </div>
+
+                    <div class="col-lg-8">
+                        <div class="ps-lg-3">
+                            <i class="fas fa-quote-left fa-2x text-primary opacity-50 mb-3"></i>
+                            <p class="founder-quote-text mb-4">
+                                "Let Us Dream is a locally rooted and globally established not-for-profit organization. Since its inception, Let Us Dream has envisioned globally interconnected communities where no one and nothing stands alone. Grounded in volunteerism, collaboration, and networking principles, Let Us Dream promotes the idea of holistically developed, sustainable communities worldwide."
+                            </p>
+                            <div class="d-flex align-items-center gap-2">
+                                <span class="card-event-tag">Founding Vision</span>
+                                <span class="text-muted small">• Establishing Interdependent Global Communities</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. Board of Trustees & Financial Governance Section -->
+    <section id="governance" class="media-section pt-3 pb-4">
+        <div class="container">
+            <div class="text-center mb-4">
+                <h2 class="media-section-title mb-2 text-center">Board of Trustees & Financial Governance</h2>
+                <p class="media-section-desc mx-auto text-center" style="max-width: 680px;">
+                    Ensuring fiduciary integrity, transparent stewardship, and ethical institutional governance
                 </p>
             </div>
-        </div>
-    </div>
-</section>
 
-<!-- Main Leadership Sections -->
-<!-- Section 1: DIP, Clubs, Community Conference -->
-<div class="">
-    <div class="container">
-        <div class="row g-4">
-            <!-- DREAMS Intervention Programme (DIP) -->
-            <div class="col-lg-4 col-md-6">
-                <div class=" text-center h-100">
-
-                    <h4 class="text-primary-blue font-primary mb-4">DREAMS Intervention Program (DIP)</h4>
-
-                    <div class="row g-3">
-                        <div class="col-6">
-                            <div class="leadership-member">
-                                <img src="{% static '2024/dreams/team member1.jpg' %}"
-                                    class="img-fluid rounded-custom mb-3 shadow-custom-small" alt="Mr Adarsh Jose">
-                                <h6 class="text-primary-blue mb-1">Mr Adarsh Jose</h6>
-                                <p class="text-medium small mb-0">Senior Leader - DIP</p>
-                                <p class="text-light small mb-0">Director, APACI Ellucian</p>
-                                <p class="text-light small mb-0">Email: adarshj@yahoo.com<br>Phone Number: 7975884844 </p>
-                            </div>
+            <div class="row g-3 g-lg-4 justify-content-center">
+                <!-- Managing Trustee -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="leader-card">
+                        <img src="{% static 'Aboutus/leadership/Trustee.png' %}" alt="Dr Fr Tomy Kattampally, CMI" class="leader-avatar">
+                        <span class="leader-role-badge badge-trustee">Managing Trustee</span>
+                        <h4 class="leader-name">Dr Fr Tomy Kattampally, CMI</h4>
+                        <div class="leader-title">Managing Trustee</div>
+                        <div class="leader-affiliation">
+                            HOD, Biblical Theology, Dharmaram Vidya Kshetram, Bangalore, India
                         </div>
-                        <div class="col-6">
-                            <div class="leadership-member">
-                                <img src="{% static '2024/dreams/team member2.jpg' %}"
-                                    class="img-fluid rounded-custom mb-3 shadow-custom-small" alt="Ms Banu H V">
-                                <h6 class="text-primary-blue mb-1">Ms Banu H V</h6>
-                                <p class="text-medium small mb-0">Youth Leader - DIP</p>
-                                <p class="text-light small mb-0">Student, CHRIST University, India</p>
-                                <p class="text-light small mb-0">Email: banu.hv@mcom.christuniversity.in<br>Phone Number: 9740262910 </p>
-                            </div>
+                        <div class="leader-contact-actions">
+                            <a href="mailto:tomythomask@gmail.com" class="leader-contact-btn" title="Email Dr Fr Tomy">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                            <a href="tel:9481248601" class="leader-contact-btn" title="Call Dr Fr Tomy">
+                                <i class="fas fa-phone-alt"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Clubs -->
-            <div class="col-lg-4 col-md-6">
-                <div class=" text-center h-100">
-
-                    <h4 class="text-primary-blue font-primary mb-4">Clubs</h4>
-
-                    <div class="row g-3">
-                        <div class="col-6">
-                            <div class="leadership-member">
-                                <img src="{% static 'Aboutus/leadership/Courses_1.png' %}"
-                                    class="img-fluid rounded-custom mb-3 shadow-custom-small"
-                                    alt="Col Ranjeev K Babu, VSM">
-                                <h6 class="text-primary-blue mb-1">Col Ranjeev K Babu, VSM</h6>
-                                <p class="text-medium small mb-0">Senior Leader - Clubs</p>
-                                <p class="text-light small mb-0">Senior Trainer, AgileAsia Pte Ltd, Singapore | Indian Army (Retd)</p>
-                                <p class="text-light small mb-0">Email: ranjeevbabu@yahoo.com<br>Phone Number: 91-7382610816 </p>
-                            </div>
+                <!-- Treasurer -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="leader-card">
+                        <img src="{% static 'Aboutus/leadership/Finance_2.png' %}" alt="Ms Jasmine Kaur Sahni" class="leader-avatar">
+                        <span class="leader-role-badge badge-trustee">Executive Trustee</span>
+                        <h4 class="leader-name">Ms Jasmine Kaur Sahni</h4>
+                        <div class="leader-title">Treasurer</div>
+                        <div class="leader-affiliation">
+                            Community Leader & Governance Advisor, Bangalore, India
                         </div>
-                        <div class="col-6">
-                            <div class="leadership-member">
-                                <img src="{% static '/clubs/leadership/Mr. Ayush Paul.png' %}"
-                                    class="img-fluid rounded-custom mb-3 shadow-custom-small" alt="Mr. Ayush Paul">
-                                <h6 class="text-primary-blue mb-1">Mr. Ayush Paul</h6>
-                                <p class="text-medium small mb-0">Global Strategic and Executive Youth Lead</p>
-                                <p class="text-light small mb-0">Student, CHRIST University, India</p>
-                                <p class="text-light small mb-0">Email: ayush.paul@law.christuniversity.in<br>Phone Number: 9205082937 </p>
-                            </div>
+                        <div class="leader-contact-actions">
+                            <a href="mailto:jasmine.sahni@letusdream.org" class="leader-contact-btn" title="Email Ms Jasmine">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                            <a href="tel:9845739413" class="leader-contact-btn" title="Call Ms Jasmine">
+                                <i class="fas fa-phone-alt"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Community Conference -->
-            <div class="col-lg-4 col-md-6">
-                <div class=" text-center h-100">
-
-                    <h4 class="text-primary-blue font-primary mb-4">Community Conference</h4>
-
-                    <div class="row g-3">
-                        <div class="col-6">
-                            <div class="leadership-member">
-                                <img src="{% static 'Aboutus/leadership/Conference_1.png' %}"
-                                    class="img-fluid rounded-custom mb-3 shadow-custom-small" alt="Dr Jimmy Cherian">
-                                <h6 class="text-primary-blue mb-1">Dr Jimmy Cherian</h6>
-                                <p class="text-medium small mb-0">Senior Leader</p>
-                                <p class="text-light small mb-0">Founder & President, Creating Futures, India</p>
-                                <p class="text-light small mb-0">Email: jims.cherian@gmail.com<br>Phone Number: 9845132192 </p>
-                            </div>
+                <!-- Youth Leader - Finance -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="leader-card">
+                        <img src="{% static 'Aboutus/leadership/Finance_1.png' %}" alt="Mr Akshat Jain" class="leader-avatar">
+                        <span class="leader-role-badge badge-youth">Youth Leader</span>
+                        <h4 class="leader-name">Mr Akshat Jain</h4>
+                        <div class="leader-title">Youth Leader - Finance</div>
+                        <div class="leader-affiliation">
+                            Student, CHRIST (Deemed to be University), India
                         </div>
-                        <div class="col-6">
-                            <div class="leadership-member">
-                                <img src="{% static 'Aboutus/leadership/Conference_2.png' %}"
-                                    class="img-fluid rounded-custom mb-3 shadow-custom-small" alt="Ms Shrushti Mahajan">
-                                <h6 class="text-primary-blue mb-1">Ms Shrushti Mahajan</h6>
-                                <p class="text-medium small mb-0">Youth Leader</p>
-                                <p class="text-light small mb-0">Student, CHRIST University, India</p>
-                                <p class="text-light small mb-0">Email: shrushti.sachin@cep.christuniversity.in<br>Phone Number: 9833807123 </p>
-                            </div>
+                        <div class="leader-contact-actions">
+                            <a href="mailto:akshat.jain@bcomh.christuniversity.in" class="leader-contact-btn" title="Email Mr Akshat">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                            <a href="tel:9952896963" class="leader-contact-btn" title="Call Mr Akshat">
+                                <i class="fas fa-phone-alt"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</div>
+    </section>
 
-<!-- Section 2: Productions, Fellowship, Research -->
-<div class="">
-    <div class="container">
-        <div class="row g-4">
-            <!-- DREAMS Productions -->
-            <div class="col-lg-4 col-md-6">
-                <div class=" text-center h-100">
-
-                    <h4 class="text-primary-blue font-primary mb-4 mt-5">DREAMS Productions</h4>
-
-                    <div class="row g-3">
-                        <div class="col-6">
-                            <div class="leadership-member">
-                                <img src="{% static 'Aboutus/leadership/Productions_1.png' %}"
-                                    class="img-fluid rounded-custom mb-3 shadow-custom-small" alt="Dr Deepakkumar S">
-                                <h6 class="text-primary-blue mb-1">Dr Deepakkumar S</h6>
-                                <p class="text-medium small mb-0">Senior Leader - Productions</p>
-                                <p class="text-light small mb-0">Assistant Professor, Department of Psychology, CHRIST University, India</p>
-                                <p class="text-light small mb-0">Email: <br>Phone Number:  </p>
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="leadership-member">
-                                <img src="{% static 'Aboutus/leadership/Productions_2.png' %}"
-                                    class="img-fluid rounded-custom mb-3 shadow-custom-small" alt="Ms Kalika Mathur">
-                                <h6 class="text-primary-blue mb-1">Ms Kalika Mathur</h6>
-                                <p class="text-medium small mb-0">Youth Leader - Productions</p>
-                                <p class="text-light small mb-0">Student, CHRIST University, India</p>
-                                <p class="text-light small mb-0">Email: <br>Phone Number:  </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <!-- 3. Core Program Leadership Section -->
+    <section id="programs" class="media-section pt-3 pb-4">
+        <div class="container">
+            <div class="text-center mb-4">
+                <h2 class="media-section-title mb-2 text-center">Core Program Leadership</h2>
+                <p class="media-section-desc mx-auto text-center" style="max-width: 680px;">
+                    Our dual-generation model pairs experienced senior professionals with energetic youth leaders
+                </p>
             </div>
 
-            <!-- Leadership Fellowship Programme (LLP) -->
-            <div class="col-lg-4 col-md-6">
-                <div class=" text-center h-100">
-
-                    <h4 class="text-primary-blue font-primary mb-4 mt-5">Leadership Fellowship Program (LLP)</h4>
-
-                    <div class="row g-3">
-                        <div class="col-6">
-                            <div class="leadership-member">
-                                <img src="{% static 'Aboutus/leadership/Courses_1.png' %}"
-                                    class="img-fluid rounded-custom mb-3 shadow-custom-small"
-                                    alt="Col Ranjeev K Babu, VSM">
-                                <h6 class="text-primary-blue mb-1">Col Ranjeev K Babu, VSM</h6>
-                                <p class="text-medium small mb-0">Senior Leader - LLP</p>
-                                <p class="text-light small mb-0">Senior Trainer, AgileAsia Pte Ltd, Singapore | Indian Army (Retd)</p>
-                                <p class="text-light small mb-0">Email: ranjeevbabu@yahoo.com<br>Phone Number: 91-7382610816 </p>
-                            </div>
+            <div class="row g-4">
+                <!-- 1. DREAMS Intervention Program (DIP) -->
+                <div class="col-lg-6">
+                    <div class="leadership-dept-card h-100">
+                        <div class="leadership-dept-header">
+                            <i class="fas fa-graduation-cap text-primary"></i>
+                            <h3 class="leadership-dept-title">DREAMS Intervention Program (DIP)</h3>
                         </div>
-                        <div class="col-6">
-                            <div class="leadership-member">
-                                <img src="{% static 'Aboutus/leadership/Courses_2.png' %}"
-                                    class="img-fluid rounded-custom mb-3 shadow-custom-small" alt="Ms Devika M">
-                                <h6 class="text-primary-blue mb-1">Ms Devika M</h6>
-                                <p class="text-medium small mb-0">Youth Leader - LLP</p>
-                                <p class="text-light small mb-0">Trainee Counselling Psychologist, Bangalore, India</p>
-                                <p class="text-light small mb-0">Email: devika@letusdream.org<br>Phone Number: 9538627538</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Research -->
-            <div class="col-lg-4 col-md-6">
-                <div class=" text-center h-100">
-
-                    <h4 class="text-primary-blue font-primary mb-4 mt-5">Research</h4>
-
-                    <div class="row g-3">
-                        <div class="col-6">
-                            <div class="leadership-member">
-                                <img src="{% static 'Aboutus/leadership/Research_1.png' %}"
-                                    class="img-fluid rounded-custom mb-3 shadow-custom-small"
-                                    alt="Dr. Carl L. Thameling">
-                                <h6 class="text-primary-blue mb-1">Dr. Carl L. Thameling</h6>
-                                <p class="text-medium small mb-0">Senior Leader - Research</p>
-                                <p class="text-light small mb-0">Professor, University of Louisiana at Monroe, USA</p>
-                                <p class="text-light small mb-0">Email: thameling@ulm.edu<br>Phone Number: 1-318-614-0896</p>
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="leadership-member">
-                                <img src="{% static 'Aboutus/leadership/Research_2.png' %}"
-                                    class="img-fluid rounded-custom mb-3 shadow-custom-small" alt="Mr Jestin Joseph">
-                                <h6 class="text-primary-blue mb-1">Mr Jestin Joseph</h6>
-                                <p class="text-medium small mb-0">Youth Leader - Research</p>
-                                <p class="text-light small mb-0">Commerce Lecturer, Christ PU College, Bangalore, India</p>
-                                <p class="text-light small mb-0">Email: jestin.joseph@cec.christcollege.edu<br>Phone Number: 7204330897</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Section 3: Media Management, Partnership -->
-<div class="">
-    <div class="container">
-        <div class="row g-4 justify-content-center">
-            <!-- Media Management -->
-            <div class="col-lg-4 col-md-6">
-                <div class=" text-center h-100">
-
-                    <h4 class="text-primary-blue font-primary mb-4 mt-5">Media Management</h4>
-
-                    <div class="row g-3">
-                        <div class="col-6">
-                            <div class="leadership-member">
-                                <img src="{% static 'Aboutus/leadership/Media_1.png' %}"
-                                    class="img-fluid rounded-custom mb-3 shadow-custom-small"
-                                    alt="Ms Meethu Mary George">
-                                <h6 class="text-primary-blue mb-1">Ms Meethu Mary George</h6>
-                                <p class="text-medium small mb-0">Senior Leader - Media Management</p>
-                                <p class="text-light small mb-0">Assistant Professor, Kristu Jyoti College Kottayam, Kerala </p>
-                                <p class="text-light small mb-0">Email: <br>Phone Number: </p>
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="leadership-member">
-                                <img src="{% static 'Aboutus/leadership/Media_2.png' %}"
-                                    class="img-fluid rounded-custom mb-3 shadow-custom-small" alt="Ms Namitha S Menon">
-                                <h6 class="text-primary-blue mb-1">Ms Namitha S Menon</h6>
-                                <p class="text-medium small mb-0">Youth Leader - Media Management</p>
-                                <p class="text-light small mb-0">Student, CHRIST University, India</p>
-                                <p class="text-light small mb-0">Email: <br>Phone Number: </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Partnership -->
-            <div class="col-lg-4 col-md-6">
-                <div class=" text-center h-100">
-
-                    <h4 class="text-primary-blue font-primary mb-4 mt-5">Partnership</h4>
-
-                    <div class="row g-3">
-                        <div class="col-6">
-                            <div class="leadership-member">
-                                <img src="{% static 'Aboutus/leadership/Partnership_1.png' %}"
-                                    class="img-fluid rounded-custom mb-3 shadow-custom-small" alt="Mr David S R">
-                                <h6 class="text-primary-blue mb-1">Mr David S R</h6>
-                                <p class="text-medium small mb-0">Senior Leader - Partnership</p>
-                                <p class="text-light small mb-0">Founder, E-Cure Charitable Trust, Bangalore, India</p>
-                                <p class="text-light small mb-0">Email: david@e-cure.org<br>Phone Number: 9986452888</p>
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="leadership-member">
-                                <img src="{% static 'Aboutus/leadership/Partnership_2.png' %}"
-                                    class="img-fluid rounded-custom mb-3 shadow-custom-small" alt="Ms Samiksha Periwal">
-                                <h6 class="text-primary-blue mb-1">Ms Samiksha Periwal</h6>
-                                <p class="text-medium small mb-0">Youth Leader - Partnership</p>
-                                <p class="text-light small mb-0">Student, CHRIST University, India</p>
-                                <p class="text-light small mb-0">Email: samiksha.periwal@psy.christuniversity.in<br>Phone Number: 8240689678</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Section 4: Operations, Finance -->
-<div class="">
-    <div class="container">
-        <div class="row g-4 justify-content-center">
-            <!-- Operations -->
-            <div class="col-lg-4 col-md-6 mb-4">
-                <div class=" text-center h-100">
-
-                    <h4 class="text-primary-blue font-primary mb-4 mt-5">Operations</h4>
-
-                    <div class="row g-3">
-                        <div class="col-6">
-                            <div class="leadership-member">
-                                <img src="{% static 'Aboutus/leadership/Operations_1.png' %}"
-                                    class="img-fluid rounded-custom mb-3 shadow-custom-small" alt="Mr Yogesh L">
-                                <h6 class="text-primary-blue mb-1">Mr Yogesh L</h6>
-                                <p class="text-medium small mb-0">Senior Leader - Operations</p>
-                                <p class="text-light small mb-0">Email: yogesh@letusdream.org<br>Phone Number: 9972222553</p>
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="leadership-member">
-                                <img src="{% static 'Aboutus/leadership/Operations_2.png' %}"
-                                    class="img-fluid rounded-custom mb-3 shadow-custom-small" alt="Ms Swarnika R">
-                                <h6 class="text-primary-blue mb-1">Ms Swarnika R</h6>
-                                <p class="text-medium small mb-0">Youth Leader - Operations</p>
-                                <p class="text-light small mb-0">Student, CHRIST University, India</p>
-                                <p class="text-light small mb-0">Email: <br>Phone Number: </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Finance -->
-            <div class="col-lg-6 col-md-8">
-                <div class="text-center h-100">
-                    <h4 class="text-primary-blue font-primary mb-4 mt-5">Finance</h4>
-                    <div class="row row-cols-3 row-cols-sm-3 row-cols-md-3 g-3">
-                        <div class="col">
-                            <div class="leadership-member">
-                                <img src="{% static 'Aboutus/leadership/Finance_1.png' %}"
-                                    class="img-fluid rounded-custom mb-3 shadow-custom-small" alt="Mr Akshat Jain">
-                                <h6 class="text-primary-blue mb-1">Mr Akshat Jain</h6>
-                                <p class="text-medium small mb-0">Youth Leader - Finance</p>
-                                <p class="text-light small mb-0">Student, CHRIST University, India</p>
-                                <p class="text-light small mb-0">Email: akshat.jain@bcomh.christuniversity.in<br>Phone Number: 9952896963</p>
-                            </div>
-                        </div>
-
-                        <div class="col">
-                            <div class="leadership-member">
-                                <img src="{% static 'Aboutus/leadership/Finance_2.png' %}"
-                                    class="img-fluid rounded-custom mb-3 shadow-custom-small"
-                                    alt="Ms Jasmine Kaur Sahni">
-                                <h6 class="text-primary-blue mb-1">Ms Jasmine Kaur Sahni</h6>
-                                <p class="text-medium small mb-0">Treasurer</p>
-                                <p class="text-light small mb-0">Community Leader, Bangalore, India</p>
-                                <p class="text-light small mb-0">Email: jasmine.sahni@letusdream.org<br>Phone Number: 9845739413</p>
-                            </div>
-                        </div>
-
-                        <div class="col">
-                            <div class="leadership-member">
-                                <img src="{% static 'Aboutus/leadership/Trustee.png' %}"
-                                    class="img-fluid rounded-custom mb-3 shadow-custom-small"
-                                    alt="Dr Fr Tomy Kattampally, CMI">
-                                <h6 class="text-primary-blue mb-1">Dr Fr Tomy Kattampally, CMI</h6>
-                                <p class="text-medium small mb-0">Managing Trustee</p>
-                                <p class="text-light small mb-0">HOD, Biblical Theology, Dharmaram Vidya Kshetram, Bangalore, India</p>
-                                <p class="text-light small mb-0">Email: tomythomask@gmail.com<br>Phone Number: 9481248601</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Founder Section -->
-<div class="content-section">
-    <div class="container">
-        <div class="row justify-content-center align-items-center">
-            <div class="col-lg-12">
-                <div class="text-dark">
-                    <div class="section-divider mb-4"></div>
-                    <div class="row align-items-center">
-                        <div class="col-lg-4 text-center mb-4 mb-lg-0">
-                            <div class="founder-image-container">
-                                <img src="{% static 'Aboutus/leadership/Founder.png' %}"
-                                    class="img-fluid rounded-custom shadow-custom" alt="Dr Fr Lijo Thomas, CMI"
-                                    style="max-height: 300px; object-fit: cover;">
-                            </div>
-                            <div class="mt-3">
-                                <h4 class="text-primary-blue font-primary mb-0">Dr Fr Lijo Thomas, CMI</h4>
-                                <p class="fst-italic fs-3">Founder / Director</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-8">
-                            <div class="founder-quote">
-                                <div class="quote-icon mb-3">
-                                    <i class="fas fa-quote-left fa-2x text-primary-blue"></i>
+                        <div class="row g-3">
+                            <div class="col-6">
+                                <div class="leader-card">
+                                    <img src="{% static '2024/dreams/team member1.jpg' %}" alt="Mr Adarsh Jose" class="leader-avatar">
+                                    <span class="leader-role-badge badge-senior">Senior Leader</span>
+                                    <h4 class="leader-name">Mr Adarsh Jose</h4>
+                                    <div class="leader-title">Senior Leader - DIP</div>
+                                    <div class="leader-affiliation">Director, APACI Ellucian</div>
+                                    <div class="leader-contact-actions">
+                                        <a href="mailto:adarshj@yahoo.com" class="leader-contact-btn" title="Email"><i class="fas fa-envelope"></i></a>
+                                        <a href="tel:7975884844" class="leader-contact-btn" title="Call"><i class="fas fa-phone-alt"></i></a>
+                                    </div>
                                 </div>
-                                <blockquote class="blockquote">
-                                    <p class="justify text-medium lh-lg">
-                                        "Let Us Dream is a locally rooted and globally established not-for-profit
-                                        organization.
-                                        Since its inception, Let Us Dream has envisioned globally interconnected
-                                        communities where
-                                        no one and nothing stands alone. Grounded in volunteerism, collaboration, and
-                                        networking
-                                        principles, Let Us Dream promotes the idea of holistically developed,
-                                        sustainable
-                                        communities worldwide."
-                                    </p>
-                                </blockquote>
+                            </div>
+                            <div class="col-6">
+                                <div class="leader-card">
+                                    <img src="{% static '2024/dreams/team member2.jpg' %}" alt="Ms Banu H V" class="leader-avatar">
+                                    <span class="leader-role-badge badge-youth">Youth Leader</span>
+                                    <h4 class="leader-name">Ms Banu H V</h4>
+                                    <div class="leader-title">Youth Leader - DIP</div>
+                                    <div class="leader-affiliation">Student, CHRIST University, India</div>
+                                    <div class="leader-contact-actions">
+                                        <a href="mailto:banu.hv@mcom.christuniversity.in" class="leader-contact-btn" title="Email"><i class="fas fa-envelope"></i></a>
+                                        <a href="tel:9740262910" class="leader-contact-btn" title="Call"><i class="fas fa-phone-alt"></i></a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="section-divider mt-4"></div>
+                </div>
+
+                <!-- 2. Let Us Dream Clubs -->
+                <div class="col-lg-6">
+                    <div class="leadership-dept-card h-100">
+                        <div class="leadership-dept-header">
+                            <i class="fas fa-users text-primary"></i>
+                            <h3 class="leadership-dept-title">Let Us Dream Clubs</h3>
+                        </div>
+                        <div class="row g-3">
+                            <div class="col-6">
+                                <div class="leader-card">
+                                    <img src="{% static 'Aboutus/leadership/Courses_1.png' %}" alt="Col Ranjeev K Babu, VSM" class="leader-avatar">
+                                    <span class="leader-role-badge badge-senior">Senior Leader</span>
+                                    <h4 class="leader-name">Col Ranjeev K Babu, VSM</h4>
+                                    <div class="leader-title">Senior Leader - Clubs</div>
+                                    <div class="leader-affiliation">Senior Trainer, AgileAsia | Indian Army (Retd)</div>
+                                    <div class="leader-contact-actions">
+                                        <a href="mailto:ranjeevbabu@yahoo.com" class="leader-contact-btn" title="Email"><i class="fas fa-envelope"></i></a>
+                                        <a href="tel:+917382610816" class="leader-contact-btn" title="Call"><i class="fas fa-phone-alt"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="leader-card">
+                                    <img src="{% static '/clubs/leadership/Mr. Ayush Paul.png' %}" alt="Mr. Ayush Paul" class="leader-avatar">
+                                    <span class="leader-role-badge badge-youth">Global Youth Lead</span>
+                                    <h4 class="leader-name">Mr. Ayush Paul</h4>
+                                    <div class="leader-title">Global Strategic & Exec Youth Lead</div>
+                                    <div class="leader-affiliation">Student, CHRIST University, India</div>
+                                    <div class="leader-contact-actions">
+                                        <a href="mailto:ayush.paul@law.christuniversity.in" class="leader-contact-btn" title="Email"><i class="fas fa-envelope"></i></a>
+                                        <a href="tel:9205082937" class="leader-contact-btn" title="Call"><i class="fas fa-phone-alt"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Community Conferences -->
+                <div class="col-lg-6">
+                    <div class="leadership-dept-card h-100">
+                        <div class="leadership-dept-header">
+                            <i class="fas fa-microphone text-primary"></i>
+                            <h3 class="leadership-dept-title">Community Conferences</h3>
+                        </div>
+                        <div class="row g-3">
+                            <div class="col-6">
+                                <div class="leader-card">
+                                    <img src="{% static 'Aboutus/leadership/Conference_1.png' %}" alt="Dr Jimmy Cherian" class="leader-avatar">
+                                    <span class="leader-role-badge badge-senior">Senior Leader</span>
+                                    <h4 class="leader-name">Dr Jimmy Cherian</h4>
+                                    <div class="leader-title">Senior Leader - Conferences</div>
+                                    <div class="leader-affiliation">Founder & President, Creating Futures, India</div>
+                                    <div class="leader-contact-actions">
+                                        <a href="mailto:jims.cherian@gmail.com" class="leader-contact-btn" title="Email"><i class="fas fa-envelope"></i></a>
+                                        <a href="tel:9845132192" class="leader-contact-btn" title="Call"><i class="fas fa-phone-alt"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="leader-card">
+                                    <img src="{% static 'Aboutus/leadership/Conference_2.png' %}" alt="Ms Shrushti Mahajan" class="leader-avatar">
+                                    <span class="leader-role-badge badge-youth">Youth Leader</span>
+                                    <h4 class="leader-name">Ms Shrushti Mahajan</h4>
+                                    <div class="leader-title">Youth Leader - Conferences</div>
+                                    <div class="leader-affiliation">Student, CHRIST University, India</div>
+                                    <div class="leader-contact-actions">
+                                        <a href="mailto:shrushti.sachin@cep.christuniversity.in" class="leader-contact-btn" title="Email"><i class="fas fa-envelope"></i></a>
+                                        <a href="tel:9833807123" class="leader-contact-btn" title="Call"><i class="fas fa-phone-alt"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. DREAMS Productions -->
+                <div class="col-lg-6">
+                    <div class="leadership-dept-card h-100">
+                        <div class="leadership-dept-header">
+                            <i class="fas fa-music text-primary"></i>
+                            <h3 class="leadership-dept-title">DREAMS Productions</h3>
+                        </div>
+                        <div class="row g-3">
+                            <div class="col-6">
+                                <div class="leader-card">
+                                    <img src="{% static 'Aboutus/leadership/Productions_1.png' %}" alt="Dr Deepakkumar S" class="leader-avatar">
+                                    <span class="leader-role-badge badge-senior">Senior Leader</span>
+                                    <h4 class="leader-name">Dr Deepakkumar S</h4>
+                                    <div class="leader-title">Senior Leader - Productions</div>
+                                    <div class="leader-affiliation">Assistant Professor, Dept of Psychology, CHRIST University</div>
+                                    <div class="leader-contact-actions">
+                                        <span class="text-muted small" style="font-size: 0.72rem;">Faculty Lead</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="leader-card">
+                                    <img src="{% static 'Aboutus/leadership/Productions_2.png' %}" alt="Ms Kalika Mathur" class="leader-avatar">
+                                    <span class="leader-role-badge badge-youth">Youth Leader</span>
+                                    <h4 class="leader-name">Ms Kalika Mathur</h4>
+                                    <div class="leader-title">Youth Leader - Productions</div>
+                                    <div class="leader-affiliation">Student, CHRIST University, India</div>
+                                    <div class="leader-contact-actions">
+                                        <span class="text-muted small" style="font-size: 0.72rem;">Youth Coordinator</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
+
+    <!-- 4. Fellowship & Academic Research Section -->
+    <section id="fellowship-research" class="media-section pt-3 pb-4">
+        <div class="container">
+            <div class="text-center mb-4">
+                <h2 class="media-section-title mb-2 text-center">Fellowship & Academic Research</h2>
+                <p class="media-section-desc mx-auto text-center" style="max-width: 680px;">
+                    Advancing evidence-based community development and intensive social leadership formation
+                </p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Leadership Fellowship Program (LLFP) -->
+                <div class="col-lg-6">
+                    <div class="leadership-dept-card h-100">
+                        <div class="leadership-dept-header">
+                            <i class="fas fa-handshake text-primary"></i>
+                            <h3 class="leadership-dept-title">Leadership Fellowship Program (LLFP)</h3>
+                        </div>
+                        <div class="row g-3">
+                            <div class="col-6">
+                                <div class="leader-card">
+                                    <img src="{% static 'Aboutus/leadership/Courses_1.png' %}" alt="Col Ranjeev K Babu, VSM" class="leader-avatar">
+                                    <span class="leader-role-badge badge-senior">Senior Leader</span>
+                                    <h4 class="leader-name">Col Ranjeev K Babu, VSM</h4>
+                                    <div class="leader-title">Senior Leader - LLFP</div>
+                                    <div class="leader-affiliation">Senior Trainer, AgileAsia | Indian Army (Retd)</div>
+                                    <div class="leader-contact-actions">
+                                        <a href="mailto:ranjeevbabu@yahoo.com" class="leader-contact-btn" title="Email"><i class="fas fa-envelope"></i></a>
+                                        <a href="tel:+917382610816" class="leader-contact-btn" title="Call"><i class="fas fa-phone-alt"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="leader-card">
+                                    <img src="{% static 'Aboutus/leadership/Courses_2.png' %}" alt="Ms Devika M" class="leader-avatar">
+                                    <span class="leader-role-badge badge-youth">Youth Leader</span>
+                                    <h4 class="leader-name">Ms Devika M</h4>
+                                    <div class="leader-title">Youth Leader - LLFP</div>
+                                    <div class="leader-affiliation">Trainee Counselling Psychologist, Bangalore, India</div>
+                                    <div class="leader-contact-actions">
+                                        <a href="mailto:devika@letusdream.org" class="leader-contact-btn" title="Email"><i class="fas fa-envelope"></i></a>
+                                        <a href="tel:9538627538" class="leader-contact-btn" title="Call"><i class="fas fa-phone-alt"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Research -->
+                <div class="col-lg-6">
+                    <div class="leadership-dept-card h-100">
+                        <div class="leadership-dept-header">
+                            <i class="fas fa-microscope text-primary"></i>
+                            <h3 class="leadership-dept-title">Academic Research Wing</h3>
+                        </div>
+                        <div class="row g-3">
+                            <div class="col-6">
+                                <div class="leader-card">
+                                    <img src="{% static 'Aboutus/leadership/Research_1.png' %}" alt="Dr. Carl L. Thameling" class="leader-avatar">
+                                    <span class="leader-role-badge badge-senior">Senior Leader</span>
+                                    <h4 class="leader-name">Dr. Carl L. Thameling</h4>
+                                    <div class="leader-title">Senior Leader - Research</div>
+                                    <div class="leader-affiliation">Professor, University of Louisiana at Monroe, USA</div>
+                                    <div class="leader-contact-actions">
+                                        <a href="mailto:thameling@ulm.edu" class="leader-contact-btn" title="Email"><i class="fas fa-envelope"></i></a>
+                                        <a href="tel:+13186140896" class="leader-contact-btn" title="Call"><i class="fas fa-phone-alt"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="leader-card">
+                                    <img src="{% static 'Aboutus/leadership/Research_2.png' %}" alt="Mr Jestin Joseph" class="leader-avatar">
+                                    <span class="leader-role-badge badge-youth">Youth Leader</span>
+                                    <h4 class="leader-name">Mr Jestin Joseph</h4>
+                                    <div class="leader-title">Youth Leader - Research</div>
+                                    <div class="leader-affiliation">Commerce Lecturer, Christ PU College, Bangalore, India</div>
+                                    <div class="leader-contact-actions">
+                                        <a href="mailto:jestin.joseph@cec.christcollege.edu" class="leader-contact-btn" title="Email"><i class="fas fa-envelope"></i></a>
+                                        <a href="tel:7204330897" class="leader-contact-btn" title="Call"><i class="fas fa-phone-alt"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Operations, Partnerships & Media Section -->
+    <section id="operations-alliances" class="media-section pt-3 pb-5">
+        <div class="container">
+            <div class="text-center mb-4">
+                <h2 class="media-section-title mb-2 text-center">Operations, Partnerships & Media</h2>
+                <p class="media-section-desc mx-auto text-center" style="max-width: 680px;">
+                    Managing cross-border logistics, strategic organizational alliances, and digital communications
+                </p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Operations -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="leadership-dept-card h-100">
+                        <div class="leadership-dept-header">
+                            <i class="fas fa-cogs text-primary"></i>
+                            <h3 class="leadership-dept-title">Operations</h3>
+                        </div>
+                        <div class="row g-3">
+                            <div class="col-6">
+                                <div class="leader-card">
+                                    <img src="{% static 'Aboutus/leadership/Operations_1.png' %}" alt="Mr Yogesh L" class="leader-avatar">
+                                    <span class="leader-role-badge badge-senior">Senior Leader</span>
+                                    <h4 class="leader-name">Mr Yogesh L</h4>
+                                    <div class="leader-title">Senior Leader</div>
+                                    <div class="leader-affiliation">Program Coordinator, Let Us Dream</div>
+                                    <div class="leader-contact-actions">
+                                        <a href="mailto:yogesh@letusdream.org" class="leader-contact-btn" title="Email"><i class="fas fa-envelope"></i></a>
+                                        <a href="tel:9972222553" class="leader-contact-btn" title="Call"><i class="fas fa-phone-alt"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="leader-card">
+                                    <img src="{% static 'Aboutus/leadership/Operations_2.png' %}" alt="Ms Swarnika R" class="leader-avatar">
+                                    <span class="leader-role-badge badge-youth">Youth Leader</span>
+                                    <h4 class="leader-name">Ms Swarnika R</h4>
+                                    <div class="leader-title">Youth Leader</div>
+                                    <div class="leader-affiliation">Student, CHRIST University, India</div>
+                                    <div class="leader-contact-actions">
+                                        <span class="text-muted small" style="font-size: 0.72rem;">Operations</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Strategic Partnerships -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="leadership-dept-card h-100">
+                        <div class="leadership-dept-header">
+                            <i class="fas fa-network-wired text-primary"></i>
+                            <h3 class="leadership-dept-title">Partnerships</h3>
+                        </div>
+                        <div class="row g-3">
+                            <div class="col-6">
+                                <div class="leader-card">
+                                    <img src="{% static 'Aboutus/leadership/Partnership_1.png' %}" alt="Mr David S R" class="leader-avatar">
+                                    <span class="leader-role-badge badge-senior">Senior Leader</span>
+                                    <h4 class="leader-name">Mr David S R</h4>
+                                    <div class="leader-title">Senior Leader</div>
+                                    <div class="leader-affiliation">Founder, E-Cure Charitable Trust, India</div>
+                                    <div class="leader-contact-actions">
+                                        <a href="mailto:david@e-cure.org" class="leader-contact-btn" title="Email"><i class="fas fa-envelope"></i></a>
+                                        <a href="tel:9986452888" class="leader-contact-btn" title="Call"><i class="fas fa-phone-alt"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="leader-card">
+                                    <img src="{% static 'Aboutus/leadership/Partnership_2.png' %}" alt="Ms Samiksha Periwal" class="leader-avatar">
+                                    <span class="leader-role-badge badge-youth">Youth Leader</span>
+                                    <h4 class="leader-name">Ms Samiksha Periwal</h4>
+                                    <div class="leader-title">Youth Leader</div>
+                                    <div class="leader-affiliation">Student, CHRIST University, India</div>
+                                    <div class="leader-contact-actions">
+                                        <a href="mailto:samiksha.periwal@psy.christuniversity.in" class="leader-contact-btn" title="Email"><i class="fas fa-envelope"></i></a>
+                                        <a href="tel:8240689678" class="leader-contact-btn" title="Call"><i class="fas fa-phone-alt"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Media Management -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="leadership-dept-card h-100">
+                        <div class="leadership-dept-header">
+                            <i class="fas fa-bullhorn text-primary"></i>
+                            <h3 class="leadership-dept-title">Media Management</h3>
+                        </div>
+                        <div class="row g-3">
+                            <div class="col-6">
+                                <div class="leader-card">
+                                    <img src="{% static 'Aboutus/leadership/Media_1.png' %}" alt="Ms Meethu Mary George" class="leader-avatar">
+                                    <span class="leader-role-badge badge-senior">Senior Leader</span>
+                                    <h4 class="leader-name">Ms Meethu Mary George</h4>
+                                    <div class="leader-title">Senior Leader</div>
+                                    <div class="leader-affiliation">Asst Professor, Kristu Jyoti College, Kerala</div>
+                                    <div class="leader-contact-actions">
+                                        <span class="text-muted small" style="font-size: 0.72rem;">Media Lead</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="leader-card">
+                                    <img src="{% static 'Aboutus/leadership/Media_2.png' %}" alt="Ms Namitha S Menon" class="leader-avatar">
+                                    <span class="leader-role-badge badge-youth">Youth Leader</span>
+                                    <h4 class="leader-name">Ms Namitha S Menon</h4>
+                                    <div class="leader-title">Youth Leader</div>
+                                    <div class="leader-affiliation">Student, CHRIST University, India</div>
+                                    <div class="leader-contact-actions">
+                                        <span class="text-muted small" style="font-size: 0.72rem;">Media Youth</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </div>
 {% endblock %}
