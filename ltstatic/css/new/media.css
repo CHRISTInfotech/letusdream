@@ -1605,3 +1605,501 @@
     margin-bottom: 1rem;
   }
 }
+
+/* ==========================================================
+   PRODUCTIONS SECTION (DREAMS Band, Sonic Sanctuaries, HUMAN)
+   ========================================================== */
+.productions-page-wrapper {
+  background-color: #ffffff !important;
+  min-height: 100vh;
+  color: var(--media-text-dark);
+}
+
+/* Band Hero & Story Cards */
+.production-hero-card {
+  background: #ffffff;
+  border: 1px solid var(--media-border);
+  border-radius: var(--media-radius);
+  padding: 2.25rem;
+  box-shadow: var(--media-shadow-sm);
+  transition: var(--media-transition);
+}
+
+.production-hero-card:hover {
+  border-color: var(--media-border-hover);
+  box-shadow: var(--media-shadow-md);
+}
+
+.band-sticker-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  background: #f8fafc;
+  border-radius: var(--media-radius);
+  border: 1px dashed #cbd5e1;
+}
+
+.band-sticker-img {
+  max-height: 260px;
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.band-sticker-box:hover .band-sticker-img {
+  transform: scale(1.04);
+}
+
+/* Modern Tabbed Events */
+.event-tour-tabs {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  border-bottom: 1px solid var(--media-border);
+  padding-bottom: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.event-tour-tab-btn {
+  background: #f8fafc;
+  border: 1px solid var(--media-border);
+  border-radius: 24px;
+  padding: 0.5rem 1.1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--media-text-muted);
+  cursor: pointer;
+  transition: var(--media-transition);
+  text-decoration: none;
+}
+
+.event-tour-tab-btn:hover,
+.event-tour-tab-btn.active {
+  background: var(--media-primary);
+  color: #ffffff;
+  border-color: var(--media-primary);
+}
+
+.event-tour-card {
+  background: #ffffff;
+  border: 1px solid var(--media-border);
+  border-radius: var(--media-radius);
+  overflow: hidden;
+  box-shadow: var(--media-shadow-sm);
+  transition: var(--media-transition);
+}
+
+.event-tour-card:hover {
+  box-shadow: var(--media-shadow-md);
+  border-color: var(--media-border-hover);
+}
+
+.event-date-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: #f1f5f9;
+  color: var(--media-primary);
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+/* Video Showcase */
+.video-showcase-card {
+  background: #ffffff;
+  border: 1px solid var(--media-border);
+  border-radius: var(--media-radius);
+  padding: 1.5rem;
+  box-shadow: var(--media-shadow-sm);
+}
+
+.video-thumb-rail {
+  display: flex;
+  gap: 0.75rem;
+  overflow-x: auto;
+  padding-bottom: 0.75rem;
+  scroll-behavior: smooth;
+}
+
+.video-thumb-rail::-webkit-scrollbar {
+  height: 6px;
+}
+
+.video-thumb-rail::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 10px;
+}
+
+.video-thumb-item {
+  flex: 0 0 160px;
+  border-radius: var(--media-radius-sm);
+  overflow: hidden;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: var(--media-transition);
+}
+
+.video-thumb-item:hover,
+.video-thumb-item.active {
+  border-color: var(--media-primary);
+  transform: translateY(-2px);
+  box-shadow: var(--media-shadow-md);
+}
+
+.video-thumb-item img {
+  width: 100%;
+  height: 90px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Testimonial Cards */
+.testimonial-minimal-card {
+  background: #ffffff;
+  border: 1px solid var(--media-border);
+  border-radius: var(--media-radius);
+  padding: 2rem;
+  box-shadow: var(--media-shadow-sm);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: var(--media-transition);
+}
+
+.testimonial-minimal-card:hover {
+  border-color: var(--media-border-hover);
+  box-shadow: var(--media-shadow-md);
+  transform: translateY(-3px);
+}
+
+.testimonial-avatar-box {
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 1.25rem;
+  border: 3px solid #f1f5f9;
+}
+
+.testimonial-avatar-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.testimonial-quote {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #334155;
+  font-style: italic;
+  margin-bottom: 1.25rem;
+  position: relative;
+}
+
+/* Sonic Sanctuaries Specifics */
+.sound-bath-card {
+  background: #ffffff;
+  border: 1px solid var(--media-border);
+  border-radius: var(--media-radius);
+  padding: 2.5rem;
+  box-shadow: var(--media-shadow-sm);
+}
+
+.sdg-tag-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: #e8f5e9;
+  color: #2e7d32;
+  padding: 0.35rem 0.85rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.gallery-tile-rounded {
+  border-radius: var(--media-radius);
+  overflow: hidden;
+  border: 1px solid var(--media-border);
+  box-shadow: var(--media-shadow-sm);
+  transition: var(--media-transition);
+}
+
+.gallery-tile-rounded:hover {
+  transform: scale(1.02);
+  box-shadow: var(--media-shadow-hover);
+}
+
+.gallery-tile-rounded img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ==========================================================
+   RESEARCH SECTION (Overview & Academic Publications)
+   ========================================================== */
+.research-page-wrapper {
+  background-color: #ffffff !important;
+  min-height: 100vh;
+  color: var(--media-text-dark);
+}
+
+.research-stat-card {
+  background: #ffffff;
+  border: 1px solid var(--media-border);
+  border-radius: var(--media-radius);
+  padding: 1.5rem 1rem;
+  text-align: center;
+  box-shadow: var(--media-shadow-sm);
+  transition: var(--media-transition);
+}
+
+.research-stat-card:hover {
+  border-color: var(--media-primary);
+  box-shadow: var(--media-shadow-md);
+  transform: translateY(-3px);
+}
+
+.research-stat-num {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: var(--media-primary);
+  line-height: 1.1;
+  margin-bottom: 0.25rem;
+}
+
+.research-stat-label {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--media-text-dark);
+  margin-bottom: 0.2rem;
+}
+
+.research-stat-desc {
+  font-size: 0.78rem;
+  color: var(--media-text-muted);
+}
+
+.research-domain-card {
+  background: #ffffff;
+  border: 1px solid var(--media-border);
+  border-radius: var(--media-radius);
+  overflow: hidden;
+  box-shadow: var(--media-shadow-sm);
+  margin-bottom: 2rem;
+  transition: var(--media-transition);
+}
+
+.research-domain-card:hover {
+  border-color: var(--media-border-hover);
+  box-shadow: var(--media-shadow-md);
+}
+
+.research-domain-img {
+  width: 100%;
+  height: 100%;
+  min-height: 260px;
+  object-fit: cover;
+}
+
+.research-project-card {
+  background: #ffffff;
+  border: 1px solid var(--media-border);
+  border-radius: var(--media-radius);
+  padding: 1.75rem;
+  height: 100%;
+  box-shadow: var(--media-shadow-sm);
+  transition: var(--media-transition);
+  display: flex;
+  flex-direction: column;
+}
+
+.research-project-card:hover {
+  border-color: var(--media-primary);
+  box-shadow: var(--media-shadow-md);
+  transform: translateY(-3px);
+}
+
+.research-project-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: var(--media-primary-light);
+  color: var(--media-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+/* Publications Specifics */
+.pub-card {
+  background: #ffffff;
+  border: 1px solid var(--media-border);
+  border-radius: var(--media-radius);
+  padding: 1.5rem;
+  margin-bottom: 1.25rem;
+  box-shadow: var(--media-shadow-sm);
+  transition: var(--media-transition);
+}
+
+.pub-card:hover {
+  border-color: var(--media-border-hover);
+  box-shadow: var(--media-shadow-md);
+  transform: translateY(-2px);
+}
+
+.pub-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.pub-year-badge {
+  background: var(--media-primary-light);
+  color: var(--media-primary);
+  font-weight: 700;
+  font-size: 0.8rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+}
+
+.pub-type-badge {
+  background: #f1f5f9;
+  color: #475569;
+  font-weight: 600;
+  font-size: 0.75rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 16px;
+}
+
+.pub-title {
+  font-size: 1.08rem;
+  font-weight: 700;
+  color: var(--media-text-dark);
+  line-height: 1.45;
+  margin-bottom: 0.75rem;
+}
+
+.pub-citation-box {
+  background: #f8fafc;
+  border: 1px solid #edf2f7;
+  border-radius: var(--media-radius-sm);
+  padding: 0.85rem 1rem;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: #475569;
+  margin-bottom: 1rem;
+  font-family: inherit;
+}
+
+.pub-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+/* ==========================================================
+   FELLOWSHIP SECTION (LLFP)
+   ========================================================== */
+.fellowship-page-wrapper {
+  background-color: #ffffff !important;
+  min-height: 100vh;
+  color: var(--media-text-dark);
+}
+
+.fellowship-welcome-card {
+  background: #ffffff;
+  border: 1px solid var(--media-border);
+  border-radius: var(--media-radius);
+  padding: 2rem;
+  box-shadow: var(--media-shadow-sm);
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.fellowship-step-card {
+  background: #ffffff;
+  border: 1px solid var(--media-border);
+  border-radius: var(--media-radius);
+  overflow: hidden;
+  box-shadow: var(--media-shadow-sm);
+  height: 100%;
+  transition: var(--media-transition);
+}
+
+.fellowship-step-card:hover {
+  border-color: var(--media-border-hover);
+  box-shadow: var(--media-shadow-md);
+  transform: translateY(-3px);
+}
+
+.fellowship-accordion .accordion-item {
+  background: #ffffff;
+  border: 1px solid var(--media-border);
+  border-radius: var(--media-radius) !important;
+  margin-bottom: 0.85rem;
+  overflow: hidden;
+  box-shadow: var(--media-shadow-sm);
+}
+
+.fellowship-accordion .accordion-button {
+  background: #ffffff;
+  font-weight: 600;
+  color: var(--media-text-dark);
+  padding: 1.1rem 1.4rem;
+  box-shadow: none !important;
+}
+
+.fellowship-accordion .accordion-button:not(.collapsed) {
+  color: var(--media-primary);
+  background: #f8fafc;
+}
+
+.fellowship-accordion .accordion-body {
+  padding: 1.25rem 1.4rem;
+  color: #475569;
+  line-height: 1.7;
+}
+
+.contact-mini-card {
+  background: #ffffff;
+  border: 1px solid var(--media-border);
+  border-radius: var(--media-radius);
+  padding: 1.75rem 1.5rem;
+  text-align: center;
+  height: 100%;
+  box-shadow: var(--media-shadow-sm);
+  transition: var(--media-transition);
+}
+
+.contact-mini-card:hover {
+  border-color: var(--media-primary);
+  box-shadow: var(--media-shadow-md);
+  transform: translateY(-3px);
+}
+
+.contact-icon-circle {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--media-primary-light);
+  color: var(--media-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  margin: 0 auto 1.2rem;
+}

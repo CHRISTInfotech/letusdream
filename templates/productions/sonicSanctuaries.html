@@ -1,83 +1,217 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block title %}Sonic Sanctuaries{% endblock %}
+{% block title %}Sonic Sanctuaries | Let Us Dream{% endblock %}
 
-{% block extraStyles %}
-{% endblock %}
+{% block links %}
+<link rel="stylesheet" href="{% static 'css/new/media.css' %}?v=15" type="text/css">
+{% endblock links %}
+
+{# Suppress standalone legacy breadcrumb row #}
+{% block breadcrumb_section %}{% endblock breadcrumb_section %}
 
 {% block content %}
+<div class="media-page-wrapper productions-page-wrapper">
+    <!-- Minimalist Page Hero with Integrated Breadcrumb -->
+    <section class="media-hero">
+        <div class="container">
+            {% if breadcrumbs %}
+            <nav aria-label="breadcrumb" class="media-hero-breadcrumb">
+                <ol class="breadcrumb-minimal">
+                    {% for breadcrumb in breadcrumbs %}
+                        {% if not breadcrumb.active %}
+                            <li class="breadcrumb-item-min">
+                                {% if breadcrumb.url %}
+                                    <a href="{% url breadcrumb.url %}">
+                                        <i class="{{ breadcrumb.icon }}"></i>
+                                        <span>{{ breadcrumb.name }}</span>
+                                    </a>
+                                {% else %}
+                                    <span>
+                                        <i class="{{ breadcrumb.icon }}"></i>
+                                        <span>{{ breadcrumb.name }}</span>
+                                    </span>
+                                {% endif %}
+                            </li>
+                            <li class="breadcrumb-sep-min">/</li>
+                        {% else %}
+                            <li class="breadcrumb-item-min active">
+                                <i class="{{ breadcrumb.icon }}"></i>
+                                <span>{{ breadcrumb.name }}</span>
+                            </li>
+                        {% endif %}
+                    {% endfor %}
+                </ol>
+            </nav>
+            {% endif %}
 
-<section class="py-5 bg-light">
-    <div class="container">
-        <div class="text-center mb-5">
-            <h1 class="display-4 fw-bold text-primary">SONIC SANCTUARIES</h1>
-            <h4 class="text-muted fst-italic">Reimagining Well-being Through Sound and Silence</h4>
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-8 col-md-10">
+                    <span class="media-kicker">Let Us Dream • Music & Mindfulness Productions</span>
+                    <h1 class="media-hero-title">Sonic Sanctuaries</h1>
+                    <p class="media-hero-lead">
+                        Reimagining well-being, mindfulness, and calm through the healing resonance of handpan soundscapes and guided silence.
+                    </p>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <div class="row justify-content-center">
-            <div class="col-lg-10">
-                <div class="card border-0 shadow-sm p-4 p-md-5">
-                    <p class="text-justify mb-4">
-                        In a world that measures progress by speed and success by output, <strong>Sonic
-                            Sanctuaries</strong> invites a return to stillness. It transforms sound into a language of
-                        healing—blending the warm resonance of the handpan with natural soundscapes to create immersive
-                        environments of calm and reflection.
-                    </p>
+    <!-- Quick Navigation Sticky Jump Pills -->
+    <div class="media-nav-wrapper">
+        <div class="container">
+            <div class="media-nav-scroll justify-content-start justify-content-md-center">
+                <a href="#about-soundbath" class="media-pill active">
+                    <i class="fas fa-spa me-1"></i>About the Experience
+                </a>
+                <a href="#impact-sdg3" class="media-pill">
+                    <i class="fas fa-heartbeat me-1"></i>SDG 3 & Well-Being
+                </a>
+                <a href="#host-session" class="media-pill">
+                    <i class="fas fa-envelope-open-text me-1"></i>Invite to Your Campus
+                </a>
+                <a href="#photo-gallery" class="media-pill">
+                    <i class="fas fa-images me-1"></i>Sessions & Gallery
+                </a>
+            </div>
+        </div>
+    </div>
 
-                    <p class="text-justify mb-4">
-                        When you invite Sonic Sanctuaries to your organization or campus, a one-hour guided sound bath
-                        experience is conducted for groups of 10–25 participants. The session begins with a brief
-                        grounding exercise, followed by a live handpan soundscape layered with ambient recordings
-                        designed to slow the breath and quiet the mind. Participants lie or sit comfortably on mats,
-                        surrounded by soft lighting and resonant tones that create a deeply restorative atmosphere.
-                    </p>
+    <!-- About Experience Section -->
+    <section id="about-soundbath" class="py-5">
+        <div class="container">
+            <div class="sound-bath-card">
+                <div class="row g-4 align-items-center">
+                    <div class="col-lg-8">
+                        <div class="d-inline-flex align-items-center gap-2 mb-3">
+                            <span class="sdg-tag-pill">
+                                <i class="fas fa-certificate"></i> Music Therapy & Mindfulness
+                            </span>
+                            <span class="text-muted small fw-semibold">1-Hour Guided Immersion</span>
+                        </div>
+                        <h2 class="fw-bold mb-3" style="color: var(--media-text-dark); font-size: 1.8rem;">
+                            Returning to Stillness Through Resonant Acoustics
+                        </h2>
+                        <p class="text-muted lh-lg mb-3">
+                            In a world that frequently measures progress strictly by speed and success by output, <strong>Sonic Sanctuaries</strong> extends an invitation to stillness. It transforms sound into an authentic language of healing—blending the warm resonance of the handpan with natural soundscapes to create immersive sanctuaries of serenity and deep reflection.
+                        </p>
+                        <p class="text-muted lh-lg mb-3">
+                            When hosted at your university campus, corporate office, or wellness center, a guided one-hour sound bath is conducted for groups of 10–25 participants. The session begins with gentle grounding breathwork, followed by live handpan compositions layered with nature recordings calibrated to quiet mental clutter and slow autonomic stress responses.
+                        </p>
+                        <p class="text-muted lh-lg mb-0">
+                            Participants rest comfortably on mats amidst soft, serene illumination. Each session concludes with guided post-session debriefing, offering an intentional, deeply restorative alternative to high-stimulation leisure.
+                        </p>
+                    </div>
 
-                    <p class="text-justify mb-4">
-                        Each session is customized to the environment—corporate offices, university lounges, wellness
-                        centers, or outdoor courtyards—and includes setup, facilitation, and post-session reflection.
-                        These sessions help reduce stress, improve concentration, and boost emotional clarity, providing
-                        an alternative to high-stimulation leisure activities.
-                    </p>
-
-                    <p class="text-justify mb-4">
-                        Rooted in <strong>music therapy</strong> and <strong>environmental mindfulness</strong>, Sonic
-                        Sanctuaries aligns with <strong>SDG 3 – Good Health and Well-Being</strong>, supporting
-                        organizations that prioritize <strong>Human Well-Being (HWB)</strong> as a foundation for
-                        productivity, creativity, and care.
-                    </p>
-
-                    <div class="text-center mt-5">
-                        <p class="fw-bold fs-5 mb-2">To invite Sonic Sanctuaries to your organization or campus:</p>
-                        <a href="mailto:office@letusdream.org" class="btn btn-primary btn-lg">
-                            <i class="fas fa-envelope me-2"></i>Email: office@letusdream.org
-                        </a>
+                    <div class="col-lg-4">
+                        <div class="p-4 rounded-3 text-center" style="background: #f8fafc; border: 1px solid #e2e8f0;">
+                            <div class="mb-3">
+                                <i class="fas fa-wind fa-3x" style="color: var(--media-primary);"></i>
+                            </div>
+                            <h4 class="fw-bold mb-2" style="font-size: 1.15rem; color: var(--media-text-dark);">The Session Blueprint</h4>
+                            <ul class="list-unstyled text-start text-muted small lh-lg mb-0 mt-3">
+                                <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i><strong>Grounding:</strong> 10-min breath regulation</li>
+                                <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i><strong>Acoustic Immersion:</strong> 35-min live handpan soundscape</li>
+                                <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i><strong>Guided Silence:</strong> 10-min mindful integration</li>
+                                <li><i class="fas fa-check-circle text-primary me-2"></i><strong>Group Reflection:</strong> 5-min debriefing circle</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+    </section>
 
-        <div class="row py-5">
-            <div class="col-12">
-                <div class="text-center mb-5 mt-4">
-                    <h2 class="fw-bold">Sonic Sanctuaries @ CHRIST University Pune Lavasa</h2>
+    <!-- SDG Alignment & Impact Section -->
+    <section id="impact-sdg3" class="py-4">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card border-0 h-100 p-4 text-center" style="background: #ffffff; border: 1px solid var(--media-border) !important; border-radius: var(--media-radius);">
+                        <div class="rounded-circle d-inline-flex align-items-center justify-content-center mx-auto mb-3" style="width: 54px; height: 54px; background: #e8f5e9; color: #2e7d32;">
+                            <i class="fas fa-heartbeat fa-lg"></i>
+                        </div>
+                        <h4 class="fw-bold mb-2 fs-5" style="color: var(--media-text-dark);">UN SDG 3 Alignment</h4>
+                        <p class="text-muted small lh-lg mb-0">
+                            Promoting mental health, emotional equilibrium, and preventative stress reduction in alignment with UN Sustainable Development Goal 3 (Good Health and Well-Being).
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card border-0 h-100 p-4 text-center" style="background: #ffffff; border: 1px solid var(--media-border) !important; border-radius: var(--media-radius);">
+                        <div class="rounded-circle d-inline-flex align-items-center justify-content-center mx-auto mb-3" style="width: 54px; height: 54px; background: #eef4fc; color: var(--media-primary);">
+                            <i class="fas fa-brain fa-lg"></i>
+                        </div>
+                        <h4 class="fw-bold mb-2 fs-5" style="color: var(--media-text-dark);">Cognitive Rejuvenation</h4>
+                        <p class="text-muted small lh-lg mb-0">
+                            Acoustic frequency modulation helps alleviate cognitive fatigue, sharpening focus, enhancing emotional clarity, and supporting creative contemplation.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card border-0 h-100 p-4 text-center" style="background: #ffffff; border: 1px solid var(--media-border) !important; border-radius: var(--media-radius);">
+                        <div class="rounded-circle d-inline-flex align-items-center justify-content-center mx-auto mb-3" style="width: 54px; height: 54px; background: #fef3c7; color: #d97706;">
+                            <i class="fas fa-building fa-lg"></i>
+                        </div>
+                        <h4 class="fw-bold mb-2 fs-5" style="color: var(--media-text-dark);">Human Well-Being (HWB)</h4>
+                        <p class="text-muted small lh-lg mb-0">
+                            Supporting academic universities and corporate partners who recognize holistic well-being as the cornerstone of meaningful engagement and collective care.
+                        </p>
+                    </div>
                 </div>
             </div>
-            <div class="col">
-                <img src="{% static '2025/sonic-sanctuaries/event_1.png' %}" alt="Sonic Sanctuaries Session"
-                    class="img-fluid">
-            </div>
-            <div class="col d-flex justify-content-center flex-column">
-                <img src="{% static '2025/sonic-sanctuaries/event_1_p1.png' %}" alt="Sonic Sanctuaries Session"
-                    class="img-fluid">
-                <img src="{% static '2025/sonic-sanctuaries/event_1_p2.png' %}" alt="Sonic Sanctuaries Session"
-                    class="img-fluid">
+        </div>
+    </section>
+
+    <!-- Host / Invitation CTA Section -->
+    <section id="host-session" class="py-5">
+        <div class="container">
+            <div class="p-5 text-center rounded-4" style="background: #f8fafc; border: 1px solid #e2e8f0;">
+                <div class="col-lg-8 mx-auto">
+                    <span class="media-kicker">Host on Your Campus</span>
+                    <h2 class="fw-bold mb-3" style="color: var(--media-text-dark); font-size: 1.75rem;">
+                        Invite Sonic Sanctuaries to Your Organization
+                    </h2>
+                    <p class="text-muted lh-lg mb-4">
+                        Customized to your environment—university lounges, corporate offices, wellness retreats, or tranquil courtyards. We provide complete facilitation, equipment, and acoustic ambiance.
+                    </p>
+                    <a href="mailto:office@letusdream.org" class="btn btn-primary rounded-pill px-4 py-2 fw-semibold">
+                        <i class="fas fa-envelope me-2"></i>Contact: office@letusdream.org
+                    </a>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-{% endblock %}
+    <!-- Photo Showcase Section -->
+    <section id="photo-gallery" class="py-4 mb-5">
+        <div class="container">
+            <div class="text-center mb-4">
+                <span class="media-kicker">Session Spotlight</span>
+                <h2 class="media-section-title text-center">Sonic Sanctuaries @ CHRIST University Pune Lavasa</h2>
+                <p class="media-section-desc mx-auto text-center" style="max-width: 650px;">
+                    Moments from live sound immersion experiences, showcasing deep mindfulness and student engagement.
+                </p>
+            </div>
 
-{% block extraScripts %}
+            <div class="row g-4 align-items-center">
+                <div class="col-lg-7 col-md-12">
+                    <div class="gallery-tile-rounded" style="height: 420px;">
+                        <img src="{% static '2025/sonic-sanctuaries/event_1.png' %}" alt="Sonic Sanctuaries Session at Lavasa" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-5 col-md-12 d-flex flex-column gap-4">
+                    <div class="gallery-tile-rounded" style="height: 198px;">
+                        <img src="{% static '2025/sonic-sanctuaries/event_1_p1.png' %}" alt="Participant Deep Relaxation" class="img-fluid">
+                    </div>
+                    <div class="gallery-tile-rounded" style="height: 198px;">
+                        <img src="{% static '2025/sonic-sanctuaries/event_1_p2.png' %}" alt="Handpan Performance and Meditation" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
 {% endblock %}
