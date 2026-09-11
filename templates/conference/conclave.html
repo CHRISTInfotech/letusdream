@@ -2,188 +2,272 @@
 {% load static %}
 
 {% block title %}
-Annual Conferences - Let Us Dream
-{% endblock %}
+Servant Leadership Conclave - Let Us Dream
+{% endblock title %}
 
 {% block extraStyles %}
-<style>
-    .timeline-item {
-        position: relative;
-        padding-left: 2rem;
-        border-left: 3px solid var(--secondary-green);
-        margin-bottom: 2rem;
-    }
-
-    .timeline-item::before {
-        content: '';
-        position: absolute;
-        left: -8px;
-        top: 0;
-        width: 14px;
-        height: 14px;
-        border-radius: 50%;
-        background: var(--secondary-green);
-    }
-
-    .feature-icon {
-        width: 50px;
-        height: 50px;
-        flex-shrink: 0;
-        border-radius: var(--border-radius-small);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.2rem;
-        color: var(--white-text);
-    }
-
-    .bg-gradient-info {
-        background: linear-gradient(135deg, #17a2b8, #138496);
-    }
-
-    .bg-gradient-success {
-        background: linear-gradient(135deg, #28a745, #20873a);
-    }
-
-    .bg-gradient-danger {
-        background: linear-gradient(135deg, #dc3545, #c82333);
-    }
-
-    .location-card {
-        border: 2px solid transparent;
-        transition: var(--transition-normal);
-        cursor: pointer;
-    }
-
-    .location-card:hover {
-        border-color: var(--primary-blue);
-        transform: translateY(-3px);
-    }
-
-    .conference-evolution {
-        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-        border-radius: var(--border-radius);
-        padding: 3rem;
-    }
-
-    @media (max-width: 768px) {
-        .feature-icon {
-            width: 60px;
-            height: 60px;
-            font-size: 1.5rem;
-        }
-    }
-</style>
+<link rel="stylesheet" href="{% static 'css/new/media.css' %}">
 {% endblock extraStyles %}
 
+{% block breadcrumb_section %}{% endblock %}
+
 {% block content %}
-
-<!-- Hero Section -->
-<section class="bg-light-gray py-5">
-    <div class="container py-5">
-        <div class="row align-items-center g-5">
-            <div class="col-lg-8 text-center text-lg-start">
-                <h1 class="display-4 fw-bold mb-4 font-primary">Annual Servant Leadership Conclave</h1>
-                <p class="lead mb-4">
-                    Servant Leadership Conclave is a platform that brings together leaders, educators,
-                    and changemakers committed to leading through service. The conclave fosters collaboration,
-                    reflection, and action-oriented dialogue, empowering participants to inspire others, build inclusive
-                    communities, and embody leadership rooted in empathy, vision, and collective growth.
-                </p>
-            </div>
-            <div class="col-lg-4 text-center">
-                <div class="position-relative">
-                    <img src="{% static '2025/conference/conclave/cover.png' %}"
-                        class="img-fluid rounded-custom shadow-custom" alt="Conference Overview">
+<div class="conference-page-wrapper">
+    <!-- Hero Header -->
+    <section class="media-hero">
+        <div class="container">
+            {% if breadcrumbs %}
+            <nav aria-label="breadcrumb" class="media-hero-breadcrumb">
+                <ol class="breadcrumb-minimal">
+                    {% for breadcrumb in breadcrumbs %}
+                        {% if not breadcrumb.active %}
+                            <li class="breadcrumb-item-min">
+                                {% if breadcrumb.url %}
+                                    <a href="{% url breadcrumb.url %}">
+                                        <i class="{{ breadcrumb.icon }}"></i>
+                                        <span>{{ breadcrumb.name }}</span>
+                                    </a>
+                                {% else %}
+                                    <span>
+                                        <i class="{{ breadcrumb.icon }}"></i>
+                                        <span>{{ breadcrumb.name }}</span>
+                                    </span>
+                                {% endif %}
+                            </li>
+                            <li class="breadcrumb-sep-min">/</li>
+                        {% else %}
+                            <li class="breadcrumb-item-min active">
+                                <i class="{{ breadcrumb.icon }}"></i>
+                                <span>{{ breadcrumb.name }}</span>
+                            </li>
+                        {% endif %}
+                    {% endfor %}
+                </ol>
+            </nav>
+            {% endif %}
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-8 col-md-10">
+                    <span class="media-kicker">LET US DREAM • SERVANT LEADERSHIP CONCLAVE</span>
+                    <h1 class="media-hero-title">Annual Servant Leadership Conclave</h1>
+                    <p class="media-hero-lead">
+                        Leading through service, fostering reflective dialogue, and empowering changemakers rooted in empathy, vision, and collective growth.
+                    </p>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- What to Expect Section -->
-<section class="py-5 text-white">
-    <div class="container">
-        <div class="text-center mb-5">
-            <h2 class="display-5 fw-bold font-primary">Host Locations</h2>
+    <!-- Sticky Navigation Pills -->
+    <div class="media-nav-wrapper">
+        <div class="container">
+            <div class="media-nav-scroll justify-content-start justify-content-md-center">
+                <a href="#about" class="media-pill active"><i class="fas fa-info-circle me-1"></i>About the Conclave</a>
+                <a href="#host-location" class="media-pill"><i class="fas fa-map-marker-alt me-1"></i>Host Location</a>
+                <a href="#pillars" class="media-pill"><i class="fas fa-landmark me-1"></i>Core Pillars</a>
+                <a href="#contact-inquiry" class="media-pill"><i class="fas fa-envelope me-1"></i>Inquiries</a>
+            </div>
         </div>
+    </div>
 
-        <div class="row g-4">
-            <div class="col-lg-4 col-md-6">
-                <div class="card h-100 border-0 shadow-custom hover-lift">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Bangalore, India</h5>
-                        <p class="card-text">30-31 Janurary 2026.</p>
+    <!-- About Section -->
+    <section id="about" class="conference-section">
+        <div class="container">
+            <div class="media-card p-4 p-lg-5" style="border: 1px solid var(--media-border); border-radius: var(--media-radius);">
+                <div class="row align-items-center g-4 g-lg-5">
+                    <div class="col-lg-7">
+                        <span class="media-kicker">ETHICAL COMMUNITY LEADERSHIP</span>
+                        <h2 class="h3 fw-bold text-dark mb-4">Empowerment Through Service</h2>
+                        <p class="text-muted fs-6 mb-3 lh-base">
+                            The <strong>Servant Leadership Conclave</strong> is an annual international platform that brings together leaders, educators, social workers, and changemakers committed to leading through service.
+                        </p>
+                        <p class="text-muted fs-6 mb-4 lh-base">
+                            The conclave fosters collaboration, deep reflection, and action-oriented dialogue. It empowers participants to inspire others, build resilient and inclusive communities, and embody a transformative model of leadership rooted in humility, empathy, and collective progress.
+                        </p>
+                        <div class="row g-3">
+                            <div class="col-sm-6">
+                                <div class="d-flex align-items-center">
+                                    <i class="fas fa-check-circle text-success me-2 fs-5"></i>
+                                    <span class="text-dark fw-medium small">Intergenerational Dialogue</span>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="d-flex align-items-center">
+                                    <i class="fas fa-check-circle text-success me-2 fs-5"></i>
+                                    <span class="text-dark fw-medium small">Ethical Stewardship</span>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="d-flex align-items-center">
+                                    <i class="fas fa-check-circle text-success me-2 fs-5"></i>
+                                    <span class="text-dark fw-medium small">Values-Driven Innovation</span>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="d-flex align-items-center">
+                                    <i class="fas fa-check-circle text-success me-2 fs-5"></i>
+                                    <span class="text-dark fw-medium small">Community Well-being</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <img src="{% static '2025/conference/conclave/slc_bgr_2026.png' %}" class="card-img-top" alt="Location 1">
+                    <div class="col-lg-5 text-center">
+                        <img src="{% static '2025/conference/conclave/cover.png' %}" 
+                             class="img-fluid rounded shadow-sm w-100" 
+                             style="max-height: 380px; object-fit: contain; background: #ffffff;" 
+                             alt="Servant Leadership Conclave Cover">
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
+    <!-- Host Location Section -->
+    <section id="host-location" class="conference-section pt-0">
+        <div class="container">
+            <div class="text-center mb-5">
+                <span class="media-kicker">UPCOMING EDITION</span>
+                <h2 class="media-section-title">Host Location 2026</h2>
+                <p class="media-section-lead">Join us for an inspiring two-day summit in Bangalore</p>
+            </div>
 
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-md-10">
+                    <div class="media-card overflow-hidden" style="border: 1px solid var(--media-border); border-radius: var(--media-radius);">
+                        <div class="row g-0 align-items-center">
+                            <div class="col-md-6">
+                                <img src="{% static '2025/conference/conclave/slc_bgr_2026.png' %}" 
+                                     class="img-fluid w-100 h-100" 
+                                     style="object-fit: cover; min-height: 320px;" 
+                                     alt="Servant Leadership Conclave Bangalore 2026">
+                            </div>
+                            <div class="col-md-6 p-4 p-lg-5">
+                                <span class="badge rounded-pill px-3 py-1 mb-3" style="background: #eef4fc; color: #0c52a1; font-weight: 600;">
+                                    <i class="fas fa-calendar-alt me-1"></i>30 – 31 January 2026
+                                </span>
+                                <h3 class="h4 fw-bold text-dark mb-2">Bangalore, India</h3>
+                                <p class="text-muted small mb-4">
+                                    A dedicated gathering for educational administrators, non-profit trustees, youth ambassadors, and grassroots advocates to explore the tenets of servant leadership in modern civic environments.
+                                </p>
+                                <div class="mb-4">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="fas fa-map-pin text-primary me-2"></i>
+                                        <span class="text-muted small"><strong>Location:</strong> Bangalore, Karnataka, India</span>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <i class="fas fa-clock text-primary me-2"></i>
+                                        <span class="text-muted small"><strong>Duration:</strong> 2-Day Interactive Summit</span>
+                                    </div>
+                                </div>
+                                <a href="{% url 'contactUs' %}" class="btn btn-primary rounded-pill w-100 py-2 fw-bold">
+                                    Inquire for Details <i class="fas fa-arrow-right ms-2"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Pillars Section -->
+    <section id="pillars" class="conference-section pt-0">
+        <div class="container">
+            <div class="text-center mb-5">
+                <span class="media-kicker">FOUNDATIONAL VALUES</span>
+                <h2 class="media-section-title">Pillars of Servant Leadership</h2>
+                <p class="media-section-lead">The guiding philosophy behind the conclave</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="media-card text-center p-4 h-100" style="border: 1px solid var(--media-border); border-radius: var(--media-radius);">
+                        <div class="conf-location-icon mx-auto mb-3">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h4 class="h5 fw-bold text-dark mb-2">Empathy & Healing</h4>
+                        <p class="text-muted small mb-0">Deep, respectful listening that seeks to understand others' experiences and heal social fractures.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="media-card text-center p-4 h-100" style="border: 1px solid var(--media-border); border-radius: var(--media-radius);">
+                        <div class="conf-location-icon mx-auto mb-3" style="background: #ecfdf5; color: #059669;">
+                            <i class="fas fa-compass"></i>
+                        </div>
+                        <h4 class="h5 fw-bold text-dark mb-2">Awareness & Ethics</h4>
+                        <p class="text-muted small mb-0">Cultivating keen self-awareness, ethical stewardship, and accountability in decision-making.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="media-card text-center p-4 h-100" style="border: 1px solid var(--media-border); border-radius: var(--media-radius);">
+                        <div class="conf-location-icon mx-auto mb-3" style="background: #f5f3ff; color: #7c3aed;">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h4 class="h5 fw-bold text-dark mb-2">Growth of People</h4>
+                        <p class="text-muted small mb-0">Deep commitment to encouraging the professional, personal, and spiritual flourishing of team members.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="media-card text-center p-4 h-100" style="border: 1px solid var(--media-border); border-radius: var(--media-radius);">
+                        <div class="conf-location-icon mx-auto mb-3" style="background: #fff7ed; color: #ea580c;">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h4 class="h5 fw-bold text-dark mb-2">Building Community</h4>
+                        <p class="text-muted small mb-0">Creating strong, interconnected networks where individuals experience true belonging and purpose.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact / Inquiry Section -->
+    <section id="contact-inquiry" class="conference-section pt-0">
+        <div class="container">
+            <div class="media-card p-4 p-lg-5 text-center" style="background: #f8fafc; border: 1px solid var(--media-border); border-radius: var(--media-radius);">
+                <span class="media-kicker">GET INVOLVED</span>
+                <h3 class="h3 fw-bold text-dark mb-3">Participate in the Conclave</h3>
+                <p class="text-muted mx-auto mb-4" style="max-width: 650px;">
+                    Whether you are an institution interested in sending a delegation or an individual leader seeking to join the servant leadership movement, we welcome your involvement.
+                </p>
+                <div class="d-flex flex-wrap justify-content-center gap-3">
+                    <a href="mailto:office@letusdream.org" class="btn btn-outline-primary rounded-pill px-4 py-2 fw-bold">
+                        <i class="fas fa-envelope me-2"></i>Email office@letusdream.org
+                    </a>
+                    <a href="{% url 'contactUs' %}" class="btn btn-primary rounded-pill px-4 py-2 fw-bold">
+                        <i class="fas fa-paper-plane me-2"></i>Contact Us
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
 {% endblock content %}
 
 {% block extraScripts %}
 <script>
-    // Add smooth scrolling and animation effects
     document.addEventListener('DOMContentLoaded', function () {
-        // Animate stats on scroll
-        const stats = document.querySelectorAll('.stats-counter');
-        const observerOptions = {
-            threshold: 0.5,
-            rootMargin: '0px 0px -100px 0px'
-        };
+        // Sticky pill active on scroll
+        const sections = document.querySelectorAll('section[id]');
+        const navPills = document.querySelectorAll('.media-pill');
 
-        const statsObserver = new IntersectionObserver(function (entries) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const target = entry.target;
-                    const finalValue = target.textContent;
-                    const numValue = parseInt(finalValue.replace(/\D/g, ''));
-
-                    if (numValue) {
-                        animateValue(target, 0, numValue, 2000, finalValue.includes('+'));
-                    }
-                    statsObserver.unobserve(target);
+        window.addEventListener('scroll', function () {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 120;
+                if (window.pageYOffset >= sectionTop) {
+                    current = section.getAttribute('id');
                 }
             });
-        }, observerOptions);
 
-        stats.forEach(stat => statsObserver.observe(stat));
-
-        // Animate cards on scroll
-        const cards = document.querySelectorAll('.card, .timeline-item');
-        const cardObserver = new IntersectionObserver(function (entries) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.transform = 'translateY(0)';
-                    entry.target.style.opacity = '1';
+            navPills.forEach(pill => {
+                pill.classList.remove('active');
+                if (pill.getAttribute('href') === '#' + current) {
+                    pill.classList.add('active');
                 }
             });
-        }, { threshold: 0.1 });
-
-        cards.forEach(card => {
-            card.style.transform = 'translateY(30px)';
-            card.style.opacity = '0';
-            card.style.transition = 'all 0.6s ease-out';
-            cardObserver.observe(card);
         });
     });
-
-    function animateValue(element, start, end, duration, hasPlus = false) {
-        let startTimestamp = null;
-        const step = (timestamp) => {
-            if (!startTimestamp) startTimestamp = timestamp;
-            const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-            const currentValue = Math.floor(progress * (end - start) + start);
-            element.textContent = currentValue + (hasPlus ? '+' : '');
-            if (progress < 1) {
-                window.requestAnimationFrame(step);
-            }
-        };
-        window.requestAnimationFrame(step);
-    }
 </script>
 {% endblock extraScripts %}

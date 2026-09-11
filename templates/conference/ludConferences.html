@@ -2,215 +2,326 @@
 {% load static %}
 
 {% block title %}
-    Conference - Resources
-{% endblock %}
+Conference Resources - Let Us Dream
+{% endblock title %}
 
-{% block links %}
-   
-{% endblock links %}
+{% block extraStyles %}
+<link rel="stylesheet" href="{% static 'css/new/media.css' %}">
+<style>
+    .conf-video-frame {
+        width: 100%;
+        height: 520px;
+        border: none;
+        display: block;
+    }
+
+    @media (max-width: 768px) {
+        .conf-video-frame {
+            height: 280px;
+        }
+    }
+</style>
+{% endblock extraStyles %}
+
+{% block breadcrumb_section %}{% endblock %}
 
 {% block content %}
-    <!-- Page Header -->
-    <section class="">
+<div class="conference-page-wrapper">
+    <!-- Hero Header -->
+    <section class="media-hero">
         <div class="container">
+            {% if breadcrumbs %}
+            <nav aria-label="breadcrumb" class="media-hero-breadcrumb">
+                <ol class="breadcrumb-minimal">
+                    {% for breadcrumb in breadcrumbs %}
+                        {% if not breadcrumb.active %}
+                            <li class="breadcrumb-item-min">
+                                {% if breadcrumb.url %}
+                                    <a href="{% url breadcrumb.url %}">
+                                        <i class="{{ breadcrumb.icon }}"></i>
+                                        <span>{{ breadcrumb.name }}</span>
+                                    </a>
+                                {% else %}
+                                    <span>
+                                        <i class="{{ breadcrumb.icon }}"></i>
+                                        <span>{{ breadcrumb.name }}</span>
+                                    </span>
+                                {% endif %}
+                            </li>
+                            <li class="breadcrumb-sep-min">/</li>
+                        {% else %}
+                            <li class="breadcrumb-item-min active">
+                                <i class="{{ breadcrumb.icon }}"></i>
+                                <span>{{ breadcrumb.name }}</span>
+                            </li>
+                        {% endif %}
+                    {% endfor %}
+                </ol>
+            </nav>
+            {% endif %}
             <div class="row justify-content-center text-center">
-                <div class="col-lg-8">
-                   
-                    <h1 class="display-4 fw-bold mb-4">Conference Resources</h1>
-                    <p class="lead mb-0">
-                        Complete guide to organizing successful "Let us Dream" conferences
+                <div class="col-lg-8 col-md-10">
+                    <span class="media-kicker">LET US DREAM • CONFERENCE TOOLKIT & TRAINING</span>
+                    <h1 class="media-hero-title">Conference Resources</h1>
+                    <p class="media-hero-lead">
+                        A complete video training series and step-by-step practical guide to organizing impactful "Let Us Dream" conferences.
                     </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Main Content -->
-    <div class="container">
-
-
-        <!-- Video Info Card -->
-        <!-- <div class="video-info-card fade-in">
-            <div class="row align-items-center">
-                <div class="col-md-8">
-                    <h5 class="text-primary-blue mb-3">
-                        <i class="fas fa-play-circle me-2"></i>Video Training Series
-                    </h5>
-                    <p class="text-medium mb-0">
-                        Learn step-by-step how to organize impactful conferences with our comprehensive video series. 
-                        Each video covers essential aspects of conference planning and execution.
-                    </p>
-                </div>
-                <div class="col-md-4 text-md-end mt-3 mt-md-0">
-                    <div class="d-flex align-items-center justify-content-md-end">
-                        <i class="fas fa-video text-secondary-green me-2"></i>
-                        <span class="fw-semibold">9 Training Videos</span>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-
-        <!-- Video Gallery -->
-        <div class="video-gallery-container my-5 fade-in">
-            <div class="video-counter">
-                <i class="fas fa-list-ol me-1"></i>
-                Video 1 of 9
-            </div>
-            
-            <!-- Main Video Player -->
-            <div class="main-video-container mt-5">
-                <iframe 
-                    src="https://www.youtube.com/embed/B4nDIrmxppU?list=PLTas59dAb68eBE-jooq5IvMVesYjoqWQU"
-                    allowfullscreen 
-                    name="mainVideoFrame"
-                    class="main-video-frame"
-                    title="Conference Organization Training Video">
-                </iframe>
-            </div>
-
-            <!-- Video Thumbnails -->
-            <div class="video-thumbnails">
-                <h6 class="fw-semibold mb-3 text-center">
-                    <i class="fas fa-th-large me-2"></i>Training Series
-                </h6>
-                
-                <div class="thumbnail-grid">
-                    <!-- Video 1 -->
-                    <div class="video-thumbnail" 
-                         onclick="loadVideo('https://www.youtube.com/embed/B4nDIrmxppU?list=PLTas59dAb68eBE-jooq5IvMVesYjoqWQU', 1)"
-                         title="Introduction to Conference Organization">
-                        <img src="https://img.youtube.com/vi/B4nDIrmxppU/mqdefault.jpg" alt="Video 1">
-                    </div>
-                    
-                    <!-- Video 2 -->
-                    <div class="video-thumbnail" 
-                         onclick="loadVideo('https://www.youtube.com/embed/chy46TTa-w0?list=PLTas59dAb68eBE-jooq5IvMVesYjoqWQU', 2)"
-                         title="Planning and Preparation">
-                        <img src="https://img.youtube.com/vi/chy46TTa-w0/mqdefault.jpg" alt="Video 2">
-                    </div>
-                    
-                    <!-- Video 3 -->
-                    <div class="video-thumbnail" 
-                         onclick="loadVideo('https://www.youtube.com/embed/qXfBHnue4pg?list=PLTas59dAb68eBE-jooq5IvMVesYjoqWQU', 3)"
-                         title="Venue Selection and Setup">
-                        <img src="https://img.youtube.com/vi/qXfBHnue4pg/mqdefault.jpg" alt="Video 3">
-                    </div>
-                    
-                    <!-- Video 4 -->
-                    <div class="video-thumbnail" 
-                         onclick="loadVideo('https://www.youtube.com/embed/aTmpNM-Cz6k?list=PLTas59dAb68eBE-jooq5IvMVesYjoqWQU', 4)"
-                         title="Speaker Management">
-                        <img src="https://img.youtube.com/vi/aTmpNM-Cz6k/mqdefault.jpg" alt="Video 4">
-                    </div>
-                    
-                    <!-- Video 5 -->
-                    <div class="video-thumbnail" 
-                         onclick="loadVideo('https://www.youtube.com/embed/vbeVBDMN3KU?list=PLTas59dAb68eBE-jooq5IvMVesYjoqWQU', 5)"
-                         title="Marketing and Promotion">
-                        <img src="https://img.youtube.com/vi/vbeVBDMN3KU/mqdefault.jpg" alt="Video 5">
-                    </div>
-                    
-                    <!-- Video 6 -->
-                    <div class="video-thumbnail" 
-                         onclick="loadVideo('https://www.youtube.com/embed/E7cz0D3NTUA?list=PLTas59dAb68eBE-jooq5IvMVesYjoqWQU', 6)"
-                         title="Registration and Logistics">
-                        <img src="https://img.youtube.com/vi/E7cz0D3NTUA/mqdefault.jpg" alt="Video 6">
-                    </div>
-                    
-                    <!-- Video 7 -->
-                    <div class="video-thumbnail" 
-                         onclick="loadVideo('https://www.youtube.com/embed/BqIUqSOBcUU?list=PLTas59dAb68eBE-jooq5IvMVesYjoqWQU', 7)"
-                         title="Day of Event Management">
-                        <img src="https://img.youtube.com/vi/BqIUqSOBcUU/mqdefault.jpg" alt="Video 7">
-                    </div>
-                    
-                    <!-- Video 8 -->
-                    <div class="video-thumbnail" 
-                         onclick="loadVideo('https://www.youtube.com/embed/X6L4Eza3C3Q?list=PLTas59dAb68eBE-jooq5IvMVesYjoqWQU', 8)"
-                         title="Technology and AV Setup">
-                        <img src="https://img.youtube.com/vi/X6L4Eza3C3Q/mqdefault.jpg" alt="Video 8">
-                    </div>
-                    
-                    <!-- Video 9 -->
-                    <div class="video-thumbnail" 
-                         onclick="loadVideo('https://www.youtube.com/embed/EeZeW06i02U?list=PLTas59dAb68eBE-jooq5IvMVesYjoqWQU', 9)"
-                         title="Post-Event Follow-up">
-                        <img src="https://img.youtube.com/vi/EeZeW06i02U/mqdefault.jpg" alt="Video 9">
-                    </div>
-                </div>
+    <!-- Sticky Navigation Pills -->
+    <div class="media-nav-wrapper">
+        <div class="container">
+            <div class="media-nav-scroll justify-content-start justify-content-md-center">
+                <a href="#training-series" class="media-pill active"><i class="fas fa-video me-1"></i>Video Training Series</a>
+                <a href="#guide-steps" class="media-pill"><i class="fas fa-tasks me-1"></i>Organization Steps</a>
+                <a href="#support" class="media-pill"><i class="fas fa-hands-helping me-1"></i>Support & Inquiries</a>
             </div>
         </div>
     </div>
 
-    <!-- Back to Top Button -->
-    <button class="back-to-top-btn" onclick="scrollToTop()">
-        <i class="fas fa-chevron-up"></i>
-    </button>
+    <!-- Video Training Section -->
+    <section id="training-series" class="conference-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <span class="media-kicker">STEP-BY-STEP PLAYLIST</span>
+                <h2 class="media-section-title">Conference Organization Training</h2>
+                <p class="media-section-lead">Click any module below to stream the instructional masterclass</p>
+            </div>
 
-    <script>
-        // Video loading function
-        function loadVideo(videoUrl, videoNumber) {
-            const iframe = document.querySelector('iframe[name="mainVideoFrame"]');
-            const counter = document.querySelector('.video-counter');
-            
-            // Add loading animation
-            iframe.style.opacity = '0.5';
-            
-            setTimeout(() => {
-                iframe.src = videoUrl;
-                counter.innerHTML = `<i class="fas fa-list-ol me-1"></i>Video ${videoNumber} of 9`;
-                iframe.style.opacity = '1';
-            }, 300);
-            
-            // Update active thumbnail
-            document.querySelectorAll('.video-thumbnail').forEach(thumb => {
-                thumb.classList.remove('active');
-            });
-            event.currentTarget.classList.add('active');
+            <!-- Video Player Card -->
+            <div class="conf-video-player-card">
+                <div class="conf-video-counter-bar">
+                    <div class="d-flex align-items-center">
+                        <span class="badge rounded-pill px-3 py-1 me-3" style="background: #eef4fc; color: #0c52a1; font-weight: 700;">
+                            <i class="fas fa-play-circle me-1"></i>Training Series
+                        </span>
+                        <h6 class="fw-bold text-dark mb-0 video-title-label">Module 1: Introduction to Conference Organization</h6>
+                    </div>
+                    <div class="video-counter text-muted small fw-bold">
+                        <i class="fas fa-list-ol me-1"></i>Video 1 of 9
+                    </div>
+                </div>
+
+                <!-- Main Video Frame -->
+                <div class="position-relative bg-dark">
+                    <iframe 
+                        src="https://www.youtube.com/embed/B4nDIrmxppU?list=PLTas59dAb68eBE-jooq5IvMVesYjoqWQU"
+                        allowfullscreen 
+                        name="mainVideoFrame"
+                        class="conf-video-frame"
+                        title="Conference Organization Training Video">
+                    </iframe>
+                </div>
+
+                <!-- Thumbnails Panel -->
+                <div class="p-4" style="background: #ffffff; border-top: 1px solid var(--media-border);">
+                    <div class="d-flex align-items-center justify-content-between mb-2">
+                        <h6 class="fw-bold text-dark mb-0"><i class="fas fa-th-large text-primary me-2"></i>Select a Training Module:</h6>
+                        <span class="text-muted small">9 Modules Available</span>
+                    </div>
+
+                    <div class="conf-thumb-grid">
+                        <!-- Video 1 -->
+                        <div class="conf-thumb-item active" 
+                             onclick="loadVideo('https://www.youtube.com/embed/B4nDIrmxppU?list=PLTas59dAb68eBE-jooq5IvMVesYjoqWQU', 1, 'Introduction to Conference Organization', this)"
+                             title="Module 1: Introduction to Conference Organization">
+                            <img src="https://img.youtube.com/vi/B4nDIrmxppU/mqdefault.jpg" alt="Video 1">
+                            <span class="conf-thumb-num">1</span>
+                        </div>
+
+                        <!-- Video 2 -->
+                        <div class="conf-thumb-item" 
+                             onclick="loadVideo('https://www.youtube.com/embed/chy46TTa-w0?list=PLTas59dAb68eBE-jooq5IvMVesYjoqWQU', 2, 'Planning and Preparation', this)"
+                             title="Module 2: Planning and Preparation">
+                            <img src="https://img.youtube.com/vi/chy46TTa-w0/mqdefault.jpg" alt="Video 2">
+                            <span class="conf-thumb-num">2</span>
+                        </div>
+
+                        <!-- Video 3 -->
+                        <div class="conf-thumb-item" 
+                             onclick="loadVideo('https://www.youtube.com/embed/qXfBHnue4pg?list=PLTas59dAb68eBE-jooq5IvMVesYjoqWQU', 3, 'Venue Selection and Setup', this)"
+                             title="Module 3: Venue Selection and Setup">
+                            <img src="https://img.youtube.com/vi/qXfBHnue4pg/mqdefault.jpg" alt="Video 3">
+                            <span class="conf-thumb-num">3</span>
+                        </div>
+
+                        <!-- Video 4 -->
+                        <div class="conf-thumb-item" 
+                             onclick="loadVideo('https://www.youtube.com/embed/aTmpNM-Cz6k?list=PLTas59dAb68eBE-jooq5IvMVesYjoqWQU', 4, 'Speaker Management', this)"
+                             title="Module 4: Speaker Management">
+                            <img src="https://img.youtube.com/vi/aTmpNM-Cz6k/mqdefault.jpg" alt="Video 4">
+                            <span class="conf-thumb-num">4</span>
+                        </div>
+
+                        <!-- Video 5 -->
+                        <div class="conf-thumb-item" 
+                             onclick="loadVideo('https://www.youtube.com/embed/vbeVBDMN3KU?list=PLTas59dAb68eBE-jooq5IvMVesYjoqWQU', 5, 'Marketing and Promotion', this)"
+                             title="Module 5: Marketing and Promotion">
+                            <img src="https://img.youtube.com/vi/vbeVBDMN3KU/mqdefault.jpg" alt="Video 5">
+                            <span class="conf-thumb-num">5</span>
+                        </div>
+
+                        <!-- Video 6 -->
+                        <div class="conf-thumb-item" 
+                             onclick="loadVideo('https://www.youtube.com/embed/E7cz0D3NTUA?list=PLTas59dAb68eBE-jooq5IvMVesYjoqWQU', 6, 'Registration and Logistics', this)"
+                             title="Module 6: Registration and Logistics">
+                            <img src="https://img.youtube.com/vi/E7cz0D3NTUA/mqdefault.jpg" alt="Video 6">
+                            <span class="conf-thumb-num">6</span>
+                        </div>
+
+                        <!-- Video 7 -->
+                        <div class="conf-thumb-item" 
+                             onclick="loadVideo('https://www.youtube.com/embed/BqIUqSOBcUU?list=PLTas59dAb68eBE-jooq5IvMVesYjoqWQU', 7, 'Day of Event Management', this)"
+                             title="Module 7: Day of Event Management">
+                            <img src="https://img.youtube.com/vi/BqIUqSOBcUU/mqdefault.jpg" alt="Video 7">
+                            <span class="conf-thumb-num">7</span>
+                        </div>
+
+                        <!-- Video 8 -->
+                        <div class="conf-thumb-item" 
+                             onclick="loadVideo('https://www.youtube.com/embed/X6L4Eza3C3Q?list=PLTas59dAb68eBE-jooq5IvMVesYjoqWQU', 8, 'Technology and AV Setup', this)"
+                             title="Module 8: Technology and AV Setup">
+                            <img src="https://img.youtube.com/vi/X6L4Eza3C3Q/mqdefault.jpg" alt="Video 8">
+                            <span class="conf-thumb-num">8</span>
+                        </div>
+
+                        <!-- Video 9 -->
+                        <div class="conf-thumb-item" 
+                             onclick="loadVideo('https://www.youtube.com/embed/EeZeW06i02U?list=PLTas59dAb68eBE-jooq5IvMVesYjoqWQU', 9, 'Post-Event Follow-up', this)"
+                             title="Module 9: Post-Event Follow-up">
+                            <img src="https://img.youtube.com/vi/EeZeW06i02U/mqdefault.jpg" alt="Video 9">
+                            <span class="conf-thumb-num">9</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guide Steps Section -->
+    <section id="guide-steps" class="conference-section pt-0">
+        <div class="container">
+            <div class="text-center mb-5">
+                <span class="media-kicker">BLUEPRINT OVERVIEW</span>
+                <h2 class="media-section-title">The 4 Pillars of Organizing</h2>
+                <p class="media-section-lead">Key stages to delivering a memorable community conference</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="media-card p-4 h-100" style="border: 1px solid var(--media-border); border-radius: var(--media-radius);">
+                        <div class="conf-location-icon mb-3">
+                            <i class="fas fa-calendar-check"></i>
+                        </div>
+                        <h4 class="h5 fw-bold text-dark mb-2">1. Alignment & Date</h4>
+                        <p class="text-muted small mb-0">Secure host university endorsement, assemble your local organizing committee, and lock in conference dates.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="media-card p-4 h-100" style="border: 1px solid var(--media-border); border-radius: var(--media-radius);">
+                        <div class="conf-location-icon mb-3" style="background: #ecfdf5; color: #059669;">
+                            <i class="fas fa-microphone-alt"></i>
+                        </div>
+                        <h4 class="h5 fw-bold text-dark mb-2">2. Curation & Speakers</h4>
+                        <p class="text-muted small mb-0">Design thematic panels across Education, Health, and Social Work while inviting unsung community changemakers.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="media-card p-4 h-100" style="border: 1px solid var(--media-border); border-radius: var(--media-radius);">
+                        <div class="conf-location-icon mb-3" style="background: #f5f3ff; color: #7c3aed;">
+                            <i class="fas fa-user-plus"></i>
+                        </div>
+                        <h4 class="h5 fw-bold text-dark mb-2">3. Registration via CMT</h4>
+                        <p class="text-muted small mb-0">Configure your conference portal on CMT, coordinate student participant registrations, and release promotional materials.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="media-card p-4 h-100" style="border: 1px solid var(--media-border); border-radius: var(--media-radius);">
+                        <div class="conf-location-icon mb-3" style="background: #fff7ed; color: #ea580c;">
+                            <i class="fas fa-clipboard-check"></i>
+                        </div>
+                        <h4 class="h5 fw-bold text-dark mb-2">4. Execution & Reporting</h4>
+                        <p class="text-muted small mb-0">Manage day-of-event logistics, run live streams, capture feedback, and publish your conference proceedings.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Support Section -->
+    <section id="support" class="conference-section pt-0">
+        <div class="container">
+            <div class="media-card p-4 p-lg-5 text-center" style="background: #f8fafc; border: 1px solid var(--media-border); border-radius: var(--media-radius);">
+                <span class="media-kicker">WE ARE HERE TO HELP</span>
+                <h3 class="h3 fw-bold text-dark mb-3">Host a Conference in Your City</h3>
+                <p class="text-muted mx-auto mb-4" style="max-width: 650px;">
+                    Our international team provides full operational mentorship, CMT registration infrastructure, brand assets, and guidance to help your institution launch a successful Let Us Dream conference.
+                </p>
+                <div class="d-flex flex-wrap justify-content-center gap-3">
+                    <a href="mailto:office@letusdream.org" class="btn btn-outline-primary rounded-pill px-4 py-2 fw-bold">
+                        <i class="fas fa-envelope me-2"></i>Email office@letusdream.org
+                    </a>
+                    <a href="{% url 'contactUs' %}" class="btn btn-primary rounded-pill px-4 py-2 fw-bold">
+                        <i class="fas fa-paper-plane me-2"></i>Contact Us
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+{% endblock content %}
+
+{% block extraScripts %}
+<script>
+    function loadVideo(videoUrl, videoNumber, videoTitle, element) {
+        const iframe = document.querySelector('iframe[name="mainVideoFrame"]');
+        const counter = document.querySelector('.video-counter');
+        const titleLabel = document.querySelector('.video-title-label');
+        
+        iframe.style.opacity = '0.4';
+        
+        setTimeout(() => {
+            iframe.src = videoUrl;
+            if (counter) counter.innerHTML = `<i class="fas fa-list-ol me-1"></i>Video ${videoNumber} of 9`;
+            if (titleLabel) titleLabel.textContent = `Module ${videoNumber}: ${videoTitle}`;
+            iframe.style.opacity = '1';
+        }, 200);
+        
+        document.querySelectorAll('.conf-thumb-item').forEach(thumb => {
+            thumb.classList.remove('active');
+        });
+        if (element) {
+            element.classList.add('active');
         }
+    }
 
-        // Scroll animations
-        function handleScrollAnimations() {
-            const elements = document.querySelectorAll('.fade-in');
-            const windowHeight = window.innerHeight;
-            
-            elements.forEach(element => {
-                const elementTop = element.getBoundingClientRect().top;
-                
-                if (elementTop < windowHeight - 100) {
-                    element.classList.add('fade-in-visible');
+    document.addEventListener('DOMContentLoaded', function () {
+        // Sticky pill active on scroll
+        const sections = document.querySelectorAll('section[id]');
+        const navPills = document.querySelectorAll('.media-pill');
+
+        window.addEventListener('scroll', function () {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 120;
+                if (window.pageYOffset >= sectionTop) {
+                    current = section.getAttribute('id');
                 }
             });
-        }
 
-        // Back to top functionality
-        function scrollToTop() {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
+            navPills.forEach(pill => {
+                pill.classList.remove('active');
+                if (pill.getAttribute('href') === '#' + current) {
+                    pill.classList.add('active');
+                }
             });
-        }
-
-        // Show/hide back to top button
-        function handleBackToTopButton() {
-            const backToTopBtn = document.querySelector('.back-to-top-btn');
-            
-            if (window.pageYOffset > 300) {
-                backToTopBtn.classList.add('visible');
-            } else {
-                backToTopBtn.classList.remove('visible');
-            }
-        }
-
-        // Event listeners
-        window.addEventListener('scroll', () => {
-            handleScrollAnimations();
-            handleBackToTopButton();
         });
-
-        // Initial load
-        document.addEventListener('DOMContentLoaded', () => {
-            handleScrollAnimations();
-        });
-    </script>
-{% endblock %}
+    });
+</script>
+{% endblock extraScripts %}

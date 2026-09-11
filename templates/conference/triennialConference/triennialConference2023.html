@@ -2,123 +2,200 @@
 {% load static %}
 
 {% block title %}
-{{ conference_data.page.subheading }}
+{{ conference_data.page.subheading }} - Let Us Dream
 {% endblock title %}
 
 {% block extraStyles %}
+<link rel="stylesheet" href="{% static 'css/new/media.css' %}">
+<style>
+    .chair-avatar {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 3px solid #ffffff;
+        box-shadow: var(--media-shadow-sm);
+        margin: 0 auto 1rem auto;
+    }
+    .speaker-avatar-lg {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 4px solid #ffffff;
+        box-shadow: var(--media-shadow-sm);
+        margin: 0 auto 1rem auto;
+    }
+    .session-item-card {
+        background: #f8fafc;
+        border: 1px solid var(--media-border);
+        border-radius: var(--media-radius-sm);
+        padding: 1rem 1.25rem;
+        margin-bottom: 0.85rem;
+    }
+</style>
 {% endblock extraStyles %}
 
+{% block breadcrumb_section %}{% endblock %}
+
 {% block content %}
-    <!-- Page Header -->
-    <section class="">
+<div class="conference-page-wrapper">
+    <!-- Hero Header -->
+    <section class="media-hero">
         <div class="container">
-            <div class="page-header-content text-center mb-5">
-                <img src="{% static conference_data.page.logo %}" 
-                     height="120" 
-                     alt="{{ conference_data.page.main_heading }}" 
-                     class="mb-4 fade-in">
-                
-                <h1 class="display-4 fw-bold mb-3 fade-in">
-                    {{ conference_data.page.main_heading }}
-                </h1>
-                
-                <h2 class=" fade-in">
-                    {{ conference_data.page.subheading }}
-                </h2>
-                
-                <p class="text-medium fade-in mb-4">
-                    {{ conference_data.page.tagline }}
-                </p>
-                
-                <p class="text-light fade-in mb-4">
-                    {{ conference_data.page.details }}
-                </p>
-                
-                <!-- <a href="{{ conference_data.page.registration_link }}" 
-                   target="_blank" 
-                   class="btn btn-primary btn-lg ">
-                    <i class="fas fa-user-plus me-2"></i>Register Here for Free
-                </a> -->
+            {% if breadcrumbs %}
+            <nav aria-label="breadcrumb" class="media-hero-breadcrumb">
+                <ol class="breadcrumb-minimal">
+                    {% for breadcrumb in breadcrumbs %}
+                        {% if not breadcrumb.active %}
+                            <li class="breadcrumb-item-min">
+                                {% if breadcrumb.url %}
+                                    <a href="{% url breadcrumb.url %}">
+                                        <i class="{{ breadcrumb.icon }}"></i>
+                                        <span>{{ breadcrumb.name }}</span>
+                                    </a>
+                                {% else %}
+                                    <span>
+                                        <i class="{{ breadcrumb.icon }}"></i>
+                                        <span>{{ breadcrumb.name }}</span>
+                                    </span>
+                                {% endif %}
+                            </li>
+                            <li class="breadcrumb-sep-min">/</li>
+                        {% else %}
+                            <li class="breadcrumb-item-min active">
+                                <i class="{{ breadcrumb.icon }}"></i>
+                                <span>{{ breadcrumb.name }}</span>
+                            </li>
+                        {% endif %}
+                    {% endfor %}
+                </ol>
+            </nav>
+            {% endif %}
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-8 col-md-10">
+                    <img src="{% static conference_data.page.logo %}" 
+                         height="90" 
+                         alt="{{ conference_data.page.main_heading }}" 
+                         class="mb-3 d-inline-block">
+                    <span class="media-kicker d-block">{{ conference_data.page.main_heading }}</span>
+                    <h1 class="media-hero-title">{{ conference_data.page.subheading }}</h1>
+                    <p class="media-hero-lead mb-2">
+                        {{ conference_data.page.tagline }}
+                    </p>
+                    <small class="text-muted d-block">{{ conference_data.page.details }}</small>
+                </div>
             </div>
         </div>
     </section>
-    
-    <!-- Main Content -->
-    <div class="content-section">
+
+    <!-- Sticky Navigation Pills -->
+    <div class="media-nav-wrapper">
         <div class="container">
-            <div class="row g-4">
-                <!-- Theme Section -->
-                <div class="col-lg-8">
-                    <div class="content-card fade-in">
-                        <div class="mb-3">
-                            <span class="badge bg-gradient-primary text-white fs-6 px-3 py-2">
-                                {{ conference_data.theme.section_title }}
-                            </span>
-                        </div>
-                        <h2 class="text-primary-blue font-primary mb-4">
-                            {{ conference_data.theme.heading|linebreaksbr }}
-                        </h2>
-                        {% for para in conference_data.theme.paragraphs %}
-                            <p class="text-medium mb-4 lh-lg justify">{{ para }}</p>
-                        {% endfor %}
-                    </div>
-                </div>
-
-                <!-- Sidebar -->
-                <div class="col-lg-4">
-                    <!-- More Details -->
-                    <div class="content-card fade-in mb-4">
-                        <h3 class="text-primary-blue font-primary mb-4">
-                            <i class="fas fa-info-circle me-2"></i>More Details
-                        </h3>
-                        <div class="d-grid gap-3">
-                            {% for item in conference_data.more_details %}
-                                <a href="{% static item.url %}" 
-                                   class="btn btn-outline-primary text-start"
-                                   target="_blank">
-                                    <i class="fas fa-download me-2"></i>
-                                    {{ item.label }}
-                                </a>
-                            {% endfor %}
-                        </div>
-                    </div>
-
-                  
-                </div>
+            <div class="media-nav-scroll justify-content-start justify-content-md-center">
+                <a href="#theme" class="media-pill active"><i class="fas fa-info-circle me-1"></i>Theme & Overview</a>
+                <a href="#downloads" class="media-pill"><i class="fas fa-download me-1"></i>Downloads</a>
+                <a href="#schedule" class="media-pill"><i class="fas fa-calendar-alt me-1"></i>Schedule</a>
+                <a href="#keynote-speakers" class="media-pill"><i class="fas fa-microphone me-1"></i>Keynote Speakers</a>
+                <a href="#session-chairs" class="media-pill"><i class="fas fa-users me-1"></i>Session Chairs</a>
+                <a href="#host-universities" class="media-pill"><i class="fas fa-university me-1"></i>Host Universities</a>
+                <a href="#glimpses-gallery" class="media-pill"><i class="fas fa-video me-1"></i>Video Highlights</a>
             </div>
         </div>
     </div>
 
-    <!-- Conference Schedule -->
-    <div class="content-section bg-light-gray">
+    <!-- Theme Section -->
+    <section id="theme" class="conference-section">
+        <div class="container">
+            <div class="row g-4 align-items-stretch">
+                <!-- Theme Details -->
+                <div class="col-lg-8">
+                    <div class="media-card p-4 p-lg-5 h-100" style="border: 1px solid var(--media-border); border-radius: var(--media-radius);">
+                        <span class="badge rounded-pill px-3 py-1 mb-3" style="background: #eef4fc; color: #0c52a1; font-weight: 700;">
+                            {{ conference_data.theme.section_title }}
+                        </span>
+                        <h2 class="h3 fw-bold text-dark mb-4">
+                            {{ conference_data.theme.heading|linebreaksbr }}
+                        </h2>
+                        {% for para in conference_data.theme.paragraphs %}
+                            <p class="text-muted lh-base mb-3">{{ para }}</p>
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <!-- Downloads & Assets Sidebar -->
+                <div class="col-lg-4" id="downloads">
+                    <div class="media-card p-4" style="border: 1px solid var(--media-border); border-radius: var(--media-radius); background: #ffffff;">
+                        <span class="media-kicker mb-2">OFFICIAL DOCUMENTS</span>
+                        <h3 class="h5 fw-bold text-dark mb-3">
+                            <i class="fas fa-file-download text-primary me-2"></i>Conference Downloads
+                        </h3>
+                        <p class="text-muted small mb-3">Access official brochures, schedules, and changemaker call documents.</p>
+                        
+                        <div class="d-flex flex-column gap-2 mb-4">
+                            {% for item in conference_data.more_details %}
+                                <a href="{% static item.url %}" 
+                                   class="doc-download-item"
+                                   target="_blank" rel="noopener">
+                                    <div class="d-flex align-items-center">
+                                        <div class="conf-location-icon me-3" style="width: 36px; height: 36px; font-size: 0.95rem; background: #fef2f2; color: #dc2626;">
+                                            <i class="fas fa-file-pdf"></i>
+                                        </div>
+                                        <div>
+                                            <div class="fw-bold text-dark small mb-0">{{ item.label }}</div>
+                                            <span class="text-muted" style="font-size: 0.72rem;">PDF Document</span>
+                                        </div>
+                                    </div>
+                                    <div class="doc-download-arrow">
+                                        <i class="fas fa-download"></i>
+                                    </div>
+                                </a>
+                            {% endfor %}
+                        </div>
+
+                        <div class="p-3 bg-light rounded text-center">
+                            <small class="text-muted d-block mb-1">
+                                <i class="fas fa-info-circle text-primary me-1"></i>Need assistance with documents?
+                            </small>
+                            <a href="mailto:office@letusdream.org" class="small fw-bold text-primary text-decoration-none">
+                                Contact conference secretariat
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conference Schedule Section -->
+    <section id="schedule" class="conference-section pt-0">
         <div class="container">
             <div class="text-center mb-5">
-                <h2 class="section-title fade-in">
-                    <i class="fas fa-calendar-alt me-3"></i>Conference Schedule
-                </h2>
+                <span class="media-kicker">3-DAY PROGRAM MATRIX</span>
+                <h2 class="media-section-title">Conference Schedule</h2>
+                <p class="media-section-lead">Program breakdown across all three days of the conference</p>
             </div>
-            
+
             <div class="row g-4">
                 <!-- Day One -->
                 <div class="col-lg-4">
-                    <div class="content-card fade-in h-100">
-                        <div class="text-center mb-4">
-                            <h3 class="text-primary-blue font-primary">
-                                {{ conference_data.schedule.day_one.day_label }}
-                            </h3>
-                            <p class="text-medium">{{ conference_data.schedule.day_one.date }}</p>
+                    <div class="media-card p-4 h-100" style="border: 1px solid var(--media-border); border-radius: var(--media-radius);">
+                        <div class="text-center mb-4 pb-3 border-bottom">
+                            <span class="badge rounded-pill px-3 py-1 mb-2" style="background: #eef4fc; color: #0c52a1; font-weight: 700;">DAY 1</span>
+                            <h4 class="h5 fw-bold text-dark mb-1">{{ conference_data.schedule.day_one.day_label }}</h4>
+                            <small class="text-muted"><i class="fas fa-calendar-day me-1"></i>{{ conference_data.schedule.day_one.date }}</small>
                         </div>
                         {% for session in conference_data.schedule.day_one.sessions %}
-                            <div class="schedule-item mb-3 p-3 bg-light-gray rounded-custom-small">
-                                <div class="d-flex justify-content-between align-items-start mb-2">
-                                    <span class="badge bg-gradient-secondary text-dark">{{ session.time }}</span>
+                            <div class="session-item-card">
+                                <div class="d-flex justify-content-between align-items-center mb-1">
+                                    <span class="badge rounded-pill px-2 py-1" style="background: #ffffff; border: 1px solid var(--media-border); color: #0c52a1; font-size: 0.72rem;">
+                                        <i class="fas fa-clock me-1"></i>{{ session.time }}
+                                    </span>
                                 </div>
+                                <h6 class="fw-bold text-dark mb-1 small">{{ session.title }}</h6>
                                 {% if session.speaker %}
-                                    <h6 class="text-primary-blue mb-2">{{ session.title }}</h6>
-                                    <p class="text-medium mb-1 small">{{ session.speaker }}</p>
-                                    <small class="text-light fst-italic">{{ session.affiliation }}</small>
-                                {% else %}
-                                    <h6 class="text-primary-blue">{{ session.title }}</h6>
+                                    <p class="text-muted small mb-0">{{ session.speaker }}</p>
+                                    <small class="text-muted fst-italic" style="font-size: 0.75rem;">{{ session.affiliation }}</small>
                                 {% endif %}
                             </div>
                         {% endfor %}
@@ -127,24 +204,23 @@
 
                 <!-- Day Two -->
                 <div class="col-lg-4">
-                    <div class="content-card fade-in h-100">
-                        <div class="text-center mb-4">
-                            <h3 class="text-primary-blue font-primary">
-                                {{ conference_data.schedule.day_two.day_label }}
-                            </h3>
-                            <p class="text-medium">{{ conference_data.schedule.day_two.date }}</p>
+                    <div class="media-card p-4 h-100" style="border: 1px solid var(--media-border); border-radius: var(--media-radius);">
+                        <div class="text-center mb-4 pb-3 border-bottom">
+                            <span class="badge rounded-pill px-3 py-1 mb-2" style="background: #ecfdf5; color: #059669; font-weight: 700;">DAY 2</span>
+                            <h4 class="h5 fw-bold text-dark mb-1">{{ conference_data.schedule.day_two.day_label }}</h4>
+                            <small class="text-muted"><i class="fas fa-calendar-day me-1"></i>{{ conference_data.schedule.day_two.date }}</small>
                         </div>
                         {% for session in conference_data.schedule.day_two.sessions %}
-                            <div class="schedule-item mb-3 p-3 bg-light-gray rounded-custom-small">
-                                <div class="d-flex justify-content-between align-items-start mb-2">
-                                    <span class="badge bg-gradient-secondary text-dark">{{ session.time }}</span>
+                            <div class="session-item-card">
+                                <div class="d-flex justify-content-between align-items-center mb-1">
+                                    <span class="badge rounded-pill px-2 py-1" style="background: #ffffff; border: 1px solid var(--media-border); color: #059669; font-size: 0.72rem;">
+                                        <i class="fas fa-clock me-1"></i>{{ session.time }}
+                                    </span>
                                 </div>
+                                <h6 class="fw-bold text-dark mb-1 small">{{ session.title }}</h6>
                                 {% if session.speaker %}
-                                    <h6 class="text-primary-blue mb-2">{{ session.title }}</h6>
-                                    <p class="text-medium mb-1 small">{{ session.speaker }}</p>
-                                    <small class="text-light fst-italic">{{ session.affiliation }}</small>
-                                {% else %}
-                                    <h6 class="text-primary-blue">{{ session.title }}</h6>
+                                    <p class="text-muted small mb-0">{{ session.speaker }}</p>
+                                    <small class="text-muted fst-italic" style="font-size: 0.75rem;">{{ session.affiliation }}</small>
                                 {% endif %}
                             </div>
                         {% endfor %}
@@ -153,24 +229,23 @@
 
                 <!-- Day Three -->
                 <div class="col-lg-4">
-                    <div class="content-card fade-in h-100">
-                        <div class="text-center mb-4">
-                            <h3 class="text-primary-blue font-primary">
-                                {{ conference_data.schedule.day_three.day_label }}
-                            </h3>
-                            <p class="text-medium">{{ conference_data.schedule.day_three.date }}</p>
+                    <div class="media-card p-4 h-100" style="border: 1px solid var(--media-border); border-radius: var(--media-radius);">
+                        <div class="text-center mb-4 pb-3 border-bottom">
+                            <span class="badge rounded-pill px-3 py-1 mb-2" style="background: #f5f3ff; color: #7c3aed; font-weight: 700;">DAY 3</span>
+                            <h4 class="h5 fw-bold text-dark mb-1">{{ conference_data.schedule.day_three.day_label }}</h4>
+                            <small class="text-muted"><i class="fas fa-calendar-day me-1"></i>{{ conference_data.schedule.day_three.date }}</small>
                         </div>
                         {% for session in conference_data.schedule.day_three.sessions %}
-                            <div class="schedule-item mb-3 p-3 bg-light-gray rounded-custom-small">
-                                <div class="d-flex justify-content-between align-items-start mb-2">
-                                    <span class="badge bg-gradient-secondary text-dark">{{ session.time }}</span>
+                            <div class="session-item-card">
+                                <div class="d-flex justify-content-between align-items-center mb-1">
+                                    <span class="badge rounded-pill px-2 py-1" style="background: #ffffff; border: 1px solid var(--media-border); color: #7c3aed; font-size: 0.72rem;">
+                                        <i class="fas fa-clock me-1"></i>{{ session.time }}
+                                    </span>
                                 </div>
+                                <h6 class="fw-bold text-dark mb-1 small">{{ session.title }}</h6>
                                 {% if session.speaker %}
-                                    <h6 class="text-primary-blue mb-2">{{ session.title }}</h6>
-                                    <p class="text-medium mb-1 small">{{ session.speaker }}</p>
-                                    <small class="text-light fst-italic">{{ session.affiliation }}</small>
-                                {% else %}
-                                    <h6 class="text-primary-blue">{{ session.title }}</h6>
+                                    <p class="text-muted small mb-0">{{ session.speaker }}</p>
+                                    <small class="text-muted fst-italic" style="font-size: 0.75rem;">{{ session.affiliation }}</small>
                                 {% endif %}
                             </div>
                         {% endfor %}
@@ -178,37 +253,35 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- Keynote Speakers -->
-    <div class="content-section">
+    <!-- Keynote Speakers Section -->
+    <section id="keynote-speakers" class="conference-section pt-0">
         <div class="container">
             <div class="text-center mb-5">
-                <h2 class="section-title fade-in">
-                    <i class="fas fa-microphone me-3"></i>Keynote Speakers
-                </h2>
+                <span class="media-kicker">HONORED VOICES</span>
+                <h2 class="media-section-title">Keynote Speakers</h2>
+                <p class="media-section-lead">International scholars and frontline civic leaders sharing insights</p>
             </div>
-            
+
             <div class="row g-4">
                 {% for speaker in conference_data.keynote_speakers %}
-                    <div class="col-lg-12 fade-in">
-                        <div class="content-card card hover-lift">
-                            <div class="row align-items-center">
-                                <div class="col-md-4 text-center mb-3 mb-md-0">
+                    <div class="col-12">
+                        <div class="media-card p-4 p-lg-5" style="border: 1px solid var(--media-border); border-radius: var(--media-radius);">
+                            <div class="row align-items-center g-4">
+                                <div class="col-md-4 text-center">
                                     <div class="mb-3">
-                                        <span class="badge bg-gradient-primary text-white mb-2 px-3 py-2">{{ speaker.day }}</span>
-                                        <h4 class="text-primary-blue font-primary">{{ speaker.category }}</h4>
-                                        <small class="text-medium">{{ speaker.date }}</small>
+                                        <span class="badge rounded-pill px-3 py-1 mb-2" style="background: #eef4fc; color: #0c52a1; font-weight: 700;">{{ speaker.day }}</span>
+                                        <h5 class="fw-bold text-dark mb-1">{{ speaker.category }}</h5>
+                                        <small class="text-muted">{{ speaker.date }}</small>
                                     </div>
                                     <img src="{% static speaker.image %}" 
                                          alt="{{ speaker.name }}" 
-                                         class="people-avatar">
-                                    <h5 class="text-primary-blue font-primary mt-3">{{ speaker.name }}</h5>
+                                         class="speaker-avatar-lg d-block">
+                                    <h5 class="fw-bold text-dark mb-0">{{ speaker.name }}</h5>
                                 </div>
                                 <div class="col-md-8">
-                                    <div class="text-medium lh-lg justify">
-                                        {{ speaker.description }}
-                                    </div>
+                                    <p class="text-muted lh-base mb-0">{{ speaker.description }}</p>
                                 </div>
                             </div>
                         </div>
@@ -216,35 +289,37 @@
                 {% endfor %}
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- Session Chairs -->
-    <div class="content-section bg-light-gray">
+    <!-- Session Chairs Section -->
+    <section id="session-chairs" class="conference-section pt-0">
         <div class="container">
             <div class="text-center mb-5">
-                <h2 class="section-title fade-in">
-                    <i class="fas fa-users me-3"></i>Session Chairs
-                </h2>
+                <span class="media-kicker">ACADEMIC & CIVIC LEADERSHIP</span>
+                <h2 class="media-section-title">Session Chairs</h2>
+                <p class="media-section-lead">Distinguished leaders guiding the conference tracks</p>
             </div>
-            
+
             {% for category, chairs in conference_data.session_chairs.items %}
                 <div class="mb-5">
-                    <h3 class="text-primary-blue font-primary mb-4 text-center">{{ category }}</h3>
-                    <div class="row g-4">
+                    <h3 class="h5 fw-bold text-dark mb-4 text-center">
+                        <span class="badge rounded-pill px-3 py-2" style="background: #f8fafc; border: 1px solid var(--media-border); color: #0c52a1;">
+                            {{ category }}
+                        </span>
+                    </h3>
+                    <div class="row g-4 justify-content-center">
                         {% for chair in chairs %}
-                            <div class="col-lg-4 col-md-6 fade-in">
-                                <div class="content-card card hover-lift h-100 text-center">
-                                    <div class="mb-3">
-                                        <span class="badge bg-gradient-secondary text-dark mb-3 px-3 py-2">{{ chair.role }}</span>
-                                    </div>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="media-card p-4 text-center h-100 d-flex flex-column align-items-center" style="border: 1px solid var(--media-border); border-radius: var(--media-radius);">
+                                    <span class="badge rounded-pill px-3 py-1 mb-3" style="background: #eef4fc; color: #0c52a1; font-size: 0.75rem;">{{ chair.role }}</span>
                                     <img src="{% static chair.image %}" 
                                          alt="{{ chair.name }}" 
-                                         class="people-avatar shadow-custom-small transition-normal">
-                                    <h5 class="text-primary-blue font-primary">{{ chair.name }}</h5>
-                                    <p class="text-medium mb-3">{{ chair.affiliation }}</p>
+                                         class="chair-avatar">
+                                    <h5 class="fw-bold text-dark mb-1 small">{{ chair.name }}</h5>
+                                    <p class="text-muted small mb-3 flex-grow-1">{{ chair.affiliation }}</p>
                                     <a href="mailto:{{ chair.email }}" 
-                                       class="btn btn-outline-primary btn-sm">
-                                        <i class="fas fa-envelope me-2"></i>Contact
+                                       class="btn btn-outline-primary btn-sm rounded-pill px-3 fw-bold mt-auto">
+                                        <i class="fas fa-envelope me-1"></i>Contact
                                     </a>
                                 </div>
                             </div>
@@ -253,160 +328,123 @@
                 </div>
             {% endfor %}
         </div>
-    </div>
+    </section>
 
-    <!-- Host Universities -->
-    <div class="content-section">
+    <!-- Host Universities Section -->
+    <section id="host-universities" class="conference-section pt-0">
         <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-10">
-                    <div class="content-card text-center fade-in">
-                        <h2 class="text-primary-blue font-primary mb-4">
-                            <i class="fas fa-university me-3"></i>Host Universities
-                        </h2>
-                        <img src="{% static conference_data.host_universities.logos_image %}" 
-                             class="img-fluid rounded-custom shadow-custom" 
-                             alt="Host Universities Logos"
-                             style="max-height: 200px;">
-                    </div>
-                </div>
+            <div class="text-center mb-5">
+                <span class="media-kicker">INSTITUTIONAL ALLIANCE</span>
+                <h2 class="media-section-title">Host Universities</h2>
+                <p class="media-section-lead">Collaborating university partners supporting the 2023 international summit</p>
+            </div>
+
+            <div class="media-card p-4 p-lg-5 text-center" style="border: 1px solid var(--media-border); border-radius: var(--media-radius);">
+                <img src="{% static conference_data.host_universities.logos_image %}" 
+                     class="img-fluid rounded shadow-sm" 
+                     style="max-height: 220px; object-fit: contain;" 
+                     alt="Host Universities Logos">
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- Gallery Section -->
-    <!-- Gallery Section -->
-<div class="content-section bg-light-gray">
-    <div class="container">
-        <div class="text-center mb-5">
-            <h2 class="section-title fade-in">
-                <i class="fas fa-images me-3"></i>Glimpses of Triennial Conference 2020
-            </h2>
-        </div>
-        
-        <div class="content-card fade-in">
-            <!-- Main Video -->
-            <div class="video-gallery-container">
-                <div class="main-video-container mb-4">
+    <!-- Gallery / Video Highlights Section -->
+    <section id="glimpses-gallery" class="conference-section pt-0">
+        <div class="container">
+            <div class="text-center mb-5">
+                <span class="media-kicker">RECORDED SESSIONS</span>
+                <h2 class="media-section-title">Glimpses of Triennial Conference</h2>
+                <p class="media-section-lead">Explore keynote recordings and panel sessions</p>
+            </div>
+
+            <!-- Video Player Card -->
+            <div class="conf-video-player-card">
+                <div class="conf-video-counter-bar">
+                    <div class="d-flex align-items-center">
+                        <span class="badge rounded-pill px-3 py-1 me-3" style="background: #eef4fc; color: #0c52a1; font-weight: 700;">
+                            <i class="fas fa-video me-1"></i>Conference Video
+                        </span>
+                        <h6 class="fw-bold text-dark mb-0">Video <span id="currentVideoNumber">1</span> of {{ conference_data.gallery.thumbnails|length }}</h6>
+                    </div>
+                </div>
+
+                <div class="position-relative bg-dark">
                     <iframe id="mainVideoFrame"
                             src="{{ conference_data.gallery.main_iframe }}"
                             allowfullscreen 
                             frameborder="0" 
-                            class="main-video-frame"></iframe>
+                            class="conf-video-frame"></iframe>
                 </div>
 
-                <!-- Video Counter -->
-                <div class="video-counter">
-                    <span id="currentVideoNumber">1</span> / {{ conference_data.gallery.thumbnails|length }}
-                </div>
+                <div class="p-4" style="background: #ffffff; border-top: 1px solid var(--media-border);">
+                    <div class="d-flex align-items-center justify-content-between mb-2">
+                        <h6 class="fw-bold text-dark mb-0"><i class="fas fa-th-large text-primary me-2"></i>Select Video:</h6>
+                        <span class="text-muted small">{{ conference_data.gallery.thumbnails|length }} Videos Available</span>
+                    </div>
 
-                <!-- Video Thumbnails -->
-                <div class="video-thumbnails">
-                    <div class="thumbnail-grid">
+                    <div class="conf-thumb-grid">
                         {% for thumb in conference_data.gallery.thumbnails %}
-                            <div class="video-thumbnail" 
+                            <div class="conf-thumb-item {% if forloop.first %}active{% endif %}" 
                                  data-video-url="{{ thumb.video_url }}"
-                                 data-video-number="{{ forloop.counter }}">
+                                 data-video-number="{{ forloop.counter }}"
+                                 onclick="switchGalleryVideo('{{ thumb.video_url }}', {{ forloop.counter }}, this)">
                                 <img src="{{ thumb.thumbnail_url }}" 
                                      alt="Video Thumbnail {{ forloop.counter }}"/>
+                                <span class="conf-thumb-num">{{ forloop.counter }}</span>
                             </div>
                         {% endfor %}
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 </div>
-
-
-
-{% endblock %}
+{% endblock content %}
 
 {% block extraScripts %}
 <script>
-// Enhanced scroll animations with intersection observer
-document.addEventListener('DOMContentLoaded', function() {
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
-
-    const observer = new IntersectionObserver(function(entries) {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-                // Add stagger delay for multiple elements
-                const index = Array.from(entry.target.parentNode.children).indexOf(entry.target);
-                entry.target.style.transitionDelay = `${index * 0.1}s`;
-            }
-        });
-    }, observerOptions);
-
-    // Observe all fade-in elements
-    document.querySelectorAll('.fade-in').forEach(el => {
-        observer.observe(el);
-    });
-
-    // Smooth scrolling for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
-        });
-    });
-
-    // Video thumbnail click handler
-    document.querySelectorAll('.video-thumbnail').forEach(thumb => {
-        thumb.addEventListener('click', function(event) {
-            event.preventDefault();
-            const videoUrl = this.getAttribute('data-video-url');
-            const videoNumber = this.getAttribute('data-video-number');
-            loadVideo(videoUrl, videoNumber);
-            
-            // Update active thumbnail
-            document.querySelectorAll('.video-thumbnail').forEach(t => t.classList.remove('active'));
-            this.classList.add('active');
-        });
-    });
-
-    // Set first thumbnail as active by default
-    const firstThumbnail = document.querySelector('.video-thumbnail');
-    if (firstThumbnail) {
-        firstThumbnail.classList.add('active');
-    }
-});
-
-// Function to load video in main container
-function loadVideo(videoUrl, videoNumber) {
-    const mainVideoFrame = document.getElementById('mainVideoFrame');
-    const videoCounter = document.getElementById('currentVideoNumber');
-    
-    if (mainVideoFrame && videoCounter) {
-        // Add loading animation
-        mainVideoFrame.style.opacity = '0.5';
+    function switchGalleryVideo(videoUrl, videoNumber, element) {
+        const mainVideoFrame = document.getElementById('mainVideoFrame');
+        const videoCounter = document.getElementById('currentVideoNumber');
         
-        // Update video source
-        setTimeout(() => {
-            mainVideoFrame.src = videoUrl;
-            videoCounter.textContent = videoNumber;
-            
-            // Restore opacity after loading
-            mainVideoFrame.onload = function() {
-                mainVideoFrame.style.opacity = '1';
-            };
-            
-            // Fallback to restore opacity
+        if (mainVideoFrame) {
+            mainVideoFrame.style.opacity = '0.4';
             setTimeout(() => {
+                mainVideoFrame.src = videoUrl;
+                if (videoCounter) videoCounter.textContent = videoNumber;
                 mainVideoFrame.style.opacity = '1';
-            }, 1000);
-        }, 200);
+            }, 200);
+        }
+
+        document.querySelectorAll('.conf-thumb-item').forEach(thumb => {
+            thumb.classList.remove('active');
+        });
+        if (element) {
+            element.classList.add('active');
+        }
     }
-}
+
+    document.addEventListener('DOMContentLoaded', function () {
+        // Sticky pill active on scroll
+        const sections = document.querySelectorAll('section[id]');
+        const navPills = document.querySelectorAll('.media-pill');
+
+        window.addEventListener('scroll', function () {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 120;
+                if (window.pageYOffset >= sectionTop) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navPills.forEach(pill => {
+                pill.classList.remove('active');
+                if (pill.getAttribute('href') === '#' + current) {
+                    pill.classList.add('active');
+                }
+            });
+        });
+    });
 </script>
 {% endblock extraScripts %}

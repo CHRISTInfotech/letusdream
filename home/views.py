@@ -609,7 +609,7 @@ def youtubeMedia(request):
 def aboutConference(request):
     breadcrumbs = [
         {"name": "Home", "url": "main", "icon": "fas fa-home", "active": False},
-        {"name": "Conference", "url": None, "icon": "fas fa-calendar", "active": False},
+        {"name": "Conference", "url": None, "icon": "fas fa-calendar-alt", "active": False},
         {
             "name": "About Conference",
             "url": None,
@@ -625,7 +625,7 @@ def aboutConference(request):
 def allConferences(request):
     breadcrumbs = [
         {"name": "Home", "url": "main", "icon": "fas fa-home", "active": False},
-        {"name": "Conference", "url": None, "icon": "fas fa-calendar", "active": False},
+        {"name": "Conference", "url": "Conferences", "icon": "fas fa-calendar-alt", "active": False},
         {
             "name": "Annual Conferences",
             "url": None,
@@ -644,13 +644,13 @@ def triennialConference(request):
         {
             "name": "Conference",
             "url": "Conferences",
-            "icon": "fas fa-calendar",
+            "icon": "fas fa-calendar-alt",
             "active": False,
         },
         {
             "name": "Triennial Conferences",
             "url": None,
-            "icon": "fas fa-calendar-alt",
+            "icon": "fas fa-calendar-check",
             "active": True,
         },
     ]
@@ -668,7 +668,7 @@ def triennialConference2020(request):
         {"name": "Home", "url": "main", "icon": "fas fa-home", "active": False},
         {
             "name": "Conferences",
-            "url": None,
+            "url": "Conferences",
             "icon": "fas fa-calendar-alt",
             "active": False,
         },
@@ -700,7 +700,7 @@ def triennialConference2023(request):
         {"name": "Home", "url": "main", "icon": "fas fa-home", "active": False},
         {
             "name": "Conferences",
-            "url": None,
+            "url": "Conferences",
             "icon": "fas fa-calendar-alt",
             "active": False,
         },
@@ -710,7 +710,7 @@ def triennialConference2023(request):
             "icon": "fas fa-calendar-check",
             "active": False,
         },
-        {"name": "2023", "url": None, "icon": "fas fa-file-alt", "active": True},
+        {"name": "2023 Conference", "url": None, "icon": "fas fa-file-alt", "active": True},
     ]
 
     context = {
@@ -758,7 +758,7 @@ def howtoConference(request):
         {"name": "Home", "url": "main", "icon": "fas fa-home", "active": False},
         {
             "name": "Conference",
-            "url": None,
+            "url": "Conferences",
             "icon": "fas fa-calendar-alt",
             "active": False,
         },
@@ -845,11 +845,11 @@ def annualConferences(request, year, location):
 def yclpCourse(request):
     breadcrumbs = [
         {"name": "Home", "url": "main", "icon": "fas fa-home", "active": False},
-        {"name": "Courses", "url": None, "icon": "fas fa-calendar", "active": False},
+        {"name": "DREAMS", "url": None, "icon": "fas fa-star", "active": False},
         {
-            "name": "Young Community Leaders Program",
+            "name": "Young Community Leadership Program",
             "url": None,
-            "icon": "fas fa-calendar-alt",
+            "icon": "fas fa-graduation-cap",
             "active": True,
         },
     ]
@@ -885,7 +885,7 @@ def dreams(request, drm):
             {"name": "Home", "url": "main", "icon": "fas fa-home", "active": False},
             {"name": "DREAMS", "url": None, "icon": "fas fa-star", "active": False},
             {
-                "name": "DREAMS Program",
+                "name": "DREAMS Intervention Program",
                 "url": None,
                 "icon": "fas fa-rocket",
                 "active": True,
@@ -1177,11 +1177,11 @@ def annual_report(request):
 def conclave(request):
     breadcrumbs = [
         {"name": "Home", "url": "main", "icon": "fas fa-home", "active": False},
-        {"name": "Conference", "url": None, "icon": "fas fa-calendar", "active": False},
+        {"name": "Conference", "url": "Conferences", "icon": "fas fa-calendar-alt", "active": False},
         {
-            "name": "Conclaves",
+            "name": "Servant Leadership Conclave",
             "url": None,
-            "icon": "fas fa-calendar-alt",
+            "icon": "fas fa-user-tie",
             "active": True,
         },
     ]

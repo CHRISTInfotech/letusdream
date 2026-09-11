@@ -3,339 +3,467 @@
 
 {% block title %}
 Community Conferences - Let Us Dream
-{% endblock %}
+{% endblock title %}
+
+{% block extraStyles %}
+<link rel="stylesheet" href="{% static 'css/new/media.css' %}">
+{% endblock extraStyles %}
+
+{% block breadcrumb_section %}{% endblock %}
 
 {% block content %}
-<!-- Page Header -->
-
-<div class="container py-5 mt-5">
-    <div class="page-header-content fade-in">
-        <h1 class="text-center">Let Us Dream Conferences</h1>
-        <p class="text-center page-subtitle text-medium">
-            Empowering communities through compassion, collaboration, and service
-        </p>
-    </div>
-</div>
-
-
-<!-- Conference Types Cards - Moved to End -->
-<div class="content-section">
-    <div class="container">
-        <h2 class="font-primary text-primary-blue text-center mb-5">Our Conference Types</h2>
-        <div class="row cards-grid">
-            <div class="col-sm-12 col-md-6 mb-4">
-                <a href="{% url 'annualConference' %}" class="text-decoration-none">
-                    <div class="card content-card hover-lift fade-in h-100">
-                        <div class="text-center">
-                            <img src="{% static '2025/conference/overview/c1.png' %}"
-                                class="img-fluid rounded-custom mb-3" alt="Annual Conferences">
-                        </div>
-                        <div class="card-body text-center d-flex flex-column">
-                            <h3 class="card-title font-primary mb-3">Annual Conferences</h3>
-                            <p class="text-medium mb-3 flex-grow-1">
-                                Make a difference together! Attend our annual conferences held around the world.
-                            </p>
-                            <div class="text-light fst-italic">
-                                <ul class="list-unstyled mb-0">
-                                    <li class="mb-1">• Connect with volunteering opportunities</li>
-                                    <li class="mb-1">• Build your social and professional network</li>
-                                    <li class="mb-1">• Create a space to share ideas and skills</li>
-                                    <li>• Learn from leading, unsung heroes tackling problems</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </a>
+<div class="conference-page-wrapper">
+    <!-- Hero Header -->
+    <section class="media-hero">
+        <div class="container">
+            {% if breadcrumbs %}
+            <nav aria-label="breadcrumb" class="media-hero-breadcrumb">
+                <ol class="breadcrumb-minimal">
+                    {% for breadcrumb in breadcrumbs %}
+                        {% if not breadcrumb.active %}
+                            <li class="breadcrumb-item-min">
+                                {% if breadcrumb.url %}
+                                    <a href="{% url breadcrumb.url %}">
+                                        <i class="{{ breadcrumb.icon }}"></i>
+                                        <span>{{ breadcrumb.name }}</span>
+                                    </a>
+                                {% else %}
+                                    <span>
+                                        <i class="{{ breadcrumb.icon }}"></i>
+                                        <span>{{ breadcrumb.name }}</span>
+                                    </span>
+                                {% endif %}
+                            </li>
+                            <li class="breadcrumb-sep-min">/</li>
+                        {% else %}
+                            <li class="breadcrumb-item-min active">
+                                <i class="{{ breadcrumb.icon }}"></i>
+                                <span>{{ breadcrumb.name }}</span>
+                            </li>
+                        {% endif %}
+                    {% endfor %}
+                </ol>
+            </nav>
+            {% endif %}
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-8 col-md-10">
+                    <span class="media-kicker">LET US DREAM • GLOBAL COLLABORATIVE PLATFORMS</span>
+                    <h1 class="media-hero-title">Let Us Dream Conferences</h1>
+                    <p class="media-hero-lead">
+                        Empowering communities through compassion, collaboration, and service.
+                    </p>
+                </div>
             </div>
-            <div class="col-sm-12 col-md-6 mb-4">
-                <a href="{% url 'trriennial-conference' %}" class="text-decoration-none">
-                    <div class="card content-card hover-lift fade-in h-100">
-                        <div class="text-center">
-                            <img src="{% static '2025/conference/overview/c2.png' %}"
-                                class="img-fluid rounded-custom mb-3" alt="Triennial Conferences">
-                        </div>
-                        <div class="card-body text-center d-flex flex-column">
-                            <h3 class="card-title font-primary mb-3">Triennial Conferences</h3>
-                            <p class="text-medium mb-3 flex-grow-1">
-                                Connect globally, act locally! Our international conference happens once every three
-                                years.
-                                It brings together service initiatives from around the world.
-                            </p>
-                            <div class="text-light fst-italic">
-                                <ul class="list-unstyled mb-0">
-                                    <li class="mb-1">• Collaborate and network with like-minded people</li>
-                                    <li class="mb-1">• Learn how to make a positive impact in your community</li>
-                                    <li>• Celebrate unsung heroes</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </a>
+        </div>
+    </section>
+
+    <!-- Sticky Navigation Pills -->
+    <div class="media-nav-wrapper">
+        <div class="container">
+            <div class="media-nav-scroll justify-content-start justify-content-md-center">
+                <a href="#types" class="media-pill active"><i class="fas fa-layer-group me-1"></i>Conference Types</a>
+                <a href="#vision-mission" class="media-pill"><i class="fas fa-compass me-1"></i>Vision & Mission</a>
+                <a href="#objectives" class="media-pill"><i class="fas fa-bullseye me-1"></i>Objectives</a>
+                <a href="#history" class="media-pill"><i class="fas fa-history me-1"></i>History</a>
+                <a href="#implementation" class="media-pill"><i class="fas fa-cogs me-1"></i>Implementation</a>
+                <a href="#audience" class="media-pill"><i class="fas fa-users me-1"></i>Target Audience</a>
             </div>
         </div>
     </div>
-</div>
 
-
-
-<!-- Vision & Mission Section -->
-<div class="content-section">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12 col-md-4 mb-4">
-                <div class="card content-card text-center  h-100">
-                    <div class="card-body d-flex flex-column">
-                        <h3 class="font-primary text-primary-blue border-bottom pb-2 mb-3">Vision</h3>
-                        <p class="text-medium mb-0 flex-grow-1 d-flex align-items-center justify-content-center">
-                            Empowering local communities for sustainable global impact and improvement.
-                        </p>
-                    </div>
-                </div>
+    <!-- Conference Types Section -->
+    <section id="types" class="conference-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <span class="media-kicker">ENGAGEMENT MODELS</span>
+                <h2 class="media-section-title">Our Conference Types</h2>
+                <p class="media-section-lead">Local community connections and international triennial gatherings</p>
             </div>
-            <div class="col-sm-12 col-md-8 mb-4">
-                <div class="card content-card h-100">
-                    <div class="card-body">
-                        <h3 class="font-primary text-primary-blue border-bottom pb-2 mb-3">Mission</h3>
-                        <div class="text-medium">
-                            <ul class="list-unstyled">
-                                <li class="d-flex mb-3">
-                                    <i class="fas fa-check-circle text-secondary-green me-3 mt-1"></i>
-                                    <span>To provide an opportunity to share, learn and support more community
-                                        intervention research, theories and models.</span>
+
+            <div class="row g-4 justify-content-center">
+                <!-- Annual Conferences -->
+                <div class="col-lg-6 col-md-6">
+                    <div class="conf-type-card">
+                        <div class="conf-type-img-wrap">
+                            <img src="{% static '2025/conference/overview/c1.png' %}" alt="Annual Conferences">
+                        </div>
+                        <div class="conf-type-body">
+                            <div class="d-flex align-items-center justify-content-between mb-2">
+                                <span class="badge rounded-pill px-3 py-2" style="background: #eef4fc; color: #0c52a1; font-weight: 600;">
+                                    <i class="fas fa-calendar-alt me-1"></i>Annual Gathering
+                                </span>
+                                <span class="text-muted small"><i class="fas fa-map-marker-alt me-1"></i>Local Chapters</span>
+                            </div>
+                            <h3 class="h4 fw-bold text-dark mb-3">Annual Community Conferences</h3>
+                            <p class="text-muted mb-4 flex-grow-1">
+                                Make a difference together! Attend our annual conferences held in partner cities and universities around the world to share innovations and strengthen local volunteer networks.
+                            </p>
+                            <ul class="list-unstyled text-muted small mb-4">
+                                <li class="d-flex align-items-start mb-2">
+                                    <i class="fas fa-check-circle text-success me-2 mt-1"></i>
+                                    <span>Connect with purposeful community volunteering opportunities</span>
                                 </li>
-                                <li class="d-flex mb-3">
-                                    <i class="fas fa-check-circle text-secondary-green me-3 mt-1"></i>
-                                    <span>To provide a forum for sharing experiences including the successes and
-                                        challenges in community organisations and efforts.</span>
+                                <li class="d-flex align-items-start mb-2">
+                                    <i class="fas fa-check-circle text-success me-2 mt-1"></i>
+                                    <span>Expand your social, civic, and professional network</span>
                                 </li>
-                                <li class="d-flex mb-0">
-                                    <i class="fas fa-check-circle text-secondary-green me-3 mt-1"></i>
-                                    <span>To invite individuals with bigger hearts and deeper thoughts for their society
-                                        to be a support system for the community empowerment initiatives.</span>
+                                <li class="d-flex align-items-start mb-2">
+                                    <i class="fas fa-check-circle text-success me-2 mt-1"></i>
+                                    <span>Exchange practical tools and evidence-based skills</span>
+                                </li>
+                                <li class="d-flex align-items-start">
+                                    <i class="fas fa-check-circle text-success me-2 mt-1"></i>
+                                    <span>Celebrate grassroots unsung heroes tackling pressing social challenges</span>
                                 </li>
                             </ul>
+                            <a href="{% url 'annualConference' %}" class="btn btn-outline-primary w-100 rounded-pill py-2 fw-bold">
+                                Explore Annual Conferences <i class="fas fa-arrow-right ms-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Triennial Conferences -->
+                <div class="col-lg-6 col-md-6">
+                    <div class="conf-type-card">
+                        <div class="conf-type-img-wrap">
+                            <img src="{% static '2025/conference/overview/c2.png' %}" alt="Triennial Conferences">
+                        </div>
+                        <div class="conf-type-body">
+                            <div class="d-flex align-items-center justify-content-between mb-2">
+                                <span class="badge rounded-pill px-3 py-2" style="background: #ecfdf5; color: #059669; font-weight: 600;">
+                                    <i class="fas fa-globe me-1"></i>Every 3 Years
+                                </span>
+                                <span class="text-muted small"><i class="fas fa-university me-1"></i>Global Stage</span>
+                            </div>
+                            <h3 class="h4 fw-bold text-dark mb-3">Triennial International Conferences</h3>
+                            <p class="text-muted mb-4 flex-grow-1">
+                                Connect globally, act locally! Our flagship international conference convenes every three years, bringing together researchers, community leaders, and service initiatives from across the globe.
+                            </p>
+                            <ul class="list-unstyled text-muted small mb-4">
+                                <li class="d-flex align-items-start mb-2">
+                                    <i class="fas fa-check-circle text-success me-2 mt-1"></i>
+                                    <span>Collaborate with global scholars, educators, and social visionaries</span>
+                                </li>
+                                <li class="d-flex align-items-start mb-2">
+                                    <i class="fas fa-check-circle text-success me-2 mt-1"></i>
+                                    <span>Learn scalable models for lasting positive community transformation</span>
+                                </li>
+                                <li class="d-flex align-items-start mb-2">
+                                    <i class="fas fa-check-circle text-success me-2 mt-1"></i>
+                                    <span>Honour global changemakers and intergenerational service leaders</span>
+                                </li>
+                                <li class="d-flex align-items-start">
+                                    <i class="fas fa-check-circle text-success me-2 mt-1"></i>
+                                    <span>Participate in international academic panels and LUDEx talks</span>
+                                </li>
+                            </ul>
+                            <a href="{% url 'trriennial-conference' %}" class="btn btn-outline-primary w-100 rounded-pill py-2 fw-bold">
+                                Explore Triennial Conferences <i class="fas fa-arrow-right ms-2"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</div>
+    </section>
 
+    <!-- Vision & Mission Section -->
+    <section id="vision-mission" class="conference-section pt-0">
+        <div class="container">
+            <div class="row g-4 align-items-stretch">
+                <!-- Vision -->
+                <div class="col-lg-4 col-md-5">
+                    <div class="media-card text-center p-4 d-flex flex-column justify-content-center h-100" style="background: #f8fafc; border-radius: var(--media-radius);">
+                        <div class="conf-location-icon mx-auto mb-3" style="width: 56px; height: 56px; font-size: 1.4rem;">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <span class="media-kicker mb-2">OUR GUIDING PRINCIPLE</span>
+                        <h3 class="h4 fw-bold text-dark mb-3">Vision</h3>
+                        <p class="text-muted fs-6 mb-0 lh-base">
+                            Empowering local communities for sustainable global impact, improvement, and holistic success.
+                        </p>
+                    </div>
+                </div>
 
+                <!-- Mission -->
+                <div class="col-lg-8 col-md-7">
+                    <div class="media-card p-4 p-lg-5 h-100" style="background: #ffffff; border: 1px solid var(--media-border); border-radius: var(--media-radius);">
+                        <span class="media-kicker mb-2">ACTION & PURPOSE</span>
+                        <h3 class="h4 fw-bold text-dark mb-4">Our Mission</h3>
+                        <ul class="list-unstyled mb-0">
+                            <li class="d-flex align-items-start mb-3">
+                                <i class="fas fa-check-circle text-success me-3 mt-1 fs-5 flex-shrink-0"></i>
+                                <span class="text-muted">
+                                    <strong class="text-dark">Share and Learn:</strong> Provide a dedicated opportunity to exchange community intervention research, evidence-backed theories, and replicable models.
+                                </span>
+                            </li>
+                            <li class="d-flex align-items-start mb-3">
+                                <i class="fas fa-check-circle text-success me-3 mt-1 fs-5 flex-shrink-0"></i>
+                                <span class="text-muted">
+                                    <strong class="text-dark">Collaborative Forum:</strong> Create an open forum for discussing experiences, successes, and real challenges faced by community organizations and grassroots efforts.
+                                </span>
+                            </li>
+                            <li class="d-flex align-items-start">
+                                <i class="fas fa-check-circle text-success me-3 mt-1 fs-5 flex-shrink-0"></i>
+                                <span class="text-muted">
+                                    <strong class="text-dark">Compassionate Support:</strong> Invite individuals with bigger hearts and deeper thoughts to build a robust support system for sustainable community empowerment.
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- Objectives Section -->
-<div class="content-section bg-light-gray">
-    <div class="container">
-        <div class="card content-card shadow-custom fade-in">
-            <div class="card-body">
-                <h2 class="font-primary text-primary-blue text-center mb-4">Objectives</h2>
-                <div class="row">
-                    <div class="col-md-6 mb-4">
-                        <div class="d-flex">
-                            <div class="content-card-icon me-3 flex-shrink-0">
-                                <i class="fas fa-bridge"></i>
-                            </div>
-                            <p class="text-medium mb-0">
-                                To offer the participants an opportunity to bridge the knowledge gap through the
-                                interaction of researchers and practitioners worldwide.
-                            </p>
+    <!-- Objectives Section -->
+    <section id="objectives" class="conference-section pt-0">
+        <div class="container">
+            <div class="text-center mb-5">
+                <span class="media-kicker">PURPOSE-DRIVEN GOALS</span>
+                <h2 class="media-section-title">Conference Objectives</h2>
+                <p class="media-section-lead">Bridging knowledge and inspiring systemic community enhancement</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="media-card p-4 h-100" style="border: 1px solid var(--media-border); border-radius: var(--media-radius);">
+                        <div class="conf-location-icon mb-3">
+                            <i class="fas fa-bridge"></i>
                         </div>
+                        <h4 class="h5 fw-bold text-dark mb-2">Bridge Knowledge Gaps</h4>
+                        <p class="text-muted small mb-0">
+                            Offer participants a unique venue to bridge research and practice through direct dialogue between field workers and global scholars.
+                        </p>
                     </div>
-                    <div class="col-md-6 mb-4">
-                        <div class="d-flex">
-                            <div class="content-card-icon me-3 flex-shrink-0">
-                                <i class="fas fa-globe"></i>
-                            </div>
-                            <p class="text-medium mb-0">
-                                To make recommendations towards achieving greater global peace and harmony worldwide.
-                            </p>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="media-card p-4 h-100" style="border: 1px solid var(--media-border); border-radius: var(--media-radius);">
+                        <div class="conf-location-icon mb-3" style="background: #ecfdf5; color: #059669;">
+                            <i class="fas fa-globe"></i>
                         </div>
+                        <h4 class="h5 fw-bold text-dark mb-2">Global Peace & Harmony</h4>
+                        <p class="text-muted small mb-0">
+                            Formulate actionable recommendations and community-led policies that foster enduring peace, inclusivity, and harmony worldwide.
+                        </p>
                     </div>
-                    <div class="col-md-6 mb-4">
-                        <div class="d-flex">
-                            <div class="content-card-icon me-3 flex-shrink-0">
-                                <i class="fas fa-lightbulb"></i>
-                            </div>
-                            <p class="text-medium mb-0">
-                                To provide an opportunity to share, learn, and support more community interventions
-                                research, theories, and models.
-                            </p>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="media-card p-4 h-100" style="border: 1px solid var(--media-border); border-radius: var(--media-radius);">
+                        <div class="conf-location-icon mb-3" style="background: #f5f3ff; color: #7c3aed;">
+                            <i class="fas fa-lightbulb"></i>
                         </div>
+                        <h4 class="h5 fw-bold text-dark mb-2">Advance Community Models</h4>
+                        <p class="text-muted small mb-0">
+                            Promote, evaluate, and scale innovative intervention frameworks across Education, Health, and Social Welfare.
+                        </p>
                     </div>
-                    <div class="col-md-6 mb-4">
-                        <div class="d-flex">
-                            <div class="content-card-icon me-3 flex-shrink-0">
-                                <i class="fas fa-users"></i>
-                            </div>
-                            <p class="text-medium mb-0">
-                                To provide a forum for sharing experiences including the successes and challenges in
-                                community organizations and efforts.
-                            </p>
+                </div>
+
+                <div class="col-lg-6 col-md-6">
+                    <div class="media-card p-4 h-100" style="border: 1px solid var(--media-border); border-radius: var(--media-radius);">
+                        <div class="conf-location-icon mb-3" style="background: #fff7ed; color: #ea580c;">
+                            <i class="fas fa-users"></i>
                         </div>
+                        <h4 class="h5 fw-bold text-dark mb-2">Experience Sharing Forum</h4>
+                        <p class="text-muted small mb-0">
+                            Create a safe, transparent forum where leaders can candidly discuss operational challenges, breakthrough solutions, and collaborative learning.
+                        </p>
                     </div>
-                    <div class="col-12">
-                        <div class="d-flex">
-                            <div class="content-card-icon me-3 flex-shrink-0">
-                                <i class="fas fa-heart"></i>
+                </div>
+
+                <div class="col-lg-6 col-md-12">
+                    <div class="media-card p-4 h-100" style="border: 1px solid var(--media-border); border-radius: var(--media-radius);">
+                        <div class="conf-location-icon mb-3" style="background: #fef2f2; color: #dc2626;">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h4 class="h5 fw-bold text-dark mb-2">Mobilize Big Hearts</h4>
+                        <p class="text-muted small mb-0">
+                            Rally altruistic professionals, mentors, and student volunteers to actively contribute their talents as sustainable support pillars for local communities.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- History Section -->
+    <section id="history" class="conference-section pt-0">
+        <div class="container">
+            <div class="media-card p-4 p-lg-5" style="border: 1px solid var(--media-border); border-radius: var(--media-radius); background: #ffffff;">
+                <div class="row align-items-center g-4 g-lg-5">
+                    <div class="col-lg-7">
+                        <span class="media-kicker">OUR ROOTS & EXPANSION</span>
+                        <h2 class="h3 fw-bold text-dark mb-3">History of LUD Conferences</h2>
+                        <p class="text-muted mb-3 lh-base">
+                            The first Let Us Dream conference was launched in 2017 to inspire purposeful community volunteerism. From that initial university gathering, all conferences organized have provided a welcoming platform to learn, share, and celebrate selfless acts of community building.
+                        </p>
+                        <p class="text-muted mb-3 lh-base">
+                            In 2020, amidst global pandemic challenges, the first Triennial International Conference was conducted virtually—bringing together over 18,000 registrants and 40,000 viewers worldwide.
+                        </p>
+                        <p class="text-muted mb-0 lh-base">
+                            Today, conferences are held across multiple chapters including India, the United States, Germany, and beyond, engaging diverse generations in intergenerational community progress.
+                        </p>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="row g-3">
+                            <div class="col-6">
+                                <img src="{% static 'stock/IMG-20260617-WA0095.jpg' %}" class="img-fluid rounded shadow-sm w-100" style="height: 220px; object-fit: cover;" alt="LUD Conference Photo 1">
                             </div>
-                            <p class="text-medium mb-0">
-                                To invite individuals with bigger hearts and deeper thoughts for their society to be a
-                                support system for the community empowerment initiatives.
-                            </p>
+                            <div class="col-6">
+                                <img src="{% static 'stock/IMG-20260617-WA0100.jpg' %}" class="img-fluid rounded shadow-sm w-100" style="height: 220px; object-fit: cover;" alt="LUD Conference Photo 2">
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</div>
+    </section>
 
-
-<!-- History Section -->
-<div class="content-section bg-light-gray">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-sm-12 col-md-8 ">
-                <h2 class="font-primary mb-4 text-primary-blue">History of LUD Conferences</h2>
-                <p class="text-medium justify mb-0">
-                    The first Let Us Dream conference was launched in 2017 to inspire community service.
-                    From then on, all conferences organized have provided a platform to learn, share, and celebrate acts
-                    of volunteerism. The first Triennial International Conference was conducted virtually in 2020 during
-                    the pandemic. It highlighted resilience and strength, showcasing community initiatives from around
-                    the world. The conference targets both younger and older generations, introducing them to various
-                    community service opportunities and models. Through discussions and presentations, attendees gain
-                    insights and recommendations for positive community development. Currently, conferences are
-                    organized around the world. This includes multiple locations in India and USA, and countries like
-                    Germany, Nepal, South Africa, and more.
-                </p>
+    <!-- Implementation Section -->
+    <section id="implementation" class="conference-section pt-0">
+        <div class="container">
+            <div class="text-center mb-5">
+                <span class="media-kicker">ORGANIZATIONAL BLUEPRINT</span>
+                <h2 class="media-section-title">How It Works</h2>
+                <p class="media-section-lead">Collaborative execution connecting institutions, changemakers, and local communities</p>
             </div>
-            <div class="col-sm-12 col-md-4 text-center d-flex flex-column gap-3">
-                <img src="{% static 'stock/IMG-20260617-WA0095.jpg' %}" class="img-fluid rounded-custom shadow-sm"
-                    alt="Conference History 1">
-                <img src="{% static 'stock/IMG-20260617-WA0100.jpg' %}" class="img-fluid rounded-custom shadow-sm"
-                    alt="Conference History 2">
-            </div>
-        </div>
-    </div>
-</div>
 
-<!-- Implementation Section -->
-<div class="content-section">
-    <div class="container">
-        <div class="card content-card shadow-custom">
-            <div class="card-body">
-                <h2 class="font-primary text-primary-blue text-center mb-4">Implementation</h2>
-                <p class="text-medium text-center mb-4 lead">
-                    The Let Us Dream conferences work in the following ways:
-                </p>
-                <div class="row">
-                    <div class="col-md-4 mb-4 text-center">
-                        <div class="content-card-icon mx-auto mb-3">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="media-card text-center p-4 h-100" style="border: 1px solid var(--media-border); border-radius: var(--media-radius);">
+                        <div class="conf-location-icon mx-auto mb-3">
                             <i class="fas fa-network-wired"></i>
                         </div>
-                        <p class="text-medium mb-0">
-                            Connect with universities, communities, companies, NGOs, and other institutions to bring you
-                            impactful conferences.
+                        <h4 class="h5 fw-bold text-dark mb-2">Institutional Partnerships</h4>
+                        <p class="text-muted small mb-0">
+                            Partnering with universities, civic organizations, corporations, and non-profits to co-host localized, impactful events.
                         </p>
                     </div>
-                    <div class="col-md-4 mb-4 text-center">
-                        <div class="content-card-icon mx-auto mb-3">
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="media-card text-center p-4 h-100" style="border: 1px solid var(--media-border); border-radius: var(--media-radius);">
+                        <div class="conf-location-icon mx-auto mb-3" style="background: #ecfdf5; color: #059669;">
                             <i class="fas fa-calendar-alt"></i>
                         </div>
-                        <p class="text-medium mb-0">
-                            Choose from annual community conferences or international triennial conferences held around
-                            the world.
+                        <h4 class="h5 fw-bold text-dark mb-2">Annual & Triennial Formats</h4>
+                        <p class="text-muted small mb-0">
+                            Flexible structure offering local annual gatherings tailored to immediate community needs alongside international triennials.
                         </p>
                     </div>
-                    <div class="col-md-4 mb-4 text-center">
-                        <div class="content-card-icon mx-auto mb-3">
+                </div>
+
+                <div class="col-lg-4 col-md-12">
+                    <div class="media-card text-center p-4 h-100" style="border: 1px solid var(--media-border); border-radius: var(--media-radius);">
+                        <div class="conf-location-icon mx-auto mb-3" style="background: #f5f3ff; color: #7c3aed;">
                             <i class="fas fa-hands-helping"></i>
                         </div>
-                        <p class="text-medium mb-0">
-                            Attend panels, network with fellow professionals, volunteer your time and skill set and
-                            acknowledge unsung heroes serving the community.
+                        <h4 class="h5 fw-bold text-dark mb-2">Grassroots Recognition</h4>
+                        <p class="text-muted small mb-0">
+                            Honoring unsung community changemakers, hosting interactive workshops, and fostering volunteer commitments.
                         </p>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</div>
+    </section>
 
-<!-- Target Audience Section -->
-<div class="content-section bg-light-gray">
-    <div class="container">
-        <div class="card content-card shadow-custom ">
-            <div class="card-body">
-                <h2 class="font-primary text-primary-blue text-center mb-4">Target Audience</h2>
-                <p class="text-center text-medium mb-4 lead">
-                    <strong>Be the change you wish to see!</strong>
-                </p>
-                <div class="row">
-                    <div class="col-md-6 mb-3">
-                        <div class="d-flex align-items-center">
-                            <i class="fas fa-user-friends text-secondary-green me-3 fs-5"></i>
-                            <span class="text-medium">Adult and young-adult volunteers</span>
+    <!-- Target Audience Section -->
+    <section id="audience" class="conference-section pt-0">
+        <div class="container">
+            <div class="text-center mb-5">
+                <span class="media-kicker">COMMUNITY INCLUSIVITY</span>
+                <h2 class="media-section-title">Who Can Participate?</h2>
+                <p class="media-section-lead">Be the change you wish to see in your neighborhood</p>
+            </div>
+
+            <div class="row g-3">
+                <div class="col-lg-4 col-md-6">
+                    <div class="media-card p-3 d-flex align-items-center" style="border: 1px solid var(--media-border); border-radius: var(--media-radius-sm);">
+                        <div class="conf-location-icon me-3 flex-shrink-0" style="width: 40px; height: 40px; font-size: 1rem;">
+                            <i class="fas fa-user-friends"></i>
                         </div>
+                        <span class="text-dark fw-medium small">Adult and youth volunteers</span>
                     </div>
-                    <div class="col-md-6 mb-3">
-                        <div class="d-flex align-items-center">
-                            <i class="fas fa-briefcase text-secondary-green me-3 fs-5"></i>
-                            <span class="text-medium">Business owners with community development projects</span>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="media-card p-3 d-flex align-items-center" style="border: 1px solid var(--media-border); border-radius: var(--media-radius-sm);">
+                        <div class="conf-location-icon me-3 flex-shrink-0" style="width: 40px; height: 40px; font-size: 1rem; background: #ecfdf5; color: #059669;">
+                            <i class="fas fa-briefcase"></i>
                         </div>
+                        <span class="text-dark fw-medium small">CSR leaders & business founders</span>
                     </div>
-                    <div class="col-md-6 mb-3">
-                        <div class="d-flex align-items-center">
-                            <i class="fas fa-hands-heart text-secondary-green me-3 fs-5"></i>
-                            <span class="text-medium">Non-profit organizations, NGOs & philanthropists</span>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="media-card p-3 d-flex align-items-center" style="border: 1px solid var(--media-border); border-radius: var(--media-radius-sm);">
+                        <div class="conf-location-icon me-3 flex-shrink-0" style="width: 40px; height: 40px; font-size: 1rem; background: #f5f3ff; color: #7c3aed;">
+                            <i class="fas fa-hand-holding-heart"></i>
                         </div>
+                        <span class="text-dark fw-medium small">NGO directors & philanthropists</span>
                     </div>
-                    <div class="col-md-6 mb-3">
-                        <div class="d-flex align-items-center">
-                            <i class="fas fa-users-cog text-secondary-green me-3 fs-5"></i>
-                            <span class="text-medium">Board members, social workers, and educators interested in
-                                collaboration</span>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="media-card p-3 d-flex align-items-center" style="border: 1px solid var(--media-border); border-radius: var(--media-radius-sm);">
+                        <div class="conf-location-icon me-3 flex-shrink-0" style="width: 40px; height: 40px; font-size: 1rem; background: #fff7ed; color: #ea580c;">
+                            <i class="fas fa-users-cog"></i>
                         </div>
+                        <span class="text-dark fw-medium small">Social workers & civic educators</span>
                     </div>
-                    <div class="col-md-6 mb-3">
-                        <div class="d-flex align-items-center">
-                            <i class="fas fa-graduation-cap text-secondary-green me-3 fs-5"></i>
-                            <span class="text-medium">College students and professors</span>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="media-card p-3 d-flex align-items-center" style="border: 1px solid var(--media-border); border-radius: var(--media-radius-sm);">
+                        <div class="conf-location-icon me-3 flex-shrink-0" style="width: 40px; height: 40px; font-size: 1rem; background: #eef4fc; color: #0c52a1;">
+                            <i class="fas fa-graduation-cap"></i>
                         </div>
+                        <span class="text-dark fw-medium small">College students & researchers</span>
                     </div>
-                    <div class="col-md-6 mb-3">
-                        <div class="d-flex align-items-center">
-                            <i class="fas fa-heart text-secondary-green me-3 fs-5"></i>
-                            <span class="text-medium">Anyone passionate about community initiatives and
-                                leadership</span>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="media-card p-3 d-flex align-items-center" style="border: 1px solid var(--media-border); border-radius: var(--media-radius-sm);">
+                        <div class="conf-location-icon me-3 flex-shrink-0" style="width: 40px; height: 40px; font-size: 1rem; background: #fef2f2; color: #dc2626;">
+                            <i class="fas fa-heart"></i>
                         </div>
+                        <span class="text-dark fw-medium small">Anyone passionate about service</span>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 </div>
-
-<!-- Highlights Section
-<div class="content-section">
-    <div class="container text-center">
-        <h2 class="font-primary text-primary-blue mb-4">Glimpses of Bangalore Conference 2025</h2>
-        <div class="row g-4 justify-content-center">
-            <div class="col-md-6 col-sm-12">
-                <img src="{% static 'stock/_storage_emulated_0_Download_BANGALORE_CONF_2025 (2).heif' %}" 
-                    class="img-fluid rounded-custom shadow-sm" alt="Bangalore Conference 2025 (2)">
-            </div>
-            <div class="col-md-6 col-sm-12">
-                <img src="{% static 'stock/BANGALORE_CONF_2025 (3).heif' %}" 
-                    class="img-fluid rounded-custom shadow-sm" alt="Bangalore Conference 2025 (3)">
-            </div>
-        </div>
-    </div>
-</div> -->
-
-{% endblock %}
+{% endblock content %}
 
 {% block extraScripts %}
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Sticky pill active on scroll
+        const sections = document.querySelectorAll('section[id]');
+        const navPills = document.querySelectorAll('.media-pill');
 
+        window.addEventListener('scroll', function () {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 120;
+                if (window.pageYOffset >= sectionTop) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navPills.forEach(pill => {
+                pill.classList.remove('active');
+                if (pill.getAttribute('href') === '#' + current) {
+                    pill.classList.add('active');
+                }
+            });
+        });
+    });
+</script>
 {% endblock extraScripts %}

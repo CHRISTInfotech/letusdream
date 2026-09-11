@@ -1,332 +1,379 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title %}
-Community Hubs
-{% endblock title %}
+{% block title %}Community Hubs | Let Us Dream{% endblock title %}
 
 {% block links %}
+<link rel="stylesheet" href="{% static 'css/new/media.css' %}?v=16" type="text/css">
 {% endblock links %}
 
-{% block extraStyles %}
-{% endblock extraStyles %}
+{# Suppress standalone legacy breadcrumb row #}
+{% block breadcrumb_section %}{% endblock breadcrumb_section %}
 
 {% block content %}
-<!-- Page Header -->
-<section class="page-header">
-    <div class="container">
-        <div class="row justify-content-center text-center">
-            <div class="col-lg-8 col-md-10 col-sm-12">
-                <div class="page-header-content fade-in">
-                    <!-- Optional Icon -->
-                    <div class="content-card-icon mx-auto mb-4">
-                        <i class="fas fa-users"></i>
-                    </div>
+<div class="media-page-wrapper clubs-page-wrapper">
+    <!-- Minimalist Page Hero with Integrated Breadcrumb -->
+    <section class="media-hero">
+        <div class="container">
+            {% if breadcrumbs %}
+            <nav aria-label="breadcrumb" class="media-hero-breadcrumb">
+                <ol class="breadcrumb-minimal">
+                    {% for breadcrumb in breadcrumbs %}
+                        {% if not breadcrumb.active %}
+                            <li class="breadcrumb-item-min">
+                                {% if breadcrumb.url %}
+                                    <a href="{% url breadcrumb.url %}">
+                                        <i class="{{ breadcrumb.icon }}"></i>
+                                        <span>{{ breadcrumb.name }}</span>
+                                    </a>
+                                {% else %}
+                                    <span>
+                                        <i class="{{ breadcrumb.icon }}"></i>
+                                        <span>{{ breadcrumb.name }}</span>
+                                    </span>
+                                {% endif %}
+                            </li>
+                            <li class="breadcrumb-sep-min">/</li>
+                        {% else %}
+                            <li class="breadcrumb-item-min active">
+                                <i class="{{ breadcrumb.icon }}"></i>
+                                <span>{{ breadcrumb.name }}</span>
+                            </li>
+                        {% endif %}
+                    {% endfor %}
+                </ol>
+            </nav>
+            {% endif %}
 
-                    <h1 class="page-title display-4 fw-bold mb-4">Welcome to Community Hubs!</h1>
-                    <p class="page-subtitle lead mb-4">
-                        Vibrant spaces designed to foster connection, learning, and growth
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-8 col-md-10">
+                    <span class="media-kicker">Let Us Dream • Student & Alumni Hubs</span>
+                    <h1 class="media-hero-title">Community Hubs</h1>
+                    <p class="media-hero-lead">
+                        Vibrant monthly meetup spaces designed to sustain meaningful connections, peer bonding, and continuous learning throughout the year.
                     </p>
                 </div>
             </div>
         </div>
+    </section>
+
+    <!-- Quick Navigation Sticky Jump Pills -->
+    <div class="media-nav-wrapper">
+        <div class="container">
+            <div class="media-nav-scroll justify-content-start justify-content-md-center">
+                <a href="#about" class="media-pill active">
+                    <i class="fas fa-info-circle me-1"></i>About Hubs
+                </a>
+                <a href="#mission" class="media-pill">
+                    <i class="fas fa-bullseye me-1"></i>Our Mission
+                </a>
+                <a href="#hubs" class="media-pill">
+                    <i class="fas fa-layer-group me-1"></i>The 5 Hubs
+                </a>
+                <a href="#leadership" class="media-pill">
+                    <i class="fas fa-users-cog me-1"></i>Hub Mentors
+                </a>
+                <a href="#contact" class="media-pill">
+                    <i class="fas fa-envelope me-1"></i>Contact
+                </a>
+            </div>
+        </div>
     </div>
-</section>
 
-<!-- Main Content -->
-<div class="main-content">
-    <div class="container">
-        <p class="lead text-center mb-5">
-            Community Hubs are vibrant spaces designed to foster connection, learning, and growth among the members
-            of Let Us Dream. Our student volunteers come together annually for a conference, but we recognize the
-            importance of maintaining
-            strong relationships throughout the year. That's why we propose a monthly meetup strategy that keeps our
-            team engaged and connected.
-        </p>
+    <!-- About Section -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <div class="production-hero-card mb-4">
+                <div class="row align-items-center g-4">
+                    <div class="col-lg-7">
+                        <span class="badge bg-primary text-white rounded-pill px-3 py-1 mb-3">Year-Round Engagement</span>
+                        <h2 class="fw-bold mb-3" style="color: var(--media-text-dark); font-size: 1.6rem;">
+                            Sustaining Bonds Beyond Annual Conferences
+                        </h2>
+                        <p class="text-muted lh-lg mb-3">
+                            Community Hubs are collaborative spaces designed to foster continuous connection, shared learning, and personal growth among Let Us Dream members. While our student volunteers unite annually at regional conferences, maintaining strong, purposeful relationships throughout the year is vital.
+                        </p>
+                        <p class="text-muted lh-lg mb-0">
+                            Our monthly meetup framework keeps team members actively engaged, offering structured avenues for peer mentoring, knowledge exchange, and creative problem solving in supportive circles.
+                        </p>
+                    </div>
+                    <div class="col-lg-5 text-center">
+                        <div class="club-infographic-card mb-0">
+                            <img src="{% static '/clubs/community1.png' %}" alt="Community Hubs Overview" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <!-- Mission Section -->
-        <section class="content-section ">
-            <div class="row justify-content-center text-center">
-                <div class="col-lg-8 col-md-10">
-                    <h2 class="section-title mb-4">Our Mission</h2>
-                    <p class="lead">
-                        The primary objective of Community Hubs is to create a strong, engaged team that thrives
-                        on continuous
-                        learning and personal development. These monthly meetups provide opportunities for
-                        members to bond, participate in workshops, and develop
-                        skills that enhance both personal and professional growth.
+    <!-- Mission Section -->
+    <section id="mission" class="py-4">
+        <div class="container">
+            <div class="card border-0 p-4 p-md-5 rounded-4 text-center" style="background: #f8fafc; border: 1px solid #e2e8f0 !important;">
+                <div class="col-lg-9 mx-auto">
+                    <span class="media-kicker">Core Objective</span>
+                    <h2 class="fw-bold mb-3" style="color: var(--media-text-dark); font-size: 1.6rem;">Our Mission</h2>
+                    <p class="text-muted fs-6 lh-lg mb-0">
+                        The primary objective of Community Hubs is to nurture an engaged team that thrives on continuous learning and collaborative personal development. These monthly gatherings empower members to bond, attend skill-building workshops, and develop emotional and professional competencies that enrich their educational and civic lives.
                     </p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Image Section -->
-        <section class="content-section">
-            <div class="row justify-content-center">
-                <div class="col-lg-8 col-md-10">
-                    <div class="text-center mb-2">
-                        <img src="{% static '/clubs/community1.png' %}" alt="Community Hubs Overview"
-                            class="img-fluid rounded-custom hover-scale" id="expandableImage" style="cursor:pointer;">
-                    </div>
-                </div>
+    <!-- The 5 Hubs Section -->
+    <section id="hubs" class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <span class="media-kicker">Specialized Focus Areas</span>
+                <h2 class="media-section-title text-center">Explore the Five Community Hubs</h2>
+                <p class="media-section-desc mx-auto text-center" style="max-width: 650px;">
+                    Each hub provides a specialized environment tailored to distinct professional passions, cultural arts, wellness, and financial acumen.
+                </p>
             </div>
-        </section>
 
-        <!-- Hub Descriptions Section -->
-        <section class="content-section">
-            <div class="row justify-content-center">
-                <div class="col-lg-10 col-md-12">
-                    <h2 class="section-title text-center mb-5">Hub Descriptions</h2>
-                    <div class="row g-4">
-                        <!-- Vision Hive -->
-                        <div class="col-lg-6 col-md-12">
-                            <div class="card hover-lift h-100">
-                                <div class="card-body">
-                                    <div class="content-card-icon mb-3">
-                                        <i class="fas fa-lightbulb"></i>
-                                    </div>
-                                    <h4 class="fw-bold text-primary-blue mb-3">Vision Hive</h4>
-                                    <p class="text-medium">
-                                        Engage with entrepreneurs, tech enthusiasts, and creatives as you
-                                        discuss coding, gadgets, and
-                                        visual communication, while exploring potential collaborations in a
-                                        dynamic community.
-                                    </p>
-                                </div>
-                            </div>
+            <div class="row g-4">
+                <!-- Vision Hive -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="club-card">
+                        <div class="club-card-icon">
+                            <i class="fas fa-lightbulb"></i>
                         </div>
-
-                        <!-- The Insight Engine -->
-                        <div class="col-lg-6 col-md-12">
-                            <div class="card hover-lift h-100">
-                                <div class="card-body">
-                                    <div class="content-card-icon mb-3">
-                                        <i class="fas fa-chart-line"></i>
-                                    </div>
-                                    <h4 class="fw-bold text-primary-blue mb-3">The Insight Engine</h4>
-                                    <p class="text-medium">
-                                        Dive into the world of media and marketing by exploring current trends,
-                                        sharing ideas, and
-                                        improving your online presence through collaborative learning.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Cultural Canvas -->
-                        <div class="col-lg-6 col-md-12">
-                            <div class="card hover-lift h-100">
-                                <div class="card-body">
-                                    <div class="content-card-icon mb-3">
-                                        <i class="fas fa-palette"></i>
-                                    </div>
-                                    <h4 class="fw-bold text-primary-blue mb-3">Cultural Canvas</h4>
-                                    <p class="text-medium">
-                                        Connect with music, theater, art, and dance enthusiasts from diverse
-                                        backgrounds, sharing and
-                                        learning from each other's cultural experiences.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Mind Menders -->
-                        <div class="col-lg-6 col-md-12">
-                            <div class="card hover-lift h-100">
-                                <div class="card-body">
-                                    <div class="content-card-icon mb-3">
-                                        <i class="fas fa-brain"></i>
-                                    </div>
-                                    <h4 class="fw-bold text-primary-blue mb-3">Mind Menders</h4>
-                                    <p class="text-medium">
-                                        Participate in discussions centered around stress management,
-                                        resilience, and mental well-being,
-                                        sharing coping strategies with others in a supportive environment.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Monetize Mastery -->
-                        <div class="col-lg-12">
-                            <div class="card hover-lift">
-                                <div class="card-body text-center">
-                                    <div class="content-card-icon mx-auto mb-3">
-                                        <i class="fas fa-coins"></i>
-                                    </div>
-                                    <h4 class="fw-bold text-primary-blue mb-3">Monetize Mastery</h4>
-                                    <p class="text-medium">
-                                        Join a group focused on financial management, where you can develop
-                                        strategic plans for
-                                        financial success and secure your future.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Join Us Section -->
-        <section class="content-section">
-            <div class="row justify-content-center text-center">
-                <div class="col-lg-8 col-md-10">
-                    <h2 class="section-title mb-4">Join Us!</h2>
-                    <div class="content-card bg-gradient-primary text-white">
-                        <p class="lead mb-4 text-white">
-                            Become a part of the Community Hubs and immerse yourself in a space dedicated to growth,
-                            learning, and connection. Together, we can create a supportive environment where members
-                            thrive, share experiences, and work towards common goals.
-                            Let's build a stronger community, one hub at a time!
+                        <h3 class="fw-bold mb-2" style="font-size: 1.25rem; color: var(--media-text-dark);">Vision Hive</h3>
+                        <span class="badge bg-light text-primary rounded-pill px-3 py-1 mb-3 align-self-start fw-semibold">Tech & Innovation</span>
+                        <p class="text-muted small lh-lg mb-0">
+                            Engage with aspiring entrepreneurs, tech enthusiasts, and creatives. Discuss software design, gadgets, emerging technologies, and visual communication while exploring collaborative community initiatives.
                         </p>
-                        <div class="d-flex flex-column flex-sm-row justify-content-center gap-3">
-                            <button class="btn btn-secondary hover-lift">Join a Hub</button>
-                            <button class="btn btn-outline-secondary hover-lift">Learn More</button>
+                    </div>
+                </div>
+
+                <!-- The Insight Engine -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="club-card">
+                        <div class="club-card-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3 class="fw-bold mb-2" style="font-size: 1.25rem; color: var(--media-text-dark);">The Insight Engine</h3>
+                        <span class="badge bg-light text-primary rounded-pill px-3 py-1 mb-3 align-self-start fw-semibold">Media & Marketing</span>
+                        <p class="text-muted small lh-lg mb-0">
+                            Dive into digital media, modern communication strategies, and content trends. Share creative ideas, study ethical marketing, and elevate your community storytelling through collaborative workshops.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Cultural Canvas -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="club-card">
+                        <div class="club-card-icon">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <h3 class="fw-bold mb-2" style="font-size: 1.25rem; color: var(--media-text-dark);">Cultural Canvas</h3>
+                        <span class="badge bg-light text-primary rounded-pill px-3 py-1 mb-3 align-self-start fw-semibold">Arts & Expression</span>
+                        <p class="text-muted small lh-lg mb-0">
+                            Connect with music, theater, visual arts, and dance enthusiasts from multifaceted backgrounds. Share cultural heritages, discover new artistic styles, and foster inclusive artistic collaborations.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Mind Menders -->
+                <div class="col-lg-6 col-md-6">
+                    <div class="club-card">
+                        <div class="club-card-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3 class="fw-bold mb-2" style="font-size: 1.25rem; color: var(--media-text-dark);">Mind Menders</h3>
+                        <span class="badge bg-light text-primary rounded-pill px-3 py-1 mb-3 align-self-start fw-semibold">Wellness & Mental Health</span>
+                        <p class="text-muted small lh-lg mb-0">
+                            Participate in thoughtful discussions on stress reduction, mental health awareness, and emotional resilience. Exchange proven coping strategies and mindfulness tools in an empathetic, safe environment.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Monetize Mastery -->
+                <div class="col-lg-6 col-md-12">
+                    <div class="club-card">
+                        <div class="club-card-icon">
+                            <i class="fas fa-coins"></i>
+                        </div>
+                        <h3 class="fw-bold mb-2" style="font-size: 1.25rem; color: var(--media-text-dark);">Monetize Mastery</h3>
+                        <span class="badge bg-light text-primary rounded-pill px-3 py-1 mb-3 align-self-start fw-semibold">Financial Literacy</span>
+                        <p class="text-muted small lh-lg mb-0">
+                            A circle focused on personal finance, budgeting, smart investments, and career economics. Develop strategic financial literacy to make sound decisions and build enduring long-term security.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Leadership Mentors Section -->
+    <section id="leadership" class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <span class="media-kicker">Hub Direction</span>
+                <h2 class="media-section-title text-center">Hub Mentors & Youth Leads</h2>
+                <p class="media-section-desc mx-auto text-center" style="max-width: 650px;">
+                    Each hub is co-guided by an experienced Senior Mentor and a passionate Youth Lead.
+                </p>
+            </div>
+
+            <!-- Row 1: Vision Hive, Insight Engine, Cultural Canvas -->
+            <div class="row g-4 mb-4">
+                <!-- Vision Hive -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="hub-dual-mentor-card text-center">
+                        <div class="d-inline-flex align-items-center gap-2 mb-3">
+                            <i class="fas fa-lightbulb text-primary"></i>
+                            <h4 class="fw-bold mb-0" style="color: var(--media-text-dark); font-size: 1.15rem;">Vision Hive</h4>
+                        </div>
+                        <div class="row g-3">
+                            <div class="col-6">
+                                <div class="leader-card p-3">
+                                    <img src="{% static '/clubs/leadership/Mr. Goutham Iyyappan.png' %}" class="leader-avatar" alt="Mr. Goutham Iyyappan">
+                                    <span class="leader-role-badge badge-senior">Senior Mentor</span>
+                                    <h5 class="leader-name" style="font-size: 0.88rem;">Mr. Goutham Iyyappan</h5>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="leader-card p-3">
+                                    <img src="{% static '/clubs/leadership/Mr. R Arjun.png' %}" class="leader-avatar" alt="Mr. R Arjun">
+                                    <span class="leader-role-badge badge-youth">Youth Lead</span>
+                                    <h5 class="leader-name" style="font-size: 0.88rem;">Mr. R Arjun</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Insight Engine -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="hub-dual-mentor-card text-center">
+                        <div class="d-inline-flex align-items-center gap-2 mb-3">
+                            <i class="fas fa-chart-line text-primary"></i>
+                            <h4 class="fw-bold mb-0" style="color: var(--media-text-dark); font-size: 1.15rem;">Insight Engine</h4>
+                        </div>
+                        <div class="row g-3">
+                            <div class="col-6">
+                                <div class="leader-card p-3">
+                                    <img src="{% static '/clubs/leadership/Mr. Bharath.png' %}" class="leader-avatar" alt="Mr. Bharath">
+                                    <span class="leader-role-badge badge-senior">Senior Mentor</span>
+                                    <h5 class="leader-name" style="font-size: 0.88rem;">Mr. Bharath</h5>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="leader-card p-3">
+                                    <img src="{% static 'clubs/Divya C - Insight Engine.jpg' %}" class="leader-avatar" alt="Ms. Divya C">
+                                    <span class="leader-role-badge badge-youth">Youth Lead</span>
+                                    <h5 class="leader-name" style="font-size: 0.88rem;">Ms. Divya C</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cultural Canvas -->
+                <div class="col-lg-4 col-md-12">
+                    <div class="hub-dual-mentor-card text-center">
+                        <div class="d-inline-flex align-items-center gap-2 mb-3">
+                            <i class="fas fa-palette text-primary"></i>
+                            <h4 class="fw-bold mb-0" style="color: var(--media-text-dark); font-size: 1.15rem;">Cultural Canvas</h4>
+                        </div>
+                        <div class="row g-3">
+                            <div class="col-6">
+                                <div class="leader-card p-3">
+                                    <img src="{% static '/clubs/leadership/Mr. Rajesh P I (2).png' %}" class="leader-avatar" alt="Mr. Rajesh P I">
+                                    <span class="leader-role-badge badge-senior">Senior Mentor</span>
+                                    <h5 class="leader-name" style="font-size: 0.88rem;">Mr. Rajesh P I</h5>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="leader-card p-3">
+                                    <img src="{% static 'clubs/Vibha Sriranga - Cultural Canvas.jpg' %}" class="leader-avatar" alt="Ms. Vibha">
+                                    <span class="leader-role-badge badge-youth">Youth Lead</span>
+                                    <h5 class="leader-name" style="font-size: 0.88rem;">Ms. Vibha</h5>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
 
-        <!-- Leadership Section -->
-        <section class="py-5">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <h2 class="section-title text-center mb-5">Leadership Team</h2>
-                    </div>
-                </div>
-
-                <!-- First Row: 3 Clubs -->
-                <div class="row row-cols-1 row-cols-md-3 g-4 mb-5">
-                    <!-- Vision Hive -->
-                    <div class="col">
-                        <div class="card text-center h-100 border-0 shadow-sm p-3">
-                            <h4 class="fw-bold text-primary-blue mb-3">Vision Hive</h4>
-                            <div class="row row-cols-2 g-3">
-                                <div class="col">
-                                    <img src="{% static '/clubs/leadership/Mr. Goutham Iyyappan.png' %}"
-                                        class="people-avatar mb-3" alt="Mr. Goutham Iyyappan">
-                                    <h6 class="fw-bold text-primary-blue mb-1">Mr. Goutham Iyyappan</h6>
-                                    <p class="text-medium fst-italic mb-0">Senior Mentor</p>
-                                </div>
-                                <div class="col">
-                                    <img src="{% static '/clubs/leadership/Mr. R Arjun.png' %}"
-                                        class="people-avatar mb-3" alt="Mr. R Arjun">
-                                    <h6 class="fw-bold text-primary-blue mb-1">Mr. R Arjun</h6>
-                                    <p class="text-medium fst-italic mb-0">Youth Lead</p>
+            <!-- Row 2: Mind Menders & Monetize Mastery -->
+            <div class="row g-4 justify-content-center">
+                <!-- Mind Menders -->
+                <div class="col-lg-5 col-md-6">
+                    <div class="hub-dual-mentor-card text-center">
+                        <div class="d-inline-flex align-items-center gap-2 mb-3">
+                            <i class="fas fa-brain text-primary"></i>
+                            <h4 class="fw-bold mb-0" style="color: var(--media-text-dark); font-size: 1.15rem;">Mind Menders</h4>
+                        </div>
+                        <div class="row g-3">
+                            <div class="col-6">
+                                <div class="leader-card p-3">
+                                    <img src="{% static '/clubs/leadership/Mr. Venu.png' %}" class="leader-avatar" alt="Mr. Venu">
+                                    <span class="leader-role-badge badge-senior">Senior Mentor</span>
+                                    <h5 class="leader-name" style="font-size: 0.88rem;">Mr. Venu</h5>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-
-                    <!-- Insight Engine -->
-                    <div class="col">
-                        <div class="card text-center h-100 border-0 shadow-sm p-3">
-                            <h4 class="fw-bold text-primary-blue mb-3">Insight Engine</h4>
-                            <div class="row row-cols-2 g-3">
-                                <div class="col">
-                                    <img src="{% static '/clubs/leadership/Mr. Bharath.png' %}"
-                                        class="people-avatar mb-3" alt="Mr. Bharath">
-                                    <h6 class="fw-bold text-primary-blue mb-1">Mr. Bharath</h6>
-                                    <p class="text-medium fst-italic mb-0">Senior Mentor</p>
-                                </div>
-                                <div class="col">
-                                    <img src="{% static 'clubs/Divya C - Insight Engine.jpg' %}"
-                                        class="people-avatar mb-3" alt="Ms. Divya C">
-                                    <h6 class="fw-bold text-primary-blue mb-1">Ms. Divya C</h6>
-                                    <p class="text-medium fst-italic mb-0">Youth Lead</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Cultural Canvas -->
-                    <div class="col">
-                        <div class="card text-center h-100 border-0 shadow-sm p-3">
-                            <h4 class="fw-bold text-primary-blue mb-3">Cultural Canvas</h4>
-                            <div class="row row-cols-2 g-3">
-                                <div class="col">
-                                    <img src="{% static '/clubs/leadership/Mr. Rajesh P I (2).png' %}"
-                                        class="people-avatar mb-3" alt="Mr. Rajesh P I">
-                                    <h6 class="fw-bold text-primary-blue mb-1">Mr. Rajesh P I</h6>
-                                    <p class="text-medium fst-italic mb-0">Senior Mentor</p>
-                                </div>
-                                <div class="col">
-                                    <img src="{% static 'clubs/Vibha Sriranga - Cultural Canvas.jpg' %}"
-                                        class="people-avatar mb-3" alt="Ms. Vibha">
-                                    <h6 class="fw-bold text-primary-blue mb-1">Ms. Vibha</h6>
-                                    <p class="text-medium fst-italic mb-0">Youth Lead</p>
+                            <div class="col-6">
+                                <div class="leader-card p-3">
+                                    <img src="{% static 'clubs/Kritika R S.jpeg' %}" class="leader-avatar" alt="Ms. Kritika">
+                                    <span class="leader-role-badge badge-youth">Youth Lead</span>
+                                    <h5 class="leader-name" style="font-size: 0.88rem;">Ms. Kritika</h5>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Second Row: 2 Clubs -->
-                <div class="row row-cols-1 row-cols-md-2 g-4">
-                    <!-- Mind Menders -->
-                    <div class="col">
-                        <div class="card text-center h-100 border-0 shadow-sm p-3">
-                            <h4 class="fw-bold text-primary-blue mb-3">Mind Menders</h4>
-                            <div class="row row-cols-2 g-3">
-                                <div class="col">
-                                    <img src="{% static '/clubs/leadership/Mr. Venu.png' %}" class="people-avatar mb-3"
-                                        alt="Mr. Venu">
-                                    <h6 class="fw-bold text-primary-blue mb-1">Mr. Venu</h6>
-                                    <p class="text-medium fst-italic mb-0">Senior Mentor</p>
-                                </div>
-                                <div class="col">
-                                    <img src="{% static 'clubs/Kritika R S.jpeg' %}" class="people-avatar mb-3"
-                                        alt="Ms. Kritika">
-                                    <h6 class="fw-bold text-primary-blue mb-1">Ms. Kritika</h6>
-                                    <p class="text-medium fst-italic mb-0">Youth Lead</p>
+                <!-- Monetize Mastery -->
+                <div class="col-lg-5 col-md-6">
+                    <div class="hub-dual-mentor-card text-center">
+                        <div class="d-inline-flex align-items-center gap-2 mb-3">
+                            <i class="fas fa-coins text-primary"></i>
+                            <h4 class="fw-bold mb-0" style="color: var(--media-text-dark); font-size: 1.15rem;">Monetize Mastery</h4>
+                        </div>
+                        <div class="row g-3">
+                            <div class="col-6">
+                                <div class="leader-card p-3">
+                                    <img src="{% static '/clubs/leadership/Mr. Venkat.png' %}" class="leader-avatar" alt="Mr. Venkat">
+                                    <span class="leader-role-badge badge-senior">Senior Mentor</span>
+                                    <h5 class="leader-name" style="font-size: 0.88rem;">Mr. Venkat</h5>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-
-                    <!-- Monetize Mastery -->
-                    <div class="col">
-                        <div class="card text-center h-100 border-0 shadow-sm p-3">
-                            <h4 class="fw-bold text-primary-blue mb-3">Monetize Mastery</h4>
-                            <div class="row row-cols-2 g-3">
-                                <div class="col">
-                                    <img src="{% static '/clubs/leadership/Mr. Venkat.png' %}"
-                                        class="people-avatar mb-3" alt="Mr. Venkat">
-                                    <h6 class="fw-bold text-primary-blue mb-1">Mr. Venkat</h6>
-                                    <p class="text-medium fst-italic mb-0">Senior Mentor</p>
-                                </div>
-                                <div class="col">
-                                    <img src="{% static 'clubs/Saumya Mittal .jpg' %}" class="people-avatar mb-3"
-                                        alt="Saumya Mittal">
-                                    <h6 class="fw-bold text-primary-blue mb-1">Saumya Mittal</h6>
-                                    <p class="text-medium fst-italic mb-0">Youth Lead</p>
+                            <div class="col-6">
+                                <div class="leader-card p-3">
+                                    <img src="{% static 'clubs/Saumya Mittal .jpg' %}" class="leader-avatar" alt="Saumya Mittal">
+                                    <span class="leader-role-badge badge-youth">Youth Lead</span>
+                                    <h5 class="leader-name" style="font-size: 0.88rem;">Saumya Mittal</h5>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Contact Section -->
-        <section class="content-section">
-            <div class="row justify-content-center text-center">
-
-                <h2 class="fw-bold mb-4">Contact</h2>
-                <div class="d-flex align-items-center justify-content-center">
-                    <i class="fas fa-envelope me-3 fs-4"></i>
-                    <a href="mailto:club@letusdream.org" class="text-dark fs-5 fw-bold text-decoration-none">
-                        club@letusdream.org
+    <!-- Join & Contact Section -->
+    <section id="contact" class="py-5 mb-5">
+        <div class="container">
+            <div class="p-4 p-md-5 rounded-4 text-center" style="background: #f8fafc; border: 1px solid #e2e8f0;">
+                <div class="col-lg-8 mx-auto">
+                    <span class="media-kicker">Get Connected</span>
+                    <h2 class="fw-bold mb-3" style="color: var(--media-text-dark); font-size: 1.75rem;">
+                        Join a Community Hub Today
+                    </h2>
+                    <p class="text-muted lh-lg mb-4">
+                        Become an active part of Community Hubs and immerse yourself in an empowering space dedicated to continuous learning, connection, and community service.
+                    </p>
+                    <a href="mailto:club@letusdream.org" class="btn btn-primary rounded-pill px-4 py-2 fw-semibold">
+                        <i class="fas fa-envelope me-2"></i>Email Hub Team: club@letusdream.org
                     </a>
                 </div>
             </div>
-        </section>
-    </div>
+        </div>
+    </section>
 </div>
 {% endblock content %}
-
-{% block extraScripts %}
-{% endblock extraScripts %}

@@ -2,140 +2,312 @@
 {% load static %}
 
 {% block title %}
-YCLP
-
+Young Community Leadership Program (YCLP) | Let Us Dream
 {% endblock title %}
 
+{% block breadcrumb_section %}
+<!-- Suppress legacy standalone breadcrumb row -->
+{% endblock %}
+
 {% block extraStyles %}
-<link rel="stylesheet" href="{% static 'css/yclpCourse.css' %}" type="text/css">
+<link rel="stylesheet" href="{% static 'css/new/media.css' %}">
 {% endblock extraStyles %}
 
-{% block links %}
-{% endblock links %}
-
 {% block content %}
+<div class="media-page-wrapper yclp-page-wrapper">
 
+    <!-- Minimalist Page Hero with Integrated Breadcrumb -->
+    <section class="media-hero">
+        <div class="container">
+            {% if breadcrumbs %}
+            <nav aria-label="breadcrumb" class="media-hero-breadcrumb">
+                <ol class="breadcrumb-minimal">
+                    {% for breadcrumb in breadcrumbs %}
+                        {% if not breadcrumb.active %}
+                            <li class="breadcrumb-item-min">
+                                {% if breadcrumb.url %}
+                                    <a href="{% url breadcrumb.url %}">
+                                        <i class="{{ breadcrumb.icon }}"></i>
+                                        <span>{{ breadcrumb.name }}</span>
+                                    </a>
+                                {% else %}
+                                    <span>
+                                        <i class="{{ breadcrumb.icon }}"></i>
+                                        <span>{{ breadcrumb.name }}</span>
+                                    </span>
+                                {% endif %}
+                            </li>
+                            <li class="breadcrumb-sep-min">/</li>
+                        {% else %}
+                            <li class="breadcrumb-item-min active">
+                                <i class="{{ breadcrumb.icon }}"></i>
+                                <span>{{ breadcrumb.name }}</span>
+                            </li>
+                        {% endif %}
+                    {% endfor %}
+                </ol>
+            </nav>
+            {% endif %}
 
-<div class="container ">
-    <div class="row">
-        <div class="col-xs-12">
-            <h1 class="text-center text-faded d-lg-block mt-5 mb-4">
-                <span class="text-green">The Young Community Leadership Program</span>
-            </h1>
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-8 col-md-10">
+                    <span class="media-kicker">Let Us Dream • Leadership &amp; Experiential Learning</span>
+                    <h1 class="media-hero-title">Young Community Leadership Program (YCLP)</h1>
+                    <p class="media-hero-lead">
+                        Preparing young aspiring leaders with the practical skills, empathy, and immersive field experience needed to drive transformative social change.
+                    </p>
+                </div>
+            </div>
         </div>
+    </section>
+
+    <!-- Sticky Navigation Jump Pills -->
+    <div class="media-nav-wrapper">
+        <div class="container">
+            <div class="media-nav-scroll justify-content-start justify-content-md-center">
+                <a href="#overview" class="media-pill active"><i class="fas fa-info-circle me-1"></i>Overview</a>
+                <a href="#curriculum" class="media-pill"><i class="fas fa-book-reader me-1"></i>Curriculum</a>
+                <a href="#objectives" class="media-pill"><i class="fas fa-bullseye me-1"></i>Objectives</a>
+                <a href="#outcomes" class="media-pill"><i class="fas fa-award me-1"></i>Learning Outcomes</a>
+                <a href="#certification" class="media-pill"><i class="fas fa-certificate me-1"></i>Certification</a>
+                <a href="#inquiry" class="media-pill"><i class="fas fa-envelope me-1"></i>Inquire / Contact</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container py-5">
+
+        <!-- Highlights Strip -->
+        <div class="d-flex flex-wrap justify-content-center gap-3 mb-5">
+            <span class="yclp-highlight-badge"><i class="fas fa-clock"></i> 3-Year Applied Curriculum</span>
+            <span class="yclp-highlight-badge"><i class="fas fa-user-friends"></i> Middle School Peer Mentorship</span>
+            <span class="yclp-highlight-badge"><i class="fas fa-lightbulb"></i> DREAMS Model Grounded</span>
+            <span class="yclp-highlight-badge"><i class="fas fa-university"></i> CHRIST (Deemed to be University) Recognized</span>
+        </div>
+
+        <!-- 1. Program Overview Section -->
+        <section id="overview" class="mb-5 pb-4">
+            <div class="card border-0 shadow-sm rounded-4 p-4 p-lg-5" style="border: 1px solid var(--media-border) !important;">
+                <div class="row align-items-center g-4">
+                    <div class="col-lg-7">
+                        <span class="badge bg-primary-subtle text-primary px-3 py-2 rounded-pill fw-bold mb-3">Academic Leadership Course</span>
+                        <h2 class="h2 fw-bold mb-3" style="font-family: var(--media-font-serif);">Empowering Aspiring Leaders Through Action</h2>
+                        <p class="text-secondary lh-lg mb-3">
+                            The <strong>Young Community Leadership Program (YCLP)</strong> is an applied, interdisciplinary leadership curriculum designed to equip emerging collegiate leaders with the competencies and ethical compass needed to generate sustainable community impact.
+                        </p>
+                        <p class="text-secondary lh-lg mb-3">
+                            Emphasizing highly experiential coursework, authentic relationship building, and active field engagement, YCLP provides undergraduate students with hands-on practice in mentorship, team coaching, and civic initiative management.
+                        </p>
+                        <p class="text-secondary lh-lg mb-0">
+                            Through structured partnerships with identified regional schools, YCLP participants plan and conduct intensive peer-mentoring circles, transforming theoretical leadership into real-world social uplift.
+                        </p>
+                    </div>
+                    <div class="col-lg-5 text-center">
+                        <img src="{% static 'stock/Yclp.jpg' %}" class="img-fluid rounded-4 shadow-sm" alt="YCLP Students in Class" style="max-height: 380px; width: 100%; object-fit: cover;">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Applied Curriculum Section -->
+        <section id="curriculum" class="mb-5 pb-4">
+            <div class="card border-0 shadow-sm rounded-4 p-4 p-lg-5" style="border: 1px solid var(--media-border) !important;">
+                <div class="row align-items-center g-4">
+                    <div class="col-lg-5 text-center order-lg-1 order-2">
+                        <img src="{% static 'stock/Yclp(1).jpg' %}" class="img-fluid rounded-4 shadow-sm" alt="YCLP Field Work" style="max-height: 380px; width: 100%; object-fit: cover;">
+                    </div>
+                    <div class="col-lg-7 order-lg-2 order-1">
+                        <span class="badge bg-primary-subtle text-primary px-3 py-2 rounded-pill fw-bold mb-3">Hands-On Field Practicum</span>
+                        <h2 class="h2 fw-bold mb-3" style="font-family: var(--media-font-serif);">Three-Year Structured Experiential Learning</h2>
+                        <p class="text-secondary lh-lg mb-3">
+                            YCLP students are trained to identify and sensitively respond to the psycho-social, emotional, and leadership needs of adolescent students in partner schools. Working under faculty guidance, mentors deploy interactive pedagogical modules&mdash;integrating training workshops, reflective discussions, sports, music, theater, and arts&mdash;across a comprehensive three-year developmental roadmap.
+                        </p>
+                        <p class="text-secondary lh-lg mb-0">
+                            Concurrently, collegiate scholars master the evidence-based <strong>DREAMS (Desire, Readiness, Empowerment, Action, Mastery)</strong> framework. They learn to draft, implement, and quantitatively evaluate tailored intervention plans that deliver durable, measurable improvements in the academic performance and emotional well-being of young mentees.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Course Objectives Section -->
+        <section id="objectives" class="mb-5 pb-4">
+            <div class="text-center mb-4">
+                <span class="badge bg-primary-subtle text-primary px-3 py-1 rounded-pill fw-bold">Core Pillars</span>
+                <h2 class="display-6 fw-bold mt-2" style="font-family: var(--media-font-serif);">Course Objectives</h2>
+                <p class="text-secondary mx-auto" style="max-width: 700px;">
+                    Four strategic foundational pillars guiding every aspect of the YCLP curriculum.
+                </p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="yclp-card">
+                        <div class="yclp-card-icon">
+                            <i class="fas fa-compass"></i>
+                        </div>
+                        <h4 class="h5 fw-bold mb-2 text-primary">Leadership &amp; Entrepreneurship</h4>
+                        <p class="text-secondary small mb-0">
+                            Develop leadership, peer mentoring, organizational management, and entrepreneurial problem-solving skills through community-grounded field projects.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="yclp-card">
+                        <div class="yclp-card-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h4 class="h5 fw-bold mb-2 text-primary">Psycho-Social Assessment</h4>
+                        <p class="text-secondary small mb-0">
+                            Learn observational frameworks and diagnostic tools to accurately assess psycho-social growth, emotional resilience, and leadership trajectory in adolescents.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="yclp-card">
+                        <div class="yclp-card-icon">
+                            <i class="fas fa-hands-helping"></i>
+                        </div>
+                        <h4 class="h5 fw-bold mb-2 text-primary">Community Collaboration</h4>
+                        <p class="text-secondary small mb-0">
+                            Formulate empathetic, constructive responses to pressing community issues through multi-stakeholder collaboration with schools, families, and civic groups.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="yclp-card">
+                        <div class="yclp-card-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <h4 class="h5 fw-bold mb-2 text-primary">Talent-Driven Mentoring</h4>
+                        <p class="text-secondary small mb-0">
+                            Channel artistic talents, academic strengths, and sports aptitudes to nurture and elevate underperforming school students' self-belief and leadership acumen.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Course Learning Outcomes Section -->
+        <section id="outcomes" class="mb-5 pb-4">
+            <div class="text-center mb-4">
+                <span class="badge bg-primary-subtle text-primary px-3 py-1 rounded-pill fw-bold">Graduation Competencies</span>
+                <h2 class="display-6 fw-bold mt-2" style="font-family: var(--media-font-serif);">Course Learning Outcomes</h2>
+                <p class="text-secondary mx-auto" style="max-width: 700px;">
+                    Tangible, demonstrable competencies acquired by every graduate of the YCLP curriculum.
+                </p>
+            </div>
+
+            <div class="card border-0 shadow-sm rounded-4 p-4 p-lg-5" style="border: 1px solid var(--media-border) !important;">
+                <div class="row align-items-center g-4 mb-4">
+                    <div class="col-lg-8">
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <div class="d-flex gap-3">
+                                    <div class="yclp-card-icon flex-shrink-0" style="width: 44px; height: 44px; font-size: 1.1rem; margin-bottom: 0;">
+                                        <i class="fas fa-user-check"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="fw-bold mb-1">Transformative Mentorship</h5>
+                                        <p class="text-secondary small mb-0">Applied mentoring and empathetic leadership techniques that effect positive behavioral and academic transformation.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="d-flex gap-3">
+                                    <div class="yclp-card-icon flex-shrink-0" style="width: 44px; height: 44px; font-size: 1.1rem; margin-bottom: 0;">
+                                        <i class="fas fa-sitemap"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="fw-bold mb-1">Project Management</h5>
+                                        <p class="text-secondary small mb-0">Organizing, coordinating, and managing community development initiatives with ethical stewardship and accountability.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="d-flex gap-3">
+                                    <div class="yclp-card-icon flex-shrink-0" style="width: 44px; height: 44px; font-size: 1.1rem; margin-bottom: 0;">
+                                        <i class="fas fa-clipboard-check"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="fw-bold mb-1">Intervention Evaluation</h5>
+                                        <p class="text-secondary small mb-0">Designing structured community interventions and measuring qualitative and quantitative impact systematically.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="d-flex gap-3">
+                                    <div class="yclp-card-icon flex-shrink-0" style="width: 44px; height: 44px; font-size: 1.1rem; margin-bottom: 0;">
+                                        <i class="fas fa-rocket"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="fw-bold mb-1">Applied DREAMS Mastery</h5>
+                                        <p class="text-secondary small mb-0">Mastering the 5-stage DREAMS model to address complex societal challenges and inspire youth resilience.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 text-center">
+                        <img src="{% static 'stock/Yclp(2).jpg' %}" class="img-fluid rounded-4 shadow-sm" alt="YCLP Learning Outcomes" style="max-height: 280px; width: 100%; object-fit: cover;">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Certification Section -->
+        <section id="certification" class="mb-5 pb-4">
+            <div class="card border-0 shadow-sm rounded-4 p-4 p-lg-5" style="border: 1px solid var(--media-border) !important;">
+                <div class="row align-items-center g-4">
+                    <div class="col-lg-5 text-center">
+                        <img src="{% static 'stock/Yclp(3).jpg' %}" class="img-fluid rounded-4 shadow-sm" alt="YCLP Certification Ceremony" style="max-height: 340px; width: 100%; object-fit: cover;">
+                    </div>
+                    <div class="col-lg-7">
+                        <span class="badge bg-primary-subtle text-primary px-3 py-2 rounded-pill fw-bold mb-3">Accreditation &amp; Recognition</span>
+                        <h2 class="h2 fw-bold mb-3" style="font-family: var(--media-font-serif);">Dual Certification Pathways</h2>
+                        <div class="mb-4 pb-3 border-bottom">
+                            <h5 class="fw-bold text-primary mb-2"><i class="fas fa-university me-2"></i>CHRIST (Deemed to be University) Students</h5>
+                            <p class="text-secondary lh-lg mb-0">
+                                Enrolled undergraduate students from CHRIST (Deemed to be University) receive the official certification of the <strong>Young Community Leadership Program (YCLP)</strong> alongside their final university graduation diploma, formally recognizing their academic coursework and dedicated field hours.
+                            </p>
+                        </div>
+                        <div>
+                            <h5 class="fw-bold text-primary mb-2"><i class="fas fa-globe me-2"></i>External Scholars &amp; Global Volunteers</h5>
+                            <p class="text-secondary lh-lg mb-0">
+                                Participating scholars, exchange students, and volunteers from partnering external institutions receive an accredited, verifiable certificate of completion and community leadership credential issued directly by <strong>LET US DREAM</strong>.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Inquiry & Next Steps Section -->
+        <section id="inquiry" class="mb-4">
+            <div class="card border-0 shadow-sm rounded-4 p-4 p-lg-5 text-center" style="background: linear-gradient(135deg, #f8fafc 0%, #edf4fc 100%); border: 1px solid var(--media-border) !important;">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <span class="badge bg-primary-subtle text-primary px-3 py-1 rounded-pill fw-bold mb-2">Join the Next Cohort</span>
+                        <h3 class="h3 fw-bold mb-2" style="font-family: var(--media-font-serif);">Interested in Participating in YCLP?</h3>
+                        <p class="text-secondary small mb-4">
+                            Connect with our academic coordination office to learn about upcoming course schedules, prerequisite qualifications, and enrollment procedures for the next semester.
+                        </p>
+                        <div class="d-flex flex-wrap justify-content-center gap-3">
+                            <a href="mailto:office@letusdream.org?subject=Inquiry%20regarding%20YCLP%20Course%20Enrollment" class="btn btn-primary px-4 py-2 rounded-pill fw-semibold shadow-sm">
+                                <i class="fas fa-envelope me-2"></i>Contact Course Coordinator
+                            </a>
+                            <a href="{% url 'dreams' 'program' %}" class="btn btn-outline-primary px-4 py-2 rounded-pill fw-semibold">
+                                <i class="fas fa-rocket me-2"></i>Explore DREAMS Intervention Program
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </div>
 </div>
-
-<section class="page-section">
-    <div class="container">
-        <div class="product-item">
-            <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0"
-                src="{% static 'stock/Yclp.jpg' %}" alt="...courses" />
-            <div class="product-item-description d-flex me-auto">
-                <div class="bg-faded p-5 rounded">
-                    <p class="mb-0">The Young Community Leadership Program (YCLP) is to prepare young aspiring leaders
-                        with the
-                        skills and experience needed to generate transformative social change. The interdisciplinary
-                        program emphasizes highly applied coursework, relationship building, and hands-on practical
-                        experiences which are essential components for developing strong leadership, mentoring and
-                        coaching skills. The program involves enhancing the community leadership and mentoring skills
-                        among students of undergraduate programs through planning and organizing peer mentoring programs
-                        in identified schools.
-                        <br>
-                        The students will be trained to be sensitive to the psycho-social and leadership needs of the
-                        teenage students in schools and help them develop those skills through diverse interventions
-                        such as training, mentoring, games, music, theater, activities, etc. for three years with a set
-                        curriculum. In addition, students will be introduced a community intervention model (DREAMS) and
-                        they will be trained how to initiate and implement an action plan to make some substantial and
-                        sustainable positive difference in the life of those lower performing teenagers.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<section class="page-section">
-    <div class="container">
-        <div class="product-item">
-            <div class="product-item-title d-flex">
-                <div class="bg-faded p-5 d-flex me-auto rounded">
-                    <h2 class="section-heading mb-0">
-                        <span class="section-heading-upper">THE YOUNG COMMUNITY LEADERSHIP PROGRAM (YCLP)</span>
-                        <span class="section-heading-lower">Course Objectives</span>
-                    </h2>
-                </div>
-            </div>
-            <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0"
-                src="{% static 'stock/Yclp(1).jpg' %}" alt="..." />
-            <div class="product-item-description d-flex ms-auto">
-                <div class="bg-faded p-5 rounded">
-                    <p class="mb-0"> To develop leadership, mentoring, organizational, entrepreneurial skills through
-                        community based
-                        initiatives
-                        To develop psycho-social and leadership skills development and growth assessment<br>
-                        To respond positively to alleviate social issues through community collaboration
-                        <br>
-                        To utilize skills and talents in developing lower performing students’ psycho-social and
-                        leadership
-                        skills
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<section class="page-section">
-    <div class="container">
-        <div class="product-item">
-            <div class="product-item-title d-flex">
-                <div class="bg-faded p-5 d-flex ms-auto rounded">
-                    <h2 class="section-heading mb-0">
-                        <span class="section-heading-upper">THE YOUNG COMMUNITY LEADERSHIP PROGRAM (YCLP)</span>
-                        <span class="section-heading-lower">Course Learning Outcomes</span>
-                    </h2>
-                </div>
-            </div>
-            <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0"
-                src="{% static 'stock/Yclp(2).jpg' %}" alt="...course-structure.jpg" />
-            <div class="product-item-description d-flex me-auto">
-                <div class="bg-faded p-5 rounded">
-                    <p class="mb-0">Mentoring and leadership skills that help to make positive changes in school
-                        students and in the
-                        community
-                        <br>Organizing and managing skills in community development initiatives
-                        <br>Design of community intervention programs and evaluate impact of the interventions
-                        <br>
-                        Apply the DREAMS Model for community development initiatives.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<section class="page-section">
-    <div class="container">
-        <div class="product-item">
-            <div class="product-item-title d-flex">
-                <div class="bg-faded p-5 d-flex me-auto rounded">
-                    <h2 class="section-heading mb-0">
-                        <span class="section-heading-upper">THE YOUNG COMMUNITY LEADERSHIP PROGRAM (YCLP)</span>
-                        <span class="section-heading-lower">Certification</span>
-                    </h2>
-                </div>
-            </div>
-            <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0"
-                src="{% static 'stock/Yclp(3).jpg' %}" alt="...Expected-outcome3.jpg" />
-            <div class="product-item-description d-flex ms-auto">
-                <div class="bg-faded p-5 rounded">
-                    <p class="mb-0">The students from CHRIST (Deemed to be University) shall receive the certification
-                        of the Young
-                        Community Leadership Program (YCLP) along with their final graduation certificate. Students from
-                        outside will be awarded a separate certificate upon the successful completion of the program
-                        from
-                        LET US DREAM.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 {% endblock %}

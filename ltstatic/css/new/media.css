@@ -2103,3 +2103,509 @@
   font-size: 1.3rem;
   margin: 0 auto 1.2rem;
 }
+
+/* ==========================================================
+   CLUBS SECTION (Overview, Community, Conversation, Professional, Grow & Glow, GYLN)
+   ========================================================== */
+.clubs-page-wrapper {
+  background-color: #ffffff !important;
+  min-height: 100vh;
+  color: var(--media-text-dark);
+}
+
+.club-card {
+  background: #ffffff;
+  border: 1px solid var(--media-border);
+  border-radius: var(--media-radius);
+  padding: 1.75rem 1.5rem;
+  box-shadow: var(--media-shadow-sm);
+  transition: var(--media-transition);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.club-card:hover {
+  border-color: var(--media-border-hover);
+  box-shadow: var(--media-shadow-md);
+  transform: translateY(-3px);
+}
+
+.club-card-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  background: var(--media-primary-light);
+  color: var(--media-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  margin-bottom: 1.2rem;
+}
+
+.club-feature-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: var(--media-radius-sm);
+  margin-bottom: 1.25rem;
+  border: 1px solid #f1f5f9;
+}
+
+.club-infographic-card {
+  background: #ffffff;
+  border: 1px solid var(--media-border);
+  border-radius: var(--media-radius);
+  overflow: hidden;
+  box-shadow: var(--media-shadow-sm);
+  margin-bottom: 1.75rem;
+}
+
+.club-infographic-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.hub-dual-mentor-card {
+  background: #ffffff;
+  border: 1px solid var(--media-border);
+  border-radius: var(--media-radius);
+  padding: 1.5rem;
+  height: 100%;
+  box-shadow: var(--media-shadow-sm);
+  transition: var(--media-transition);
+}
+
+.hub-dual-mentor-card:hover {
+  border-color: var(--media-border-hover);
+  box-shadow: var(--media-shadow-md);
+}
+
+/* ==========================================================================
+   DREAMS & YCLP Modern Styles
+   ========================================================================== */
+.dreams-page-wrapper,
+.yclp-page-wrapper {
+  background: #ffffff !important;
+  color: var(--media-text-dark);
+}
+
+.dreams-stage-card {
+  background: #ffffff;
+  border: 1px solid var(--media-border);
+  border-radius: var(--media-radius);
+  padding: 1.75rem 1.25rem;
+  height: 100%;
+  box-shadow: var(--media-shadow-sm);
+  transition: var(--media-transition);
+  text-align: center;
+  position: relative;
+}
+
+.dreams-stage-card:hover {
+  border-color: var(--media-primary);
+  transform: translateY(-4px);
+  box-shadow: var(--media-shadow-md);
+}
+
+.dreams-stage-badge {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--media-primary-light);
+  color: var(--media-primary);
+  font-weight: 800;
+  font-size: 1.15rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem auto;
+}
+
+.dreams-metric-card {
+  background: #ffffff;
+  border: 1px solid var(--media-border);
+  border-radius: var(--media-radius);
+  padding: 1.5rem 1rem;
+  text-align: center;
+  height: 100%;
+  box-shadow: var(--media-shadow-sm);
+  transition: var(--media-transition);
+}
+
+.dreams-metric-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--media-primary);
+  box-shadow: var(--media-shadow-md);
+}
+
+.dreams-metric-card .metric-icon {
+  font-size: 2rem;
+  color: var(--media-primary);
+  margin-bottom: 0.75rem;
+}
+
+.dreams-metric-card .metric-value {
+  font-size: 1.7rem;
+  font-weight: 800;
+  color: var(--media-primary-dark);
+  font-family: var(--media-font-serif);
+  margin-bottom: 0.25rem;
+}
+
+.dreams-metric-card .metric-label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--media-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.dreams-reach-card {
+  background: #ffffff;
+  border: 1px solid var(--media-border);
+  border-radius: var(--media-radius);
+  padding: 1.5rem;
+  height: 100%;
+  box-shadow: var(--media-shadow-sm);
+  transition: var(--media-transition);
+}
+
+.dreams-reach-card:hover {
+  border-color: var(--media-border-hover);
+  box-shadow: var(--media-shadow-md);
+}
+
+.yclp-highlight-badge {
+  background: #f8fafc;
+  border: 1px solid var(--media-border);
+  border-radius: 50px;
+  padding: 0.6rem 1.25rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--media-text-dark);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: var(--media-transition);
+}
+
+.yclp-highlight-badge:hover {
+  background: #ffffff;
+  border-color: var(--media-primary);
+}
+
+.yclp-highlight-badge i {
+  color: var(--media-primary);
+}
+
+.yclp-card {
+  background: #ffffff;
+  border: 1px solid var(--media-border);
+  border-radius: var(--media-radius);
+  padding: 1.75rem;
+  height: 100%;
+  box-shadow: var(--media-shadow-sm);
+  transition: var(--media-transition);
+}
+
+.yclp-card:hover {
+  border-color: var(--media-primary);
+  transform: translateY(-3px);
+  box-shadow: var(--media-shadow-md);
+}
+
+.yclp-card-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  background: var(--media-primary-light);
+  color: var(--media-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  margin-bottom: 1.2rem;
+}
+
+/* ==========================================================================
+   Conference Pages Modern Redesign
+   ========================================================================== */
+.conference-page-wrapper {
+  background: #ffffff !important;
+  color: var(--media-text);
+  font-family: var(--media-font);
+}
+
+.conference-page-wrapper section {
+  background: #ffffff !important;
+}
+
+.conference-section {
+  padding: 5rem 0;
+  position: relative;
+  background: #ffffff !important;
+}
+
+.conference-section:first-of-type {
+  padding-top: 3.5rem;
+}
+
+/* Conference Type Card */
+.conf-type-card {
+  background: #ffffff;
+  border: 1px solid var(--media-border);
+  border-radius: var(--media-radius);
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--media-shadow-sm);
+  transition: var(--media-transition);
+  text-decoration: none;
+  color: inherit;
+}
+
+.conf-type-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--media-primary);
+  box-shadow: var(--media-shadow-lg);
+  color: inherit;
+}
+
+.conf-type-img-wrap {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  background: #f1f5f9;
+}
+
+.conf-type-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.conf-type-card:hover .conf-type-img-wrap img {
+  transform: scale(1.04);
+}
+
+.conf-type-body {
+  padding: 2rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+/* Location Card */
+.conf-location-card {
+  background: #ffffff;
+  border: 1px solid var(--media-border);
+  border-radius: var(--media-radius);
+  padding: 1.75rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--media-shadow-sm);
+  transition: var(--media-transition);
+}
+
+.conf-location-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--media-primary);
+  box-shadow: var(--media-shadow-md);
+}
+
+.conf-location-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.conf-location-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  background: var(--media-primary-light);
+  color: var(--media-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+  flex-shrink: 0;
+}
+
+.conf-location-meta {
+  margin-bottom: 1.25rem;
+  flex-grow: 1;
+}
+
+.conf-location-meta p {
+  margin-bottom: 0.4rem;
+  font-size: 0.92rem;
+  color: var(--media-muted);
+}
+
+.conf-location-meta strong {
+  color: var(--media-dark);
+}
+
+/* Timeline Cards */
+.conf-timeline-card {
+  background: #ffffff;
+  border: 1px solid var(--media-border);
+  border-radius: var(--media-radius);
+  padding: 2rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-shadow: var(--media-shadow-sm);
+  transition: var(--media-transition);
+}
+
+.conf-timeline-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--media-primary);
+  box-shadow: var(--media-shadow-md);
+}
+
+.conf-timeline-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  background: var(--media-primary-light);
+  color: var(--media-primary);
+  margin-bottom: 1rem;
+  width: fit-content;
+}
+
+/* Video Gallery Container in Resource Page */
+.conf-video-player-card {
+  background: #ffffff;
+  border: 1px solid var(--media-border);
+  border-radius: var(--media-radius);
+  box-shadow: var(--media-shadow-md);
+  overflow: hidden;
+  margin-bottom: 2.5rem;
+}
+
+.conf-video-counter-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.75rem;
+  border-bottom: 1px solid var(--media-border);
+  background: #f8fafc;
+}
+
+.conf-thumb-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: 0.85rem;
+  margin-top: 1rem;
+}
+
+.conf-thumb-item {
+  border: 2px solid transparent;
+  border-radius: var(--media-radius-sm);
+  overflow: hidden;
+  cursor: pointer;
+  background: #000;
+  position: relative;
+  aspect-ratio: 16 / 9;
+  transition: var(--media-transition);
+}
+
+.conf-thumb-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+  transition: opacity 0.25s ease;
+}
+
+.conf-thumb-item:hover img {
+  opacity: 1;
+}
+
+.conf-thumb-item:hover {
+  border-color: var(--media-primary);
+  transform: scale(1.03);
+}
+
+.conf-thumb-item.active {
+  border-color: var(--media-primary);
+  box-shadow: 0 0 0 2px var(--media-primary-light);
+}
+
+.conf-thumb-item.active img {
+  opacity: 1;
+}
+
+.conf-thumb-num {
+  position: absolute;
+  bottom: 4px;
+  right: 4px;
+  background: rgba(0, 0, 0, 0.75);
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 1px 5px;
+  border-radius: 4px;
+}
+
+/* Document Download List Item */
+.doc-download-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.85rem 1.15rem;
+  background: #f8fafc;
+  border: 1px solid var(--media-border);
+  border-radius: var(--media-radius-sm);
+  text-decoration: none;
+  color: inherit;
+  transition: var(--media-transition);
+}
+
+.doc-download-item:hover {
+  background: #ffffff;
+  border-color: var(--media-primary);
+  box-shadow: var(--media-shadow-sm);
+  transform: translateX(3px);
+  color: inherit;
+}
+
+.doc-download-item .doc-download-arrow {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1px solid var(--media-border);
+  color: var(--media-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+  transition: var(--media-transition);
+}
+
+.doc-download-item:hover .doc-download-arrow {
+  background: var(--media-primary);
+  color: #ffffff;
+  border-color: var(--media-primary);
+  transform: translateY(2px);
+}
+
+
+

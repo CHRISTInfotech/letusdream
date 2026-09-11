@@ -1,258 +1,228 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title %}
-    Conversation Club
-{% endblock title %}
+{% block title %}Conversation Club | Let Us Dream{% endblock title %}
 
 {% block links %}
+<link rel="stylesheet" href="{% static 'css/new/media.css' %}?v=16" type="text/css">
 {% endblock links %}
 
-{% block extraStyles %}
-{% endblock extraStyles %}
-
+{# Suppress standalone legacy breadcrumb row #}
+{% block breadcrumb_section %}{% endblock breadcrumb_section %}
 
 {% block content %}
-    <!-- Page Header -->
-        <section class="">
+<div class="media-page-wrapper clubs-page-wrapper">
+    <!-- Minimalist Page Hero with Integrated Breadcrumb -->
+    <section class="media-hero">
         <div class="container">
+            {% if breadcrumbs %}
+            <nav aria-label="breadcrumb" class="media-hero-breadcrumb">
+                <ol class="breadcrumb-minimal">
+                    {% for breadcrumb in breadcrumbs %}
+                        {% if not breadcrumb.active %}
+                            <li class="breadcrumb-item-min">
+                                {% if breadcrumb.url %}
+                                    <a href="{% url breadcrumb.url %}">
+                                        <i class="{{ breadcrumb.icon }}"></i>
+                                        <span>{{ breadcrumb.name }}</span>
+                                    </a>
+                                {% else %}
+                                    <span>
+                                        <i class="{{ breadcrumb.icon }}"></i>
+                                        <span>{{ breadcrumb.name }}</span>
+                                    </span>
+                                {% endif %}
+                            </li>
+                            <li class="breadcrumb-sep-min">/</li>
+                        {% else %}
+                            <li class="breadcrumb-item-min active">
+                                <i class="{{ breadcrumb.icon }}"></i>
+                                <span>{{ breadcrumb.name }}</span>
+                            </li>
+                        {% endif %}
+                    {% endfor %}
+                </ol>
+            </nav>
+            {% endif %}
+
             <div class="row justify-content-center text-center">
-                <div class="col-lg-8 mb-5">
-                   
-                    <h1 class="display-4 fw-bold mb-2">Conversation Club</h1>
-                    <p class="lead mb-3">
-                       Meaningful dialogue and genuine connection in a digital world
+                <div class="col-lg-8 col-md-10">
+                    <span class="media-kicker">Let Us Dream • Dialogue & Global Empathy</span>
+                    <h1 class="media-hero-title">Conversation Club</h1>
+                    <p class="media-hero-lead">
+                        Meaningful dialogue and genuine connection in an increasingly digital world, bridging cultures and perspectives.
                     </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Welcome Section -->
-    <div class="content-section">
+    <!-- Quick Navigation Sticky Jump Pills -->
+    <div class="media-nav-wrapper">
         <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-12">
-                    <div class="content-card text-center fade-in">
-                        <div class="content-card-icon mx-auto mb-4">
-                            <i class="fas fa-comments"></i>
-                        </div>
-                        <h2 class="text-primary-blue font-primary mb-4">Welcome to the Conversation Club</h2>
-                        <p class="text-medium lh-lg justify">
-                            In a world where connections can often feel distant, the Conversation Club serves as a vibrant online forum for meaningful dialogue and genuine
-                            connection. Borne out of the challenges posed by the COVID-19 pandemic, this club was established to foster a welcoming and inclusive space where members
-                            can engage in reflective conversations and share their diverse experiences.
-                        </p>
-                    </div>
-                </div>
+            <div class="media-nav-scroll justify-content-start justify-content-md-center">
+                <a href="#welcome" class="media-pill active">
+                    <i class="fas fa-comments me-1"></i>Welcome
+                </a>
+                <a href="#about" class="media-pill">
+                    <i class="fas fa-info-circle me-1"></i>About the Club
+                </a>
+                <a href="#objectives" class="media-pill">
+                    <i class="fas fa-bullseye me-1"></i>Objectives
+                </a>
+                <a href="#how-it-works" class="media-pill">
+                    <i class="fas fa-cogs me-1"></i>How It Works
+                </a>
+                <a href="#leadership" class="media-pill">
+                    <i class="fas fa-user-friends me-1"></i>Leadership
+                </a>
+                <a href="#join" class="media-pill">
+                    <i class="fas fa-envelope me-1"></i>Join Us
+                </a>
             </div>
         </div>
     </div>
+
+    <!-- Welcome Section -->
+    <section id="welcome" class="py-5">
+        <div class="container">
+            <div class="production-hero-card text-center mb-4">
+                <div class="col-lg-10 mx-auto">
+                    <div class="club-card-icon mx-auto mb-3">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <span class="badge bg-primary text-white rounded-pill px-3 py-1 mb-3">Reflective Dialogue</span>
+                    <h2 class="fw-bold mb-3" style="color: var(--media-text-dark); font-size: 1.75rem;">
+                        Welcome to the Conversation Club
+                    </h2>
+                    <p class="text-muted lh-lg mb-0 fs-6">
+                        In a fast-paced world where digital interactions can frequently feel distant, the Conversation Club serves as a vibrant online forum for genuine dialogue and deep human connection. Established amidst the isolation of the COVID-19 pandemic, this club was founded to provide a welcoming, non-judgmental space where participants from around the globe engage in thoughtful conversations, share life experiences, and cultivate active listening skills.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- About Section -->
-    <div class="content-section bg-light-gray">
+    <section id="about" class="py-4">
         <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="section-title fade-in">About Our Club</h2>
+            <div class="text-center mb-4">
+                <span class="media-kicker">Our Heritage</span>
+                <h2 class="media-section-title text-center">About Our Community</h2>
             </div>
-            
-            <div class="row justify-content-center">
-                <div class="col-lg-12">
-                    <div class=" fade-in">
-                        <img src="{% static '/clubs/2.png' %}" 
-                             alt="About Conversation Club" 
-                             class="img-fluid rounded-custom shadow-custom hover-scale w-100" 
-                             id="aboutImage" 
-                             style="cursor: pointer; transition: var(--transition-slow);">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Objectives Section -->
-    <div class="content-section">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="section-title fade-in mb-2">Our Objectives</h2>
-                <p class="text-medium fade-in">Building meaningful connections through purposeful conversations</p>
-            </div>
-            
-            <div class="row justify-content-center">
-                <div class="col-lg-12">
-                    <div class="fade-in">
-                        <img src="{% static '/clubs/3.png' %}" 
-                             alt="Conversation Club Objectives" 
-                             class="img-fluid rounded-custom shadow-custom hover-scale w-100" 
-                             id="objectivesImage" 
-                             style="cursor: pointer; transition: var(--transition-slow);">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- How It Works Section -->
-    <div class="content-section bg-light-gray">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="section-title fade-in mb-2">How It Works</h2>
-                <p class="text-medium fade-in">Simple steps to join our vibrant community</p>
-            </div>
-            
-            <div class="row justify-content-center">
-                <div class="col-lg-12">
-                    <div class=" fade-in">
-                        <img src="{% static '/clubs/4.png' %}" 
-                             alt="How Conversation Club Works" 
-                             class="img-fluid rounded-custom shadow-custom hover-scale w-100" 
-                             id="howItWorksImage" 
-                             style="cursor: pointer; transition: var(--transition-slow);">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Get Involved Section -->
-    <div class="content-section">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="section-title fade-in">Get Involved</h2>
-            </div>
-            
             <div class="row justify-content-center">
                 <div class="col-lg-10">
-                    <div class="content-card text-center fade-in">
-                        <div class="content-card-icon mx-auto mb-4 bg-gradient-secondary">
-                            <i class="fas fa-user-plus"></i>
-                        </div>
-                        <p class="text-medium lh-lg justify mb-4">
-                            We welcome all intellectually curious individuals to join the Conversation Club and contribute to our enriching discussions. Whether
-                            you're looking to unwind after a long day or seeking meaningful exchanges of ideas, our club offers a space to engage, reflect, and grow together.
-                            Join us in creating a community where every voice matters, and every conversation counts. We can't wait to hear your thoughts!
-                        </p>
-                        
-                        <div class="d-flex flex-wrap justify-content-center gap-3">
-                            <a href="mailto:club@letusdream.org" class="btn btn-primary btn-lg">
-                                <i class="fas fa-envelope me-2"></i>Join Our Club
-                            </a>
-                            <a href="#leadership" class="btn btn-outline-primary btn-lg">
-                                <i class="fas fa-users me-2"></i>Meet Our Team
-                            </a>
-                        </div>
+                    <div class="club-infographic-card">
+                        <img src="{% static '/clubs/2.png' %}" alt="About Conversation Club" class="img-fluid w-100">
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- Leadership Team Section -->
-    <div class="content-section bg-light-gray" id="leadership">
+    <!-- Objectives Section -->
+    <section id="objectives" class="py-5">
+        <div class="container">
+            <div class="text-center mb-4">
+                <span class="media-kicker">Guiding Goals</span>
+                <h2 class="media-section-title text-center">Our Club Objectives</h2>
+                <p class="media-section-desc mx-auto text-center" style="max-width: 650px;">
+                    Building meaningful connections through purposeful, intellectually stimulating conversations.
+                </p>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="club-infographic-card">
+                        <img src="{% static '/clubs/3.png' %}" alt="Conversation Club Objectives" class="img-fluid w-100">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="py-4">
+        <div class="container">
+            <div class="text-center mb-4">
+                <span class="media-kicker">Participation Flow</span>
+                <h2 class="media-section-title text-center">How It Works</h2>
+                <p class="media-section-desc mx-auto text-center" style="max-width: 650px;">
+                    Simple, welcoming steps to join our weekly and monthly interactive sessions.
+                </p>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="club-infographic-card">
+                        <img src="{% static '/clubs/4.png' %}" alt="How Conversation Club Works" class="img-fluid w-100">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Leadership Section -->
+    <section id="leadership" class="py-5">
         <div class="container">
             <div class="text-center mb-5">
-                <h2 class="section-title fade-in mb-2">Leadership Team</h2>
-                <p class="text-medium fade-in">Meet the dedicated leaders guiding our conversations</p>
+                <span class="media-kicker">Club Guidance</span>
+                <h2 class="media-section-title text-center">Leadership Team</h2>
+                <p class="media-section-desc mx-auto text-center" style="max-width: 650px;">
+                    Meet the international mentors and facilitators guiding our conversations.
+                </p>
             </div>
 
             <div class="row g-4 justify-content-center">
-                <div class="col-lg-4 col-md-6 fade-in">
-                    <div class="content-card card hover-lift h-100 text-center">
-                        <img src="{% static 'clubs/leadership/Pauline.png' %}" 
-                             class="people-avatar" 
-                             alt="Dr Pauline">
-                        <h5 class="text-primary-blue font-primary">Dr Pauline</h5>
-                        <p class="text-medium">Retired Professor, Louisiana Tech University</p>
-                        
+                <!-- Dr Pauline -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="leader-card">
+                        <img src="{% static 'clubs/leadership/Pauline.png' %}" alt="Dr Pauline" class="leader-avatar">
+                        <span class="leader-role-badge badge-senior">Senior Mentor</span>
+                        <h4 class="leader-name">Dr Pauline</h4>
+                        <div class="leader-affiliation">Retired Professor, Louisiana Tech University, USA</div>
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 fade-in">
-                    <div class="content-card card hover-lift h-100 text-center">
-                        <img src="{% static 'clubs/leadership/Lisa.png' %}" 
-                             class="people-avatar" 
-                             alt="Dr Lisa Jungkamp">
-                        <h5 class="text-primary-blue font-primary">Dr Lisa Jungkamp</h5>
-                        <p class="text-medium">Catholic University of Applied Sciences, Cologne</p>
-                        
+                <!-- Dr Lisa Jungkamp -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="leader-card">
+                        <img src="{% static 'clubs/leadership/Lisa.png' %}" alt="Dr Lisa Jungkamp" class="leader-avatar">
+                        <span class="leader-role-badge badge-senior">Senior Mentor</span>
+                        <h4 class="leader-name">Dr Lisa Jungkamp</h4>
+                        <div class="leader-affiliation">Catholic University of Applied Sciences, Cologne, Germany</div>
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 fade-in">
-                    <div class="content-card card hover-lift h-100 text-center">
-                        <img src="{% static 'clubs/leadership/Lidiya.png' %}" 
-                             class="people-avatar" 
-                             alt="Ms. Lidiya">
-                        <h5 class="text-primary-blue font-primary">Ms. Lidiya</h5>
-                        <p class="text-medium">Youth Lead</p>
-                        
+                <!-- Ms. Lidiya -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="leader-card">
+                        <img src="{% static 'clubs/leadership/Lidiya.png' %}" alt="Ms. Lidiya" class="leader-avatar">
+                        <span class="leader-role-badge badge-youth">Youth Lead</span>
+                        <h4 class="leader-name">Ms. Lidiya</h4>
+                        <div class="leader-affiliation">Youth Lead, Conversation Club</div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
+
+    <!-- Join Us Section -->
+    <section id="join" class="py-5 mb-5">
+        <div class="container">
+            <div class="p-4 p-md-5 rounded-4 text-center" style="background: #f8fafc; border: 1px solid #e2e8f0;">
+                <div class="col-lg-8 mx-auto">
+                    <span class="media-kicker">Join the Circle</span>
+                    <h2 class="fw-bold mb-3" style="color: var(--media-text-dark); font-size: 1.75rem;">
+                        Be Part of Our Next Conversation
+                    </h2>
+                    <p class="text-muted lh-lg mb-4">
+                        We welcome all curious individuals seeking meaningful exchanges of ideas, cross-cultural empathy, and personal reflection. Every voice matters in our circle.
+                    </p>
+                    <a href="mailto:club@letusdream.org" class="btn btn-primary rounded-pill px-4 py-2 fw-semibold">
+                        <i class="fas fa-envelope me-2"></i>Email: club@letusdream.org
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
 {% endblock content %}
-
-{% block extraScripts %}
-
-<script>
-// Enhanced scroll animations with intersection observer
-document.addEventListener('DOMContentLoaded', function() {
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
-
-    const observer = new IntersectionObserver(function(entries) {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-                // Add stagger delay for multiple elements
-                const index = Array.from(entry.target.parentNode.children).indexOf(entry.target);
-                entry.target.style.transitionDelay = `${index * 0.1}s`;
-            }
-        });
-    }, observerOptions);
-
-    // Observe all fade-in elements
-    document.querySelectorAll('.fade-in').forEach(el => {
-        observer.observe(el);
-    });
-
-    // Expandable image functionality for all images
-    const expandableImages = ['aboutImage', 'objectivesImage', 'howItWorksImage'];
-    
-    expandableImages.forEach(imageId => {
-        const image = document.getElementById(imageId);
-        if (image) {
-            image.addEventListener('click', function() {
-                if (this.style.transform === 'scale(1.2)') {
-                    this.style.transform = 'scale(1)';
-                    this.style.zIndex = '1';
-                    this.style.position = 'relative';
-                } else {
-                    this.style.transform = 'scale(1.2)';
-                                        this.style.zIndex = '1000';
-                    this.style.position = 'relative';
-                }
-            });
-        }
-    });
-
-    // Smooth scrolling for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
-        });
-    });
-});
-</script>
-
-{% endblock extraScripts %}

@@ -5,1368 +5,775 @@
 Triennial Conferences - Let Us Dream
 {% endblock title %}
 
-{% block links %}
+{% block extraStyles %}
+<link rel="stylesheet" href="{% static 'css/new/media.css' %}">
+<style>
+    /* Scoped Upcoming 2026 Showcase */
+    .triennial-upcoming-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1.5rem;
+        align-items: stretch;
+    }
 
-{% endblock links %}
+    .triennial-hero-panel {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        padding: 2rem;
+        border-radius: var(--media-radius);
+        background: #0d477f;
+        color: #ffffff;
+        box-shadow: var(--media-shadow-md);
+    }
+
+    .triennial-hero-panel .badge-kicker {
+        display: inline-flex;
+        align-items: center;
+        padding: 0.3rem 0.85rem;
+        border-radius: 20px;
+        background: rgba(255, 255, 255, 0.16);
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        color: #ffffff;
+        font-size: 0.75rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        width: fit-content;
+        margin-bottom: 1rem;
+    }
+
+    .triennial-meta-box {
+        display: flex;
+        align-items: center;
+        gap: 0.85rem;
+        padding: 0.75rem 1rem;
+        border-radius: var(--media-radius-sm);
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        margin-bottom: 0.75rem;
+    }
+
+    .triennial-meta-box i {
+        width: 36px;
+        height: 36px;
+        border-radius: 8px;
+        background: #ffffff;
+        color: #0d477f;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1rem;
+        flex-shrink: 0;
+    }
+
+    .triennial-poster-card {
+        border: 1px solid var(--media-border);
+        border-radius: var(--media-radius);
+        overflow: hidden;
+        background: #ffffff;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        box-shadow: var(--media-shadow-sm);
+        transition: var(--media-transition);
+    }
+
+    .triennial-poster-card:hover {
+        transform: translateY(-4px);
+        box-shadow: var(--media-shadow-md);
+        border-color: var(--media-primary);
+    }
+
+    .triennial-poster-img-wrap {
+        width: 100%;
+        aspect-ratio: 210 / 297;
+        overflow: hidden;
+        background: #f8fafc;
+    }
+
+    .triennial-poster-img-wrap img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    .triennial-poster-actions {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.5rem;
+        padding: 1rem;
+        border-top: 1px solid var(--media-border);
+        background: #ffffff;
+        margin-top: auto;
+    }
+
+    @media (max-width: 991px) {
+        .triennial-upcoming-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+{% endblock extraStyles %}
+
+{% block breadcrumb_section %}{% endblock %}
 
 {% block content %}
-
-
-<!-- Hero Section -->
-<section class="">
-    <div class="container">
-        <div class="row justify-content-center text-center">
-            <div class="col-lg-12">
-                <h1 class="hero-title fade-in">Triennial International Conferences</h1>
-                <p class="hero-subtitle fade-in">Connecting Local Communities and Service Initiatives Through Global
-                    Networking</p>
+<div class="conference-page-wrapper">
+    <!-- Hero Header -->
+    <section class="media-hero">
+        <div class="container">
+            {% if breadcrumbs %}
+            <nav aria-label="breadcrumb" class="media-hero-breadcrumb">
+                <ol class="breadcrumb-minimal">
+                    {% for breadcrumb in breadcrumbs %}
+                        {% if not breadcrumb.active %}
+                            <li class="breadcrumb-item-min">
+                                {% if breadcrumb.url %}
+                                    <a href="{% url breadcrumb.url %}">
+                                        <i class="{{ breadcrumb.icon }}"></i>
+                                        <span>{{ breadcrumb.name }}</span>
+                                    </a>
+                                {% else %}
+                                    <span>
+                                        <i class="{{ breadcrumb.icon }}"></i>
+                                        <span>{{ breadcrumb.name }}</span>
+                                    </span>
+                                {% endif %}
+                            </li>
+                            <li class="breadcrumb-sep-min">/</li>
+                        {% else %}
+                            <li class="breadcrumb-item-min active">
+                                <i class="{{ breadcrumb.icon }}"></i>
+                                <span>{{ breadcrumb.name }}</span>
+                            </li>
+                        {% endif %}
+                    {% endfor %}
+                </ol>
+            </nav>
+            {% endif %}
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-8 col-md-10">
+                    <span class="media-kicker">LET US DREAM • INTERNATIONAL TRIENNIAL GATHERING</span>
+                    <h1 class="media-hero-title">Triennial International Conferences</h1>
+                    <p class="media-hero-lead">
+                        Connecting local communities and service initiatives through global networking, empirical scholarship, and celebration of unsung heroes.
+                    </p>
+                </div>
             </div>
-            <div class="col-lg-12 text-center">
-                <p class="lead text-medium">
-                    The Let Us Dream (LUD) Triennial International Conference takes place once every three years.
-                    It brings together LUD chapters and partners from around the world for sharing, learning from,
-                    and celebrating the diversity of people's selfless acts of care, compassion, and concern for
-                    community.
-                </p>
+        </div>
+    </section>
+
+    <!-- Sticky Navigation Pills -->
+    <div class="media-nav-wrapper">
+        <div class="container">
+            <div class="media-nav-scroll justify-content-start justify-content-md-center">
+                <a href="#upcoming-2026" class="media-pill active"><i class="fas fa-star me-1"></i>Up Next: 2026</a>
+                <a href="#editions" class="media-pill"><i class="fas fa-layer-group me-1"></i>Conference Editions</a>
+                <a href="#impact" class="media-pill"><i class="fas fa-chart-line me-1"></i>Our Impact</a>
+                <a href="#history" class="media-pill"><i class="fas fa-history me-1"></i>History & Vision</a>
+                <a href="#goals" class="media-pill"><i class="fas fa-bullseye me-1"></i>Our Goals</a>
+                <a href="#what-to-expect" class="media-pill"><i class="fas fa-lightbulb me-1"></i>What to Expect</a>
+                <a href="#roadmap" class="media-pill"><i class="fas fa-route me-1"></i>Roadmap</a>
+                <a href="#partners" class="media-pill"><i class="fas fa-handshake me-1"></i>Partners</a>
             </div>
         </div>
     </div>
-</section>
 
-<!-- Upcoming Conference Section -->
-<section class="section">
-    <div class="container">
-        <div class="upcoming-showcase">
-            <div class="upcoming-conference-card">
-                <div class="content-card upcoming-conference-panel text-white">
-                    <span class="upcoming-kicker">Up Next</span>
-                    <h2 class="mb-2 text-white">Triennial Conference 2026</h2>
-                    <p class="upcoming-theme mb-2">Local Wisdom, Global Influence</p>
-                    <p class="upcoming-subtheme mb-3">Resilient Glocal Communities for Meaningful Humanity</p>
-                    <p class="upcoming-description mb-3">
-                        Three days of exchange, partnership, and shared practice across the LUD network.
-                    </p>
+    <!-- Upcoming 2026 Section -->
+    <section id="upcoming-2026" class="conference-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <span class="media-kicker">FLAGSHIP INTERNATIONAL SUMMIT</span>
+                <h2 class="media-section-title">Triennial Conference 2026</h2>
+                <p class="media-section-lead">Three days of global knowledge exchange, grassroots partnership, and shared practice</p>
+            </div>
 
-                    <div class="upcoming-meta-grid">
-                        <div class="upcoming-meta-item">
-                            <div class="upcoming-meta-icon"><i class="fas fa-calendar-alt"></i></div>
+            <div class="triennial-upcoming-grid">
+                <!-- Panel 1: Conference Overview -->
+                <div>
+                    <div class="triennial-hero-panel">
+                        <span class="badge-kicker">UP NEXT IN 2026</span>
+                        <h3 class="h3 fw-bold text-white mb-2">Triennial Conference 2026</h3>
+                        <h5 class="h6 fw-semibold text-white-50 mb-1">Theme: Local Wisdom, Global Influence</h5>
+                        <p class="small text-white-50 mb-4">Resilient Glocal Communities for Meaningful Humanity</p>
+                        
+                        <div class="triennial-meta-box">
+                            <i class="fas fa-calendar-alt"></i>
                             <div>
-                                <div class="upcoming-meta-label">Date</div>
-                                <div class="upcoming-meta-value">Nov 19-21, 2026</div>
+                                <div class="text-uppercase text-white-50" style="font-size: 0.72rem; font-weight: 700;">Date</div>
+                                <div class="fw-bold small text-white">November 19 – 21, 2026</div>
                             </div>
                         </div>
-                        <div class="upcoming-meta-item">
-                            <div class="upcoming-meta-icon"><i class="fas fa-map-marker-alt"></i></div>
+
+                        <div class="triennial-meta-box">
+                            <i class="fas fa-map-marker-alt"></i>
                             <div>
-                                <div class="upcoming-meta-label">Venue</div>
-                                <div class="upcoming-meta-value">Christ University, Bangalore</div>
+                                <div class="text-uppercase text-white-50" style="font-size: 0.72rem; font-weight: 700;">Venue</div>
+                                <div class="fw-bold small text-white">Christ University, Bangalore, India</div>
                             </div>
                         </div>
-                        <div class="upcoming-meta-item">
-                            <div class="upcoming-meta-icon"><i class="fas fa-users"></i></div>
+
+                        <div class="triennial-meta-box mb-4">
+                            <i class="fas fa-users"></i>
                             <div>
-                                <div class="upcoming-meta-label">Host</div>
-                                <div class="upcoming-meta-value">Let Us Dream x Christ University</div>
+                                <div class="text-uppercase text-white-50" style="font-size: 0.72rem; font-weight: 700;">Host</div>
+                                <div class="fw-bold small text-white">Let Us Dream & Christ University</div>
                             </div>
                         </div>
-                    </div>
-                </div>
 
-                <div class="upcoming-poster-actions upcoming-card-actions">
-                    <a href="{% url 'tc-2026' %}" class="btn upcoming-primary-action upcoming-card-detail fw-bold">
-                        <i class="fas fa-info-circle me-2"></i>View Details
-                    </a>
-                    <a href="https://cmt.letusdream.org/one_time_registration/e3c2ffb2-39ea-44bc-a173-233f01dc8cb1"
-                        target="_blank" rel="noopener" class="btn upcoming-secondary-action upcoming-card-register fw-bold">
-                        <i class="fas fa-user-plus me-2"></i>Register Now
-                    </a>
-                </div>
-            </div>
-
-            <div class="upcoming-posters" aria-label="Triennial Conference 2026 posters">
-                <figure class="upcoming-poster">
-                    <div class="upcoming-poster-frame">
-                        <img src="{% static '2026/ChangeMaker.png' %}"
-                            alt="Nominate a Changemaker for the Let Us Dream Triennial International Community Conference 2026">
-                    </div>
-                    <figcaption class="upcoming-poster-actions">
-                        <a href="{% static '2026/Changemakers Nomination.pdf' %}" target="_blank" rel="noopener"
-                            class="btn upcoming-poster-brochure fw-bold">
-                            <i class="fas fa-file-pdf me-2"></i>View Brochure
-                        </a>
-                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSe_dlXsd2HbnnqJpT-4UKZk5u9boE1tiGZ4EB8uvsfm8zvcAA/viewform"
-                            target="_blank" rel="noopener" class="btn upcoming-poster-register fw-bold">
-                            <i class="fas fa-user-plus me-2"></i>Register
-                        </a>
-                    </figcaption>
-                </figure>
-                <figure class="upcoming-poster">
-                    <div class="upcoming-poster-frame">
-                        <img src="{% static '2026/FilmFest.png' %}"
-                            alt="Lights Camera Impact short film contest for the Let Us Dream Triennial International Community Conference 2026">
-                    </div>
-                    <figcaption class="upcoming-poster-actions">
-                        <a href="{% static '2026/Short Film Contest Website Content.pdf' %}" target="_blank" rel="noopener"
-                            class="btn upcoming-poster-brochure fw-bold">
-                            <i class="fas fa-file-pdf me-2"></i>View Brochure
-                        </a>
-                        <a href="https://forms.gle/XNnqSyJpxXPpPeyVA"
-                            target="_blank" rel="noopener" class="btn upcoming-poster-register fw-bold">
-                            <i class="fas fa-film me-2"></i>Register
-                        </a>
-                    </figcaption>
-                </figure>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Conferences Section -->
-<section class="section bg-light-gray">
-    <div class="container">
-        <div class="row justify-content-center text-center mb-5">
-            <div class="col-lg-8">
-                <h2 class="section-title text-primary-blue mb-1">Conferences</h2>
-                <div class="text-medium">Explore our triennial conference journey, including the upcoming 2026 event</div>
-            </div>
-        </div>
-
-        <div class="row g-4">
-            <!-- Conference 2026 -->
-            <div class="col-lg-4">
-                <div class="card content-card conference-overview-card hover-lift h-100">
-                    <div class="position-relative overflow-hidden">
-                        <img src="{% static '2026/triennial/2026.png' %}"
-                            class="card-img-top img-fluid" alt="Conference 2026" style="object-fit: cover;">
-                        <div class="position-absolute top-0 end-0 m-3">
-                            <span class="badge bg-gradient-primary text-white p-2 rounded-custom">
-                                <i class="fas fa-calendar-alt me-1"></i>
-                                Nov 19-21, 2026
-                            </span>
+                        <div class="d-flex flex-column flex-sm-row gap-2 mt-auto">
+                            <a href="{% url 'tc-2026' %}" class="btn btn-light flex-grow-1 py-2 fw-bold text-dark rounded-pill">
+                                <i class="fas fa-info-circle me-1"></i>View Details
+                            </a>
+                            <a href="https://cmt.letusdream.org/one_time_registration/e3c2ffb2-39ea-44bc-a173-233f01dc8cb1" 
+                               target="_blank" rel="noopener" class="btn btn-outline-light flex-grow-1 py-2 fw-bold rounded-pill">
+                                <i class="fas fa-user-plus me-1"></i>Register
+                            </a>
                         </div>
                     </div>
-                    <div class="card-body">
-                        <h4 class="card-title text-primary-blue">Conference 2026</h4>
-                        <p class="card-text text-medium">Triennial International Community Conference 2026 at Christ University, Bangalore.</p>
-                        <a href="{% url 'tc-2026' %}" class="btn btn-outline-primary rounded-custom">
-                            Learn More <i class="fas fa-arrow-right ms-2"></i>
-                        </a>
-                    </div>
                 </div>
-            </div>
 
-            <!-- Conference 2023 -->
-            <div class="col-lg-4">
-                <div class="card content-card conference-overview-card hover-lift h-100">
-                    <div class="position-relative overflow-hidden">
-                        <img src="{% static 'conference/triennial/2023/triennial2023.png' %}"
-                            class="card-img-top img-fluid" alt="Conference 2023" style="object-fit: cover;">
-                        <div class="position-absolute top-0 end-0 m-3">
-                            <span class="badge bg-gradient-primary text-white p-2 rounded-custom">
-                                <i class="fas fa-calendar-alt me-1"></i>
-                                Nov 3-5, 2023
-                            </span>
+                <!-- Panel 2: Changemaker Poster -->
+                <div>
+                    <div class="triennial-poster-card">
+                        <div class="triennial-poster-img-wrap" style="background: #052b60;">
+                            <img src="{% static '2026/ChangeMaker.png' %}" alt="Nominate a Changemaker 2026">
+                        </div>
+                        <div class="p-3">
+                            <h5 class="fw-bold text-dark mb-1 small">Changemakers Nomination</h5>
+                            <p class="text-muted" style="font-size: 0.8rem; margin-bottom: 0;">Nominate unsung heroes and community visionaries.</p>
+                        </div>
+                        <div class="triennial-poster-actions">
+                            <a href="{% static '2026/Changemakers Nomination.pdf' %}" target="_blank" rel="noopener" class="btn btn-outline-primary btn-sm rounded-pill fw-bold">
+                                <i class="fas fa-file-pdf me-1"></i>Brochure
+                            </a>
+                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSe_dlXsd2HbnnqJpT-4UKZk5u9boE1tiGZ4EB8uvsfm8zvcAA/viewform" target="_blank" rel="noopener" class="btn btn-primary btn-sm rounded-pill fw-bold">
+                                <i class="fas fa-user-plus me-1"></i>Nominate
+                            </a>
                         </div>
                     </div>
-                    <div class="card-body">
-                        <h4 class="card-title text-primary-blue">Conference 2023</h4>
-                        <p class="card-text text-medium">In-person gathering at Christ University, Bangalore, featuring
-                            global panels, student voices, and the launch of LUDEx Talks.</p>
-                        <a href="{% url 'tc-2023' %}" class="btn btn-outline-primary rounded-custom">
-                            Learn More <i class="fas fa-arrow-right ms-2"></i>
-                        </a>
-                    </div>
                 </div>
-            </div>
 
-            <!-- Virtual Conference 2020 -->
-            <div class="col-lg-4">
-                <div class="card content-card conference-overview-card hover-lift h-100">
-                    <div class="position-relative overflow-hidden">
-                        <img src="{% static 'conference/triennial/TRIENNIAL-CONFERENCE-POSTER2.jpg' %}"
-                            class="card-img-top img-fluid" alt="Virtual Conference 2020" style="object-fit: cover;">
-                        <div class="position-absolute top-0 end-0 m-3">
-                            <span class="badge bg-gradient-primary text-white p-2 rounded-custom">
-                                <i class="fas fa-calendar-alt me-1"></i>
-                                Nov 20-22, 2020
-                            </span>
+                <!-- Panel 3: Film Fest Poster -->
+                <div>
+                    <div class="triennial-poster-card">
+                        <div class="triennial-poster-img-wrap">
+                            <img src="{% static '2026/FilmFest.png' %}" alt="Short Film Contest 2026">
+                        </div>
+                        <div class="p-3">
+                            <h5 class="fw-bold text-dark mb-1 small">Lights Camera Impact Film Fest</h5>
+                            <p class="text-muted" style="font-size: 0.8rem; margin-bottom: 0;">Short film contest highlighting social transformation.</p>
+                        </div>
+                        <div class="triennial-poster-actions">
+                            <a href="{% static '2026/Short Film Contest Website Content.pdf' %}" target="_blank" rel="noopener" class="btn btn-outline-primary btn-sm rounded-pill fw-bold">
+                                <i class="fas fa-file-pdf me-1"></i>Brochure
+                            </a>
+                            <a href="https://forms.gle/XNnqSyJpxXPpPeyVA" target="_blank" rel="noopener" class="btn btn-primary btn-sm rounded-pill fw-bold">
+                                <i class="fas fa-film me-1"></i>Submit
+                            </a>
                         </div>
                     </div>
-                    <div class="card-body">
-                        <h4 class="card-title text-primary-blue">Virtual Conference 2020</h4>
-                        <p class="card-text text-medium">Our first virtual triennial conference reaching 18,000+
-                            registrants and 40,000+ viewers worldwide during the pandemic.</p>
-                        <a href="{% url 'tc-2020' %}" class="btn btn-outline-primary rounded-custom">
-                            Learn More <i class="fas fa-arrow-right ms-2"></i>
-                        </a>
-                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- Conference Impact Stats -->
-<section class="section ">
-    <div class="container">
-        <div class="row justify-content-center text-center mb-5">
-            <div class="col-lg-8">
-                <h2 class="section-title text-primary-blue">Our Impact</h2>
-                <p class="text-medium">Measurable outcomes from our global community conferences</p>
-            </div>
-        </div>
-
-        <div class="row g-4 text-center">
-            <div class="col-lg-2 col-md-4 col-sm-6">
-                <div class="content-card hover-scale h-100">
-                    <div class="content-card-icon mx-auto mb-3"
-                        style="background: linear-gradient(135deg, #3b82f6, #1d4ed8);">
-                        <i class="fas fa-calendar-check"></i>
-                    </div>
-                    <h3 class="text-primary-blue">25+</h3>
-                    <p class="text-medium mb-0">Community Conferences</p>
-                </div>
+    <!-- Conference Editions Section -->
+    <section id="editions" class="conference-section pt-0">
+        <div class="container">
+            <div class="text-center mb-5">
+                <span class="media-kicker">HISTORICAL MILESTONES</span>
+                <h2 class="media-section-title">Triennial Editions</h2>
+                <p class="media-section-lead">Explore each chapter of our global triennial journey</p>
             </div>
 
-            <div class="col-lg-2 col-md-4 col-sm-6">
-                <div class="content-card hover-scale h-100">
-                    <div class="content-card-icon mx-auto mb-3"
-                        style="background: linear-gradient(135deg, #10b981, #059669);">
-                        <i class="fas fa-globe"></i>
-                    </div>
-                    <h3 class="text-primary-blue">2</h3>
-                    <p class="text-medium mb-0">Triennial International Conferences</p>
-                </div>
-            </div>
-
-            <div class="col-lg-2 col-md-4 col-sm-6">
-                <div class="content-card hover-scale h-100">
-                    <div class="content-card-icon mx-auto mb-3"
-                        style="background: linear-gradient(135deg, #ef4444, #dc2626);">
-                        <i class="fas fa-trophy"></i>
-                    </div>
-                    <h3 class="text-primary-blue">200+</h3>
-                    <p class="text-medium mb-0">Changemakers Celebrated</p>
-                </div>
-            </div>
-
-            <div class="col-lg-2 col-md-4 col-sm-6">
-                <div class="content-card hover-scale h-100">
-                    <div class="content-card-icon mx-auto mb-3"
-                        style="background: linear-gradient(135deg, #8b5cf6, #7c3aed);">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h3 class="text-primary-blue">60K+</h3>
-                    <p class="text-medium mb-0">Participants</p>
-                </div>
-            </div>
-
-            <div class="col-lg-2 col-md-4 col-sm-6">
-                <div class="content-card hover-scale h-100">
-                    <div class="content-card-icon mx-auto mb-3"
-                        style="background: linear-gradient(135deg, #f59e0b, #d97706);">
-                        <i class="fas fa-handshake"></i>
-                    </div>
-                    <h3 class="text-primary-blue">80+</h3>
-                    <p class="text-medium mb-0">Partner Organizations</p>
-                </div>
-            </div>
-
-            <div class="col-lg-2 col-md-4 col-sm-6">
-                <div class="content-card hover-scale h-100">
-                    <div class="content-card-icon mx-auto mb-3"
-                        style="background: linear-gradient(135deg, #06b6d4, #0891b2);">
-                        <i class="fas fa-lightbulb"></i>
-                    </div>
-                    <h3 class="text-primary-blue">∞</h3>
-                    <p class="text-medium mb-0">Community Initiatives</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Vision & History Section -->
-<section class="section bg-light-gray">
-    <div class="container">
-        <div class="row g-5 align-items-center">
-            <div class="col-lg-6">
-                <div class="content-card h-100">
-                    <div class="d-flex align-items-center mb-4">
-
-                        <h3 class="text-primary-blue mb-0">History</h3>
-                    </div>
-                    <p class="text-medium mb-4">
-                        Let Us Dream began with a simple yet powerful idea: those who dream for others can create
-                        lasting change.
-                        In Monroe, Louisiana, everyday stories of hope reignited Fr. Lijo Thomas's vision during a tough
-                        phase with
-                        the DREAMS project.
-                    </p>
-                    <p class="text-medium mb-4">
-                        The first Let Us Dream Conference launched on October 21, 2017, at Louisiana Tech University
-                        with under
-                        100 participants and 15 service organizations. By 2019, the model expanded globally to
-                        Binghamton University,
-                        Christ University, and Trivandrum.
-                    </p>
-                    <p class="text-medium">
-                        The 2023 Triennial Conference at Christ University marked our return to in-person gatherings,
-                        featuring
-                        global panels, student voices, and NGO showcases.
-                    </p>
-                </div>
-            </div>
-
-            <div class="col-lg-6">
-                <div class="content-card h-100 ">
-
-
-
-                    <div class="content-card bg-white bg-opacity-10 rounded-custom p-4">
-                        <h4 class="mb-3">Conference Impact</h4>
-                        <a href="https://www.canva.com/design/DAGFxyhil84/sAH26KFBCH8PUnU_FLjOFg/view" target="_blank"
-                            class="d-block">
-                            <img src="{% static '2024/Conference/Conference_glance.png' %}"
-                                class="img-fluid rounded-custom shadow-custom-small" alt="Conference Impact">
-                        </a>
-                    </div>
-                    <p class="text-center fs-5 fst-italic mb-2 mt-3">
-                        "Empowering local communities for sustainable global impact and improvement."
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Goals Section -->
-<section class="section ">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-10">
-                <div class="text-center mb-5">
-                    <div class="content-card-icon mx-auto mb-3">
-                        <i class="fas fa-bullseye"></i>
-                    </div>
-                    <h2 class="section-title text-primary-blue">Our Goals</h2>
-                    <p class="text-medium">
-                        The Let Us Dream Conference was established in 2017 to provide a forum for sharing experiences
-                        with successes and challenges in community improvement organizations and efforts.
-                    </p>
-                </div>
-
-                <div class="row g-4">
-                    <div class="col-lg-4">
-                        <div class="content-card text-center h-100">
-                            <div class="content-card-icon mx-auto mb-3">
-                                <i class="fas fa-network-wired"></i>
+            <div class="row g-4">
+                <!-- 2026 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="conf-type-card">
+                        <div class="conf-type-img-wrap">
+                            <img src="{% static '2026/triennial/2026.png' %}" alt="Conference 2026">
+                        </div>
+                        <div class="conf-type-body">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span class="badge rounded-pill px-3 py-1" style="background: #eef4fc; color: #0c52a1; font-weight: 600;">Nov 19-21, 2026</span>
+                                <span class="text-muted small"><i class="fas fa-map-marker-alt me-1"></i>Bangalore</span>
                             </div>
-                            <h5 class="text-primary-blue">Networking & Collaboration</h5>
-                            <p class="text-medium">
-                                Improve networking and collaboration among all those interested in community
-                                improvement organizations and programs.
+                            <h4 class="h5 fw-bold text-dark mb-2">Conference 2026</h4>
+                            <p class="text-muted small mb-4 flex-grow-1">
+                                Upcoming gathering at Christ University, Bangalore exploring "Local Wisdom, Global Influence".
                             </p>
+                            <a href="{% url 'tc-2026' %}" class="btn btn-outline-primary btn-sm rounded-pill py-2 fw-bold">
+                                Learn More <i class="fas fa-arrow-right ms-1"></i>
+                            </a>
                         </div>
                     </div>
+                </div>
 
-                    <div class="col-lg-4">
-                        <div class="content-card text-center h-100">
-                            <div class="content-card-icon mx-auto mb-3">
-                                <i class="fas fa-hands-helping"></i>
+                <!-- 2023 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="conf-type-card">
+                        <div class="conf-type-img-wrap">
+                            <img src="{% static 'conference/triennial/2023/triennial2023.png' %}" alt="Conference 2023">
+                        </div>
+                        <div class="conf-type-body">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span class="badge rounded-pill px-3 py-1" style="background: #ecfdf5; color: #059669; font-weight: 600;">Nov 3-5, 2023</span>
+                                <span class="text-muted small"><i class="fas fa-map-marker-alt me-1"></i>Bangalore</span>
                             </div>
-                            <h5 class="text-primary-blue">Promote Volunteerism</h5>
-                            <p class="text-medium">
-                                Empower all those involved in community improvement organizations and initiatives,
-                                including employees, volunteers, and students.
+                            <h4 class="h5 fw-bold text-dark mb-2">Conference 2023</h4>
+                            <p class="text-muted small mb-4 flex-grow-1">
+                                In-person summit featuring 50+ international panelists, youth forums, and the official launch of LUDEx Talks.
                             </p>
+                            <a href="{% url 'tc-2023' %}" class="btn btn-outline-primary btn-sm rounded-pill py-2 fw-bold">
+                                Learn More <i class="fas fa-arrow-right ms-1"></i>
+                            </a>
                         </div>
                     </div>
+                </div>
 
-                    <div class="col-lg-4">
-                        <div class="content-card text-center h-100">
-                            <div class="content-card-icon mx-auto mb-3">
-                                <i class="fas fa-graduation-cap"></i>
+                <!-- 2020 -->
+                <div class="col-lg-4 col-md-12">
+                    <div class="conf-type-card">
+                        <div class="conf-type-img-wrap">
+                            <img src="{% static 'conference/triennial/TRIENNIAL-CONFERENCE-POSTER2.jpg' %}" alt="Virtual Conference 2020">
+                        </div>
+                        <div class="conf-type-body">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span class="badge rounded-pill px-3 py-1" style="background: #f5f3ff; color: #7c3aed; font-weight: 600;">Nov 20-22, 2020</span>
+                                <span class="text-muted small"><i class="fas fa-globe me-1"></i>Virtual Summit</span>
                             </div>
-                            <h5 class="text-primary-blue">Learning Organization</h5>
-                            <p class="text-medium">
-                                Create a professional learning organization dedicated to improving local communities
-                                through shared knowledge.
+                            <h4 class="h5 fw-bold text-dark mb-2">Virtual Conference 2020</h4>
+                            <p class="text-muted small mb-4 flex-grow-1">
+                                Inaugural virtual conference reaching 18,000+ registrants and 40,000+ global viewers during the pandemic.
                             </p>
+                            <a href="{% url 'tc-2020' %}" class="btn btn-outline-primary btn-sm rounded-pill py-2 fw-bold">
+                                Learn More <i class="fas fa-arrow-right ms-1"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- What to Expect Section -->
-<section class="section bg-light-gray">
-    <div class="container">
-        <div class="row justify-content-center text-center mb-5">
-            <div class="col-lg-8">
-                <h2 class="section-title text-primary-blue">What To Expect</h2>
-                <p class="lead text-medium">
-                    The LUD Triennial Conference is more than just an event—it's an experience of learning,
-                    sharing, and collaboration for community empowerment.
-                </p>
-            </div>
-        </div>
-
-        <div class="row g-4">
-            <div class="col-lg-4 col-md-6">
-                <div class="content-card text-center h-100">
-                    <div class="content-card-icon mx-auto mb-3"
-                        style="background: linear-gradient(135deg, #10b981, #059669);">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h5 class="text-primary-blue mb-3">Panel Discussions</h5>
-                    <ul class="list-unstyled text-medium text-start">
-                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Focused conversations on
-                            Education, Health, and Social Work</li>
-                        <li><i class="fas fa-check text-success me-2"></i>Meet experts and practitioners across all
-                            walks of life</li>
-                    </ul>
-                </div>
+    <!-- Impact Stats Section -->
+    <section id="impact" class="conference-section pt-0">
+        <div class="container">
+            <div class="text-center mb-5">
+                <span class="media-kicker">METRICS OF TRANSFORMATION</span>
+                <h2 class="media-section-title">Our Global Impact</h2>
+                <p class="media-section-lead">Measurable outcomes from our international and local conference chapters</p>
             </div>
 
-            <div class="col-lg-4 col-md-6">
-                <div class="content-card text-center h-100">
-                    <div class="content-card-icon mx-auto mb-3"
-                        style="background: linear-gradient(135deg, #ef4444, #dc2626);">
-                        <i class="fas fa-award"></i>
-                    </div>
-                    <h5 class="text-primary-blue mb-3">Changemakers</h5>
-                    <ul class="list-unstyled text-medium text-start">
-                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Celebrate real-life stories of
-                            extraordinary service</li>
-                        <li><i class="fas fa-check text-success me-2"></i>Learn from great change makers and their
-                            community impact</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6">
-                <div class="content-card text-center h-100">
-                    <div class="content-card-icon mx-auto mb-3"
-                        style="background: linear-gradient(135deg, #8b5cf6, #7c3aed);">
-                        <i class="fas fa-presentation"></i>
-                    </div>
-                    <h5 class="text-primary-blue mb-3">Poster Presentations</h5>
-                    <ul class="list-unstyled text-medium text-start">
-                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Discover grassroots initiatives
-                            through interactive displays</li>
-                        <li><i class="fas fa-check text-success me-2"></i>Connect directly with presentation makers</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6">
-                <div class="content-card text-center h-100">
-                    <div class="content-card-icon mx-auto mb-3"
-                        style="background: linear-gradient(135deg, #06b6d4, #0891b2);">
-                        <i class="fas fa-handshake"></i>
-                    </div>
-                    <h5 class="text-primary-blue mb-3">Networking</h5>
-                    <ul class="list-unstyled text-medium text-start">
-                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Connect with diverse community
-                            service projects and NGOs</li>
-                        <li><i class="fas fa-check text-success me-2"></i>Build partnerships for social entrepreneurship
-                            initiatives</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6">
-                <div class="content-card text-center h-100">
-                    <div class="content-card-icon mx-auto mb-3"
-                        style="background: linear-gradient(135deg, #f59e0b, #d97706);">
-                        <i class="fas fa-store"></i>
-                    </div>
-                    <h5 class="text-primary-blue mb-3">Exhibition Stalls</h5>
-                    <ul class="list-unstyled text-medium text-start">
-                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Present your projects to a
-                            socially-driven audience</li>
-                        <li><i class="fas fa-check text-success me-2"></i>Gain exposure among 20,000+ students and
-                            organizations</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6">
-                <div class="content-card text-center h-100">
-                    <div class="content-card-icon mx-auto mb-3">
-                        <i class="fas fa-microphone-alt"></i>
-                    </div>
-                    <h5 class="text-primary-blue mb-3">Keynote Speakers</h5>
-                    <ul class="list-unstyled text-medium text-start">
-                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Be inspired by thought leaders
-                            from academia</li>
-                        <li><i class="fas fa-check text-success me-2"></i>Engaging stories of international resonance
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-    </div>
-</section>
-
-<!-- Conference Timeline - Column Design -->
-<section class="section bg-light-gray">
-    <div class="container">
-        <!-- Section Header -->
-        <div class="row justify-content-center text-center mb-5">
-            <div class="col-lg-8">
-                <h2 class="section-title text-primary-blue">Conference Roadmap</h2>
-                <p class="lead text-medium">
-                    Visual timeline of our journey from Louisiana to India, uniting changemakers worldwide
-                </p>
-            </div>
-        </div>
-
-        <!-- Timeline Grid -->
-        <div class="row g-4">
-            <!-- 2017 - Louisiana Beginnings -->
-            <div class="col-lg-6 col-md-6">
-                <div class="timeline-card content-card  hover-lift position-relative">
-                    <!-- Year Badge -->
-                    <div class="timeline-year position-absolute top-0 start-0 translate-middle">
-                        <div class="bg-gradient-primary text-white rounded-circle d-flex align-items-center justify-content-center fw-bold shadow-custom-small"
-                            style="width: 80px; height: 80px; font-size: 1.1rem;">
-                            2017
+            <div class="row g-3 text-center">
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="media-card p-3 h-100" style="border: 1px solid var(--media-border); border-radius: var(--media-radius-sm);">
+                        <div class="conf-location-icon mx-auto mb-2" style="width: 40px; height: 40px; font-size: 1rem;">
+                            <i class="fas fa-calendar-check"></i>
                         </div>
-                    </div>
-
-                    <!-- Card Content -->
-                    <div class="card-body pt-5 mt-3">
-                        <div class="d-flex align-items-center mb-3">
-
-                            <h5 class="text-primary-blue mb-0">Louisiana Beginnings</h5>
-                        </div>
-
-                        <p class="text-medium mb-3">
-                            Let Us Dream community conference initiated at <strong>Louisiana Tech University</strong>,
-                            USA.
-                            A small but powerful gathering of under 100 participants and 15 organizations.
-                        </p>
-
-                        <div class="d-flex justify-content-between align-items-center">
-                            <span class="badge bg-primary rounded-pill px-3 py-2">
-                                <i class="fas fa-map-marker-alt me-1"></i>
-                                USA
-                            </span>
-                            <small class="text-muted">
-                                <i class="fas fa-users me-1"></i>
-                                100 participants
-                            </small>
-                        </div>
+                        <h3 class="h4 fw-bold text-dark mb-0">25+</h3>
+                        <small class="text-muted">Conferences</small>
                     </div>
                 </div>
-            </div>
 
-            <!-- 2019 - Global Expansion -->
-            <div class="col-lg-6 col-md-6">
-                <div class="timeline-card content-card  hover-lift position-relative">
-                    <!-- Year Badge -->
-                    <div class="timeline-year position-absolute top-0 start-0 translate-middle">
-                        <div class="bg-gradient-primary text-white rounded-circle d-flex align-items-center justify-content-center fw-bold shadow-custom-small"
-                            style="width: 80px; height: 80px; font-size: 1.1rem;">
-                            2019
-                        </div>
-                    </div>
-
-                    <!-- Card Content -->
-                    <div class="card-body pt-5 mt-3">
-                        <div class="d-flex align-items-center mb-3">
-
-                            <h5 class="text-primary-blue mb-0">Global Expansion</h5>
-                        </div>
-
-                        <p class="text-medium mb-3">
-                            The model expanded to <strong>New York, Bangalore, and Trivandrum</strong>,
-                            connecting education, health, and social work sectors globally.
-                        </p>
-
-                        <div class="d-flex justify-content-between align-items-center">
-                            <span class="badge bg-success rounded-pill px-3 py-2">
-                                <i class="fas fa-globe me-1"></i>
-                                3 Countries
-                            </span>
-                            <small class="text-muted">
-                                <i class="fas fa-building me-1"></i>
-                                Multi-sector
-                            </small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 2020 - Virtual Conference -->
-            <div class="col-lg-6 col-md-6">
-                <div class="timeline-card content-card h-100 hover-lift position-relative">
-                    <!-- Year Badge -->
-                    <div class="timeline-year position-absolute top-0 start-0 translate-middle">
-                        <div class="bg-gradient-primary text-white rounded-circle d-flex align-items-center justify-content-center fw-bold shadow-custom-small"
-                            style="width: 80px; height: 80px; font-size: 1.1rem;">
-                            2020
-                        </div>
-                    </div>
-
-                    <!-- Card Content -->
-                    <div class="card-body pt-5 mt-3">
-                        <div class="d-flex align-items-center mb-3">
-
-                            <h5 class="text-primary-blue mb-0">Virtual Conference</h5>
-                        </div>
-
-                        <p class="text-medium mb-3">
-                            First <strong>Triennial International Conference</strong> went virtual—18,000+ registrants
-                            and 40,000+ viewers from around the world during the pandemic.
-                        </p>
-
-                        <div class="d-flex justify-content-between align-items-center">
-                            <span class="badge bg-info rounded-pill px-3 py-2">
-                                <i class="fas fa-wifi me-1"></i>
-                                Global Virtual
-                            </span>
-                            <small class="text-muted">
-                                <i class="fas fa-eye me-1"></i>
-                                40K+ viewers
-                            </small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 2022 - Indian Expansion -->
-            <div class="col-lg-6 col-md-6">
-                <div class="timeline-card content-card h-100 hover-lift position-relative">
-                    <!-- Year Badge -->
-                    <div class="timeline-year position-absolute top-0 start-0 translate-middle">
-                        <div class="bg-gradient-primary text-white rounded-circle d-flex align-items-center justify-content-center fw-bold shadow-custom-small"
-                            style="width: 80px; height: 80px; font-size: 1.1rem;">
-                            2022
-                        </div>
-                    </div>
-
-                    <!-- Card Content -->
-                    <div class="card-body pt-5 mt-3">
-                        <div class="d-flex align-items-center mb-3">
-
-                            <h5 class="text-primary-blue mb-0">Indian Expansion</h5>
-                        </div>
-
-                        <p class="text-medium mb-3">
-                            New chapters launched in <strong>Chennai and Hyderabad</strong>,
-                            furthering local engagement and grassroots impact across India.
-                        </p>
-
-                        <div class="d-flex justify-content-between align-items-center">
-                            <span class="badge bg-warning rounded-pill px-3 py-2">
-                                <i class="fas fa-map-marker-alt me-1"></i>
-                                India
-                            </span>
-                            <small class="text-muted">
-                                <i class="fas fa-seedling me-1"></i>
-                                Grassroots
-                            </small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 2023 - Bangalore Conference -->
-            <div class="col-lg-6 col-md-6">
-                <div class="timeline-card content-card h-100 hover-lift position-relative">
-                    <!-- Year Badge -->
-                    <div class="timeline-year position-absolute top-0 start-0 translate-middle">
-                        <div class="bg-gradient-primary text-white rounded-circle d-flex align-items-center justify-content-center fw-bold shadow-custom-small"
-                            style="width: 80px; height: 80px; font-size: 1.1rem;">
-                            2023
-                        </div>
-                    </div>
-
-                    <!-- Card Content -->
-                    <div class="card-body pt-5 mt-3">
-                        <div class="d-flex align-items-center mb-3">
-                            <h5 class="text-primary-blue mb-0">Bangalore Conference</h5>
-                        </div>
-
-                        <p class="text-medium mb-3">
-                            Second triennial conference held in-person at <strong>Christ University, Bangalore</strong>,
-                            with 50+ international panelists and launch of LUDEx Talks.
-                        </p>
-
-                        <div class="d-flex justify-content-between align-items-center">
-                            <span class="badge bg-secondary rounded-pill px-3 py-2">
-                                <i class="fas fa-graduation-cap me-1"></i>
-                                In-Person
-                            </span>
-                            <small class="text-muted">
-                                <i class="fas fa-microphone me-1"></i>
-                                LUDEx Launch
-                            </small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 2024 - Pune Chapter -->
-            <div class="col-lg-6 col-md-6">
-                <div class="timeline-card content-card h-100 hover-lift position-relative">
-                    <!-- Year Badge -->
-                    <div class="timeline-year position-absolute top-0 start-0 translate-middle">
-                        <div class="bg-gradient-primary text-white rounded-circle d-flex align-items-center justify-content-center fw-bold shadow-custom-small"
-                            style="width: 80px; height: 80px; font-size: 1.1rem;">
-                            2024
-                        </div>
-                    </div>
-
-                    <!-- Card Content -->
-                    <div class="card-body pt-5 mt-3">
-                        <div class="d-flex align-items-center mb-3">
-                            <h5 class="text-primary-blue mb-0">Pune Chapter</h5>
-                        </div>
-
-                        <p class="text-medium mb-3">
-                            New chapter launched in <strong>Pune</strong>, expanding our reach and
-                            strengthening community connections in Maharashtra.
-                        </p>
-
-                        <div class="d-flex justify-content-between align-items-center">
-                            <span class="badge bg-danger rounded-pill px-3 py-2">
-                                <i class="fas fa-map-marker-alt me-1"></i>
-                                India
-                            </span>
-                            <small class="text-muted">
-                                <i class="fas fa-star me-1"></i>
-                                New Chapter
-                            </small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Partners Section -->
-<section class="section bg-light-gray">
-    <div class="container">
-        <div class="row justify-content-center text-center mb-5">
-            <div class="col-lg-8">
-                <h2 class="section-title text-primary-blue">Partners & Sponsors</h2>
-                <p class="text-medium">
-                    Collaborating with visionary organizations to create global impact through local action
-                </p>
-            </div>
-        </div>
-
-        <div class="row g-4 mb-5">
-            <div class="col-lg-6">
-                <div class="content-card h-100">
-                    <h4 class="text-primary-blue mb-4">
-                        <i class="fas fa-star me-2"></i>
-                        Why Partner With Us?
-                    </h4>
-                    <div class="d-flex mb-3">
-                        <div class="content-card-icon me-3 flex-shrink-0"
-                            style="width: 50px; height: 50px; background: linear-gradient(135deg, #10b981, #059669);">
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="media-card p-3 h-100" style="border: 1px solid var(--media-border); border-radius: var(--media-radius-sm);">
+                        <div class="conf-location-icon mx-auto mb-2" style="width: 40px; height: 40px; font-size: 1rem; background: #ecfdf5; color: #059669;">
                             <i class="fas fa-globe"></i>
                         </div>
-                        <div>
-                            <h6 class="text-primary-blue mb-1">Global Visibility</h6>
-                            <p class="text-medium small mb-0">Showcase your brand to our international network of
-                                educators and changemakers</p>
-                        </div>
+                        <h3 class="h4 fw-bold text-dark mb-0">2</h3>
+                        <small class="text-muted">Triennials Held</small>
                     </div>
-                    <div class="d-flex mb-3">
-                        <div class="content-card-icon me-3 flex-shrink-0"
-                            style="width: 50px; height: 50px; background: linear-gradient(135deg, #3b82f6, #1d4ed8);">
-                            <i class="fas fa-heart"></i>
+                </div>
+
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="media-card p-3 h-100" style="border: 1px solid var(--media-border); border-radius: var(--media-radius-sm);">
+                        <div class="conf-location-icon mx-auto mb-2" style="width: 40px; height: 40px; font-size: 1rem; background: #fef2f2; color: #dc2626;">
+                            <i class="fas fa-trophy"></i>
                         </div>
-                        <div>
-                            <h6 class="text-primary-blue mb-1">Local Impact</h6>
-                            <p class="text-medium small mb-0">Directly support community-driven initiatives with
-                                measurable outcomes</p>
-                        </div>
+                        <h3 class="h4 fw-bold text-dark mb-0">200+</h3>
+                        <small class="text-muted">Changemakers</small>
                     </div>
-                    <div class="d-flex">
-                        <div class="content-card-icon me-3 flex-shrink-0"
-                            style="width: 50px; height: 50px; background: linear-gradient(135deg, #8b5cf6, #7c3aed);">
+                </div>
+
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="media-card p-3 h-100" style="border: 1px solid var(--media-border); border-radius: var(--media-radius-sm);">
+                        <div class="conf-location-icon mx-auto mb-2" style="width: 40px; height: 40px; font-size: 1rem; background: #f5f3ff; color: #7c3aed;">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3 class="h4 fw-bold text-dark mb-0">60K+</h3>
+                        <small class="text-muted">Participants</small>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="media-card p-3 h-100" style="border: 1px solid var(--media-border); border-radius: var(--media-radius-sm);">
+                        <div class="conf-location-icon mx-auto mb-2" style="width: 40px; height: 40px; font-size: 1rem; background: #fff7ed; color: #ea580c;">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h3 class="h4 fw-bold text-dark mb-0">80+</h3>
+                        <small class="text-muted">Partners</small>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="media-card p-3 h-100" style="border: 1px solid var(--media-border); border-radius: var(--media-radius-sm);">
+                        <div class="conf-location-icon mx-auto mb-2" style="width: 40px; height: 40px; font-size: 1rem; background: #eef4fc; color: #0284c7;">
                             <i class="fas fa-lightbulb"></i>
                         </div>
-                        <div>
-                            <h6 class="text-primary-blue mb-1">Knowledge Exchange</h6>
-                            <p class="text-medium small mb-0">Access to cutting-edge research and best practices in
-                                education and social innovation</p>
+                        <h3 class="h4 fw-bold text-dark mb-0">&infin;</h3>
+                        <small class="text-muted">Initiatives</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- History & Vision Section -->
+    <section id="history" class="conference-section pt-0">
+        <div class="container">
+            <div class="media-card p-4 p-lg-5" style="border: 1px solid var(--media-border); border-radius: var(--media-radius);">
+                <div class="row align-items-center g-4 g-lg-5">
+                    <div class="col-lg-7">
+                        <span class="media-kicker">NARRATIVE OF PURPOSE</span>
+                        <h2 class="h3 fw-bold text-dark mb-3">Our History</h2>
+                        <p class="text-muted mb-3 lh-base">
+                            Let Us Dream began with a simple yet powerful idea: those who dream for others create lasting change. In Monroe, Louisiana, everyday stories of hope reignited Fr. Lijo Thomas's vision during a demanding phase of community research.
+                        </p>
+                        <p class="text-muted mb-3 lh-base">
+                            The first Let Us Dream Conference launched on October 21, 2017, at Louisiana Tech University with under 100 participants and 15 service organizations. By 2019, the model expanded internationally to Binghamton University, Christ University, and Trivandrum.
+                        </p>
+                        <p class="text-muted mb-0 lh-base">
+                            The 2023 Triennial Conference marked our joyous return to in-person global gatherings, featuring international panels, youth voices, and NGO exhibitions.
+                        </p>
+                    </div>
+                    <div class="col-lg-5 text-center">
+                        <div class="p-3 bg-light rounded">
+                            <h6 class="fw-bold text-dark mb-2">Conference Impact at a Glance</h6>
+                            <a href="https://www.canva.com/design/DAGFxyhil84/sAH26KFBCH8PUnU_FLjOFg/view" target="_blank" rel="noopener" class="d-block">
+                                <img src="{% static '2024/Conference/Conference_glance.png' %}" class="img-fluid rounded shadow-sm" alt="Conference Impact Glance">
+                            </a>
+                            <small class="text-muted d-block mt-2"><i class="fas fa-external-link-alt me-1"></i>Click to view full Canva design</small>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <div class="col-lg-6">
-                <div class="content-card  h-100">
-                    <h4 class="mb-4">
-                        <i class="fas fa-handshake me-2"></i>
-                        Partnership Opportunities
-                    </h4>
-                    <div class="mb-4">
-                        <div class="d-flex align-items-center mb-2">
-                            <span class="badge bg-white text-primary rounded-circle me-3 fw-bold"
-                                style="width: 30px; height: 30px; display: flex; align-items: center; justify-content: center;">1</span>
-                            <h6 class="mb-0">Conference Sponsorship</h6>
+    <!-- Goals Section -->
+    <section id="goals" class="conference-section pt-0">
+        <div class="container">
+            <div class="text-center mb-5">
+                <span class="media-kicker">MISSION MANDATES</span>
+                <h2 class="media-section-title">Our Goals</h2>
+                <p class="media-section-lead">A shared commitment to continuous learning and community empowerment</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="media-card text-center p-4 h-100" style="border: 1px solid var(--media-border); border-radius: var(--media-radius);">
+                        <div class="conf-location-icon mx-auto mb-3">
+                            <i class="fas fa-network-wired"></i>
                         </div>
-                        <p class="small mb-0 ms-5">Align your brand with our flagship events reaching 60,000+
-                            participants</p>
+                        <h4 class="h5 fw-bold text-dark mb-2">Networking & Collaboration</h4>
+                        <p class="text-muted small mb-0">
+                            Improve networking and sustained collaboration among researchers, university administrators, civic leaders, and volunteer groups.
+                        </p>
                     </div>
-                    <div class="mb-4">
-                        <div class="d-flex align-items-center mb-2">
-                            <span class="badge bg-white text-primary rounded-circle me-3 fw-bold"
-                                style="width: 30px; height: 30px; display: flex; align-items: center; justify-content: center;">2</span>
-                            <h6 class="mb-0">Program Collaboration</h6>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="media-card text-center p-4 h-100" style="border: 1px solid var(--media-border); border-radius: var(--media-radius);">
+                        <div class="conf-location-icon mx-auto mb-3" style="background: #ecfdf5; color: #059669;">
+                            <i class="fas fa-hands-helping"></i>
                         </div>
-                        <p class="small mb-0 ms-5">Co-create initiatives with our global network of educators and
-                            students</p>
+                        <h4 class="h5 fw-bold text-dark mb-2">Promote Volunteerism</h4>
+                        <p class="text-muted small mb-0">
+                            Empower all individuals involved in community improvement—including professionals, retirees, faculty, and student volunteers.
+                        </p>
                     </div>
-                    <div class="mb-4">
-                        <div class="d-flex align-items-center mb-2">
-                            <span class="badge bg-white text-primary rounded-circle me-3 fw-bold"
-                                style="width: 30px; height: 30px; display: flex; align-items: center; justify-content: center;">3</span>
-                            <h6 class="mb-0">Research Partnerships</h6>
+                </div>
+
+                <div class="col-lg-4 col-md-12">
+                    <div class="media-card text-center p-4 h-100" style="border: 1px solid var(--media-border); border-radius: var(--media-radius);">
+                        <div class="conf-location-icon mx-auto mb-3" style="background: #f5f3ff; color: #7c3aed;">
+                            <i class="fas fa-graduation-cap"></i>
                         </div>
-                        <p class="small mb-0 ms-5">Collaborate on action research projects with measurable community
-                            impact</p>
+                        <h4 class="h5 fw-bold text-dark mb-2">Learning Organization</h4>
+                        <p class="text-muted small mb-0">
+                            Build a professional learning community dedicated to uplifting local societies through evidence-based research and open knowledge sharing.
+                        </p>
                     </div>
-                    <div class="text-center mt-4">
-                        <a href="#" class="btn btn-light rounded-custom hover-lift">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What to Expect Section -->
+    <section id="what-to-expect" class="conference-section pt-0">
+        <div class="container">
+            <div class="text-center mb-5">
+                <span class="media-kicker">CONFERENCE EXPERIENCES</span>
+                <h2 class="media-section-title">What to Expect</h2>
+                <p class="media-section-lead">A multi-faceted international forum celebrating community action</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="media-card p-4 h-100" style="border: 1px solid var(--media-border); border-radius: var(--media-radius);">
+                        <div class="conf-location-icon mb-3">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h4 class="h5 fw-bold text-dark mb-2">Global Panels</h4>
+                        <p class="text-muted small mb-0">Focused multi-disciplinary conversations on Education, Health, and Social Work with scholars and practitioners.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="media-card p-4 h-100" style="border: 1px solid var(--media-border); border-radius: var(--media-radius);">
+                        <div class="conf-location-icon mb-3" style="background: #ecfdf5; color: #059669;">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <h4 class="h5 fw-bold text-dark mb-2">Changemaker Awards</h4>
+                        <p class="text-muted small mb-0">Celebration and formal recognition of unsung community heroes driving tangible transformation.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="media-card p-4 h-100" style="border: 1px solid var(--media-border); border-radius: var(--media-radius);">
+                        <div class="conf-location-icon mb-3" style="background: #f5f3ff; color: #7c3aed;">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                        </div>
+                        <h4 class="h5 fw-bold text-dark mb-2">Poster Presentations</h4>
+                        <p class="text-muted small mb-0">Interactive academic and grassroots posters showcasing student-led community intervention studies.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="media-card p-4 h-100" style="border: 1px solid var(--media-border); border-radius: var(--media-radius);">
+                        <div class="conf-location-icon mb-3" style="background: #eef4fc; color: #0284c7;">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h4 class="h5 fw-bold text-dark mb-2">Civic Networking</h4>
+                        <p class="text-muted small mb-0">Direct engagement opportunities connecting international NGOs, universities, and student leaders.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="media-card p-4 h-100" style="border: 1px solid var(--media-border); border-radius: var(--media-radius);">
+                        <div class="conf-location-icon mb-3" style="background: #fff7ed; color: #ea580c;">
+                            <i class="fas fa-store"></i>
+                        </div>
+                        <h4 class="h5 fw-bold text-dark mb-2">Exhibition Stalls</h4>
+                        <p class="text-muted small mb-0">Present community initiatives and socially driven products to thousands of engaged conference attendees.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="media-card p-4 h-100" style="border: 1px solid var(--media-border); border-radius: var(--media-radius);">
+                        <div class="conf-location-icon mb-3" style="background: #fef2f2; color: #dc2626;">
+                            <i class="fas fa-microphone-alt"></i>
+                        </div>
+                        <h4 class="h5 fw-bold text-dark mb-2">Keynote Addresses</h4>
+                        <p class="text-muted small mb-0">Inspiring talks by global thought leaders, university presidents, and frontline civic advocates.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Roadmap Section -->
+    <section id="roadmap" class="conference-section pt-0">
+        <div class="container">
+            <div class="text-center mb-5">
+                <span class="media-kicker">CHRONOLOGICAL EVOLUTION</span>
+                <h2 class="media-section-title">Conference Roadmap</h2>
+                <p class="media-section-lead">Visual journey of our expansion from Louisiana to the world</p>
+            </div>
+
+            <div class="row g-4">
+                <!-- 2017 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="conf-timeline-card">
+                        <span class="conf-timeline-badge"><i class="fas fa-flag me-1"></i>2017</span>
+                        <h4 class="h5 fw-bold text-dark mb-2">Louisiana Beginnings</h4>
+                        <p class="text-muted small mb-3">Initiated at Louisiana Tech University with under 100 participants and 15 service organizations.</p>
+                        <div class="mt-auto d-flex justify-content-between text-muted small pt-2 border-top">
+                            <span><i class="fas fa-map-marker-alt me-1"></i>USA</span>
+                            <span>100 Participants</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2019 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="conf-timeline-card">
+                        <span class="conf-timeline-badge" style="background: #ecfdf5; color: #059669;"><i class="fas fa-globe me-1"></i>2019</span>
+                        <h4 class="h5 fw-bold text-dark mb-2">Global Expansion</h4>
+                        <p class="text-muted small mb-3">Expanded across New York, Bangalore, and Trivandrum, uniting multi-sector partners.</p>
+                        <div class="mt-auto d-flex justify-content-between text-muted small pt-2 border-top">
+                            <span><i class="fas fa-globe me-1"></i>3 Countries</span>
+                            <span>Multi-Sector</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2020 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="conf-timeline-card">
+                        <span class="conf-timeline-badge" style="background: #f5f3ff; color: #7c3aed;"><i class="fas fa-wifi me-1"></i>2020</span>
+                        <h4 class="h5 fw-bold text-dark mb-2">Virtual Triennial</h4>
+                        <p class="text-muted small mb-3">Conducted virtually during the pandemic with 18,000+ registrants and 40,000+ viewers worldwide.</p>
+                        <div class="mt-auto d-flex justify-content-between text-muted small pt-2 border-top">
+                            <span><i class="fas fa-video me-1"></i>Virtual Summit</span>
+                            <span>40K+ Viewers</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2022 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="conf-timeline-card">
+                        <span class="conf-timeline-badge" style="background: #fff7ed; color: #ea580c;"><i class="fas fa-seedling me-1"></i>2022</span>
+                        <h4 class="h5 fw-bold text-dark mb-2">Indian Expansion</h4>
+                        <p class="text-muted small mb-3">Launched new regional chapters in Chennai and Hyderabad, fostering local grassroots engagement.</p>
+                        <div class="mt-auto d-flex justify-content-between text-muted small pt-2 border-top">
+                            <span><i class="fas fa-map-marker-alt me-1"></i>India</span>
+                            <span>Grassroots</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2023 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="conf-timeline-card">
+                        <span class="conf-timeline-badge" style="background: #eef4fc; color: #0284c7;"><i class="fas fa-university me-1"></i>2023</span>
+                        <h4 class="h5 fw-bold text-dark mb-2">Bangalore In-Person</h4>
+                        <p class="text-muted small mb-3">Second triennial at Christ University with 50+ international panelists and launch of LUDEx Talks.</p>
+                        <div class="mt-auto d-flex justify-content-between text-muted small pt-2 border-top">
+                            <span><i class="fas fa-users me-1"></i>In-Person Summit</span>
+                            <span>LUDEx Launch</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2024 - 2026 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="conf-timeline-card">
+                        <span class="conf-timeline-badge" style="background: #fef2f2; color: #dc2626;"><i class="fas fa-star me-1"></i>2024 – 2026</span>
+                        <h4 class="h5 fw-bold text-dark mb-2">Pune & Beyond</h4>
+                        <p class="text-muted small mb-3">New chapter in Pune and preparation for the upcoming Triennial International Conference 2026.</p>
+                        <div class="mt-auto d-flex justify-content-between text-muted small pt-2 border-top">
+                            <span><i class="fas fa-rocket me-1"></i>Global Stage</span>
+                            <span>Bangalore 2026</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section id="partners" class="conference-section pt-0">
+        <div class="container">
+            <div class="text-center mb-5">
+                <span class="media-kicker">COLLABORATIVE ECOSYSTEM</span>
+                <h2 class="media-section-title">Partners & Sponsors</h2>
+                <p class="media-section-lead">Collaborating with visionary organizations to create global impact through local action</p>
+            </div>
+
+            <div class="row g-4 mb-4">
+                <div class="col-lg-6">
+                    <div class="media-card p-4 p-lg-5 h-100" style="border: 1px solid var(--media-border); border-radius: var(--media-radius);">
+                        <h4 class="h5 fw-bold text-dark mb-4"><i class="fas fa-star text-warning me-2"></i>Why Partner With Us?</h4>
+                        
+                        <div class="d-flex align-items-start mb-3">
+                            <div class="conf-location-icon me-3 flex-shrink-0" style="width: 42px; height: 42px; font-size: 1rem; background: #ecfdf5; color: #059669;">
+                                <i class="fas fa-globe"></i>
+                            </div>
+                            <div>
+                                <h6 class="fw-bold text-dark mb-1">Global Visibility</h6>
+                                <p class="text-muted small mb-0">Showcase your organization to our international network of educators, students, and social innovators.</p>
+                            </div>
+                        </div>
+
+                        <div class="d-flex align-items-start mb-3">
+                            <div class="conf-location-icon me-3 flex-shrink-0" style="width: 42px; height: 42px; font-size: 1rem; background: #fef2f2; color: #dc2626;">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <div>
+                                <h6 class="fw-bold text-dark mb-1">Direct Local Impact</h6>
+                                <p class="text-muted small mb-0">Directly support community-driven initiatives with measurable, verified social outcomes.</p>
+                            </div>
+                        </div>
+
+                        <div class="d-flex align-items-start">
+                            <div class="conf-location-icon me-3 flex-shrink-0" style="width: 42px; height: 42px; font-size: 1rem; background: #f5f3ff; color: #7c3aed;">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <div>
+                                <h6 class="fw-bold text-dark mb-1">Knowledge Exchange</h6>
+                                <p class="text-muted small mb-0">Access empirical community studies, academic toolkits, and replicable intervention models.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="media-card p-4 p-lg-5 h-100" style="border: 1px solid var(--media-border); border-radius: var(--media-radius); background: #f8fafc;">
+                        <h4 class="h5 fw-bold text-dark mb-4"><i class="fas fa-handshake text-primary me-2"></i>Partnership Opportunities</h4>
+                        
+                        <div class="mb-3">
+                            <h6 class="fw-bold text-dark mb-1"><span class="badge bg-primary me-2">1</span>Conference Sponsorship</h6>
+                            <p class="text-muted small mb-0 ms-4">Align your brand with our flagship events reaching over 60,000 participants worldwide.</p>
+                        </div>
+
+                        <div class="mb-3">
+                            <h6 class="fw-bold text-dark mb-1"><span class="badge bg-primary me-2">2</span>Program Collaboration</h6>
+                            <p class="text-muted small mb-0 ms-4">Co-create sustainable community development initiatives with our university network.</p>
+                        </div>
+
+                        <div class="mb-4">
+                            <h6 class="fw-bold text-dark mb-1"><span class="badge bg-primary me-2">3</span>Action Research Partnerships</h6>
+                            <p class="text-muted small mb-0 ms-4">Collaborate on community evaluation studies with academic rigor and measurable impact.</p>
+                        </div>
+
+                        <a href="{% url 'contactUs' %}" class="btn btn-primary rounded-pill px-4 py-2 fw-bold">
                             Become a Partner <i class="fas fa-arrow-right ms-2"></i>
                         </a>
                     </div>
                 </div>
             </div>
         </div>
-
-        <!-- Partner Logos Grid -->
-        <!-- <div class="row justify-content-center g-3">
-            <div class="col-lg-3 col-md-4 col-6">
-                <div class="content-card p-3 text-center hover-lift" style="height: 120px; display: flex; align-items: center; justify-content: center;">
-                    <img src="{% static 'partners/partner1.png' %}" alt="Partner Logo" class="img-fluid" style="max-height: 60px;">
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-6">
-                <div class="content-card p-3 text-center hover-lift" style="height: 120px; display: flex; align-items: center; justify-content: center;">
-                    <img src="{% static 'partners/partner2.png' %}" alt="Partner Logo" class="img-fluid" style="max-height: 60px;">
-                </div>
-            </div>
-        </div> -->
-    </div>
-</section>
-
-
-
-<!-- Next Conference Section -->
-<!-- <section class="section">
-    <div class="container">
-        <div class="row justify-content-center text-center">
-            <div class="col-lg-8">
-                <div class="content-card p-5">
-                    <div class="content-card-icon mx-auto mb-4" >
-                        <i class="fas fa-calendar-plus text-white"></i>
-                    </div>
-                    <h2 class="mb-3">Register / Attend</h2>
-                    <h3 class="mb-4">Upcoming Conference: 2026</h3>
-                    <p class="lead text-center mb-4">
-                        Stay connected to get our latest updates. 
-                        <a href="#contact" class="text-white text-decoration-underline">Contact Us</a>
-                    </p>
-                    <a href="#" class="btn btn-light btn-lg rounded-custom hover-lift">
-                        <i class="fas fa-heart me-2"></i>
-                        Join the Movement
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section> -->
-
-
-
-<!-- Custom Styles -->
-<style>
-    .content-card,
-    .timeline-card,
-    .btn,
-    .badge,
-    .content-card-icon {
-        transition: none !important;
-    }
-
-    .content-card:hover,
-    .timeline-card:hover,
-    .btn:hover,
-    .badge:hover,
-    .content-card-icon:hover,
-    .timeline-card:hover .badge,
-    .timeline-card:hover .content-card-icon {
-        transform: none !important;
-        box-shadow: none !important;
-    }
-
-    .upcoming-showcase {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 1.25rem;
-        align-items: start;
-    }
-
-    .upcoming-conference-panel {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        aspect-ratio: 210 / 297;
-        padding: 1.5rem;
-        border: none;
-        border-radius: 8px 8px 0 0;
-        background: #0d477f;
-        box-shadow: none;
-    }
-
-    .upcoming-conference-card {
-        min-width: 0;
-        overflow: hidden;
-        border-radius: 8px;
-        box-shadow: 0 16px 36px rgba(20, 48, 75, 0.14);
-    }
-
-    .upcoming-kicker {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        min-height: 28px;
-        align-self: flex-start;
-        padding: 0.25rem 0.7rem;
-        margin-bottom: 0.75rem;
-        border-radius: 8px;
-        background: rgba(255, 255, 255, 0.14);
-        border: 1px solid rgba(255, 255, 255, 0.22);
-        color: #fff;
-        font-size: 0.8rem;
-        font-weight: 700;
-        letter-spacing: 0;
-        text-transform: uppercase;
-    }
-
-    .upcoming-theme {
-        font-size: 1.35rem;
-        font-weight: 700;
-        line-height: 1.2;
-        color: #ffffff;
-    }
-
-    .upcoming-subtheme {
-        font-size: 0.95rem;
-        font-weight: 500;
-        color: rgba(255, 255, 255, 0.82);
-    }
-
-    .upcoming-description {
-        max-width: 560px;
-        font-size: 0.9rem;
-        line-height: 1.5;
-        color: rgba(255, 255, 255, 0.92);
-    }
-
-    .upcoming-meta-grid {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 0.6rem;
-        align-items: stretch;
-    }
-
-    .upcoming-meta-item {
-        display: flex;
-        gap: 0.7rem;
-        align-items: flex-start;
-        padding: 0.65rem 0.75rem;
-        border-radius: 8px;
-        background: rgba(255, 255, 255, 0.1);
-        border: 1px solid rgba(255, 255, 255, 0.16);
-    }
-
-    .upcoming-meta-icon {
-        width: 34px;
-        height: 34px;
-        flex: 0 0 34px;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 8px;
-        background: #ffffff;
-        color: #0c52a1;
-        font-size: 1rem;
-    }
-
-    .upcoming-meta-label {
-        margin-bottom: 0.2rem;
-        font-size: 0.78rem;
-        font-weight: 600;
-        text-transform: uppercase;
-        color: rgba(255, 255, 255, 0.72);
-    }
-
-    .upcoming-meta-value {
-        font-size: 0.88rem;
-        font-weight: 700;
-        line-height: 1.5;
-        color: #ffffff;
-    }
-
-    .upcoming-primary-action,
-    .upcoming-secondary-action {
-        flex: 1 1 180px;
-        min-height: 42px;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 8px;
-    }
-
-    .upcoming-primary-action {
-        border: 1px solid #ffffff;
-        background: #ffffff;
-        color: #0d477f;
-    }
-
-    .upcoming-secondary-action {
-        border: 1px solid #9bd8d4;
-        background: #79c5c1;
-        color: #083b70;
-    }
-
-    .upcoming-secondary-action:hover,
-    .upcoming-secondary-action:focus {
-        border-color: #b6e5e2;
-        background: #9bd8d4;
-        color: #082f57;
-    }
-
-    .upcoming-card-detail:hover,
-    .upcoming-card-detail:focus {
-        border-color: #dbeaf3;
-        background: #e9f2f8;
-        color: #082f57;
-    }
-
-    .upcoming-posters {
-        display: contents;
-    }
-
-    .upcoming-poster {
-        margin: 0;
-        min-width: 0;
-        width: 100%;
-        overflow: hidden;
-        border: 1px solid #dbe4ec;
-        border-radius: 8px;
-        background: #ffffff;
-        box-shadow: 0 16px 36px rgba(20, 48, 75, 0.14);
-    }
-
-    .upcoming-poster-frame {
-        width: 100%;
-        aspect-ratio: 210 / 297;
-        background: #ffffff;
-    }
-
-    .upcoming-poster:first-child .upcoming-poster-frame {
-        background: #052b60;
-    }
-
-    .upcoming-poster-frame img {
-        display: block;
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-    }
-
-    .upcoming-poster-actions {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 0.65rem;
-        padding: 0.85rem;
-        border-top: 1px solid #dbe4ec;
-        background: #ffffff;
-    }
-
-    .upcoming-poster-actions .btn {
-        min-height: 42px;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        padding: 0.55rem 0.65rem;
-        border-radius: 6px;
-        font-size: 0.82rem;
-        line-height: 1.2;
-    }
-
-    .upcoming-card-actions {
-        border: 1px solid #dbe4ec;
-        border-top: 1px solid #dbe4ec;
-        border-radius: 0 0 8px 8px;
-    }
-
-    .upcoming-poster-brochure {
-        border: 1px solid #0d477f;
-        background: #ffffff;
-        color: #0d477f;
-    }
-
-    .upcoming-poster-register {
-        border: 1px solid #79c5c1;
-        background: #79c5c1;
-        color: #083b70;
-    }
-
-    .upcoming-poster-brochure:hover,
-    .upcoming-poster-brochure:focus {
-        background: #e9f2f8;
-        color: #082f57;
-    }
-
-    .upcoming-poster-register:hover,
-    .upcoming-poster-register:focus {
-        border-color: #9bd8d4;
-        background: #9bd8d4;
-        color: #082f57;
-    }
-
-    .conference-overview-card {
-        padding: 0;
-        border: none;
-        border-radius: 8px;
-        overflow: hidden;
-    }
-
-    .conference-overview-card .card-img-top {
-        display: block;
-        width: 100%;
-        border-top-left-radius: 8px;
-        border-top-right-radius: 8px;
-    }
-
-    .conference-overview-card .card-body {
-        padding: 1.5rem;
-    }
-
-    /* Timeline Column Design Styles */
-    .timeline-card {
-        border: none;
-        border-radius: var(--border-radius);
-        overflow: visible;
-        margin-top: 40px;
-        transition: all 0.3s ease;
-    }
-
-    .timeline-card:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 20px 40px rgba(12, 82, 161, 0.15);
-    }
-
-    .timeline-year {
-        z-index: 10;
-        margin-left: 40px;
-        margin-top: 40px;
-    }
-
-    .timeline-card .card-body {
-        position: relative;
-        z-index: 5;
-    }
-
-    .timeline-stat {
-        padding: 1rem;
-        border-right: 1px solid rgba(255, 255, 255, 0.2);
-    }
-
-    .timeline-stat:last-child {
-        border-right: none;
-    }
-
-    .timeline-stat h3 {
-        font-size: 2rem;
-        font-weight: 700;
-        color: white;
-    }
-
-    .timeline-stat small {
-        opacity: 0.9;
-        font-size: 0.85rem;
-    }
-
-    /* Animation for timeline cards */
-    .timeline-card {
-        opacity: 0;
-        transform: translateY(30px);
-        animation: timelineFadeIn 0.6s ease-out forwards;
-    }
-
-    .timeline-card:nth-child(1) {
-        animation-delay: 0.1s;
-    }
-
-    .timeline-card:nth-child(2) {
-        animation-delay: 0.2s;
-    }
-
-    .timeline-card:nth-child(3) {
-        animation-delay: 0.3s;
-    }
-
-    .timeline-card:nth-child(4) {
-        animation-delay: 0.4s;
-    }
-
-    .timeline-card:nth-child(5) {
-        animation-delay: 0.5s;
-    }
-
-    .timeline-card:nth-child(6) {
-        animation-delay: 0.6s;
-    }
-
-    @keyframes timelineFadeIn {
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-
-    /* Badge hover effects */
-    .badge {
-        transition: all 0.3s ease;
-    }
-
-    .timeline-card:hover .badge {
-        transform: scale(1.05);
-    }
-
-    /* Icon animations */
-    .content-card-icon {
-        transition: all 0.3s ease;
-    }
-
-    .timeline-card:hover .content-card-icon {
-        transform: translateY(-3px) rotate(5deg);
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-    }
-
-    /* Responsive adjustments */
-    @media (max-width: 1199.98px) {
-        .upcoming-showcase {
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-        }
-
-        .upcoming-conference-panel {
-            padding: 1.5rem;
-        }
-    }
-
-    @media (max-width: 768px) {
-        .upcoming-conference-panel {
-            padding: 2.5rem 1.5rem;
-        }
-
-        .upcoming-theme {
-            font-size: 1.55rem;
-        }
-
-        .upcoming-subtheme {
-            font-size: 1rem;
-        }
-
-        .timeline-year {
-            margin-left: 20px;
-            margin-top: 20px;
-        }
-
-        .timeline-year>div {
-            width: 60px !important;
-            height: 60px !important;
-            font-size: 0.9rem !important;
-        }
-
-        .timeline-card {
-            margin-top: 30px;
-        }
-
-        .timeline-stat {
-            border-right: none;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-            padding: 0.75rem;
-        }
-
-        .timeline-stat:last-child {
-            border-bottom: none;
-        }
-
-        .timeline-stat h3 {
-            font-size: 1.5rem;
-        }
-    }
-
-    @media (max-width: 576px) {
-        .upcoming-description {
-            font-size: 0.95rem;
-            line-height: 1.7;
-        }
-
-        .upcoming-primary-action,
-        .upcoming-secondary-action {
-            width: 100%;
-            min-width: 0;
-        }
-
-        .upcoming-showcase {
-            grid-template-columns: 1fr;
-        }
-
-        .timeline-card .card-body {
-            padding: 1.5rem;
-        }
-
-        .content-card-icon {
-            width: 40px !important;
-            height: 40px !important;
-        }
-
-        .timeline-year>div {
-            width: 50px !important;
-            height: 50px !important;
-            font-size: 0.8rem !important;
-        }
-    }
-
-    /* Gradient border effect for enhanced visual appeal */
-    .timeline-card::before {
-        content: '';
-        position: absolute;
-        top: -2px;
-        left: -2px;
-        right: -2px;
-        bottom: -2px;
-
-        border-radius: var(--border-radius);
-        z-index: -1;
-        opacity: 0;
-        transition: opacity 0.3s ease;
-    }
-
-    .timeline-card:hover::before {
-        opacity: 0.3;
-    }
-</style>
-
-{% endblock %}
+    </section>
+</div>
+{% endblock content %}
+
+{% block extraScripts %}
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Sticky pill active on scroll
+        const sections = document.querySelectorAll('section[id]');
+        const navPills = document.querySelectorAll('.media-pill');
+
+        window.addEventListener('scroll', function () {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 120;
+                if (window.pageYOffset >= sectionTop) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navPills.forEach(pill => {
+                pill.classList.remove('active');
+                if (pill.getAttribute('href') === '#' + current) {
+                    pill.classList.add('active');
+                }
+            });
+        });
+    });
+</script>
+{% endblock extraScripts %}

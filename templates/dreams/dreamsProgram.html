@@ -2,609 +2,641 @@
 {% load static %}
 
 {% block title %}
-D.R.E.A.M.S Program
+DREAMS Intervention Program (DIP) | Let Us Dream
 {% endblock %}
 
-{% block links %}
+{% block breadcrumb_section %}
+<!-- Suppress legacy standalone breadcrumb row -->
+{% endblock %}
 
-{% endblock links %}
+{% block extraStyles %}
+<link rel="stylesheet" href="{% static 'css/new/media.css' %}">
+{% endblock extraStyles %}
 
 {% block content %}
+<div class="media-page-wrapper dreams-page-wrapper">
 
-<!-- Hero Section -->
-<section class="">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-12 text-center">
-                <h1 class="hero-title mb-4 mt-4">
-                    <span class="fw-bold">DREAMS</span> Intervention Program <span class="fw-bold">(DIP)</span>
-                </h1>
-                <p class="hero-subtitle">
-                    <b>D</b>esire, <b>R</b>eadiness, <b>E</b>mpowerment, <b>A</b>ction and <b>M</b>astery for
-                    <b>S</b>uccess
-                </p>
-            </div>
-        </div>
-    </div>
-</section>
+    <!-- Minimalist Page Hero with Integrated Breadcrumb -->
+    <section class="media-hero">
+        <div class="container">
+            {% if breadcrumbs %}
+            <nav aria-label="breadcrumb" class="media-hero-breadcrumb">
+                <ol class="breadcrumb-minimal">
+                    {% for breadcrumb in breadcrumbs %}
+                        {% if not breadcrumb.active %}
+                            <li class="breadcrumb-item-min">
+                                {% if breadcrumb.url %}
+                                    <a href="{% url breadcrumb.url %}">
+                                        <i class="{{ breadcrumb.icon }}"></i>
+                                        <span>{{ breadcrumb.name }}</span>
+                                    </a>
+                                {% else %}
+                                    <span>
+                                        <i class="{{ breadcrumb.icon }}"></i>
+                                        <span>{{ breadcrumb.name }}</span>
+                                    </span>
+                                {% endif %}
+                            </li>
+                            <li class="breadcrumb-sep-min">/</li>
+                        {% else %}
+                            <li class="breadcrumb-item-min active">
+                                <i class="{{ breadcrumb.icon }}"></i>
+                                <span>{{ breadcrumb.name }}</span>
+                            </li>
+                        {% endif %}
+                    {% endfor %}
+                </ol>
+            </nav>
+            {% endif %}
 
-<!-- About DREAMS Section -->
-<div class="section">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-7 mb-4">
-                <h2 class="display-4 fw-bold mb-4">DREAMS</h2>
-                <p class="lh-lg">
-                    The DREAMS ( Desire, Readiness, Empowerment, Action and Mastery for Success) is
-                    a structured five stage approach designed to foster psycho-social and leadership
-                    development of an individual. Based on scientific theories , the DREAMS model
-                    begin with Desire and Readiness stage which incorporates goal setting and motivational
-                    theories while the Empowerment , Action and Mastery stages are grounded in self
-                    determination theory (Thomas , L. 2024, Pilot study, DREAMS Program - Journal of
-                    School Administration, Research and Development). Developed by Dr. Fr. Lijo Thomas,
-                    this evidence-based, three-year after-school program pairs underperforming middle
-                    school students with mentors from college and senior adults in the local community.
-                    Focused on mentoring, modeling, and motivating, these mentors help guide, inspire,
-                    and empower young participants, supporting their growth and resilience.
-                </p>
-            </div>
-            <div class="col-lg-5 text-center">
-                <img src="{% static 'stock/DIP (1).jpg' %}" class="img-fluid rounded-custom shadow-custom"
-                    alt="DREAMS Program">
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Why DREAMS Section -->
-<div class="section bg-light-gray">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-5 text-center mb-4">
-                <img src="{% static '2024/dreams/h02.png' %}" class="img-fluid rounded-custom shadow-custom"
-                    alt="Why DREAMS">
-            </div>
-            <div class="col-lg-7">
-                <h2 class="display-4 fw-bold mb-4">Why DREAMS</h2>
-                <p class="lh-lg">
-                    The DREAMS program is a transformative three- year intervention designed to foster
-                    authentic leadership, emotional intelligence, civic responsibility, and social
-                    consciousness. By harnessing the potential of university students, DREAMS program
-                    strategically impacts three age groups: adolescents, young adults, and senior adults.
-                </p>
-                <p class="lh-lg">
-                    DREAMS key goal is to reconnect local communities with educational institutions while enhancing
-                    youth leadership. Through intergenerational and intercultural mentoring, senior adults such as
-                    retirees and community volunteers share their wisdom, skills and values with young participants
-                    while young adults contribute their knowledge and hard skills. This exchange bridges
-                    generational gaps, allowing for the transfer of essential skills, cultural values and experiences
-                    among all
-                    the participants. Thus, DREAMS strengthen community ties and build a shared sense of purpose.
-                </p>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- How DREAMS Work Section -->
-<div class="section">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-8 mb-4">
-                <h2 class="display-4 fw-bold mb-4">How DREAMS Work?</h2>
-                <p class="lh-lg">
-                    The three-year curriculum focuses on personal, interpersonal, and leadership development for
-                    underperforming middle school students, supported by college students and senior adults. It
-                    begins with identifying 40-45 middle school students in need, 30 college mentors, and 8-10
-                    senior volunteers, organized into five groups using the D-R-E-A-M model ( Desire, Readiness,
-                    Empowerment, Action and Mastery for Success). Each group features a 1:2 mentoring ratio,
-                    ensuring personalized attention. The program includes 8 days of physical intervention each
-                    quarter—5 days of summer camp followed by 3 follow-up sessions—complemented by monthly
-                    virtual subgroup meetings to work on community service capstone projects. This structure aims to
-                    enhance students' personal growth and leadership skills while fostering mentorship in college
-                    students, with a continuous feedback loop to evaluate progress and community impact.
-                </p>
-            </div>
-            <div class="col-lg-4 text-center">
-                <img src="{% static '2024/dreams/h03.png' %}" class="img-fluid rounded-custom shadow-custom"
-                    alt="How DREAMS Work">
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Implementation Diagram -->
-<div class="section bg-light-gray">
-    <div class="container text-center">
-        <img src="{% static '2024/dreams/DREAMS-Implementation.png' %}" class="img-fluid rounded-custom"
-            style="max-width: 75%;" alt="DREAMS Implementation">
-    </div>
-</div>
-
-<!-- DREAMS Stages Carousel -->
-<div class="section bg-lightgreen">
-    <div class="container">
-        <div id="dreamsCarousel" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <div class="content-card text-center py-5">
-                        <h3 class="display-3 fw-bold text-primary-blue mb-3">Desire</h3>
-                        <p class="fs-5">
-                            Desire is the first step, where external, extrinsic motivations ignite an intense
-                            fascination or attraction toward goals in life
-                        </p>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="content-card text-center py-5">
-                        <h3 class="display-3 fw-bold text-primary-blue mb-3">Readiness</h3>
-                        <p class="fs-5">
-                            Readiness follows, involving internalizing these goals and transforming extrinsic
-                            motivations into intrinsic ones.
-                        </p>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="content-card text-center py-5">
-                        <h3 class="display-3 fw-bold text-primary-blue mb-3">Empowerment</h3>
-                        <p class="fs-5">
-                            Empowerment equips participants with the psycho-social and leadership skills
-                            necessary for holistic growth.
-                        </p>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="content-card text-center py-5">
-                        <h3 class="display-3 fw-bold text-primary-blue mb-3">Action</h3>
-                        <p class="fs-5">
-                            Action is the stage where participants take real steps towards their goals, building
-                            momentum through perseverance and effort.
-                        </p>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="content-card text-center py-5">
-                        <h3 class="display-3 fw-bold text-primary-blue mb-3">Mastery</h3>
-                        <p class="fs-5">
-                            Mastery or excellence is the final stage, where sustained effort leads to success,
-                            and the cycle begins again as new, higher goals are set.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#dreamsCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#dreamsCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
-    </div>
-</div>
-
-<!-- Impact Section -->
-<div class="section">
-    <div class="container">
-        <div class="row">
-            <div class="col-12 mb-5">
-                <h2 class="display-4 fw-bold text-center mb-4">DREAMS Impact</h2>
-                <div class="content-card">
-                    <div class="row text-center">
-                        <div class="col-lg-10">
-                            <div class="row g-4">
-                                <div class="col-md-4">
-                                    <div class="hover-lift">
-                                        <i class="fa-solid fa-house display-4 text-primary-blue mb-3"></i>
-                                        <h4 class="fw-bold">3100+ Families</h4>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="hover-lift">
-                                        <i
-                                            class="fa-solid fa-person-walking-with-cane display-4 text-primary-blue mb-3"></i>
-                                        <h4 class="fw-bold">3000+ Mentees</h4>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="hover-lift">
-                                        <i
-                                            class="fa-solid fa-person-military-pointing display-4 text-primary-blue mb-3"></i>
-                                        <h4 class="fw-bold">1600+ Mentors</h4>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="hover-lift">
-                                        <i class="fa-solid fa-street-view display-4 text-primary-blue mb-3"></i>
-                                        <h4 class="fw-bold">250+ Community Leaders</h4>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="hover-lift">
-                                        <i class="fa-solid fa-building-columns display-4 text-primary-blue mb-3"></i>
-                                        <h4 class="fw-bold">10+ Colleges/Universities</h4>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="hover-lift">
-                                        <i class="fa-solid fa-school display-4 text-primary-blue mb-3"></i>
-                                        <h4 class="fw-bold">15+ Schools</h4>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-2 d-flex align-items-center">
-                            <a href="https://drive.google.com/file/d/1j46A1wvDq6ebGaQADr4M2nmWRcYPsRVA/view?usp=sharing"
-                                class="btn btn-primary text-decoration-none" target="_blank">
-                                <div class="p-3 text-white fw-bold text-center">
-                                    Read our Annual Report 2024
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Our Reach Section -->
-<div class="section bg-light-gray">
-    <div class="container">
-        <h2 class="display-4 fw-bold text-center mb-5">Our Reach</h2>
-        <div class="text-center mb-4">
-            <img src="{% static '2024/dreams/map.png' %}" class="img-fluid rounded-custom "
-                alt="Global Reach Map">
-        </div>
-        <div class="row">
-            <div class="col-md-5">
-                <div class="content-card h-100">
-                    <h4 class="fw-bold text-primary-blue mb-3">INDIA</h4>
-                    <ul class="list-unstyled">
-                        <li>- Bangalore, Karnataka</li>
-                        <li>- Mannanam, Kerala</li>
-                        <li>- Chaganacherry, Kerala</li>
-                        <li>- Thiruvananthapuram, Kerala</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="content-card h-100">
-                    <h4 class="fw-bold text-primary-blue mb-3">USA</h4>
-                    <ul class="list-unstyled">
-                        <li>- Dallas, Texas</li>
-                        <li>- McAllen, Texas</li>
-                        <li>- Monroe, Louisiana</li>
-                        <li>- Bastrop, Louisiana</li>
-                        <li>- LaGrande, Oregon</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="content-card h-100">
-                    <h4 class="fw-bold text-primary-blue mb-3">GERMANY</h4>
-                    <ul class="list-unstyled">
-                        <li>- Cologne</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Impact Studies Section -->
-<div class="section bg-lightgreen">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-7 mb-4">
-                <div class="content-card h-100">
-                    <h4 class="fw-bold text-center mb-4">Impact Studies and Review Reports</h4>
-                    <p><span class="fw-bold">a.</span> More than 20 members from different universities and continents
-                        are involved in the research team who are continuously researching the impact of the program <a
-                            href="{% url 'research' %}" class="text-decoration-none" target="_blank">LUD Research</a>.
-                        More than 15 research studies have been already conducted on the DREAMS Intervention Program on
-                        its three primary stakeholders and published in different indexed journals - <a
-                            href="{% url 'publications' %}" class="text-decoration-none" target="_blank">LUD
-                            Publications</a>.</p>
-
-                    <p><span class="fw-bold">b.</span> Participants (mentees) and college student mentors have shown
-                        significant positive changes in their self-confidence, self-esteem, level of motivation,
-                        personal and social behavior, and academic performance.</p>
-
-                    <p><span class="fw-bold">c.</span> Senior adult mentors reported feeling happier and finding life
-                        more meaningful after retirement after volunteering in the program.</p>
-
-                    <p><span class="fw-bold">d.</span> Our annual review, incorporating feedback from primary
-                        stakeholders (students, mentors, families) and secondary stakeholders (parents, teachers, local
-                        business partners), indicates a significant positive shift in students' attitudes towards
-                        enhanced emotional well-being, learning and community engagement.</p>
-                </div>
-            </div>
-            <div class="col-lg-5">
-                <div class="content-card h-100">
-                    <h4 class="fw-bold text-center mb-4">Impact - Leadership and Community Development</h4>
-                    <p><span class="fw-bold">a.</span> The Program focuses on fostering transformational, and authentic
-                        thought leaders among university students through leadership, mentoring, and community service
-                        initiatives.</p>
-
-                    <p><span class="fw-bold">b.</span> Empowered women, leading to greater social and economic
-                        independence within communities. More than 70% of the leaders (college students and senior
-                        adults) are women at the DIP.</p>
-
-                    <p><span class="fw-bold">c.</span> The evaluation shows that 90% of parents report positive changes
-                        in their child's behaviour, and mentees pursue higher education. Through this, the program has
-                        fostered leadership, empowered communities, and contributed to social and economic resilience.
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-8 col-md-10">
+                    <span class="media-kicker">Let Us Dream • Youth &amp; Intergenerational Mentorship</span>
+                    <h1 class="media-hero-title">DREAMS Intervention Program (DIP)</h1>
+                    <p class="media-hero-lead">
+                        <strong>D</strong>esire, <strong>R</strong>eadiness, <strong>E</strong>mpowerment, <strong>A</strong>ction and <strong>M</strong>astery for <strong>S</strong>uccess
                     </p>
                 </div>
             </div>
         </div>
-    </div>
-</div>
+    </section>
 
-<!-- Partners Section -->
-<div class="section">
-    <div class="container">
-        <h2 class="display-3 fw-bold text-center mb-5">Partners</h2>
-        <div id="dreamsPartnersCarousel" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <div class="text-center">
-                        <img src="{% static '2024/dreams/partners1.png' %}"
-                            class="img-fluid rounded-custom shadow-custom" alt="Partners 1">
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="text-center">
-                        <img src="{% static '2024/dreams/partners2.png' %}"
-                            class="img-fluid rounded-custom shadow-custom" alt="Partners 2">
-                    </div>
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#dreamsPartnersCarousel"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#dreamsPartnersCarousel"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
-    </div>
-</div>
-
-<!-- Meet the Team Section - Updated for DREAMS -->
-<div class="section bg-light-gray">
-    <div class="container">
-        <!-- Section Header -->
-        <div class="text-center mb-5">
-            <h2 class="section-title font-primary mb-2">Meet the Team</h2>
-            <p class="text-medium">Dedicated professionals driving the DREAMS program forward</p>
-        </div>
-
-        <!-- People Grid -->
-        <div class="row g-4">
-            <!-- Team Member 1 -->
-            <div class="col-lg-4 col-md-6 fade-in">
-                <div class="card hover-lift text-center h-100">
-                    <div class="card-body">
-                        <img src="{% static '2024/dreams/team member1.jpg' %}" class="people-avatar shadow-custom-small transition-normal" alt="Adarsh Jose">
-                        <h5 class="font-primary text-primary-blue mb-2">Adarsh Jose</h5>
-                        <p class="text-medium text-uppercase mb-3">Lead</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Team Member 2 -->
-            <div class="col-lg-4 col-md-6 fade-in">
-                <div class="card hover-lift text-center h-100">
-                    <div class="card-body">
-                        <img src="{% static '2024/dreams/team member2.jpg' %}" class="people-avatar shadow-custom-small transition-normal" alt="Banu H V">
-                        <h5 class="font-primary text-primary-blue mb-2">Banu H V</h5>
-                        <p class="text-medium text-uppercase mb-3">Youth Lead</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Team Member 3 -->
-            <div class="col-lg-4 col-md-6 fade-in">
-                <div class="card hover-lift text-center h-100">
-                    <div class="card-body">
-                        <img src="{% static '2024/dreams/Leadership/30.png' %}" class="people-avatar shadow-custom-small transition-normal" alt="Jasmine Sahni">
-                        <h5 class="font-primary text-primary-blue mb-2">Jasmine Sahni</h5>
-                        <p class="text-medium text-uppercase mb-3">Personnel</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Team Member 4 -->
-            <div class="col-lg-4 col-md-6 fade-in">
-                <div class="card hover-lift text-center h-100">
-                    <div class="card-body">
-                        <img src="{% static '2024/dreams/Leadership/35.png' %}" class="people-avatar shadow-custom-small transition-normal" alt="Jovin George">
-                        <h5 class="font-primary text-primary-blue mb-2">Jovin George</h5>
-                        <p class="text-medium text-uppercase mb-3">Media</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Team Member 5 -->
-            <div class="col-lg-4 col-md-6 fade-in">
-                <div class="card hover-lift text-center h-100">
-                    <div class="card-body">
-                        <img src="{% static '2024/dreams/Leadership/31.png' %}" class="people-avatar shadow-custom-small transition-normal" alt="Roseline Gomes">
-                        <h5 class="font-primary text-primary-blue mb-2">Roseline Gomes</h5>
-                        <p class="text-medium text-uppercase mb-3">Programs Lead</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Team Member 6 -->
-            <div class="col-lg-4 col-md-6 fade-in">
-                <div class="card hover-lift text-center h-100">
-                    <div class="card-body">
-                        <img src="{% static '2024/dreams/Leadership/32.png' %}" class="people-avatar shadow-custom-small transition-normal" alt="Smita Kavatekar">
-                        <h5 class="font-primary text-primary-blue mb-2">Smita Kavatekar</h5>
-                        <p class="text-medium text-uppercase mb-3">Faculty Lead</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Team Member 7 -->
-            <div class="col-lg-4 col-md-6 fade-in">
-                <div class="card hover-lift text-center h-100">
-                    <div class="card-body">
-                        <img src="{% static '2024/dreams/team member5.jpg' %}" class="people-avatar shadow-custom-small transition-normal" alt="Srikrishna Bhagawan NM">
-                        <h5 class="font-primary text-primary-blue mb-2">Srikrishna Bhagawan NM</h5>
-                        <p class="text-medium text-uppercase mb-3">Faculty Coordinator</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Team Member 8 -->
-            <div class="col-lg-4 col-md-6 fade-in">
-                <div class="card hover-lift text-center h-100">
-                    <div class="card-body">
-                        <img src="{% static '2024/dreams/team member3.jpg' %}" class="people-avatar shadow-custom-small transition-normal" alt="Fina Francis">
-                        <h5 class="font-primary text-primary-blue mb-2">Fina Francis</h5>
-                        <p class="text-medium text-uppercase mb-3">Community Lead</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Team Member 9 -->
-            <div class="col-lg-4 col-md-6 fade-in">
-                <div class="card hover-lift text-center h-100">
-                    <div class="card-body">
-                        <img src="{% static '2024/dreams/team member4.jpg' %}" class="people-avatar shadow-custom-small transition-normal" alt="Jasmine Joseph">
-                        <h5 class="font-primary text-primary-blue mb-2">Jasmine Joseph</h5>
-                        <p class="text-medium text-uppercase mb-3">Operations</p>
-                    </div>
-                </div>
+    <!-- Sticky Navigation Jump Pills -->
+    <div class="media-nav-wrapper">
+        <div class="container">
+            <div class="media-nav-scroll justify-content-start justify-content-md-center">
+                <a href="#about" class="media-pill active"><i class="fas fa-info-circle me-1"></i>About DIP</a>
+                <a href="#why-dreams" class="media-pill"><i class="fas fa-lightbulb me-1"></i>Why DREAMS</a>
+                <a href="#how-it-works" class="media-pill"><i class="fas fa-cogs me-1"></i>How It Works</a>
+                <a href="#stages" class="media-pill"><i class="fas fa-layer-group me-1"></i>5 Stages</a>
+                <a href="#impact" class="media-pill"><i class="fas fa-chart-line me-1"></i>Impact &amp; Metrics</a>
+                <a href="#reach" class="media-pill"><i class="fas fa-globe-americas me-1"></i>Global Reach</a>
+                <a href="#research" class="media-pill"><i class="fas fa-microscope me-1"></i>Research &amp; Reviews</a>
+                <a href="#partners" class="media-pill"><i class="fas fa-handshake me-1"></i>Partners</a>
+                <a href="#team" class="media-pill"><i class="fas fa-users me-1"></i>Our Team</a>
+                <a href="#events" class="media-pill"><i class="fas fa-calendar-alt me-1"></i>Events</a>
             </div>
         </div>
     </div>
-</div>
 
+    <div class="container py-5">
 
+        <!-- 1. About DIP Section -->
+        <section id="about" class="mb-5 pb-4">
+            <div class="card border-0 shadow-sm rounded-4 p-4 p-lg-5" style="border: 1px solid var(--media-border) !important;">
+                <div class="row align-items-center g-4">
+                    <div class="col-lg-7">
+                        <span class="badge bg-primary-subtle text-primary px-3 py-2 rounded-pill fw-bold mb-3">Evidence-Based Intervention</span>
+                        <h2 class="h2 fw-bold mb-3" style="font-family: var(--media-font-serif);">Fostering Psycho-Social &amp; Leadership Development</h2>
+                        <p class="text-secondary lh-lg mb-3">
+                            The <strong>DREAMS</strong> (<em>Desire, Readiness, Empowerment, Action and Mastery for Success</em>) model is a structured five-stage approach designed to foster holistic psycho-social and leadership development in young individuals. Grounded in scientific principles, the DREAMS framework initiates with the <em>Desire and Readiness</em> stages—drawing on contemporary goal-setting and motivational theories—while the subsequent <em>Empowerment, Action, and Mastery</em> stages are anchored in self-determination theory (<em>Thomas, L. 2024, Pilot study, DREAMS Program &mdash; Journal of School Administration, Research and Development</em>).
+                        </p>
+                        <p class="text-secondary lh-lg mb-0">
+                            Developed by <strong>Dr. Fr. Lijo Thomas</strong>, this evidence-based, three-year after-school program pairs underperforming middle school students with trained university mentors and seasoned senior adults from local communities. Guided by the core tenets of <em>mentoring, modeling, and motivating</em>, mentors inspire, coach, and empower young participants to cultivate enduring resilience, personal mastery, and academic ambition.
+                        </p>
+                    </div>
+                    <div class="col-lg-5 text-center">
+                        <img src="{% static 'stock/DIP (1).jpg' %}" class="img-fluid rounded-4 shadow-sm" alt="DREAMS Program Cohort" style="max-height: 380px; width: 100%; object-fit: cover;">
+                    </div>
+                </div>
+            </div>
+        </section>
 
-<!-- Events Section -->
-<div class="section">
-    <div class="container">
-        <h2 class="display-4 fw-bold text-center mb-5">Events</h2>
-        <div class="row g-4">
-            <div class="col-lg-4 col-md-6">
-                <div class="card dreams-card h-100">
-                    <img src="{% static '2024/dreams/Events/event1.png' %}" class="card-img-top"
-                        alt="Leadership Training Event">
-                    <div class="card-body">
-                        <p class="card-text">
-                            Outbound Leadership Training at CHRIST (Deemed to be) University, Yeshwanthpur
-                            <br><br>
-                            <strong>Date:</strong> 21st and 22nd September 2024
-                            <br><br>
-                            <strong>Participants:</strong> Mentors, CLs, FLs and the Strategic Team Members of the
-                            Karnataka Chapter
+        <!-- 2. Why DREAMS Section -->
+        <section id="why-dreams" class="mb-5 pb-4">
+            <div class="card border-0 shadow-sm rounded-4 p-4 p-lg-5" style="border: 1px solid var(--media-border) !important;">
+                <div class="row align-items-center g-4">
+                    <div class="col-lg-5 text-center order-lg-1 order-2">
+                        <img src="{% static '2024/dreams/h02.png' %}" class="img-fluid rounded-4 shadow-sm" alt="Why DREAMS Framework" style="max-height: 380px; width: 100%; object-fit: cover;">
+                    </div>
+                    <div class="col-lg-7 order-lg-2 order-1">
+                        <span class="badge bg-primary-subtle text-primary px-3 py-2 rounded-pill fw-bold mb-3">Intergenerational Mentorship</span>
+                        <h2 class="h2 fw-bold mb-3" style="font-family: var(--media-font-serif);">Bridging Generations for Transformative Community Impact</h2>
+                        <p class="text-secondary lh-lg mb-3">
+                            The DREAMS program is an impactful three-year intervention designed to cultivate authentic leadership, emotional intelligence, civic responsibility, and social consciousness. By harnessing the dynamic potential of university student volunteers, DREAMS creates a purposeful synergy across three generations: <strong>adolescents, young adults, and senior adults</strong>.
+                        </p>
+                        <p class="text-secondary lh-lg mb-0">
+                            A foundational objective is reconnecting local neighborhoods with higher education institutions. Through intercultural and intergenerational mentoring, senior adults (retirees and seasoned volunteers) share accumulated wisdom, life perspective, and values, while collegiate mentors provide technical guidance and academic coaching. This mutual exchange bridges societal divides, reinforces social cohesion, and nurtures a shared sense of civic duty.
                         </p>
                     </div>
                 </div>
             </div>
+        </section>
 
-
-            <div class="col-lg-4 col-md-6">
-                <div class="card dreams-card h-100">
-                    <img src="{% static '2024/dreams/Events/event2.jpg' %}" class="card-img-top"
-                        alt="Follow-Up Session">
-                    <div class="card-body">
-                        <p class="card-text">
-                            The 1st Follow-Up Session happened on 7th October 2024, from 1 PM to 4 PM at St. Anthony's
-                            Higher Primary School.
-                            <br>
-                            <strong>Theme:</strong> Delivering Happiness
+        <!-- 3. How DREAMS Works Section -->
+        <section id="how-it-works" class="mb-5 pb-4">
+            <div class="card border-0 shadow-sm rounded-4 p-4 p-lg-5 mb-4" style="border: 1px solid var(--media-border) !important;">
+                <div class="row align-items-center g-4">
+                    <div class="col-lg-7">
+                        <span class="badge bg-primary-subtle text-primary px-3 py-2 rounded-pill fw-bold mb-3">Operational Model</span>
+                        <h2 class="h2 fw-bold mb-3" style="font-family: var(--media-font-serif);">Structured Three-Year Mentorship Architecture</h2>
+                        <p class="text-secondary lh-lg mb-3">
+                            The comprehensive three-year curriculum focuses on personal, interpersonal, and leadership development for middle school students, systematically supported by collegiate mentors and senior community partners.
                         </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="card dreams-card h-100">
-                    <img src="{% static '2024/dreams/Events/event3.jpg' %}" class="card-img-top"
-                        alt="Ocean Students Community Event">
-                    <div class="card-body">
-                        <p class="card-text">
-                            The Ocean Students Community successfully completed their follow-up session for the DREAMS
-                            Intervention Program on 14th September 2024 at Govt. Muhammadans LPS, Pallam,
-                            Thiruvananthapuram
+                        <p class="text-secondary lh-lg mb-4">
+                            Each cohort unites <strong>40&ndash;45 middle school students</strong> in need, <strong>30 college mentors</strong>, and <strong>8&ndash;10 senior volunteers</strong>, clustered into focused circles around the D-R-E-A-M framework. A close <strong>1:2 mentoring ratio</strong> ensures personalized, empathetic attention for every youth participant.
                         </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Newsletter Section -->
-<div class="section bg-light-gray">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-8">
-                <form method="POST" action="{% url 'subscribe-email' %}">
-                    {% csrf_token %}
-                    <div class="input-group shadow-custom">
-                        <span class="input-group-text bg-gradient-secondary text-dark fw-bold px-4">
-                            Subscribe to our Newsletter
-                        </span>
-                        <div class="form-floating flex-grow-1">
-                            <input type="email" class="form-control" id="emailfornews" name="emailfornews"
-                                placeholder="Enter your email" required>
-                            <input type="hidden" value="dreams" id="program" name="program">
-                            <label for="emailfornews">Enter your email</label>
+                        <div class="d-flex flex-wrap gap-2">
+                            <span class="yclp-highlight-badge"><i class="fas fa-user-friends"></i> 1:2 Mentoring Ratio</span>
+                            <span class="yclp-highlight-badge"><i class="fas fa-campground"></i> 8 Days Quarterly Physical Camps</span>
+                            <span class="yclp-highlight-badge"><i class="fas fa-laptop"></i> Monthly Virtual Capstone Circles</span>
+                            <span class="yclp-highlight-badge"><i class="fas fa-sync-alt"></i> Continuous Evaluation Loop</span>
                         </div>
-                        <button type="submit"
-                            class="btn btn-outline-light  bg-gradient-primary fw-bold px-4">Subscribe</button>
                     </div>
-                </form>
+                    <div class="col-lg-5 text-center">
+                        <img src="{% static '2024/dreams/h03.png' %}" class="img-fluid rounded-4 shadow-sm" alt="How DREAMS Works" style="max-height: 380px; width: 100%; object-fit: cover;">
+                    </div>
+                </div>
             </div>
-        </div>
+
+            <!-- Implementation Architecture Diagram -->
+            <div class="card border-0 shadow-sm rounded-4 p-4 p-lg-5 text-center" style="border: 1px solid var(--media-border) !important;">
+                <div class="text-center mb-4">
+                    <span class="badge bg-secondary-subtle text-secondary px-3 py-1 rounded-pill fw-bold">Implementation Blueprint</span>
+                    <h3 class="h4 fw-bold mt-2" style="font-family: var(--media-font-serif);">DREAMS Three-Year Implementation &amp; Evaluation Framework</h3>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <img src="{% static '2024/dreams/DREAMS-Implementation.png' %}" class="img-fluid rounded-3" style="max-width: 85%;" alt="DREAMS Implementation Architecture">
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. The 5 Stages of DREAMS Section -->
+        <section id="stages" class="mb-5 pb-4">
+            <div class="text-center mb-4">
+                <span class="badge bg-primary-subtle text-primary px-3 py-1 rounded-pill fw-bold">Framework for Growth</span>
+                <h2 class="display-6 fw-bold mt-2" style="font-family: var(--media-font-serif);">The 5 Stages of the DREAMS Model</h2>
+                <p class="text-secondary mx-auto" style="max-width: 700px;">
+                    A scientifically grounded progression from extrinsic aspiration to intrinsic mastery and sustained lifelong excellence.
+                </p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg col-md-4 col-sm-6">
+                    <div class="dreams-stage-card">
+                        <div class="dreams-stage-badge">D</div>
+                        <h4 class="h5 fw-bold mb-2 text-primary">Desire</h4>
+                        <p class="text-muted small mb-0">
+                            External and extrinsic motivations ignite curiosity, fascination, and attraction toward personal and academic life goals.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg col-md-4 col-sm-6">
+                    <div class="dreams-stage-card">
+                        <div class="dreams-stage-badge">R</div>
+                        <h4 class="h5 fw-bold mb-2 text-primary">Readiness</h4>
+                        <p class="text-muted small mb-0">
+                            Internalizing life goals, transforming extrinsic encouragement into resilient intrinsic commitment and purpose.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg col-md-4 col-sm-6">
+                    <div class="dreams-stage-card">
+                        <div class="dreams-stage-badge">E</div>
+                        <h4 class="h5 fw-bold mb-2 text-primary">Empowerment</h4>
+                        <p class="text-muted small mb-0">
+                            Equipping participants with essential psycho-social, emotional intelligence, and interpersonal skills for holistic development.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg col-md-6 col-sm-6">
+                    <div class="dreams-stage-card">
+                        <div class="dreams-stage-badge">A</div>
+                        <h4 class="h5 fw-bold mb-2 text-primary">Action</h4>
+                        <p class="text-muted small mb-0">
+                            Taking proactive, concrete steps toward milestones, building self-efficacy and forward momentum through perseverance.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg col-md-6 col-sm-12">
+                    <div class="dreams-stage-card">
+                        <div class="dreams-stage-badge">M</div>
+                        <h4 class="h5 fw-bold mb-2 text-primary">Mastery</h4>
+                        <p class="text-muted small mb-0">
+                            Sustained effort culminates in self-mastery and excellence, where the cyclical journey begins anew with higher aspirations.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Impact & Metrics Section -->
+        <section id="impact" class="mb-5 pb-4">
+            <div class="text-center mb-4">
+                <span class="badge bg-primary-subtle text-primary px-3 py-1 rounded-pill fw-bold">Measurable Outcomes</span>
+                <h2 class="display-6 fw-bold mt-2" style="font-family: var(--media-font-serif);">DREAMS Impact at a Glance</h2>
+                <p class="text-secondary mx-auto" style="max-width: 700px;">
+                    Longitudinal empirical metrics reflecting our transformative community reach across generations.
+                </p>
+            </div>
+
+            <div class="row g-4 mb-4">
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="dreams-metric-card">
+                        <i class="fa-solid fa-house metric-icon"></i>
+                        <div class="metric-value">3,100+</div>
+                        <div class="metric-label">Families</div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="dreams-metric-card">
+                        <i class="fa-solid fa-user-graduate metric-icon"></i>
+                        <div class="metric-value">3,000+</div>
+                        <div class="metric-label">Mentees</div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="dreams-metric-card">
+                        <i class="fa-solid fa-chalkboard-user metric-icon"></i>
+                        <div class="metric-value">1,600+</div>
+                        <div class="metric-label">Mentors</div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="dreams-metric-card">
+                        <i class="fa-solid fa-users-rays metric-icon"></i>
+                        <div class="metric-value">250+</div>
+                        <div class="metric-label">Community Leads</div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="dreams-metric-card">
+                        <i class="fa-solid fa-building-columns metric-icon"></i>
+                        <div class="metric-value">10+</div>
+                        <div class="metric-label">Colleges</div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="dreams-metric-card">
+                        <i class="fa-solid fa-school metric-icon"></i>
+                        <div class="metric-value">15+</div>
+                        <div class="metric-label">Schools</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Annual Report CTA Card -->
+            <div class="card border-0 rounded-4 p-4 text-center text-md-start" style="background: linear-gradient(135deg, #f8fafc 0%, #edf4fc 100%); border: 1px solid var(--media-border) !important;">
+                <div class="row align-items-center g-3">
+                    <div class="col-md-8">
+                        <h4 class="h5 fw-bold mb-1 text-dark" style="font-family: var(--media-font-serif);">Comprehensive 2024 Annual Review</h4>
+                        <p class="text-secondary small mb-0">Explore full empirical findings, stakeholder survey outcomes, and qualitative feedback from across our global chapters.</p>
+                    </div>
+                    <div class="col-md-4 text-md-end text-center">
+                        <a href="https://drive.google.com/file/d/1j46A1wvDq6ebGaQADr4M2nmWRcYPsRVA/view?usp=sharing" target="_blank" class="btn btn-primary px-4 py-2 rounded-pill fw-semibold shadow-sm">
+                            <i class="fas fa-file-pdf me-2"></i>Read Annual Report
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Global Reach Section -->
+        <section id="reach" class="mb-5 pb-4">
+            <div class="text-center mb-4">
+                <span class="badge bg-primary-subtle text-primary px-3 py-1 rounded-pill fw-bold">Geographic Footprint</span>
+                <h2 class="display-6 fw-bold mt-2" style="font-family: var(--media-font-serif);">Our Global Reach</h2>
+                <p class="text-secondary mx-auto" style="max-width: 700px;">
+                    Active community and university chapters spanning North America, Europe, and Asia.
+                </p>
+            </div>
+
+            <div class="card border-0 shadow-sm rounded-4 p-4 p-lg-5 mb-4 text-center" style="border: 1px solid var(--media-border) !important;">
+                <img src="{% static '2024/dreams/map.png' %}" class="img-fluid rounded-3 mx-auto" style="max-height: 400px; width: auto;" alt="Global Reach Map">
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-5">
+                    <div class="dreams-reach-card">
+                        <div class="d-flex align-items-center gap-2 mb-3">
+                            <i class="fas fa-map-marker-alt text-primary fs-5"></i>
+                            <h4 class="h5 fw-bold mb-0 text-primary">INDIA</h4>
+                        </div>
+                        <ul class="list-unstyled mb-0 text-secondary">
+                            <li class="py-1"><i class="fas fa-check text-primary me-2"></i>Bangalore, Karnataka</li>
+                            <li class="py-1"><i class="fas fa-check text-primary me-2"></i>Mannanam, Kerala</li>
+                            <li class="py-1"><i class="fas fa-check text-primary me-2"></i>Changanacherry, Kerala</li>
+                            <li class="py-1"><i class="fas fa-check text-primary me-2"></i>Thiruvananthapuram, Kerala</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="dreams-reach-card">
+                        <div class="d-flex align-items-center gap-2 mb-3">
+                            <i class="fas fa-map-marker-alt text-primary fs-5"></i>
+                            <h4 class="h5 fw-bold mb-0 text-primary">USA</h4>
+                        </div>
+                        <ul class="list-unstyled mb-0 text-secondary">
+                            <li class="py-1"><i class="fas fa-check text-primary me-2"></i>Dallas, Texas</li>
+                            <li class="py-1"><i class="fas fa-check text-primary me-2"></i>McAllen, Texas</li>
+                            <li class="py-1"><i class="fas fa-check text-primary me-2"></i>Monroe, Louisiana</li>
+                            <li class="py-1"><i class="fas fa-check text-primary me-2"></i>Bastrop, Louisiana</li>
+                            <li class="py-1"><i class="fas fa-check text-primary me-2"></i>La Grande, Oregon</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="dreams-reach-card">
+                        <div class="d-flex align-items-center gap-2 mb-3">
+                            <i class="fas fa-map-marker-alt text-primary fs-5"></i>
+                            <h4 class="h5 fw-bold mb-0 text-primary">GERMANY</h4>
+                        </div>
+                        <ul class="list-unstyled mb-0 text-secondary">
+                            <li class="py-1"><i class="fas fa-check text-primary me-2"></i>Cologne (Köln)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. Research & Reviews Section -->
+        <section id="research" class="mb-5 pb-4">
+            <div class="text-center mb-4">
+                <span class="badge bg-primary-subtle text-primary px-3 py-1 rounded-pill fw-bold">Scientific Validation</span>
+                <h2 class="display-6 fw-bold mt-2" style="font-family: var(--media-font-serif);">Impact Studies &amp; Review Reports</h2>
+                <p class="text-secondary mx-auto" style="max-width: 700px;">
+                    Empirically evaluated by global researchers and published in top indexed scholarly journals.
+                </p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-7">
+                    <div class="card border-0 shadow-sm rounded-4 p-4 h-100" style="border: 1px solid var(--media-border) !important;">
+                        <h4 class="h5 fw-bold text-primary mb-3" style="font-family: var(--media-font-serif);">Empirical Research &amp; Scholarly Publications</h4>
+                        <div class="mb-3 pb-3 border-bottom">
+                            <div class="fw-bold text-dark mb-1"><i class="fas fa-book-open text-primary me-2"></i>20+ Global Scholars &amp; 15+ Publications</div>
+                            <p class="text-secondary small mb-2">
+                                Over 20 faculty researchers from universities worldwide continuously investigate the DIP model. More than 15 empirical studies evaluate our three primary stakeholder cohorts in peer-reviewed journals.
+                            </p>
+                            <div class="d-flex gap-2">
+                                <a href="{% url 'research' %}" class="btn btn-sm btn-outline-primary rounded-pill px-3"><i class="fas fa-microscope me-1"></i>LUD Research</a>
+                                <a href="{% url 'publications' %}" class="btn btn-sm btn-outline-primary rounded-pill px-3"><i class="fas fa-file-alt me-1"></i>LUD Publications</a>
+                            </div>
+                        </div>
+                        <div class="mb-3 pb-3 border-bottom">
+                            <div class="fw-bold text-dark mb-1"><i class="fas fa-smile text-primary me-2"></i>Psycho-Social &amp; Academic Gains</div>
+                            <p class="text-secondary small mb-0">
+                                Mentees and college mentors demonstrate statistically significant positive changes in self-esteem, intrinsic motivation, emotional regulation, and classroom performance.
+                            </p>
+                        </div>
+                        <div>
+                            <div class="fw-bold text-dark mb-1"><i class="fas fa-heart text-primary me-2"></i>Senior Adult Well-Being</div>
+                            <p class="text-secondary small mb-0">
+                                Senior volunteers report marked improvements in life satisfaction, social connectivity, and finding rejuvenated purpose post-retirement through intergenerational exchange.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-5">
+                    <div class="card border-0 shadow-sm rounded-4 p-4 h-100" style="border: 1px solid var(--media-border) !important;">
+                        <h4 class="h5 fw-bold text-primary mb-3" style="font-family: var(--media-font-serif);">Leadership &amp; Community Resilience</h4>
+                        <div class="mb-3 pb-3 border-bottom">
+                            <div class="fw-bold text-dark mb-1"><i class="fas fa-lightbulb text-primary me-2"></i>Transformational Leadership</div>
+                            <p class="text-secondary small mb-0">
+                                Cultivates ethical, empathetic, and action-oriented leadership among college students through hands-on community service and peer mentoring.
+                            </p>
+                        </div>
+                        <div class="mb-3 pb-3 border-bottom">
+                            <div class="fw-bold text-dark mb-1"><i class="fas fa-venus text-primary me-2"></i>Empowering Women Leaders</div>
+                            <p class="text-secondary small mb-0">
+                                More than <strong>70%</strong> of DIP leaders—including collegiate coordinators and senior adult volunteers—are women, driving economic resilience and civic agency.
+                            </p>
+                        </div>
+                        <div>
+                            <div class="fw-bold text-dark mb-1"><i class="fas fa-graduation-cap text-primary me-2"></i>90% Parental Approval</div>
+                            <p class="text-secondary small mb-0">
+                                90% of surveyed parents report marked positive behavioral changes, with mentees demonstrating enhanced determination to pursue higher education.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. Partners Section -->
+        <section id="partners" class="mb-5 pb-4">
+            <div class="text-center mb-4">
+                <span class="badge bg-primary-subtle text-primary px-3 py-1 rounded-pill fw-bold">Collaboration</span>
+                <h2 class="display-6 fw-bold mt-2" style="font-family: var(--media-font-serif);">Our Academic &amp; Community Partners</h2>
+                <p class="text-secondary mx-auto" style="max-width: 700px;">
+                    Collaborating with premier universities, schools, and civic bodies globally.
+                </p>
+            </div>
+
+            <div class="card border-0 shadow-sm rounded-4 p-4 p-lg-5" style="border: 1px solid var(--media-border) !important;">
+                <div id="dreamsPartnersCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="text-center">
+                                <img src="{% static '2024/dreams/partners1.png' %}" class="img-fluid rounded-3 mx-auto" alt="Academic Partners 1" style="max-height: 180px;">
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="text-center">
+                                <img src="{% static '2024/dreams/partners2.png' %}" class="img-fluid rounded-3 mx-auto" alt="Academic Partners 2" style="max-height: 180px;">
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#dreamsPartnersCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true" style="filter: invert(1);"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#dreamsPartnersCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true" style="filter: invert(1);"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 9. Meet the Team Section -->
+        <section id="team" class="mb-5 pb-4">
+            <div class="text-center mb-5">
+                <span class="badge bg-primary-subtle text-primary px-3 py-1 rounded-pill fw-bold">Mentorship &amp; Direction</span>
+                <h2 class="display-6 fw-bold mt-2" style="font-family: var(--media-font-serif);">Meet the Team</h2>
+                <p class="text-secondary mx-auto" style="max-width: 650px;">
+                    Dedicated professionals, faculty coordinators, and youth leads driving the DREAMS program forward.
+                </p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Team Member 1 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="leader-card text-center h-100 p-4">
+                        <img src="{% static '2024/dreams/team member1.jpg' %}" class="leader-avatar mb-3" alt="Adarsh Jose">
+                        <div class="leader-role-badge mb-2">Program Lead</div>
+                        <h4 class="leader-name mb-1">Adarsh Jose</h4>
+                        <div class="leader-affiliation text-muted small">Lead Coordinator</div>
+                    </div>
+                </div>
+
+                <!-- Team Member 2 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="leader-card text-center h-100 p-4">
+                        <img src="{% static '2024/dreams/team member2.jpg' %}" class="leader-avatar mb-3" alt="Banu H V">
+                        <div class="leader-role-badge mb-2">Youth Leadership</div>
+                        <h4 class="leader-name mb-1">Banu H V</h4>
+                        <div class="leader-affiliation text-muted small">Youth Lead</div>
+                    </div>
+                </div>
+
+                <!-- Team Member 3 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="leader-card text-center h-100 p-4">
+                        <img src="{% static '2024/dreams/Leadership/30.png' %}" class="leader-avatar mb-3" alt="Jasmine Sahni">
+                        <div class="leader-role-badge mb-2">Personnel Lead</div>
+                        <h4 class="leader-name mb-1">Jasmine Sahni</h4>
+                        <div class="leader-affiliation text-muted small">Personnel Management</div>
+                    </div>
+                </div>
+
+                <!-- Team Member 4 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="leader-card text-center h-100 p-4">
+                        <img src="{% static '2024/dreams/Leadership/35.png' %}" class="leader-avatar mb-3" alt="Jovin George">
+                        <div class="leader-role-badge mb-2">Media &amp; Communications</div>
+                        <h4 class="leader-name mb-1">Jovin George</h4>
+                        <div class="leader-affiliation text-muted small">Media Lead</div>
+                    </div>
+                </div>
+
+                <!-- Team Member 5 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="leader-card text-center h-100 p-4">
+                        <img src="{% static '2024/dreams/Leadership/31.png' %}" class="leader-avatar mb-3" alt="Roseline Gomes">
+                        <div class="leader-role-badge mb-2">Curriculum Lead</div>
+                        <h4 class="leader-name mb-1">Roseline Gomes</h4>
+                        <div class="leader-affiliation text-muted small">Programs Lead</div>
+                    </div>
+                </div>
+
+                <!-- Team Member 6 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="leader-card text-center h-100 p-4">
+                        <img src="{% static '2024/dreams/Leadership/32.png' %}" class="leader-avatar mb-3" alt="Smita Kavatekar">
+                        <div class="leader-role-badge mb-2">Faculty Mentorship</div>
+                        <h4 class="leader-name mb-1">Smita Kavatekar</h4>
+                        <div class="leader-affiliation text-muted small">Faculty Lead</div>
+                    </div>
+                </div>
+
+                <!-- Team Member 7 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="leader-card text-center h-100 p-4">
+                        <img src="{% static '2024/dreams/team member5.jpg' %}" class="leader-avatar mb-3" alt="Srikrishna Bhagawan NM">
+                        <div class="leader-role-badge mb-2">Academic Coordination</div>
+                        <h4 class="leader-name mb-1">Srikrishna Bhagawan NM</h4>
+                        <div class="leader-affiliation text-muted small">Faculty Coordinator</div>
+                    </div>
+                </div>
+
+                <!-- Team Member 8 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="leader-card text-center h-100 p-4">
+                        <img src="{% static '2024/dreams/team member3.jpg' %}" class="leader-avatar mb-3" alt="Fina Francis">
+                        <div class="leader-role-badge mb-2">Community Engagement</div>
+                        <h4 class="leader-name mb-1">Fina Francis</h4>
+                        <div class="leader-affiliation text-muted small">Community Lead</div>
+                    </div>
+                </div>
+
+                <!-- Team Member 9 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="leader-card text-center h-100 p-4">
+                        <img src="{% static '2024/dreams/team member4.jpg' %}" class="leader-avatar mb-3" alt="Jasmine Joseph">
+                        <div class="leader-role-badge mb-2">Program Operations</div>
+                        <h4 class="leader-name mb-1">Jasmine Joseph</h4>
+                        <div class="leader-affiliation text-muted small">Operations Lead</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 10. Events Section -->
+        <section id="events" class="mb-5 pb-4">
+            <div class="text-center mb-5">
+                <span class="badge bg-primary-subtle text-primary px-3 py-1 rounded-pill fw-bold">Milestones in Action</span>
+                <h2 class="display-6 fw-bold mt-2" style="font-family: var(--media-font-serif);">Recent DREAMS Events</h2>
+                <p class="text-secondary mx-auto" style="max-width: 650px;">
+                    Highlights from leadership camps, follow-up workshops, and community celebrations.
+                </p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100" style="border: 1px solid var(--media-border) !important;">
+                        <img src="{% static '2024/dreams/Events/event1.png' %}" class="card-img-top" alt="Leadership Training Event" style="height: 220px; object-fit: cover;">
+                        <div class="card-body p-4 d-flex flex-column">
+                            <span class="badge bg-primary-subtle text-primary align-self-start px-2 py-1 rounded-pill mb-2 small">Training Camp</span>
+                            <h4 class="h5 fw-bold mb-2">Outbound Leadership Training</h4>
+                            <p class="text-secondary small mb-3 flex-grow-1">
+                                Hosted at CHRIST (Deemed to be University), Yeshwanthpur for Mentors, CLs, FLs, and Strategic Team Members of the Karnataka Chapter.
+                            </p>
+                            <div class="text-muted small pt-2 border-top">
+                                <i class="far fa-calendar-alt text-primary me-1"></i> 21st &ndash; 22nd September 2024
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100" style="border: 1px solid var(--media-border) !important;">
+                        <img src="{% static '2024/dreams/Events/event2.jpg' %}" class="card-img-top" alt="Follow-Up Session" style="height: 220px; object-fit: cover;">
+                        <div class="card-body p-4 d-flex flex-column">
+                            <span class="badge bg-primary-subtle text-primary align-self-start px-2 py-1 rounded-pill mb-2 small">Follow-Up Workshop</span>
+                            <h4 class="h5 fw-bold mb-2">Delivering Happiness Workshop</h4>
+                            <p class="text-secondary small mb-3 flex-grow-1">
+                                The 1st Follow-Up Session at St. Anthony's Higher Primary School, focusing on emotional well-being, mindfulness, and reflective peer games.
+                            </p>
+                            <div class="text-muted small pt-2 border-top">
+                                <i class="far fa-calendar-alt text-primary me-1"></i> 7th October 2024
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100" style="border: 1px solid var(--media-border) !important;">
+                        <img src="{% static '2024/dreams/Events/event3.jpg' %}" class="card-img-top" alt="Ocean Students Community Event" style="height: 220px; object-fit: cover;">
+                        <div class="card-body p-4 d-flex flex-column">
+                            <span class="badge bg-primary-subtle text-primary align-self-start px-2 py-1 rounded-pill mb-2 small">Community Milestone</span>
+                            <h4 class="h5 fw-bold mb-2">Ocean Students Follow-Up</h4>
+                            <p class="text-secondary small mb-3 flex-grow-1">
+                                The Ocean Students Community successfully completed their follow-up session for the DREAMS Intervention Program at Govt. Muhammadans LPS, Pallam.
+                            </p>
+                            <div class="text-muted small pt-2 border-top">
+                                <i class="far fa-calendar-alt text-primary me-1"></i> 14th September 2024 &bull; Thiruvananthapuram
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 11. Newsletter Subscription Section -->
+        <section id="newsletter" class="mb-4">
+            <div class="card border-0 shadow-sm rounded-4 p-4 p-lg-5 text-center" style="background: linear-gradient(135deg, #f8fafc 0%, #edf4fc 100%); border: 1px solid var(--media-border) !important;">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <span class="badge bg-primary-subtle text-primary px-3 py-1 rounded-pill fw-bold mb-2">Stay Connected</span>
+                        <h3 class="h4 fw-bold mb-2" style="font-family: var(--media-font-serif);">Subscribe to DREAMS Updates</h3>
+                        <p class="text-secondary small mb-4">Receive monthly community highlights, empirical evaluation releases, and upcoming volunteer opportunities directly in your inbox.</p>
+                        <form method="POST" action="{% url 'subscribe-email' %}">
+                            {% csrf_token %}
+                            <input type="hidden" value="dreams" id="program" name="program">
+                            <div class="input-group shadow-sm" style="border-radius: 50px; overflow: hidden; border: 1px solid var(--media-border);">
+                                <input type="email" class="form-control border-0 px-4 py-3" id="emailfornews" name="emailfornews" placeholder="Enter your email address" required style="box-shadow: none;">
+                                <button type="submit" class="btn btn-primary px-4 fw-semibold border-0">
+                                    <i class="fas fa-paper-plane me-1"></i> Subscribe
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </div>
 </div>
-
-
-<script>
-    // Back to top functionality
-    window.addEventListener('scroll', function () {
-        const backToTopBtn = document.getElementById('backToTop');
-        if (window.pageYOffset > 300) {
-            backToTopBtn.classList.add('visible');
-        } else {
-            backToTopBtn.classList.remove('visible');
-        }
-    });
-
-    document.getElementById('backToTop').addEventListener('click', function () {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-
-    // Intersection Observer for animations
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
-
-    const observer = new IntersectionObserver(function (entries) {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('fade-in-visible');
-            }
-        });
-    }, observerOptions);
-
-    // Observe all cards and content sections
-    document.querySelectorAll('.person-card, .dreams-card, .content-card').forEach(card => {
-        card.classList.add('fade-in');
-        observer.observe(card);
-    });
-</script>
-
 {% endblock %}
