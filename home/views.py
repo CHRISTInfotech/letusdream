@@ -642,7 +642,7 @@ def triennialConference(request):
     breadcrumbs = [
         {"name": "Home", "url": "main", "icon": "fas fa-home", "active": False},
         {
-            "name": "Conference",
+            "name": "Conferences",
             "url": "Conferences",
             "icon": "fas fa-calendar-alt",
             "active": False,

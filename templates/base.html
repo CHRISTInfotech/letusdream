@@ -357,7 +357,13 @@
         if (header && mainContent) {
             const headerHeight = header.offsetHeight;
             document.documentElement.style.setProperty('--header-height', headerHeight + 'px');
-            document.documentElement.style.setProperty('--header-padding-top', (headerHeight + 20) + 'px');
+            // If page starts with a full-bleed hero banner (like .triennial-wrapper, .th-hero, .media-hero), no gap
+            const hasHero = document.querySelector('.triennial-wrapper, .th-hero, .media-hero, .hero-section');
+            const extraGap = hasHero ? 0 : 20;
+            document.documentElement.style.setProperty('--header-padding-top', (headerHeight + extraGap) + 'px');
+            if (hasHero) {
+                document.body.style.setProperty('padding-top', headerHeight + 'px', 'important');
+            }
         }
     }
 

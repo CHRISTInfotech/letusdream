@@ -4,7 +4,7 @@
     <nav class="navbar navbar-expand-lg" id="navbar">
 
         <a href="{% url 'main' %}" class="d-block d-md-none" >
-            <img src="{% static 'logo/logo.png' %}" class="" alt="LET US DREAM" height="100px">
+            <img src="{% static 'logo/logo.png' %}" class="header-logo" alt="LET US DREAM" height="100px">
         </a>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -15,7 +15,7 @@
 
         <div class="collapse navbar-collapse justify-content-around" id="navbarSupportedContent">
             <a href="{% url 'main' %}" class="d-none d-md-block ">
-                <img src="{% static 'logo/logo.png' %}" class="" alt="LET US DREAM" height="100px">
+                <img src="{% static 'logo/logo.png' %}" class="header-logo" alt="LET US DREAM" height="100px">
             </a>
             <ul class="navbar-nav">
                 <li class="nav-item dropdown">
@@ -193,4 +193,96 @@
         </div>
 
     </nav>
+
+    <!-- Floating Edge Tab Toggle -->
+    <button type="button" class="header-edge-toggle-tab js-toggle-header-size" title="Toggle header size" aria-label="Toggle header size">
+        <i class="fas fa-chevron-up toggle-edge-icon"></i>
+    </button>
 </header>
+
+<script>
+(function() {
+    var STORAGE_KEY = 'lud_header_compact';
+    var header = document.querySelector('header.menu');
+    if (!header) return;
+
+    // Apply immediately to avoid layout flash
+    var isInitialCompact = localStorage.getItem(STORAGE_KEY) === 'true';
+    if (isInitialCompact) {
+        header.classList.add('header-compact');
+    }
+
+    function updateControlsUI(compact) {
+        var buttons = document.querySelectorAll('.js-toggle-header-size');
+        buttons.forEach(function(btn) {
+            var icon = btn.querySelector('.toggle-size-icon');
+            var edgeIcon = btn.querySelector('.toggle-edge-icon');
+
+            if (icon) {
+                if (compact) {
+                    icon.classList.remove('fa-compress-alt');
+                    icon.classList.add('fa-expand-alt');
+                } else {
+                    icon.classList.remove('fa-expand-alt');
+                    icon.classList.add('fa-compress-alt');
+                }
+            }
+            if (edgeIcon) {
+                if (compact) {
+                    edgeIcon.classList.remove('fa-chevron-up');
+                    edgeIcon.classList.add('fa-chevron-down');
+                } else {
+                    edgeIcon.classList.remove('fa-chevron-down');
+                    edgeIcon.classList.add('fa-chevron-up');
+                }
+            }
+            btn.setAttribute('title', compact ? 'Expand header' : 'Minimize header (save space)');
+        });
+    }
+
+    function triggerLayoutRecalc() {
+        if (typeof adjustLayoutSpacing === 'function') {
+            adjustLayoutSpacing();
+        }
+        if (typeof syncHeaderHeight === 'function') {
+            syncHeaderHeight();
+        }
+        window.dispatchEvent(new Event('resize'));
+    }
+
+    function setCompactMode(enable, animated) {
+        if (enable) {
+            header.classList.add('header-compact');
+        } else {
+            header.classList.remove('header-compact');
+        }
+        updateControlsUI(enable);
+        triggerLayoutRecalc();
+        if (animated) {
+            setTimeout(triggerLayoutRecalc, 60);
+            setTimeout(triggerLayoutRecalc, 150);
+            setTimeout(triggerLayoutRecalc, 280);
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        var currentCompact = header.classList.contains('header-compact');
+        updateControlsUI(currentCompact);
+        triggerLayoutRecalc();
+
+        document.querySelectorAll('.js-toggle-header-size').forEach(function(btn) {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                var nextState = !header.classList.contains('header-compact');
+                localStorage.setItem(STORAGE_KEY, nextState ? 'true' : 'false');
+                setCompactMode(nextState, true);
+            });
+        });
+    });
+
+    window.addEventListener('load', function() {
+        triggerLayoutRecalc();
+    });
+})();
+</script>

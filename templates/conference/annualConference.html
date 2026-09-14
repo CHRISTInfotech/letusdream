@@ -2,168 +2,230 @@
 {% load static %}
 
 {% block title %}
-Annual Conferences - Let Us Dream
+Annual Community Conferences - Let Us Dream
 {% endblock title %}
 
 {% block extraStyles %}
-<link rel="stylesheet" href="{% static 'css/new/media.css' %}">
-<style>
-    .story-timeline {
-        position: relative;
-        padding-left: 2rem;
-        border-left: 2px solid #e2e8f0;
-    }
-    .story-timeline-item {
-        position: relative;
-        margin-bottom: 2rem;
-    }
-    .story-timeline-item:last-child {
-        margin-bottom: 0;
-    }
-    .story-timeline-item::before {
-        content: '';
-        position: absolute;
-        left: -2.45rem;
-        top: 0.25rem;
-        width: 14px;
-        height: 14px;
-        border-radius: 50%;
-        background: #0c52a1;
-        border: 3px solid #ffffff;
-        box-shadow: 0 0 0 2px #0c52a1;
-    }
-</style>
+<link rel="stylesheet" href="{% static 'css/new/triennial-hub.css' %}">
 {% endblock extraStyles %}
 
 {% block breadcrumb_section %}{% endblock %}
 
 {% block content %}
-<div class="conference-page-wrapper">
-    <!-- Hero Header -->
-    <section class="media-hero">
+<div class="triennial-wrapper">
+    <!-- ==========================================================
+         1. HERO SECTION
+         ========================================================== -->
+    <section class="th-hero">
         <div class="container">
-            {% if breadcrumbs %}
-            <nav aria-label="breadcrumb" class="media-hero-breadcrumb">
-                <ol class="breadcrumb-minimal">
-                    {% for breadcrumb in breadcrumbs %}
-                        {% if not breadcrumb.active %}
-                            <li class="breadcrumb-item-min">
-                                {% if breadcrumb.url %}
-                                    <a href="{% url breadcrumb.url %}">
-                                        <i class="{{ breadcrumb.icon }}"></i>
-                                        <span>{{ breadcrumb.name }}</span>
-                                    </a>
-                                {% else %}
-                                    <span>
-                                        <i class="{{ breadcrumb.icon }}"></i>
-                                        <span>{{ breadcrumb.name }}</span>
-                                    </span>
-                                {% endif %}
-                            </li>
-                            <li class="breadcrumb-sep-min">/</li>
-                        {% else %}
-                            <li class="breadcrumb-item-min active">
-                                <i class="{{ breadcrumb.icon }}"></i>
-                                <span>{{ breadcrumb.name }}</span>
-                            </li>
-                        {% endif %}
-                    {% endfor %}
-                </ol>
-            </nav>
-            {% endif %}
-            <div class="row justify-content-center text-center">
-                <div class="col-lg-8 col-md-10">
-                    <span class="media-kicker">LET US DREAM • COMMUNITY-ROOTED CONFERENCES</span>
-                    <h1 class="media-hero-title">Annual Community Conferences</h1>
-                    <p class="media-hero-lead">
-                        Empowering local communities through dialogue, grassroots innovation, and collaborative civic action.
+            <div class="row align-items-center g-4 g-lg-5">
+                <div class="col-lg-7">
+                    <div class="th-kicker-badge">
+                        <span class="pulse-dot"></span>
+                        <span>Let Us Dream • Community-Rooted Conferences</span>
+                    </div>
+                    <h1 class="th-hero-title">Annual Community Conferences</h1>
+                    <p class="th-hero-lead">
+                        Empowering local communities through dialogue, grassroots innovation, intergenerational mentorship, and collaborative civic action.
                     </p>
+
+                    <div class="th-hero-actions">
+                        <a href="#locations" class="btn-th-primary">
+                            <i class="fas fa-map-marker-alt me-2"></i>Explore Host Locations
+                        </a>
+                        <a href="#our-story" class="btn-th-outline">
+                            <i class="fas fa-book-open me-2"></i>Our Story & Vision
+                        </a>
+                        <a href="{% url 'trriennial-conference' %}" class="btn-th-outline">
+                            <i class="fas fa-globe me-2"></i>Triennial Conferences
+                        </a>
+                    </div>
+
+                    <div class="th-hero-stats-row">
+                        <div class="th-hero-stat-item">
+                            <span class="th-hero-stat-num">10+</span>
+                            <span class="th-hero-stat-label">Host Locations</span>
+                        </div>
+                        <div class="th-hero-stat-item">
+                            <span class="th-hero-stat-num">15K+</span>
+                            <span class="th-hero-stat-label">Participants</span>
+                        </div>
+                        <div class="th-hero-stat-item">
+                            <span class="th-hero-stat-num">400+</span>
+                            <span class="th-hero-stat-label">Changemakers</span>
+                        </div>
+                        <div class="th-hero-stat-item">
+                            <span class="th-hero-stat-num">100%</span>
+                            <span class="th-hero-stat-label">Grassroots</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-5">
+                    <div class="th-hero-visual">
+                        <div class="th-mosaic-card-main">
+                            <img src="{% static '2025/conference/BANGALORE_CONF_2024.JPG' %}" 
+                                 alt="Let Us Dream Annual Community Conference Gathering">
+                            <div class="th-mosaic-caption">
+                                <div class="d-flex align-items-center justify-content-between mb-1">
+                                    <span class="badge bg-success" style="font-size: 0.7rem; letter-spacing: 0.05em;">ANNUAL SERIES</span>
+                                    <small class="text-white-50"><i class="fas fa-map-marker-alt me-1"></i>Local Chapters</small>
+                                </div>
+                                <h6 class="mb-0 fw-bold text-white small">Grassroots Community Innovations & Dialogue</h6>
+                            </div>
+                        </div>
+
+                        <div class="th-mosaic-subcard">
+                            <div class="th-subcard-icon">
+                                <i class="fas fa-university"></i>
+                            </div>
+                            <div class="th-subcard-text">
+                                <strong>Global Host Chapters</strong>
+                                <span>India • USA • International</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Sticky Navigation Pills -->
-    <div class="media-nav-wrapper">
-        <div class="container">
-            <div class="media-nav-scroll justify-content-start justify-content-md-center">
-                <a href="#our-story" class="media-pill active"><i class="fas fa-book-open me-1"></i>Our Story</a>
-                <a href="#vision-goals" class="media-pill"><i class="fas fa-compass me-1"></i>Vision & Goals</a>
-                <a href="#locations" class="media-pill"><i class="fas fa-map-marker-alt me-1"></i>Host Locations</a>
-                <a href="#what-to-expect" class="media-pill"><i class="fas fa-lightbulb me-1"></i>What to Expect</a>
-                <a href="#participate" class="media-pill"><i class="fas fa-user-plus me-1"></i>Participation & Resources</a>
-                <a href="#past-conferences" class="media-pill"><i class="fas fa-history me-1"></i>Past Conferences</a>
+    <!-- ==========================================================
+         2. STICKY SUB-NAV & BREADCRUMB (BORDER-TO-BORDER & STICKY TO HEADER)
+         ========================================================== -->
+    <div class="th-subnav-bar">
+        <div class="container-fluid px-2 px-md-4">
+            <!-- Sticky Breadcrumb Trail -->
+            {% if breadcrumbs %}
+            <div class="th-sticky-breadcrumb-strip">
+                <nav aria-label="breadcrumb">
+                    <ol class="th-breadcrumb-minimal">
+                        {% for breadcrumb in breadcrumbs %}
+                            {% if not breadcrumb.active %}
+                                <li class="th-breadcrumb-item">
+                                    {% if breadcrumb.url %}
+                                        <a href="{% url breadcrumb.url %}">
+                                            <i class="{{ breadcrumb.icon }} me-1"></i>{{ breadcrumb.name }}
+                                        </a>
+                                    {% else %}
+                                        <span><i class="{{ breadcrumb.icon }} me-1"></i>{{ breadcrumb.name }}</span>
+                                    {% endif %}
+                                </li>
+                                <li class="th-breadcrumb-sep">/</li>
+                            {% else %}
+                                <li class="th-breadcrumb-item active">
+                                    <i class="{{ breadcrumb.icon }} me-1"></i>{{ breadcrumb.name }}
+                                </li>
+                            {% endif %}
+                        {% endfor %}
+                    </ol>
+                </nav>
+                <div class="d-none d-sm-flex align-items-center gap-2 text-muted" style="font-size: 0.74rem;">
+                    <span class="badge" style="background: #EBF5E0; color: #58921E; font-weight: 700;">Annual Series</span>
+                    <span class="text-muted">2025–2026</span>
+                </div>
+            </div>
+            {% endif %}
+
+            <!-- Navigation Pills -->
+            <div class="th-subnav-scroll">
+                <a href="#our-story" class="th-nav-pill active"><i class="fas fa-book-open me-1"></i>Our Story</a>
+                <a href="#vision-goals" class="th-nav-pill"><i class="fas fa-compass me-1"></i>Vision & Goals</a>
+                <a href="#locations" class="th-nav-pill"><i class="fas fa-map-marker-alt me-1"></i>Host Locations</a>
+                <a href="#what-to-expect" class="th-nav-pill"><i class="fas fa-lightbulb me-1"></i>What to Expect</a>
+                <a href="#participate" class="th-nav-pill"><i class="fas fa-user-plus me-1"></i>Participation</a>
+                <a href="#resources" class="th-nav-pill"><i class="fas fa-file-alt me-1"></i>Resources</a>
+                <a href="#past-conferences" class="th-nav-pill"><i class="fas fa-video me-1"></i>Video Archives</a>
             </div>
         </div>
     </div>
 
-    <!-- Our Story Section -->
-    <section id="our-story" class="conference-section">
+    <!-- ==========================================================
+         3. OUR STORY SECTION
+         ========================================================== -->
+    <section id="our-story" class="th-section">
         <div class="container">
-            <div class="media-card p-4 p-lg-5" style="border: 1px solid var(--media-border); border-radius: var(--media-radius);">
+            <div class="th-section-header">
+                <span class="th-section-kicker">HUMBLE BEGINNINGS TO GLOBAL REACH</span>
+                <h2 class="th-section-title">Our Story</h2>
+                <p class="th-section-lead">How a university gathering in Monroe, Louisiana sparked an international community empowerment movement.</p>
+            </div>
+
+            <div class="co-history-card">
                 <div class="row align-items-center g-4 g-lg-5">
                     <div class="col-lg-6">
-                        <span class="media-kicker">HUMBLE BEGINNINGS TO GLOBAL REACH</span>
-                        <h2 class="h3 fw-bold text-dark mb-4">Our Story</h2>
+                        <span class="th-section-kicker mb-2">FOUNDATIONAL JOURNEY</span>
+                        <h3 class="h4 fw-bold text-dark mb-3">Dreaming for Others Since 2017</h3>
                         
-                        <div class="story-timeline">
-                            <div class="story-timeline-item">
-                                <h5 class="fw-bold text-dark mb-1">2017 — The Beginning</h5>
+                        <div class="co-timeline">
+                            <div class="co-timeline-item">
+                                <span class="co-timeline-dot"></span>
+                                <div class="fw-bold text-dark small">2017 — The Beginning</div>
                                 <p class="text-muted small mb-0">
                                     The Let Us Dream movement began in Monroe, Louisiana with a simple conviction: <em>people who dream for others create real, lasting change.</em>
                                 </p>
                             </div>
-                            <div class="story-timeline-item">
-                                <h5 class="fw-bold text-dark mb-1">Growth & Expansion</h5>
+                            <div class="co-timeline-item">
+                                <span class="co-timeline-dot"></span>
+                                <div class="fw-bold text-dark small">Growth & Global Expansion</div>
                                 <p class="text-muted small mb-0">
                                     What started as a modest university gathering soon grew into an international wave of community empowerment and intergenerational solidarity.
                                 </p>
                             </div>
-                            <div class="story-timeline-item">
-                                <h5 class="fw-bold text-dark mb-1">Dual Conference Structure</h5>
+                            <div class="co-timeline-item">
+                                <span class="co-timeline-dot"></span>
+                                <div class="fw-bold text-dark small">Dual Conference Architecture</div>
                                 <p class="text-muted small mb-0">
                                     While our <strong>Triennial International Conferences</strong> unite chapters globally every three years, the <strong>Annual Community Conferences</strong> happen locally on the ground in university host communities.
                                 </p>
                             </div>
-                            <div class="story-timeline-item">
-                                <h5 class="fw-bold text-dark mb-1">Global Impact Today</h5>
+                            <div class="co-timeline-item active">
+                                <span class="co-timeline-dot"></span>
+                                <div class="fw-bold text-dark small" style="color: var(--th-green-dark) !important;">Global Impact Today</div>
                                 <p class="text-muted small mb-0">
                                     Today, these annual conferences are hosted across India, the United States, South Africa, and beyond, adapting to local civic needs while staying true to a shared global vision.
                                 </p>
                             </div>
                         </div>
                     </div>
+
                     <div class="col-lg-6 text-center">
-                        <img src="{% static '2025/conference/BANGALORE_CONF_2024.JPG' %}" 
-                             class="img-fluid rounded shadow-sm w-100" 
-                             style="max-height: 420px; object-fit: cover;" 
-                             alt="Let Us Dream Community Conference">
+                        <div class="rounded-3 overflow-hidden shadow-sm">
+                            <img src="{% static '2025/conference/BANGALORE_CONF_2024.JPG' %}" 
+                                 class="img-fluid w-100" 
+                                 style="max-height: 420px; object-fit: cover;" 
+                                 alt="Let Us Dream Community Conference Delegates">
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Vision & Goals Section -->
-    <section id="vision-goals" class="conference-section pt-0">
+    <!-- ==========================================================
+         4. VISION & GOALS SECTION
+         ========================================================== -->
+    <section id="vision-goals" class="th-section pt-0">
         <div class="container">
             <div class="row g-4 align-items-center mb-5">
                 <div class="col-lg-6 order-lg-2">
-                    <img src="{% static '2025/conference/TRIVANDRUM_CONF_2024.JPG' %}" 
-                         class="img-fluid rounded shadow-sm w-100" 
-                         style="max-height: 380px; object-fit: cover;" 
-                         alt="Vision and Goals">
+                    <div class="rounded-3 overflow-hidden shadow-sm">
+                        <img src="{% static '2025/conference/TRIVANDRUM_CONF_2024.JPG' %}" 
+                             class="img-fluid w-100" 
+                             style="max-height: 380px; object-fit: cover;" 
+                             alt="Vision and Goals">
+                    </div>
                 </div>
                 <div class="col-lg-6 order-lg-1">
-                    <span class="media-kicker">STRATEGIC HORIZON</span>
+                    <span class="th-section-kicker">STRATEGIC HORIZON</span>
                     <h2 class="h3 fw-bold text-dark mb-3">Our Vision</h2>
-                    <p class="text-muted fs-6 mb-4 lh-base">
+                    <p class="text-muted fs-5 lh-base mb-4" style="font-family: 'Outfit', sans-serif;">
                         Empowered local communities for sustainable impact, improvement, global harmony, and holistic success.
                     </p>
-                    <div class="media-card p-3 p-lg-4" style="background: #f8fafc; border-radius: var(--media-radius-sm);">
-                        <div class="d-flex align-items-center">
-                            <i class="fas fa-quote-left text-primary me-3 fs-3"></i>
-                            <p class="mb-0 text-muted fst-italic small">
+                    <div class="p-3 p-lg-4 rounded-3 border" style="background: #F8FAFC;">
+                        <div class="d-flex align-items-start">
+                            <i class="fas fa-quote-left text-primary me-3 fs-3 mt-1 flex-shrink-0"></i>
+                            <p class="mb-0 text-muted fst-italic small lh-base">
                                 "Through intentional forums that honor grassroots changemakers, we build bridges between academic insights and real community needs."
                             </p>
                         </div>
@@ -171,58 +233,59 @@ Annual Conferences - Let Us Dream
                 </div>
             </div>
 
-            <div class="text-center mb-5">
-                <span class="media-kicker">ACTION PILLARS</span>
-                <h3 class="media-section-title">Key Conference Goals</h3>
+            <div class="th-section-header">
+                <span class="th-section-kicker">ACTION PILLARS</span>
+                <h3 class="th-section-title">Key Conference Goals</h3>
+                <p class="th-section-lead">Fostering collaboration, leadership development, and lasting grassroots fellowship.</p>
             </div>
 
             <div class="row g-4">
                 <div class="col-lg-4 col-md-6">
-                    <div class="media-card p-4 h-100" style="border: 1px solid var(--media-border); border-radius: var(--media-radius);">
-                        <div class="conf-location-icon mb-3">
+                    <div class="co-objective-card">
+                        <div class="co-icon-bubble mb-3" style="background: #EEF4FC; color: #0C52A1;">
                             <i class="fas fa-share-alt"></i>
                         </div>
-                        <h4 class="h6 fw-bold text-dark mb-2">Community Forum</h4>
+                        <h4 class="h5 fw-bold text-dark mb-2">Community Forum</h4>
                         <p class="text-muted small mb-0">Create a collaborative forum to share innovative grassroots community efforts and best practices.</p>
                     </div>
                 </div>
 
                 <div class="col-lg-4 col-md-6">
-                    <div class="media-card p-4 h-100" style="border: 1px solid var(--media-border); border-radius: var(--media-radius);">
-                        <div class="conf-location-icon mb-3" style="background: #ecfdf5; color: #059669;">
+                    <div class="co-objective-card">
+                        <div class="co-icon-bubble mb-3" style="background: #ECFDF5; color: #059669;">
                             <i class="fas fa-hands-helping"></i>
                         </div>
-                        <h4 class="h6 fw-bold text-dark mb-2">Youth Engagement</h4>
+                        <h4 class="h5 fw-bold text-dark mb-2">Youth Engagement</h4>
                         <p class="text-muted small mb-0">Promote active civic volunteerism and experiential youth leadership across educational institutions.</p>
                     </div>
                 </div>
 
                 <div class="col-lg-4 col-md-6">
-                    <div class="media-card p-4 h-100" style="border: 1px solid var(--media-border); border-radius: var(--media-radius);">
-                        <div class="conf-location-icon mb-3" style="background: #eef4fc; color: #0284c7;">
+                    <div class="co-objective-card">
+                        <div class="co-icon-bubble mb-3" style="background: #EEF4FC; color: #0284C7;">
                             <i class="fas fa-network-wired"></i>
                         </div>
-                        <h4 class="h6 fw-bold text-dark mb-2">Research & Practice</h4>
+                        <h4 class="h5 fw-bold text-dark mb-2">Research & Practice</h4>
                         <p class="text-muted small mb-0">Facilitate fruitful connections between empirical researchers, university faculty, and frontline field practitioners.</p>
                     </div>
                 </div>
 
                 <div class="col-lg-6 col-md-6">
-                    <div class="media-card p-4 h-100" style="border: 1px solid var(--media-border); border-radius: var(--media-radius);">
-                        <div class="conf-location-icon mb-3" style="background: #f5f3ff; color: #7c3aed;">
+                    <div class="co-objective-card">
+                        <div class="co-icon-bubble mb-3" style="background: #F5F3FF; color: #7C3AED;">
                             <i class="fas fa-users"></i>
                         </div>
-                        <h4 class="h6 fw-bold text-dark mb-2">Leadership Development</h4>
+                        <h4 class="h5 fw-bold text-dark mb-2">Leadership Development</h4>
                         <p class="text-muted small mb-0">Strengthen local leadership capacities through intergenerational collaboration between seasoned mentors and students.</p>
                     </div>
                 </div>
 
                 <div class="col-lg-6 col-md-12">
-                    <div class="media-card p-4 h-100" style="border: 1px solid var(--media-border); border-radius: var(--media-radius);">
-                        <div class="conf-location-icon mb-3" style="background: #fef2f2; color: #dc2626;">
+                    <div class="co-objective-card">
+                        <div class="co-icon-bubble mb-3" style="background: #FEF2F2; color: #DC2626;">
                             <i class="fas fa-heart"></i>
                         </div>
-                        <h4 class="h6 fw-bold text-dark mb-2">Changemaker Network</h4>
+                        <h4 class="h5 fw-bold text-dark mb-2">Changemaker Network</h4>
                         <p class="text-muted small mb-0">Build an enduring global fellowship of changemakers, social entrepreneurs, and volunteers committed to community equity.</p>
                     </div>
                 </div>
@@ -230,35 +293,37 @@ Annual Conferences - Let Us Dream
         </div>
     </section>
 
-    <!-- Host Locations Section -->
-    <section id="locations" class="conference-section pt-0">
+    <!-- ==========================================================
+         5. HOST LOCATIONS SECTION
+         ========================================================== -->
+    <section id="locations" class="th-section pt-0">
         <div class="container">
-            <div class="text-center mb-5">
-                <span class="media-kicker">GLOBAL GATHERINGS</span>
-                <h2 class="media-section-title">Host Locations 2025 – 2026</h2>
-                <p class="media-section-lead">Explore upcoming and recent annual community conferences across India and the United States</p>
+            <div class="th-section-header">
+                <span class="th-section-kicker">GLOBAL GATHERINGS</span>
+                <h2 class="th-section-title">Host Locations 2025 – 2026</h2>
+                <p class="th-section-lead">Explore upcoming and recent annual community conferences across India and the United States.</p>
             </div>
 
             <div class="row g-4">
                 <!-- Pune -->
                 <div class="col-lg-4 col-md-6">
-                    <div class="conf-location-card">
-                        <div class="conf-location-header">
-                            <div class="conf-location-icon">
+                    <div class="co-location-card">
+                        <div class="co-location-header">
+                            <div class="co-icon-bubble" style="background: #EEF4FC; color: #0C52A1;">
                                 <i class="fas fa-map-marker-alt"></i>
                             </div>
                             <div>
                                 <h4 class="h5 fw-bold text-dark mb-0">India — Pune</h4>
-                                <span class="badge rounded-pill px-2 py-1 mt-1" style="background: #eef4fc; color: #0c52a1; font-size: 0.75rem;">Upcoming 2026</span>
+                                <span class="badge rounded-pill px-2 py-1 mt-1" style="background: #EEF4FC; color: #0C52A1; font-size: 0.75rem;">Upcoming 2026</span>
                             </div>
                         </div>
-                        <div class="conf-location-meta">
+                        <div class="co-location-meta">
                             <p><strong>Venue:</strong> Christ College, Pune</p>
                             <p><strong>Date:</strong> April 18, 2026</p>
                             <p><strong>Time:</strong> 09:00 AM – 01:00 PM</p>
                         </div>
                         <a href="https://cmt.letusdream.org/conference_details/df5b0138-e4ba-44cb-9ddb-dacd09f6d53a" 
-                           target="_blank" rel="noopener" class="btn btn-outline-primary btn-sm rounded-pill w-100 py-2 fw-bold">
+                           target="_blank" rel="noopener" class="btn-th-card-solid w-100 text-center">
                             <i class="fas fa-info-circle me-1"></i>Know More
                         </a>
                     </div>
@@ -266,23 +331,23 @@ Annual Conferences - Let Us Dream
 
                 <!-- Louisiana -->
                 <div class="col-lg-4 col-md-6">
-                    <div class="conf-location-card">
-                        <div class="conf-location-header">
-                            <div class="conf-location-icon" style="background: #ecfdf5; color: #059669;">
+                    <div class="co-location-card">
+                        <div class="co-location-header">
+                            <div class="co-icon-bubble" style="background: #ECFDF5; color: #059669;">
                                 <i class="fas fa-map-marker-alt"></i>
                             </div>
                             <div>
                                 <h4 class="h5 fw-bold text-dark mb-0">USA — Louisiana</h4>
-                                <span class="badge rounded-pill px-2 py-1 mt-1" style="background: #ecfdf5; color: #059669; font-size: 0.75rem;">October 2025</span>
+                                <span class="badge rounded-pill px-2 py-1 mt-1" style="background: #ECFDF5; color: #059669; font-size: 0.75rem;">October 2025</span>
                             </div>
                         </div>
-                        <div class="conf-location-meta">
+                        <div class="co-location-meta">
                             <p><strong>Venue:</strong> University of Louisiana</p>
                             <p><strong>Date:</strong> October 30, 2025</p>
                             <p><strong>Focus:</strong> Intergenerational Community Service</p>
                         </div>
                         <a href="https://cmt.letusdream.org/conference_details/2f17bcb1-1557-452c-be85-8629fce6ac54" 
-                           target="_blank" rel="noopener" class="btn btn-outline-primary btn-sm rounded-pill w-100 py-2 fw-bold">
+                           target="_blank" rel="noopener" class="btn-th-card-solid w-100 text-center" style="background: var(--th-green-dark); border-color: var(--th-green-dark);">
                             <i class="fas fa-info-circle me-1"></i>Know More
                         </a>
                     </div>
@@ -290,23 +355,23 @@ Annual Conferences - Let Us Dream
 
                 <!-- New York -->
                 <div class="col-lg-4 col-md-6">
-                    <div class="conf-location-card">
-                        <div class="conf-location-header">
-                            <div class="conf-location-icon" style="background: #fff7ed; color: #ea580c;">
+                    <div class="co-location-card">
+                        <div class="co-location-header">
+                            <div class="co-icon-bubble" style="background: #FFF7ED; color: #EA580C;">
                                 <i class="fas fa-map-marker-alt"></i>
                             </div>
                             <div>
                                 <h4 class="h5 fw-bold text-dark mb-0">USA — New York</h4>
-                                <span class="badge rounded-pill px-2 py-1 mt-1" style="background: #fff7ed; color: #ea580c; font-size: 0.75rem;">November 2025</span>
+                                <span class="badge rounded-pill px-2 py-1 mt-1" style="background: #FFF7ED; color: #EA580C; font-size: 0.75rem;">November 2025</span>
                             </div>
                         </div>
-                        <div class="conf-location-meta">
+                        <div class="co-location-meta">
                             <p><strong>Venue:</strong> Binghamton University</p>
                             <p><strong>Date:</strong> November 7, 2025</p>
                             <p><strong>Focus:</strong> Youth Mentorship & Civic Growth</p>
                         </div>
                         <a href="https://cmt.letusdream.org/conference_details/76a825ff-719c-4a52-86d8-5c53446bb6e3" 
-                           target="_blank" rel="noopener" class="btn btn-outline-primary btn-sm rounded-pill w-100 py-2 fw-bold">
+                           target="_blank" rel="noopener" class="btn-th-card-solid w-100 text-center">
                             <i class="fas fa-info-circle me-1"></i>Know More
                         </a>
                     </div>
@@ -314,23 +379,23 @@ Annual Conferences - Let Us Dream
 
                 <!-- Bengaluru -->
                 <div class="col-lg-4 col-md-6">
-                    <div class="conf-location-card">
-                        <div class="conf-location-header">
-                            <div class="conf-location-icon" style="background: #f5f3ff; color: #7c3aed;">
+                    <div class="co-location-card">
+                        <div class="co-location-header">
+                            <div class="co-icon-bubble" style="background: #F5F3FF; color: #7C3AED;">
                                 <i class="fas fa-map-marker-alt"></i>
                             </div>
                             <div>
                                 <h4 class="h5 fw-bold text-dark mb-0">India — Bengaluru</h4>
-                                <span class="badge rounded-pill px-2 py-1 mt-1" style="background: #f5f3ff; color: #7c3aed; font-size: 0.75rem;">November 2025</span>
+                                <span class="badge rounded-pill px-2 py-1 mt-1" style="background: #F5F3FF; color: #7C3AED; font-size: 0.75rem;">November 2025</span>
                             </div>
                         </div>
-                        <div class="conf-location-meta">
+                        <div class="co-location-meta">
                             <p><strong>Venue:</strong> Presidency University</p>
                             <p><strong>Date:</strong> November 8, 2025</p>
                             <p><strong>Focus:</strong> Social Innovation & Grassroots Impact</p>
                         </div>
                         <a href="https://cmt.letusdream.org/conference_details/adcc1c26-7dde-4631-a56b-e24161ac01b6" 
-                           target="_blank" rel="noopener" class="btn btn-outline-primary btn-sm rounded-pill w-100 py-2 fw-bold">
+                           target="_blank" rel="noopener" class="btn-th-card-solid w-100 text-center">
                             <i class="fas fa-info-circle me-1"></i>Know More
                         </a>
                     </div>
@@ -338,23 +403,23 @@ Annual Conferences - Let Us Dream
 
                 <!-- Hyderabad -->
                 <div class="col-lg-4 col-md-6">
-                    <div class="conf-location-card">
-                        <div class="conf-location-header">
-                            <div class="conf-location-icon" style="background: #eef4fc; color: #0c52a1;">
+                    <div class="co-location-card">
+                        <div class="co-location-header">
+                            <div class="co-icon-bubble" style="background: #EEF4FC; color: #0C52A1;">
                                 <i class="fas fa-map-marker-alt"></i>
                             </div>
                             <div>
                                 <h4 class="h5 fw-bold text-dark mb-0">India — Hyderabad</h4>
-                                <span class="badge rounded-pill px-2 py-1 mt-1" style="background: #eef4fc; color: #0c52a1; font-size: 0.75rem;">November 2025</span>
+                                <span class="badge rounded-pill px-2 py-1 mt-1" style="background: #EEF4FC; color: #0C52A1; font-size: 0.75rem;">November 2025</span>
                             </div>
                         </div>
-                        <div class="conf-location-meta">
+                        <div class="co-location-meta">
                             <p><strong>Venue:</strong> BVRIT College</p>
                             <p><strong>Date:</strong> November 15, 2025</p>
                             <p><strong>Focus:</strong> Education & Community Equity</p>
                         </div>
                         <a href="https://cmt.letusdream.org/conference_details/f4eadcb9-f77b-4044-b0ed-574d8a6fdc09" 
-                           target="_blank" rel="noopener" class="btn btn-outline-primary btn-sm rounded-pill w-100 py-2 fw-bold">
+                           target="_blank" rel="noopener" class="btn-th-card-solid w-100 text-center">
                             <i class="fas fa-info-circle me-1"></i>Know More
                         </a>
                     </div>
@@ -362,23 +427,23 @@ Annual Conferences - Let Us Dream
 
                 <!-- Chennai -->
                 <div class="col-lg-4 col-md-6">
-                    <div class="conf-location-card">
-                        <div class="conf-location-header">
-                            <div class="conf-location-icon" style="background: #fef2f2; color: #dc2626;">
+                    <div class="co-location-card">
+                        <div class="co-location-header">
+                            <div class="co-icon-bubble" style="background: #FEF2F2; color: #DC2626;">
                                 <i class="fas fa-map-marker-alt"></i>
                             </div>
                             <div>
                                 <h4 class="h5 fw-bold text-dark mb-0">India — Chennai</h4>
-                                <span class="badge rounded-pill px-2 py-1 mt-1" style="background: #fef2f2; color: #dc2626; font-size: 0.75rem;">November 2025</span>
+                                <span class="badge rounded-pill px-2 py-1 mt-1" style="background: #FEF2F2; color: #DC2626; font-size: 0.75rem;">November 2025</span>
                             </div>
                         </div>
-                        <div class="conf-location-meta">
+                        <div class="co-location-meta">
                             <p><strong>Venue:</strong> Stella Maris College</p>
                             <p><strong>Date:</strong> November 22, 2025</p>
                             <p><strong>Focus:</strong> Women in Leadership & Civic Action</p>
                         </div>
                         <a href="https://cmt.letusdream.org/conference_details/f64da27a-ffae-4828-95ee-c6d58e9a3a04" 
-                           target="_blank" rel="noopener" class="btn btn-outline-primary btn-sm rounded-pill w-100 py-2 fw-bold">
+                           target="_blank" rel="noopener" class="btn-th-card-solid w-100 text-center">
                             <i class="fas fa-info-circle me-1"></i>Know More
                         </a>
                     </div>
@@ -386,23 +451,23 @@ Annual Conferences - Let Us Dream
 
                 <!-- Trivandrum -->
                 <div class="col-lg-4 col-md-6">
-                    <div class="conf-location-card">
-                        <div class="conf-location-header">
-                            <div class="conf-location-icon" style="background: #ecfdf5; color: #059669;">
+                    <div class="co-location-card">
+                        <div class="co-location-header">
+                            <div class="co-icon-bubble" style="background: #ECFDF5; color: #059669;">
                                 <i class="fas fa-map-marker-alt"></i>
                             </div>
                             <div>
                                 <h4 class="h5 fw-bold text-dark mb-0">India — Trivandrum</h4>
-                                <span class="badge rounded-pill px-2 py-1 mt-1" style="background: #ecfdf5; color: #059669; font-size: 0.75rem;">November 2025</span>
+                                <span class="badge rounded-pill px-2 py-1 mt-1" style="background: #ECFDF5; color: #059669; font-size: 0.75rem;">November 2025</span>
                             </div>
                         </div>
-                        <div class="conf-location-meta">
+                        <div class="co-location-meta">
                             <p><strong>Venue:</strong> CHRIST Nodal Office</p>
                             <p><strong>Date:</strong> November 29, 2025</p>
                             <p><strong>Focus:</strong> Holistic Well-being & Volunteerism</p>
                         </div>
                         <a href="https://cmt.letusdream.org/conference_details/ee1dcd89-dbc1-4dc4-b08a-1508315f5d2c" 
-                           target="_blank" rel="noopener" class="btn btn-outline-primary btn-sm rounded-pill w-100 py-2 fw-bold">
+                           target="_blank" rel="noopener" class="btn-th-card-solid w-100 text-center" style="background: var(--th-green-dark); border-color: var(--th-green-dark);">
                             <i class="fas fa-info-circle me-1"></i>Know More
                         </a>
                     </div>
@@ -410,23 +475,23 @@ Annual Conferences - Let Us Dream
 
                 <!-- Delhi -->
                 <div class="col-lg-4 col-md-6">
-                    <div class="conf-location-card">
-                        <div class="conf-location-header">
-                            <div class="conf-location-icon" style="background: #eef4fc; color: #0284c7;">
+                    <div class="co-location-card">
+                        <div class="co-location-header">
+                            <div class="co-icon-bubble" style="background: #EEF4FC; color: #0284C7;">
                                 <i class="fas fa-map-marker-alt"></i>
                             </div>
                             <div>
                                 <h4 class="h5 fw-bold text-dark mb-0">India — Delhi</h4>
-                                <span class="badge rounded-pill px-2 py-1 mt-1" style="background: #eef4fc; color: #0284c7; font-size: 0.75rem;">November 2025</span>
+                                <span class="badge rounded-pill px-2 py-1 mt-1" style="background: #EEF4FC; color: #0284C7; font-size: 0.75rem;">November 2025</span>
                             </div>
                         </div>
-                        <div class="conf-location-meta">
+                        <div class="co-location-meta">
                             <p><strong>Venue:</strong> Hansraj College</p>
                             <p><strong>Date:</strong> November 15, 2025</p>
                             <p><strong>Focus:</strong> Academic Innovation & Mentorship</p>
                         </div>
                         <a href="https://cmt.letusdream.org/conference_details/7ca18e16-3103-46c2-bdd3-0edb6eccbe73" 
-                           target="_blank" rel="noopener" class="btn btn-outline-primary btn-sm rounded-pill w-100 py-2 fw-bold">
+                           target="_blank" rel="noopener" class="btn-th-card-solid w-100 text-center">
                             <i class="fas fa-info-circle me-1"></i>Know More
                         </a>
                     </div>
@@ -435,19 +500,21 @@ Annual Conferences - Let Us Dream
         </div>
     </section>
 
-    <!-- What to Expect Section -->
-    <section id="what-to-expect" class="conference-section pt-0">
+    <!-- ==========================================================
+         6. WHAT TO EXPECT SECTION
+         ========================================================== -->
+    <section id="what-to-expect" class="th-section pt-0">
         <div class="container">
-            <div class="text-center mb-5">
-                <span class="media-kicker">ENGAGEMENT FORMATS</span>
-                <h2 class="media-section-title">What to Expect</h2>
-                <p class="media-section-lead">A comprehensive full-day experience designed for learning, reflection, and lasting connections</p>
+            <div class="th-section-header">
+                <span class="th-section-kicker">ENGAGEMENT FORMATS</span>
+                <h2 class="th-section-title">What to Expect</h2>
+                <p class="th-section-lead">A comprehensive full-day experience designed for learning, reflection, and lasting connections.</p>
             </div>
 
             <div class="row g-4">
                 <div class="col-lg-4 col-md-6">
-                    <div class="media-card p-4 h-100" style="border: 1px solid var(--media-border); border-radius: var(--media-radius);">
-                        <div class="conf-location-icon mb-3">
+                    <div class="co-objective-card">
+                        <div class="co-icon-bubble mb-3" style="background: #EEF4FC; color: #0C52A1;">
                             <i class="fas fa-microphone-alt"></i>
                         </div>
                         <h4 class="h5 fw-bold text-dark mb-2">Keynotes & Lived Stories</h4>
@@ -456,8 +523,8 @@ Annual Conferences - Let Us Dream
                 </div>
 
                 <div class="col-lg-4 col-md-6">
-                    <div class="media-card p-4 h-100" style="border: 1px solid var(--media-border); border-radius: var(--media-radius);">
-                        <div class="conf-location-icon mb-3" style="background: #ecfdf5; color: #059669;">
+                    <div class="co-objective-card">
+                        <div class="co-icon-bubble mb-3" style="background: #ECFDF5; color: #059669;">
                             <i class="fas fa-users"></i>
                         </div>
                         <h4 class="h5 fw-bold text-dark mb-2">Panel Discussions</h4>
@@ -466,8 +533,8 @@ Annual Conferences - Let Us Dream
                 </div>
 
                 <div class="col-lg-4 col-md-6">
-                    <div class="media-card p-4 h-100" style="border: 1px solid var(--media-border); border-radius: var(--media-radius);">
-                        <div class="conf-location-icon mb-3" style="background: #fff7ed; color: #ea580c;">
+                    <div class="co-objective-card">
+                        <div class="co-icon-bubble mb-3" style="background: #FFF7ED; color: #EA580C;">
                             <i class="fas fa-hands-helping"></i>
                         </div>
                         <h4 class="h5 fw-bold text-dark mb-2">Workshops & Brainstorming</h4>
@@ -476,8 +543,8 @@ Annual Conferences - Let Us Dream
                 </div>
 
                 <div class="col-lg-4 col-md-6">
-                    <div class="media-card p-4 h-100" style="border: 1px solid var(--media-border); border-radius: var(--media-radius);">
-                        <div class="conf-location-icon mb-3" style="background: #fef2f2; color: #dc2626;">
+                    <div class="co-objective-card">
+                        <div class="co-icon-bubble mb-3" style="background: #FEF2F2; color: #DC2626;">
                             <i class="fas fa-award"></i>
                         </div>
                         <h4 class="h5 fw-bold text-dark mb-2">Celebrating Changemakers</h4>
@@ -486,8 +553,8 @@ Annual Conferences - Let Us Dream
                 </div>
 
                 <div class="col-lg-4 col-md-6">
-                    <div class="media-card p-4 h-100" style="border: 1px solid var(--media-border); border-radius: var(--media-radius);">
-                        <div class="conf-location-icon mb-3" style="background: #eef4fc; color: #0284c7;">
+                    <div class="co-objective-card">
+                        <div class="co-icon-bubble mb-3" style="background: #EEF4FC; color: #0284C7;">
                             <i class="fas fa-network-wired"></i>
                         </div>
                         <h4 class="h5 fw-bold text-dark mb-2">Networking & Collaboration</h4>
@@ -496,8 +563,8 @@ Annual Conferences - Let Us Dream
                 </div>
 
                 <div class="col-lg-4 col-md-6">
-                    <div class="media-card p-4 h-100" style="border: 1px solid var(--media-border); border-radius: var(--media-radius);">
-                        <div class="conf-location-icon mb-3" style="background: #f5f3ff; color: #7c3aed;">
+                    <div class="co-objective-card">
+                        <div class="co-icon-bubble mb-3" style="background: #F5F3FF; color: #7C3AED;">
                             <i class="fas fa-store"></i>
                         </div>
                         <h4 class="h5 fw-bold text-dark mb-2">Community Project Stalls</h4>
@@ -508,63 +575,83 @@ Annual Conferences - Let Us Dream
         </div>
     </section>
 
-    <!-- Participation & Resources Section -->
-    <section id="participate" class="conference-section pt-0">
+    <!-- ==========================================================
+         7. PARTICIPATE & REGISTRATION SECTION
+         ========================================================== -->
+    <section id="participate" class="th-section pt-0">
         <div class="container">
-            <div class="media-card p-4 p-lg-5 text-center mb-5" style="background: #f8fafc; border: 1px solid var(--media-border); border-radius: var(--media-radius);">
-                <span class="media-kicker">JOIN THE COMMUNITY</span>
-                <h2 class="h3 fw-bold text-dark mb-3">Who Can Participate?</h2>
-                <p class="text-muted mx-auto mb-4" style="max-width: 760px;">
-                    Volunteers from the local community, business owners involved in CSR or community projects, non-profit directors, philanthropists, social workers, educators, students, or anyone passionate about uplifting their society.
+            <div class="co-cta-box mb-5">
+                <div class="th-kicker-badge mb-3">
+                    <span class="pulse-dot"></span>
+                    <span>JOIN THE COMMUNITY</span>
+                </div>
+                <h2 class="h2 fw-bold text-white mb-3" style="font-family: 'Outfit', sans-serif;">
+                    Who Can Participate?
+                </h2>
+                <p class="text-white-50 mx-auto mb-4" style="max-width: 760px; font-size: 1.05rem;">
+                    Volunteers from the local community, business owners involved in CSR, non-profit directors, philanthropists, social workers, educators, university students, or anyone passionate about uplifting their neighborhood.
                 </p>
-                <a href="https://cmt.letusdream.org" class="btn btn-primary rounded-pill px-5 py-2 fw-bold" target="_blank" rel="noopener">
-                    <i class="fas fa-user-plus me-2"></i>Register Now via CMT
-                </a>
+                <div class="d-flex flex-wrap justify-content-center gap-3">
+                    <a href="https://cmt.letusdream.org" class="btn-th-primary" target="_blank" rel="noopener">
+                        <i class="fas fa-user-plus me-2"></i>Register Now via CMT
+                    </a>
+                    <a href="{% url 'run-lud-conference' %}" class="btn-th-outline">
+                        <i class="fas fa-book-reader me-2"></i>Host a Chapter Conference
+                    </a>
+                </div>
             </div>
+        </div>
+    </section>
 
-            <div class="text-center mb-4">
-                <span class="media-kicker">PUBLICATIONS & ASSETS</span>
-                <h3 class="media-section-title">Conference Resources</h3>
+    <!-- ==========================================================
+         8. CONFERENCE RESOURCES SECTION
+         ========================================================== -->
+    <section id="resources" class="th-section pt-0">
+        <div class="container">
+            <div class="th-section-header">
+                <span class="th-section-kicker">PUBLICATIONS & ASSETS</span>
+                <h2 class="th-section-title">Conference Resources</h2>
+                <p class="th-section-lead">Download official brochures, guides, and read inspiring community newsletter stories.</p>
             </div>
 
             <div class="row g-4">
                 <div class="col-md-4">
-                    <div class="media-card text-center p-4 h-100" style="border: 1px solid var(--media-border); border-radius: var(--media-radius);">
-                        <div class="conf-location-icon mx-auto mb-3">
+                    <div class="co-objective-card text-center p-4">
+                        <div class="co-icon-bubble mx-auto mb-3" style="background: #EEF4FC; color: #0C52A1;">
                             <i class="fas fa-file-pdf"></i>
                         </div>
                         <h5 class="h6 fw-bold text-dark mb-2">Conference Brochure</h5>
-                        <p class="text-muted small mb-3">Download our comprehensive community conference brochure.</p>
+                        <p class="text-muted small mb-3">Download our comprehensive community conference brochure and guidelines.</p>
                         <a href="{% static '2025/conference/LUD Community Conferences 2025 Overall Brochure.pdf' %}" 
-                           class="btn btn-outline-primary btn-sm rounded-pill px-4 fw-bold" target="_blank" rel="noopener">
+                           class="btn-th-card-solid w-100" target="_blank" rel="noopener">
                             <i class="fas fa-external-link-alt me-1"></i>View Brochure
                         </a>
                     </div>
                 </div>
 
                 <div class="col-md-4">
-                    <div class="media-card text-center p-4 h-100" style="border: 1px solid var(--media-border); border-radius: var(--media-radius);">
-                        <div class="conf-location-icon mx-auto mb-3" style="background: #ecfdf5; color: #059669;">
+                    <div class="co-objective-card text-center p-4">
+                        <div class="co-icon-bubble mx-auto mb-3" style="background: #ECFDF5; color: #059669;">
                             <i class="fas fa-newspaper"></i>
                         </div>
                         <h5 class="h6 fw-bold text-dark mb-2">Newsletter Vol. 1</h5>
                         <p class="text-muted small mb-3">Read our latest community updates, stories, and conference reviews.</p>
                         <a href="https://letusdream.org/ltstatic/newsletters/2025/2025vol1.pdf" 
-                           class="btn btn-outline-primary btn-sm rounded-pill px-4 fw-bold" target="_blank" rel="noopener">
+                           class="btn-th-card-solid w-100" style="background: var(--th-green-dark); border-color: var(--th-green-dark);" target="_blank" rel="noopener">
                             <i class="fas fa-external-link-alt me-1"></i>Read Vol. 1
                         </a>
                     </div>
                 </div>
 
                 <div class="col-md-4">
-                    <div class="media-card text-center p-4 h-100" style="border: 1px solid var(--media-border); border-radius: var(--media-radius);">
-                        <div class="conf-location-icon mx-auto mb-3" style="background: #f5f3ff; color: #7c3aed;">
+                    <div class="co-objective-card text-center p-4">
+                        <div class="co-icon-bubble mx-auto mb-3" style="background: #F5F3FF; color: #7C3AED;">
                             <i class="fas fa-newspaper"></i>
                         </div>
                         <h5 class="h6 fw-bold text-dark mb-2">Newsletter Vol. 2</h5>
                         <p class="text-muted small mb-3">Discover inspiring stories from unsung changemakers in Vol. 2.</p>
                         <a href="https://letusdream.org/ltstatic/newsletters/2025/2025vol2.pdf" 
-                           class="btn btn-outline-primary btn-sm rounded-pill px-4 fw-bold" target="_blank" rel="noopener">
+                           class="btn-th-card-solid w-100" target="_blank" rel="noopener">
                             <i class="fas fa-external-link-alt me-1"></i>Read Vol. 2
                         </a>
                     </div>
@@ -573,19 +660,21 @@ Annual Conferences - Let Us Dream
         </div>
     </section>
 
-    <!-- Past Conferences Section -->
-    <section id="past-conferences" class="conference-section pt-0">
+    <!-- ==========================================================
+         9. PAST CONFERENCES & VIDEO ARCHIVES
+         ========================================================== -->
+    <section id="past-conferences" class="th-section pt-0 pb-5">
         <div class="container">
-            <div class="text-center mb-5">
-                <span class="media-kicker">VIDEO ARCHIVES</span>
-                <h2 class="media-section-title">Experience Past Conferences</h2>
-                <p class="media-section-lead">Watch keynotes and discussions recorded from previous university events</p>
+            <div class="th-section-header">
+                <span class="th-section-kicker">VIDEO ARCHIVES</span>
+                <h2 class="th-section-title">Experience Past Conferences</h2>
+                <p class="th-section-lead">Watch keynotes and discussions recorded from previous university events.</p>
             </div>
 
             <div class="row g-4 mb-5">
                 <!-- Louisiana Tech 2022 -->
                 <div class="col-lg-6">
-                    <div class="media-card overflow-hidden h-100" style="border: 1px solid var(--media-border); border-radius: var(--media-radius);">
+                    <div class="co-objective-card overflow-hidden p-0">
                         <div class="ratio ratio-16x9">
                             <iframe src="https://www.youtube.com/embed/t0A4db_5QoM?si=8GpqeLiewROEoYU8" 
                                     title="Louisiana Tech University Conference 2022" 
@@ -596,7 +685,7 @@ Annual Conferences - Let Us Dream
                         </div>
                         <div class="p-4">
                             <div class="d-flex align-items-center mb-2">
-                                <div class="conf-location-icon me-3" style="width: 36px; height: 36px; font-size: 0.95rem;">
+                                <div class="co-icon-bubble me-3" style="width: 40px; height: 40px; font-size: 1rem;">
                                     <i class="fas fa-university"></i>
                                 </div>
                                 <div>
@@ -613,7 +702,7 @@ Annual Conferences - Let Us Dream
 
                 <!-- Grambling State 2024 -->
                 <div class="col-lg-6">
-                    <div class="media-card overflow-hidden h-100" style="border: 1px solid var(--media-border); border-radius: var(--media-radius);">
+                    <div class="co-objective-card overflow-hidden p-0">
                         <div class="ratio ratio-16x9">
                             <iframe src="https://www.youtube.com/embed/s36fCtfx8wM?si=XuYwyTOxZDxA2wQ_" 
                                     title="Grambling State University Conference 2024" 
@@ -624,7 +713,7 @@ Annual Conferences - Let Us Dream
                         </div>
                         <div class="p-4">
                             <div class="d-flex align-items-center mb-2">
-                                <div class="conf-location-icon me-3" style="width: 36px; height: 36px; font-size: 0.95rem; background: #ecfdf5; color: #059669;">
+                                <div class="co-icon-bubble me-3" style="width: 40px; height: 40px; font-size: 1rem; background: #ECFDF5; color: #059669;">
                                     <i class="fas fa-university"></i>
                                 </div>
                                 <div>
@@ -641,9 +730,9 @@ Annual Conferences - Let Us Dream
             </div>
 
             <!-- YouTube Channel Callout -->
-            <div class="media-card p-4 text-center" style="border: 1px solid var(--media-border); border-radius: var(--media-radius); background: #ffffff;">
-                <p class="text-muted mb-3 fs-6">Want to explore our complete conference archives and interviews?</p>
-                <a href="https://www.youtube.com/@letusdream8275" class="btn btn-outline-primary rounded-pill px-4 fw-bold" target="_blank" rel="noopener">
+            <div class="p-4 text-center rounded-3 border bg-white shadow-sm">
+                <p class="text-muted mb-3 fs-6">Want to explore our complete conference archives, interviews, and community stories?</p>
+                <a href="https://www.youtube.com/@letusdream8275" class="btn-th-card-solid px-4" target="_blank" rel="noopener">
                     <i class="fab fa-youtube text-danger me-2"></i>Visit Our YouTube Channel
                 </a>
             </div>
@@ -655,14 +744,40 @@ Annual Conferences - Let Us Dream
 {% block extraScripts %}
 <script>
     document.addEventListener('DOMContentLoaded', function () {
-        // Sticky pill active on scroll
+        // Sync dynamic header height to CSS variables
+        function syncHeaderHeight() {
+            const header = document.querySelector('header.menu') || document.querySelector('header');
+            if (header) {
+                const rect = header.getBoundingClientRect();
+                const h = Math.round(rect.height || header.offsetHeight || 132);
+                document.documentElement.style.setProperty('--th-header-offset', h + 'px');
+                document.documentElement.style.setProperty('--header-height', h + 'px');
+                document.documentElement.style.setProperty('--header-padding-top', h + 'px');
+                document.body.style.setProperty('padding-top', h + 'px', 'important');
+            }
+        }
+        syncHeaderHeight();
+        window.addEventListener('resize', syncHeaderHeight);
+        window.addEventListener('load', syncHeaderHeight);
+        document.querySelectorAll('header img').forEach(img => {
+            if (img.complete) syncHeaderHeight();
+            else img.addEventListener('load', syncHeaderHeight);
+        });
+
+        // Sticky Pill Active Spy
         const sections = document.querySelectorAll('section[id]');
-        const navPills = document.querySelectorAll('.media-pill');
+        const navPills = document.querySelectorAll('.th-nav-pill');
 
         window.addEventListener('scroll', function () {
+            const header = document.querySelector('header.menu') || document.querySelector('header');
+            const subnav = document.querySelector('.th-subnav-bar');
+            const headerH = header ? Math.round(header.getBoundingClientRect().height || header.offsetHeight) : 132;
+            const subnavH = subnav ? Math.round(subnav.getBoundingClientRect().height || subnav.offsetHeight) : 70;
+            const offset = headerH + subnavH + 20;
+
             let current = '';
             sections.forEach(section => {
-                const sectionTop = section.offsetTop - 120;
+                const sectionTop = section.offsetTop - offset;
                 if (window.pageYOffset >= sectionTop) {
                     current = section.getAttribute('id');
                 }

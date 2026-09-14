@@ -2,275 +2,240 @@
 {% load static %}
 
 {% block title %}
-Triennial Conferences - Let Us Dream
+Triennial International Conferences - Let Us Dream
 {% endblock title %}
 
 {% block extraStyles %}
-<link rel="stylesheet" href="{% static 'css/new/media.css' %}">
-<style>
-    /* Scoped Upcoming 2026 Showcase */
-    .triennial-upcoming-grid {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 1.5rem;
-        align-items: stretch;
-    }
-
-    .triennial-hero-panel {
-        display: flex;
-        flex-direction: column;
-        height: 100%;
-        padding: 2rem;
-        border-radius: var(--media-radius);
-        background: #0d477f;
-        color: #ffffff;
-        box-shadow: var(--media-shadow-md);
-    }
-
-    .triennial-hero-panel .badge-kicker {
-        display: inline-flex;
-        align-items: center;
-        padding: 0.3rem 0.85rem;
-        border-radius: 20px;
-        background: rgba(255, 255, 255, 0.16);
-        border: 1px solid rgba(255, 255, 255, 0.25);
-        color: #ffffff;
-        font-size: 0.75rem;
-        font-weight: 700;
-        text-transform: uppercase;
-        width: fit-content;
-        margin-bottom: 1rem;
-    }
-
-    .triennial-meta-box {
-        display: flex;
-        align-items: center;
-        gap: 0.85rem;
-        padding: 0.75rem 1rem;
-        border-radius: var(--media-radius-sm);
-        background: rgba(255, 255, 255, 0.08);
-        border: 1px solid rgba(255, 255, 255, 0.12);
-        margin-bottom: 0.75rem;
-    }
-
-    .triennial-meta-box i {
-        width: 36px;
-        height: 36px;
-        border-radius: 8px;
-        background: #ffffff;
-        color: #0d477f;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1rem;
-        flex-shrink: 0;
-    }
-
-    .triennial-poster-card {
-        border: 1px solid var(--media-border);
-        border-radius: var(--media-radius);
-        overflow: hidden;
-        background: #ffffff;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        box-shadow: var(--media-shadow-sm);
-        transition: var(--media-transition);
-    }
-
-    .triennial-poster-card:hover {
-        transform: translateY(-4px);
-        box-shadow: var(--media-shadow-md);
-        border-color: var(--media-primary);
-    }
-
-    .triennial-poster-img-wrap {
-        width: 100%;
-        aspect-ratio: 210 / 297;
-        overflow: hidden;
-        background: #f8fafc;
-    }
-
-    .triennial-poster-img-wrap img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-    }
-
-    .triennial-poster-actions {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 0.5rem;
-        padding: 1rem;
-        border-top: 1px solid var(--media-border);
-        background: #ffffff;
-        margin-top: auto;
-    }
-
-    @media (max-width: 991px) {
-        .triennial-upcoming-grid {
-            grid-template-columns: 1fr;
-        }
-    }
-</style>
+<link rel="stylesheet" href="{% static 'css/new/triennial-hub.css' %}">
 {% endblock extraStyles %}
 
 {% block breadcrumb_section %}{% endblock %}
 
 {% block content %}
-<div class="conference-page-wrapper">
-    <!-- Hero Header -->
-    <section class="media-hero">
+<div class="triennial-wrapper">
+    <!-- ==========================================================
+         1. HERO SECTION
+         ========================================================== -->
+    <section class="th-hero">
         <div class="container">
-            {% if breadcrumbs %}
-            <nav aria-label="breadcrumb" class="media-hero-breadcrumb">
-                <ol class="breadcrumb-minimal">
-                    {% for breadcrumb in breadcrumbs %}
-                        {% if not breadcrumb.active %}
-                            <li class="breadcrumb-item-min">
-                                {% if breadcrumb.url %}
-                                    <a href="{% url breadcrumb.url %}">
-                                        <i class="{{ breadcrumb.icon }}"></i>
-                                        <span>{{ breadcrumb.name }}</span>
-                                    </a>
-                                {% else %}
-                                    <span>
-                                        <i class="{{ breadcrumb.icon }}"></i>
-                                        <span>{{ breadcrumb.name }}</span>
-                                    </span>
-                                {% endif %}
-                            </li>
-                            <li class="breadcrumb-sep-min">/</li>
-                        {% else %}
-                            <li class="breadcrumb-item-min active">
-                                <i class="{{ breadcrumb.icon }}"></i>
-                                <span>{{ breadcrumb.name }}</span>
-                            </li>
-                        {% endif %}
-                    {% endfor %}
-                </ol>
-            </nav>
-            {% endif %}
-            <div class="row justify-content-center text-center">
-                <div class="col-lg-8 col-md-10">
-                    <span class="media-kicker">LET US DREAM • INTERNATIONAL TRIENNIAL GATHERING</span>
-                    <h1 class="media-hero-title">Triennial International Conferences</h1>
-                    <p class="media-hero-lead">
-                        Connecting local communities and service initiatives through global networking, empirical scholarship, and celebration of unsung heroes.
+            <div class="row align-items-center g-4 g-lg-5">
+                <div class="col-lg-7">
+                    <div class="th-kicker-badge">
+                        <span class="pulse-dot"></span>
+                        <span>Let Us Dream • Flagship Global Conferences</span>
+                    </div>
+                    <h1 class="th-hero-title">Triennial International Conferences</h1>
+                    <p class="th-hero-lead">
+                        Bridging communities, empirical scholarship, and grassroots volunteers across continents to build resilient, empowered, and compassionate societies.
                     </p>
+
+                    <div class="th-hero-actions">
+                        <a href="#upcoming-2026" class="btn-th-primary">
+                            <i class="fas fa-calendar-star"></i>Up Next: Bangalore 2026
+                        </a>
+                        <a href="#gallery" class="btn-th-outline">
+                            <i class="fas fa-images"></i>Explore Conference Photos
+                        </a>
+                        <a href="#editions" class="btn-th-outline">
+                            <i class="fas fa-layer-group"></i>Conference Editions
+                        </a>
+                    </div>
+
+                    <div class="th-hero-stats-row">
+                        <div class="th-hero-stat-item">
+                            <span class="th-hero-stat-num">25+</span>
+                            <span class="th-hero-stat-label">Conferences</span>
+                        </div>
+                        <div class="th-hero-stat-item">
+                            <span class="th-hero-stat-num">60K+</span>
+                            <span class="th-hero-stat-label">Global Viewers</span>
+                        </div>
+                        <div class="th-hero-stat-item">
+                            <span class="th-hero-stat-num">200+</span>
+                            <span class="th-hero-stat-label">Changemakers</span>
+                        </div>
+                        <div class="th-hero-stat-item">
+                            <span class="th-hero-stat-num">80+</span>
+                            <span class="th-hero-stat-label">Partner Orgs</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-5">
+                    <div class="th-hero-visual">
+                        <div class="th-mosaic-card-main">
+                            <img src="https://live.staticflickr.com/65535/53314373907_c7a644bbec_b.jpg" 
+                                 alt="Triennial International Conference 2023 - Christ University Inauguration">
+                            <div class="th-mosaic-caption">
+                                <div class="d-flex align-items-center justify-content-between mb-1">
+                                    <span class="badge bg-success" style="font-size: 0.7rem; letter-spacing: 0.05em;">2023 CONFERENCE</span>
+                                    <small class="text-white-50"><i class="fas fa-map-marker-alt me-1"></i>Bangalore Campus</small>
+                                </div>
+                                <h6 class="mb-0 fw-bold text-white small">Global Inauguration & Changemaker Gathering</h6>
+                            </div>
+                        </div>
+
+                        <div class="th-mosaic-subcard">
+                            <div class="th-subcard-icon">
+                                <i class="fas fa-calendar-check"></i>
+                            </div>
+                            <div class="th-subcard-text">
+                                <strong>Nov 19–21, 2026</strong>
+                                <span>Next Triennial Conference</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Sticky Navigation Pills -->
-    <div class="media-nav-wrapper">
-        <div class="container">
-            <div class="media-nav-scroll justify-content-start justify-content-md-center">
-                <a href="#upcoming-2026" class="media-pill active"><i class="fas fa-star me-1"></i>Up Next: 2026</a>
-                <a href="#editions" class="media-pill"><i class="fas fa-layer-group me-1"></i>Conference Editions</a>
-                <a href="#impact" class="media-pill"><i class="fas fa-chart-line me-1"></i>Our Impact</a>
-                <a href="#history" class="media-pill"><i class="fas fa-history me-1"></i>History & Vision</a>
-                <a href="#goals" class="media-pill"><i class="fas fa-bullseye me-1"></i>Our Goals</a>
-                <a href="#what-to-expect" class="media-pill"><i class="fas fa-lightbulb me-1"></i>What to Expect</a>
-                <a href="#roadmap" class="media-pill"><i class="fas fa-route me-1"></i>Roadmap</a>
-                <a href="#partners" class="media-pill"><i class="fas fa-handshake me-1"></i>Partners</a>
+    <!-- ==========================================================
+         2. STICKY SUB-NAV & BREADCRUMB
+         ========================================================== -->
+    <div class="th-subnav-bar">
+        <div class="container-fluid px-2 px-md-4">
+            <!-- Sticky Breadcrumb Trail -->
+            {% if breadcrumbs %}
+            <div class="th-sticky-breadcrumb-strip">
+                <nav aria-label="breadcrumb">
+                    <ol class="th-breadcrumb-minimal">
+                        {% for breadcrumb in breadcrumbs %}
+                            {% if not breadcrumb.active %}
+                                <li class="th-breadcrumb-item">
+                                    {% if breadcrumb.url %}
+                                        <a href="{% url breadcrumb.url %}">
+                                            <i class="{{ breadcrumb.icon }} me-1"></i>{{ breadcrumb.name }}
+                                        </a>
+                                    {% else %}
+                                        <span><i class="{{ breadcrumb.icon }} me-1"></i>{{ breadcrumb.name }}</span>
+                                    {% endif %}
+                                </li>
+                                <li class="th-breadcrumb-sep">/</li>
+                            {% else %}
+                                <li class="th-breadcrumb-item active">
+                                    <i class="{{ breadcrumb.icon }} me-1"></i>{{ breadcrumb.name }}
+                                </li>
+                            {% endif %}
+                        {% endfor %}
+                    </ol>
+                </nav>
+                <div class="d-none d-sm-flex align-items-center gap-2 text-muted" style="font-size: 0.74rem;">
+                    <span class="badge" style="background: #EBF5E0; color: #58921E; font-weight: 700;">Bangalore 2026</span>
+                    <span class="text-muted">Nov 19–21</span>
+                </div>
+            </div>
+            {% endif %}
+
+            <!-- Navigation Pills -->
+            <div class="th-subnav-scroll">
+                <a href="#upcoming-2026" class="th-nav-pill active"><i class="fas fa-star me-1"></i>Up Next: 2026</a>
+                <a href="#gallery" class="th-nav-pill"><i class="fas fa-camera-retro me-1"></i>Conference Photos</a>
+                <a href="#editions" class="th-nav-pill"><i class="fas fa-layer-group me-1"></i>Conference Editions</a>
+                <a href="#impact" class="th-nav-pill"><i class="fas fa-chart-line me-1"></i>Our Impact</a>
+                <a href="#history" class="th-nav-pill"><i class="fas fa-history me-1"></i>History & Vision</a>
+                <a href="#goals" class="th-nav-pill"><i class="fas fa-bullseye me-1"></i>Our Goals</a>
+                <a href="#what-to-expect" class="th-nav-pill"><i class="fas fa-lightbulb me-1"></i>What to Expect</a>
+                <a href="#roadmap" class="th-nav-pill"><i class="fas fa-route me-1"></i>Roadmap</a>
+                <a href="#partners" class="th-nav-pill"><i class="fas fa-handshake me-1"></i>Partners</a>
             </div>
         </div>
     </div>
 
-    <!-- Upcoming 2026 Section -->
-    <section id="upcoming-2026" class="conference-section">
+    <!-- ==========================================================
+         3. UPCOMING 2026 SHOWCASE
+         ========================================================== -->
+    <section id="upcoming-2026" class="th-section">
         <div class="container">
-            <div class="text-center mb-5">
-                <span class="media-kicker">FLAGSHIP INTERNATIONAL SUMMIT</span>
-                <h2 class="media-section-title">Triennial Conference 2026</h2>
-                <p class="media-section-lead">Three days of global knowledge exchange, grassroots partnership, and shared practice</p>
+            <div class="th-section-header">
+                <span class="th-section-kicker">FLAGSHIP INTERNATIONAL CONFERENCE</span>
+                <h2 class="th-section-title">Triennial Conference 2026</h2>
+                <p class="th-section-lead">Three days of collaborative knowledge exchange, grassroots innovation, and shared global practice</p>
             </div>
 
-            <div class="triennial-upcoming-grid">
-                <!-- Panel 1: Conference Overview -->
+            <div class="th-2026-grid">
+                <!-- Main Conference Card -->
                 <div>
-                    <div class="triennial-hero-panel">
-                        <span class="badge-kicker">UP NEXT IN 2026</span>
+                    <div class="th-2026-hero-card h-100">
+                        <span class="th-flag-pill"><i class="fas fa-bolt me-1"></i>UP NEXT IN BANGALORE</span>
                         <h3 class="h3 fw-bold text-white mb-2">Triennial Conference 2026</h3>
                         <h5 class="h6 fw-semibold text-white-50 mb-1">Theme: Local Wisdom, Global Influence</h5>
                         <p class="small text-white-50 mb-4">Resilient Glocal Communities for Meaningful Humanity</p>
                         
-                        <div class="triennial-meta-box">
-                            <i class="fas fa-calendar-alt"></i>
+                        <div class="th-meta-row">
+                            <div class="th-meta-icon"><i class="fas fa-calendar-alt"></i></div>
                             <div>
-                                <div class="text-uppercase text-white-50" style="font-size: 0.72rem; font-weight: 700;">Date</div>
+                                <div class="text-uppercase text-white-50" style="font-size: 0.72rem; font-weight: 800;">Dates</div>
                                 <div class="fw-bold small text-white">November 19 – 21, 2026</div>
                             </div>
                         </div>
 
-                        <div class="triennial-meta-box">
-                            <i class="fas fa-map-marker-alt"></i>
+                        <div class="th-meta-row">
+                            <div class="th-meta-icon"><i class="fas fa-map-marker-alt"></i></div>
                             <div>
-                                <div class="text-uppercase text-white-50" style="font-size: 0.72rem; font-weight: 700;">Venue</div>
+                                <div class="text-uppercase text-white-50" style="font-size: 0.72rem; font-weight: 800;">Host Venue</div>
                                 <div class="fw-bold small text-white">Christ University, Bangalore, India</div>
                             </div>
                         </div>
 
-                        <div class="triennial-meta-box mb-4">
-                            <i class="fas fa-users"></i>
+                        <div class="th-meta-row mb-4">
+                            <div class="th-meta-icon"><i class="fas fa-globe-asia"></i></div>
                             <div>
-                                <div class="text-uppercase text-white-50" style="font-size: 0.72rem; font-weight: 700;">Host</div>
+                                <div class="text-uppercase text-white-50" style="font-size: 0.72rem; font-weight: 800;">Co-Organizers</div>
                                 <div class="fw-bold small text-white">Let Us Dream & Christ University</div>
                             </div>
                         </div>
 
                         <div class="d-flex flex-column flex-sm-row gap-2 mt-auto">
                             <a href="{% url 'tc-2026' %}" class="btn btn-light flex-grow-1 py-2 fw-bold text-dark rounded-pill">
-                                <i class="fas fa-info-circle me-1"></i>View Details
+                                <i class="fas fa-info-circle me-1"></i>Conference Details
                             </a>
                             <a href="https://cmt.letusdream.org/one_time_registration/e3c2ffb2-39ea-44bc-a173-233f01dc8cb1" 
-                               target="_blank" rel="noopener" class="btn btn-outline-light flex-grow-1 py-2 fw-bold rounded-pill">
-                                <i class="fas fa-user-plus me-1"></i>Register
+                               target="_blank" rel="noopener" class="btn-th-primary flex-grow-1 justify-content-center">
+                                <i class="fas fa-user-plus"></i>Register Now
                             </a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Panel 2: Changemaker Poster -->
+                <!-- Changemaker Poster Card -->
                 <div>
-                    <div class="triennial-poster-card">
-                        <div class="triennial-poster-img-wrap" style="background: #052b60;">
+                    <div class="th-poster-card h-100">
+                        <div class="th-poster-img-wrap">
                             <img src="{% static '2026/ChangeMaker.png' %}" alt="Nominate a Changemaker 2026">
                         </div>
-                        <div class="p-3">
+                        <div class="th-poster-content">
                             <h5 class="fw-bold text-dark mb-1 small">Changemakers Nomination</h5>
-                            <p class="text-muted" style="font-size: 0.8rem; margin-bottom: 0;">Nominate unsung heroes and community visionaries.</p>
-                        </div>
-                        <div class="triennial-poster-actions">
-                            <a href="{% static '2026/Changemakers Nomination.pdf' %}" target="_blank" rel="noopener" class="btn btn-outline-primary btn-sm rounded-pill fw-bold">
-                                <i class="fas fa-file-pdf me-1"></i>Brochure
-                            </a>
-                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSe_dlXsd2HbnnqJpT-4UKZk5u9boE1tiGZ4EB8uvsfm8zvcAA/viewform" target="_blank" rel="noopener" class="btn btn-primary btn-sm rounded-pill fw-bold">
-                                <i class="fas fa-user-plus me-1"></i>Nominate
-                            </a>
+                            <p class="text-muted" style="font-size: 0.8rem; margin-bottom: 0;">Recognizing grassroots visionaries and community heroes across Education, Health & Social Welfare.</p>
+                            <div class="th-poster-actions">
+                                <a href="{% static '2026/Changemakers Nomination.pdf' %}" target="_blank" rel="noopener" class="btn btn-outline-primary btn-sm rounded-pill fw-bold">
+                                    <i class="fas fa-file-pdf me-1"></i>Brochure
+                                </a>
+                                <a href="https://docs.google.com/forms/d/e/1FAIpQLSe_dlXsd2HbnnqJpT-4UKZk5u9boE1tiGZ4EB8uvsfm8zvcAA/viewform" target="_blank" rel="noopener" class="btn btn-primary btn-sm rounded-pill fw-bold">
+                                    <i class="fas fa-user-plus me-1"></i>Nominate
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Panel 3: Film Fest Poster -->
+                <!-- Film Fest Poster Card -->
                 <div>
-                    <div class="triennial-poster-card">
-                        <div class="triennial-poster-img-wrap">
+                    <div class="th-poster-card h-100">
+                        <div class="th-poster-img-wrap" style="background: #0B2545;">
                             <img src="{% static '2026/FilmFest.png' %}" alt="Short Film Contest 2026">
                         </div>
-                        <div class="p-3">
+                        <div class="th-poster-content">
                             <h5 class="fw-bold text-dark mb-1 small">Lights Camera Impact Film Fest</h5>
-                            <p class="text-muted" style="font-size: 0.8rem; margin-bottom: 0;">Short film contest highlighting social transformation.</p>
-                        </div>
-                        <div class="triennial-poster-actions">
-                            <a href="{% static '2026/Short Film Contest Website Content.pdf' %}" target="_blank" rel="noopener" class="btn btn-outline-primary btn-sm rounded-pill fw-bold">
-                                <i class="fas fa-file-pdf me-1"></i>Brochure
-                            </a>
-                            <a href="https://forms.gle/XNnqSyJpxXPpPeyVA" target="_blank" rel="noopener" class="btn btn-primary btn-sm rounded-pill fw-bold">
-                                <i class="fas fa-film me-1"></i>Submit
-                            </a>
+                            <p class="text-muted" style="font-size: 0.8rem; margin-bottom: 0;">International short film competition giving voice to youth creators and impactful social change stories.</p>
+                            <div class="th-poster-actions">
+                                <a href="{% static '2026/Short Film Contest Website Content.pdf' %}" target="_blank" rel="noopener" class="btn btn-outline-primary btn-sm rounded-pill fw-bold">
+                                    <i class="fas fa-file-pdf me-1"></i>Brochure
+                                </a>
+                                <a href="https://forms.gle/XNnqSyJpxXPpPeyVA" target="_blank" rel="noopener" class="btn btn-primary btn-sm rounded-pill fw-bold">
+                                    <i class="fas fa-film me-1"></i>Submit Film
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -278,78 +243,326 @@ Triennial Conferences - Let Us Dream
         </div>
     </section>
 
-    <!-- Conference Editions Section -->
-    <section id="editions" class="conference-section pt-0">
+    <!-- ==========================================================
+         4. CURATED PAST CONFERENCE PHOTO GALLERY (FLICKR)
+         ========================================================== -->
+    <section id="gallery" class="th-section th-section-alt">
         <div class="container">
-            <div class="text-center mb-5">
-                <span class="media-kicker">HISTORICAL MILESTONES</span>
-                <h2 class="media-section-title">Triennial Editions</h2>
-                <p class="media-section-lead">Explore each chapter of our global triennial journey</p>
+            <div class="th-section-header">
+                <span class="th-section-kicker">AUTHENTIC COMMUNITY REFLECTIONS</span>
+                <h2 class="th-section-title">Moments from Past Triennials</h2>
+                <p class="th-section-lead">
+                    Relive the atmosphere, international panels, and joyful fellowship from our landmark Triennial Conference at Christ University Central Campus, Bangalore.
+                </p>
+            </div>
+
+            <!-- Filter Tabs -->
+            <div class="th-gallery-filters">
+                <button class="th-gallery-tab active" data-filter="all">All Highlights</button>
+                <button class="th-gallery-tab" data-filter="keynote">Inauguration & Keynotes</button>
+                <button class="th-gallery-tab" data-filter="audience">Delegates & Youth</button>
+                <button class="th-gallery-tab" data-filter="panels">Panels & Changemakers</button>
+            </div>
+
+            <!-- Photo Grid with Flickr Album CDN Photos -->
+            <div class="th-photo-grid" id="conferencePhotoGrid">
+                <!-- Photo 1: Inauguration Stage -->
+                <div class="th-photo-item" data-category="keynote" 
+                     data-full="https://live.staticflickr.com/65535/53314373907_c7a644bbec_b.jpg"
+                     data-caption="Grand Inauguration Ceremony & Dais of Dignitaries • Christ University Bangalore">
+                    <img src="https://live.staticflickr.com/65535/53314373907_c7a644bbec_b.jpg" 
+                         alt="Triennial International Conference Inauguration" loading="lazy">
+                    <div class="th-photo-overlay">
+                        <span class="th-photo-tag">Inauguration</span>
+                        <div class="th-photo-title">Grand Inauguration Ceremony</div>
+                        <small class="text-white-50">Christ University Bangalore Campus</small>
+                    </div>
+                    <div class="th-photo-zoom-icon"><i class="fas fa-search-plus"></i></div>
+                </div>
+
+                <!-- Photo 2: Lighting of the Lamp -->
+                <div class="th-photo-item" data-category="keynote" 
+                     data-full="https://live.staticflickr.com/65535/53315594489_1b5af1533d_b.jpg"
+                     data-caption="Traditional Lamp Lighting Ceremony Inaugurating the 2023 Triennial Gathering">
+                    <img src="https://live.staticflickr.com/65535/53315594489_1b5af1533d_b.jpg" 
+                         alt="Lamp Lighting Ceremony" loading="lazy">
+                    <div class="th-photo-overlay">
+                        <span class="th-photo-tag">Tradition</span>
+                        <div class="th-photo-title">Lighting of the Ceremonial Lamp</div>
+                        <small class="text-white-50">Blessing the Conference Beginning</small>
+                    </div>
+                    <div class="th-photo-zoom-icon"><i class="fas fa-search-plus"></i></div>
+                </div>
+
+                <!-- Photo 3: Keynote Address -->
+                <div class="th-photo-item" data-category="keynote" 
+                     data-full="https://live.staticflickr.com/65535/53315713440_e802dd36b7_b.jpg"
+                     data-caption="Inspiring Keynote Presentation by International Scholar & Community Leader">
+                    <img src="https://live.staticflickr.com/65535/53315713440_e802dd36b7_b.jpg" 
+                         alt="Keynote Address" loading="lazy">
+                    <div class="th-photo-overlay">
+                        <span class="th-photo-tag">Keynote</span>
+                        <div class="th-photo-title">Global Thought Leadership</div>
+                        <small class="text-white-50">Action Research & Social Justice</small>
+                    </div>
+                    <div class="th-photo-zoom-icon"><i class="fas fa-search-plus"></i></div>
+                </div>
+
+                <!-- Photo 4: Dignitaries on Stage -->
+                <div class="th-photo-item" data-category="keynote" 
+                     data-full="https://live.staticflickr.com/65535/53315594234_375f3fcce5_b.jpg"
+                     data-caption="University Vice Chancellors and Global LUD Leadership on the Conference Dais">
+                    <img src="https://live.staticflickr.com/65535/53315594234_375f3fcce5_b.jpg" 
+                         alt="Dignitaries on Dais" loading="lazy">
+                    <div class="th-photo-overlay">
+                        <span class="th-photo-tag">Leadership</span>
+                        <div class="th-photo-title">Leadership & Advisory Board</div>
+                        <small class="text-white-50">Conveners & International Partners</small>
+                    </div>
+                    <div class="th-photo-zoom-icon"><i class="fas fa-search-plus"></i></div>
+                </div>
+
+                <!-- Photo 5: Panel Discussion -->
+                <div class="th-photo-item" data-category="panels" 
+                     data-full="https://live.staticflickr.com/65535/53315594374_03917f3714_b.jpg"
+                     data-caption="Multi-Disciplinary Panel Exchange: Health, Education, and Community Welfare">
+                    <img src="https://live.staticflickr.com/65535/53315594374_03917f3714_b.jpg" 
+                         alt="Panel Discussion" loading="lazy">
+                    <div class="th-photo-overlay">
+                        <span class="th-photo-tag">Panel</span>
+                        <div class="th-photo-title">Global Panel Sessions</div>
+                        <small class="text-white-50">Cross-border Dialogue & Practice</small>
+                    </div>
+                    <div class="th-photo-zoom-icon"><i class="fas fa-search-plus"></i></div>
+                </div>
+
+                <!-- Photo 6: Changemaker Felicitation -->
+                <div class="th-photo-item" data-category="panels" 
+                     data-full="https://live.staticflickr.com/65535/5331437677_7d6a49c7ec_b.jpg"
+                     data-caption="Changemaker Recognition: Honoring Unsung Heroes Driving Grassroots Transformation">
+                    <img src="https://live.staticflickr.com/65535/53314373677_7d6a49c7ec_b.jpg" 
+                         alt="Changemaker Felicitation" loading="lazy">
+                    <div class="th-photo-overlay">
+                        <span class="th-photo-tag">Awards</span>
+                        <div class="th-photo-title">Changemaker Recognition</div>
+                        <small class="text-white-50">Honoring Frontline Civic Heroes</small>
+                    </div>
+                    <div class="th-photo-zoom-icon"><i class="fas fa-search-plus"></i></div>
+                </div>
+
+                <!-- Photo 7: Speaker Recognition -->
+                <div class="th-photo-item" data-category="panels" 
+                     data-full="https://live.staticflickr.com/65535/53315713345_d038f1750d_b.jpg"
+                     data-caption="Presentation of Mementos and Honors to Contributing Scholars & Civic Leaders">
+                    <img src="https://live.staticflickr.com/65535/53315713345_d038f1750d_b.jpg" 
+                         alt="Honoring Speakers" loading="lazy">
+                    <div class="th-photo-overlay">
+                        <span class="th-photo-tag">Felicitations</span>
+                        <div class="th-photo-title">Honoring Global Contributors</div>
+                        <small class="text-white-50">Gratitude to Session Chairs</small>
+                    </div>
+                    <div class="th-photo-zoom-icon"><i class="fas fa-search-plus"></i></div>
+                </div>
+
+                <!-- Photo 8: Auditorium Packed Audience -->
+                <div class="th-photo-item" data-category="audience" 
+                     data-full="https://live.staticflickr.com/65535/53315713185_29de73cfe2_b.jpg"
+                     data-caption="Full House at the Main Auditorium during the Triennial Plenary Session">
+                    <img src="https://live.staticflickr.com/65535/53315713185_29de73cfe2_b.jpg" 
+                         alt="Full House Audience" loading="lazy">
+                    <div class="th-photo-overlay">
+                        <span class="th-photo-tag">Plenary</span>
+                        <div class="th-photo-title">A Gathering of Dreamers</div>
+                        <small class="text-white-50">Over 1,000 In-Person Attendees</small>
+                    </div>
+                    <div class="th-photo-zoom-icon"><i class="fas fa-search-plus"></i></div>
+                </div>
+
+                <!-- Photo 9: Youth & Delegate Engagement -->
+                <div class="th-photo-item" data-category="audience" 
+                     data-full="https://live.staticflickr.com/65535/53315483438_4a1b5fdbb5_b.jpg"
+                     data-caption="Young Leaders, Student Researchers, and Faculty Engaged in Live Sessions">
+                    <img src="https://live.staticflickr.com/65535/53315483438_4a1b5fdbb5_b.jpg" 
+                         alt="Youth and Student Delegates" loading="lazy">
+                    <div class="th-photo-overlay">
+                        <span class="th-photo-tag">Youth Power</span>
+                        <div class="th-photo-title">Empowered Youth Voice</div>
+                        <small class="text-white-50">Next-Gen Leaders in Social Impact</small>
+                    </div>
+                    <div class="th-photo-zoom-icon"><i class="fas fa-search-plus"></i></div>
+                </div>
+
+                <!-- Photo 10: Interactive Exchange -->
+                <div class="th-photo-item" data-category="audience" 
+                     data-full="https://live.staticflickr.com/65535/53314373582_babaf6c509_b.jpg"
+                     data-caption="Q&A Session with Participants and International Panelists">
+                    <img src="https://live.staticflickr.com/65535/53314373582_babaf6c509_b.jpg" 
+                         alt="Interactive Q&A Session" loading="lazy">
+                    <div class="th-photo-overlay">
+                        <span class="th-photo-tag">Dialogue</span>
+                        <div class="th-photo-title">Interactive Q&A & Discourse</div>
+                        <small class="text-white-50">Audience Participation & Inquiry</small>
+                    </div>
+                    <div class="th-photo-zoom-icon"><i class="fas fa-search-plus"></i></div>
+                </div>
+
+                <!-- Photo 11: Cultural Presentation -->
+                <div class="th-photo-item" data-category="audience" 
+                     data-full="https://live.staticflickr.com/65535/53315483843_ab09c995bd_b.jpg"
+                     data-caption="Cultural Performances Welcoming Delegates from Across India and Abroad">
+                    <img src="https://live.staticflickr.com/65535/53315483843_ab09c995bd_b.jpg" 
+                         alt="Cultural Welcome Performance" loading="lazy">
+                    <div class="th-photo-overlay">
+                        <span class="th-photo-tag">Culture</span>
+                        <div class="th-photo-title">Cultural Tapestry & Harmony</div>
+                        <small class="text-white-50">Celebrating Diversity & Unity</small>
+                    </div>
+                    <div class="th-photo-zoom-icon"><i class="fas fa-search-plus"></i></div>
+                </div>
+
+                <!-- Photo 12: Workshop Interaction -->
+                <div class="th-photo-item" data-category="panels" 
+                     data-full="https://live.staticflickr.com/65535/53315483638_7209ae3d36_b.jpg"
+                     data-caption="Breakout Workshops and Academic Poster Deliberations">
+                    <img src="https://live.staticflickr.com/65535/53315483638_7209ae3d36_b.jpg" 
+                         alt="Collaborative Workshop" loading="lazy">
+                    <div class="th-photo-overlay">
+                        <span class="th-photo-tag">Workshop</span>
+                        <div class="th-photo-title">Grassroots Collaborative Labs</div>
+                        <small class="text-white-50">Actionable Research in Practice</small>
+                    </div>
+                    <div class="th-photo-zoom-icon"><i class="fas fa-search-plus"></i></div>
+                </div>
+            </div>
+
+            <!-- Flickr Official Album Banner Callout -->
+            <div class="th-flickr-cta-banner">
+                <div class="th-flickr-cta-text">
+                    <div class="th-flickr-badge-icon">
+                        <i class="fab fa-flickr"></i>
+                    </div>
+                    <div>
+                        <h5 class="fw-bold text-dark mb-1">Official Past Conference Photo Album</h5>
+                        <p class="text-muted small mb-0">
+                            Explore hundreds of high-resolution professional photographs capturing keynote speeches, award ceremonies, and delegate interactions on Christ University's official Flickr collection.
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <a href="https://www.flickr.com/photos/christuniversity/albums/72177720312495051/with/53314373907" 
+                       target="_blank" rel="noopener" class="btn-th-primary">
+                        <i class="fab fa-flickr me-1"></i>View Full Album on Flickr (100+ Photos)
+                        <i class="fas fa-external-link-alt ms-1" style="font-size: 0.75rem;"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div class="th-lightbox-modal" id="thLightbox">
+        <div class="th-lightbox-content">
+            <button type="button" class="th-lightbox-close" id="thLightboxClose" aria-label="Close">&times;</button>
+            <button type="button" class="th-lightbox-nav th-lightbox-prev" id="thLightboxPrev" aria-label="Previous">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <img src="" alt="Expanded View" class="th-lightbox-img" id="thLightboxImg">
+            <button type="button" class="th-lightbox-nav th-lightbox-next" id="thLightboxNext" aria-label="Next">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+            <div class="th-lightbox-caption" id="thLightboxCaption"></div>
+        </div>
+    </div>
+
+    <!-- ==========================================================
+         5. CONFERENCE EDITIONS
+         ========================================================== -->
+    <section id="editions" class="th-section">
+        <div class="container">
+            <div class="th-section-header">
+                <span class="th-section-kicker">HISTORICAL MILESTONES</span>
+                <h2 class="th-section-title">Triennial Editions</h2>
+                <p class="th-section-lead">Explore every chapter of our triennial journey across USA and India</p>
             </div>
 
             <div class="row g-4">
-                <!-- 2026 -->
+                <!-- 2026 Edition -->
                 <div class="col-lg-4 col-md-6">
-                    <div class="conf-type-card">
-                        <div class="conf-type-img-wrap">
+                    <div class="th-edition-card">
+                        <div class="th-edition-img-wrap">
                             <img src="{% static '2026/triennial/2026.png' %}" alt="Conference 2026">
+                            <span class="th-edition-status-pill th-edition-status-upcoming">Upcoming Flagship</span>
                         </div>
-                        <div class="conf-type-body">
-                            <div class="d-flex justify-content-between align-items-center mb-2">
-                                <span class="badge rounded-pill px-3 py-1" style="background: #eef4fc; color: #0c52a1; font-weight: 600;">Nov 19-21, 2026</span>
-                                <span class="text-muted small"><i class="fas fa-map-marker-alt me-1"></i>Bangalore</span>
+                        <div class="th-edition-body">
+                            <div class="th-edition-meta">
+                                <span class="badge rounded-pill px-3 py-1" style="background: #eef4fc; color: #0c52a1; font-weight: 700;">Nov 19–21, 2026</span>
+                                <span class="text-muted small"><i class="fas fa-map-marker-alt me-1 text-danger"></i>Bangalore</span>
                             </div>
-                            <h4 class="h5 fw-bold text-dark mb-2">Conference 2026</h4>
-                            <p class="text-muted small mb-4 flex-grow-1">
-                                Upcoming gathering at Christ University, Bangalore exploring "Local Wisdom, Global Influence".
+                            <h4 class="th-edition-title">Conference 2026</h4>
+                            <p class="th-edition-desc">
+                                Fourth triennial conference at Christ University, Bangalore exploring "Local Wisdom, Global Influence: Resilient Glocal Communities for Meaningful Humanity".
                             </p>
-                            <a href="{% url 'tc-2026' %}" class="btn btn-outline-primary btn-sm rounded-pill py-2 fw-bold">
-                                Learn More <i class="fas fa-arrow-right ms-1"></i>
-                            </a>
+                            <div class="d-flex gap-2 mt-auto">
+                                <a href="{% url 'tc-2026' %}" class="btn-th-card flex-grow-1">
+                                    Explore Edition <i class="fas fa-arrow-right"></i>
+                                </a>
+                                <a href="https://cmt.letusdream.org/one_time_registration/e3c2ffb2-39ea-44bc-a173-233f01dc8cb1" target="_blank" rel="noopener" class="btn-th-card-solid">
+                                    Register
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- 2023 -->
+                <!-- 2023 Edition -->
                 <div class="col-lg-4 col-md-6">
-                    <div class="conf-type-card">
-                        <div class="conf-type-img-wrap">
-                            <img src="{% static 'conference/triennial/2023/triennial2023.png' %}" alt="Conference 2023">
+                    <div class="th-edition-card">
+                        <div class="th-edition-img-wrap">
+                            <img src="https://live.staticflickr.com/65535/53315594489_1b5af1533d_b.jpg" alt="Conference 2023">
+                            <span class="th-edition-status-pill th-edition-status-completed"><i class="fas fa-check-circle me-1"></i>In-Person Conference</span>
                         </div>
-                        <div class="conf-type-body">
-                            <div class="d-flex justify-content-between align-items-center mb-2">
-                                <span class="badge rounded-pill px-3 py-1" style="background: #ecfdf5; color: #059669; font-weight: 600;">Nov 3-5, 2023</span>
-                                <span class="text-muted small"><i class="fas fa-map-marker-alt me-1"></i>Bangalore</span>
+                        <div class="th-edition-body">
+                            <div class="th-edition-meta">
+                                <span class="badge rounded-pill px-3 py-1" style="background: #ecfdf5; color: #059669; font-weight: 700;">Nov 3–5, 2023</span>
+                                <span class="text-muted small"><i class="fas fa-map-marker-alt me-1 text-danger"></i>Bangalore</span>
                             </div>
-                            <h4 class="h5 fw-bold text-dark mb-2">Conference 2023</h4>
-                            <p class="text-muted small mb-4 flex-grow-1">
-                                In-person summit featuring 50+ international panelists, youth forums, and the official launch of LUDEx Talks.
+                            <h4 class="th-edition-title">Conference 2023</h4>
+                            <p class="th-edition-desc">
+                                Landmark in-person gathering at Christ University featuring 50+ international panelists, youth forums, social exhibitions, and the official premiere of LUDEx Talks.
                             </p>
-                            <a href="{% url 'tc-2023' %}" class="btn btn-outline-primary btn-sm rounded-pill py-2 fw-bold">
-                                Learn More <i class="fas fa-arrow-right ms-1"></i>
-                            </a>
+                            <div class="d-flex gap-2 mt-auto">
+                                <a href="{% url 'tc-2023' %}" class="btn-th-card flex-grow-1">
+                                    View 2023 Archive <i class="fas fa-arrow-right"></i>
+                                </a>
+                                <a href="https://www.flickr.com/photos/christuniversity/albums/72177720312495051/with/53314373907" target="_blank" rel="noopener" class="btn-th-card" title="Flickr Album">
+                                    <i class="fab fa-flickr"></i>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- 2020 -->
+                <!-- 2020 Edition -->
                 <div class="col-lg-4 col-md-12">
-                    <div class="conf-type-card">
-                        <div class="conf-type-img-wrap">
+                    <div class="th-edition-card">
+                        <div class="th-edition-img-wrap">
                             <img src="{% static 'conference/triennial/TRIENNIAL-CONFERENCE-POSTER2.jpg' %}" alt="Virtual Conference 2020">
+                            <span class="th-edition-status-pill th-edition-status-virtual"><i class="fas fa-video me-1"></i>Global Virtual</span>
                         </div>
-                        <div class="conf-type-body">
-                            <div class="d-flex justify-content-between align-items-center mb-2">
-                                <span class="badge rounded-pill px-3 py-1" style="background: #f5f3ff; color: #7c3aed; font-weight: 600;">Nov 20-22, 2020</span>
-                                <span class="text-muted small"><i class="fas fa-globe me-1"></i>Virtual Summit</span>
+                        <div class="th-edition-body">
+                            <div class="th-edition-meta">
+                                <span class="badge rounded-pill px-3 py-1" style="background: #f5f3ff; color: #7c3aed; font-weight: 700;">Nov 20–22, 2020</span>
+                                <span class="text-muted small"><i class="fas fa-globe me-1 text-primary"></i>Online Plenary</span>
                             </div>
-                            <h4 class="h5 fw-bold text-dark mb-2">Virtual Conference 2020</h4>
-                            <p class="text-muted small mb-4 flex-grow-1">
-                                Inaugural virtual conference reaching 18,000+ registrants and 40,000+ global viewers during the pandemic.
+                            <h4 class="th-edition-title">Virtual Conference 2020</h4>
+                            <p class="th-edition-desc">
+                                Inaugural virtual triennial convening during the pandemic, connecting 18,000+ registrants and reaching 40,000+ viewers across 3 continents.
                             </p>
-                            <a href="{% url 'tc-2020' %}" class="btn btn-outline-primary btn-sm rounded-pill py-2 fw-bold">
-                                Learn More <i class="fas fa-arrow-right ms-1"></i>
-                            </a>
+                            <div class="mt-auto">
+                                <a href="{% url 'tc-2020' %}" class="btn-th-card w-100">
+                                    View 2020 Archive <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -357,104 +570,111 @@ Triennial Conferences - Let Us Dream
         </div>
     </section>
 
-    <!-- Impact Stats Section -->
-    <section id="impact" class="conference-section pt-0">
+    <!-- ==========================================================
+         6. GLOBAL IMPACT STATS
+         ========================================================== -->
+    <section id="impact" class="th-section th-section-alt">
         <div class="container">
-            <div class="text-center mb-5">
-                <span class="media-kicker">METRICS OF TRANSFORMATION</span>
-                <h2 class="media-section-title">Our Global Impact</h2>
-                <p class="media-section-lead">Measurable outcomes from our international and local conference chapters</p>
+            <div class="th-section-header">
+                <span class="th-section-kicker">METRICS OF TRANSFORMATION</span>
+                <h2 class="th-section-title">Our Global Impact</h2>
+                <p class="th-section-lead">Measurable outcomes from our international and regional conference chapters</p>
             </div>
 
             <div class="row g-3 text-center">
                 <div class="col-lg-2 col-md-4 col-6">
-                    <div class="media-card p-3 h-100" style="border: 1px solid var(--media-border); border-radius: var(--media-radius-sm);">
-                        <div class="conf-location-icon mx-auto mb-2" style="width: 40px; height: 40px; font-size: 1rem;">
+                    <div class="th-stat-card">
+                        <div class="th-stat-icon" style="background: #eef4fc; color: #0c52a1;">
                             <i class="fas fa-calendar-check"></i>
                         </div>
-                        <h3 class="h4 fw-bold text-dark mb-0">25+</h3>
-                        <small class="text-muted">Conferences</small>
+                        <div class="th-stat-val">25+</div>
+                        <div class="th-stat-lbl">Conferences</div>
                     </div>
                 </div>
 
                 <div class="col-lg-2 col-md-4 col-6">
-                    <div class="media-card p-3 h-100" style="border: 1px solid var(--media-border); border-radius: var(--media-radius-sm);">
-                        <div class="conf-location-icon mx-auto mb-2" style="width: 40px; height: 40px; font-size: 1rem; background: #ecfdf5; color: #059669;">
-                            <i class="fas fa-globe"></i>
+                    <div class="th-stat-card">
+                        <div class="th-stat-icon" style="background: #ecfdf5; color: #059669;">
+                            <i class="fas fa-globe-americas"></i>
                         </div>
-                        <h3 class="h4 fw-bold text-dark mb-0">2</h3>
-                        <small class="text-muted">Triennials Held</small>
+                        <div class="th-stat-val">3</div>
+                        <div class="th-stat-lbl">Triennials Held</div>
                     </div>
                 </div>
 
                 <div class="col-lg-2 col-md-4 col-6">
-                    <div class="media-card p-3 h-100" style="border: 1px solid var(--media-border); border-radius: var(--media-radius-sm);">
-                        <div class="conf-location-icon mx-auto mb-2" style="width: 40px; height: 40px; font-size: 1rem; background: #fef2f2; color: #dc2626;">
-                            <i class="fas fa-trophy"></i>
+                    <div class="th-stat-card">
+                        <div class="th-stat-icon" style="background: #fef2f2; color: #dc2626;">
+                            <i class="fas fa-award"></i>
                         </div>
-                        <h3 class="h4 fw-bold text-dark mb-0">200+</h3>
-                        <small class="text-muted">Changemakers</small>
+                        <div class="th-stat-val">200+</div>
+                        <div class="th-stat-lbl">Changemakers</div>
                     </div>
                 </div>
 
                 <div class="col-lg-2 col-md-4 col-6">
-                    <div class="media-card p-3 h-100" style="border: 1px solid var(--media-border); border-radius: var(--media-radius-sm);">
-                        <div class="conf-location-icon mx-auto mb-2" style="width: 40px; height: 40px; font-size: 1rem; background: #f5f3ff; color: #7c3aed;">
+                    <div class="th-stat-card">
+                        <div class="th-stat-icon" style="background: #f5f3ff; color: #7c3aed;">
                             <i class="fas fa-users"></i>
                         </div>
-                        <h3 class="h4 fw-bold text-dark mb-0">60K+</h3>
-                        <small class="text-muted">Participants</small>
+                        <div class="th-stat-val">60K+</div>
+                        <div class="th-stat-lbl">Participants</div>
                     </div>
                 </div>
 
                 <div class="col-lg-2 col-md-4 col-6">
-                    <div class="media-card p-3 h-100" style="border: 1px solid var(--media-border); border-radius: var(--media-radius-sm);">
-                        <div class="conf-location-icon mx-auto mb-2" style="width: 40px; height: 40px; font-size: 1rem; background: #fff7ed; color: #ea580c;">
+                    <div class="th-stat-card">
+                        <div class="th-stat-icon" style="background: #fff7ed; color: #ea580c;">
                             <i class="fas fa-handshake"></i>
                         </div>
-                        <h3 class="h4 fw-bold text-dark mb-0">80+</h3>
-                        <small class="text-muted">Partners</small>
+                        <div class="th-stat-val">80+</div>
+                        <div class="th-stat-lbl">Partners</div>
                     </div>
                 </div>
 
                 <div class="col-lg-2 col-md-4 col-6">
-                    <div class="media-card p-3 h-100" style="border: 1px solid var(--media-border); border-radius: var(--media-radius-sm);">
-                        <div class="conf-location-icon mx-auto mb-2" style="width: 40px; height: 40px; font-size: 1rem; background: #eef4fc; color: #0284c7;">
-                            <i class="fas fa-lightbulb"></i>
+                    <div class="th-stat-card">
+                        <div class="th-stat-icon" style="background: #eef4fc; color: #0284c7;">
+                            <i class="fas fa-seedling"></i>
                         </div>
-                        <h3 class="h4 fw-bold text-dark mb-0">&infin;</h3>
-                        <small class="text-muted">Initiatives</small>
+                        <div class="th-stat-val">&infin;</div>
+                        <div class="th-stat-lbl">Initiatives</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- History & Vision Section -->
-    <section id="history" class="conference-section pt-0">
+    <!-- ==========================================================
+         7. HISTORY & VISION
+         ========================================================== -->
+    <section id="history" class="th-section">
         <div class="container">
-            <div class="media-card p-4 p-lg-5" style="border: 1px solid var(--media-border); border-radius: var(--media-radius);">
+            <div class="card p-4 p-lg-5" style="border: 1px solid var(--th-border); border-radius: var(--th-radius); box-shadow: var(--th-shadow-sm);">
                 <div class="row align-items-center g-4 g-lg-5">
                     <div class="col-lg-7">
-                        <span class="media-kicker">NARRATIVE OF PURPOSE</span>
-                        <h2 class="h3 fw-bold text-dark mb-3">Our History</h2>
+                        <span class="th-section-kicker">NARRATIVE OF PURPOSE</span>
+                        <h2 class="h3 fw-bold text-dark mb-3">Our History & Growth</h2>
                         <p class="text-muted mb-3 lh-base">
-                            Let Us Dream began with a simple yet powerful idea: those who dream for others create lasting change. In Monroe, Louisiana, everyday stories of hope reignited Fr. Lijo Thomas's vision during a demanding phase of community research.
+                            Let Us Dream began with a simple yet powerful idea: <em>those who dream for others create lasting change</em>. In Monroe, Louisiana, everyday stories of hope reignited Fr. Lijo Thomas's vision during a demanding phase of community research.
                         </p>
                         <p class="text-muted mb-3 lh-base">
-                            The first Let Us Dream Conference launched on October 21, 2017, at Louisiana Tech University with under 100 participants and 15 service organizations. By 2019, the model expanded internationally to Binghamton University, Christ University, and Trivandrum.
+                            The first Let Us Dream Conference launched on October 21, 2017, at Louisiana Tech University with under 100 participants and 15 service organizations. By 2019, the model expanded internationally to Binghamton University, Christ University Bangalore, and Trivandrum.
                         </p>
-                        <p class="text-muted mb-0 lh-base">
-                            The 2023 Triennial Conference marked our joyous return to in-person global gatherings, featuring international panels, youth voices, and NGO exhibitions.
+                        <p class="text-muted mb-4 lh-base">
+                            The 2023 Triennial Conference marked our joyous return to in-person global gatherings, uniting scholars, youth innovators, and grassroots NGOs for shared social impact.
                         </p>
+                        <a href="https://www.canva.com/design/DAGFxyhil84/sAH26KFBCH8PUnU_FLjOFg/view" target="_blank" rel="noopener" class="btn-th-card">
+                            <i class="fas fa-file-image me-1"></i>View Full Impact Infographic <i class="fas fa-external-link-alt ms-1"></i>
+                        </a>
                     </div>
                     <div class="col-lg-5 text-center">
-                        <div class="p-3 bg-light rounded">
-                            <h6 class="fw-bold text-dark mb-2">Conference Impact at a Glance</h6>
+                        <div class="p-3 bg-light rounded-4">
+                            <h6 class="fw-bold text-dark mb-2 small">Conference Impact at a Glance</h6>
                             <a href="https://www.canva.com/design/DAGFxyhil84/sAH26KFBCH8PUnU_FLjOFg/view" target="_blank" rel="noopener" class="d-block">
-                                <img src="{% static '2024/Conference/Conference_glance.png' %}" class="img-fluid rounded shadow-sm" alt="Conference Impact Glance">
+                                <img src="{% static '2024/Conference/Conference_glance.png' %}" class="img-fluid rounded-3 shadow-sm" alt="Conference Impact Glance">
                             </a>
-                            <small class="text-muted d-block mt-2"><i class="fas fa-external-link-alt me-1"></i>Click to view full Canva design</small>
+                            <small class="text-muted d-block mt-2" style="font-size: 0.76rem;"><i class="fas fa-external-link-alt me-1"></i>Click to view full Canva design</small>
                         </div>
                     </div>
                 </div>
@@ -462,47 +682,49 @@ Triennial Conferences - Let Us Dream
         </div>
     </section>
 
-    <!-- Goals Section -->
-    <section id="goals" class="conference-section pt-0">
+    <!-- ==========================================================
+         8. GOALS SECTION
+         ========================================================== -->
+    <section id="goals" class="th-section th-section-alt">
         <div class="container">
-            <div class="text-center mb-5">
-                <span class="media-kicker">MISSION MANDATES</span>
-                <h2 class="media-section-title">Our Goals</h2>
-                <p class="media-section-lead">A shared commitment to continuous learning and community empowerment</p>
+            <div class="th-section-header">
+                <span class="th-section-kicker">MISSION MANDATES</span>
+                <h2 class="th-section-title">Our Conference Goals</h2>
+                <p class="th-section-lead">A shared commitment to continuous learning, research integration, and community empowerment</p>
             </div>
 
             <div class="row g-4">
                 <div class="col-lg-4 col-md-6">
-                    <div class="media-card text-center p-4 h-100" style="border: 1px solid var(--media-border); border-radius: var(--media-radius);">
-                        <div class="conf-location-icon mx-auto mb-3">
+                    <div class="th-feature-card text-center">
+                        <div class="th-feature-icon mx-auto" style="background: #eef4fc; color: #0c52a1;">
                             <i class="fas fa-network-wired"></i>
                         </div>
-                        <h4 class="h5 fw-bold text-dark mb-2">Networking & Collaboration</h4>
-                        <p class="text-muted small mb-0">
-                            Improve networking and sustained collaboration among researchers, university administrators, civic leaders, and volunteer groups.
+                        <h4 class="th-feature-title">Networking & Collaboration</h4>
+                        <p class="th-feature-text">
+                            Improve networking and sustained collaboration among researchers, university administrators, civic leaders, and volunteer groups worldwide.
                         </p>
                     </div>
                 </div>
 
                 <div class="col-lg-4 col-md-6">
-                    <div class="media-card text-center p-4 h-100" style="border: 1px solid var(--media-border); border-radius: var(--media-radius);">
-                        <div class="conf-location-icon mx-auto mb-3" style="background: #ecfdf5; color: #059669;">
+                    <div class="th-feature-card text-center">
+                        <div class="th-feature-icon mx-auto" style="background: #ecfdf5; color: #059669;">
                             <i class="fas fa-hands-helping"></i>
                         </div>
-                        <h4 class="h5 fw-bold text-dark mb-2">Promote Volunteerism</h4>
-                        <p class="text-muted small mb-0">
-                            Empower all individuals involved in community improvement—including professionals, retirees, faculty, and student volunteers.
+                        <h4 class="th-feature-title">Promote Volunteerism</h4>
+                        <p class="th-feature-text">
+                            Empower all individuals involved in community improvement—including professionals, retirees, university faculty, and student volunteers.
                         </p>
                     </div>
                 </div>
 
                 <div class="col-lg-4 col-md-12">
-                    <div class="media-card text-center p-4 h-100" style="border: 1px solid var(--media-border); border-radius: var(--media-radius);">
-                        <div class="conf-location-icon mx-auto mb-3" style="background: #f5f3ff; color: #7c3aed;">
+                    <div class="th-feature-card text-center">
+                        <div class="th-feature-icon mx-auto" style="background: #f5f3ff; color: #7c3aed;">
                             <i class="fas fa-graduation-cap"></i>
                         </div>
-                        <h4 class="h5 fw-bold text-dark mb-2">Learning Organization</h4>
-                        <p class="text-muted small mb-0">
+                        <h4 class="th-feature-title">Learning Organization</h4>
+                        <p class="th-feature-text">
                             Build a professional learning community dedicated to uplifting local societies through evidence-based research and open knowledge sharing.
                         </p>
                     </div>
@@ -511,93 +733,96 @@ Triennial Conferences - Let Us Dream
         </div>
     </section>
 
-    <!-- What to Expect Section -->
-    <section id="what-to-expect" class="conference-section pt-0">
+    <!-- ==========================================================
+         9. WHAT TO EXPECT
+         ========================================================== -->
+    <section id="what-to-expect" class="th-section">
         <div class="container">
-            <div class="text-center mb-5">
-                <span class="media-kicker">CONFERENCE EXPERIENCES</span>
-                <h2 class="media-section-title">What to Expect</h2>
-                <p class="media-section-lead">A multi-faceted international forum celebrating community action</p>
+            <div class="th-section-header">
+                <span class="th-section-kicker">CONFERENCE EXPERIENCES</span>
+                <h2 class="th-section-title">What to Expect</h2>
+                <p class="th-section-lead">A multi-faceted international forum celebrating meaningful social action</p>
             </div>
 
             <div class="row g-4">
                 <div class="col-lg-4 col-md-6">
-                    <div class="media-card p-4 h-100" style="border: 1px solid var(--media-border); border-radius: var(--media-radius);">
-                        <div class="conf-location-icon mb-3">
+                    <div class="th-feature-card">
+                        <div class="th-feature-icon" style="background: #eef4fc; color: #0c52a1;">
                             <i class="fas fa-users"></i>
                         </div>
-                        <h4 class="h5 fw-bold text-dark mb-2">Global Panels</h4>
-                        <p class="text-muted small mb-0">Focused multi-disciplinary conversations on Education, Health, and Social Work with scholars and practitioners.</p>
+                        <h4 class="th-feature-title">Global Panels</h4>
+                        <p class="th-feature-text">Focused multi-disciplinary conversations on Education, Health, and Social Welfare with seasoned international scholars.</p>
                     </div>
                 </div>
 
                 <div class="col-lg-4 col-md-6">
-                    <div class="media-card p-4 h-100" style="border: 1px solid var(--media-border); border-radius: var(--media-radius);">
-                        <div class="conf-location-icon mb-3" style="background: #ecfdf5; color: #059669;">
+                    <div class="th-feature-card">
+                        <div class="th-feature-icon" style="background: #ecfdf5; color: #059669;">
                             <i class="fas fa-award"></i>
                         </div>
-                        <h4 class="h5 fw-bold text-dark mb-2">Changemaker Awards</h4>
-                        <p class="text-muted small mb-0">Celebration and formal recognition of unsung community heroes driving tangible transformation.</p>
+                        <h4 class="th-feature-title">Changemaker Awards</h4>
+                        <p class="th-feature-text">Celebration and formal recognition of unsung community heroes driving tangible transformation on the ground.</p>
                     </div>
                 </div>
 
                 <div class="col-lg-4 col-md-6">
-                    <div class="media-card p-4 h-100" style="border: 1px solid var(--media-border); border-radius: var(--media-radius);">
-                        <div class="conf-location-icon mb-3" style="background: #f5f3ff; color: #7c3aed;">
+                    <div class="th-feature-card">
+                        <div class="th-feature-icon" style="background: #f5f3ff; color: #7c3aed;">
                             <i class="fas fa-chalkboard-teacher"></i>
                         </div>
-                        <h4 class="h5 fw-bold text-dark mb-2">Poster Presentations</h4>
-                        <p class="text-muted small mb-0">Interactive academic and grassroots posters showcasing student-led community intervention studies.</p>
+                        <h4 class="th-feature-title">Poster Presentations</h4>
+                        <p class="th-feature-text">Interactive academic and grassroots poster sessions showcasing student-led community intervention studies.</p>
                     </div>
                 </div>
 
                 <div class="col-lg-4 col-md-6">
-                    <div class="media-card p-4 h-100" style="border: 1px solid var(--media-border); border-radius: var(--media-radius);">
-                        <div class="conf-location-icon mb-3" style="background: #eef4fc; color: #0284c7;">
+                    <div class="th-feature-card">
+                        <div class="th-feature-icon" style="background: #eef4fc; color: #0284c7;">
                             <i class="fas fa-handshake"></i>
                         </div>
-                        <h4 class="h5 fw-bold text-dark mb-2">Civic Networking</h4>
-                        <p class="text-muted small mb-0">Direct engagement opportunities connecting international NGOs, universities, and student leaders.</p>
+                        <h4 class="th-feature-title">Civic Networking</h4>
+                        <p class="th-feature-text">Direct engagement opportunities connecting international NGOs, higher education institutions, and student leaders.</p>
                     </div>
                 </div>
 
                 <div class="col-lg-4 col-md-6">
-                    <div class="media-card p-4 h-100" style="border: 1px solid var(--media-border); border-radius: var(--media-radius);">
-                        <div class="conf-location-icon mb-3" style="background: #fff7ed; color: #ea580c;">
+                    <div class="th-feature-card">
+                        <div class="th-feature-icon" style="background: #fff7ed; color: #ea580c;">
                             <i class="fas fa-store"></i>
                         </div>
-                        <h4 class="h5 fw-bold text-dark mb-2">Exhibition Stalls</h4>
-                        <p class="text-muted small mb-0">Present community initiatives and socially driven products to thousands of engaged conference attendees.</p>
+                        <h4 class="th-feature-title">Exhibition Stalls</h4>
+                        <p class="th-feature-text">Present community initiatives, social enterprises, and innovative products to thousands of attendees.</p>
                     </div>
                 </div>
 
                 <div class="col-lg-4 col-md-6">
-                    <div class="media-card p-4 h-100" style="border: 1px solid var(--media-border); border-radius: var(--media-radius);">
-                        <div class="conf-location-icon mb-3" style="background: #fef2f2; color: #dc2626;">
+                    <div class="th-feature-card">
+                        <div class="th-feature-icon" style="background: #fef2f2; color: #dc2626;">
                             <i class="fas fa-microphone-alt"></i>
                         </div>
-                        <h4 class="h5 fw-bold text-dark mb-2">Keynote Addresses</h4>
-                        <p class="text-muted small mb-0">Inspiring talks by global thought leaders, university presidents, and frontline civic advocates.</p>
+                        <h4 class="th-feature-title">Keynote Addresses</h4>
+                        <p class="th-feature-text">Inspiring talks by international thought leaders, university chancellors, and frontline civic champions.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Roadmap Section -->
-    <section id="roadmap" class="conference-section pt-0">
+    <!-- ==========================================================
+         10. ROADMAP SECTION
+         ========================================================== -->
+    <section id="roadmap" class="th-section th-section-alt">
         <div class="container">
-            <div class="text-center mb-5">
-                <span class="media-kicker">CHRONOLOGICAL EVOLUTION</span>
-                <h2 class="media-section-title">Conference Roadmap</h2>
-                <p class="media-section-lead">Visual journey of our expansion from Louisiana to the world</p>
+            <div class="th-section-header">
+                <span class="th-section-kicker">CHRONOLOGICAL EVOLUTION</span>
+                <h2 class="th-section-title">Conference Roadmap</h2>
+                <p class="th-section-lead">Visual journey of our expansion from Louisiana Tech to the world stage</p>
             </div>
 
             <div class="row g-4">
-                <!-- 2017 -->
                 <div class="col-lg-4 col-md-6">
-                    <div class="conf-timeline-card">
-                        <span class="conf-timeline-badge"><i class="fas fa-flag me-1"></i>2017</span>
+                    <div class="th-timeline-card">
+                        <span class="th-timeline-badge" style="background: #eef4fc; color: #0c52a1;"><i class="fas fa-flag me-1"></i>2017</span>
                         <h4 class="h5 fw-bold text-dark mb-2">Louisiana Beginnings</h4>
                         <p class="text-muted small mb-3">Initiated at Louisiana Tech University with under 100 participants and 15 service organizations.</p>
                         <div class="mt-auto d-flex justify-content-between text-muted small pt-2 border-top">
@@ -607,12 +832,11 @@ Triennial Conferences - Let Us Dream
                     </div>
                 </div>
 
-                <!-- 2019 -->
                 <div class="col-lg-4 col-md-6">
-                    <div class="conf-timeline-card">
-                        <span class="conf-timeline-badge" style="background: #ecfdf5; color: #059669;"><i class="fas fa-globe me-1"></i>2019</span>
+                    <div class="th-timeline-card">
+                        <span class="th-timeline-badge" style="background: #ecfdf5; color: #059669;"><i class="fas fa-globe me-1"></i>2019</span>
                         <h4 class="h5 fw-bold text-dark mb-2">Global Expansion</h4>
-                        <p class="text-muted small mb-3">Expanded across New York, Bangalore, and Trivandrum, uniting multi-sector partners.</p>
+                        <p class="text-muted small mb-3">Expanded across Binghamton NY, Bangalore, and Trivandrum, uniting multi-sector partners.</p>
                         <div class="mt-auto d-flex justify-content-between text-muted small pt-2 border-top">
                             <span><i class="fas fa-globe me-1"></i>3 Countries</span>
                             <span>Multi-Sector</span>
@@ -620,25 +844,23 @@ Triennial Conferences - Let Us Dream
                     </div>
                 </div>
 
-                <!-- 2020 -->
                 <div class="col-lg-4 col-md-6">
-                    <div class="conf-timeline-card">
-                        <span class="conf-timeline-badge" style="background: #f5f3ff; color: #7c3aed;"><i class="fas fa-wifi me-1"></i>2020</span>
+                    <div class="th-timeline-card">
+                        <span class="th-timeline-badge" style="background: #f5f3ff; color: #7c3aed;"><i class="fas fa-wifi me-1"></i>2020</span>
                         <h4 class="h5 fw-bold text-dark mb-2">Virtual Triennial</h4>
                         <p class="text-muted small mb-3">Conducted virtually during the pandemic with 18,000+ registrants and 40,000+ viewers worldwide.</p>
                         <div class="mt-auto d-flex justify-content-between text-muted small pt-2 border-top">
-                            <span><i class="fas fa-video me-1"></i>Virtual Summit</span>
+                            <span><i class="fas fa-video me-1"></i>Virtual Conference</span>
                             <span>40K+ Viewers</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- 2022 -->
                 <div class="col-lg-4 col-md-6">
-                    <div class="conf-timeline-card">
-                        <span class="conf-timeline-badge" style="background: #fff7ed; color: #ea580c;"><i class="fas fa-seedling me-1"></i>2022</span>
-                        <h4 class="h5 fw-bold text-dark mb-2">Indian Expansion</h4>
-                        <p class="text-muted small mb-3">Launched new regional chapters in Chennai and Hyderabad, fostering local grassroots engagement.</p>
+                    <div class="th-timeline-card">
+                        <span class="th-timeline-badge" style="background: #fff7ed; color: #ea580c;"><i class="fas fa-seedling me-1"></i>2022</span>
+                        <h4 class="h5 fw-bold text-dark mb-2">Indian Regional Expansion</h4>
+                        <p class="text-muted small mb-3">Launched regional chapters in Chennai and Hyderabad, fostering localized community engagement.</p>
                         <div class="mt-auto d-flex justify-content-between text-muted small pt-2 border-top">
                             <span><i class="fas fa-map-marker-alt me-1"></i>India</span>
                             <span>Grassroots</span>
@@ -646,25 +868,23 @@ Triennial Conferences - Let Us Dream
                     </div>
                 </div>
 
-                <!-- 2023 -->
                 <div class="col-lg-4 col-md-6">
-                    <div class="conf-timeline-card">
-                        <span class="conf-timeline-badge" style="background: #eef4fc; color: #0284c7;"><i class="fas fa-university me-1"></i>2023</span>
+                    <div class="th-timeline-card">
+                        <span class="th-timeline-badge" style="background: #eef4fc; color: #0284c7;"><i class="fas fa-university me-1"></i>2023</span>
                         <h4 class="h5 fw-bold text-dark mb-2">Bangalore In-Person</h4>
-                        <p class="text-muted small mb-3">Second triennial at Christ University with 50+ international panelists and launch of LUDEx Talks.</p>
+                        <p class="text-muted small mb-3">Second triennial at Christ University Central Campus with 50+ international panelists and launch of LUDEx.</p>
                         <div class="mt-auto d-flex justify-content-between text-muted small pt-2 border-top">
-                            <span><i class="fas fa-users me-1"></i>In-Person Summit</span>
+                            <span><i class="fas fa-users me-1"></i>In-Person Conference</span>
                             <span>LUDEx Launch</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- 2024 - 2026 -->
                 <div class="col-lg-4 col-md-6">
-                    <div class="conf-timeline-card">
-                        <span class="conf-timeline-badge" style="background: #fef2f2; color: #dc2626;"><i class="fas fa-star me-1"></i>2024 – 2026</span>
+                    <div class="th-timeline-card">
+                        <span class="th-timeline-badge" style="background: #fef2f2; color: #dc2626;"><i class="fas fa-star me-1"></i>2024–2026</span>
                         <h4 class="h5 fw-bold text-dark mb-2">Pune & Beyond</h4>
-                        <p class="text-muted small mb-3">New chapter in Pune and preparation for the upcoming Triennial International Conference 2026.</p>
+                        <p class="text-muted small mb-3">New chapter in Pune and countdown for the upcoming Triennial International Conference 2026.</p>
                         <div class="mt-auto d-flex justify-content-between text-muted small pt-2 border-top">
                             <span><i class="fas fa-rocket me-1"></i>Global Stage</span>
                             <span>Bangalore 2026</span>
@@ -675,42 +895,44 @@ Triennial Conferences - Let Us Dream
         </div>
     </section>
 
-    <!-- Partners Section -->
-    <section id="partners" class="conference-section pt-0">
+    <!-- ==========================================================
+         11. PARTNERS SECTION
+         ========================================================== -->
+    <section id="partners" class="th-section">
         <div class="container">
-            <div class="text-center mb-5">
-                <span class="media-kicker">COLLABORATIVE ECOSYSTEM</span>
-                <h2 class="media-section-title">Partners & Sponsors</h2>
-                <p class="media-section-lead">Collaborating with visionary organizations to create global impact through local action</p>
+            <div class="th-section-header">
+                <span class="th-section-kicker">COLLABORATIVE ECOSYSTEM</span>
+                <h2 class="th-section-title">Partners & Sponsors</h2>
+                <p class="th-section-lead">Collaborating with visionary universities and organizations to empower communities</p>
             </div>
 
             <div class="row g-4 mb-4">
                 <div class="col-lg-6">
-                    <div class="media-card p-4 p-lg-5 h-100" style="border: 1px solid var(--media-border); border-radius: var(--media-radius);">
+                    <div class="card p-4 p-lg-5 h-100" style="border: 1px solid var(--th-border); border-radius: var(--th-radius);">
                         <h4 class="h5 fw-bold text-dark mb-4"><i class="fas fa-star text-warning me-2"></i>Why Partner With Us?</h4>
                         
                         <div class="d-flex align-items-start mb-3">
-                            <div class="conf-location-icon me-3 flex-shrink-0" style="width: 42px; height: 42px; font-size: 1rem; background: #ecfdf5; color: #059669;">
+                            <div class="th-feature-icon me-3 flex-shrink-0" style="width: 42px; height: 42px; font-size: 1rem; background: #ecfdf5; color: #059669;">
                                 <i class="fas fa-globe"></i>
                             </div>
                             <div>
                                 <h6 class="fw-bold text-dark mb-1">Global Visibility</h6>
-                                <p class="text-muted small mb-0">Showcase your organization to our international network of educators, students, and social innovators.</p>
+                                <p class="text-muted small mb-0">Showcase your organization across our international network of educators, students, and social innovators.</p>
                             </div>
                         </div>
 
                         <div class="d-flex align-items-start mb-3">
-                            <div class="conf-location-icon me-3 flex-shrink-0" style="width: 42px; height: 42px; font-size: 1rem; background: #fef2f2; color: #dc2626;">
+                            <div class="th-feature-icon me-3 flex-shrink-0" style="width: 42px; height: 42px; font-size: 1rem; background: #fef2f2; color: #dc2626;">
                                 <i class="fas fa-heart"></i>
                             </div>
                             <div>
                                 <h6 class="fw-bold text-dark mb-1">Direct Local Impact</h6>
-                                <p class="text-muted small mb-0">Directly support community-driven initiatives with measurable, verified social outcomes.</p>
+                                <p class="text-muted small mb-0">Directly support community-driven initiatives with verified, measurable social outcomes.</p>
                             </div>
                         </div>
 
                         <div class="d-flex align-items-start">
-                            <div class="conf-location-icon me-3 flex-shrink-0" style="width: 42px; height: 42px; font-size: 1rem; background: #f5f3ff; color: #7c3aed;">
+                            <div class="th-feature-icon me-3 flex-shrink-0" style="width: 42px; height: 42px; font-size: 1rem; background: #f5f3ff; color: #7c3aed;">
                                 <i class="fas fa-lightbulb"></i>
                             </div>
                             <div>
@@ -722,7 +944,7 @@ Triennial Conferences - Let Us Dream
                 </div>
 
                 <div class="col-lg-6">
-                    <div class="media-card p-4 p-lg-5 h-100" style="border: 1px solid var(--media-border); border-radius: var(--media-radius); background: #f8fafc;">
+                    <div class="card p-4 p-lg-5 h-100" style="border: 1px solid var(--th-border); border-radius: var(--th-radius); background: #f8fafc;">
                         <h4 class="h5 fw-bold text-dark mb-4"><i class="fas fa-handshake text-primary me-2"></i>Partnership Opportunities</h4>
                         
                         <div class="mb-3">
@@ -732,15 +954,15 @@ Triennial Conferences - Let Us Dream
 
                         <div class="mb-3">
                             <h6 class="fw-bold text-dark mb-1"><span class="badge bg-primary me-2">2</span>Program Collaboration</h6>
-                            <p class="text-muted small mb-0 ms-4">Co-create sustainable community development initiatives with our university network.</p>
+                            <p class="text-muted small mb-0 ms-4">Co-create sustainable community development initiatives with our global university network.</p>
                         </div>
 
                         <div class="mb-4">
                             <h6 class="fw-bold text-dark mb-1"><span class="badge bg-primary me-2">3</span>Action Research Partnerships</h6>
-                            <p class="text-muted small mb-0 ms-4">Collaborate on community evaluation studies with academic rigor and measurable impact.</p>
+                            <p class="text-muted small mb-0 ms-4">Collaborate on community evaluation studies with academic rigor and verified outcomes.</p>
                         </div>
 
-                        <a href="{% url 'contactUs' %}" class="btn btn-primary rounded-pill px-4 py-2 fw-bold">
+                        <a href="{% url 'contactUs' %}" class="btn-th-primary">
                             Become a Partner <i class="fas fa-arrow-right ms-2"></i>
                         </a>
                     </div>
@@ -753,15 +975,42 @@ Triennial Conferences - Let Us Dream
 
 {% block extraScripts %}
 <script>
+    function syncHeaderHeight() {
+        const header = document.querySelector('header.menu') || document.querySelector('header');
+        if (header) {
+            const rect = header.getBoundingClientRect();
+            const h = Math.round(rect.height || header.offsetHeight || 132);
+            document.documentElement.style.setProperty('--th-header-offset', h + 'px');
+            document.documentElement.style.setProperty('--header-height', h + 'px');
+            document.documentElement.style.setProperty('--header-padding-top', h + 'px');
+            document.body.style.setProperty('padding-top', h + 'px', 'important');
+        }
+    }
+    syncHeaderHeight();
+
     document.addEventListener('DOMContentLoaded', function () {
-        // Sticky pill active on scroll
+        syncHeaderHeight();
+        window.addEventListener('resize', syncHeaderHeight);
+        window.addEventListener('load', syncHeaderHeight);
+        document.querySelectorAll('header img').forEach(img => {
+            if (img.complete) syncHeaderHeight();
+            else img.addEventListener('load', syncHeaderHeight);
+        });
+
+        // Sticky Pill Active Spy
         const sections = document.querySelectorAll('section[id]');
-        const navPills = document.querySelectorAll('.media-pill');
+        const navPills = document.querySelectorAll('.th-nav-pill');
 
         window.addEventListener('scroll', function () {
+            const header = document.querySelector('header.menu') || document.querySelector('header');
+            const subnav = document.querySelector('.th-subnav-bar');
+            const headerH = header ? Math.round(header.getBoundingClientRect().height || header.offsetHeight) : 132;
+            const subnavH = subnav ? Math.round(subnav.getBoundingClientRect().height || subnav.offsetHeight) : 70;
+            const offset = headerH + subnavH + 20;
+
             let current = '';
             sections.forEach(section => {
-                const sectionTop = section.offsetTop - 120;
+                const sectionTop = section.offsetTop - offset;
                 if (window.pageYOffset >= sectionTop) {
                     current = section.getAttribute('id');
                 }
@@ -773,6 +1022,84 @@ Triennial Conferences - Let Us Dream
                     pill.classList.add('active');
                 }
             });
+        });
+
+        // Photo Gallery Filtering
+        const filterButtons = document.querySelectorAll('.th-gallery-tab');
+        const photoItems = document.querySelectorAll('.th-photo-item');
+
+        filterButtons.forEach(btn => {
+            btn.addEventListener('click', function () {
+                filterButtons.forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                const target = this.getAttribute('data-filter');
+
+                photoItems.forEach(item => {
+                    if (target === 'all' || item.getAttribute('data-category') === target) {
+                        item.style.display = 'block';
+                        setTimeout(() => item.style.opacity = '1', 50);
+                    } else {
+                        item.style.opacity = '0';
+                        setTimeout(() => item.style.display = 'none', 200);
+                    }
+                });
+            });
+        });
+
+        // Photo Lightbox Modal
+        const lightbox = document.getElementById('thLightbox');
+        const lightboxImg = document.getElementById('thLightboxImg');
+        const lightboxCaption = document.getElementById('thLightboxCaption');
+        const closeBtn = document.getElementById('thLightboxClose');
+        const prevBtn = document.getElementById('thLightboxPrev');
+        const nextBtn = document.getElementById('thLightboxNext');
+
+        let currentPhotoIndex = 0;
+        const visiblePhotos = () => Array.from(photoItems).filter(item => item.style.display !== 'none');
+
+        function openLightbox(index) {
+            const list = visiblePhotos();
+            if (index < 0) index = list.length - 1;
+            if (index >= list.length) index = 0;
+            currentPhotoIndex = index;
+
+            const item = list[currentPhotoIndex];
+            if (item) {
+                lightboxImg.src = item.getAttribute('data-full');
+                lightboxCaption.textContent = item.getAttribute('data-caption');
+                lightbox.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        photoItems.forEach(item => {
+            item.addEventListener('click', function () {
+                const list = visiblePhotos();
+                const index = list.indexOf(this);
+                openLightbox(index);
+            });
+        });
+
+        closeBtn.addEventListener('click', closeLightbox);
+        prevBtn.addEventListener('click', () => openLightbox(currentPhotoIndex - 1));
+        nextBtn.addEventListener('click', () => openLightbox(currentPhotoIndex + 1));
+
+        lightbox.addEventListener('click', function (e) {
+            if (e.target === lightbox) {
+                closeLightbox();
+            }
+        });
+
+        document.addEventListener('keydown', function (e) {
+            if (!lightbox.classList.contains('active')) return;
+            if (e.key === 'Escape') closeLightbox();
+            if (e.key === 'ArrowLeft') openLightbox(currentPhotoIndex - 1);
+            if (e.key === 'ArrowRight') openLightbox(currentPhotoIndex + 1);
         });
     });
 </script>
