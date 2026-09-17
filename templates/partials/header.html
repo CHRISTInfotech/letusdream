@@ -3,13 +3,12 @@
 
     <nav class="navbar navbar-expand-lg" id="navbar">
 
-        <a href="{% url 'main' %}" class="d-block d-md-none" >
+        <a href="{% url 'main' %}" class="d-block d-md-none">
             <img src="{% static 'logo/logo.png' %}" class="header-logo" alt="LET US DREAM" height="100px">
         </a>
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <i class="fas fa-bar navbar-toggler-icon"></i>
         </button>
 
@@ -20,7 +19,7 @@
             <ul class="navbar-nav">
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" data-bs-auto-close="outside"
-                       href="#">About Us</a>
+                        href="#">About Us</a>
                     <ul class="dropdown-menu shadow">
                         <li><a href="{% url 'about-us' %}" class="dropdown-item">Overview</a></li>
                         <li><a href="{% url 'leadership' %}" class="dropdown-item">Leadership</a></li>
@@ -32,11 +31,12 @@
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle text-white" data-bs-toggle="dropdown" data-bs-auto-close="outside"
-                       href="#">DREAMS</a>
+                    <a class="nav-link dropdown-toggle text-white" data-bs-toggle="dropdown"
+                        data-bs-auto-close="outside" href="#">DREAMS</a>
                     <ul class="dropdown-menu shadow">
                         <li>
-                            <a href="{% url 'dreams' 'program' %}" class="dropdown-item">DREAMS Intervention Program (DIP)</a>
+                            <a href="{% url 'dreams' 'program' %}" class="dropdown-item">DREAMS Intervention Program
+                                (DIP)</a>
                         </li>
                         <li>
                             <a href="{% url 'yclp-course' %}" class="dropdown-item">
@@ -45,10 +45,10 @@
                         </li>
                     </ul>
                 </li>
-                
+
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle text-white" data-bs-toggle="dropdown" data-bs-auto-close="outside"
-                       href="#">
+                    <a class="nav-link dropdown-toggle text-white" data-bs-toggle="dropdown"
+                        data-bs-auto-close="outside" href="#">
                         Conferences
                     </a>
                     <ul class="dropdown-menu shadow mld" aria-labelledby="MyAccountDDM" id="AppDropDownId">
@@ -61,7 +61,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="{% url 'trriennial-conference' %}" class="dropdown-item">
+                            <a href="{% url 'tc-2026' %}" class="dropdown-item">
                                 Triennial International Conference
                             </a>
                         </li>
@@ -83,8 +83,8 @@
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle text-white" data-bs-toggle="dropdown" data-bs-auto-close="outside"
-                       href="#">Clubs</a>
+                    <a class="nav-link dropdown-toggle text-white" data-bs-toggle="dropdown"
+                        data-bs-auto-close="outside" href="#">Clubs</a>
                     <ul class="dropdown-menu shadow">
                         <li>
                             <a href="{% url 'club-overview' %}" class="dropdown-item">Overview</a>
@@ -108,10 +108,10 @@
                         </li>
                     </ul>
                 </li>
-            
+
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle text-white" data-bs-toggle="dropdown" data-bs-auto-close="outside"
-                       href="#">Productions</a>
+                    <a class="nav-link dropdown-toggle text-white" data-bs-toggle="dropdown"
+                        data-bs-auto-close="outside" href="#">Productions</a>
                     <ul class="dropdown-menu shadow">
                         <li><a href="{% url 'dreams' 'band' %}" class="dropdown-item">DREAMS Band</a></li>
                         <li><a href="{% url 'human' %}" class="dropdown-item">The HUMAN</a></li>
@@ -119,8 +119,8 @@
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle text-white" data-bs-toggle="dropdown" data-bs-auto-close="outside"
-                       href="#">
+                    <a class="nav-link dropdown-toggle text-white" data-bs-toggle="dropdown"
+                        data-bs-auto-close="outside" href="#">
                         Fellowship
                     </a>
                     <ul class="dropdown-menu shadow">
@@ -128,8 +128,8 @@
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle text-white" data-bs-toggle="dropdown" data-bs-auto-close="outside"
-                       href="#">Research</a>
+                    <a class="nav-link dropdown-toggle text-white" data-bs-toggle="dropdown"
+                        data-bs-auto-close="outside" href="#">Research</a>
                     <ul class="dropdown-menu shadow">
 
                         <li><a href="{% url 'research' %}" class="dropdown-item">Research</a></li>
@@ -195,94 +195,95 @@
     </nav>
 
     <!-- Floating Edge Tab Toggle -->
-    <button type="button" class="header-edge-toggle-tab js-toggle-header-size" title="Toggle header size" aria-label="Toggle header size">
+    <button type="button" class="header-edge-toggle-tab js-toggle-header-size" title="Toggle header size"
+        aria-label="Toggle header size">
         <i class="fas fa-chevron-up toggle-edge-icon"></i>
     </button>
 </header>
 
 <script>
-(function() {
-    var STORAGE_KEY = 'lud_header_compact';
-    var header = document.querySelector('header.menu');
-    if (!header) return;
+    (function () {
+        var STORAGE_KEY = 'lud_header_compact';
+        var header = document.querySelector('header.menu');
+        if (!header) return;
 
-    // Apply immediately to avoid layout flash
-    var isInitialCompact = localStorage.getItem(STORAGE_KEY) === 'true';
-    if (isInitialCompact) {
-        header.classList.add('header-compact');
-    }
-
-    function updateControlsUI(compact) {
-        var buttons = document.querySelectorAll('.js-toggle-header-size');
-        buttons.forEach(function(btn) {
-            var icon = btn.querySelector('.toggle-size-icon');
-            var edgeIcon = btn.querySelector('.toggle-edge-icon');
-
-            if (icon) {
-                if (compact) {
-                    icon.classList.remove('fa-compress-alt');
-                    icon.classList.add('fa-expand-alt');
-                } else {
-                    icon.classList.remove('fa-expand-alt');
-                    icon.classList.add('fa-compress-alt');
-                }
-            }
-            if (edgeIcon) {
-                if (compact) {
-                    edgeIcon.classList.remove('fa-chevron-up');
-                    edgeIcon.classList.add('fa-chevron-down');
-                } else {
-                    edgeIcon.classList.remove('fa-chevron-down');
-                    edgeIcon.classList.add('fa-chevron-up');
-                }
-            }
-            btn.setAttribute('title', compact ? 'Expand header' : 'Minimize header (save space)');
-        });
-    }
-
-    function triggerLayoutRecalc() {
-        if (typeof adjustLayoutSpacing === 'function') {
-            adjustLayoutSpacing();
-        }
-        if (typeof syncHeaderHeight === 'function') {
-            syncHeaderHeight();
-        }
-        window.dispatchEvent(new Event('resize'));
-    }
-
-    function setCompactMode(enable, animated) {
-        if (enable) {
+        // Apply immediately to avoid layout flash
+        var isInitialCompact = localStorage.getItem(STORAGE_KEY) === 'true';
+        if (isInitialCompact) {
             header.classList.add('header-compact');
-        } else {
-            header.classList.remove('header-compact');
         }
-        updateControlsUI(enable);
-        triggerLayoutRecalc();
-        if (animated) {
-            setTimeout(triggerLayoutRecalc, 60);
-            setTimeout(triggerLayoutRecalc, 150);
-            setTimeout(triggerLayoutRecalc, 280);
+
+        function updateControlsUI(compact) {
+            var buttons = document.querySelectorAll('.js-toggle-header-size');
+            buttons.forEach(function (btn) {
+                var icon = btn.querySelector('.toggle-size-icon');
+                var edgeIcon = btn.querySelector('.toggle-edge-icon');
+
+                if (icon) {
+                    if (compact) {
+                        icon.classList.remove('fa-compress-alt');
+                        icon.classList.add('fa-expand-alt');
+                    } else {
+                        icon.classList.remove('fa-expand-alt');
+                        icon.classList.add('fa-compress-alt');
+                    }
+                }
+                if (edgeIcon) {
+                    if (compact) {
+                        edgeIcon.classList.remove('fa-chevron-up');
+                        edgeIcon.classList.add('fa-chevron-down');
+                    } else {
+                        edgeIcon.classList.remove('fa-chevron-down');
+                        edgeIcon.classList.add('fa-chevron-up');
+                    }
+                }
+                btn.setAttribute('title', compact ? 'Expand header' : 'Minimize header (save space)');
+            });
         }
-    }
 
-    document.addEventListener('DOMContentLoaded', function() {
-        var currentCompact = header.classList.contains('header-compact');
-        updateControlsUI(currentCompact);
-        triggerLayoutRecalc();
+        function triggerLayoutRecalc() {
+            if (typeof adjustLayoutSpacing === 'function') {
+                adjustLayoutSpacing();
+            }
+            if (typeof syncHeaderHeight === 'function') {
+                syncHeaderHeight();
+            }
+            window.dispatchEvent(new Event('resize'));
+        }
 
-        document.querySelectorAll('.js-toggle-header-size').forEach(function(btn) {
-            btn.addEventListener('click', function(e) {
-                e.preventDefault();
-                e.stopPropagation();
-                var nextState = !header.classList.contains('header-compact');
-                localStorage.setItem(STORAGE_KEY, nextState ? 'true' : 'false');
-                setCompactMode(nextState, true);
+        function setCompactMode(enable, animated) {
+            if (enable) {
+                header.classList.add('header-compact');
+            } else {
+                header.classList.remove('header-compact');
+            }
+            updateControlsUI(enable);
+            triggerLayoutRecalc();
+            if (animated) {
+                setTimeout(triggerLayoutRecalc, 60);
+                setTimeout(triggerLayoutRecalc, 150);
+                setTimeout(triggerLayoutRecalc, 280);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var currentCompact = header.classList.contains('header-compact');
+            updateControlsUI(currentCompact);
+            triggerLayoutRecalc();
+
+            document.querySelectorAll('.js-toggle-header-size').forEach(function (btn) {
+                btn.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    var nextState = !header.classList.contains('header-compact');
+                    localStorage.setItem(STORAGE_KEY, nextState ? 'true' : 'false');
+                    setCompactMode(nextState, true);
+                });
             });
         });
-    });
 
-    window.addEventListener('load', function() {
-        triggerLayoutRecalc();
-    });
-})();
+        window.addEventListener('load', function () {
+            triggerLayoutRecalc();
+        });
+    })();
 </script>
