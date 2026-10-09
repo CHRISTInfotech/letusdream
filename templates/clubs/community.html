@@ -5,6 +5,7 @@
 
 {% block links %}
 <link rel="stylesheet" href="{% static 'css/new/media.css' %}?v=16" type="text/css">
+<link rel="stylesheet" href="{% static 'css/new/community-leadership.css' %}?v=1" type="text/css">
 {% endblock links %}
 
 {# Suppress standalone legacy breadcrumb row #}
@@ -218,140 +219,107 @@
                 </p>
             </div>
 
-            <!-- Row 1: Vision Hive, Insight Engine, Cultural Canvas -->
-            <div class="row g-4 mb-4">
-                <!-- Vision Hive -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="hub-dual-mentor-card text-center">
-                        <div class="d-inline-flex align-items-center gap-2 mb-3">
-                            <i class="fas fa-lightbulb text-primary"></i>
-                            <h4 class="fw-bold mb-0" style="color: var(--media-text-dark); font-size: 1.15rem;">Vision Hive</h4>
-                        </div>
-                        <div class="row g-3">
-                            <div class="col-6">
-                                <div class="leader-card p-3">
-                                    <img src="{% static '/clubs/leadership/Mr. Goutham Iyyappan.png' %}" class="leader-avatar" alt="Mr. Goutham Iyyappan">
-                                    <span class="leader-role-badge badge-senior">Senior Mentor</span>
-                                    <h5 class="leader-name" style="font-size: 0.88rem;">Mr. Goutham Iyyappan</h5>
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="leader-card p-3">
-                                    <img src="{% static '/clubs/leadership/Mr. R Arjun.png' %}" class="leader-avatar" alt="Mr. R Arjun">
-                                    <span class="leader-role-badge badge-youth">Youth Lead</span>
-                                    <h5 class="leader-name" style="font-size: 0.88rem;">Mr. R Arjun</h5>
-                                </div>
-                            </div>
+            <div class="hub-leadership-list">
+                <article class="hub-leadership-row" aria-labelledby="hub-team-1">
+                    <div class="hub-leadership-title">
+                        <span class="hub-leadership-icon" aria-hidden="true"><i class="fas fa-lightbulb"></i></span>
+                        <h3 id="hub-team-1">Vision Hive</h3>
+                    </div>
+                    <div class="hub-leadership-person">
+                        <img src="{% static 'clubs/leadership/Ms. Bincy Baby.jpg' %}" alt="Ms. Bincy Baby" class="hub-leadership-avatar" loading="lazy">
+                        <div>
+                            <span class="leader-role-badge badge-senior">Senior Mentor</span>
+                            <h4 class="hub-leadership-name">Ms. Bincy Baby</h4>
                         </div>
                     </div>
-                </div>
-
-                <!-- Insight Engine -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="hub-dual-mentor-card text-center">
-                        <div class="d-inline-flex align-items-center gap-2 mb-3">
-                            <i class="fas fa-chart-line text-primary"></i>
-                            <h4 class="fw-bold mb-0" style="color: var(--media-text-dark); font-size: 1.15rem;">Insight Engine</h4>
-                        </div>
-                        <div class="row g-3">
-                            <div class="col-6">
-                                <div class="leader-card p-3">
-                                    <img src="{% static '/clubs/leadership/Mr. Bharath.png' %}" class="leader-avatar" alt="Mr. Bharath">
-                                    <span class="leader-role-badge badge-senior">Senior Mentor</span>
-                                    <h5 class="leader-name" style="font-size: 0.88rem;">Mr. Bharath</h5>
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="leader-card p-3">
-                                    <img src="{% static 'clubs/Divya C - Insight Engine.jpg' %}" class="leader-avatar" alt="Ms. Divya C">
-                                    <span class="leader-role-badge badge-youth">Youth Lead</span>
-                                    <h5 class="leader-name" style="font-size: 0.88rem;">Ms. Divya C</h5>
-                                </div>
-                            </div>
+                    <div class="hub-leadership-person">
+                        <img src="{% static 'clubs/leadership/Ms. Mohana Devireddy.jpg' %}" alt="Ms. Mohana Devireddy" class="hub-leadership-avatar" loading="lazy">
+                        <div>
+                            <span class="leader-role-badge badge-youth">Youth Lead</span>
+                            <h4 class="hub-leadership-name">Ms. Mohana Devireddy</h4>
                         </div>
                     </div>
-                </div>
-
-                <!-- Cultural Canvas -->
-                <div class="col-lg-4 col-md-12">
-                    <div class="hub-dual-mentor-card text-center">
-                        <div class="d-inline-flex align-items-center gap-2 mb-3">
-                            <i class="fas fa-palette text-primary"></i>
-                            <h4 class="fw-bold mb-0" style="color: var(--media-text-dark); font-size: 1.15rem;">Cultural Canvas</h4>
-                        </div>
-                        <div class="row g-3">
-                            <div class="col-6">
-                                <div class="leader-card p-3">
-                                    <img src="{% static '/clubs/leadership/Mr. Rajesh P I (2).png' %}" class="leader-avatar" alt="Mr. Rajesh P I">
-                                    <span class="leader-role-badge badge-senior">Senior Mentor</span>
-                                    <h5 class="leader-name" style="font-size: 0.88rem;">Mr. Rajesh P I</h5>
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="leader-card p-3">
-                                    <img src="{% static 'clubs/Vibha Sriranga - Cultural Canvas.jpg' %}" class="leader-avatar" alt="Ms. Vibha">
-                                    <span class="leader-role-badge badge-youth">Youth Lead</span>
-                                    <h5 class="leader-name" style="font-size: 0.88rem;">Ms. Vibha</h5>
-                                </div>
-                            </div>
+                </article>
+                <article class="hub-leadership-row" aria-labelledby="hub-team-2">
+                    <div class="hub-leadership-title">
+                        <span class="hub-leadership-icon" aria-hidden="true"><i class="fas fa-chart-line"></i></span>
+                        <h3 id="hub-team-2">Insight Engine</h3>
+                    </div>
+                    <div class="hub-leadership-person">
+                        <img src="{% static '/clubs/leadership/Mr. Bharath.png' %}" alt="Mr. Bharath" class="hub-leadership-avatar" loading="lazy">
+                        <div>
+                            <span class="leader-role-badge badge-senior">Senior Mentor</span>
+                            <h4 class="hub-leadership-name">Mr. Bharath</h4>
                         </div>
                     </div>
-                </div>
-            </div>
-
-            <!-- Row 2: Mind Menders & Monetize Mastery -->
-            <div class="row g-4 justify-content-center">
-                <!-- Mind Menders -->
-                <div class="col-lg-5 col-md-6">
-                    <div class="hub-dual-mentor-card text-center">
-                        <div class="d-inline-flex align-items-center gap-2 mb-3">
-                            <i class="fas fa-brain text-primary"></i>
-                            <h4 class="fw-bold mb-0" style="color: var(--media-text-dark); font-size: 1.15rem;">Mind Menders</h4>
-                        </div>
-                        <div class="row g-3">
-                            <div class="col-6">
-                                <div class="leader-card p-3">
-                                    <img src="{% static '/clubs/leadership/Mr. Venu.png' %}" class="leader-avatar" alt="Mr. Venu">
-                                    <span class="leader-role-badge badge-senior">Senior Mentor</span>
-                                    <h5 class="leader-name" style="font-size: 0.88rem;">Mr. Venu</h5>
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="leader-card p-3">
-                                    <img src="{% static 'clubs/Kritika R S.jpeg' %}" class="leader-avatar" alt="Ms. Kritika">
-                                    <span class="leader-role-badge badge-youth">Youth Lead</span>
-                                    <h5 class="leader-name" style="font-size: 0.88rem;">Ms. Kritika</h5>
-                                </div>
-                            </div>
+                    <div class="hub-leadership-person">
+                        <img src="{% static 'clubs/Divya C - Insight Engine.jpg' %}" alt="Ms. Divya C" class="hub-leadership-avatar" loading="lazy">
+                        <div>
+                            <span class="leader-role-badge badge-youth">Youth Lead</span>
+                            <h4 class="hub-leadership-name">Ms. Divya C</h4>
                         </div>
                     </div>
-                </div>
-
-                <!-- Monetize Mastery -->
-                <div class="col-lg-5 col-md-6">
-                    <div class="hub-dual-mentor-card text-center">
-                        <div class="d-inline-flex align-items-center gap-2 mb-3">
-                            <i class="fas fa-coins text-primary"></i>
-                            <h4 class="fw-bold mb-0" style="color: var(--media-text-dark); font-size: 1.15rem;">Monetize Mastery</h4>
-                        </div>
-                        <div class="row g-3">
-                            <div class="col-6">
-                                <div class="leader-card p-3">
-                                    <img src="{% static '/clubs/leadership/Mr. Venkat.png' %}" class="leader-avatar" alt="Mr. Venkat">
-                                    <span class="leader-role-badge badge-senior">Senior Mentor</span>
-                                    <h5 class="leader-name" style="font-size: 0.88rem;">Mr. Venkat</h5>
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="leader-card p-3">
-                                    <img src="{% static 'clubs/Saumya Mittal .jpg' %}" class="leader-avatar" alt="Saumya Mittal">
-                                    <span class="leader-role-badge badge-youth">Youth Lead</span>
-                                    <h5 class="leader-name" style="font-size: 0.88rem;">Saumya Mittal</h5>
-                                </div>
-                            </div>
+                </article>
+                <article class="hub-leadership-row" aria-labelledby="hub-team-3">
+                    <div class="hub-leadership-title">
+                        <span class="hub-leadership-icon" aria-hidden="true"><i class="fas fa-palette"></i></span>
+                        <h3 id="hub-team-3">Cultural Canvas</h3>
+                    </div>
+                    <div class="hub-leadership-person">
+                        <img src="{% static '/clubs/leadership/Mr. Rajesh P I (2).png' %}" alt="Mr. Rajesh P I" class="hub-leadership-avatar" loading="lazy">
+                        <div>
+                            <span class="leader-role-badge badge-senior">Senior Mentor</span>
+                            <h4 class="hub-leadership-name">Mr. Rajesh P I</h4>
                         </div>
                     </div>
-                </div>
+                    <div class="hub-leadership-person">
+                        <img src="{% static 'clubs/Vibha Sriranga - Cultural Canvas.jpg' %}" alt="Ms. Vibha" class="hub-leadership-avatar" loading="lazy">
+                        <div>
+                            <span class="leader-role-badge badge-youth">Youth Lead</span>
+                            <h4 class="hub-leadership-name">Ms. Vibha</h4>
+                        </div>
+                    </div>
+                </article>
+                <article class="hub-leadership-row" aria-labelledby="hub-team-4">
+                    <div class="hub-leadership-title">
+                        <span class="hub-leadership-icon" aria-hidden="true"><i class="fas fa-brain"></i></span>
+                        <h3 id="hub-team-4">Mind Menders</h3>
+                    </div>
+                    <div class="hub-leadership-person">
+                        <img src="{% static '/clubs/leadership/Mr. Venu.png' %}" alt="Mr. Venu" class="hub-leadership-avatar" loading="lazy">
+                        <div>
+                            <span class="leader-role-badge badge-senior">Senior Mentor</span>
+                            <h4 class="hub-leadership-name">Mr. Venu</h4>
+                        </div>
+                    </div>
+                    <div class="hub-leadership-person">
+                        <img src="{% static 'clubs/Kritika R S.jpeg' %}" alt="Ms. Kritika" class="hub-leadership-avatar" loading="lazy">
+                        <div>
+                            <span class="leader-role-badge badge-youth">Youth Lead</span>
+                            <h4 class="hub-leadership-name">Ms. Kritika</h4>
+                        </div>
+                    </div>
+                </article>
+                <article class="hub-leadership-row" aria-labelledby="hub-team-5">
+                    <div class="hub-leadership-title">
+                        <span class="hub-leadership-icon" aria-hidden="true"><i class="fas fa-coins"></i></span>
+                        <h3 id="hub-team-5">Monetize Mastery</h3>
+                    </div>
+                    <div class="hub-leadership-person">
+                        <img src="{% static '/clubs/leadership/Mr. Venkat.png' %}" alt="Mr. Venkat" class="hub-leadership-avatar" loading="lazy">
+                        <div>
+                            <span class="leader-role-badge badge-senior">Senior Mentor</span>
+                            <h4 class="hub-leadership-name">Mr. Venkat</h4>
+                        </div>
+                    </div>
+                    <div class="hub-leadership-person">
+                        <img src="{% static 'clubs/Saumya Mittal .jpg' %}" alt="Saumya Mittal" class="hub-leadership-avatar" loading="lazy">
+                        <div>
+                            <span class="leader-role-badge badge-youth">Youth Lead</span>
+                            <h4 class="hub-leadership-name">Saumya Mittal</h4>
+                        </div>
+                    </div>
+                </article>
             </div>
         </div>
     </section>
