@@ -2,147 +2,178 @@
 {% load static %}
 
 {% block title %}
-    Louisiana Tech University
-{% endblock %}
+Louisiana Tech University — Annual Community Conference 2022 – Let Us Dream
+{% endblock title %}
+
+{% block meta_description %}
+Official conference proceedings, schedules, panels, and keynote address for the Let Us Dream Annual Community Conference 2022 at Louisiana Tech University, Ruston, Louisiana.
+{% endblock meta_description %}
+
+{% block breadcrumb_section %}{% endblock %}
 
 {% block extraStyles %}
-    <link rel="stylesheet" href="{% static 'css/louisiana-tech-university.css' %}" type="text/css">
-    <link rel="stylesheet" href="{% static 'css/stannes-college.css' %}" type="text/css">
-
+<link rel="stylesheet" href="{% static 'css/new/triennial-hub.css' %}">
+<link rel="stylesheet" href="{% static 'css/louisiana-tech-university.css' %}" type="text/css">
+<link rel="stylesheet" href="{% static 'css/conference-profiles.css' %}">
+<style>
+    .conf-hero {
+        background: linear-gradient(135deg, #071E3D 0%, #0F3D7A 60%, #1A4D8C 100%);
+        color: #ffffff;
+        padding: 3.5rem 0 3.5rem 0;
+        position: relative;
+        overflow: hidden;
+    }
+    .conf-hero::before {
+        content: '';
+        position: absolute;
+        top: -30%;
+        right: -10%;
+        width: 500px;
+        height: 500px;
+        background: radial-gradient(circle, rgba(115, 183, 43, 0.22) 0%, transparent 70%);
+        border-radius: 50%;
+        pointer-events: none;
+    }
+    .conf-stat-chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.45rem 1rem;
+        background: rgba(255, 255, 255, 0.12);
+        border: 1px solid rgba(255, 255, 255, 0.22);
+        border-radius: 50px;
+        font-size: 0.82rem;
+        font-weight: 600;
+        color: #ffffff;
+        backdrop-filter: blur(8px);
+    }
+    .conf-card {
+        background: #ffffff;
+        border: 1px solid #E2E8F0;
+        border-radius: 18px;
+        padding: 1.75rem;
+        box-shadow: 0 4px 16px rgba(15, 23, 42, 0.05);
+    }
+    .conf-doc-icon {
+        width: 44px;
+        height: 44px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+        flex-shrink: 0;
+    }
+</style>
 {% endblock extraStyles %}
 
-
-{% block links %}
-    <!--Google font-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-
-    <!--  Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-          type="text/css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
-
-    <!-- Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
-
-
-    <!-- MDB -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.css" rel="stylesheet" type="text/css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
-          type="text/css">
-
-    <!-- Calender CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/locales-all.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/locales-all.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js"></script>
-    <link rel="stylesheet"
-          href="https://cdn.jsdelivr.net/combine/npm/fullcalendar@5.11.3/main.min.css,npm/fullcalendar@5.11.3/main.min.css"
-          type="text/css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css" type="text/css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css" type="text/css">
-
-{% endblock links %}
-
-
 {% block content %}
+<div class="triennial-wrapper">
+    <!-- HERO SECTION -->
+    <section class="conf-hero">
+        <div class="container position-relative" style="z-index: 2;">
+            <div class="d-flex flex-wrap align-items-center gap-2 mb-3">
+                <a href="{% url 'annual-conference-past' %}" class="btn btn-sm btn-outline-light rounded-pill px-3 py-1" style="font-size: 0.8rem;">
+                    <i class="fas fa-arrow-left me-1"></i>Back to Past Conferences Archive
+                </a>
+                <span class="badge rounded-pill px-3 py-1" style="background: rgba(163, 230, 53, 0.2); border: 1px solid rgba(163, 230, 53, 0.4); color: #BEF264; font-size: 0.75rem; font-weight: 700;">
+                    <i class="fas fa-history me-1"></i>2022 ANNUAL COMMUNITY CONFERENCE
+                </span>
+                <span class="badge rounded-pill px-3 py-1" style="background: rgba(255, 255, 255, 0.15); border: 1px solid rgba(255, 255, 255, 0.3); color: #ffffff; font-size: 0.75rem; font-weight: 600;">
+                    <i class="fas fa-map-marker-alt me-1"></i>RUSTON • LOUISIANA, USA
+                </span>
+            </div>
 
-    <nav aria-label="breadcrumb animated slideInDown" class="cus-breadcrumb">
-        <ol class="breadcrumb text-uppercase mb-0 bg-white">
-            <li class="breadcrumb-item"><a class="text-black text-decoration-none" href="{% url 'main' %}">Home</a></li>
-            <li class="breadcrumb-item"><a class="text-black text-decoration-none">Conferences</a></li>
-            <li class="breadcrumb-item"><a class="text-black text-decoration-none" href="{% url 'annualConference' %}">Annual
-                Conference</a></li>
-            <li class="breadcrumb-item  active" aria-current="page">Louisiana Tech University</li>
-        </ol>
-    </nav>
+            <h1 class="h2 h1-lg fw-bold text-white mb-2" style="font-family: 'Outfit', sans-serif;">
+                Louisiana Tech University Conference
+            </h1>
+            <p class="text-white-50 fs-6 mb-4" style="max-width: 820px;">
+                Providing a collaborative forum for professionals, scholars, researchers, and university students to share experiences, challenges, and achievements in community improvement.
+            </p>
 
-    <h1 class="fw-bold text-center fs-1 text-green text-uppercase heading-h3 mt-5">Louisiana Tech University
-        Conference</h1>
-    <p class="text-center  fs-4">
-        27 October 2022, 9:30 AM to 4:30 PM at Louisiana Tech University.
-    </p>
-
-    <div class="conainer text-center m-5">
-        <a href="{% static 'conference/annual/Louisiana/LouisianaTechUniversity/LousianaTech_27Oct22.pdf' %}"
-           class="btn btn-outline-success" download>Event
-            Details</a>
-    </div>
-
-    <div class="container">
-        <p class="pl-4 pr-5">The Let Us Dream community conference was first held in 2017 at Louisiana Tech University.
-            The
-            conference provides a forum for professionals, scholars, researchers, and college and university students to
-            share
-            experiences, challenges, and achievements in their respective efforts towards community improvement.</p>
-        <div class="row py-5">
-            <div class="col-md-12">
-                <div class="main-timeline">
-                    <a href="#" class="timeline">
-                        <div class="timeline-icon"><i class="fa-solid fa-globe"></i></div>
-                        <div class="timeline-content">
-                            <h3 class="title">HISTORY</h3>
-                            <p class="description">
-                                Volunteers from the local community including business owners involved in voluntary
-                                community
-                                developmental projects, non-profit organizations, philanthropists, social workers,
-                                educators or
-                                educational administrators, retired personnel, students, or anyone interested in
-                                contributing to their
-                                community development can be a part of the conference and engage in fruitful dialogues
-                                with visionaries
-                                through the conference.
-                            </p>
-                        </div>
-                    </a>
-                    <a href="#" class="timeline">
-                        <div class="timeline-icon"><i class="fa-regular fa-lightbulb"></i></div>
-                        <div class="timeline-content">
-                            <h3 class="title pl-5">VISION</h3>
-                            <p class="description pl-5 ">
-                                Our Vision is to Empowered local communities for sustainable impact, improvement, Global
-                                Harmony (and
-                                Holistic Success).
-                            </p>
-                        </div>
-                    </a>
-                    <a href="#" class="timeline">
-                        <div class="timeline-icon"><i class="fa-solid fa-rocket"></i></div>
-                        <div class="timeline-content">
-                            <h3 class="title">GOAL</h3>
-                            <p class="description">
-                                The Let Us Dream Conference was established in 2017 for the purpose of providing a forum
-                                for sharing
-                                experiences with successes and challenges in community improvement organizations and
-                                efforts. Broad
-                                conference goals are to
-                            <ul>
-                                <li>Improve networking and collaboration among all those interested in community
-                                    improvement organizations
-                                    and programs.
-                                </li>
-                                <li>Promote volunteerism and empower all those involved in community improvement
-                                    organizations and
-                                    initiatives, including employees, volunteers, post-secondary students, researchers,
-                                    and practitioners.
-                                </li>
-                                <li>Create a professional learning organization dedicated to improving local communities
-                                    and characterized
-                                    by a culture of shared researcher and practitioner knowledge, skills, theories, and
-                                    best practices.
-                                </li>
-                            </ul>
-                            </p>
-                        </div>
-                    </a>
+            <div class="d-flex flex-wrap gap-2">
+                <div class="conf-stat-chip">
+                    <i class="fas fa-calendar-day text-warning"></i>
+                    <span>October 27, 2022 • 9:30 AM – 4:30 PM</span>
+                </div>
+                <div class="conf-stat-chip">
+                    <i class="fas fa-university text-info"></i>
+                    <span>Louisiana Tech University, Ruston</span>
+                </div>
+                <div class="conf-stat-chip">
+                    <i class="fas fa-award text-success"></i>
+                    <span>Inaugural LUD Chapter Site (Est. 2017)</span>
                 </div>
             </div>
         </div>
+    </section>
+
+    <!-- STICKY BREADCRUMB STRIP -->
+    <div class="th-subnav-bar">
+        <div class="container-fluid px-2 px-md-4">
+            {% if breadcrumbs %}
+            <div class="th-sticky-breadcrumb-strip">
+                <nav aria-label="breadcrumb">
+                    <ol class="th-breadcrumb-minimal">
+                        {% for breadcrumb in breadcrumbs %}
+                            {% if not breadcrumb.active %}
+                                <li class="th-breadcrumb-item">
+                                    {% if breadcrumb.url %}
+                                        <a href="{% url breadcrumb.url %}">
+                                            <i class="{{ breadcrumb.icon }} me-1"></i>{{ breadcrumb.name }}
+                                        </a>
+                                    {% else %}
+                                        <span><i class="{{ breadcrumb.icon }} me-1"></i>{{ breadcrumb.name }}</span>
+                                    {% endif %}
+                                </li>
+                                <li class="th-breadcrumb-sep">/</li>
+                            {% else %}
+                                <li class="th-breadcrumb-item active">
+                                    <i class="{{ breadcrumb.icon }} me-1"></i>{{ breadcrumb.name }}
+                                </li>
+                            {% endif %}
+                        {% endfor %}
+                    </ol>
+                </nav>
+                <div class="d-none d-sm-flex align-items-center gap-2 text-muted" style="font-size: 0.74rem;">
+                    <a href="{% url 'annual-conference-past' %}" class="btn btn-sm btn-outline-primary rounded-pill px-3 py-1" style="font-size: 0.75rem;">
+                        <i class="fas fa-arrow-left me-1"></i>Past Conferences Archive
+                    </a>
+                    <a href="{% url 'annualConference' %}" class="btn btn-sm btn-outline-secondary rounded-pill px-3 py-1" style="font-size: 0.75rem;">
+                        <i class="fas fa-calendar-alt me-1"></i>Annual Hub
+                    </a>
+                </div>
+            </div>
+            {% endif %}
+        </div>
     </div>
+
+    <!-- CONFERENCE DOCUMENTATION BANNER -->
+    <section class="th-section pt-5 pb-3">
+        <div class="container">
+            <div class="conf-card mb-4">
+                <div class="row align-items-center g-3">
+                    <div class="col-md-8">
+                        <div class="d-flex align-items-center gap-3">
+                            <div class="conf-doc-icon bg-danger-subtle text-danger">
+                                <i class="fas fa-file-pdf"></i>
+                            </div>
+                            <div>
+                                <h4 class="h6 fw-bold mb-1 text-dark">LUD Annual Conference 2022 Official Brochure & Schedule</h4>
+                                <p class="text-muted small mb-0">Louisiana Tech University edition containing full panel breakdowns, speakers, and schedule details.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 text-md-end">
+                        <a href="{% static 'conference/annual/Louisiana/LouisianaTechUniversity/LousianaTech_27Oct22.pdf' %}" target="_blank" download class="btn btn-primary rounded-pill px-4 py-2 fw-semibold">
+                            <i class="fas fa-download me-2"></i>Download Event Brochure
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
 
 
 
@@ -218,280 +249,9 @@
     </div>
 
 
-    <div class="container">
-        <h1 class="text-center mt-5 pt-5">PAST CONFERENCES</h1>
-    </div>
-
-    <div class="container mt-5 pt-5 mb-5 pb-5">
-
-        <section class="timeline-wrapper  mt-5 pt-5 mb-5 pb-5">
-            <div class="middle-line"></div>
-
-            <div class="box box-top">
-                <div class="date">
-                    <p>2017</p>
-                </div>
-                <div class="box-content">
-                    <img src="{% static 'conference/all/2017/2017.png' %}" class="w-100 h-100 rounded "/>
-                </div>
-            </div>
-
-            <div class="box box-bottom">
-                <div class="date">
-                    <p>2018</p>
-
-                </div>
-                <div class="box-content">
-                    <img src="{% static 'conference/annual/Louisiana/LouisianaTechUniversity/2018.PNG' %}"
-                         class="w-100 h-100 rounded "/>
-                </div>
-            </div>
-
-            <div class="box box-top">
-                <div class="date">
-                    <p>2019</p>
-
-                </div>
-                <div class="box-content">
-                    <img src="{% static 'conference/annual/Louisiana/LouisianaTechUniversity/2019.PNG' %}"
-                         class="w-100 rounded"/>
-
-                </div>
-            </div>
-
-
-            <div class=" box box-bottom">
-                <div class="date">
-                    <p>2021</p>
-
-                </div>
-            </div>
-            <div class="box box-top">
-                <div class="date">
-                    <p>2022</p>
-
-                </div>
-            </div>
-        </section>
-    </div>
-
-
-
-    <div class="idance ">
-        <div class="schedule content-block">
-            <div class="container  mt-5 pt-5">
-                <h1 class="text-center mt-5 pt-5 mb-5">SCHEDULE</h1>
-
-
-                <div class="timetable ">
-
-                    <!-- Schedule Top Navigation -->
-                    <nav class="nav nav-tabs">
-                        <a class="nav-link ">Mon</a>
-                        <a class="nav-link">Tue</a>
-                        <a class="nav-link">Wed</a>
-                        <a class="nav-link active">Thu</a>
-                        <a class="nav-link">Fri</a>
-                        <a class="nav-link">Sat</a>
-                        <a class="nav-link">Sun</a>
-                    </nav>
-
-                    <div class="tab-content">
-                        <div class="tab-pane show active">
-                            <div class="row">
-
-                                <div class="col-md-4">
-                                    <div class="timetable-item">
-                                        <div class="timetable-item-img">
-                                            <img src="{% static 'conference/annual/Louisiana/LouisianaTechUniversity/icons/icon1.png' %}">
-                                        </div>
-                                        <div class="timetable-item-main">
-                                            <div class="timetable-item-time">9:00am - 9:30am</div>
-                                            <div class="timetable-item-name">Registration and Vendor Networking</div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-4">
-                                    <div class="timetable-item">
-                                        <div class="timetable-item-img">
-                                            <img src="{% static 'conference/annual/Louisiana/LouisianaTechUniversity/icons/icon2.png' %}">
-                                        </div>
-                                        <div class="timetable-item-main">
-                                            <div class="timetable-item-time">9:30am - 9:35am</div>
-                                            <div class="timetable-item-name">Welcome: Dr. Dickie Crawford</div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-4">
-                                    <div class="timetable-item">
-                                        <div class="timetable-item-img">
-                                            <img src="{% static 'conference/annual/Louisiana/LouisianaTechUniversity/icons/icon2.png' %}">
-                                        </div>
-                                        <div class="timetable-item-main">
-                                            <div class="timetable-item-time">9:35am - 9:40am</div>
-                                            <div class="timetable-item-name">Welcome: Father Lijo</div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-4">
-                                    <div class="timetable-item">
-                                        <div class="timetable-item-img">
-                                            <img src="{% static 'conference/annual/Louisiana/LouisianaTechUniversity/icons/icon3.png' %}"
-                                                 alt="Street Dance">
-                                        </div>
-                                        <div class="timetable-item-main">
-                                            <div class="timetable-item-time">9:40am - 9:55am</div>
-                                            <div class="timetable-item-name">Keynote Speaker – Monroe Mayor Friday
-                                                Ellis
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-4">
-                                    <div class="timetable-item">
-                                        <div class="timetable-item-img">
-                                            <img src="{% static 'conference/annual/Louisiana/LouisianaTechUniversity/icons/icon4.png' %}"
-                                                 alt="Stretching">
-                                        </div>
-                                        <div class="timetable-item-main">
-                                            <div class="timetable-item-time">10:00am - 11:00am</div>
-                                            <div class="timetable-item-name">Education Panel</div>
-
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-4">
-                                    <div class="timetable-item">
-                                        <div class="timetable-item-img">
-                                            <img src="{% static 'conference/annual/Louisiana/LouisianaTechUniversity/icons/icon5.png' %}"
-                                                 alt="Street Dance">
-                                        </div>
-                                        <div class="timetable-item-main">
-                                            <div class="timetable-item-time">11:00am - 12:00pm</div>
-                                            <div class="timetable-item-name">Social Panel</div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-4">
-                                    <div class="timetable-item">
-                                        <div class="timetable-item-img">
-                                            <img src="{% static 'conference/annual/Louisiana/LouisianaTechUniversity/icons/icon6.png' %}"
-                                                 alt="Street Dance">
-                                        </div>
-                                        <div class="timetable-item-main">
-                                            <div class="timetable-item-time">1:00pm - 2:00pm</div>
-                                            <div class="timetable-item-name">Health Panel</div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-4">
-                                    <div class="timetable-item">
-                                        <div class="timetable-item-img">
-                                            <img src="{% static 'conference/annual/Louisiana/LouisianaTechUniversity/icons/icon3.png' %}"
-                                                 alt="Street Dance">
-                                        </div>
-                                        <div class="timetable-item-main">
-                                            <div class="timetable-item-time">2:00pm - 2:15pm</div>
-                                            <div class="timetable-item-name">Keynote Speaker – Dr. Noflin, Jr.</div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-4">
-                                    <div class="timetable-item">
-                                        <div class="timetable-item-img">
-                                            <img src="{% static 'conference/annual/Louisiana/LouisianaTechUniversity/icons/icon7.png' %}"
-                                                 alt="Yoga">
-                                        </div>
-                                        <div class="timetable-item-main">
-                                            <div class="timetable-item-time">2:15pm - 3:00pm</div>
-                                            <div class="timetable-item-name">Unsung Heroes</div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-4">
-                                    <div class="timetable-item">
-                                        <div class="timetable-item-img">
-                                            <img src="{% static 'conference/annual/Louisiana/LouisianaTechUniversity/icons/icon8.png' %} "
-                                                 alt="Yoga">
-                                        </div>
-                                        <div class="timetable-item-main">
-                                            <div class="timetable-item-time">3:15pm - 4:15pm</div>
-                                            <div class="timetable-item-name">Student Panel</div>
-                                        </div>
-                                    </div>
-                                </div>
-
-
-                                <div class="col-md-4">
-                                    <div class="timetable-item">
-                                        <div class="timetable-item-img">
-                                            <img src="{% static 'conference/annual/Louisiana/LouisianaTechUniversity/icons/icon9.png' %}"
-                                                 alt="Yoga">
-                                        </div>
-                                        <div class="timetable-item-main">
-                                            <div class="timetable-item-time">4:15pm - 4:30pm</div>
-                                            <div class="timetable-item-name">Closing Remarks</div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="section-member-popup ">
-        <div class="container container-member-popup  mb-5 ">
-            <div class="col-md-12 text-center mb-5 mt-5 pt-5">
-                <h1 class="big-heading text-uppercase mb-5">KEYNOTE SPEAKER</h1>
-            </div>
-            <div class="card">
-                <div class="imgBx">
-                    <img src="{% static 'conference/annual/Louisiana/LouisianaTechUniversity/img1.jpg' %}" alt="">
-                    <h5 class="text-center pt-3 text-info fw-bolder">Mayor Friday Ellis</h5>
-                </div>
-                <div class="content">
-
-                    <p>Mayor Friday Ellis was born in rural Rayville, Louisiana. . Mayor Ellis is an advocate of
-                        entrepreneurship
-                        and business growth. He encourages community and civic development and
-                        involvement at local and state levels. In 2019, he was named Free Enterprise
-                        Champion by the Louisiana Business and Industry.
-                </div>
-            </div>
-            <div class="card">
-                <div class="imgBx">
-                    <img src="{% static 'conference/annual/Louisiana/LouisianaTechUniversity/img2.jpg' %}" alt=""
-                         class="text-center">
-                    <h5 class="text-center pt-3 text-info fw-bolder">Dr.George Nofin</h5>
-                </div>
-                <div class="content">
-
-                    <p>Dr. George Noflin, Jr., is a native of Jackson, Louisiana. Over the past thirty-plus years, Dr.
-                        Noflin has become a knowledgeable administrator who is diligent, conscientious, and hardworking.
-                        He has served
-                        in the United States Marine Corps for a number of years where he
-                        received the United States Marine Corps Meritorious Award while serving his country.
-                </div>
-            </div>
-
-        </div>
-
-    </div>
-
+<section class="annual-archive th-section py-5"><div class="container"><div class="th-section-header"><span class="th-section-kicker">OUR CONFERENCE JOURNEY</span><h2 class="th-section-title">Past Conferences</h2><p class="th-section-lead">Explore the Louisiana conference archive and its milestones.</p></div><div class="annual-archive__grid"><article class="annual-archive-card"><a href="{% static 'conference/all/2017/2017.png' %}" target="_blank" rel="noopener noreferrer" aria-label="View 2017 conference poster (opens in a new tab)"><div class="annual-archive-card__image"><img src="{% static 'conference/all/2017/2017.png' %}" alt="2017 Louisiana conference poster" loading="lazy"></div><div class="annual-archive-card__body"><span class="annual-archive-card__year">2017</span><h3>Annual Community Conference</h3><span class="annual-archive-card__action">View conference poster ?</span></div></a></article><article class="annual-archive-card"><a href="{% static 'conference/annual/Louisiana/LouisianaTechUniversity/2018.PNG' %}" target="_blank" rel="noopener noreferrer" aria-label="View 2018 conference poster (opens in a new tab)"><div class="annual-archive-card__image"><img src="{% static 'conference/annual/Louisiana/LouisianaTechUniversity/2018.PNG' %}" alt="2018 Louisiana conference poster" loading="lazy"></div><div class="annual-archive-card__body"><span class="annual-archive-card__year">2018</span><h3>Annual Community Conference</h3><span class="annual-archive-card__action">View conference poster ?</span></div></a></article><article class="annual-archive-card"><a href="{% static 'conference/annual/Louisiana/LouisianaTechUniversity/2019.PNG' %}" target="_blank" rel="noopener noreferrer" aria-label="View 2019 conference poster (opens in a new tab)"><div class="annual-archive-card__image"><img src="{% static 'conference/annual/Louisiana/LouisianaTechUniversity/2019.PNG' %}" alt="2019 Louisiana conference poster" loading="lazy"></div><div class="annual-archive-card__body"><span class="annual-archive-card__year">2019</span><h3>Annual Community Conference</h3><span class="annual-archive-card__action">View conference poster ?</span></div></a></article><article class="annual-archive-card annual-archive-card--milestone"><div class="annual-archive-card__body"><span class="annual-archive-card__year">2021</span><h3>Annual Community Conference</h3><p>Poster unavailable in this archive</p></div></article><article class="annual-archive-card annual-archive-card--milestone"><div class="annual-archive-card__body"><span class="annual-archive-card__year">2022</span><h3>Annual Community Conference</h3><p>Proceedings on this page</p></div></article></div></div></section>
+<section class="annual-program th-section py-5"><div class="container"><div class="th-section-header"><span class="th-section-kicker">THE DAY AT A GLANCE</span><h2 class="th-section-title">Schedule</h2><p class="th-section-lead">Conversations, community connections, and shared learning.</p></div><div class="annual-agenda"><div class="annual-agenda__header"><div><span>THURSDAY</span><h3>October 27, 2022</h3></div><p>Louisiana Tech University ? Ruston<br>All times are local to the venue.</p></div><ol class="annual-agenda__list"><li class="annual-agenda__item"><span class="annual-agenda__time">9:00am - 9:30am</span><h3>Registration and Vendor Networking</h3></li><li class="annual-agenda__item"><span class="annual-agenda__time">9:30am - 9:35am</span><h3>Welcome: Dr. Dickie Crawford</h3></li><li class="annual-agenda__item"><span class="annual-agenda__time">9:35am - 9:40am</span><h3>Welcome: Father Lijo</h3></li><li class="annual-agenda__item annual-agenda__item--keynote"><span class="annual-agenda__time">9:40am - 9:55am</span><h3>Keynote Speaker – Monroe Mayor Friday Ellis</h3></li><li class="annual-agenda__item"><span class="annual-agenda__time">10:00am - 11:00am</span><h3>Education Panel</h3></li><li class="annual-agenda__item"><span class="annual-agenda__time">11:00am - 12:00pm</span><h3>Social Panel</h3></li><li class="annual-agenda__item"><span class="annual-agenda__time">1:00pm - 2:00pm</span><h3>Health Panel</h3></li><li class="annual-agenda__item annual-agenda__item--keynote"><span class="annual-agenda__time">2:00pm - 2:15pm</span><h3>Keynote Speaker – Dr. Noflin, Jr.</h3></li><li class="annual-agenda__item"><span class="annual-agenda__time">2:15pm - 3:00pm</span><h3>Unsung Heroes</h3></li><li class="annual-agenda__item"><span class="annual-agenda__time">3:15pm - 4:15pm</span><h3>Student Panel</h3></li><li class="annual-agenda__item"><span class="annual-agenda__time">4:15pm - 4:30pm</span><h3>Closing Remarks</h3></li></ol></div></div></section>
+<section class="annual-keynotes th-section py-5"><div class="container"><div class="th-section-header"><span class="th-section-kicker">IDEAS THAT INSPIRE</span><h2 class="th-section-title">Keynote Speakers</h2><p class="th-section-lead">Meet the leaders who brought their experience and perspective to the conference.</p></div><div class="annual-keynotes__grid"><article class="annual-keynote"><div class="annual-keynote__portrait"><img src="{% static 'conference/annual/Louisiana/LouisianaTechUniversity/img1.jpg' %}" alt="Mayor Friday Ellis" loading="lazy"></div><div class="annual-keynote__body"><span class="annual-keynote__label">KEYNOTE SPEAKER</span><h3>Mayor Friday Ellis</h3><p class="annual-keynote__role">Monroe, Louisiana</p><p class="annual-keynote__bio">Mayor Friday Ellis was born in rural Rayville, Louisiana. Mayor Ellis is an advocate of entrepreneurship and business growth. He encourages community and civic development and involvement at local and state levels. In 2019, he was named Free Enterprise Champion by the Louisiana Business and Industry.</p></div></article><article class="annual-keynote"><div class="annual-keynote__portrait"><img src="{% static 'conference/annual/Louisiana/LouisianaTechUniversity/img2.jpg' %}" alt="Dr. George Noflin, Jr." loading="lazy"></div><div class="annual-keynote__body"><span class="annual-keynote__label">KEYNOTE SPEAKER</span><h3>Dr. George Noflin, Jr.</h3><p class="annual-keynote__role">Educator & community leader</p><p class="annual-keynote__bio">Dr. George Noflin, Jr., is a native of Jackson, Louisiana. Over the past thirty-plus years, Dr. Noflin has become a knowledgeable administrator who is diligent, conscientious, and hardworking. He has served in the United States Marine Corps for a number of years where he received the United States Marine Corps Meritorious Award while serving his country.</p></div></article></div></div></section>
     <div class="container p-5">
         <div class="row">
             <div class="col-md-12 text-center">
@@ -523,24 +283,22 @@
     </div>
 
 
-    <section class="light">
+    <section class="conference-people">
         <div class="container py-5 mt-4">
             <div class="col-md-12 text-center">
-                <h1 class="big-heading text-uppercase">Health Panel</h1>
+                <span class="th-section-kicker">CONFERENCE VOICES</span><h2 class="th-section-title">Health Panel</h2>
             </div>
 
-            <article class="postcard light blue">
-                <a class="postcard__img_link" href="#">
-                    <img class="postcard__img"
-                         src="{% static 'conference/annual/Louisiana/LouisianaTechUniversity/McMurry.jpg' %}"
-                         alt="Image Title"/>
-                </a>
-                <div class="postcard__text t-dark">
-                    <h1 class="postcard__title blue"><a href="#">Kendra McMurry</a></h1>
-                    <div class="postcard__subtitle small">
-                    </div>
-                    <div class="postcard__bar"></div>
-                    <div class="postcard__preview-txt">Kendra D. McMurry, MSN, RN is an Assistant Professor in the
+            <div class="conference-people__grid">
+<article class="conference-person">
+                <div class="conference-person__identity">
+                    <img class="conference-person__portrait" src="{% static 'conference/annual/Louisiana/LouisianaTechUniversity/McMurry.jpg' %}" alt="Kendra McMurry" loading="lazy">
+                    <div><h3 class="conference-person__name">Kendra McMurry</h3></div>
+                </div>
+                <p class="conference-person__intro">Kendra D.</p>
+                <details class="conference-person__details">
+                    <summary><span class="profile-read">Read biography</span><span class="profile-close">Close biography</span><span class="profile-toggle" aria-hidden="true">+</span></summary>
+                    <div class="conference-person__bio">Kendra D. McMurry, MSN, RN is an Assistant Professor in the
                         School of Nursing
                         at
                         Grambling State University. She is a Ruston native and 2009 graduate from Grambling State
@@ -551,22 +309,18 @@
                         mental
                         illness, and journaling as a form of self-care to improve mental health. McMurry has a passion
                         for
-                        educating, empowering, and encouraging others to strive for their greatest potential.
-                    </div>
-                </div>
+                        educating, empowering, and encouraging others to strive for their greatest potential.</div>
+                </details>
             </article>
-            <article class="postcard light red">
-                <a class="postcard__img_link" href="#">
-                    <img class="postcard__img"
-                         src="{% static 'conference/annual/Louisiana/LouisianaTechUniversity/Tori-Davis.jpg' %}"
-                         alt="Image Title"/>
-                </a>
-                <div class="postcard__text t-dark">
-                    <h1 class="postcard__title red"><a href="#">Tori Davis</a></h1>
-                    <div class="postcard__subtitle small">
-                    </div>
-                    <div class="postcard__bar"></div>
-                    <div class="postcard__preview-txt">Tori Davis serves as the Chief Communications Officer for Green
+            <article class="conference-person">
+                <div class="conference-person__identity">
+                    <img class="conference-person__portrait" src="{% static 'conference/annual/Louisiana/LouisianaTechUniversity/Tori-Davis.jpg' %}" alt="Tori Davis" loading="lazy">
+                    <div><h3 class="conference-person__name">Tori Davis</h3></div>
+                </div>
+                <p class="conference-person__intro">Tori Davis serves as the Chief Communications Officer for Green Clinic Health System in Ruston.</p>
+                <details class="conference-person__details">
+                    <summary><span class="profile-read">Read biography</span><span class="profile-close">Close biography</span><span class="profile-toggle" aria-hidden="true">+</span></summary>
+                    <div class="conference-person__bio">Tori Davis serves as the Chief Communications Officer for Green
                         Clinic Health
                         System in
                         Ruston. Davis is a Shreveport native who received her bachelor’s degree in mass communication
@@ -578,22 +332,18 @@
                         planning while working in the travel and tourism industry. Davis is passionate about the Ruston
                         community
                         and doing her part to ensure the best quality of life for residents and students who call the
-                        area home.
-                    </div>
-                </div>
+                        area home.</div>
+                </details>
             </article>
-            <article class="postcard light green">
-                <a class="postcard__img_link" href="#">
-                    <img class="postcard__img"
-                         src="{% static 'conference/annual/Louisiana/LouisianaTechUniversity/B-Gray.jpg' %}"
-                         alt="Image Title"/>
-                </a>
-                <div class="postcard__text t-dark">
-                    <h1 class="postcard__title green"><a href="#">Baylee Gray</a></h1>
-                    <div class="postcard__subtitle small">
-                    </div>
-                    <div class="postcard__bar"></div>
-                    <div class="postcard__preview-txt">Baylee Gray is the ER Director at Northern Louisiana Medical
+            <article class="conference-person">
+                <div class="conference-person__identity">
+                    <img class="conference-person__portrait" src="{% static 'conference/annual/Louisiana/LouisianaTechUniversity/B-Gray.jpg' %}" alt="Baylee Gray" loading="lazy">
+                    <div><h3 class="conference-person__name">Baylee Gray</h3></div>
+                </div>
+                <p class="conference-person__intro">Baylee Gray is the ER Director at Northern Louisiana Medical Center in Ruston, Louisiana.</p>
+                <details class="conference-person__details">
+                    <summary><span class="profile-read">Read biography</span><span class="profile-close">Close biography</span><span class="profile-toggle" aria-hidden="true">+</span></summary>
+                    <div class="conference-person__bio">Baylee Gray is the ER Director at Northern Louisiana Medical
                         Center in
                         Ruston, Louisiana.
                         She is originally from Mansfield, Texas and received her BS in biology from Northwestern State
@@ -602,22 +352,18 @@
                         with the
                         Ruston community and what it has to offer. Her goal is to continue to assist in giving quality
                         care to the
-                        city of Ruston and surrounding communities.
-                    </div>
-                </div>
+                        city of Ruston and surrounding communities.</div>
+                </details>
             </article>
-            <article class="postcard light yellow">
-                <a class="postcard__img_link" href="#">
-                    <img class="postcard__img"
-                         src="{% static 'conference/annual/Louisiana/LouisianaTechUniversity/Ashley-Owen-2048x1162.jpg' %}"
-                         alt="Image Title"/>
-                </a>
-                <div class="postcard__text t-dark">
-                    <h1 class="postcard__title yellow"><a href="#">Dr. Ashley Owen</a></h1>
-                    <div class="postcard__subtitle small">
-                    </div>
-                    <div class="postcard__bar"></div>
-                    <div class="postcard__preview-txt">Dr. Ashley Owen is a National Board Certified Counselor, Licensed
+            <article class="conference-person">
+                <div class="conference-person__identity">
+                    <img class="conference-person__portrait" src="{% static 'conference/annual/Louisiana/LouisianaTechUniversity/Ashley-Owen-2048x1162.jpg' %}" alt="Dr. Ashley Owen" loading="lazy">
+                    <div><h3 class="conference-person__name">Dr. Ashley Owen</h3></div>
+                </div>
+                <p class="conference-person__intro">Dr. Ashley Owen is a National Board Certified Counselor, Licensed Professional Counselor-Supervisor, and a QPR Suicide Prevention Gatekeeper Instructor.</p>
+                <details class="conference-person__details">
+                    <summary><span class="profile-read">Read biography</span><span class="profile-close">Close biography</span><span class="profile-toggle" aria-hidden="true">+</span></summary>
+                    <div class="conference-person__bio">Dr. Ashley Owen is a National Board Certified Counselor, Licensed
                         Professional
                         Counselor-Supervisor, and a QPR Suicide Prevention Gatekeeper Instructor. In 2009, Owen received
                         her
@@ -633,22 +379,18 @@
                         relational
                         aspects, and the impact of physical exercise on mental health. In her free time, Owen can often
                         be found
-                        cheering on the Bulldogs and Lady Techsters, spending time with family, and volunteering.
-                    </div>
-                </div>
+                        cheering on the Bulldogs and Lady Techsters, spending time with family, and volunteering.</div>
+                </details>
             </article>
-            <article class="postcard light blue">
-                <a class="postcard__img_link" href="#">
-                    <img class="postcard__img"
-                         src="{% static 'conference/annual/Louisiana/LouisianaTechUniversity/Meleah-Pea.jpeg' %}"
-                         alt="Image Title"/>
-                </a>
-                <div class="postcard__text t-dark">
-                    <h1 class="postcard__title blue"><a href="#">Meleah Pea</a></h1>
-                    <div class="postcard__subtitle small">
-                    </div>
-                    <div class="postcard__bar"></div>
-                    <div class="postcard__preview-txt">Meleah Pea is a native of the Strawberry City, Ponchatoula, and
+            <article class="conference-person">
+                <div class="conference-person__identity">
+                    <img class="conference-person__portrait" src="{% static 'conference/annual/Louisiana/LouisianaTechUniversity/Meleah-Pea.jpeg' %}" alt="Meleah Pea" loading="lazy">
+                    <div><h3 class="conference-person__name">Meleah Pea</h3></div>
+                </div>
+                <p class="conference-person__intro">Meleah Pea is a native of the Strawberry City, Ponchatoula, and graduated from Ponchatoula High School in 2019.</p>
+                <details class="conference-person__details">
+                    <summary><span class="profile-read">Read biography</span><span class="profile-close">Close biography</span><span class="profile-toggle" aria-hidden="true">+</span></summary>
+                    <div class="conference-person__bio">Meleah Pea is a native of the Strawberry City, Ponchatoula, and
                         graduated
                         from
                         Ponchatoula High School in 2019. In high school, she was involved in an array of organizations
@@ -668,23 +410,19 @@
                         of school.
                         After graduation, Pea is looking to attend medical school to become a physician and work in
                         underserved
-                        populations.
-                    </div>
-                </div>
+                        populations.</div>
+                </details>
             </article>
 
-            <article class="postcard light red">
-                <a class="postcard__img_link" href="#">
-                    <img class="postcard__img"
-                         src="{% static 'conference/annual/Louisiana/LouisianaTechUniversity/Spencer-Stelly.jpg' %}"
-                         alt="Image Title"/>
-                </a>
-                <div class="postcard__text t-dark">
-                    <h1 class="postcard__title red"><a href="#">Spencer Stelly</a></h1>
-                    <div class="postcard__subtitle small">
-                    </div>
-                    <div class="postcard__bar"></div>
-                    <div class="postcard__preview-txt">Spencer Stelly is a third-year student majoring in Chemistry and
+            <article class="conference-person">
+                <div class="conference-person__identity">
+                    <img class="conference-person__portrait" src="{% static 'conference/annual/Louisiana/LouisianaTechUniversity/Spencer-Stelly.jpg' %}" alt="Spencer Stelly" loading="lazy">
+                    <div><h3 class="conference-person__name">Spencer Stelly</h3></div>
+                </div>
+                <p class="conference-person__intro">Spencer Stelly is a third-year student majoring in Chemistry and minoring in Spanish.</p>
+                <details class="conference-person__details">
+                    <summary><span class="profile-read">Read biography</span><span class="profile-close">Close biography</span><span class="profile-toggle" aria-hidden="true">+</span></summary>
+                    <div class="conference-person__bio">Spencer Stelly is a third-year student majoring in Chemistry and
                         minoring in
                         Spanish. He
                         will be graduating in the Spring and plans to continue his studies in Veterinary Medicine
@@ -699,22 +437,18 @@
                         groups.
                         Spencer’s favorite part of PLC is giving presentations to incoming freshman classes to raise
                         mental health
-                        awareness and assist students in their transition to their undergraduate education.
-                    </div>
-                </div>
+                        awareness and assist students in their transition to their undergraduate education.</div>
+                </details>
             </article>
-            <article class="postcard light green">
-                <a class="postcard__img_link" href="#">
-                    <img class="postcard__img"
-                         src="{% static 'conference/annual/Louisiana/LouisianaTechUniversity/Becky-Stutzman.jpg' %}"
-                         alt="Image Title"/>
-                </a>
-                <div class="postcard__text t-dark">
-                    <h1 class="postcard__title green"><a href="#">Becky Stutzman</a></h1>
-                    <div class="postcard__subtitle small">
-                    </div>
-                    <div class="postcard__bar"></div>
-                    <div class="postcard__preview-txt">Becky Stutzman, LCSW-BACS, C-SSWS, has been a social worker for
+            <article class="conference-person">
+                <div class="conference-person__identity">
+                    <img class="conference-person__portrait" src="{% static 'conference/annual/Louisiana/LouisianaTechUniversity/Becky-Stutzman.jpg' %}" alt="Becky Stutzman" loading="lazy">
+                    <div><h3 class="conference-person__name">Becky Stutzman</h3></div>
+                </div>
+                <p class="conference-person__intro">Becky Stutzman, LCSW-BACS, C-SSWS, has been a social worker for more than 25 years and she has worked in the school setting for 22 of those years.</p>
+                <details class="conference-person__details">
+                    <summary><span class="profile-read">Read biography</span><span class="profile-close">Close biography</span><span class="profile-toggle" aria-hidden="true">+</span></summary>
+                    <div class="conference-person__bio">Becky Stutzman, LCSW-BACS, C-SSWS, has been a social worker for
                         more than 25
                         years and
                         she has worked in the school setting for 22 of those years. She graduated from McNeese State
@@ -731,22 +465,18 @@
                         learning
                         challenges and has had the opportunity to assist in expanding mental health services and
                         social-emotional
-                        learning opportunities for the students of Lincoln Parish.
-                    </div>
-                </div>
+                        learning opportunities for the students of Lincoln Parish.</div>
+                </details>
             </article>
-            <article class="postcard light yellow">
-                <a class="postcard__img_link" href="#">
-                    <img class="postcard__img"
-                         src="{% static 'conference/annual/Louisiana/LouisianaTechUniversity/Jerrilyn-Washington.jpg' %}"
-                         alt="Image Title"/>
-                </a>
-                <div class="postcard__text t-dark">
-                    <h1 class="postcard__title yellow"><a href="#">Jerrilyn Washington</a></h1>
-                    <div class="postcard__subtitle small">
-                    </div>
-                    <div class="postcard__bar"></div>
-                    <div class="postcard__preview-txt">Jerrilene Washington, EdD, is Executive Director, National
+            <article class="conference-person">
+                <div class="conference-person__identity">
+                    <img class="conference-person__portrait" src="{% static 'conference/annual/Louisiana/LouisianaTechUniversity/Jerrilyn-Washington.jpg' %}" alt="Jerrilyn Washington" loading="lazy">
+                    <div><h3 class="conference-person__name">Jerrilyn Washington</h3></div>
+                </div>
+                <p class="conference-person__intro">Jerrilene Washington, EdD, is Executive Director, National Alliance on Mental Illness (NAMI) – Ruston Chapter.</p>
+                <details class="conference-person__details">
+                    <summary><span class="profile-read">Read biography</span><span class="profile-close">Close biography</span><span class="profile-toggle" aria-hidden="true">+</span></summary>
+                    <div class="conference-person__bio">Jerrilene Washington, EdD, is Executive Director, National
                         Alliance on Mental
                         Illness
                         (NAMI) – Ruston Chapter. NAMI Ruston is a 36-year-old, nonprofit mental health organization,
@@ -757,23 +487,19 @@
                         years of
                         service in education in school systems and universities in north and south Louisiana, Maryland,
                         and
-                        Washington, D.C.
-                    </div>
-                </div>
+                        Washington, D.C.</div>
+                </details>
             </article>
 
-            <article class="postcard light blue">
-                <a class="postcard__img_link" href="#">
-                    <img class="postcard__img"
-                         src="{% static 'conference/annual/Louisiana/LouisianaTechUniversity/David-Wells.jpg' %}"
-                         alt="Image Title"/>
-                </a>
-                <div class="postcard__text t-dark">
-                    <h1 class="postcard__title blue"><a href="#">David Wells</a></h1>
-                    <div class="postcard__subtitle small">
-                    </div>
-                    <div class="postcard__bar"></div>
-                    <div class="postcard__preview-txt">David Wells is the Director of Emergency Medical Services for the
+            <article class="conference-person">
+                <div class="conference-person__identity">
+                    <img class="conference-person__portrait" src="{% static 'conference/annual/Louisiana/LouisianaTechUniversity/David-Wells.jpg' %}" alt="David Wells" loading="lazy">
+                    <div><h3 class="conference-person__name">David Wells</h3></div>
+                </div>
+                <p class="conference-person__intro">David Wells is the Director of Emergency Medical Services for the Ruston Fire Department.</p>
+                <details class="conference-person__details">
+                    <summary><span class="profile-read">Read biography</span><span class="profile-close">Close biography</span><span class="profile-toggle" aria-hidden="true">+</span></summary>
+                    <div class="conference-person__bio">David Wells is the Director of Emergency Medical Services for the
                         Ruston Fire
                         Department.
                         He received his degree in Fire Science from Columbia Southern University and holds multiple
@@ -783,22 +509,18 @@
                         board member
                         for the Louisiana Emergency Response Network Region 8 and is chairman of the Louisiana Delta
                         Community
-                        College Paramedic Education Board.
-                    </div>
-                </div>
+                        College Paramedic Education Board.</div>
+                </details>
             </article>
-            <article class="postcard light red">
-                <a class="postcard__img_link" href="#">
-                    <img class="postcard__img"
-                         src="{% static 'conference/annual/Louisiana/LouisianaTechUniversity/Calvin-C-Williams.jpg' %}"
-                         alt="Image Title"/>
-                </a>
-                <div class="postcard__text t-dark">
-                    <h1 class="postcard__title red"><a href="#">Calvin C. Williams</a></h1>
-                    <div class="postcard__subtitle small">
-                    </div>
-                    <div class="postcard__bar"></div>
-                    <div class="postcard__preview-txt">Calvin C. Williams is a Licensed Professional Counselor with over
+            <article class="conference-person">
+                <div class="conference-person__identity">
+                    <img class="conference-person__portrait" src="{% static 'conference/annual/Louisiana/LouisianaTechUniversity/Calvin-C-Williams.jpg' %}" alt="Calvin C. Williams" loading="lazy">
+                    <div><h3 class="conference-person__name">Calvin C. Williams</h3></div>
+                </div>
+                <p class="conference-person__intro">Calvin C.</p>
+                <details class="conference-person__details">
+                    <summary><span class="profile-read">Read biography</span><span class="profile-close">Close biography</span><span class="profile-toggle" aria-hidden="true">+</span></summary>
+                    <div class="conference-person__bio">Calvin C. Williams is a Licensed Professional Counselor with over
                         25 years of
                         experience.
                         He has a private mental health practice in Monroe and provides counseling to patients of The
@@ -811,31 +533,29 @@
                         adults and
                         geriatric patients. He was presented with a LCA Presidential Award for recognition of his
                         exemplary service
-                        to the counseling profession and the Louisiana Counseling Association.
-                    </div>
-                </div>
+                        to the counseling profession and the Louisiana Counseling Association.</div>
+                </details>
             </article>
+</div>
         </div>
     </section>
 
-    <section class="light">
+    <section class="conference-people">
         <div class="container py-5 mt-4">
             <div class="col-md-12 text-center">
-                <h1 class="big-heading text-uppercase">Education Panel</h1>
+                <span class="th-section-kicker">CONFERENCE VOICES</span><h2 class="th-section-title">Education Panel</h2>
             </div>
 
-            <article class="postcard light blue">
-                <a class="postcard__img_link" href="#">
-                    <img class="postcard__img"
-                         src="{% static 'conference/annual/Louisiana/LouisianaTechUniversity/EnsleyC.jpg' %}"
-                         alt="Image Title"/>
-                </a>
-                <div class="postcard__text t-dark">
-                    <h1 class="postcard__title blue"><a href="#">Dr. Cheyrl Mansfield Ensley</a></h1>
-                    <div class="postcard__subtitle small">
-                    </div>
-                    <div class="postcard__bar"></div>
-                    <div class="postcard__preview-txt">Dr. Cheyrl Mansfield Ensley currently serves as an Associate
+            <div class="conference-people__grid">
+<article class="conference-person">
+                <div class="conference-person__identity">
+                    <img class="conference-person__portrait" src="{% static 'conference/annual/Louisiana/LouisianaTechUniversity/EnsleyC.jpg' %}" alt="Dr. Cheyrl Mansfield Ensley" loading="lazy">
+                    <div><h3 class="conference-person__name">Dr. Cheyrl Mansfield Ensley</h3></div>
+                </div>
+                <p class="conference-person__intro">Dr. Cheyrl Mansfield Ensley currently serves as an Associate Professor and the Interim Head of the Departments of Curriculum and Instruction and Developmental and Higher Education Studies at her alma mater – Grambling State University.</p>
+                <details class="conference-person__details">
+                    <summary><span class="profile-read">Read biography</span><span class="profile-close">Close biography</span><span class="profile-toggle" aria-hidden="true">+</span></summary>
+                    <div class="conference-person__bio">Dr. Cheyrl Mansfield Ensley currently serves as an Associate
                         Professor and
                         the Interim
                         Head of the Departments of Curriculum and Instruction and Developmental and Higher Education
@@ -852,44 +572,36 @@
                         teacher, assistant
                         principal, principal, director, executive director, and assistant superintendent. She is an
                         outcomes-based
-                        educator with a laser focus on obtaining results based on data.
-                    </div>
-                </div>
+                        educator with a laser focus on obtaining results based on data.</div>
+                </details>
             </article>
-            <article class="postcard light red">
-                <a class="postcard__img_link" href="#">
-                    <img class="postcard__img"
-                         src="{% static 'conference/annual/Louisiana/LouisianaTechUniversity/Lanecia-Deshund-Clinton.jpeg' %}"
-                         alt="Image Title"/>
-                </a>
-                <div class="postcard__text t-dark">
-                    <h1 class="postcard__title red"><a href="#">Lanecia Deshund Clinton</a></h1>
-                    <div class="postcard__subtitle small">
-                    </div>
-                    <div class="postcard__bar"></div>
-                    <div class="postcard__preview-txt">Lanecia Deshund Clinton, a native of Ruston, is the oldest of six
+            <article class="conference-person">
+                <div class="conference-person__identity">
+                    <img class="conference-person__portrait" src="{% static 'conference/annual/Louisiana/LouisianaTechUniversity/Lanecia-Deshund-Clinton.jpeg' %}" alt="Lanecia Deshund Clinton" loading="lazy">
+                    <div><h3 class="conference-person__name">Lanecia Deshund Clinton</h3></div>
+                </div>
+                <p class="conference-person__intro">Lanecia Deshund Clinton, a native of Ruston, is the oldest of six children.</p>
+                <details class="conference-person__details">
+                    <summary><span class="profile-read">Read biography</span><span class="profile-close">Close biography</span><span class="profile-toggle" aria-hidden="true">+</span></summary>
+                    <div class="conference-person__bio">Lanecia Deshund Clinton, a native of Ruston, is the oldest of six
                         children.
                         She earned
                         her bachelor’s degree in criminal justice in 2018 and is currently pursuing her master’s degree
                         in education
                         at Grambling State University. Clinton is a member of Alpha Kappa Alpha Sorority Incorporated
                         and serves as
-                        a second-grade teacher at Lincoln Preparatory School.
-                    </div>
-                </div>
+                        a second-grade teacher at Lincoln Preparatory School.</div>
+                </details>
             </article>
-            <article class="postcard light green">
-                <a class="postcard__img_link" href="#">
-                    <img class="postcard__img"
-                         src="{% static 'conference/annual/Louisiana/LouisianaTechUniversity/Dr-Patsy-Hughey.jpg' %}"
-                         alt="Image Title"/>
-                </a>
-                <div class="postcard__text t-dark">
-                    <h1 class="postcard__title green"><a href="#">Dr. Patsy Hughey</a></h1>
-                    <div class="postcard__subtitle small">
-                    </div>
-                    <div class="postcard__bar"></div>
-                    <div class="postcard__preview-txt">Dr. Patsy A Hughey began her career at Louisiana Tech University
+            <article class="conference-person">
+                <div class="conference-person__identity">
+                    <img class="conference-person__portrait" src="{% static 'conference/annual/Louisiana/LouisianaTechUniversity/Dr-Patsy-Hughey.jpg' %}" alt="Dr. Patsy Hughey" loading="lazy">
+                    <div><h3 class="conference-person__name">Dr. Patsy Hughey</h3></div>
+                </div>
+                <p class="conference-person__intro">Dr. Patsy A Hughey began her career at Louisiana Tech University in March 2018.</p>
+                <details class="conference-person__details">
+                    <summary><span class="profile-read">Read biography</span><span class="profile-close">Close biography</span><span class="profile-toggle" aria-hidden="true">+</span></summary>
+                    <div class="conference-person__bio">Dr. Patsy A Hughey began her career at Louisiana Tech University
                         in March
                         2018. Before
                         transitioning to higher education, she has 29 years of experience working in K-12 public school
@@ -902,22 +614,18 @@
                         obtained an
                         Educational Specialist degree and was a member of the first cohort group to graduate from
                         Arkansas Tech
-                        University, Russellville, Arkansas, with an Educational Doctorate in School Leadership.
-                    </div>
-                </div>
+                        University, Russellville, Arkansas, with an Educational Doctorate in School Leadership.</div>
+                </details>
             </article>
-            <article class="postcard light yellow">
-                <a class="postcard__img_link" href="#">
-                    <img class="postcard__img"
-                         src="{% static 'conference/annual/Louisiana/LouisianaTechUniversity/George-Noflin.jpg' %}"
-                         alt="Image Title"/>
-                </a>
-                <div class="postcard__text t-dark">
-                    <h1 class="postcard__title yellow"><a href="#">Dr. George Noflin Jr.</a></h1>
-                    <div class="postcard__subtitle small">
-                    </div>
-                    <div class="postcard__bar"></div>
-                    <div class="postcard__preview-txt">Dr. George Noflin Jr. is a native of Jackson. He and his wife
+            <article class="conference-person">
+                <div class="conference-person__identity">
+                    <img class="conference-person__portrait" src="{% static 'conference/annual/Louisiana/LouisianaTechUniversity/George-Noflin.jpg' %}" alt="Dr. George Noflin Jr." loading="lazy">
+                    <div><h3 class="conference-person__name">Dr. George Noflin Jr.</h3></div>
+                </div>
+                <p class="conference-person__intro">Dr. George Noflin Jr. is a native of Jackson.</p>
+                <details class="conference-person__details">
+                    <summary><span class="profile-read">Read biography</span><span class="profile-close">Close biography</span><span class="profile-toggle" aria-hidden="true">+</span></summary>
+                    <div class="conference-person__bio">Dr. George Noflin Jr. is a native of Jackson. He and his wife
                         Valerie are the
                         proud
                         parents of five children.
@@ -946,22 +654,18 @@
                         athletics, and leadership.
                         Noflin is a member at the New Living Word Fellowship Church in Ruston, and he was a
                         past-president of the
-                        Sunrise Kiwanis Club in Ruston.
-                    </div>
-                </div>
+                        Sunrise Kiwanis Club in Ruston.</div>
+                </details>
             </article>
-            <article class="postcard light blue">
-                <a class="postcard__img_link" href="#">
-                    <img class="postcard__img"
-                         src="{% static 'conference/annual/Louisiana/LouisianaTechUniversity/Dr-Dustin-Whitlock.jpg' %}"
-                         alt="Image Title"/>
-                </a>
-                <div class="postcard__text t-dark">
-                    <h1 class="postcard__title blue"><a href="#">Dr. Dustin Whitlock</a></h1>
-                    <div class="postcard__subtitle small">
-                    </div>
-                    <div class="postcard__bar"></div>
-                    <div class="postcard__preview-txt">Dustin S. Whitlock, EdD, is an Assistant Professor at Louisiana
+            <article class="conference-person">
+                <div class="conference-person__identity">
+                    <img class="conference-person__portrait" src="{% static 'conference/annual/Louisiana/LouisianaTechUniversity/Dr-Dustin-Whitlock.jpg' %}" alt="Dr. Dustin Whitlock" loading="lazy">
+                    <div><h3 class="conference-person__name">Dr. Dustin Whitlock</h3></div>
+                </div>
+                <p class="conference-person__intro">Dustin S.</p>
+                <details class="conference-person__details">
+                    <summary><span class="profile-read">Read biography</span><span class="profile-close">Close biography</span><span class="profile-toggle" aria-hidden="true">+</span></summary>
+                    <div class="conference-person__bio">Dustin S. Whitlock, EdD, is an Assistant Professor at Louisiana
                         Tech
                         University. He
                         completed his doctorate from Johns Hopkins University with an emphasis in 21st Century Learning,
@@ -974,21 +678,19 @@
                         in Learning
                         and Development and Secondary Teaching Methods. He also teaches courses within the MA Education,
                         Curriculum
-                        and Instruction program.
-                    </div>
-                </div>
+                        and Instruction program.</div>
+                </details>
             </article>
 
-            <article class="postcard light red">
-                <a class="postcard__img_link" href="#">
-                    <img class="postcard__img" src="{% static 'locations/bangalore/default.png' %}" alt="Image Title"/>
-                </a>
-                <div class="postcard__text t-dark">
-                    <h1 class="postcard__title red"><a href="#">Chase Willis</a></h1>
-                    <div class="postcard__subtitle small">
-                    </div>
-                    <div class="postcard__bar"></div>
-                    <div class="postcard__preview-txt">Chase Kylen Willis, a native of Shreveport, is a rising senior at
+            <article class="conference-person">
+                <div class="conference-person__identity">
+                    <img class="conference-person__portrait" src="{% static 'locations/bangalore/default.png' %}" alt="Chase Willis" loading="lazy">
+                    <div><h3 class="conference-person__name">Chase Willis</h3></div>
+                </div>
+                <p class="conference-person__intro">Chase Kylen Willis, a native of Shreveport, is a rising senior at Grambling State University, majoring in Elementary and Special Education with a certification endorsement in Early Childhood Education.</p>
+                <details class="conference-person__details">
+                    <summary><span class="profile-read">Read biography</span><span class="profile-close">Close biography</span><span class="profile-toggle" aria-hidden="true">+</span></summary>
+                    <div class="conference-person__bio">Chase Kylen Willis, a native of Shreveport, is a rising senior at
                         Grambling
                         State
                         University, majoring in Elementary and Special Education with a certification endorsement in
@@ -1001,33 +703,30 @@
                         Honor
                         Society in Education, and the Aspiring Educators Club. Upon graduation, Willis plans to attend
                         graduate
-                        school to obtain his master’s degree in Educational Leadership and Social Work.
-                    </div>
-
-                </div>
+                        school to obtain his master’s degree in Educational Leadership and Social Work.</div>
+                </details>
             </article>
+</div>
 
         </div>
     </section>
 
-    <section class="light">
+    <section class="conference-people">
         <div class="container py-5 mt-4">
             <div class="col-md-12 text-center">
-                <h1 class="big-heading text-uppercase">Social Panel</h1>
+                <span class="th-section-kicker">CONFERENCE VOICES</span><h2 class="th-section-title">Social Panel</h2>
             </div>
 
-            <article class="postcard light blue">
-                <a class="postcard__img_link" href="#">
-                    <img class="postcard__img"
-                         src="{% static 'conference/annual/Louisiana/LouisianaTechUniversity/Will-Dearmon.jpg' %}"
-                         alt="Image Title"/>
-                </a>
-                <div class="postcard__text t-dark">
-                    <h1 class="postcard__title blue"><a href="#">Will Dearmon</a></h1>
-                    <div class="postcard__subtitle small">
-                    </div>
-                    <div class="postcard__bar"></div>
-                    <div class="postcard__preview-txt">Will Dearmon earned his bachelor’s degree in Political Science at
+            <div class="conference-people__grid">
+<article class="conference-person">
+                <div class="conference-person__identity">
+                    <img class="conference-person__portrait" src="{% static 'conference/annual/Louisiana/LouisianaTechUniversity/Will-Dearmon.jpg' %}" alt="Will Dearmon" loading="lazy">
+                    <div><h3 class="conference-person__name">Will Dearmon</h3></div>
+                </div>
+                <p class="conference-person__intro">Will Dearmon earned his bachelor’s degree in Political Science at Louisiana Tech in 2013 and his master’s degree in Public Service and Administration with a Higher Education concentration at Texas A&M University in 2016.</p>
+                <details class="conference-person__details">
+                    <summary><span class="profile-read">Read biography</span><span class="profile-close">Close biography</span><span class="profile-toggle" aria-hidden="true">+</span></summary>
+                    <div class="conference-person__bio">Will Dearmon earned his bachelor’s degree in Political Science at
                         Louisiana
                         Tech in 2013
                         and his master’s degree in Public Service and Administration with a Higher Education
@@ -1043,22 +742,18 @@
                         Association National
                         Board of Directors. He and his wife, Kelsey, have been happily married for almost five years and
                         are the
-                        proud parents of a very active 13-month-old baby girl.
-                    </div>
-                </div>
+                        proud parents of a very active 13-month-old baby girl.</div>
+                </details>
             </article>
-            <article class="postcard light red">
-                <a class="postcard__img_link" href="#">
-                    <img class="postcard__img"
-                         src="{% static 'conference/annual/Louisiana/LouisianaTechUniversity/Janet-Durden.jpg' %}"
-                         alt="Image Title"/>
-                </a>
-                <div class="postcard__text t-dark">
-                    <h1 class="postcard__title red"><a href="#">Janet Durden</a></h1>
-                    <div class="postcard__subtitle small">
-                    </div>
-                    <div class="postcard__bar"></div>
-                    <div class="postcard__preview-txt">A native of Mississippi, Janet S. Durden has been President of
+            <article class="conference-person">
+                <div class="conference-person__identity">
+                    <img class="conference-person__portrait" src="{% static 'conference/annual/Louisiana/LouisianaTechUniversity/Janet-Durden.jpg' %}" alt="Janet Durden" loading="lazy">
+                    <div><h3 class="conference-person__name">Janet Durden</h3></div>
+                </div>
+                <p class="conference-person__intro">A native of Mississippi, Janet S.</p>
+                <details class="conference-person__details">
+                    <summary><span class="profile-read">Read biography</span><span class="profile-close">Close biography</span><span class="profile-toggle" aria-hidden="true">+</span></summary>
+                    <div class="conference-person__bio">A native of Mississippi, Janet S. Durden has been President of
                         United Way of
                         Northeast
                         Louisiana since 1985 and with United Way for a total of 40 years. Under Durden’s leadership,
@@ -1085,22 +780,18 @@
                         and lives
                         with her husband and their two daughters in Kansas City. Bob has three children, and they enjoy
                         their four
-                        grandchildren. Janet and Bob are active members at First Baptist Church in West Monroe.
-                    </div>
-                </div>
+                        grandchildren. Janet and Bob are active members at First Baptist Church in West Monroe.</div>
+                </details>
             </article>
-            <article class="postcard light green">
-                <a class="postcard__img_link" href="#">
-                    <img class="postcard__img"
-                         src="{% static 'conference/annual/Louisiana/LouisianaTechUniversity/Kristopher-Kelley.jpg' %}"
-                         alt="Image Title"/>
-                </a>
-                <div class="postcard__text t-dark">
-                    <h1 class="postcard__title green"><a href="#">Kristopher Kelley</a></h1>
-                    <div class="postcard__subtitle small">
-                    </div>
-                    <div class="postcard__bar"></div>
-                    <div class="postcard__preview-txt">Kristopher Kelley serves as the Executive Director for the West
+            <article class="conference-person">
+                <div class="conference-person__identity">
+                    <img class="conference-person__portrait" src="{% static 'conference/annual/Louisiana/LouisianaTechUniversity/Kristopher-Kelley.jpg' %}" alt="Kristopher Kelley" loading="lazy">
+                    <div><h3 class="conference-person__name">Kristopher Kelley</h3></div>
+                </div>
+                <p class="conference-person__intro">Kristopher Kelley serves as the Executive Director for the West Monroe-West Ouachita Chamber of Commerce, Main Street Assistant Manager for Columbia, and is a small business owner.</p>
+                <details class="conference-person__details">
+                    <summary><span class="profile-read">Read biography</span><span class="profile-close">Close biography</span><span class="profile-toggle" aria-hidden="true">+</span></summary>
+                    <div class="conference-person__bio">Kristopher Kelley serves as the Executive Director for the West
                         Monroe-West
                         Ouachita
                         Chamber of Commerce, Main Street Assistant Manager for Columbia, and is a small business owner.
@@ -1120,23 +811,18 @@
                         in our region. Kelley is passionate about workforce development for our region, the role the
                         arts play in
                         developing quality citizens, historic preservation, and celebrating the natural diversity of
-                        Louisiana.
-                    </div>
-                </div>
+                        Louisiana.</div>
+                </details>
             </article>
-            <article class="postcard light yellow">
-                <a class="postcard__img_link" href="#">
-                    <img class="postcard__img"
-                         src="{% static 'conference/annual/Louisiana/LouisianaTechUniversity/Reginald-Owens.jpg' %}"
-                         alt="Image Title"/>
-                </a>
-                <div class="postcard__text t-dark">
-                    <h1 class="postcard__title yellow"><a href="#">Dr. Reginald Owens</a></h1>
-                    <div class="postcard__subtitle small">
-
-                    </div>
-                    <div class="postcard__bar"></div>
-                    <div class="postcard__preview-txt">Dr. Reginald Owens is the retired chairman of the department of
+            <article class="conference-person">
+                <div class="conference-person__identity">
+                    <img class="conference-person__portrait" src="{% static 'conference/annual/Louisiana/LouisianaTechUniversity/Reginald-Owens.jpg' %}" alt="Dr. Reginald Owens" loading="lazy">
+                    <div><h3 class="conference-person__name">Dr. Reginald Owens</h3></div>
+                </div>
+                <p class="conference-person__intro">Dr. Reginald Owens is the retired chairman of the department of journalism at Louisiana Tech University where he held the F.</p>
+                <details class="conference-person__details">
+                    <summary><span class="profile-read">Read biography</span><span class="profile-close">Close biography</span><span class="profile-toggle" aria-hidden="true">+</span></summary>
+                    <div class="conference-person__bio">Dr. Reginald Owens is the retired chairman of the department of
                         journalism at
                         Louisiana
                         Tech University where he held the F. Jay Taylor Endowed Chair of Journalism.
@@ -1156,22 +842,18 @@
                         also taught
                         at Grambling State University and in Austin, Texas at Huston-Tillotson University, Austin
                         Community College
-                        and the University of Texas.
-                    </div>
-                </div>
+                        and the University of Texas.</div>
+                </details>
             </article>
-            <article class="postcard light blue">
-                <a class="postcard__img_link" href="#">
-                    <img class="postcard__img"
-                         src="{% static 'conference/annual/Louisiana/LouisianaTechUniversity/Tory-Smith.jpg' %}"
-                         alt="Image Title"/>
-                </a>
-                <div class="postcard__text t-dark">
-                    <h1 class="postcard__title blue"><a href="#">Tory Smith</a></h1>
-                    <div class="postcard__subtitle small">
-                    </div>
-                    <div class="postcard__bar"></div>
-                    <div class="postcard__preview-txt">Tory Smith is an Onboarding/Delivery Manager at IBM Monroe Client
+            <article class="conference-person">
+                <div class="conference-person__identity">
+                    <img class="conference-person__portrait" src="{% static 'conference/annual/Louisiana/LouisianaTechUniversity/Tory-Smith.jpg' %}" alt="Tory Smith" loading="lazy">
+                    <div><h3 class="conference-person__name">Tory Smith</h3></div>
+                </div>
+                <p class="conference-person__intro">Tory Smith is an Onboarding/Delivery Manager at IBM Monroe Client Innovation Center located in Monroe.</p>
+                <details class="conference-person__details">
+                    <summary><span class="profile-read">Read biography</span><span class="profile-close">Close biography</span><span class="profile-toggle" aria-hidden="true">+</span></summary>
+                    <div class="conference-person__bio">Tory Smith is an Onboarding/Delivery Manager at IBM Monroe Client
                         Innovation
                         Center
                         located in Monroe. She is a native Shreveport. Throughout her career, she has dedicated time,
@@ -1186,33 +868,31 @@
                         supporting employee
                         engagement endeavors which include community action and volunteering as IBM believes in giving
                         back to the
-                        communities in which they reside.
-                    </div>
-                </div>
+                        communities in which they reside.</div>
+                </details>
             </article>
+</div>
 
         </div>
     </section>
 
-    <section class="light">
+    <section class="conference-people">
         <div class="container py-5 mt-4">
             <div class="col-md-12 text-center">
 
-                <h1 class="big-heading text-uppercase">UNSUNG HEROS</h1>
+                <span class="th-section-kicker">CONFERENCE VOICES</span><h2 class="th-section-title">UNSUNG HEROS</h2>
             </div>
 
-            <article class="postcard light blue">
-                <a class="postcard__img_link" href="#">
-                    <img class="postcard__img"
-                         src="{% static 'conference/annual/Louisiana/LouisianaTechUniversity/Brenda-Dupree.jpg' %}"
-                         alt="Image Title"/>
-                </a>
-                <div class="postcard__text t-dark">
-                    <h1 class="postcard__title blue"><a href="#">Brenda Dupree</a></h1>
-                    <div class="postcard__subtitle small">
-                    </div>
-                    <div class="postcard__bar"></div>
-                    <div class="postcard__preview-txt">In her nomination, Brenda Dupree is described as one of the
+            <div class="conference-people__grid">
+<article class="conference-person">
+                <div class="conference-person__identity">
+                    <img class="conference-person__portrait" src="{% static 'conference/annual/Louisiana/LouisianaTechUniversity/Brenda-Dupree.jpg' %}" alt="Brenda Dupree" loading="lazy">
+                    <div><h3 class="conference-person__name">Brenda Dupree</h3></div>
+                </div>
+                <p class="conference-person__intro">In her nomination, Brenda Dupree is described as one of the hidden treasures of North Central Louisiana.</p>
+                <details class="conference-person__details">
+                    <summary><span class="profile-read">Read biography</span><span class="profile-close">Close biography</span><span class="profile-toggle" aria-hidden="true">+</span></summary>
+                    <div class="conference-person__bio">In her nomination, Brenda Dupree is described as one of the
                         hidden treasures
                         of North Central Louisiana. An active member of her church, sorority, and the NAACP, she leads
                         the charge in
@@ -1234,22 +914,18 @@
                         programming or simply
                         serving as a mentor. A force of nature, Dupree lives a life committed to advocacy and service
                         for those around
-                        her.
-                    </div>
-                </div>
+                        her.</div>
+                </details>
             </article>
-            <article class="postcard light red">
-                <a class="postcard__img_link" href="#">
-                    <img class="postcard__img"
-                         src="{% static 'conference/annual/Louisiana/LouisianaTechUniversity/Bobby-Mounts-headshot.jpg' %}"
-                         alt="Image Title"/>
-                </a>
-                <div class="postcard__text t-dark">
-                    <h1 class="postcard__title red"><a href="#">Bobby Mounts</a></h1>
-                    <div class="postcard__subtitle small">
-                    </div>
-                    <div class="postcard__bar"></div>
-                    <div class="postcard__preview-txt">While you could start with the fact that valiantly Bobby Mounts
+            <article class="conference-person">
+                <div class="conference-person__identity">
+                    <img class="conference-person__portrait" src="{% static 'conference/annual/Louisiana/LouisianaTechUniversity/Bobby-Mounts-headshot.jpg' %}" alt="Bobby Mounts" loading="lazy">
+                    <div><h3 class="conference-person__name">Bobby Mounts</h3></div>
+                </div>
+                <p class="conference-person__intro">While you could start with the fact that valiantly Bobby Mounts served his country as a Marine, he is recognized today for how he has chosen to live his life as a civilian and businessman.</p>
+                <details class="conference-person__details">
+                    <summary><span class="profile-read">Read biography</span><span class="profile-close">Close biography</span><span class="profile-toggle" aria-hidden="true">+</span></summary>
+                    <div class="conference-person__bio">While you could start with the fact that valiantly Bobby Mounts
                         served his
                         country as a Marine, he is recognized today for how he has chosen to live his life as a civilian
                         and
@@ -1274,22 +950,18 @@
                         consistent gift. Whether mentoring college students or volunteering with 4-H, Mounts is a
                         warrior with a
                         sterling heart for service that represents “paying it forward” in the finest sense of the
-                        expression.
-                    </div>
-                </div>
+                        expression.</div>
+                </details>
             </article>
-            <article class="postcard light green">
-                <a class="postcard__img_link" href="#">
-                    <img class="postcard__img"
-                         src="{% static 'conference/annual/Louisiana/LouisianaTechUniversity/Michelle-Tarpley.jpeg' %}"
-                         alt="Image Title"/>
-                </a>
-                <div class="postcard__text t-dark">
-                    <h1 class="postcard__title green"><a href="#">Michelle Tarpley</a></h1>
-                    <div class="postcard__subtitle small">
-                    </div>
-                    <div class="postcard__bar"></div>
-                    <div class="postcard__preview-txt">When the unthinkable happened on April 25, 2019, Michelle Tarpley
+            <article class="conference-person">
+                <div class="conference-person__identity">
+                    <img class="conference-person__portrait" src="{% static 'conference/annual/Louisiana/LouisianaTechUniversity/Michelle-Tarpley.jpeg' %}" alt="Michelle Tarpley" loading="lazy">
+                    <div><h3 class="conference-person__name">Michelle Tarpley</h3></div>
+                </div>
+                <p class="conference-person__intro">When the unthinkable happened on April 25, 2019, Michelle Tarpley transformed into an angel for countless individuals throughout the community.</p>
+                <details class="conference-person__details">
+                    <summary><span class="profile-read">Read biography</span><span class="profile-close">Close biography</span><span class="profile-toggle" aria-hidden="true">+</span></summary>
+                    <div class="conference-person__bio">When the unthinkable happened on April 25, 2019, Michelle Tarpley
                         transformed
                         into an angel for countless individuals throughout the community. As the sun came up the very
                         next day, she
@@ -1311,22 +983,18 @@
                         loved one. A
                         resident of Ruston, Tarpley is known as a true caregiver who never meets a stranger and lives
                         her life daily
-                        with the goal of making someone else’s life better.
-                    </div>
-                </div>
+                        with the goal of making someone else’s life better.</div>
+                </details>
             </article>
-            <article class="postcard light yellow">
-                <a class="postcard__img_link" href="#">
-                    <img class="postcard__img"
-                         src="{% static 'conference/annual/Louisiana/LouisianaTechUniversity/Jackie-White.png' %}"
-                         alt="Image Title"/>
-                </a>
-                <div class="postcard__text t-dark">
-                    <h1 class="postcard__title yellow"><a href="#">Jackie White</a></h1>
-                    <div class="postcard__subtitle small">
-                    </div>
-                    <div class="postcard__bar"></div>
-                    <div class="postcard__preview-txt">Jackie White works tirelessly for the community as director of
+            <article class="conference-person">
+                <div class="conference-person__identity">
+                    <img class="conference-person__portrait" src="{% static 'conference/annual/Louisiana/LouisianaTechUniversity/Jackie-White.png' %}" alt="Jackie White" loading="lazy">
+                    <div><h3 class="conference-person__name">Jackie White</h3></div>
+                </div>
+                <p class="conference-person__intro">Jackie White works tirelessly for the community as director of the Lincoln Parish Health Hut where she strives daily to bring the very best health care to those who may be struggling with how to pay for their care.</p>
+                <details class="conference-person__details">
+                    <summary><span class="profile-read">Read biography</span><span class="profile-close">Close biography</span><span class="profile-toggle" aria-hidden="true">+</span></summary>
+                    <div class="conference-person__bio">Jackie White works tirelessly for the community as director of
                         the Lincoln
                         Parish Health Hut where she strives daily to bring the very best health care to those who may be
                         struggling
@@ -1348,22 +1016,18 @@
                         young women
                         who want to have careers in medicine while also having a family and living a life of purpose
                         while practicing
-                        selflessness through service.
-                    </div>
-                </div>
+                        selflessness through service.</div>
+                </details>
             </article>
-            <article class="postcard light blue">
-                <a class="postcard__img_link" href="#">
-                    <img class="postcard__img"
-                         src="{% static 'conference/annual/Louisiana/LouisianaTechUniversity/Adarian-Williams-headshot.jpg' %}"
-                         alt="Image Title"/>
-                </a>
-                <div class="postcard__text t-dark">
-                    <h1 class="postcard__title blue"><a href="#">Adarian Williams</a></h1>
-                    <div class="postcard__subtitle small">
-                    </div>
-                    <div class="postcard__bar"></div>
-                    <div class="postcard__preview-txt">While a student at Grambling State University, Adarian Williams
+            <article class="conference-person">
+                <div class="conference-person__identity">
+                    <img class="conference-person__portrait" src="{% static 'conference/annual/Louisiana/LouisianaTechUniversity/Adarian-Williams-headshot.jpg' %}" alt="Adarian Williams" loading="lazy">
+                    <div><h3 class="conference-person__name">Adarian Williams</h3></div>
+                </div>
+                <p class="conference-person__intro">While a student at Grambling State University, Adarian Williams distinguished himself through his active role in various organizations before going on to serve in various capacities in Washington DC, including as an Organizing Fellow for the Campaign of President Joe Biden.</p>
+                <details class="conference-person__details">
+                    <summary><span class="profile-read">Read biography</span><span class="profile-close">Close biography</span><span class="profile-toggle" aria-hidden="true">+</span></summary>
+                    <div class="conference-person__bio">While a student at Grambling State University, Adarian Williams
                         distinguished
                         himself through his active role in various organizations before going on to serve in various
                         capacities in
@@ -1387,14 +1051,27 @@
                         collaborate with
                         others to achieve a shared vision while remaining fully committed to giving back to this
                         community he calls
-                        home.
-                    </div>
-                </div>
+                        home.</div>
+                </details>
             </article>
+</div>
         </div>
     </section>
 
-    <script src="https://kit.fontawesome.com/f8cd4d7fce.js" crossorigin="anonymous"></script>
-
-
+    <!-- Return Callout -->
+    <div class="container pb-5">
+        <div class="p-4 text-center rounded-3 border bg-white shadow-sm mt-4">
+            <h5 class="fw-bold text-dark mb-2">Explore More Conference Chapters</h5>
+            <p class="text-muted mb-3 fs-6">Discover records and proceedings from other Let Us Dream annual community conferences.</p>
+            <div class="d-flex flex-wrap justify-content-center gap-2">
+                <a href="{% url 'annual-conference-past' %}" class="btn-th-card-solid px-4">
+                    <i class="fas fa-archive me-2"></i>Past Conferences Archive
+                </a>
+                <a href="{% url 'annualConference' %}" class="btn btn-outline-primary rounded-pill px-4" style="font-weight: 700;">
+                    <i class="fas fa-calendar-alt me-2"></i>Upcoming 2026 Conferences
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}

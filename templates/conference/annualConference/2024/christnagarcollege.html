@@ -2,243 +2,348 @@
 {% load static %}
 
 {% block title %}
-    Christ Nagar College, Trivandrum
-{% endblock %}
+Christ Nagar College, Trivandrum — Annual Community Conference 2024 – Let Us Dream
+{% endblock title %}
+
+{% block meta_description %}
+Official conference proceedings, organizing committees, and documentation for the Let Us Dream International Conference 2024 at Christ Nagar College, Trivandrum.
+{% endblock meta_description %}
+
+{% block breadcrumb_section %}{% endblock %}
 
 {% block extraStyles %}
+<link rel="stylesheet" href="{% static 'css/new/triennial-hub.css' %}">
+<style>
+    .conf-hero {
+        background: linear-gradient(135deg, #071E3D 0%, #0F3D7A 60%, #1A4D8C 100%);
+        color: #ffffff;
+        padding: 3.5rem 0 3.5rem 0;
+        position: relative;
+        overflow: hidden;
+    }
+    .conf-hero::before {
+        content: '';
+        position: absolute;
+        top: -30%;
+        right: -10%;
+        width: 500px;
+        height: 500px;
+        background: radial-gradient(circle, rgba(115, 183, 43, 0.22) 0%, transparent 70%);
+        border-radius: 50%;
+        pointer-events: none;
+    }
+    .conf-stat-chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.45rem 1rem;
+        background: rgba(255, 255, 255, 0.12);
+        border: 1px solid rgba(255, 255, 255, 0.22);
+        border-radius: 50px;
+        font-size: 0.82rem;
+        font-weight: 600;
+        color: #ffffff;
+        backdrop-filter: blur(8px);
+    }
+    .conf-card {
+        background: #ffffff;
+        border: 1px solid #E2E8F0;
+        border-radius: 18px;
+        padding: 1.75rem;
+        box-shadow: 0 4px 16px rgba(15, 23, 42, 0.05);
+        height: 100%;
+    }
+    .conf-doc-icon {
+        width: 44px;
+        height: 44px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+        flex-shrink: 0;
+    }
+    .conf-frame {
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 8px 24px rgba(15, 23, 42, 0.1);
+        border: 1px solid #CBD5E1;
+        background: #ffffff;
+    }
+    .comm-table th {
+        background: #0C52A1;
+        color: #ffffff;
+        font-weight: 600;
+        padding: 0.85rem 1rem;
+    }
+    .comm-table td {
+        padding: 0.75rem 1rem;
+        font-size: 0.88rem;
+        border-bottom: 1px solid #F1F5F9;
+    }
+    .comm-role {
+        font-weight: 700;
+        color: #0F172A;
+        width: 38%;
+        background-color: #F8FAFC;
+    }
+</style>
 {% endblock extraStyles %}
 
-
-{% block links %}
-{% endblock links %}
-
-
 {% block content %}
-
-    <nav aria-label="breadcrumb animated slideInDown" class="cus-breadcrumb">
-        <ol class="breadcrumb text-uppercase mb-0 bg-white">
-            <li class="breadcrumb-item"><a class="text-black text-decoration-none" href="{% url 'main' %}">Home</a></li>
-            <li class="breadcrumb-item"><a class="text-black text-decoration-none">Conferences</a></li>
-            <li class="breadcrumb-item"><a class="text-black text-decoration-none"
-                                           href="{% url 'annualConference' %}">Annual Conference</a></li>
-            <li class="breadcrumb-item  active" aria-current="page">Christ Nagar College, Trivandrum</li>
-        </ol>
-    </nav>
-
-    <h1 class="mb-4  fw-bold text-center fs-1 text-green text-uppercase heading-h3 mt-5">
-        Christ Nagar College, Trivandrum
-    </h1>
-
-    <div class="container mb-5">
-        <div class="row">
-            <div class="col-12 text-center fs-5">
-                Let Us Dream International Conference on
+<div class="triennial-wrapper">
+    <!-- HERO SECTION -->
+    <section class="conf-hero">
+        <div class="container position-relative" style="z-index: 2;">
+            <div class="d-flex flex-wrap align-items-center gap-2 mb-3">
+                <a href="{% url 'annual-conference-past' %}" class="btn btn-sm btn-outline-light rounded-pill px-3 py-1" style="font-size: 0.8rem;">
+                    <i class="fas fa-arrow-left me-1"></i>Back to Past Conferences Archive
+                </a>
+                <span class="badge rounded-pill px-3 py-1" style="background: rgba(163, 230, 53, 0.2); border: 1px solid rgba(163, 230, 53, 0.4); color: #BEF264; font-size: 0.75rem; font-weight: 700;">
+                    <i class="fas fa-history me-1"></i>2024 ANNUAL COMMUNITY CONFERENCE
+                </span>
+                <span class="badge rounded-pill px-3 py-1" style="background: rgba(255, 255, 255, 0.15); border: 1px solid rgba(255, 255, 255, 0.3); color: #ffffff; font-size: 0.75rem; font-weight: 600;">
+                    <i class="fas fa-map-marker-alt me-1"></i>TRIVANDRUM • KERALA
+                </span>
             </div>
 
+            <h1 class="h2 h1-lg fw-bold text-white mb-2" style="font-family: 'Outfit', sans-serif;">
+                Christ Nagar College Conference
+            </h1>
+            <p class="text-white-50 fs-6 mb-4" style="max-width: 820px;">
+                Theme: <strong class="text-white">Sustainable Synergies: Building Resilient Communities through Collective Effort</strong> — Uniting academia, NGOs, and students for impactful community development.
+            </p>
 
-
-
-
-            <div class="col-12 text-center fw-bolder fs-2 py-3">
-                Sustainable Synergies: Building Resilient Communities through Collective Effort
-            </div>
-            <div class="col-12 text-center fs-5">
-                <i class="fa-solid fa-location-dot"></i> Christ Nagar College, Mranalloor, Trivandrum |
-                <i class="fa-solid fa-calendar-days"></i> November 16 2024
-            </div>
-            <div class="w-400 text-center mt-3">
-            <img src="{% static 'conference/annual/Trivandrum/christnagarcollege/annual conf.png' %}" class="img-fluid" alt="lud Conference">
-        </div>
-        </div>
-
-        <div class="row m-0 mt-5">
-            <div class="mb-3 text-center border p-2">
-                <div class="fw-bold mb-2">
-                    College to host event of Sustainable Living
+            <div class="d-flex flex-wrap gap-2">
+                <div class="conf-stat-chip">
+                    <i class="fas fa-calendar-day text-warning"></i>
+                    <span>November 16, 2024</span>
                 </div>
-                <div>
-                    <a href="https://timesofindia.indiatimes.com/city/thiruvananthapuram/join-christ-nagar-colleges-let-us-dream-conference-for-sustainable-living/articleshow/115228897.cms"
-                       target="_blank"
-                       class="text-decoration-none">
-                        <i class="fa-solid fa-up-right-from-square"></i>
-                        Read More at Times of India
+                <div class="conf-stat-chip">
+                    <i class="fas fa-university text-info"></i>
+                    <span>Christ Nagar College, Maranalloor, Trivandrum</span>
+                </div>
+                <div class="conf-stat-chip">
+                    <i class="fas fa-leaf text-success"></i>
+                    <span>Sustainable Living & Ecological Synergies</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STICKY BREADCRUMB STRIP -->
+    <div class="th-subnav-bar">
+        <div class="container-fluid px-2 px-md-4">
+            {% if breadcrumbs %}
+            <div class="th-sticky-breadcrumb-strip">
+                <nav aria-label="breadcrumb">
+                    <ol class="th-breadcrumb-minimal">
+                        {% for breadcrumb in breadcrumbs %}
+                            {% if not breadcrumb.active %}
+                                <li class="th-breadcrumb-item">
+                                    {% if breadcrumb.url %}
+                                        <a href="{% url breadcrumb.url %}">
+                                            <i class="{{ breadcrumb.icon }} me-1"></i>{{ breadcrumb.name }}
+                                        </a>
+                                    {% else %}
+                                        <span><i class="{{ breadcrumb.icon }} me-1"></i>{{ breadcrumb.name }}</span>
+                                    {% endif %}
+                                </li>
+                                <li class="th-breadcrumb-sep">/</li>
+                            {% else %}
+                                <li class="th-breadcrumb-item active">
+                                    <i class="{{ breadcrumb.icon }} me-1"></i>{{ breadcrumb.name }}
+                                </li>
+                            {% endif %}
+                        {% endfor %}
+                    </ol>
+                </nav>
+                <div class="d-none d-sm-flex align-items-center gap-2 text-muted" style="font-size: 0.74rem;">
+                    <a href="{% url 'annual-conference-past' %}" class="btn btn-sm btn-outline-primary rounded-pill px-3 py-1" style="font-size: 0.75rem;">
+                        <i class="fas fa-arrow-left me-1"></i>Past Conferences Archive
+                    </a>
+                    <a href="{% url 'annualConference' %}" class="btn btn-sm btn-outline-secondary rounded-pill px-3 py-1" style="font-size: 0.75rem;">
+                        <i class="fas fa-calendar-alt me-1"></i>Annual Hub
+                    </a>
+                </div>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+
+    <!-- EVENT DETAILS & POSTER -->
+    <section class="th-section py-5">
+        <div class="container">
+            <!-- News Spotlight Banner -->
+            <div class="conf-card mb-4" style="background: linear-gradient(135deg, #F0FDF4 0%, #DCFCE7 100%); border-color: #86EFAC;">
+                <div class="d-flex flex-wrap align-items-center justify-content-between gap-3">
+                    <div class="d-flex align-items-center gap-3">
+                        <div class="conf-doc-icon bg-success text-white shadow-sm">
+                            <i class="fas fa-newspaper"></i>
+                        </div>
+                        <div>
+                            <span class="badge bg-success-subtle text-success border border-success-subtle rounded-pill mb-1 fw-bold" style="font-size: 0.72rem;">TIMES OF INDIA SPOTLIGHT</span>
+                            <h5 class="h6 fw-bold mb-1 text-dark">Join Christ Nagar College's Let Us Dream Conference for Sustainable Living</h5>
+                            <p class="text-muted small mb-0">Feature report on the Trivandrum conference bringing together global leaders and local communities.</p>
+                        </div>
+                    </div>
+                    <a href="https://timesofindia.indiatimes.com/city/thiruvananthapuram/join-christ-nagar-colleges-let-us-dream-conference-for-sustainable-living/articleshow/115228897.cms" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-success rounded-pill px-4 py-2 fw-semibold">
+                        <i class="fas fa-external-link-alt me-1"></i>Read at Times of India
+                    </a>
+                </div>
+            </div>
+
+            <!-- Poster and Overview -->
+            <div class="row g-4 mb-5 align-items-center">
+                <div class="col-lg-5 text-center">
+                    <div class="conf-frame p-2">
+                        <img src="{% static 'conference/annual/Trivandrum/christnagarcollege/annual conf.png' %}" class="img-fluid rounded" alt="Christ Nagar College Conference Poster">
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="conf-card">
+                        <span class="badge bg-primary text-white mb-2" style="font-size: 0.75rem;">CONFERENCE SCOPE</span>
+                        <h3 class="h4 fw-bold text-dark mb-3">Sustainable Synergies</h3>
+                        <p class="text-muted mb-4">
+                            The conference highlighted key areas including health, education, and social sustainability, emphasizing practical community engagement, wetland conservation, and inter-organizational learning.
+                        </p>
+                        <div class="d-flex flex-column gap-2 mb-4">
+                            <div class="d-flex align-items-center gap-2 text-dark">
+                                <i class="fas fa-check-circle text-success"></i>
+                                <span>Collaborative panels bridging non-profits, student volunteers, and researchers</span>
+                            </div>
+                            <div class="d-flex align-items-center gap-2 text-dark">
+                                <i class="fas fa-check-circle text-success"></i>
+                                <span>Multi-stakeholder workshops on sustainable living and ecosystem preservation</span>
+                            </div>
+                            <div class="d-flex align-items-center gap-2 text-dark">
+                                <i class="fas fa-check-circle text-success"></i>
+                                <span>Inter-departmental student leadership across 8 specialized working committees</span>
+                            </div>
+                        </div>
+                        <a href="{% static '2024/Conference/bulletin/LUD CONFERENCE TRIVANDRUM.pdf' %}" target="_blank" class="btn btn-primary rounded-pill px-4 py-2 fw-semibold">
+                            <i class="fas fa-file-pdf me-2"></i>Download Conference Bulletin PDF
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- COMMITTEES -->
+            <div class="th-section-header mt-4">
+                <span class="th-section-kicker">LEADERSHIP & ORGANIZING TEAM</span>
+                <h2 class="th-section-title">Conference Leadership & Committees</h2>
+                <p class="th-section-lead">The faculty, institutional chairs, and student coordinators behind the 2024 Trivandrum conference.</p>
+            </div>
+
+            <div class="row g-4 mb-5">
+                <div class="col-lg-6">
+                    <div class="conf-card p-0 overflow-hidden">
+                        <div class="p-3 bg-primary text-white fw-bold d-flex align-items-center gap-2">
+                            <i class="fas fa-user-tie"></i>Conference Chairs & Coordinators
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table comm-table mb-0">
+                                <tbody>
+                                    <tr>
+                                        <td class="comm-role">College Chair</td>
+                                        <td>Fr Cyriac Madathil CMI</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="comm-role">LUD Chair</td>
+                                        <td>Jimmy Manuel (Haemophilia Federation India)</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="comm-role">NGO Chair</td>
+                                        <td>Thomas Lawrence (Save Wetlands International Movement)</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="comm-role">Student Chair</td>
+                                        <td>B R Krishnanunni</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="comm-role" rowspan="2">Faculty Coordinators</td>
+                                        <td>Vinod MS (Dept of Commerce)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Deepthi Rani (Dept of Computer Science & Application)</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="conf-card p-0 overflow-hidden">
+                        <div class="p-3 bg-success text-white fw-bold d-flex align-items-center gap-2">
+                            <i class="fas fa-users-cog"></i>Sub-Committee Heads
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table comm-table mb-0">
+                                <tbody>
+                                    <tr>
+                                        <td class="comm-role">Registration</td>
+                                        <td>VS Anoop Krishna (Dept of Statistics)</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="comm-role">Cultural</td>
+                                        <td>BS Aparna (BCom CA)</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="comm-role">Marketing</td>
+                                        <td>Amrita Santhosh (BBA)</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="comm-role">Media</td>
+                                        <td>Gowri Shivani (BJMC) &amp; Abhinav Rajeev (BCA)</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="comm-role">Stage Management</td>
+                                        <td>BS Aparna &amp; Aswathy Devi (BCom CA)</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="comm-role">Food &amp; Stall</td>
+                                        <td>Vaisakh S Raj (BCA) &amp; Amal HS (BCom CA)</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="comm-role">Documentation</td>
+                                        <td>Adyuth S Prem &amp; Abhirami S (Dept of English)</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="comm-role">Panel Committee</td>
+                                        <td>Ananthu Sasi (MSW), Shivani (BCom CA), Anto B George (BCA)</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BULLETIN PDF VIEWER -->
+            <div class="th-section-header">
+                <span class="th-section-kicker">CONFERENCE DOCUMENTATION</span>
+                <h2 class="th-section-title">Official Conference Bulletin</h2>
+                <p class="th-section-lead">Read the full proceedings and research papers in the digital viewer below.</p>
+            </div>
+            <div class="conf-frame mb-5">
+                <iframe src="{% static '2024/Conference/bulletin/LUD CONFERENCE TRIVANDRUM.pdf' %}" width="100%" height="750px" style="border: none;"></iframe>
+            </div>
+
+            <!-- Return Callout -->
+            <div class="p-4 text-center rounded-3 border bg-white shadow-sm mt-4">
+                <h5 class="fw-bold text-dark mb-2">Explore More Conference Chapters</h5>
+                <p class="text-muted mb-3 fs-6">Discover records and proceedings from other Let Us Dream annual community conferences.</p>
+                <div class="d-flex flex-wrap justify-content-center gap-2">
+                    <a href="{% url 'annual-conference-past' %}" class="btn-th-card-solid px-4">
+                        <i class="fas fa-archive me-2"></i>Past Conferences Archive
+                    </a>
+                    <a href="{% url 'annualConference' %}" class="btn btn-outline-primary rounded-pill px-4" style="font-weight: 700;">
+                        <i class="fas fa-calendar-alt me-2"></i>Upcoming 2026 Conferences
                     </a>
                 </div>
             </div>
         </div>
-
-        <div class="row py-5">
-            <div class="col-sm-12 col-md-6">
-                <table class="table table-hover">
-                    <tr>
-                        <td colspan="2" class="fw-bolder bg-success text-white fs-4">
-                            Chairs
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            College
-                        </td>
-                        <td>
-                            Fr Cyriac Madathil CMI
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            LUD
-                        </td>
-                        <td>
-                            Jimmy Manuel (Haemophilia Federation India)
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            NGO
-                        </td>
-                        <td>
-                            Thomas Lawrence (Save Wetlands International Movement)
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Student
-                        </td>
-                        <td>
-                            B R Krishnanunni
-                        </td>
-                    </tr>
-                    <tr>
-                        <td rowspan="2">
-                            Faculty Coordinators
-                        </td>
-                        <td>
-                            Vinod MS (Dept of Commerce)
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Deepthi Rani (Dept of Computer Science and Application)
-                        </td>
-                    </tr>
-                </table>
-            </div>
-            <div class="col-sm-12 col-md-6">
-                <table class="table table-hover">
-                    <tr>
-                        <td colspan="2" class="fw-bolder bg-success text-white fs-4">
-                            Sub-Committee Heads
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Registration
-                        </td>
-                        <td>
-                            VS Anoop Krishna [Dept of Statistics]
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Cultural
-                        </td>
-                        <td>
-                            BS Aparna [Bcom CA]
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Marketing
-                        </td>
-                        <td>
-                            Amrita Santhosh [BBA]
-                        </td>
-                    </tr>
-                    <tr>
-                        <td rowspan="2">
-                            Media
-                        </td>
-                        <td>
-                            Gowri Shivani [Dept of Media-BJMC]
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Abhinav Rajeev [BCA]
-                        </td>
-                    </tr>
-                    <tr>
-                        <td rowspan="2">
-                            Stage Management
-                        </td>
-                        <td>
-                            BS Aparna [Bcom CA]
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Aswathy Devi [ Bcom CA]
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Food Committee
-                        </td>
-                        <td>
-                            Vaisakh S Raj [BCA]
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Stall committee
-                        </td>
-                        <td>
-                            Amal HS [Bcom CA]
-                        </td>
-                    </tr>
-                    <tr>
-                        <td rowspan="2">
-                            Documentation
-                        </td>
-                        <td>
-                            Adyuth S Prem [Dept of English]
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Abhirami S [Dept of English]
-                        </td>
-                    </tr>
-                    <tr>
-                        <td rowspan="3">
-                            Panel Committee
-                        </td>
-                        <td>
-                            Ananthu Sasi [MSW]
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Shivani [Bcom CA]
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Anto B George [BCA]
-                        </td>
-                    </tr>
-                </table>
-            </div>
-        </div>
-
-        <div class="container">
-            <div class="mt-5 mb-5 text-center">
-                <div class="fw-bold mb-3">
-                    LUD Annual Conference Bulletin
-                </div>
-                <iframe src="{% static '2024/Conference/bulletin/LUD CONFERENCE TRIVANDRUM.pdf' %}" width="100%" height="700px">
-            </div>
-        </div>
-
-    </div>
-
-{% endblock %}
+    </section>
+</div>
+{% endblock content %}

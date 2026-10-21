@@ -2,330 +2,485 @@
 {% load static %}
 
 {% block title %}
-    St.Annes Degree College
-{% endblock %}
+St. Anne's Degree College for Women — Annual Community Conference 2019 – Let Us Dream
+{% endblock title %}
+
+{% block meta_description %}
+Official conference proceedings, posters, and documentation for the Let Us Dream Annual Community Conference 2019 at St. Anne's Degree College for Women, Halasuru, Bengaluru.
+{% endblock meta_description %}
+
+{% block breadcrumb_section %}{% endblock %}
 
 {% block extraStyles %}
-
-    <link rel="stylesheet" href="{% static 'css/louisiana-tech-university.css' %}" type="text/css">
-    <link rel="stylesheet" href="{% static 'css/stannes-college.css' %}" type="text/css">
-    <!-- MDB -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.css" rel="stylesheet" type="text/css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
-          type="text/css">
-
+<link rel="stylesheet" href="{% static 'css/new/triennial-hub.css' %}">
+<link rel="stylesheet" href="{% static 'css/louisiana-tech-university.css' %}" type="text/css">
+<link rel="stylesheet" href="{% static 'css/stannes-college.css' %}" type="text/css">
+<link rel="stylesheet" href="{% static 'css/conference-profiles.css' %}">
+<style>
+    .st-hero {
+        background: linear-gradient(135deg, #071E3D 0%, #0F3D7A 60%, #1A4D8C 100%);
+        color: #ffffff;
+        padding: 3.5rem 0 3.5rem 0;
+        position: relative;
+        overflow: hidden;
+    }
+    .st-hero::before {
+        content: '';
+        position: absolute;
+        top: -30%;
+        right: -10%;
+        width: 500px;
+        height: 500px;
+        background: radial-gradient(circle, rgba(115, 183, 43, 0.22) 0%, transparent 70%);
+        border-radius: 50%;
+        pointer-events: none;
+    }
+    .st-hero::after {
+        content: '';
+        position: absolute;
+        bottom: -30%;
+        left: -10%;
+        width: 500px;
+        height: 500px;
+        background: radial-gradient(circle, rgba(12, 82, 161, 0.3) 0%, transparent 70%);
+        border-radius: 50%;
+        pointer-events: none;
+    }
+    .st-stat-chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.45rem 1rem;
+        background: rgba(255, 255, 255, 0.12);
+        border: 1px solid rgba(255, 255, 255, 0.22);
+        border-radius: 50px;
+        font-size: 0.82rem;
+        font-weight: 600;
+        color: #ffffff;
+        backdrop-filter: blur(8px);
+    }
+    .st-card {
+        background: #ffffff;
+        border: 1px solid #E2E8F0;
+        border-radius: 18px;
+        padding: 1.75rem;
+        box-shadow: 0 4px 16px rgba(15, 23, 42, 0.05);
+        height: 100%;
+    }
+    .st-download-card {
+        background: #F8FAFC;
+        border: 1px solid #E2E8F0;
+        border-radius: 14px;
+        padding: 1.25rem;
+        transition: all 0.2s ease;
+        margin-bottom: 1rem;
+    }
+    .st-download-card:hover {
+        background: #EEF4FC;
+        border-color: #0C52A1;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 16px rgba(12, 82, 161, 0.08);
+    }
+    .st-doc-icon {
+        width: 44px;
+        height: 44px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+        flex-shrink: 0;
+    }
+    .st-carousel-frame {
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 8px 24px rgba(15, 23, 42, 0.1);
+        border: 1px solid #E2E8F0;
+        background: #ffffff;
+    }
+    .st-meta-row {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.75rem;
+        padding: 0.65rem 0;
+        border-bottom: 1px solid #F1F5F9;
+        font-size: 0.88rem;
+    }
+    .st-meta-row:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+</style>
 {% endblock extraStyles %}
 
-
 {% block content %}
-
-    <nav aria-label="breadcrumb animated slideInDown" class="cus-breadcrumb">
-        <ol class="breadcrumb text-uppercase mb-0 bg-white">
-            <li class="breadcrumb-item"><a class="text-black text-decoration-none" href="{% url 'main' %}">Home</a></li>
-            <li class="breadcrumb-item"><a class="text-black text-decoration-none">Conferences</a></li>
-            <li class="breadcrumb-item"><a class="text-black text-decoration-none"
-                                           href="{% url 'annualConference' %}">Annual Conference</a></li>
-            <li class="breadcrumb-item  active" aria-current="page">St. Annes Degree College for Women Bangalore</li>
-        </ol>
-    </nav>
-
-    <h1 class="mb-4  fw-bold text-center fs-1 text-green text-uppercase heading-h3 mt-5">St. Annes Degree College
-        Conference
-    </h1>
-
-    <div class="container">
-
-        <div class="row py-5">
-            <div class="col-md-12">
-                <div class="main-timeline">
-                    <a href="#" class="timeline">
-                        <div class="timeline-icon"><i class="fa-solid fa-globe"></i></div>
-                        <div class="timeline-content">
-                            <h3 class="title">HISTORY</h3>
-                            <p class="description">
-                                Volunteers from the local community including business owners involved in voluntary
-                                community developmental projects, non-profit organizations, philanthropists, social
-                                workers,
-                                educators or educational administrators, retired personnel, students, or anyone
-                                interested
-                                in contributing to their community development can be a part of the conference and
-                                engage in
-                                fruitful dialogues with visionaries through the conference.
-                            </p>
-                        </div>
-                    </a>
-                    <a href="#" class="timeline">
-                        <div class="timeline-icon"><i class="fa-regular fa-lightbulb"></i></div>
-                        <div class="timeline-content">
-                            <h3 class="title pl-5">VISION</h3>
-                            <p class="description pl-5 ">
-                                Our Vision is to Empowered local communities for sustainable impact, improvement, Global
-                                Harmony (and Holistic Success).
-                            </p>
-                        </div>
-                    </a>
-                    <a href="#" class="timeline">
-                        <div class="timeline-icon"><i class="fa-solid fa-rocket"></i></div>
-                        <div class="timeline-content">
-                            <h3 class="title">GOAL</h3>
-                            <p class="description">
-                                The Let Us Dream Conference was established in 2017 for the purpose of providing a forum
-                                for
-                                sharing experiences with successes and challenges in community improvement organizations
-                                and
-                                efforts. Broad conference goals are to
-                            <ul>
-                                <li>Improve networking and collaboration among all those interested in community
-                                    improvement
-                                    organizations and programs.
-                                </li>
-                                <li>Promote volunteerism and empower all those involved in community improvement
-                                    organizations and initiatives, including employees, volunteers, post-secondary
-                                    students,
-                                    researchers, and practitioners.
-                                </li>
-                                <li>Create a professional learning organization dedicated to improving local communities
-                                    and
-                                    characterized by a culture of shared researcher and practitioner knowledge, skills,
-                                    theories, and best practices.
-                                </li>
-                            </ul>
-                            </p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="container">
-        <h1 class="text-center mt-5 pt-5">PAST CONFERENCES</h1>
-    </div>
-
-    <div class="container mt-5 pt-5 mb-5 pb-5">
-
-        <section class="timeline-wrapper  mt-5 pt-5 mb-5 pb-5">
-            <div class="middle-line"></div>
-
-            <div class="box box-top ">
-                <div class="date">
-                    <p>2022</p>
-
-                </div>
-                <div class="smal box-content">
-                    <a href="/ltstatic/conference/all/2022/St.%20Anne's%20Degree%20College%20for%20Women_Bangalore%202022.pdf"
-                       target="_blank" rel="noopener noreferrer"><img
-                            src="/ltstatic/conference/all/2022/2022Bangalore.png" class="w-100  rounded "/></a>
-
-                </div>
-            </div>
-        </section>
-    </div>
-
-
-    <section class="light">
-        <div class="container py-5 mt-4">
-            <div class="col-md-12 text-center">
-                <h1 class="big-heading text-uppercase">Conference Chairs</h1>
+<div class="triennial-wrapper">
+    <!-- HERO SECTION -->
+    <section class="st-hero">
+        <div class="container position-relative" style="z-index: 2;">
+            <div class="d-flex flex-wrap align-items-center gap-2 mb-3">
+                <a href="{% url 'annual-conference-past' %}" class="btn btn-sm btn-outline-light rounded-pill px-3 py-1" style="font-size: 0.8rem;">
+                    <i class="fas fa-arrow-left me-1"></i>Back to Past Conferences Archive
+                </a>
+                <span class="badge rounded-pill px-3 py-1" style="background: rgba(163, 230, 53, 0.2); border: 1px solid rgba(163, 230, 53, 0.4); color: #BEF264; font-size: 0.75rem; font-weight: 700;">
+                    <i class="fas fa-history me-1"></i>2019 ANNUAL COMMUNITY CONFERENCE
+                </span>
+                <span class="badge rounded-pill px-3 py-1" style="background: rgba(255, 255, 255, 0.15); border: 1px solid rgba(255, 255, 255, 0.3); color: #ffffff; font-size: 0.75rem; font-weight: 600;">
+                    <i class="fas fa-map-marker-alt me-1"></i>BENGALURU • INDIA
+                </span>
             </div>
 
-            <article class="postcard light blue">
-                <a class="postcard__img_link" href="#">
-                    <img class="postcard__img"
-                         src="{% static 'conference/annual/bangalore/stAnnesCollege/Jimmy C.jpg' %}"
-                         alt="Image Title"/>
-                </a>
-                <div class="postcard__text t-dark">
-                    <h1 class="postcard__title blue"><a href="#">Jimmy Cherian</a></h1>
-                    <div class="postcard__subtitle small">
+            <h1 class="h2 h1-lg fw-bold text-white mb-2" style="font-family: 'Outfit', sans-serif;">
+                St. Anne's Degree College for Women Conference
+            </h1>
+            <p class="text-white-50 fs-6 mb-4" style="max-width: 820px;">
+                Empowering local communities for sustainable impact, civic volunteering, and holistic women's leadership through grassroots dialogues and academic collaboration.
+            </p>
 
-                    </div>
-                    <div class="postcard__bar"></div>
-                    <div class="postcard__preview-txt">Jimmy Cherian is the President and Managing Trustee of Creating
-                        Futures, an NGO
-                        focused on skills development. He has been instrumental in the conceptualization and setting up
-                        of
-                        Creating Futures.
-                        <br>
-                        Prior to devoting his time completely to Creating Futures, Jimmy held various leadership roles
-                        in
-                        companies such as Volvo Group, Ciber, CapGemini, HP, and so on. His last position was as Global
-                        Head and Global Director of Emerging Technologies at Volvo IT. (Details of his corporate career
-                        are
-                        available at: <a class="text-decoration-none"
-                                         href="https://www.linkedin.com/in/jimmy-cherian-a3087316/"
-                                         target="_blank"> https://www.linkedin.com/in/jimmy-cherian-a3087316/</a>)
-                        <br>
-                        He is a leadership and life skills coach, corporate trainer, and facilitator. He has been
-                        actively
-                        involved in the social development sector in the areas of Education, Child Welfare, Tribal
-                        Development, Rural Development, Skill Development, etc. 
-                        <br>
-                        Creating Futures was born from his vision to ensure meaningful and sustainable employment for
-                        all -
-                        through the development of right skills. Under his leadership, Creating Futures has been able to
-                        make a difference in the lives of many students.
-
-
-                    </div>
-
+            <div class="d-flex flex-wrap gap-2">
+                <div class="st-stat-chip">
+                    <i class="fas fa-calendar-day text-warning"></i>
+                    <span>November 19, 2019</span>
                 </div>
-            </article>
-            <article class="postcard light red">
-                <a class="postcard__img_link" href="#">
-                    <img class="postcard__img"
-                         src="{% static 'conference/annual/bangalore/stAnnesCollege/Priya Krishnamurthy.jpg' %}"
-                         alt="Image Title"/>
-                </a>
-                <div class="postcard__text t-dark">
-                    <h1 class="postcard__title red"><a href="#">Priya Krishnamurthy</a></h1>
-                    <div class="postcard__subtitle small">
-                    </div>
-                    <div class="postcard__bar"></div>
-                    <div class="postcard__preview-txt">Priya Krishnamurthy is co-founder and CEO of CMCA - Children’s
-                        Movement
-                        for Civic Awareness. The non-profit is focused on building citizenship and life
-                        skills in children and youth, with a mission to transform the young into
-                        concerned, thinking and active citizens, for an inclusive and sustainable India.
-                        <br>
-                        Her educational background is in psychology, literature, journalism, and
-                        management. She credits her years in her alma mater, Mount Carmel College
-                        Bangalore, as an empowering and positive influence in her journey. With two
-                        decades of experience in program design and developing content and pedagogy,
-                        CMCA’s programs are enjoyable and powerful because she is first a passionate
-                        practitioner. Her designs leverage daily life experiences with their complexity,
-                        spontaneity and humour and rely on the innate goodness, initiative, energy, and
-                        curiosity of the young, into which she weaves research-backed learning
-                        principles. She enjoys music and reading poetry and the old classics where she
-                        can, for some hours, slow down to a pace which seems so much more moderate
-                        than our contemporary times!.
-                    </div>
-                    <!-- <ul class="postcard__tagbox">
-                        <li class="tag__item play red">
-                            <a href="#"><i class="fas fa-play mr-2"></i>Play Episode</a>
-                        </li>
-                    </ul> -->
+                <div class="st-stat-chip">
+                    <i class="fas fa-university text-info"></i>
+                    <span>St. Anne's Degree College for Women, Halasuru</span>
                 </div>
-            </article>
-            <article class="postcard light green">
-                <a class="postcard__img_link" href="#">
-                    <img class="postcard__img"
-                         src="{% static 'conference/annual/bangalore/stAnnesCollege/G. Nancy Angeline.jpg' %}"
-                         alt="Image Title"/>
-                </a>
-                <div class="postcard__text t-dark">
-                    <h1 class="postcard__title green"><a href="#">Ms Nisha Joseph</a></h1>
-                    <div class="postcard__subtitle small">
-                        <!-- <time datetime="2020-05-25 12:00:00">
-                            <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
-                        </time> -->
-                    </div>
-                    <div class="postcard__bar"></div>
-                    <div class="postcard__preview-txt"> Ms Nisha Joseph, Principal of St Anne’s Degree College for Women
-                        is a has two decades of rich teaching experience in the field of
-                        Management. She has double post graduation in Education and
-                        Management. She completed her Post Graduation from Mount Carmel
-                        Institute of Management and has also completed her M.Phil.
-                        <br>
-                        She has been instrumental in organizing various programmes in the
-                        college like Inter College Fest, National Seminar, Graduation Day etc.
-                        She played an instrumental role during the NAAC accreditation
-                        process of the institution. To her credit she has been the Head of the
-                        Department of Management for the past 6 years and has been paper
-                        setter for Post Graduation courses at CMR College. She is a member
-                        of the Board of examiners at NMKRV College.
-                        <br>
-                        She won first place in Wealth out of waste competition organized by
-                        School Guru and Karnataka State Open University.
-                        She strongly believes in team work and fostering values in students
-                        which enables them to excel in life.
-                    </div>
+                <div class="st-stat-chip">
+                    <i class="fas fa-female text-danger"></i>
+                    <span>Women Leadership & Civic Action</span>
                 </div>
-            </article>
-
-
+            </div>
         </div>
     </section>
 
-    <div class="container ">
-        <div class="row">
-            <div class="col-lg-12 pt-5">
-                <div class="gallery">
-                    <div>
-                        <iframe src="https://www.youtube.com/embed/cU2rbZ3tHlQ" allowfullscreen frameborder="0"
-                                name="tab"></iframe>
-                    </div>
-                    <div>
-                    <span>
-                        <a href="https://www.youtube.com/embed/M9qB6uqcK0E" target="tab"><img
-                                src="//img.youtube.com/vi/M9qB6uqcK0E/default.jpg"></a>
-
-                        <a href="https://www.youtube.com/embed/cU2rbZ3tHlQ" target="tab"><img
-                                src="//img.youtube.com/vi/cU2rbZ3tHlQ/default.jpg"></a>
-                    </span>
-                    </div>
+    <!-- STICKY BREADCRUMB STRIP -->
+    <div class="th-subnav-bar">
+        <div class="container-fluid px-2 px-md-4">
+            {% if breadcrumbs %}
+            <div class="th-sticky-breadcrumb-strip">
+                <nav aria-label="breadcrumb">
+                    <ol class="th-breadcrumb-minimal">
+                        {% for breadcrumb in breadcrumbs %}
+                            {% if not breadcrumb.active %}
+                                <li class="th-breadcrumb-item">
+                                    {% if breadcrumb.url %}
+                                        <a href="{% url breadcrumb.url %}">
+                                            <i class="{{ breadcrumb.icon }} me-1"></i>{{ breadcrumb.name }}
+                                        </a>
+                                    {% else %}
+                                        <span><i class="{{ breadcrumb.icon }} me-1"></i>{{ breadcrumb.name }}</span>
+                                    {% endif %}
+                                </li>
+                                <li class="th-breadcrumb-sep">/</li>
+                            {% else %}
+                                <li class="th-breadcrumb-item active">
+                                    <i class="{{ breadcrumb.icon }} me-1"></i>{{ breadcrumb.name }}
+                                </li>
+                            {% endif %}
+                        {% endfor %}
+                    </ol>
+                </nav>
+                <div class="d-none d-sm-flex align-items-center gap-2 text-muted" style="font-size: 0.74rem;">
+                    <a href="{% url 'annual-conference-past' %}" class="btn btn-sm btn-outline-primary rounded-pill px-3 py-1" style="font-size: 0.75rem;">
+                        <i class="fas fa-arrow-left me-1"></i>Past Conferences Archive
+                    </a>
+                    <a href="{% url 'annualConference' %}" class="btn btn-sm btn-outline-secondary rounded-pill px-3 py-1" style="font-size: 0.75rem;">
+                        <i class="fas fa-calendar-alt me-1"></i>Annual Hub
+                    </a>
                 </div>
-
             </div>
+            {% endif %}
         </div>
     </div>
 
-    <div class="container mt-5">
-        <div class="row m-auto">
-            <div class="col-6">
-                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
-                                class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                                aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                                aria-label="Slide 3"></button>
+
+    <!-- EVENT DETAILS & CONFERENCE ASSETS SECTION -->
+    <section class="th-section bg-light py-5">
+        <div class="container">
+            <div class="th-section-header">
+                <span class="th-section-kicker">CONFERENCE PROCEEDINGS</span>
+                <h2 class="th-section-title">Event Details & Documentation</h2>
+                <p class="th-section-lead">Explore official conference posters, schedules, and downloadable resource materials from the 2019 conference.</p>
+            </div>
+
+            <div class="row g-4 align-items-stretch">
+                <!-- Left: Poster Carousel -->
+                <div class="col-lg-6">
+                    <div class="st-card p-4">
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <h4 class="h5 fw-bold text-dark mb-0">
+                                <i class="fas fa-images text-primary me-2"></i>Conference Posters Gallery
+                            </h4>
+                            <span class="badge bg-primary text-white" style="font-size: 0.75rem;">Visual Archive</span>
+                        </div>
+                        <div id="stAnnesCarousel" class="carousel slide st-carousel-frame" data-bs-ride="carousel">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#stAnnesCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#stAnnesCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#stAnnesCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                <button type="button" data-bs-target="#stAnnesCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                            </div>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="{% static 'conference/annual/bangalore/stAnnesCollege/posters/3.png' %}" class="d-block w-100" alt="Conference Poster 1">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="{% static 'conference/annual/bangalore/stAnnesCollege/posters/4.png' %}" class="d-block w-100" alt="Conference Poster 2">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="{% static 'conference/annual/bangalore/stAnnesCollege/posters/5.png' %}" class="d-block w-100" alt="Conference Poster 3">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="{% static 'conference/annual/bangalore/stAnnesCollege/posters/6.png' %}" class="d-block w-100" alt="Conference Poster 4">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#stAnnesCarousel" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#stAnnesCarousel" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
                     </div>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="{% static 'conference/annual/bangalore/stAnnesCollege/posters/3.png' %}"
-                                 class="d-block w-100"
-                                 alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="{% static 'conference/annual/bangalore/stAnnesCollege/posters/4.png' %}"
-                                 class="d-block w-100"
-                                 alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="{% static 'conference/annual/bangalore/stAnnesCollege/posters/5.png' %}"
-                                 class="d-block w-100"
-                                 alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="{% static 'conference/annual/bangalore/stAnnesCollege/posters/6.png' %}"
-                                 class="d-block w-100"
-                                 alt="...">
+                </div>
+
+                <!-- Right: Event Details & Downloads -->
+                <div class="col-lg-6">
+                    <div class="st-card p-4 d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="d-flex align-items-center justify-content-between mb-3">
+                                <h4 class="h5 fw-bold text-dark mb-0">
+                                    <i class="fas fa-file-download text-success me-2"></i>Event Details & Assets
+                                </h4>
+                                <span class="badge bg-success text-white" style="font-size: 0.75rem;">Official Downloads</span>
+                            </div>
+
+                            <p class="text-muted small mb-4">
+                                Download the official event poster and detailed schedule bulletin for St. Anne's Degree College for Women conference proceedings.
+                            </p>
+
+                            <!-- Document 1: Event Poster -->
+                            <div class="st-download-card">
+                                <div class="d-flex align-items-center justify-content-between flex-wrap gap-2">
+                                    <div class="d-flex align-items-center gap-3">
+                                        <div class="st-doc-icon" style="background: #EEF4FC; color: #0C52A1;">
+                                            <i class="fas fa-file-pdf"></i>
+                                        </div>
+                                        <div>
+                                            <h6 class="fw-bold text-dark mb-0">Official Conference Flyer</h6>
+                                            <small class="text-muted">PDF Document • High Resolution</small>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex gap-2">
+                                        <a href="{% static 'conference/annual/bangalore/stAnnesCollege/posters/LUDFLYER.pdf' %}" 
+                                           target="_blank" rel="noopener" class="btn btn-sm btn-outline-primary rounded-pill px-3">
+                                            <i class="fas fa-eye me-1"></i>View
+                                        </a>
+                                        <a href="{% static 'conference/annual/bangalore/stAnnesCollege/posters/LUDFLYER.pdf' %}" 
+                                           download class="btn btn-sm btn-primary rounded-pill px-3" style="background: #0C52A1; border-color: #0C52A1;">
+                                            <i class="fas fa-download me-1"></i>Download
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Document 2: Event Details -->
+                            <div class="st-download-card">
+                                <div class="d-flex align-items-center justify-content-between flex-wrap gap-2">
+                                    <div class="d-flex align-items-center gap-3">
+                                        <div class="st-doc-icon" style="background: #ECFDF5; color: #059669;">
+                                            <i class="fas fa-file-alt"></i>
+                                        </div>
+                                        <div>
+                                            <h6 class="fw-bold text-dark mb-0">Complete Event Details & Schedule</h6>
+                                            <small class="text-muted">PDF Document • Program Itinerary</small>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex gap-2">
+                                        <a href="{% static 'conference/annual/bangalore/stAnnesCollege/posters/pdf-conf.pdf' %}" 
+                                           target="_blank" rel="noopener" class="btn btn-sm btn-outline-success rounded-pill px-3">
+                                            <i class="fas fa-eye me-1"></i>View
+                                        </a>
+                                        <a href="{% static 'conference/annual/bangalore/stAnnesCollege/posters/pdf-conf.pdf' %}" 
+                                           download class="btn btn-sm btn-success rounded-pill px-3" style="background: #059669; border-color: #059669;">
+                                            <i class="fas fa-download me-1"></i>Download
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Metadata summary -->
+                            <div class="mt-4 pt-3 border-top">
+                                <div class="st-meta-row">
+                                    <span class="text-muted"><i class="fas fa-calendar-day text-primary me-2"></i>Date:</span>
+                                    <strong class="text-dark">November 19, 2019</strong>
+                                </div>
+                                <div class="st-meta-row">
+                                    <span class="text-muted"><i class="fas fa-map-marker-alt text-danger me-2"></i>Venue:</span>
+                                    <strong class="text-dark">St. Anne's Degree College for Women, Halasuru, Bengaluru</strong>
+                                </div>
+                                <div class="st-meta-row">
+                                    <span class="text-muted"><i class="fas fa-bullseye text-warning me-2"></i>Focus:</span>
+                                    <strong class="text-dark">Grassroots Women Leadership & Civic Action</strong>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-                            data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONFERENCE CHAIRS SECTION -->
+    <section class="conference-people py-5">
+        <div class="container py-4">
+            <div class="th-section-header">
+                <span class="th-section-kicker">LEADERSHIP & EXPERTISE</span>
+                <h2 class="th-section-title">Distinguished Conference Chairs</h2>
+                <p class="th-section-lead">Meet the educators, leaders, and social practitioners who guided the conference dialogue.</p>
+            </div>
+
+            <!-- Jimmy Cherian -->
+            <div class="conference-people__grid">
+<article class="conference-person">
+                <div class="conference-person__identity">
+                    <img class="conference-person__portrait" src="{% static 'conference/annual/bangalore/stAnnesCollege/Jimmy C.jpg' %}" alt="Jimmy Cherian" loading="lazy">
+                    <div><h3 class="conference-person__name">Jimmy Cherian</h3><p class="conference-person__role">President & Managing Trustee, Creating Futures</p></div>
+                </div>
+                <p class="conference-person__intro">Jimmy Cherian is the President and Managing Trustee of Creating Futures, an NGO focused on skills development.</p>
+                <details class="conference-person__details">
+                    <summary><span class="profile-read">Read biography</span><span class="profile-close">Close biography</span><span class="profile-toggle" aria-hidden="true">+</span></summary>
+                    <div class="conference-person__bio">Jimmy Cherian is the President and Managing Trustee of Creating Futures, an NGO focused on skills development. He has been instrumental in the conceptualization and setting up of Creating Futures.
+                        <br><br>
+                        Prior to devoting his time completely to Creating Futures, Jimmy held various leadership roles in companies such as Volvo Group, Ciber, CapGemini, HP, and so on. His last position was as Global Head and Global Director of Emerging Technologies at Volvo IT.
+                        <br><br>
+                        He is a leadership and life skills coach, corporate trainer, and facilitator actively involved in the social development sector across Education, Child Welfare, and Skill Development.</div>
+                </details>
+            </article>
+
+            <!-- Priya Krishnamurthy -->
+            <article class="conference-person">
+                <div class="conference-person__identity">
+                    <img class="conference-person__portrait" src="{% static 'conference/annual/bangalore/stAnnesCollege/Priya Krishnamurthy.jpg' %}" alt="Priya Krishnamurthy" loading="lazy">
+                    <div><h3 class="conference-person__name">Priya Krishnamurthy</h3><p class="conference-person__role">Co-founder & CEO, CMCA (Children's Movement for Civic Awareness)</p></div>
+                </div>
+                <p class="conference-person__intro">Priya Krishnamurthy is co-founder and CEO of CMCA - Children’s Movement for Civic Awareness.</p>
+                <details class="conference-person__details">
+                    <summary><span class="profile-read">Read biography</span><span class="profile-close">Close biography</span><span class="profile-toggle" aria-hidden="true">+</span></summary>
+                    <div class="conference-person__bio">Priya Krishnamurthy is co-founder and CEO of CMCA - Children’s Movement for Civic Awareness. The non-profit is focused on building citizenship and life skills in children and youth, with a mission to transform the young into concerned, thinking, and active citizens for an inclusive and sustainable India.
+                        <br><br>
+                        With two decades of experience in program design and developing content and pedagogy, CMCA’s programs are enjoyable and powerful because she is first a passionate practitioner who weaves research-backed learning principles into experiential education.</div>
+                </details>
+            </article>
+
+            <!-- Ms Nisha Joseph -->
+            <article class="conference-person">
+                <div class="conference-person__identity">
+                    <img class="conference-person__portrait" src="{% static 'conference/annual/bangalore/stAnnesCollege/G. Nancy Angeline.jpg' %}" alt="Ms Nisha Joseph" loading="lazy">
+                    <div><h3 class="conference-person__name">Ms Nisha Joseph</h3><p class="conference-person__role">Principal, St. Anne's Degree College for Women</p></div>
+                </div>
+                <p class="conference-person__intro">Ms Nisha Joseph, Principal of St Anne’s Degree College for Women, has two decades of rich teaching experience in the field of Management.</p>
+                <details class="conference-person__details">
+                    <summary><span class="profile-read">Read biography</span><span class="profile-close">Close biography</span><span class="profile-toggle" aria-hidden="true">+</span></summary>
+                    <div class="conference-person__bio">Ms Nisha Joseph, Principal of St Anne’s Degree College for Women, has two decades of rich teaching experience in the field of Management. She has double post-graduation in Education and Management from Mount Carmel Institute of Management and has also completed her M.Phil.
+                        <br><br>
+                        She has been instrumental in organizing key institutional programs, seminars, and NAAC accreditation initiatives. She strongly believes in teamwork and fostering values in students which enables them to excel in life and community service.</div>
+                </details>
+            </article>
+</div>
+        </div>
+    </section>
+
+    <!-- VIDEO GALLERY SECTION -->
+    <section class="th-section py-5 bg-light">
+        <div class="container">
+            <div class="th-section-header">
+                <span class="th-section-kicker">VIDEO HIGHLIGHTS</span>
+                <h2 class="th-section-title">Conference Sessions & Dialogues</h2>
+                <p class="th-section-lead">Watch session recordings and interviews from the conference.</p>
+            </div>
+
+            <div class="conference-watch">
+                <div class="conference-watch__stage">
+                    <div class="ratio ratio-16x9">
+                        <iframe id="conference-recording" src="https://www.youtube.com/embed/cU2rbZ3tHlQ" title="Panel Discussion ? St. Anne's Conference 2019" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                    </div>
+                    <div class="conference-watch__caption">
+                        <div><span class="conference-watch__eyebrow">NOW SELECTED</span><h3 id="recording-title">Panel Discussion</h3></div>
+                        <a id="recording-youtube" href="https://www.youtube.com/watch?v=cU2rbZ3tHlQ" target="_blank" rel="noopener noreferrer">Watch on YouTube <span aria-hidden="true">?</span></a>
+                    </div>
+                </div>
+                <div class="conference-watch__playlist">
+                    <span class="th-section-kicker">FROM THE CONFERENCE</span>
+                    <h3>Explore the sessions</h3>
+                    <p>Revisit the ideas and conversations shared at St. Anne's.</p>
+                    <button type="button" class="conference-session" data-video="M9qB6uqcK0E" data-title="Keynote Address" aria-pressed="false" aria-controls="conference-recording">
+                        <span class="conference-session__play" aria-hidden="true">?</span><span><strong>Keynote Address</strong><small>Conference recording</small></span><span aria-hidden="true">?</span>
                     </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-                            data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
+                    <button type="button" class="conference-session" data-video="cU2rbZ3tHlQ" data-title="Panel Discussion" aria-pressed="true" aria-controls="conference-recording">
+                        <span class="conference-session__play" aria-hidden="true">?</span><span><strong>Panel Discussion</strong><small>Conference recording</small></span><span aria-hidden="true">?</span>
                     </button>
                 </div>
             </div>
-            <div class="col-6 text-center">
-                <div class="fw-bolder fs-4 mb-4">Event Details</div>
-                <a href="{% static 'conference/annual/bangalore/stAnnesCollege/posters/LUDFLYER.pdf' %}"
-                   class="btn btn-outline-success"
-                   download>Event Poster</a>
-                <a href="{% static 'conference/annual/bangalore/stAnnesCollege/posters/pdf-conf.pdf' %}"
-                   class="btn btn-outline-success"
-                   download>Event Details</a>
+            <script>
+                document.querySelectorAll('.conference-session').forEach(function (button) {
+                    button.addEventListener('click', function () {
+                        if (button.getAttribute('aria-pressed') === 'true') return;
+                        var title = button.dataset.title;
+                        var player = document.getElementById('conference-recording');
+                        player.src = 'https://www.youtube.com/embed/' + button.dataset.video;
+                        player.title = title + " ? St. Anne's Conference 2019";
+                        document.getElementById('recording-title').textContent = title;
+                        document.getElementById('recording-youtube').href = 'https://www.youtube.com/watch?v=' + button.dataset.video;
+                        document.querySelectorAll('.conference-session').forEach(function (item) {
+                            item.setAttribute('aria-pressed', String(item === button));
+                        });
+                    });
+                });
+            </script>
+        </div>
+    </section>
+
+    <!-- PAST CONFERENCES TIMELINE (2022 EDITION) -->
+    <section class="th-section py-5">
+        <div class="container">
+            <div class="th-section-header">
+                <span class="th-section-kicker">COMMUNITY MILESTONES</span>
+                <h2 class="th-section-title">Subsequent Conference Editions</h2>
+                <p class="th-section-lead">Milestones from St. Anne's community partnership across multiple years.</p>
+            </div>
+
+            <article class="conference-edition">
+                <a class="conference-edition__preview" href="{% static "conference/all/2022/St. Anne's Degree College for Women_Bangalore 2022.pdf" %}" target="_blank" rel="noopener noreferrer" aria-label="View the 2022 Bangalore conference bulletin (PDF, opens in a new tab)">
+                    <img src="{% static 'conference/all/2022/2022Bangalore.png' %}" alt="2022 Bangalore conference bulletin cover" loading="lazy">
+                </a>
+                <div class="conference-edition__content">
+                    <span class="conference-edition__year">2022 EDITION</span>
+                    <h3>Continuing the conversation</h3>
+                    <p class="conference-edition__venue">St. Anne's Degree College for Women ? Bengaluru</p>
+                    <p>Explore the next chapter of St. Anne's community conference through the official 2022 bulletin.</p>
+                    <a class="conference-edition__link" href="{% static "conference/all/2022/St. Anne's Degree College for Women_Bangalore 2022.pdf" %}" target="_blank" rel="noopener noreferrer">View conference bulletin <span aria-hidden="true">?</span></a>
+                    <span class="conference-edition__format">PDF document ? Opens in a new tab</span>
+                </div>
+            </article>
+
+            <!-- Return Callout -->
+            <div class="p-4 text-center rounded-3 border bg-white shadow-sm mt-5">
+                <h5 class="fw-bold text-dark mb-2">Explore More Conference Chapters</h5>
+                <p class="text-muted mb-3 fs-6">Discover records and proceedings from other Let Us Dream conferences across the USA and India.</p>
+                <div class="d-flex flex-wrap justify-content-center gap-2">
+                    <a href="{% url 'annual-conference-past' %}" class="btn-th-card-solid px-4">
+                        <i class="fas fa-archive me-2"></i>Past Conferences Archive
+                    </a>
+                    <a href="{% url 'annualConference' %}" class="btn btn-outline-primary rounded-pill px-4" style="font-weight: 700;">
+                        <i class="fas fa-calendar-alt me-2"></i>Upcoming 2026 Conferences
+                    </a>
+                </div>
             </div>
         </div>
-    </div>
-
-{% endblock %}
+    </section>
+</div>
+{% endblock content %}

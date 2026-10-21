@@ -7,6 +7,112 @@ Annual Community Conferences - Let Us Dream
 
 {% block extraStyles %}
 <link rel="stylesheet" href="{% static 'css/new/triennial-hub.css' %}">
+<style>
+    .co-location-card {
+        transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .co-location-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 28px -6px rgba(15, 61, 122, 0.15);
+    }
+    .sz-spotlight-banner {
+        background: linear-gradient(135deg, #071E3D 0%, #0F3D7A 55%, #184A8A 100%);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        box-shadow: 0 16px 40px -10px rgba(15, 61, 122, 0.25);
+        color: #ffffff;
+        position: relative;
+        overflow: hidden;
+    }
+    .sz-spotlight-banner::before {
+        content: '';
+        position: absolute;
+        top: -40%;
+        right: -10%;
+        width: 450px;
+        height: 450px;
+        background: radial-gradient(circle, rgba(190, 24, 93, 0.25) 0%, transparent 70%);
+        border-radius: 50%;
+        pointer-events: none;
+    }
+    .sz-spotlight-banner::after {
+        content: '';
+        position: absolute;
+        bottom: -40%;
+        left: -10%;
+        width: 450px;
+        height: 450px;
+        background: radial-gradient(circle, rgba(115, 183, 43, 0.22) 0%, transparent 70%);
+        border-radius: 50%;
+        pointer-events: none;
+    }
+    .sz-thumb-wrapper {
+        border-radius: 14px;
+        overflow: hidden;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+        border: 2px solid rgba(255,255,255,0.2);
+        max-width: 260px;
+        margin: 0 auto !important;
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+        position: relative;
+        cursor: pointer;
+        transition: none !important;
+        transform: none !important;
+    }
+    .sz-thumb-wrapper:hover {
+        transform: none !important;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.35) !important;
+    }
+    .sz-thumb-wrapper img {
+        margin: 0 !important;
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+        display: block !important;
+        vertical-align: top !important;
+    }
+
+    .sz-timeline {
+        position: relative;
+        padding-left: 24px;
+    }
+    .sz-timeline::before {
+        content: '';
+        position: absolute;
+        left: 8px;
+        top: 6px;
+        bottom: 6px;
+        width: 2px;
+        background: linear-gradient(180deg, #0F3D7A 0%, #73B72B 100%);
+    }
+    .sz-timeline-item {
+        position: relative;
+        margin-bottom: 1rem;
+    }
+    .sz-timeline-item:last-child {
+        margin-bottom: 0;
+    }
+    .sz-timeline-dot {
+        position: absolute;
+        left: -24px;
+        top: 4px;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background: #ffffff;
+        border: 3px solid #0F3D7A;
+    }
+    .sz-timeline-time {
+        font-family: 'Outfit', sans-serif;
+        font-size: 0.78rem;
+        font-weight: 700;
+        color: #0F3D7A;
+        background: #EEF4FC;
+        padding: 0.15rem 0.5rem;
+        border-radius: 20px;
+        display: inline-block;
+        margin-bottom: 0.2rem;
+    }
+</style>
 {% endblock extraStyles %}
 
 {% block breadcrumb_section %}{% endblock %}
@@ -122,7 +228,7 @@ Annual Community Conferences - Let Us Dream
                 </nav>
                 <div class="d-none d-sm-flex align-items-center gap-2 text-muted" style="font-size: 0.74rem;">
                     <span class="badge" style="background: #EBF5E0; color: #58921E; font-weight: 700;">Annual Series</span>
-                    <span class="text-muted">2025–2026</span>
+                    <span class="text-muted">2026</span>
                 </div>
             </div>
             {% endif %}
@@ -135,6 +241,7 @@ Annual Community Conferences - Let Us Dream
                 <a href="#what-to-expect" class="th-nav-pill"><i class="fas fa-lightbulb me-1"></i>What to Expect</a>
                 <a href="#participate" class="th-nav-pill"><i class="fas fa-user-plus me-1"></i>Participation</a>
                 <a href="#resources" class="th-nav-pill"><i class="fas fa-file-alt me-1"></i>Resources</a>
+                <a href="{% url 'annual-conference-past' %}" class="th-nav-pill"><i class="fas fa-history me-1"></i>Past Conferences Archive</a>
                 <a href="#past-conferences" class="th-nav-pill"><i class="fas fa-video me-1"></i>Video Archives</a>
             </div>
         </div>
@@ -300,11 +407,127 @@ Annual Community Conferences - Let Us Dream
         <div class="container">
             <div class="th-section-header">
                 <span class="th-section-kicker">GLOBAL GATHERINGS</span>
-                <h2 class="th-section-title">Host Locations 2025 – 2026</h2>
-                <p class="th-section-lead">Explore upcoming and recent annual community conferences across India and the United States.</p>
+                <h2 class="th-section-title">2026 Host Locations</h2>
+                <p class="th-section-lead">Explore our upcoming 2026 annual community conferences in Europe (Poland) and India.</p>
+            </div>
+
+            <!-- Spotlight: Poland - University of Szczecin Conference -->
+            <div class="sz-spotlight-banner p-4 p-lg-5 rounded-4 mb-5">
+                <div class="row align-items-center g-4">
+                    <div class="col-lg-4 col-md-5 text-center my-0">
+                        <a href="{% url 'annual-conference' 2026 'szczecin' %}" class="sz-thumb-wrapper d-block text-decoration-none my-0" style="margin-top: 0 !important; margin-bottom: 0 !important;" title="Visit Szczecin Conference Page">
+                            <img src="{% static '2026/annual/szczecin-conference-poster-2026.jpg' %}" 
+                                 alt="Konferencja Let US Dream 2026 - Uniwersytet Szczeciński" 
+                                 class="img-fluid w-100 my-0"
+                                 style="margin-top: 0 !important; margin-bottom: 0 !important; display: block;">
+                            <div class="position-absolute bottom-0 start-0 end-0 p-2 text-center" 
+                                 style="background: rgba(7, 30, 61, 0.9); backdrop-filter: blur(4px);">
+                                <small class="text-white fw-bold" style="font-size: 0.78rem;">
+                                    <i class="fas fa-external-link-alt me-1 text-warning"></i>Visit Conference Page
+                                </small>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-8 col-md-7">
+                        <div class="d-flex flex-wrap align-items-center gap-2 mb-2">
+                            <span class="badge rounded-pill px-3 py-1" style="background: rgba(239, 68, 68, 0.2); border: 1px solid rgba(239, 68, 68, 0.5); color: #FCA5A5; font-size: 0.75rem; font-weight: 700;">
+                                <i class="fas fa-circle text-danger me-1" style="font-size: 0.5rem;"></i>UPCOMING 2026
+                            </span>
+                            <span class="badge rounded-pill px-3 py-1" style="background: rgba(163, 230, 53, 0.2); border: 1px solid rgba(163, 230, 53, 0.5); color: #BEF264; font-size: 0.75rem; font-weight: 700;">
+                                <i class="fas fa-globe-europe me-1"></i>SZCZECIN • POLAND
+                            </span>
+                        </div>
+                        <h3 class="h2 fw-bold text-white mb-2" style="font-family: 'Outfit', sans-serif;">
+                            Konferencja Let US Dream — Uniwersytet Szczeciński
+                        </h3>
+                        <p class="text-white-50 mb-3" style="font-size: 0.95rem;">
+                            Hosted by <strong>Wydział Prawa i Administracji Uniwersytetu Szczecińskiego</strong> in partnership with <strong>LAWina WPiA US</strong>, bringing together grassroots community organizations, animal welfare shelters, food banks, wish-granting charities, and youth volunteers.
+                        </p>
+                        <div class="row g-2 mb-4 text-white-50 small">
+                            <div class="col-sm-6">
+                                <div class="d-flex align-items-center gap-2">
+                                    <i class="fas fa-calendar-day text-warning"></i>
+                                    <span><strong>Date:</strong> 22 października 2026 (Oct 22, 2026)</span>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="d-flex align-items-center gap-2">
+                                    <i class="fas fa-clock text-warning"></i>
+                                    <span><strong>Time:</strong> godz. 12:00 – 13:30 CEST</span>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="d-flex align-items-center gap-2">
+                                    <i class="fas fa-map-marker-alt text-warning"></i>
+                                    <span><strong>Venue:</strong> Aula im. Prof. M. Zielińskiego (ul. Piastów 40 b)</span>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="d-flex align-items-center gap-2">
+                                    <i class="fas fa-user-tie text-warning"></i>
+                                    <span><strong>Moderator:</strong> Profesor Agnieszka Bień-Kacała</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-wrap gap-2">
+                            <a href="{% url 'annual-conference' 2026 'szczecin' %}" 
+                               class="btn btn-warning fw-bold px-4 py-2 rounded-pill shadow-sm"
+                               style="color: #071E3D; font-size: 0.88rem;">
+                                <i class="fas fa-external-link-alt me-2"></i>Visit Conference Page & Schedule
+                            </a>
+                            <a href="{% static '2026/annual/szczecin-conference-poster-2026.jpg' %}" 
+                               target="_blank" 
+                               rel="noopener"
+                               class="btn btn-outline-light px-3 py-2 rounded-pill"
+                               style="font-size: 0.88rem;">
+                                <i class="fas fa-image me-2"></i>View Full Flyer
+                            </a>
+                            <a href="{% static '2026/annual/szczecin-conference-poster-2026.jpg' %}" 
+                               download="Let_Us_Dream_Szczecin_Conference_2026.jpg" 
+                               class="btn btn-outline-light px-3 py-2 rounded-pill"
+                               style="font-size: 0.88rem;">
+                                <i class="fas fa-download me-2"></i>Download Flyer
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div class="row g-4">
+                <!-- Poland - Szczecin -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="co-location-card position-relative" style="border: 2px solid rgba(15, 61, 122, 0.2);">
+                        <div class="co-location-header">
+                            <div class="co-icon-bubble" style="background: #FDF2F8; color: #BE185D;">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="h5 fw-bold text-dark mb-0">Poland — Szczecin</h4>
+                                <span class="badge rounded-pill px-2 py-1 mt-1" style="background: #FCE7F3; color: #9D174D; font-size: 0.75rem;">Upcoming 2026</span>
+                            </div>
+                        </div>
+                        <div class="co-location-meta">
+                            <p><strong>Venue:</strong> Aula im. Prof. Macieja Zielińskiego, WPiA US</p>
+                            <p><strong>Date:</strong> 22 października 2026 (Oct 22, 2026)</p>
+                            <p><strong>Time:</strong> godz. 12:00 – 13:30 CEST</p>
+                            <p><strong>Moderator:</strong> Prof. Agnieszka Bień-Kacała</p>
+                        </div>
+                        <div class="d-flex flex-column gap-2 mt-auto">
+                            <a href="{% url 'annual-conference' 2026 'szczecin' %}" 
+                               class="btn-th-card-solid w-100 text-center" 
+                               style="background: linear-gradient(135deg, #0C52A1, #1E56A0); border-color: #0C52A1;">
+                                <i class="fas fa-external-link-alt me-1"></i>View Conference Page & Schedule
+                            </a>
+                            <a href="{% static '2026/annual/szczecin-conference-poster-2026.jpg' %}" 
+                               target="_blank" 
+                               rel="noopener"
+                               class="btn btn-sm btn-outline-secondary rounded-pill py-2 text-center" 
+                               style="font-weight: 600; font-size: 0.82rem;">
+                                <i class="fas fa-image me-1"></i>View Full Flyer (New Tab)
+                            </a>
+                        </div>
+                    </div>
+                </div>
                 <!-- Pune -->
                 <div class="col-lg-4 col-md-6">
                     <div class="co-location-card">
@@ -329,171 +552,37 @@ Annual Community Conferences - Let Us Dream
                     </div>
                 </div>
 
-                <!-- Louisiana -->
+                <!-- Past Conferences Archive Card -->
                 <div class="col-lg-4 col-md-6">
-                    <div class="co-location-card">
-                        <div class="co-location-header">
-                            <div class="co-icon-bubble" style="background: #ECFDF5; color: #059669;">
-                                <i class="fas fa-map-marker-alt"></i>
+                    <div class="co-location-card h-100 d-flex flex-column justify-content-between p-4" 
+                         style="background: linear-gradient(135deg, #F8FAFC 0%, #EEF4FC 100%); border: 2px dashed #0C52A1;">
+                        <div>
+                            <div class="d-flex align-items-center justify-content-between mb-3">
+                                <div class="co-icon-bubble mb-0" style="background: #EEF4FC; color: #0C52A1;">
+                                    <i class="fas fa-history"></i>
+                                </div>
+                                <span class="badge rounded-pill px-3 py-1" style="background: #E2E8F0; color: #334155; font-size: 0.75rem; font-weight: 700;">
+                                    2019 – 2025
+                                </span>
                             </div>
-                            <div>
-                                <h4 class="h5 fw-bold text-dark mb-0">USA — Louisiana</h4>
-                                <span class="badge rounded-pill px-2 py-1 mt-1" style="background: #ECFDF5; color: #059669; font-size: 0.75rem;">October 2025</span>
-                            </div>
-                        </div>
-                        <div class="co-location-meta">
-                            <p><strong>Venue:</strong> University of Louisiana</p>
-                            <p><strong>Date:</strong> October 30, 2025</p>
-                            <p><strong>Focus:</strong> Intergenerational Community Service</p>
-                        </div>
-                        <a href="https://cmt.letusdream.org/conference_details/2f17bcb1-1557-452c-be85-8629fce6ac54" 
-                           target="_blank" rel="noopener" class="btn-th-card-solid w-100 text-center" style="background: var(--th-green-dark); border-color: var(--th-green-dark);">
-                            <i class="fas fa-info-circle me-1"></i>Know More
-                        </a>
-                    </div>
-                </div>
-
-                <!-- New York -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="co-location-card">
-                        <div class="co-location-header">
-                            <div class="co-icon-bubble" style="background: #FFF7ED; color: #EA580C;">
-                                <i class="fas fa-map-marker-alt"></i>
-                            </div>
-                            <div>
-                                <h4 class="h5 fw-bold text-dark mb-0">USA — New York</h4>
-                                <span class="badge rounded-pill px-2 py-1 mt-1" style="background: #FFF7ED; color: #EA580C; font-size: 0.75rem;">November 2025</span>
+                            <h4 class="h5 fw-bold text-dark mb-2" style="font-family: 'Outfit', sans-serif;">
+                                Past Conferences Archive
+                            </h4>
+                            <p class="text-muted small mb-3">
+                                Explore bulletins, proceedings, schedules, and recordings from our 24 past annual conferences across the USA and India.
+                            </p>
+                            <div class="d-flex flex-wrap gap-1 mb-3">
+                                <span class="badge bg-white text-muted border" style="font-size: 0.72rem;">2025 Series (7)</span>
+                                <span class="badge bg-white text-muted border" style="font-size: 0.72rem;">2024 Series (7)</span>
+                                <span class="badge bg-white text-muted border" style="font-size: 0.72rem;">2022 Series (5)</span>
+                                <span class="badge bg-white text-muted border" style="font-size: 0.72rem;">2019–2021 (5)</span>
                             </div>
                         </div>
-                        <div class="co-location-meta">
-                            <p><strong>Venue:</strong> Binghamton University</p>
-                            <p><strong>Date:</strong> November 7, 2025</p>
-                            <p><strong>Focus:</strong> Youth Mentorship & Civic Growth</p>
+                        <div class="mt-auto pt-2">
+                            <a href="{% url 'annual-conference-past' %}" class="btn-th-card-solid w-100 text-center">
+                                <i class="fas fa-archive me-2"></i>Explore Conference Archive
+                            </a>
                         </div>
-                        <a href="https://cmt.letusdream.org/conference_details/76a825ff-719c-4a52-86d8-5c53446bb6e3" 
-                           target="_blank" rel="noopener" class="btn-th-card-solid w-100 text-center">
-                            <i class="fas fa-info-circle me-1"></i>Know More
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Bengaluru -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="co-location-card">
-                        <div class="co-location-header">
-                            <div class="co-icon-bubble" style="background: #F5F3FF; color: #7C3AED;">
-                                <i class="fas fa-map-marker-alt"></i>
-                            </div>
-                            <div>
-                                <h4 class="h5 fw-bold text-dark mb-0">India — Bengaluru</h4>
-                                <span class="badge rounded-pill px-2 py-1 mt-1" style="background: #F5F3FF; color: #7C3AED; font-size: 0.75rem;">November 2025</span>
-                            </div>
-                        </div>
-                        <div class="co-location-meta">
-                            <p><strong>Venue:</strong> Presidency University</p>
-                            <p><strong>Date:</strong> November 8, 2025</p>
-                            <p><strong>Focus:</strong> Social Innovation & Grassroots Impact</p>
-                        </div>
-                        <a href="https://cmt.letusdream.org/conference_details/adcc1c26-7dde-4631-a56b-e24161ac01b6" 
-                           target="_blank" rel="noopener" class="btn-th-card-solid w-100 text-center">
-                            <i class="fas fa-info-circle me-1"></i>Know More
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Hyderabad -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="co-location-card">
-                        <div class="co-location-header">
-                            <div class="co-icon-bubble" style="background: #EEF4FC; color: #0C52A1;">
-                                <i class="fas fa-map-marker-alt"></i>
-                            </div>
-                            <div>
-                                <h4 class="h5 fw-bold text-dark mb-0">India — Hyderabad</h4>
-                                <span class="badge rounded-pill px-2 py-1 mt-1" style="background: #EEF4FC; color: #0C52A1; font-size: 0.75rem;">November 2025</span>
-                            </div>
-                        </div>
-                        <div class="co-location-meta">
-                            <p><strong>Venue:</strong> BVRIT College</p>
-                            <p><strong>Date:</strong> November 15, 2025</p>
-                            <p><strong>Focus:</strong> Education & Community Equity</p>
-                        </div>
-                        <a href="https://cmt.letusdream.org/conference_details/f4eadcb9-f77b-4044-b0ed-574d8a6fdc09" 
-                           target="_blank" rel="noopener" class="btn-th-card-solid w-100 text-center">
-                            <i class="fas fa-info-circle me-1"></i>Know More
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Chennai -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="co-location-card">
-                        <div class="co-location-header">
-                            <div class="co-icon-bubble" style="background: #FEF2F2; color: #DC2626;">
-                                <i class="fas fa-map-marker-alt"></i>
-                            </div>
-                            <div>
-                                <h4 class="h5 fw-bold text-dark mb-0">India — Chennai</h4>
-                                <span class="badge rounded-pill px-2 py-1 mt-1" style="background: #FEF2F2; color: #DC2626; font-size: 0.75rem;">November 2025</span>
-                            </div>
-                        </div>
-                        <div class="co-location-meta">
-                            <p><strong>Venue:</strong> Stella Maris College</p>
-                            <p><strong>Date:</strong> November 22, 2025</p>
-                            <p><strong>Focus:</strong> Women in Leadership & Civic Action</p>
-                        </div>
-                        <a href="https://cmt.letusdream.org/conference_details/f64da27a-ffae-4828-95ee-c6d58e9a3a04" 
-                           target="_blank" rel="noopener" class="btn-th-card-solid w-100 text-center">
-                            <i class="fas fa-info-circle me-1"></i>Know More
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Trivandrum -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="co-location-card">
-                        <div class="co-location-header">
-                            <div class="co-icon-bubble" style="background: #ECFDF5; color: #059669;">
-                                <i class="fas fa-map-marker-alt"></i>
-                            </div>
-                            <div>
-                                <h4 class="h5 fw-bold text-dark mb-0">India — Trivandrum</h4>
-                                <span class="badge rounded-pill px-2 py-1 mt-1" style="background: #ECFDF5; color: #059669; font-size: 0.75rem;">November 2025</span>
-                            </div>
-                        </div>
-                        <div class="co-location-meta">
-                            <p><strong>Venue:</strong> CHRIST Nodal Office</p>
-                            <p><strong>Date:</strong> November 29, 2025</p>
-                            <p><strong>Focus:</strong> Holistic Well-being & Volunteerism</p>
-                        </div>
-                        <a href="https://cmt.letusdream.org/conference_details/ee1dcd89-dbc1-4dc4-b08a-1508315f5d2c" 
-                           target="_blank" rel="noopener" class="btn-th-card-solid w-100 text-center" style="background: var(--th-green-dark); border-color: var(--th-green-dark);">
-                            <i class="fas fa-info-circle me-1"></i>Know More
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Delhi -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="co-location-card">
-                        <div class="co-location-header">
-                            <div class="co-icon-bubble" style="background: #EEF4FC; color: #0284C7;">
-                                <i class="fas fa-map-marker-alt"></i>
-                            </div>
-                            <div>
-                                <h4 class="h5 fw-bold text-dark mb-0">India — Delhi</h4>
-                                <span class="badge rounded-pill px-2 py-1 mt-1" style="background: #EEF4FC; color: #0284C7; font-size: 0.75rem;">November 2025</span>
-                            </div>
-                        </div>
-                        <div class="co-location-meta">
-                            <p><strong>Venue:</strong> Hansraj College</p>
-                            <p><strong>Date:</strong> November 15, 2025</p>
-                            <p><strong>Focus:</strong> Academic Innovation & Mentorship</p>
-                        </div>
-                        <a href="https://cmt.letusdream.org/conference_details/7ca18e16-3103-46c2-bdd3-0edb6eccbe73" 
-                           target="_blank" rel="noopener" class="btn-th-card-solid w-100 text-center">
-                            <i class="fas fa-info-circle me-1"></i>Know More
-                        </a>
                     </div>
                 </div>
             </div>
@@ -615,7 +704,7 @@ Annual Community Conferences - Let Us Dream
             </div>
 
             <div class="row g-4">
-                <div class="col-md-4">
+                <div class="col-lg-3 col-md-6">
                     <div class="co-objective-card text-center p-4">
                         <div class="co-icon-bubble mx-auto mb-3" style="background: #EEF4FC; color: #0C52A1;">
                             <i class="fas fa-file-pdf"></i>
@@ -629,7 +718,24 @@ Annual Community Conferences - Let Us Dream
                     </div>
                 </div>
 
-                <div class="col-md-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="co-objective-card text-center p-4">
+                        <div class="co-icon-bubble mx-auto mb-3" style="background: #FDF2F8; color: #BE185D;">
+                            <i class="fas fa-file-image"></i>
+                        </div>
+                        <h5 class="h6 fw-bold text-dark mb-2">Szczecin 2026 Flyer</h5>
+                        <p class="text-muted small mb-3">Official poster & schedule for the conference at University of Szczecin, Poland.</p>
+                        <a href="{% static '2026/annual/szczecin-conference-poster-2026.jpg' %}" 
+                           target="_blank" 
+                           rel="noopener"
+                           class="btn-th-card-solid w-100" 
+                           style="background: linear-gradient(135deg, #BE185D, #E11D48); border-color: #BE185D;">
+                            <i class="fas fa-external-link-alt me-1"></i>Open Flyer (New Tab)
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
                     <div class="co-objective-card text-center p-4">
                         <div class="co-icon-bubble mx-auto mb-3" style="background: #ECFDF5; color: #059669;">
                             <i class="fas fa-newspaper"></i>
@@ -643,7 +749,7 @@ Annual Community Conferences - Let Us Dream
                     </div>
                 </div>
 
-                <div class="col-md-4">
+                <div class="col-lg-3 col-md-6">
                     <div class="co-objective-card text-center p-4">
                         <div class="co-icon-bubble mx-auto mb-3" style="background: #F5F3FF; color: #7C3AED;">
                             <i class="fas fa-newspaper"></i>
@@ -729,12 +835,18 @@ Annual Community Conferences - Let Us Dream
                 </div>
             </div>
 
-            <!-- YouTube Channel Callout -->
+            <!-- Archive & YouTube Callout -->
             <div class="p-4 text-center rounded-3 border bg-white shadow-sm">
-                <p class="text-muted mb-3 fs-6">Want to explore our complete conference archives, interviews, and community stories?</p>
-                <a href="https://www.youtube.com/@letusdream8275" class="btn-th-card-solid px-4" target="_blank" rel="noopener">
-                    <i class="fab fa-youtube text-danger me-2"></i>Visit Our YouTube Channel
-                </a>
+                <h5 class="fw-bold text-dark mb-2">Want to explore our complete conference archives?</h5>
+                <p class="text-muted mb-3 fs-6">Discover detailed proceedings, bulletins, and event records from 2019 to 2025 across USA and India.</p>
+                <div class="d-flex flex-wrap justify-content-center gap-2">
+                    <a href="{% url 'annual-conference-past' %}" class="btn-th-card-solid px-4">
+                        <i class="fas fa-archive me-2"></i>Explore Past Conferences (2019–2025)
+                    </a>
+                    <a href="https://www.youtube.com/@letusdream8275" class="btn btn-outline-danger rounded-pill px-4" target="_blank" rel="noopener" style="font-weight: 700;">
+                        <i class="fab fa-youtube me-2"></i>Visit Our YouTube Channel
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -790,6 +902,8 @@ Annual Community Conferences - Let Us Dream
                 }
             });
         });
+
+
     });
 </script>
 {% endblock extraScripts %}

@@ -1,0 +1,93 @@
+/* Shared profile layout for the annual conference archives. */
+.conference-people { background: #f5f7fa; padding: 4rem 0; }
+.conference-people .th-section-header { max-width: 760px; margin: 0 auto 2.75rem; }
+.conference-people .th-section-title { color: #102d50; }
+.conference-people__grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.5rem; align-items: start; margin-top: 2.5rem; }
+.conference-person { background: #fff; border: 1px solid #dfe6ee; border-top: 3px solid #78a943; border-radius: 16px; padding: 1.75rem; min-width: 0; box-shadow: 0 8px 24px rgba(16,45,80,.04); }
+.conference-person__identity { display: flex; flex-direction: column; align-items: flex-start; gap: 1.25rem; }
+.conference-person__portrait { width: 112px; height: 112px; border-radius: 50%; object-fit: cover; object-position: center 20%; border: 5px solid #f0f4f8; }
+.conference-person__name { font-family: 'Outfit', sans-serif; font-size: 1.4rem; font-weight: 700; line-height: 1.25; margin: 0 0 .6rem; color: #102d50; }
+.conference-person__role { color: #476681; font-size: .85rem; line-height: 1.6; margin: 0; }
+.conference-person__intro { color: #576575; font-size: .94rem; line-height: 1.8; margin: 1.25rem 0 1.5rem; }
+.conference-person__details { border-top: 1px solid #e7edf2; }
+.conference-person__details summary { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding-top: 1rem; cursor: pointer; color: #155391; font-size: .85rem; font-weight: 700; list-style: none; }
+.conference-person__details summary::-webkit-details-marker { display: none; }
+.conference-person__details summary:focus-visible { outline: 2px solid #155391; outline-offset: 5px; border-radius: 3px; }
+.profile-toggle { font-size: 1.4rem; line-height: 1; font-weight: 400; }
+.profile-close, .conference-person__details[open] .profile-read { display: none; }
+.conference-person__details[open] .profile-close { display: inline; }
+.conference-person__details[open] .profile-toggle { transform: rotate(45deg); }
+.conference-person__bio { font-size: .92rem; color: #576575; line-height: 1.85; padding-top: 1.25rem; overflow-wrap: anywhere; }
+@media (min-width: 992px) { .conference-person__identity { min-height: 230px; } .conference-person__intro { min-height: 135px; } }
+@media (max-width: 991px) { .conference-people__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 575px) { .conference-people__grid { grid-template-columns: 1fr; } .conference-person { padding: 1.5rem; } .conference-people { padding: 3rem 0; } }
+
+/* Recordings and subsequent editions share the archive's profile styling. */
+.conference-watch { display: grid; grid-template-columns: minmax(0, 1.8fr) minmax(280px, 1fr); border: 1px solid #dfe6ee; border-radius: 18px; overflow: hidden; background: #fff; box-shadow: 0 12px 32px rgba(16,45,80,.05); }
+.conference-watch__stage { min-width: 0; background: #102d50; }
+.conference-watch__stage iframe { border: 0; }
+.conference-watch__caption { display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 1.5rem; color: #fff; }
+.conference-watch__eyebrow { font-size: .65rem; font-weight: 700; letter-spacing: .14em; color: #bbd5ab; }
+.conference-watch__caption h3 { color: #fff; font-size: 1.2rem; margin: .4rem 0 0; }
+.conference-watch__caption a { color: #fff; font-size: .8rem; text-decoration: underline; text-underline-offset: 4px; }
+.conference-watch__playlist { padding: 2rem; }
+.conference-watch__playlist h3 { color: #102d50; font-size: 1.4rem; margin: .7rem 0; }
+.conference-watch__playlist p { color: #637184; font-size: .9rem; line-height: 1.7; margin-bottom: 1.5rem; }
+.conference-session { width: 100%; display: flex; align-items: center; gap: .85rem; padding: 1rem; border: 1px solid #dfe6ee; border-radius: 10px; background: #fff; margin-top: .75rem; text-align: left; color: #294865; cursor: pointer; }
+.conference-session[aria-pressed="true"] { background: #eef5e8; border-color: #78a943; }
+.conference-session > span:last-child { margin-left: auto; }
+.conference-session strong, .conference-session small { display: block; }
+.conference-session strong { font-size: .9rem; }
+.conference-session small { color: #637184; font-size: .75rem; margin-top: .3rem; }
+.conference-session__play { color: #5a842e; font-size: .85rem; }
+.conference-session:focus-visible, .conference-edition a:focus-visible { outline: 3px solid #155391; outline-offset: 3px; }
+.conference-edition { max-width: 940px; margin: 0 auto; display: grid; grid-template-columns: 280px minmax(0,1fr); background: #fff; border: 1px solid #dfe6ee; border-radius: 18px; overflow: hidden; box-shadow: 0 12px 32px rgba(16,45,80,.05); }
+.conference-edition__preview { background: #edf2f7; display: flex; align-items: center; justify-content: center; padding: 1.75rem; }
+.conference-edition__preview img { width: 100%; max-height: 280px; object-fit: contain; box-shadow: 0 6px 18px #102d5020; }
+.conference-edition__content { padding: 2.5rem; align-self: center; }
+.conference-edition__year { display: inline-block; background: #eef5e8; color: #496e28; border-radius: 5px; padding: .4rem .7rem; font-size: .75rem; font-weight: 700; letter-spacing: .08em; }
+.conference-edition__content h3 { font-size: 1.7rem; color: #102d50; margin: 1rem 0 .7rem; }
+.conference-edition__content p { color: #637184; font-size: .95rem; line-height: 1.75; }
+.conference-edition__content .conference-edition__venue { font-size: .8rem; color: #476681; }
+.conference-edition__link { display: inline-flex; align-items: center; gap: 1.5rem; padding: .85rem 1.1rem; border-radius: 8px; background: #102d50; color: #fff; font-size: .85rem; font-weight: 600; }
+.conference-edition__link:hover { color: #fff; background: #155391; }
+.conference-edition__format { display: block; font-size: .73rem; color: #637184; margin-top: .75rem; }
+@media (max-width: 991px) { .conference-watch { grid-template-columns: 1fr; } }
+@media (max-width: 575px) { .conference-edition { grid-template-columns: 1fr; } .conference-edition__preview img { max-height: 240px; } .conference-edition__content, .conference-watch__playlist { padding: 1.5rem; } .conference-watch__caption { flex-wrap: wrap; } }
+
+/* Louisiana archive, agenda, and keynote features. */
+.annual-archive, .annual-keynotes { background: #f5f7fa; }
+.annual-archive__grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 1.5rem; }
+.annual-archive-card { border: 1px solid #dfe6ee; border-radius: 16px; overflow: hidden; background: #fff; min-width: 0; }
+.annual-archive-card a { display: block; height: 100%; color: inherit; text-decoration: none; }
+.annual-archive-card a:focus-visible { outline: 3px solid #155391; outline-offset: -4px; }
+.annual-archive-card__image { background: #eaf0f6; padding: 1.5rem; height: 245px; }
+.annual-archive-card__image img { width: 100%; height: 100%; object-fit: contain; }
+.annual-archive-card__body { padding: 1.5rem; }
+.annual-archive-card__year { color: #50772c; font-weight: 700; font-size: 1.6rem; font-family: 'Outfit',sans-serif; }
+.annual-archive-card h3 { color: #102d50; font-size: 1.1rem; line-height: 1.5; margin: .6rem 0 1rem; }
+.annual-archive-card__action { color: #155391; font-size: .83rem; font-weight: 600; }
+.annual-archive-card--milestone { border-left: 4px solid #78a943; }
+.annual-archive-card p { font-size: .85rem; color: #637184; margin: 0; }
+.annual-agenda { max-width: 960px; margin: auto; border: 1px solid #dfe6ee; border-radius: 16px; overflow: hidden; background: #fff; }
+.annual-agenda__header { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; padding: 1.75rem 2rem; background: #102d50; color: #fff; }
+.annual-agenda__header span { color: #c3dcae; font-size: .7rem; font-weight: 700; letter-spacing: .12em; }
+.annual-agenda__header h3 { color: #fff; margin: .5rem 0 0; font-size: 1.4rem; }
+.annual-agenda__header p { color: #d4dfeb; font-size: .8rem; line-height: 1.8; margin: 0; }
+.annual-agenda__list { list-style: none; margin: 0; padding: 0; }
+.annual-agenda__item { display: grid; grid-template-columns: 190px minmax(0,1fr); align-items: center; gap: 1.5rem; padding: 1.25rem 2rem; border-bottom: 1px solid #e7edf2; }
+.annual-agenda__item:last-child { border-bottom: 0; }
+.annual-agenda__time { color: #476681; font-size: .85rem; font-weight: 600; font-variant-numeric: tabular-nums; }
+.annual-agenda__item h3 { font-size: 1rem; color: #102d50; line-height: 1.6; margin: 0; }
+.annual-agenda__item--keynote { background: #f1f6eb; border-left: 4px solid #78a943; padding-left: calc(2rem - 4px); }
+.annual-keynotes__grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 1.75rem; }
+.annual-keynote { border: 1px solid #dfe6ee; border-radius: 18px; overflow: hidden; background: #fff; box-shadow: 0 8px 24px #102d500a; }
+.annual-keynote__portrait { background: #eaf0f6; padding: 2rem; border-top: 3px solid #78a943; }
+.annual-keynote__portrait img { display: block; width: 170px; height: 170px; margin: auto; object-fit: cover; object-position: center 20%; border-radius: 50%; border: 6px solid #fff; }
+.annual-keynote__body { padding: 2rem; }
+.annual-keynote__label { font-size: .68rem; font-weight: 700; letter-spacing: .12em; color: #50772c; }
+.annual-keynote h3 { font-family: 'Outfit',sans-serif; color: #102d50; font-size: 1.6rem; margin: .6rem 0; }
+.annual-keynote__role { color: #476681; font-size: .85rem; margin-bottom: 1.25rem; }
+.annual-keynote__bio { color: #637184; font-size: .94rem; line-height: 1.85; margin: 0; }
+@media(max-width: 767px) { .annual-archive__grid { grid-template-columns: repeat(2,minmax(0,1fr)); } .annual-keynotes__grid { grid-template-columns: 1fr; } .annual-agenda__header { align-items: flex-start; flex-direction: column; } .annual-agenda__item { grid-template-columns: 1fr; gap: .4rem; padding: 1.25rem 1.5rem; } .annual-agenda__item--keynote { padding-left: calc(1.5rem - 4px); } }
+@media(max-width: 480px) { .annual-archive__grid { grid-template-columns: 1fr; } .annual-keynote__body { padding: 1.5rem; } }

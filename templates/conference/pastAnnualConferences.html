@@ -1,0 +1,948 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+Past Annual Community Conferences Archive (2019 – 2025) – Let Us Dream
+{% endblock title %}
+
+{% block meta_description %}
+Explore the historic archive of Let Us Dream Annual Community Conferences from 2019 to 2025, uniting universities, students, civic leaders, and grassroots initiatives across the USA and India.
+{% endblock meta_description %}
+
+{% block breadcrumb_section %}{% endblock %}
+
+{% block extraStyles %}
+<link rel="stylesheet" href="{% static 'css/new/triennial-hub.css' %}">
+<style>
+    .pac-hero {
+        background: linear-gradient(135deg, #071E3D 0%, #0F3D7A 60%, #1A4D8C 100%);
+        color: #ffffff;
+        padding: 3.5rem 0 3.5rem 0;
+        position: relative;
+        overflow: hidden;
+    }
+    .pac-hero::before {
+        content: '';
+        position: absolute;
+        top: -30%;
+        right: -10%;
+        width: 500px;
+        height: 500px;
+        background: radial-gradient(circle, rgba(115, 183, 43, 0.2) 0%, transparent 70%);
+        border-radius: 50%;
+        pointer-events: none;
+    }
+    .pac-hero::after {
+        content: '';
+        position: absolute;
+        bottom: -30%;
+        left: -10%;
+        width: 500px;
+        height: 500px;
+        background: radial-gradient(circle, rgba(12, 82, 161, 0.3) 0%, transparent 70%);
+        border-radius: 50%;
+        pointer-events: none;
+    }
+    .pac-stat-chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.4rem 0.9rem;
+        background: rgba(255, 255, 255, 0.12);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 50px;
+        font-size: 0.82rem;
+        font-weight: 600;
+        color: #ffffff;
+        backdrop-filter: blur(8px);
+    }
+    .pac-filter-bar {
+        background: #ffffff;
+        border: 1px solid #E2E8F0;
+        border-radius: 16px;
+        padding: 1rem 1.25rem;
+        box-shadow: 0 4px 16px rgba(15, 23, 42, 0.05);
+        margin-bottom: 2rem;
+    }
+    .pac-filter-pill {
+        border: 1px solid #CBD5E1;
+        background: #F8FAFC;
+        color: #334155;
+        font-size: 0.85rem;
+        font-weight: 600;
+        padding: 0.45rem 1rem;
+        border-radius: 50px;
+        transition: all 0.2s ease;
+        cursor: pointer;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+    }
+    .pac-filter-pill:hover {
+        background: #EEF4FC;
+        border-color: #0C52A1;
+        color: #0C52A1;
+    }
+    .pac-filter-pill.active {
+        background: #0C52A1;
+        border-color: #0C52A1;
+        color: #ffffff !important;
+        box-shadow: 0 4px 12px rgba(12, 82, 161, 0.25);
+    }
+
+    /* Co-Location Card Design matching annualConference.html */
+    .co-location-card {
+        background: #ffffff;
+        border: 1px solid var(--th-border);
+        border-radius: var(--th-radius);
+        padding: 1.75rem;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        box-shadow: var(--th-shadow-sm);
+        transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .co-location-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 28px -6px rgba(15, 61, 122, 0.15);
+    }
+    .co-location-header {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 1.25rem;
+    }
+    .co-location-meta {
+        margin-bottom: 1.5rem;
+        font-size: 0.86rem;
+        color: var(--th-text-muted);
+        flex-grow: 1;
+    }
+    .co-location-meta p {
+        margin-bottom: 0.45rem;
+        line-height: 1.45;
+    }
+    .co-location-meta p:last-child {
+        margin-bottom: 0;
+    }
+    .co-location-meta strong {
+        color: var(--th-text-dark);
+    }
+</style>
+{% endblock extraStyles %}
+
+{% block content %}
+<div class="triennial-wrapper">
+    <!-- HERO SECTION -->
+    <section class="pac-hero">
+        <div class="container position-relative" style="z-index: 2;">
+            <div class="d-flex flex-wrap align-items-center gap-2 mb-3">
+                <a href="{% url 'annualConference' %}" class="btn btn-sm btn-outline-light rounded-pill px-3 py-1" style="font-size: 0.8rem;">
+                    <i class="fas fa-arrow-left me-1"></i>Back to Upcoming 2026 Conferences
+                </a>
+                <span class="badge rounded-pill px-3 py-1" style="background: rgba(163, 230, 53, 0.2); border: 1px solid rgba(163, 230, 53, 0.4); color: #BEF264; font-size: 0.75rem; font-weight: 700;">
+                    <i class="fas fa-archive me-1"></i>HISTORICAL ARCHIVE
+                </span>
+            </div>
+
+            <h1 class="h2 h1-lg fw-bold text-white mb-2" style="font-family: 'Outfit', sans-serif;">
+                Past Annual Conferences Archive (2019 – 2025)
+            </h1>
+            <p class="text-white-50 fs-6 mb-4" style="max-width: 840px;">
+                Explore records, schedules, bulletins, and proceedings from our community empowerment conferences hosted across universities in the United States and India since 2019.
+            </p>
+
+            <div class="d-flex flex-wrap gap-2">
+                <div class="pac-stat-chip">
+                    <i class="fas fa-calendar-alt text-warning"></i>
+                    <span>7 Annual Editions (2019 – 2025)</span>
+                </div>
+                <div class="pac-stat-chip">
+                    <i class="fas fa-university text-info"></i>
+                    <span>20+ Partner Host Institutions</span>
+                </div>
+                <div class="pac-stat-chip">
+                    <i class="fas fa-globe-americas text-success"></i>
+                    <span>USA • India • Global Chapters</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STICKY BREADCRUMB STRIP -->
+    <div class="th-subnav-bar">
+        <div class="container-fluid px-2 px-md-4">
+            {% if breadcrumbs %}
+            <div class="th-sticky-breadcrumb-strip">
+                <nav aria-label="breadcrumb">
+                    <ol class="th-breadcrumb-minimal">
+                        {% for breadcrumb in breadcrumbs %}
+                            {% if not breadcrumb.active %}
+                                <li class="th-breadcrumb-item">
+                                    {% if breadcrumb.url %}
+                                        <a href="{% url breadcrumb.url %}">
+                                            <i class="{{ breadcrumb.icon }} me-1"></i>{{ breadcrumb.name }}
+                                        </a>
+                                    {% else %}
+                                        <span><i class="{{ breadcrumb.icon }} me-1"></i>{{ breadcrumb.name }}</span>
+                                    {% endif %}
+                                </li>
+                                <li class="th-breadcrumb-sep">/</li>
+                            {% else %}
+                                <li class="th-breadcrumb-item active">
+                                    <i class="{{ breadcrumb.icon }} me-1"></i>{{ breadcrumb.name }}
+                                </li>
+                            {% endif %}
+                        {% endfor %}
+                    </ol>
+                </nav>
+                <div class="d-none d-sm-flex align-items-center gap-2 text-muted" style="font-size: 0.74rem;">
+                    <a href="{% url 'annualConference' %}" class="btn btn-sm btn-outline-primary rounded-pill px-3 py-1" style="font-size: 0.75rem;">
+                        <i class="fas fa-arrow-left me-1"></i>Annual Conference Hub
+                    </a>
+                </div>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+
+    <!-- MAIN ARCHIVE SECTION -->
+    <section class="th-section">
+        <div class="container">
+            <!-- Filter Bar -->
+            <div class="pac-filter-bar">
+                <div class="row align-items-center g-3">
+                    <div class="col-lg-8">
+                        <div class="d-flex flex-wrap align-items-center gap-2">
+                            <span class="text-muted small fw-bold me-1"><i class="fas fa-filter me-1"></i>Filter Year:</span>
+                            <button type="button" class="pac-filter-pill active" data-filter="all">
+                                All Years
+                            </button>
+                            <button type="button" class="pac-filter-pill" data-filter="2025">
+                                2025 <span class="badge bg-light text-muted rounded-pill ms-1">7</span>
+                            </button>
+                            <button type="button" class="pac-filter-pill" data-filter="2024">
+                                2024 <span class="badge bg-light text-muted rounded-pill ms-1">7</span>
+                            </button>
+                            <button type="button" class="pac-filter-pill" data-filter="2022">
+                                2022 <span class="badge bg-light text-muted rounded-pill ms-1">5</span>
+                            </button>
+                            <button type="button" class="pac-filter-pill" data-filter="2021">
+                                2021 <span class="badge bg-light text-muted rounded-pill ms-1">2</span>
+                            </button>
+                            <button type="button" class="pac-filter-pill" data-filter="2020">
+                                2020 <span class="badge bg-light text-muted rounded-pill ms-1">1</span>
+                            </button>
+                            <button type="button" class="pac-filter-pill" data-filter="2019">
+                                2019 <span class="badge bg-light text-muted rounded-pill ms-1">2</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 text-lg-end">
+                        <div class="d-flex flex-wrap justify-content-lg-end align-items-center gap-2">
+                            <span class="text-muted small fw-bold me-1">Country:</span>
+                            <button type="button" class="pac-filter-pill active pac-country-filter" data-country="all">All</button>
+                            <button type="button" class="pac-filter-pill pac-country-filter" data-country="usa">🇺🇸 USA</button>
+                            <button type="button" class="pac-filter-pill pac-country-filter" data-country="india">🇮🇳 India</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Conference Cards Grid matching annualConference.html co-location-card design -->
+            <div class="row g-4" id="conferenceGrid">
+
+                <!-- ==========================================
+                     2025 CONFERENCES (Extracted from annualConference.html)
+                     ========================================== -->
+                <!-- 2025: Louisiana -->
+                <div class="col-lg-4 col-md-6 conference-card-item" data-year="2025" data-country="usa">
+                    <div class="co-location-card">
+                        <div class="co-location-header">
+                            <div class="co-icon-bubble" style="background: #ECFDF5; color: #059669;">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="h5 fw-bold text-dark mb-0">USA — Louisiana</h4>
+                                <span class="badge rounded-pill px-2 py-1 mt-1" style="background: #ECFDF5; color: #059669; font-size: 0.75rem;">October 2025</span>
+                            </div>
+                        </div>
+                        <div class="co-location-meta">
+                            <p><strong>Venue:</strong> University of Louisiana</p>
+                            <p><strong>Date:</strong> October 30, 2025</p>
+                            <p><strong>Focus:</strong> Intergenerational Community Service</p>
+                        </div>
+                        <a href="https://cmt.letusdream.org/conference_details/2f17bcb1-1557-452c-be85-8629fce6ac54" 
+                           target="_blank" rel="noopener" class="btn-th-card-solid w-100 text-center" style="background: var(--th-green-dark); border-color: var(--th-green-dark);">
+                            <i class="fas fa-info-circle me-1"></i>Know More
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 2025: New York -->
+                <div class="col-lg-4 col-md-6 conference-card-item" data-year="2025" data-country="usa">
+                    <div class="co-location-card">
+                        <div class="co-location-header">
+                            <div class="co-icon-bubble" style="background: #FFF7ED; color: #EA580C;">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="h5 fw-bold text-dark mb-0">USA — New York</h4>
+                                <span class="badge rounded-pill px-2 py-1 mt-1" style="background: #FFF7ED; color: #EA580C; font-size: 0.75rem;">November 2025</span>
+                            </div>
+                        </div>
+                        <div class="co-location-meta">
+                            <p><strong>Venue:</strong> Binghamton University</p>
+                            <p><strong>Date:</strong> November 7, 2025</p>
+                            <p><strong>Focus:</strong> Youth Mentorship & Civic Growth</p>
+                        </div>
+                        <a href="https://cmt.letusdream.org/conference_details/76a825ff-719c-4a52-86d8-5c53446bb6e3" 
+                           target="_blank" rel="noopener" class="btn-th-card-solid w-100 text-center">
+                            <i class="fas fa-info-circle me-1"></i>Know More
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 2025: Bengaluru -->
+                <div class="col-lg-4 col-md-6 conference-card-item" data-year="2025" data-country="india">
+                    <div class="co-location-card">
+                        <div class="co-location-header">
+                            <div class="co-icon-bubble" style="background: #F5F3FF; color: #7C3AED;">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="h5 fw-bold text-dark mb-0">India — Bengaluru</h4>
+                                <span class="badge rounded-pill px-2 py-1 mt-1" style="background: #F5F3FF; color: #7C3AED; font-size: 0.75rem;">November 2025</span>
+                            </div>
+                        </div>
+                        <div class="co-location-meta">
+                            <p><strong>Venue:</strong> Presidency University</p>
+                            <p><strong>Date:</strong> November 8, 2025</p>
+                            <p><strong>Focus:</strong> Social Innovation & Grassroots Impact</p>
+                        </div>
+                        <a href="https://cmt.letusdream.org/conference_details/adcc1c26-7dde-4631-a56b-e24161ac01b6" 
+                           target="_blank" rel="noopener" class="btn-th-card-solid w-100 text-center">
+                            <i class="fas fa-info-circle me-1"></i>Know More
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 2025: Hyderabad -->
+                <div class="col-lg-4 col-md-6 conference-card-item" data-year="2025" data-country="india">
+                    <div class="co-location-card">
+                        <div class="co-location-header">
+                            <div class="co-icon-bubble" style="background: #EEF4FC; color: #0C52A1;">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="h5 fw-bold text-dark mb-0">India — Hyderabad</h4>
+                                <span class="badge rounded-pill px-2 py-1 mt-1" style="background: #EEF4FC; color: #0C52A1; font-size: 0.75rem;">November 2025</span>
+                            </div>
+                        </div>
+                        <div class="co-location-meta">
+                            <p><strong>Venue:</strong> BVRIT College</p>
+                            <p><strong>Date:</strong> November 15, 2025</p>
+                            <p><strong>Focus:</strong> Education & Community Equity</p>
+                        </div>
+                        <a href="https://cmt.letusdream.org/conference_details/f4eadcb9-f77b-4044-b0ed-574d8a6fdc09" 
+                           target="_blank" rel="noopener" class="btn-th-card-solid w-100 text-center">
+                            <i class="fas fa-info-circle me-1"></i>Know More
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 2025: Chennai -->
+                <div class="col-lg-4 col-md-6 conference-card-item" data-year="2025" data-country="india">
+                    <div class="co-location-card">
+                        <div class="co-location-header">
+                            <div class="co-icon-bubble" style="background: #FEF2F2; color: #DC2626;">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="h5 fw-bold text-dark mb-0">India — Chennai</h4>
+                                <span class="badge rounded-pill px-2 py-1 mt-1" style="background: #FEF2F2; color: #DC2626; font-size: 0.75rem;">November 2025</span>
+                            </div>
+                        </div>
+                        <div class="co-location-meta">
+                            <p><strong>Venue:</strong> Stella Maris College</p>
+                            <p><strong>Date:</strong> November 22, 2025</p>
+                            <p><strong>Focus:</strong> Women in Leadership & Civic Action</p>
+                        </div>
+                        <a href="https://cmt.letusdream.org/conference_details/f64da27a-ffae-4828-95ee-c6d58e9a3a04" 
+                           target="_blank" rel="noopener" class="btn-th-card-solid w-100 text-center">
+                            <i class="fas fa-info-circle me-1"></i>Know More
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 2025: Trivandrum -->
+                <div class="col-lg-4 col-md-6 conference-card-item" data-year="2025" data-country="india">
+                    <div class="co-location-card">
+                        <div class="co-location-header">
+                            <div class="co-icon-bubble" style="background: #ECFDF5; color: #059669;">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="h5 fw-bold text-dark mb-0">India — Trivandrum</h4>
+                                <span class="badge rounded-pill px-2 py-1 mt-1" style="background: #ECFDF5; color: #059669; font-size: 0.75rem;">November 2025</span>
+                            </div>
+                        </div>
+                        <div class="co-location-meta">
+                            <p><strong>Venue:</strong> CHRIST Nodal Office</p>
+                            <p><strong>Date:</strong> November 29, 2025</p>
+                            <p><strong>Focus:</strong> Holistic Well-being & Volunteerism</p>
+                        </div>
+                        <a href="https://cmt.letusdream.org/conference_details/ee1dcd89-dbc1-4dc4-b08a-1508315f5d2c" 
+                           target="_blank" rel="noopener" class="btn-th-card-solid w-100 text-center" style="background: var(--th-green-dark); border-color: var(--th-green-dark);">
+                            <i class="fas fa-info-circle me-1"></i>Know More
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 2025: Delhi -->
+                <div class="col-lg-4 col-md-6 conference-card-item" data-year="2025" data-country="india">
+                    <div class="co-location-card">
+                        <div class="co-location-header">
+                            <div class="co-icon-bubble" style="background: #EEF4FC; color: #0284C7;">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="h5 fw-bold text-dark mb-0">India — Delhi</h4>
+                                <span class="badge rounded-pill px-2 py-1 mt-1" style="background: #EEF4FC; color: #0284C7; font-size: 0.75rem;">November 2025</span>
+                            </div>
+                        </div>
+                        <div class="co-location-meta">
+                            <p><strong>Venue:</strong> Hansraj College</p>
+                            <p><strong>Date:</strong> November 15, 2025</p>
+                            <p><strong>Focus:</strong> Academic Innovation & Mentorship</p>
+                        </div>
+                        <a href="https://cmt.letusdream.org/conference_details/7ca18e16-3103-46c2-bdd3-0edb6eccbe73" 
+                           target="_blank" rel="noopener" class="btn-th-card-solid w-100 text-center">
+                            <i class="fas fa-info-circle me-1"></i>Know More
+                        </a>
+                    </div>
+                </div>
+
+                <!-- ==========================================
+                     2024 CONFERENCES (All have pages in codebase)
+                     ========================================== -->
+                <!-- 2024: Grambling State -->
+                <div class="col-lg-4 col-md-6 conference-card-item" data-year="2024" data-country="usa">
+                    <div class="co-location-card">
+                        <div class="co-location-header">
+                            <div class="co-icon-bubble" style="background: #ECFDF5; color: #059669;">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="h5 fw-bold text-dark mb-0">USA — Louisiana</h4>
+                                <span class="badge rounded-pill px-2 py-1 mt-1" style="background: #ECFDF5; color: #059669; font-size: 0.75rem;">Grambling State Univ • 2024</span>
+                            </div>
+                        </div>
+                        <div class="co-location-meta">
+                            <p><strong>Venue:</strong> Grambling State University</p>
+                            <p><strong>Location:</strong> Grambling, Louisiana, USA</p>
+                            <p><strong>Focus:</strong> Community Leadership & Research</p>
+                        </div>
+                        <a href="{% url 'annual-conference' 2024 'gramblingstateuniversity' %}" class="btn-th-card-solid w-100 text-center">
+                            <i class="fas fa-info-circle me-1"></i>Know More
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 2024: Binghamton -->
+                <div class="col-lg-4 col-md-6 conference-card-item" data-year="2024" data-country="usa">
+                    <div class="co-location-card">
+                        <div class="co-location-header">
+                            <div class="co-icon-bubble" style="background: #FFF7ED; color: #EA580C;">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="h5 fw-bold text-dark mb-0">USA — New York</h4>
+                                <span class="badge rounded-pill px-2 py-1 mt-1" style="background: #FFF7ED; color: #EA580C; font-size: 0.75rem;">Binghamton Univ • 2024</span>
+                            </div>
+                        </div>
+                        <div class="co-location-meta">
+                            <p><strong>Venue:</strong> Binghamton University</p>
+                            <p><strong>Location:</strong> Binghamton, New York, USA</p>
+                            <p><strong>Focus:</strong> Civic Engagement & Youth Mentorship</p>
+                        </div>
+                        <a href="{% url 'annual-conference' 2024 'binghamtonuniversity2024' %}" class="btn-th-card-solid w-100 text-center">
+                            <i class="fas fa-info-circle me-1"></i>Know More
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 2024: St. Francis de Sales College -->
+                <div class="col-lg-4 col-md-6 conference-card-item" data-year="2024" data-country="india">
+                    <div class="co-location-card">
+                        <div class="co-location-header">
+                            <div class="co-icon-bubble" style="background: #F5F3FF; color: #7C3AED;">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="h5 fw-bold text-dark mb-0">India — Bengaluru</h4>
+                                <span class="badge rounded-pill px-2 py-1 mt-1" style="background: #F5F3FF; color: #7C3AED; font-size: 0.75rem;">SFS College • 2024</span>
+                            </div>
+                        </div>
+                        <div class="co-location-meta">
+                            <p><strong>Venue:</strong> St. Francis de Sales College</p>
+                            <p><strong>Location:</strong> Hebbagodi, Bengaluru, India</p>
+                            <p><strong>Focus:</strong> Volunteerism & Community Bulletin</p>
+                        </div>
+                        <a href="{% url 'annual-conference' 2024 'stfrancisdesalescollege' %}" class="btn-th-card-solid w-100 text-center">
+                            <i class="fas fa-info-circle me-1"></i>Know More
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 2024: Women's Christian College -->
+                <div class="col-lg-4 col-md-6 conference-card-item" data-year="2024" data-country="india">
+                    <div class="co-location-card">
+                        <div class="co-location-header">
+                            <div class="co-icon-bubble" style="background: #FEF2F2; color: #DC2626;">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="h5 fw-bold text-dark mb-0">India — Chennai</h4>
+                                <span class="badge rounded-pill px-2 py-1 mt-1" style="background: #FEF2F2; color: #DC2626; font-size: 0.75rem;">WCC Chennai • 2024</span>
+                            </div>
+                        </div>
+                        <div class="co-location-meta">
+                            <p><strong>Venue:</strong> Women's Christian College</p>
+                            <p><strong>Location:</strong> Nungambakkam, Chennai, India</p>
+                            <p><strong>Focus:</strong> Women Leadership & Social Equity</p>
+                        </div>
+                        <a href="{% url 'annual-conference' 2024 'womenschristiancollege' %}" class="btn-th-card-solid w-100 text-center">
+                            <i class="fas fa-info-circle me-1"></i>Know More
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 2024: Christ Nagar College -->
+                <div class="col-lg-4 col-md-6 conference-card-item" data-year="2024" data-country="india">
+                    <div class="co-location-card">
+                        <div class="co-location-header">
+                            <div class="co-icon-bubble" style="background: #ECFDF5; color: #059669;">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="h5 fw-bold text-dark mb-0">India — Trivandrum</h4>
+                                <span class="badge rounded-pill px-2 py-1 mt-1" style="background: #ECFDF5; color: #059669; font-size: 0.75rem;">Christ Nagar • 2024</span>
+                            </div>
+                        </div>
+                        <div class="co-location-meta">
+                            <p><strong>Venue:</strong> Christ Nagar College</p>
+                            <p><strong>Location:</strong> Maranalloor, Trivandrum, India</p>
+                            <p><strong>Focus:</strong> Intergenerational Well-being & Dialogue</p>
+                        </div>
+                        <a href="{% url 'annual-conference' 2024 'christnagarcollege' %}" class="btn-th-card-solid w-100 text-center" style="background: var(--th-green-dark); border-color: var(--th-green-dark);">
+                            <i class="fas fa-info-circle me-1"></i>Know More
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 2024: St. Francis College for Women -->
+                <div class="col-lg-4 col-md-6 conference-card-item" data-year="2024" data-country="india">
+                    <div class="co-location-card">
+                        <div class="co-location-header">
+                            <div class="co-icon-bubble" style="background: #EEF4FC; color: #0C52A1;">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="h5 fw-bold text-dark mb-0">India — Hyderabad</h4>
+                                <span class="badge rounded-pill px-2 py-1 mt-1" style="background: #EEF4FC; color: #0C52A1; font-size: 0.75rem;">St. Francis • 2024</span>
+                            </div>
+                        </div>
+                        <div class="co-location-meta">
+                            <p><strong>Venue:</strong> St. Francis College for Women</p>
+                            <p><strong>Location:</strong> Begumpet, Hyderabad, India</p>
+                            <p><strong>Focus:</strong> Youth Civic Growth & Innovation</p>
+                        </div>
+                        <a href="{% url 'annual-conference' 2024 'stfrancisdegreecollege' %}" class="btn-th-card-solid w-100 text-center">
+                            <i class="fas fa-info-circle me-1"></i>Know More
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 2024: SPPU Pune -->
+                <div class="col-lg-4 col-md-6 conference-card-item" data-year="2024" data-country="india">
+                    <div class="co-location-card">
+                        <div class="co-location-header">
+                            <div class="co-icon-bubble" style="background: #FDF2F8; color: #BE185D;">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="h5 fw-bold text-dark mb-0">India — Pune</h4>
+                                <span class="badge rounded-pill px-2 py-1 mt-1" style="background: #FDF2F8; color: #BE185D; font-size: 0.75rem;">SPPU Pune • 2024</span>
+                            </div>
+                        </div>
+                        <div class="co-location-meta">
+                            <p><strong>Venue:</strong> Savitribai Phule Pune University</p>
+                            <p><strong>Location:</strong> Pune, Maharashtra, India</p>
+                            <p><strong>Focus:</strong> Grassroots Empowerment & Research</p>
+                        </div>
+                        <a href="{% url 'annual-conference' 2024 'savitribaiphulepune' %}" class="btn-th-card-solid w-100 text-center">
+                            <i class="fas fa-info-circle me-1"></i>Know More
+                        </a>
+                    </div>
+                </div>
+
+                <!-- ==========================================
+                     2022 CONFERENCES (All have pages in codebase)
+                     ========================================== -->
+                <!-- 2022: Louisiana Tech -->
+                <div class="col-lg-4 col-md-6 conference-card-item" data-year="2022" data-country="usa">
+                    <div class="co-location-card">
+                        <div class="co-location-header">
+                            <div class="co-icon-bubble" style="background: #EEF4FC; color: #0C52A1;">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="h5 fw-bold text-dark mb-0">USA — Louisiana</h4>
+                                <span class="badge rounded-pill px-2 py-1 mt-1" style="background: #EEF4FC; color: #0C52A1; font-size: 0.75rem;">Louisiana Tech • 2022</span>
+                            </div>
+                        </div>
+                        <div class="co-location-meta">
+                            <p><strong>Venue:</strong> Louisiana Tech University</p>
+                            <p><strong>Date:</strong> October 27, 2022</p>
+                            <p><strong>Focus:</strong> Inaugural Chapter & Community Timeline</p>
+                        </div>
+                        <a href="{% url 'annual-conference' 2022 'louisianatechuniversity' %}" class="btn-th-card-solid w-100 text-center">
+                            <i class="fas fa-info-circle me-1"></i>Know More
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 2022: ULM Monroe -->
+                <div class="col-lg-4 col-md-6 conference-card-item" data-year="2022" data-country="usa">
+                    <div class="co-location-card">
+                        <div class="co-location-header">
+                            <div class="co-icon-bubble" style="background: #FFF7ED; color: #EA580C;">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="h5 fw-bold text-dark mb-0">USA — Louisiana</h4>
+                                <span class="badge rounded-pill px-2 py-1 mt-1" style="background: #FFF7ED; color: #EA580C; font-size: 0.75rem;">ULM Monroe • 2022</span>
+                            </div>
+                        </div>
+                        <div class="co-location-meta">
+                            <p><strong>Venue:</strong> University of Louisiana at Monroe</p>
+                            <p><strong>Location:</strong> Monroe, Louisiana, USA</p>
+                            <p><strong>Focus:</strong> Intergenerational Dialogue & Service</p>
+                        </div>
+                        <a href="{% url 'annual-conference' 2022 'louisianatechuniversitymonroe' %}" class="btn-th-card-solid w-100 text-center">
+                            <i class="fas fa-info-circle me-1"></i>Know More
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 2022: LSU Shreveport -->
+                <div class="col-lg-4 col-md-6 conference-card-item" data-year="2022" data-country="usa">
+                    <div class="co-location-card">
+                        <div class="co-location-header">
+                            <div class="co-icon-bubble" style="background: #ECFDF5; color: #059669;">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="h5 fw-bold text-dark mb-0">USA — Louisiana</h4>
+                                <span class="badge rounded-pill px-2 py-1 mt-1" style="background: #ECFDF5; color: #059669; font-size: 0.75rem;">LSU Shreveport • 2022</span>
+                            </div>
+                        </div>
+                        <div class="co-location-meta">
+                            <p><strong>Venue:</strong> Louisiana State University Shreveport</p>
+                            <p><strong>Location:</strong> Shreveport, Louisiana, USA</p>
+                            <p><strong>Focus:</strong> Regional Healthcare & Volunteerism</p>
+                        </div>
+                        <a href="{% url 'annual-conference' 2022 'louisianastageuniversitysherveport' %}" class="btn-th-card-solid w-100 text-center">
+                            <i class="fas fa-info-circle me-1"></i>Know More
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 2022: All Saints' College -->
+                <div class="col-lg-4 col-md-6 conference-card-item" data-year="2022" data-country="india">
+                    <div class="co-location-card">
+                        <div class="co-location-header">
+                            <div class="co-icon-bubble" style="background: #F5F3FF; color: #7C3AED;">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="h5 fw-bold text-dark mb-0">India — Trivandrum</h4>
+                                <span class="badge rounded-pill px-2 py-1 mt-1" style="background: #F5F3FF; color: #7C3AED; font-size: 0.75rem;">All Saints' • 2022</span>
+                            </div>
+                        </div>
+                        <div class="co-location-meta">
+                            <p><strong>Venue:</strong> All Saints' College</p>
+                            <p><strong>Location:</strong> Thiruvananthapuram, Kerala, India</p>
+                            <p><strong>Focus:</strong> Women's Education & Social Action</p>
+                        </div>
+                        <a href="{% url 'annual-conference' 2022 'allsaintscollege' %}" class="btn-th-card-solid w-100 text-center">
+                            <i class="fas fa-info-circle me-1"></i>Know More
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 2022: Don Bosco College -->
+                <div class="col-lg-4 col-md-6 conference-card-item" data-year="2022" data-country="india">
+                    <div class="co-location-card">
+                        <div class="co-location-header">
+                            <div class="co-icon-bubble" style="background: #FEF2F2; color: #DC2626;">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="h5 fw-bold text-dark mb-0">India — Chennai</h4>
+                                <span class="badge rounded-pill px-2 py-1 mt-1" style="background: #FEF2F2; color: #DC2626; font-size: 0.75rem;">Don Bosco • 2022</span>
+                            </div>
+                        </div>
+                        <div class="co-location-meta">
+                            <p><strong>Venue:</strong> Don Bosco College</p>
+                            <p><strong>Location:</strong> Chennai, Tamil Nadu, India</p>
+                            <p><strong>Focus:</strong> Youth Development & Mentorship</p>
+                        </div>
+                        <a href="{% url 'annual-conference' 2022 'donboscocollegechennai' %}" class="btn-th-card-solid w-100 text-center">
+                            <i class="fas fa-info-circle me-1"></i>Know More
+                        </a>
+                    </div>
+                </div>
+
+                <!-- ==========================================
+                     2021 CONFERENCES (All have pages in codebase)
+                     ========================================== -->
+                <!-- 2021: Jyoti Nivas College -->
+                <div class="col-lg-4 col-md-6 conference-card-item" data-year="2021" data-country="india">
+                    <div class="co-location-card">
+                        <div class="co-location-header">
+                            <div class="co-icon-bubble" style="background: #EEF4FC; color: #0C52A1;">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="h5 fw-bold text-dark mb-0">India — Bengaluru</h4>
+                                <span class="badge rounded-pill px-2 py-1 mt-1" style="background: #EEF4FC; color: #0C52A1; font-size: 0.75rem;">Jyoti Nivas • 2021</span>
+                            </div>
+                        </div>
+                        <div class="co-location-meta">
+                            <p><strong>Venue:</strong> Jyoti Nivas College Autonomous</p>
+                            <p><strong>Location:</strong> Koramangala, Bengaluru, India</p>
+                            <p><strong>Focus:</strong> Pandemic Community Resilience</p>
+                        </div>
+                        <a href="{% url 'annual-conference' 2021 'jyotinivascollegeautonompus' %}" class="btn-th-card-solid w-100 text-center">
+                            <i class="fas fa-info-circle me-1"></i>Know More
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 2021: Binghamton -->
+                <div class="col-lg-4 col-md-6 conference-card-item" data-year="2021" data-country="usa">
+                    <div class="co-location-card">
+                        <div class="co-location-header">
+                            <div class="co-icon-bubble" style="background: #FFF7ED; color: #EA580C;">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="h5 fw-bold text-dark mb-0">USA — New York</h4>
+                                <span class="badge rounded-pill px-2 py-1 mt-1" style="background: #FFF7ED; color: #EA580C; font-size: 0.75rem;">Binghamton Univ • 2021</span>
+                            </div>
+                        </div>
+                        <div class="co-location-meta">
+                            <p><strong>Venue:</strong> Binghamton University</p>
+                            <p><strong>Location:</strong> Binghamton, New York, USA</p>
+                            <p><strong>Focus:</strong> Hybrid Civic Dialogue & Outreach</p>
+                        </div>
+                        <a href="{% url 'annual-conference' 2021 'binghamtonuniversity2021' %}" class="btn-th-card-solid w-100 text-center">
+                            <i class="fas fa-info-circle me-1"></i>Know More
+                        </a>
+                    </div>
+                </div>
+
+                <!-- ==========================================
+                     2020 CONFERENCES (In codebase)
+                     ========================================== -->
+                <!-- 2020: CHRIST Trivandrum -->
+                <div class="col-lg-4 col-md-6 conference-card-item" data-year="2020" data-country="india">
+                    <div class="co-location-card">
+                        <div class="co-location-header">
+                            <div class="co-icon-bubble" style="background: #FDF2F8; color: #BE185D;">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="h5 fw-bold text-dark mb-0">India — Trivandrum</h4>
+                                <span class="badge rounded-pill px-2 py-1 mt-1" style="background: #FDF2F8; color: #BE185D; font-size: 0.75rem;">CHRIST Nodal • 2020</span>
+                            </div>
+                        </div>
+                        <div class="co-location-meta">
+                            <p><strong>Venue:</strong> CHRIST (Deemed to be University) Nodal</p>
+                            <p><strong>Location:</strong> Thiruvananthapuram, Kerala, India</p>
+                            <p><strong>Focus:</strong> Digital Community Transformation</p>
+                        </div>
+                        <a href="{% url 'annual-conference' 2020 'christuniversitytvm' %}" class="btn-th-card-solid w-100 text-center">
+                            <i class="fas fa-info-circle me-1"></i>Know More
+                        </a>
+                    </div>
+                </div>
+
+                <!-- ==========================================
+                     2019 CONFERENCES (All have pages in codebase)
+                     ========================================== -->
+                <!-- 2019: CHRIST Bengaluru -->
+                <div class="col-lg-4 col-md-6 conference-card-item" data-year="2019" data-country="india">
+                    <div class="co-location-card">
+                        <div class="co-location-header">
+                            <div class="co-icon-bubble" style="background: #EEF4FC; color: #0C52A1;">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="h5 fw-bold text-dark mb-0">India — Bengaluru</h4>
+                                <span class="badge rounded-pill px-2 py-1 mt-1" style="background: #EEF4FC; color: #0C52A1; font-size: 0.75rem;">CHRIST Central • 2019</span>
+                            </div>
+                        </div>
+                        <div class="co-location-meta">
+                            <p><strong>Venue:</strong> CHRIST (Deemed to be University)</p>
+                            <p><strong>Location:</strong> Hosur Road, Bengaluru, India</p>
+                            <p><strong>Focus:</strong> Foundation of India Conference Chapter</p>
+                        </div>
+                        <a href="{% url 'annual-conference' 2019 'christuniversity' %}" class="btn-th-card-solid w-100 text-center">
+                            <i class="fas fa-info-circle me-1"></i>Know More
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 2019: St. Anne's Degree College -->
+                <div class="col-lg-4 col-md-6 conference-card-item" data-year="2019" data-country="india">
+                    <div class="co-location-card">
+                        <div class="co-location-header">
+                            <div class="co-icon-bubble" style="background: #ECFDF5; color: #059669;">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="h5 fw-bold text-dark mb-0">India — Bengaluru</h4>
+                                <span class="badge rounded-pill px-2 py-1 mt-1" style="background: #ECFDF5; color: #059669; font-size: 0.75rem;">St. Anne's • 2019</span>
+                            </div>
+                        </div>
+                        <div class="co-location-meta">
+                            <p><strong>Venue:</strong> St. Anne's Degree College for Women</p>
+                            <p><strong>Location:</strong> Halasuru, Bengaluru, India</p>
+                            <p><strong>Focus:</strong> Grassroots Women Leadership & Service</p>
+                        </div>
+                        <a href="{% url 'annual-conference' 2019 'stannesdegreecollege' %}" class="btn-th-card-solid w-100 text-center">
+                            <i class="fas fa-info-circle me-1"></i>Know More
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- ==========================================
+                 VIDEO ARCHIVES
+                 ========================================== -->
+            <div class="mt-5 pt-4">
+                <div class="th-section-header">
+                    <span class="th-section-kicker">VIDEO ARCHIVES</span>
+                    <h2 class="th-section-title">Conference Recordings & Highlights</h2>
+                    <p class="th-section-lead">Watch keynote addresses, panel discussions, and community testimonials from our previous conference chapters.</p>
+                </div>
+
+                <div class="row g-4 mb-5">
+                    <!-- Louisiana Tech 2022 -->
+                    <div class="col-lg-6">
+                        <div class="p-3 bg-white border rounded-3 shadow-sm h-100">
+                            <div class="ratio ratio-16x9 rounded-3 overflow-hidden mb-3">
+                                <iframe src="https://www.youtube.com/embed/Yp9P92c_Z6M" 
+                                        title="Let Us Dream Community Conference - Louisiana Tech University 2022" 
+                                        allowfullscreen></iframe>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-between mb-2">
+                                <span class="badge bg-primary text-white" style="font-size: 0.75rem;">2022 • USA</span>
+                                <small class="text-muted"><i class="fas fa-video me-1"></i>Official Recording</small>
+                            </div>
+                            <h5 class="fw-bold text-dark mb-1">Louisiana Tech University Chapter</h5>
+                            <p class="text-muted small mb-0">
+                                Comprehensive coverage of keynotes, panel discussions, and community impact reports from Ruston, Louisiana.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Grambling State 2024 -->
+                    <div class="col-lg-6">
+                        <div class="p-3 bg-white border rounded-3 shadow-sm h-100">
+                            <div class="ratio ratio-16x9 rounded-3 overflow-hidden mb-3">
+                                <iframe src="https://www.youtube.com/embed/8v_gJ4oT1_k" 
+                                        title="Let Us Dream Community Conference - Grambling State University 2024" 
+                                        allowfullscreen></iframe>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-between mb-2">
+                                <span class="badge bg-success text-white" style="font-size: 0.75rem;">2024 • USA</span>
+                                <small class="text-muted"><i class="fas fa-video me-1"></i>Highlights Reel</small>
+                            </div>
+                            <h5 class="fw-bold text-dark mb-1">Grambling State University Chapter</h5>
+                            <p class="text-muted small mb-0">
+                                Highlights and community testimonials from our conference at Grambling State University.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Return Callout -->
+            <div class="p-4 text-center rounded-3 border bg-white shadow-sm">
+                <p class="text-muted mb-3 fs-6">Looking for our upcoming conferences and active host chapters?</p>
+                <div class="d-flex flex-wrap justify-content-center gap-2">
+                    <a href="{% url 'annualConference' %}" class="btn-th-card-solid px-4">
+                        <i class="fas fa-calendar-alt me-2"></i>View Upcoming 2026 Conferences
+                    </a>
+                    <a href="https://www.youtube.com/@letusdream8275" class="btn btn-outline-danger rounded-pill px-4" target="_blank" rel="noopener" style="font-weight: 700;">
+                        <i class="fab fa-youtube me-2"></i>YouTube Archives
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+{% endblock content %}
+
+{% block extraScripts %}
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        let activeYear = 'all';
+        let activeCountry = 'all';
+
+        const yearButtons = document.querySelectorAll('.pac-filter-pill[data-filter]');
+        const countryButtons = document.querySelectorAll('.pac-country-filter');
+        const cards = document.querySelectorAll('.conference-card-item');
+
+        function applyFilters() {
+            cards.forEach(card => {
+                const cardYear = card.getAttribute('data-year');
+                const cardCountry = card.getAttribute('data-country');
+
+                const matchesYear = (activeYear === 'all' || cardYear === activeYear);
+                const matchesCountry = (activeCountry === 'all' || cardCountry === activeCountry);
+
+                if (matchesYear && matchesCountry) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        yearButtons.forEach(btn => {
+            btn.addEventListener('click', function () {
+                yearButtons.forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                activeYear = this.getAttribute('data-filter');
+                applyFilters();
+            });
+        });
+
+        countryButtons.forEach(btn => {
+            btn.addEventListener('click', function () {
+                countryButtons.forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                activeCountry = this.getAttribute('data-country');
+                applyFilters();
+            });
+        });
+    });
+</script>
+{% endblock extraScripts %}

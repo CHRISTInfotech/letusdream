@@ -638,6 +638,23 @@ def allConferences(request):
     )
 
 
+def pastAnnualConferences(request):
+    breadcrumbs = [
+        {"name": "Home", "url": "main", "icon": "fas fa-home", "active": False},
+        {"name": "Conferences", "url": "Conferences", "icon": "fas fa-calendar-alt", "active": False},
+        {"name": "Annual Conferences", "url": "annualConference", "icon": "fas fa-calendar-alt", "active": False},
+        {
+            "name": "Past Conferences Archive",
+            "url": None,
+            "icon": "fas fa-history",
+            "active": True,
+        },
+    ]
+    return render(
+        request, "conference/pastAnnualConferences.html", {"breadcrumbs": breadcrumbs}
+    )
+
+
 def triennialConference(request):
     breadcrumbs = [
         {"name": "Home", "url": "main", "icon": "fas fa-home", "active": False},
@@ -778,68 +795,53 @@ def howtoConference(request):
     )
 
 
+PAST_ANNUAL_CONFERENCES = {
+    (2024, "stfrancisdesalescollege"): ("St. Francis de Sales College 2024", "conference/annualConference/2024/stfrancisdesalescollege.html"),
+    (2024, "womenschristiancollege"): ("Women's Christian College 2024", "conference/annualConference/2024/womenschristiancollege.html"),
+    (2024, "gramblingstateuniversity"): ("Grambling State University 2024", "conference/annualConference/2024/gamblingstateuniversity.html"),
+    (2024, "binghamtonuniversity2024"): ("Binghamton University 2024", "conference/annualConference/2024/binghamtonuniversity2024.html"),
+    (2024, "christnagarcollege"): ("Christ Nagar College 2024", "conference/annualConference/2024/christnagarcollege.html"),
+    (2024, "stfrancisdegreecollege"): ("St. Francis College for Women 2024", "conference/annualConference/2024/stfrancisdegreecollege.html"),
+    (2024, "savitribaiphulepune"): ("Savitribai Phule Pune University 2024", "conference/annualConference/2024/savitribaiphulepune.html"),
+    (2022, "allsaintscollege"): ("All Saints' College 2022", "conference/annualConference/2022/allsaintssollege.html"),
+    (2022, "louisianatechuniversity"): ("Louisiana Tech University 2022", "conference/annualConference/2022/louisiana-tech-university.html"),
+    (2022, "louisianastageuniversitysherveport"): ("LSU Shreveport 2022", "conference/annualConference/2022/louisianastateuniversityshreveport.html"),
+    (2022, "louisianatechuniversitymonroe"): ("University of Louisiana Monroe 2022", "conference/annualConference/2022/universityofLouisianaMonroe.html"),
+    (2022, "donboscocollegechennai"): ("Don Bosco College 2022", "conference/annualConference/2022/donbosco-college.html"),
+    (2021, "jyotinivascollegeautonompus"): ("Jyoti Nivas College Autonomous 2021", "conference/annualConference/2021/jncaB.html"),
+    (2021, "binghamtonuniversity2021"): ("Binghamton University 2021", "conference/annualConference/2021/binghamton-university.html"),
+    (2020, "christuniversitytvm"): ("CHRIST (Deemed to be University) Trivandrum 2020", "conference/annualConference/2020/christuniversitytrivandrum.html"),
+    (2019, "christuniversity"): ("CHRIST (Deemed to be University) Bangalore 2019", "conference/annualConference/2019/christ-university-bangalore.html"),
+    (2019, "stannesdegreecollege"): ("St. Anne's Degree College 2019", "conference/annualConference/2019/stannes-college.html"),
+}
+
+
 def annualConferences(request, year, location):
-    if int(year) == 2024 and location == "stfrancisdesalescollege":
+    year_int = int(year)
+    if year_int == 2026 and location in ["szczecin", "szczecin-poland", "poland"]:
+        breadcrumbs = [
+            {"name": "Home", "url": "main", "icon": "fas fa-home", "active": False},
+            {"name": "Conferences", "url": "Conferences", "icon": "fas fa-users", "active": False},
+            {"name": "Annual Conferences", "url": "annualConference", "icon": "fas fa-calendar-alt", "active": False},
+            {"name": "Szczecin, Poland 2026", "url": None, "icon": "fas fa-map-marker-alt", "active": True},
+        ]
         return render(
-            request, "conference/annualConference/2024/stfrancisdesalescollege.html"
+            request, "conference/annualConference/2026/szczecin.html", {"breadcrumbs": breadcrumbs}
         )
-    elif int(year) == 2024 and location == "womenschristiancollege":
-        return render(
-            request, "conference/annualConference/2024/womenschristiancollege.html"
-        )
-    elif int(year) == 2024 and location == "gramblingstateuniversity":
-        return render(
-            request, "conference/annualConference/2024/gamblingstateuniversity.html"
-        )
-    elif int(year) == 2024 and location == "binghamtonuniversity2024":
-        return render(
-            request, "conference/annualConference/2024/binghamtonuniversity2024.html"
-        )
-    elif int(year) == 2024 and location == "christnagarcollege":
-        return render(
-            request, "conference/annualConference/2024/christnagarcollege.html"
-        )
-    elif int(year) == 2024 and location == "stfrancisdegreecollege":
-        return render(
-            request, "conference/annualConference/2024/stfrancisdegreecollege.html"
-        )
-    elif int(year) == 2024 and location == "savitribaiphulepune":
-        return render(
-            request, "conference/annualConference/2024/savitribaiphulepune.html"
-        )
-    elif int(year) == 2022 and location == "allsaintscollege":
-        return render(request, "conference/annualConference/2022/allsaintssollege.html")
-    elif int(year) == 2022 and location == "louisianatechuniversity":
-        return render(
-            request, "conference/annualConference/2022/louisiana-tech-university.html"
-        )
-    elif int(year) == 2022 and location == "louisianastageuniversitysherveport":
-        return render(
-            request,
-            "conference/annualConference/2022/louisianastateuniversityshreveport.html",
-        )
-    elif int(year) == 2022 and location == "louisianatechuniversitymonroe":
-        return render(
-            request, "conference/annualConference/2022/universityofLouisianaMonroe.html"
-        )
-    elif int(year) == 2022 and location == "donboscocollegechennai":
-        return render(request, "conference/annualConference/2022/donbosco-college.html")
-    elif int(year) == 2021 and location == "jyotinivascollegeautonompus":
-        return render(request, "conference/annualConference/2021/jncaB.html")
-    elif int(year) == 2021 and location == "binghamtonuniversity2021":
-        return render(
-            request, "conference/annualConference/2021/binghamton-university.html"
-        )
-    elif int(year) == 2020 and location == "christuniversitytvm":
-        return render(
-            request, "conference/annualConference/2020/christuniversitytrivandrum.html"
-        )
-    elif int(year) == 2019 and location == "christuniversity":
-        return render(
-            request, "conference/annualConference/2019/christ-university-bangalore.html"
-        )
-    elif int(year) == 2019 and location == "stannesdegreecollege":
-        return render(request, "conference/annualConference/2019/stannes-college.html")
+
+    conf_info = PAST_ANNUAL_CONFERENCES.get((year_int, location))
+    if conf_info:
+        title, template_name = conf_info
+        breadcrumbs = [
+            {"name": "Home", "url": "main", "icon": "fas fa-home", "active": False},
+            {"name": "Conferences", "url": "Conferences", "icon": "fas fa-users", "active": False},
+            {"name": "Annual Conferences", "url": "annualConference", "icon": "fas fa-calendar-alt", "active": False},
+            {"name": "Past Conferences Archive", "url": "annual-conference-past", "icon": "fas fa-history", "active": False},
+            {"name": title, "url": None, "icon": "fas fa-university", "active": True},
+        ]
+        return render(request, template_name, {"breadcrumbs": breadcrumbs})
+
+    return redirect("annualConference")
 
 
 def yclpCourse(request):

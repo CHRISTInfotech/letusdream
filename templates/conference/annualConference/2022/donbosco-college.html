@@ -2,227 +2,300 @@
 {% load static %}
 
 {% block title %}
-    DON BOSCO COLLEGE
-{% endblock %}
+Don Bosco College, Chennai — Annual Community Conference 2022 – Let Us Dream
+{% endblock title %}
+
+{% block meta_description %}
+Official conference brochure, keynote addresses, and leadership committee for the Let Us Dream Annual Community Conference 2022 at Don Bosco College, Chennai.
+{% endblock meta_description %}
+
+{% block breadcrumb_section %}{% endblock %}
 
 {% block extraStyles %}
-    <link rel="stylesheet" href="{% static 'css/stannes-college.css' %}" type="text/css">
-    <link rel="stylesheet" href="{% static 'css/louisiana-tech-university.css' %}" type="text/css">
-
+<link rel="stylesheet" href="{% static 'css/new/triennial-hub.css' %}">
+<style>
+    .conf-hero {
+        background: linear-gradient(135deg, #071E3D 0%, #0F3D7A 60%, #1A4D8C 100%);
+        color: #ffffff;
+        padding: 3.5rem 0 3.5rem 0;
+        position: relative;
+        overflow: hidden;
+    }
+    .conf-hero::before {
+        content: '';
+        position: absolute;
+        top: -30%;
+        right: -10%;
+        width: 500px;
+        height: 500px;
+        background: radial-gradient(circle, rgba(115, 183, 43, 0.22) 0%, transparent 70%);
+        border-radius: 50%;
+        pointer-events: none;
+    }
+    .conf-stat-chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.45rem 1rem;
+        background: rgba(255, 255, 255, 0.12);
+        border: 1px solid rgba(255, 255, 255, 0.22);
+        border-radius: 50px;
+        font-size: 0.82rem;
+        font-weight: 600;
+        color: #ffffff;
+        backdrop-filter: blur(8px);
+    }
+    .conf-card {
+        background: #ffffff;
+        border: 1px solid #E2E8F0;
+        border-radius: 18px;
+        padding: 1.75rem;
+        box-shadow: 0 4px 16px rgba(15, 23, 42, 0.05);
+        height: 100%;
+    }
+    .conf-doc-icon {
+        width: 44px;
+        height: 44px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+        flex-shrink: 0;
+    }
+    .conf-frame {
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 8px 24px rgba(15, 23, 42, 0.1);
+        border: 1px solid #CBD5E1;
+        background: #ffffff;
+    }
+    .speaker-card {
+        background: #ffffff;
+        border: 1px solid #E2E8F0;
+        border-radius: 16px;
+        padding: 1.5rem;
+        text-align: center;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        height: 100%;
+    }
+    .speaker-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 24px rgba(12, 82, 161, 0.08);
+        border-color: #0C52A1;
+    }
+    .speaker-avatar {
+        width: 110px;
+        height: 110px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 3px solid #0C52A1;
+        padding: 3px;
+        background: #ffffff;
+        margin: 0 auto 1rem auto;
+    }
+</style>
 {% endblock extraStyles %}
 
 {% block content %}
-
-    <nav aria-label="breadcrumb animated slideInDown" class="cus-breadcrumb">
-        <ol class="breadcrumb text-uppercase mb-0 bg-white">
-            <li class="breadcrumb-item"><a class="text-black text-decoration-none" href="{% url 'main' %}">Home</a></li>
-            <li class="breadcrumb-item"><a class="text-black text-decoration-none">Conferences</a></li>
-            <li class="breadcrumb-item"><a class="text-black text-decoration-none"
-                                           href="{% url 'annualConference' %}">Annual Conference</a></li>
-            <li class="breadcrumb-item  active" aria-current="page">Don Bosco College</li>
-        </ol>
-    </nav>
-
-    <h1 class="mb-4  fw-bold text-center fs-1 text-green text-uppercase heading-h3 mt-5">Don Bosco College
-        Conference</h1>
-
-
-    <div class="conainer text-center m-5">
-        <a href="{% static 'conference/annual/chennai/DonboscoCollege/broshures/DonBoscoChennai_15Oct22.pdf' %}"
-           class="btn btn-outline-success"
-           download>Event
-            Details</a>
-    </div>
-
-
-    <div class="container">
-
-        <div class="row py-5">
-            <div class="col-md-12">
-                <div class="main-timeline">
-                    <a href="#" class="timeline">
-                        <div class="timeline-icon"><i class="fa-solid fa-globe"></i></div>
-                        <div class="timeline-content">
-                            <h3 class="title">HISTORY</h3>
-                            <p class="description">
-                                Volunteers from the local community including business owners involved in voluntary
-                                community developmental projects, non-profit organizations, philanthropists, social
-                                workers,
-                                educators or educational administrators, retired personnel, students, or anyone
-                                interested
-                                in contributing to their community development can be a part of the conference and
-                                engage in
-                                fruitful dialogues with visionaries through the conference.
-                            </p>
-                        </div>
-                    </a>
-                    <a href="#" class="timeline">
-                        <div class="timeline-icon"><i class="fa-regular fa-lightbulb"></i></div>
-                        <div class="timeline-content">
-                            <h3 class="title pl-5">VISION</h3>
-                            <p class="description pl-5 ">
-                                Our Vision is to Empowered local communities for sustainable impact, improvement, Global
-                                Harmony (and Holistic Success).
-                            </p>
-                        </div>
-                    </a>
-                    <a href="#" class="timeline">
-                        <div class="timeline-icon"><i class="fa-solid fa-rocket"></i></div>
-                        <div class="timeline-content">
-                            <h3 class="title">GOAL</h3>
-                            <p class="description">
-                                The Let Us Dream Conference was established in 2017 for the purpose of providing a forum
-                                for
-                                sharing experiences with successes and challenges in community improvement organizations
-                                and
-                                efforts. Broad conference goals are to
-                            <ul>
-                                <li>Improve networking and collaboration among all those interested in community
-                                    improvement
-                                    organizations and programs.
-                                </li>
-                                <li>Promote volunteerism and empower all those involved in community improvement
-                                    organizations and initiatives, including employees, volunteers, post-secondary
-                                    students,
-                                    researchers, and practitioners.
-                                </li>
-                                <li>Create a professional learning organization dedicated to improving local communities
-                                    and
-                                    characterized by a culture of shared researcher and practitioner knowledge, skills,
-                                    theories, and best practices.
-                                </li>
-                            </ul>
-                            </p>
-                        </div>
-                    </a>
-                </div>
+<div class="triennial-wrapper">
+    <!-- HERO SECTION -->
+    <section class="conf-hero">
+        <div class="container position-relative" style="z-index: 2;">
+            <div class="d-flex flex-wrap align-items-center gap-2 mb-3">
+                <a href="{% url 'annual-conference-past' %}" class="btn btn-sm btn-outline-light rounded-pill px-3 py-1" style="font-size: 0.8rem;">
+                    <i class="fas fa-arrow-left me-1"></i>Back to Past Conferences Archive
+                </a>
+                <span class="badge rounded-pill px-3 py-1" style="background: rgba(163, 230, 53, 0.2); border: 1px solid rgba(163, 230, 53, 0.4); color: #BEF264; font-size: 0.75rem; font-weight: 700;">
+                    <i class="fas fa-history me-1"></i>2022 ANNUAL COMMUNITY CONFERENCE
+                </span>
+                <span class="badge rounded-pill px-3 py-1" style="background: rgba(255, 255, 255, 0.15); border: 1px solid rgba(255, 255, 255, 0.3); color: #ffffff; font-size: 0.75rem; font-weight: 600;">
+                    <i class="fas fa-map-marker-alt me-1"></i>CHENNAI • TAMIL NADU
+                </span>
             </div>
-        </div>
-    </div>
 
-    <!-- Previous Conferences -->
-    <div class="container mt-5 pt-5 pb-5">
-        <div class="row text-center">
-            <h1 class="text-green text-center my-5 text-uppercase fw-bold">
-                Past Conferences
+            <h1 class="h2 h1-lg fw-bold text-white mb-2" style="font-family: 'Outfit', sans-serif;">
+                Don Bosco College Conference
             </h1>
-        </div>
-    </div>
-    <div class="previous-conference  pt-5 mb-5 pb-5">
+            <p class="text-white-50 fs-6 mb-4" style="max-width: 820px;">
+                Uniting youth, social workers, and educators in Chennai to build intergenerational community solutions, active civic participation, and social innovation.
+            </p>
 
-        <section class="timeline-wrapper mt-5 pt-5 mb-5 pb-5">
-            <div class="middle-line"></div>
-
-            <div class="box box-top">
-                <div class="date">
-                    <p>2022</p>
-
+            <div class="d-flex flex-wrap gap-2">
+                <div class="conf-stat-chip">
+                    <i class="fas fa-calendar-day text-warning"></i>
+                    <span>October 15, 2022</span>
                 </div>
-                <div class="box-content">
-                    <img src="/ltstatic/conference/annual/chennai/DonboscoCollege/2022.jpg"
-                         class="w-100 h-100 rounded "/>
+                <div class="conf-stat-chip">
+                    <i class="fas fa-university text-info"></i>
+                    <span>Don Bosco College, Chennai</span>
                 </div>
-            </div>
-        </section>
-    </div>
-
-    <!-- Gallery -->
-    <div class="section-member-popup mt-5 pt-5">
-        <div class="container container-member-popup  mb-5 mt-5 pt-5">
-            <div class="col-md-12 text-center mb-5">
-                <h1 class="big-heading text-uppercase mb-5">KEYNOTE SPEAKER</h1>
-            </div>
-            <div class="card">
-                <div class="imgBx">
-                    <img src="{% static 'conference/annual/chennai/DonboscoCollege/img1.jpg' %}" alt="">
-                    <h5 class="text-center pt-3 text-info fw-bolder">Fr. Francis Xavier, SJ</h5>
-                </div>
-                <div class="content">
-                </div>
-            </div>
-            <div class="card">
-                <div class="imgBx">
-                    <img src="{% static 'conference/annual/chennai/DonboscoCollege/img2.png' %}" alt=""
-                         class="text-center">
-                    <h5 class="text-center pt-3 text-info fw-bolder">Dr. Christodas Gandhi IAS</h5>
-                </div>
-                <div class="content">
+                <div class="conf-stat-chip">
+                    <i class="fas fa-users text-success"></i>
+                    <span>Youth Empowerment & Community Transformation</span>
                 </div>
             </div>
         </div>
+    </section>
 
-    </div>
-
-    <div class="container p-5">
-        <div class="row">
-            <div class="col-md-12 text-center">
-                <h1 class="big-heading text-uppercase">Conference Core Committee</h1>
-            </div>
-            <div class="col-lg-4">
-                <div class="d-flex justify-content-center align-items-center p-5 m-2 rounded-lg flex-column">
-                    <div class="person-img d-flex justify-content-center">
-                        <img src="{% static 'conference/annual/chennai/DonboscoCollege/image-089.jpg' %}" alt=""
-                             class="img-fluid rounded-circle shadow p-1 w-50 h-50">
-                    </div>
-                    <div class="person-name my-2">
-                        <h6 class="text-info fw-bolder">Rev. Dr. Joseph Jeyaraj SDB</h6>
-                    </div>
-                    <div class="info">
-                        <p class="text-dark text-center">
-                            Conference Planning chair
-                    </div>
+    <!-- STICKY BREADCRUMB STRIP -->
+    <div class="th-subnav-bar">
+        <div class="container-fluid px-2 px-md-4">
+            {% if breadcrumbs %}
+            <div class="th-sticky-breadcrumb-strip">
+                <nav aria-label="breadcrumb">
+                    <ol class="th-breadcrumb-minimal">
+                        {% for breadcrumb in breadcrumbs %}
+                            {% if not breadcrumb.active %}
+                                <li class="th-breadcrumb-item">
+                                    {% if breadcrumb.url %}
+                                        <a href="{% url breadcrumb.url %}">
+                                            <i class="{{ breadcrumb.icon }} me-1"></i>{{ breadcrumb.name }}
+                                        </a>
+                                    {% else %}
+                                        <span><i class="{{ breadcrumb.icon }} me-1"></i>{{ breadcrumb.name }}</span>
+                                    {% endif %}
+                                </li>
+                                <li class="th-breadcrumb-sep">/</li>
+                            {% else %}
+                                <li class="th-breadcrumb-item active">
+                                    <i class="{{ breadcrumb.icon }} me-1"></i>{{ breadcrumb.name }}
+                                </li>
+                            {% endif %}
+                        {% endfor %}
+                    </ol>
+                </nav>
+                <div class="d-none d-sm-flex align-items-center gap-2 text-muted" style="font-size: 0.74rem;">
+                    <a href="{% url 'annual-conference-past' %}" class="btn btn-sm btn-outline-primary rounded-pill px-3 py-1" style="font-size: 0.75rem;">
+                        <i class="fas fa-arrow-left me-1"></i>Past Conferences Archive
+                    </a>
+                    <a href="{% url 'annualConference' %}" class="btn btn-sm btn-outline-secondary rounded-pill px-3 py-1" style="font-size: 0.75rem;">
+                        <i class="fas fa-calendar-alt me-1"></i>Annual Hub
+                    </a>
                 </div>
             </div>
-            <div class="col-lg-4">
-                <div class="d-flex justify-content-center align-items-center p-5 m-2 rounded-lg flex-column">
-                    <div class="person-img d-flex justify-content-center">
-                        <img src="{% static 'conference/annual/chennai/DonboscoCollege/image-099.jpg' %}" alt=""
-                             class="img-fluid rounded-circle shadow p-1 w-50 h-50">
-                    </div>
-                    <div class="person-name my-2">
-                        <h6 class="text-info fw-bolder">Fr. Praveen Peter SDB</h6>
-                    </div>
-                    <div class="info">
-                        <p class="text-dark text-center">
-                            Conference Co-chair
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="d-flex justify-content-center align-items-center p-5 m-2 rounded-lg flex-column">
-                    <div class="person-img d-flex justify-content-center">
-                        <img src="{% static 'conference/annual/chennai/DonboscoCollege/image-098.jpg' %}" alt=""
-                             class=" rounded-circle shadow p-1 w-50 h-50">
-                    </div>
-                    <div class="person-name my-2">
-                        <h6 class="text-info fw-bolder">A. Mary Dayana</h6>
-                    </div>
-                    <div class="info">
-                        <p class="text-dark text-center">
-                            Conference Co-chair
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="d-flex justify-content-center align-items-center p-5 m-2 rounded-lg flex-column">
-                    <div class="person-img d-flex justify-content-center">
-                        <img src="{% static 'conference/annual/chennai/DonboscoCollege/image-090.jpg' %}" alt=""
-                             class=" rounded-circle shadow p-1  w-50 h-50">
-                    </div>
-                    <div class="person-name my-2">
-                        <h6 class="text-info fw-bolder">Mr. David SR</h6>
-                    </div>
-                    <div class="info">
-                        <p class="text-dark text-center">
-                            Conference Co-chair
-                        </p>
-                    </div>
-                </div>
-            </div>
+            {% endif %}
         </div>
     </div>
 
+    <!-- CONFERENCE DOCUMENTATION & BROCHURE -->
+    <section class="th-section py-5">
+        <div class="container">
+            <div class="th-section-header">
+                <span class="th-section-kicker">CONFERENCE PROCEEDINGS</span>
+                <h2 class="th-section-title">Official Conference Brochure & Details</h2>
+                <p class="th-section-lead">Explore the official brochure, event schedule, and documentation from the 2022 Chennai conference.</p>
+            </div>
 
-{% endblock %}
+            <!-- Download Banner -->
+            <div class="conf-card mb-4">
+                <div class="row align-items-center g-3">
+                    <div class="col-md-8">
+                        <div class="d-flex align-items-center gap-3">
+                            <div class="conf-doc-icon bg-danger-subtle text-danger">
+                                <i class="fas fa-file-pdf"></i>
+                            </div>
+                            <div>
+                                <h4 class="h6 fw-bold mb-1 text-dark">LUD Annual Conference 2022 Official Brochure</h4>
+                                <p class="text-muted small mb-0">Don Bosco College, Chennai edition containing keynote summaries, workshop schedules, and panel details.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 text-md-end">
+                        <a href="{% static 'conference/annual/chennai/DonboscoCollege/broshures/DonBoscoChennai_15Oct22.pdf' %}" target="_blank" download class="btn btn-primary rounded-pill px-4 py-2 fw-semibold">
+                            <i class="fas fa-download me-2"></i>Download Brochure PDF
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PDF Viewer Frame -->
+            <div class="conf-frame mb-5">
+                <iframe src="{% static 'conference/annual/chennai/DonboscoCollege/broshures/DonBoscoChennai_15Oct22.pdf' %}" width="100%" height="750px" style="border: none;"></iframe>
+            </div>
+
+            <!-- KEYNOTE SPEAKERS -->
+            <div class="th-section-header">
+                <span class="th-section-kicker">HONORED GUESTS</span>
+                <h2 class="th-section-title">Keynote Speakers</h2>
+                <p class="th-section-lead">Distinguished leaders who delivered keynote addresses at Don Bosco College.</p>
+            </div>
+
+            <div class="row g-4 justify-content-center mb-5">
+                <div class="col-md-5 col-lg-4">
+                    <div class="speaker-card">
+                        <img src="{% static 'conference/annual/chennai/DonboscoCollege/img1.jpg' %}" alt="Fr. Francis Xavier, SJ" class="speaker-avatar">
+                        <h5 class="h6 fw-bold text-dark mb-1">Fr. Francis Xavier, SJ</h5>
+                        <p class="text-primary small fw-semibold mb-2">Keynote Speaker</p>
+                        <p class="text-muted small mb-0">Educational leader and advocate for youth-driven grassroots community interventions.</p>
+                    </div>
+                </div>
+                <div class="col-md-5 col-lg-4">
+                    <div class="speaker-card">
+                        <img src="{% static 'conference/annual/chennai/DonboscoCollege/img2.png' %}" alt="Dr. Christodas Gandhi IAS" class="speaker-avatar">
+                        <h5 class="h6 fw-bold text-dark mb-1">Dr. Christodas Gandhi IAS</h5>
+                        <p class="text-primary small fw-semibold mb-2">Keynote Speaker</p>
+                        <p class="text-muted small mb-0">Renowned public administrator, social policy reformer, and community empowerment advocate.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CORE COMMITTEE -->
+            <div class="th-section-header">
+                <span class="th-section-kicker">ORGANIZING LEADERSHIP</span>
+                <h2 class="th-section-title">Conference Core Leadership Team</h2>
+                <p class="th-section-lead">The faculty and community directors who guided the 2022 Chennai conference.</p>
+            </div>
+
+            <div class="row g-4 mb-5">
+                <div class="col-sm-6 col-lg-3">
+                    <div class="speaker-card">
+                        <img src="{% static 'conference/annual/chennai/DonboscoCollege/image-089.jpg' %}" alt="Rev. Dr. Joseph Jeyaraj SDB" class="speaker-avatar">
+                        <h6 class="fw-bold text-dark mb-1">Rev. Dr. Joseph Jeyaraj SDB</h6>
+                        <span class="badge bg-primary-subtle text-primary rounded-pill mb-2">Planning Chair</span>
+                        <p class="text-muted small mb-0">Don Bosco College Leadership</p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <div class="speaker-card">
+                        <img src="{% static 'conference/annual/chennai/DonboscoCollege/image-099.jpg' %}" alt="Fr. Praveen Peter SDB" class="speaker-avatar">
+                        <h6 class="fw-bold text-dark mb-1">Fr. Praveen Peter SDB</h6>
+                        <span class="badge bg-secondary-subtle text-secondary rounded-pill mb-2">Co-Chair</span>
+                        <p class="text-muted small mb-0">Don Bosco College Leadership</p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <div class="speaker-card">
+                        <img src="{% static 'conference/annual/chennai/DonboscoCollege/image-098.jpg' %}" alt="A. Mary Dayana" class="speaker-avatar">
+                        <h6 class="fw-bold text-dark mb-1">A. Mary Dayana</h6>
+                        <span class="badge bg-secondary-subtle text-secondary rounded-pill mb-2">Co-Chair</span>
+                        <p class="text-muted small mb-0">Faculty & Organizing Coordinator</p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <div class="speaker-card">
+                        <img src="{% static 'conference/annual/chennai/DonboscoCollege/image-090.jpg' %}" alt="Mr. David SR" class="speaker-avatar">
+                        <h6 class="fw-bold text-dark mb-1">Mr. David SR</h6>
+                        <span class="badge bg-secondary-subtle text-secondary rounded-pill mb-2">Co-Chair</span>
+                        <p class="text-muted small mb-0">Community Partner & Coordinator</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Return Callout -->
+            <div class="p-4 text-center rounded-3 border bg-white shadow-sm mt-4">
+                <h5 class="fw-bold text-dark mb-2">Explore More Conference Chapters</h5>
+                <p class="text-muted mb-3 fs-6">Discover records and proceedings from other Let Us Dream annual community conferences.</p>
+                <div class="d-flex flex-wrap justify-content-center gap-2">
+                    <a href="{% url 'annual-conference-past' %}" class="btn-th-card-solid px-4">
+                        <i class="fas fa-archive me-2"></i>Past Conferences Archive
+                    </a>
+                    <a href="{% url 'annualConference' %}" class="btn btn-outline-primary rounded-pill px-4" style="font-weight: 700;">
+                        <i class="fas fa-calendar-alt me-2"></i>Upcoming 2026 Conferences
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+{% endblock content %}
