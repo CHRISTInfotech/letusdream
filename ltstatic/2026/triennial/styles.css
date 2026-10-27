@@ -1324,27 +1324,37 @@ footer {
 
 #coreGrid,
 #advisoryGrid {
-  --bs-gutter-x: 1.75rem;
-  --bs-gutter-y: 1.75rem;
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 1.5rem;
 }
 
 #coreGrid .member-card,
 #advisoryGrid .member-card {
-  min-height: 382px;
-  padding: 24px 28px 30px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px 18px 28px;
   border: 0;
-  border-radius: 22px;
+  border-radius: 20px;
   background: #fff;
-  box-shadow: 0 22px 60px rgba(15, 61, 122, .08);
+  box-shadow: 0 18px 50px rgba(15, 61, 122, .08);
   text-align: center;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+#coreGrid .member-card:hover,
+#advisoryGrid .member-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 24px 60px rgba(15, 61, 122, .12);
 }
 
 #coreGrid .member-photo,
 #advisoryGrid .member-photo {
   display: block;
-  width: 124px;
-  height: 124px;
-  margin: 18px auto 14px;
+  width: 120px;
+  height: 120px;
+  margin: 16px auto 14px;
   border-radius: 50%;
   border: 3px solid #73B72B;
   padding: 3px;
@@ -1357,39 +1367,52 @@ footer {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: .55rem 1.15rem;
+  padding: .35rem .75rem;
   border-radius: 999px;
   background: rgba(115, 183, 43, .12);
   color: #73B72B;
-  font-size: .86rem;
+  font-size: .75rem;
   font-weight: 600;
   letter-spacing: .02em;
   text-transform: uppercase;
+  line-height: 1.25;
+}
+
+#coreGrid .member-body,
+#advisoryGrid .member-body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  width: 100%;
 }
 
 #coreGrid .member-body h3,
 #advisoryGrid .member-body h3 {
   color: #0F3D7A;
-  font-size: 1.55rem;
+  font-size: 1.35rem;
   line-height: 1.25;
   font-weight: 800;
-  margin: 0 0 10px;
+  margin: 0 0 8px;
 }
 
 #coreGrid .member-body p,
 #advisoryGrid .member-body p {
   color: #667085;
-  font-size: 1rem;
+  font-size: .92rem;
   line-height: 1.45;
-  margin: 0 0 10px;
-  font-weight: 600;
+  margin: 0 0 12px;
+  font-weight: 500;
+  flex-grow: 1;
 }
 
 #coreGrid .member-body a,
 #advisoryGrid .member-body a {
   color: #667085;
-  font-size: .9rem;
-  font-weight: 400;
+  font-size: .8rem;
+  font-weight: 500;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+  margin-top: auto;
 }
 
 .advisory-section {
@@ -1613,7 +1636,7 @@ footer {
 
 .contact-info-card {
   min-height: 274px;
-  padding: 40px 32px;
+  padding: 36px 24px;
   border: 1px solid rgba(15, 61, 122, .1);
   background: #fff;
   box-shadow: 0 18px 48px rgba(15, 61, 122, .06);
@@ -1651,8 +1674,8 @@ footer {
 
 .contact-info-card p {
   color: #0F3D7A;
-  font-size: 1.45rem;
-  line-height: 1.35;
+  font-size: 1.18rem;
+  line-height: 1.45;
   font-weight: 700;
   overflow-wrap: anywhere;
 }
