@@ -15,7 +15,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800;900&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="{% static '2026/triennial/styles.css' %}?v=logo-correction-1">
+  <link rel="stylesheet" href="{% static '2026/triennial/styles.css' %}?v=spacing-fix-1">
 </head>
 
 <body class="overflow-x-hidden">
@@ -224,12 +224,12 @@
     <section id="theme" class="section-pad image-section theme-section">
       <div class="container-xxl">
         <div class="theme-head text-center mx-auto">
-          <h6 class="theme-eyebrow">THEME CONCEPT</h6>
+          <h6 class="theme-eyebrow">THEME</h6>
           <h2 class="theme-title mb-0">
             <span class="d-block">Local Wisdom.</span>
             <span class="d-block">Global Influence</span>
           </h2>
-          <p class="mt-4 mb-0">A global gathering celebrating how local communities, volunteers, and youth leaders
+          <p class="mt-4 mb-0">A global gathering celebrating local communities, volunteers, and youth leaders
             create meaningful
             change through collective action and shared humanity.</p>
         </div>
@@ -352,7 +352,7 @@
       <div class="container-xxl">
         <div class="tracks-head text-center mx-auto">
           <h6 class="mb-3">PROGRAM TRACKS</h6>
-          <h2 class="mb-0"><span>Three Days. Three Themes.</span></h2>
+          <h2 class="mb-0"><span>Three Days. Three Sub-Themes.</span></h2>
           <h2 class="mb-0"><span>One Shared</span> <span>Purpose</span><span>.</span></h2>
           <p class="mb-0">Each day of the conference explores a key dimension of community transformation through
             dialogue,
@@ -368,9 +368,10 @@
                     class="bi bi-mortarboard" aria-hidden="true"></i>
 
                 </div>
-                <div
-                  class="track-day d-inline-flex align-items-center justify-content-center rounded-2 my-3 w-100 py-3 text-white"
-                  style="background-color:#0f70dc ;">DAY 1</div>
+                <div class="track-day text-white">
+                  <span class="track-day-label">DAY 1</span>
+                  <span class="track-day-date">19<sup>th</sup> Nov</span>
+                </div>
 
               </div>
 
@@ -386,7 +387,7 @@
             </div>
             <div class="track-features track-features-8 d-grid">
               <div class="d-flex flex-column align-items-center justify-content-center text-center"><i
-                  class="bi bi-mortarboard" aria-hidden="true"></i><span>Non-conventional Education</span></div>
+                  class="bi bi-compass" aria-hidden="true"></i><span>Non-conventional Education</span></div>
               <div class="d-flex flex-column align-items-center justify-content-center text-center"><i
                   class="bi bi-buildings" aria-hidden="true"></i><span>Spaces</span></div>
               <div class="d-flex flex-column align-items-center justify-content-center text-center"><i
@@ -409,9 +410,10 @@
               <div class="d-flex flex-column align-items-center justify-content-center text-center w-100">
                 <div class="track-icon d-inline-flex align-items-center justify-content-center rounded-circle"><i
                     class="bi bi-heart-pulse" aria-hidden="true"></i></div>
-                <span
-                  class="track-day d-inline-flex align-items-center justify-content-center rounded-2 my-3 w-100 py-3 text-white"
-                  style="background-color:#2b7d20 ;">DAY 2</span>
+                <div class="track-day text-white">
+                  <span class="track-day-label">DAY 2</span>
+                  <span class="track-day-date">20<sup>th</sup> Nov</span>
+                </div>
               </div>
 
               <div class="track-content">
@@ -451,13 +453,14 @@
               <div class="d-flex flex-column align-items-center justify-content-center text-center w-100">
                 <div class="track-icon d-inline-flex align-items-center justify-content-center rounded-circle"><i
                     class="bi bi-people" aria-hidden="true"></i></div>
-                <span
-                  class="track-day d-inline-flex align-items-center justify-content-center rounded-2 my-3 w-100 py-3 text-white"
-                  style="background-color:#c66800 ;">DAY 3</span>
+                <div class="track-day text-white">
+                  <span class="track-day-label">DAY 3</span>
+                  <span class="track-day-date">21<sup>st</sup> Nov</span>
+                </div>
               </div>
 
               <div class="track-content">
-                <h3 class="mb-3">Social Action: Bridging Heritage and Equity: Empowering Communities Through Indigenous
+                <h3 class="mb-3">Social Action: Bridging Heritage and Equity - Empowering Communities Through Indigenous
                   Knowledge for Resilient Futures</h3>
                 <p class="mb-0">Highlights how local knowledge, cultural identity, and equitable systems can address
                   global
@@ -478,7 +481,7 @@
                 <span>Equity</span>
               </div>
               <div class="d-flex flex-column align-items-center justify-content-center text-center"><i
-                  class="bi bi-buildings" aria-hidden="true"></i><span>Heritage</span></div>
+                  class="bi bi-bank2" aria-hidden="true"></i><span>Heritage</span></div>
               <div class="d-flex flex-column align-items-center justify-content-center text-center"><i
                   class="bi bi-globe-americas" aria-hidden="true"></i><span>Cultural Identity</span></div>
               <div class="d-flex flex-column align-items-center justify-content-center text-center"><i
@@ -538,12 +541,12 @@
                 </div>
               </div>
               <ul class="why-check-list list-unstyled d-flex flex-column mb-0">
+                <li>Free and accessible for all participants</li>
                 <li>Globally connected, locally rooted perspectives</li>
                 <li>Bridges research, practice, and community action</li>
                 <li>Bringing solution focussed changemakers together</li>
                 <li>Celebrates volunteerism and youth leadership</li>
                 <li>Builds inclusive networks across sectors</li>
-                <li>Free and accessible for all participants</li>
               </ul>
             </article>
           </div>
@@ -574,18 +577,8 @@
                     aria-hidden="true"></i><span>Discover innovative community solutions</span>
                 </div>
                 <div class="d-flex flex-column align-items-center justify-content-start"><i class="bi bi-journal-text"
-                    aria-hidden="true"></i><span>Share your own impact stories</span></div>
-                <div class="d-flex flex-column align-items-center justify-content-start">
-                  <svg class="why-group-icon d-block" viewBox="0 0 64 64" aria-hidden="true">
-                    <circle cx="32" cy="18" r="7" />
-                    <circle cx="18" cy="24" r="6" />
-                    <circle cx="46" cy="24" r="6" />
-                    <path d="M20 52c1-9 5.6-14 12-14s11 5 12 14" />
-                    <path d="M6 50c1-7.5 5-12 11-12" />
-                    <path d="M58 50c-1-7.5-5-12-11-12" />
-                  </svg>
-                  <span>Share your own impact stories</span>
-                </div>
+                    aria-hidden="true"></i><span>Share your own impact stories</span>
+                  </div>
               </div>
             </article>
           </div>
@@ -1040,7 +1033,7 @@
             </article>
           </div>
           <div class="col-md-6 col-lg-4">
-            <article class="member-card"><span class="member-role">Social Convener</span><img class="member-photo"
+            <article class="member-card"><span class="member-role">Social Action Convener</span><img class="member-photo"
                 src="{% static '2026/triennial/Core Committee/Ms. Srija Santhosh.jpg' %}" alt="Ms. Srija Santhosh"
                 loading="lazy">
               <div class="member-body">
@@ -1051,7 +1044,7 @@
             </article>
           </div>
           <div class="col-md-6 col-lg-4">
-            <article class="member-card"><span class="member-role">Social International Convener</span><img
+            <article class="member-card"><span class="member-role">Social Action International Convener</span><img
                 class="member-photo" src="{% static '2026/triennial/Core Committee/Ms. Lauretta Philip.jpeg' %}"
                 alt="Ms. Lauretta Philip" loading="lazy">
               <div class="member-body">
@@ -1083,33 +1076,12 @@
             </article>
           </div>
           <div class="col-md-6 col-lg-4">
-            <article class="member-card"><span class="member-role">Operations 1 - Host University Co-Chair</span><img
-                class="member-photo" src="{% static '2026/triennial/Core Committee/Sudha Thomas.jpg' %}"
-                alt="Dr. Sudha Thomas" loading="lazy">
-              <div class="member-body">
-                <h3>Dr. Sudha Thomas</h3>
-                <p>Assistant Professor - Department of Social Work CHRIST (Deemed to be University)</p><a
-                  href="mailto:sudha.thomas@christuniversity.in">sudha.thomas@christuniversity.in</a>
-              </div>
-            </article>
-          </div>
-          <div class="col-md-6 col-lg-4">
             <article class="member-card"><span class="member-role">Operations 2 - Community Chair</span><img
                 class="member-photo" src="{% static '2026/triennial/Core Committee/Mr. Rajesh P I.jpg' %}"
                 alt="Mr. Rajesh P I" loading="lazy">
               <div class="member-body">
                 <h3>Mr. Rajesh P I</h3>
                 <p>Founder, The Actors Collective</p><a href="mailto:arts.pi@gmail.com">arts.pi@gmail.com</a>
-              </div>
-            </article>
-          </div>
-          <div class="col-md-6 col-lg-4">
-            <article class="member-card"><span class="member-role">Operations 2 - Community Co-Chair</span><img
-                class="member-photo" src="{% static '2026/triennial/Core Committee/Ms. Suma D.jpg' %}" alt="Ms. Suma D"
-                loading="lazy">
-              <div class="member-body">
-                <h3>Ms. Suma D</h3>
-                <p>Assistant Professor</p><a href="mailto:sumamerlin98@gmail.com">sumamerlin98@gmail.com</a>
               </div>
             </article>
           </div>
@@ -1271,7 +1243,7 @@
                 loading="lazy">
               <div class="member-body">
                 <h3>Mr. Yogesh L</h3>
-                <p>Global Operation Lead, Let Us Dream</p><a
+                <p>Global Operations Lead, Let Us Dream</p><a
                   href="mailto:yogesh@letusdream.org">yogesh@letusdream.org</a>
               </div>
             </article>
