@@ -153,14 +153,14 @@ CONFERENCE_DATA26 = {
             "track": "Education",
             "date": "Thursday, Nov 19, 2026",
             "subtheme": "Rethinking Learning Ecosystems - A Glocal Multigenerational Approach",
-            "time_span": "09:00 AM - 04:00 PM IST",
+            "time_span": "08:45 AM - 04:00 PM IST",
             "venue": "KE Audi, 4th Block, CHRIST Central Campus",
             "focus": "Creativity, indigenous wisdom in architecture, experiential labs & youth mentorship.",
             "sessions": [
                 {
-                    "time": "09:00 - 09:15 AM",
+                    "time": "08:45 - 09:20 AM",
                     "title": "Registration & Networking",
-                    "subtitle": "Participant check-in, registration kit collection, and peer networking",
+                    "subtitle": "Participant check-in and networking",
                     "type": "Check-in",
                     "details": "Meet-Up & Interaction in the Open Networking Space.",
                     "facilitator": "Emcee Committee"
@@ -170,7 +170,7 @@ CONFERENCE_DATA26 = {
                     "title": "Welcome Note",
                     "type": "Inaugural",
                     "details": "Opening welcome address to international delegates, universities, and community partners.",
-                    "facilitator": "Dr. Fr. Joseph CC",
+                    "facilitator": "Col. Dr. Fr. Joseph CC",
                     "designation": "Vice Chancellor, CHRIST (Deemed to be University)"
                 },
                 {
@@ -299,14 +299,14 @@ CONFERENCE_DATA26 = {
             "track": "Health",
             "date": "Friday, Nov 20, 2026",
             "subtheme": "Building Holistic Health - Local Wisdom Meets Digital Reality",
-            "time_span": "09:00 AM - 04:00 PM IST",
+            "time_span": "08:45 AM - 04:00 PM IST",
             "venue": "KE Audi, 4th Block, CHRIST Central Campus",
             "focus": "Elder care, AI in neurology, mitigating loneliness, CPR masterclasses & psychological first aid.",
             "sessions": [
                 {
-                    "time": "09:00 - 09:15 AM",
+                    "time": "08:45 - 09:15 AM",
                     "title": "Registration & Networking",
-                    "subtitle": "Participant check-in and morning networking",
+                    "subtitle": "Participant check-in and networking",
                     "type": "Check-in",
                     "details": "Meet-Up & Interaction in the Open Networking Space.",
                     "facilitator": "Emcee Committee"
@@ -459,14 +459,14 @@ CONFERENCE_DATA26 = {
             "track": "Social Action",
             "date": "Saturday, Nov 21, 2026",
             "subtheme": "Bridging Heritage and Equity - Empowering Communities Through Indigenous Knowledge for Resilient Future",
-            "time_span": "09:00 AM - 04:00 PM IST",
+            "time_span": "08:45 AM - 04:00 PM IST",
             "venue": "KE Audi, 4th Block, CHRIST Central Campus",
             "focus": "Circularity, waste worker dignity, indigenous bamboo, rotational heritage circles, sustainable clothing & civic solver jams.",
             "sessions": [
                 {
-                    "time": "09:00 - 09:15 AM",
+                    "time": "08:45 - 09:15 AM",
                     "title": "Registration & Networking",
-                    "subtitle": "Participant check-in and morning networking",
+                    "subtitle": "Participant check-in and networking",
                     "type": "Check-in",
                     "details": "Meet-Up & Interaction in the Open Networking Space.",
                     "facilitator": "Emcee Committee"
@@ -704,12 +704,12 @@ CONFERENCE_DATA26 = {
     ],
     "featured_speakers": [
         {
-            "name": "Dr. Fr. Joseph CC",
+            "name": "Col. Dr. Fr. Joseph CC",
             "role": "Vice Chancellor",
             "organization": "CHRIST (Deemed to be University)",
             "track": "Education",
             "badge": "Inaugural Address",
-            "bio": "Vice Chancellor of CHRIST (Deemed to be University) since May 2023. Multidisciplinary scholar with research spanning Maritime History, Organizational Culture, and Higher Education.",
+            "bio": "Dr. Fr. Joseph C C is the Vice Chancellor of CHRIST (Deemed to be University), a position he has held since May 2023. His leadership journey includes roles such as Pro-Vice-Chancellor and Director of Student Services. A multidisciplinary scholar, Dr Fr. Joseph’s research spans Maritime History, Organizational Culture, and Work Values in Educational Institutions. He has edited notable works, including the 'Encyclopaedia of New Populism', and is currently leading a major research project on higher education in South India.",
             "image": "2026/triennial/TeamPhotos/Rev Dr Fr Lijo Thomas CU Photo.jpg"
         },
         {
@@ -718,7 +718,7 @@ CONFERENCE_DATA26 = {
             "organization": "Westlink International School, Hanoi",
             "track": "Education",
             "badge": "Keynote Speaker",
-            "bio": "Originally from Costa Rica, an accomplished international educator and Master of Education specializing in IB Global Politics, Theory of Knowledge, and student international-mindedness.",
+            "bio": "Originally from Costa Rica, Ms Nella holds a Master’s in Education and a PGCE. Her passion for learning led her to teach IB Global Politics and Theory of Knowledge, and she later advanced into leadership as a Middle School Coordinator. Now based at Westlink International School Hanoi, she serves as the MYP Coordinator, continuing her journey within the ISP family. Nella is known for her dedication to student success and international-mindedness.",
             "image": ""
         },
         {
@@ -736,7 +736,7 @@ CONFERENCE_DATA26 = {
             "organization": "Campbellsville University, Kentucky, USA",
             "track": "Health",
             "badge": "Keynote Speaker",
-            "bio": "President of Campbellsville University since 2022. Accomplished academic leader, opera performer, and community advocate committed to higher education, faith, and music.",
+            "bio": "Dr. Joseph Hopkins has served as President of Campbellsville University since February 2022. Previously, he held academic leadership positions at Samford University, Converse College, and the University of Evansville. He founded the Harlaxton International Chamber Music Festival, served on the faculty of the Operafestival di Roma, and has performed internationally in opera, concerts, and church settings. Committed to higher education, faith, and music.",
             "image": ""
         },
         {
@@ -745,7 +745,7 @@ CONFERENCE_DATA26 = {
             "organization": "CGI Information Systems",
             "track": "Social Action",
             "badge": "Keynote Speaker",
-            "bio": "Over 22 years of industry leadership driving global digital transformations and financial wellness innovations across international banking platforms.",
+            "bio": "Meenakshi Seshadri has over 22 years of industry experience, including 17 years at CGI. She currently drives Financial Wellness innovation within the Wealth and Capital Markets portfolio. A recognized Trade domain expert, she led the modernization of CGI’s Trade360 platform, deploying it across 14 banking clients, including HSBC, and successfully managing complex transformation initiatives.",
             "image": ""
         },
         {
@@ -754,7 +754,7 @@ CONFERENCE_DATA26 = {
             "organization": "Nightingales Medical Trust",
             "track": "Health",
             "badge": "Fireside Chat",
-            "bio": "Bengaluru-based social entrepreneur with 34+ years advancing elder care, dementia support, active ageing, and community healthcare across India.",
+            "bio": "Mr. Premkumar is a Bengaluru-based social entrepreneur with over 34 years of experience in community welfare and healthcare. Holding an MA and MPhil in Demography, he pioneered community-based maternal and child healthcare in rural Haryana. He founded Nightingales Home Health Services in 1996 and Nightingales Medical Trust in 1998, advancing elder care, dementia support, and active ageing.",
             "image": ""
         },
         {
@@ -763,7 +763,7 @@ CONFERENCE_DATA26 = {
             "organization": "NEMA AI",
             "track": "Health",
             "badge": "Fireside Chat",
-            "bio": "Deep-tech entrepreneur combining AI, neuroscience, and EEG for early cognitive and neurological condition monitoring. Forbes India Top 100 Startups honoree.",
+            "bio": "Nidhi Singh is the Founder & CEO of NEMA AI, a deep-tech healthcare company combining AI, neuroscience, and EEG technology to enable earlier detection and monitoring of cognitive and neurological conditions. A data science and AI professional with experience at Accenture Labs, she has led NEMA toward hospital deployment. Part of the Forbes India Top 100 Startups recognition.",
             "image": ""
         },
         {
@@ -812,12 +812,48 @@ CONFERENCE_DATA26 = {
             "image": ""
         },
         {
+            "name": "Dr. Mabel Vasnaik",
+            "role": "Chairperson & HOD: Emergency Medicine",
+            "organization": "Manipal Hospital, Bangalore",
+            "track": "Health",
+            "badge": "Clinical Pioneer",
+            "bio": "A graduate and MD from St. John’s Medical College, Dr. Mabel is a pioneer in Emergency Medicine in India, establishing and heading the department for 12 years. Former President of the Society for Emergency Medicine, India, and regional faculty for the American Heart Association.",
+            "image": ""
+        },
+        {
+            "name": "Dr. Anitha Suseelan",
+            "role": "Professor & Head, School of Architecture",
+            "organization": "CHRIST (Deemed to be University)",
+            "track": "Education",
+            "badge": "Design Pioneer",
+            "bio": "Over 26 years in Architecture and Urban Design, specializing in sustainable urbanism, urban heritage conservation, and experiential architectural education with distinction from CEPT University and Kerala University.",
+            "image": ""
+        },
+        {
+            "name": "Dr. Manju Vasudevan",
+            "role": "Ecologist & Founder",
+            "organization": "Forest Post & River Research Centre, Kerala",
+            "track": "Social Action",
+            "badge": "Eco Innovator",
+            "bio": "Ecologist connecting biodiversity conservation with indigenous communities and sustainable livelihoods in the Western Ghats, with expertise in forest conservation, non-timber forest products, and sustainable enterprise.",
+            "image": ""
+        },
+        {
+            "name": "Ms. Kristin M. Morris",
+            "role": "Executive Director of Career Development",
+            "organization": "University of Louisiana Monroe, USA",
+            "track": "Social Action",
+            "badge": "Youth Mentor",
+            "bio": "Executive Director of Career Development at ULM with 15+ years of experience specializing in career readiness skills, innovative youth programmes, and student empowerment through the DREAMS Project.",
+            "image": ""
+        },
+        {
             "name": "Gary A. Guice Jr.",
             "role": "Lieutenant & DARE Officer",
             "organization": "Morehouse Parish Sheriff's Office, USA",
             "track": "Social Action",
             "badge": "Youth Advocate",
-            "bio": "26 years of law enforcement experience across corrections, patrol, investigations, and youth mentorship through drug prevention and decision-making programs.",
+            "bio": "Gary A. Guice Jr. is a Lieutenant with the Morehouse Parish Sheriff’s Office, bringing 26 years of law enforcement experience across corrections, patrol, investigations, and youth mentorship. Passionate about the DARE Program, he educates students on decision-making, drug prevention, and confidence, aligning closely with the DREAMS Program’s values.",
             "image": ""
         },
         {
@@ -826,7 +862,7 @@ CONFERENCE_DATA26 = {
             "organization": "CHRIST University & Sunbird Straws",
             "track": "Social Action",
             "badge": "Innovator Spotlight",
-            "bio": "Creator of eco-friendly straws made from fallen leaves, generating rural livelihood for 115+ women; featured in Forbes and WIPO.",
+            "bio": "Dr. Saji Varghese is an Associate Professor at CHRIST (Deemed to be University) and the founder of Sunbird Straws, a startup producing biodegradable straws and pens from fallen coconut leaves. Featured in Forbes and WIPO, his innovation has created employment for over 115 rural women across Kerala, Karnataka, and Tamil Nadu, reaching more than 10 countries.",
             "image": ""
         }
     ],
@@ -1052,6 +1088,8 @@ CONFERENCE_DATA26 = {
     "partners": [
         {"name": "Louisiana Tech University", "image": "2026/triennial/PartnershipLogo/Louisiana Tech University.png"},
         {"name": "Astha Shakti", "image": "2026/triennial/PartnershipLogo/Astha Shakti.png"},
+        {"name": "The Mind Research Foundation", "image": "2026/triennial/PartnershipLogo/The Mind Research Foundation.png"},
+        {"name": "Union is Strength", "image": "2026/triennial/PartnershipLogo/Union is Strength.png"},
         {"name": "Binghamton University", "image": "2026/triennial/PartnershipLogo/Binghamton University.png"},
         {"name": "Katho University", "image": "2026/triennial/PartnershipLogo/Katho University.png"},
         {"name": "Nightingales Medical Trust", "image": "2026/triennial/PartnershipLogo/Nightingales Medical Trust.png"},
