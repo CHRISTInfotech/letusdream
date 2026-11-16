@@ -74,7 +74,7 @@
                 <!-- Year Filter Pills -->
                 <div class="col-lg-7 col-md-6">
                     <div class="d-flex flex-wrap gap-2 justify-content-md-end align-items-center" id="yearFilterGroup">
-                        <button class="event-tour-tab-btn active" data-year="all">All (14)</button>
+                        <button class="event-tour-tab-btn active" data-year="all">All (17)</button>
                         <button class="event-tour-tab-btn" data-year="2026">2026</button>
                         <button class="event-tour-tab-btn" data-year="2025">2025</button>
                         <button class="event-tour-tab-btn" data-year="2024">2024</button>
@@ -288,6 +288,31 @@
                             <i class="fas fa-external-link-alt me-1"></i>Read Article
                         </a>
                         <button class="btn btn-sm btn-outline-secondary rounded-pill px-3 py-1 copy-citation-btn" data-citation="Thomas, L. (2024). A Pilot Study of the DREAMS Program: A Community Collaborative Intervention for the Psychosocial Development of Middle School Students. JSARD, 9(1), 46-55.">
+                            <i class="far fa-copy me-1"></i>Copy Citation
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 2024: Asian Journal of Human Services -->
+                <div class="pub-card" data-year="2024">
+                    <div class="pub-header">
+                        <div class="d-flex align-items-center gap-2">
+                            <span class="pub-year-badge">2024</span>
+                            <span class="pub-type-badge">Journal Article</span>
+                            <span class="text-muted small">Asian Journal of Human Services (AJHS)</span>
+                        </div>
+                    </div>
+                    <h3 class="pub-title">
+                        Philanthropic and Functional Motivation of DREAMS Afterschool Intervention Programme Volunteers: A Correlational Study
+                    </h3>
+                    <div class="pub-citation-box">
+                        Prakasha, G. S., Thomas, L., Gomes, R. F., & Joseph, J. (2024). Philanthropic and Functional Motivation of DREAMS Afterschool Intervention Programme Volunteers: A Correlational Study. Asian Journal of Human Services, 26, 60-73. DOI: 10.14391/ajhs.26.60.
+                    </div>
+                    <div class="pub-actions">
+                        <a href="https://www.jstage.jst.go.jp/article/ajhs/26/0/26_60/_article" target="_blank" class="btn btn-sm btn-primary rounded-pill px-3 py-1 fw-semibold">
+                            <i class="fas fa-external-link-alt me-1"></i>Read on J-STAGE
+                        </a>
+                        <button class="btn btn-sm btn-outline-secondary rounded-pill px-3 py-1 copy-citation-btn" data-citation="Prakasha, G. S., Thomas, L., Gomes, R. F., & Joseph, J. (2024). Philanthropic and Functional Motivation of DREAMS Afterschool Intervention Programme Volunteers: A Correlational Study. Asian Journal of Human Services, 26, 60-73.">
                             <i class="far fa-copy me-1"></i>Copy Citation
                         </button>
                     </div>
@@ -508,6 +533,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const searchInput = document.getElementById('pubSearch');
     const filterButtons = document.querySelectorAll('#yearFilterGroup button');
     const noResultsMsg = document.getElementById('noResultsMsg');
+
+    const allBtn = document.querySelector('#yearFilterGroup button[data-year="all"]');
+    if (allBtn) {
+        allBtn.textContent = `All (${cards.length})`;
+    }
 
     function applyFilter() {
         let visibleCount = 0;
