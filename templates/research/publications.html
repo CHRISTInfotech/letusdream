@@ -74,14 +74,14 @@
                 <!-- Year Filter Pills -->
                 <div class="col-lg-7 col-md-6">
                     <div class="d-flex flex-wrap gap-2 justify-content-md-end align-items-center" id="yearFilterGroup">
-                        <button class="event-tour-tab-btn active" data-year="all">All (17)</button>
-                        <button class="event-tour-tab-btn" data-year="2026">2026</button>
-                        <button class="event-tour-tab-btn" data-year="2025">2025</button>
-                        <button class="event-tour-tab-btn" data-year="2024">2024</button>
-                        <button class="event-tour-tab-btn" data-year="2023">2023</button>
-                        <button class="event-tour-tab-btn" data-year="2022">2022</button>
-                        <button class="event-tour-tab-btn" data-year="2021">2021</button>
-                        <button class="event-tour-tab-btn" data-year="2014">2014</button>
+                        <button class="event-tour-tab-btn active" data-year="all">All (19)</button>
+                        <button class="event-tour-tab-btn" data-year="2026">2026 (1)</button>
+                        <button class="event-tour-tab-btn" data-year="2025">2025 (1)</button>
+                        <button class="event-tour-tab-btn" data-year="2024">2024 (8)</button>
+                        <button class="event-tour-tab-btn" data-year="2023">2023 (3)</button>
+                        <button class="event-tour-tab-btn" data-year="2022">2022 (3)</button>
+                        <button class="event-tour-tab-btn" data-year="2021">2021 (2)</button>
+                        <button class="event-tour-tab-btn" data-year="2014">2014 (1)</button>
                     </div>
                 </div>
             </div>
@@ -343,6 +343,56 @@
                     </div>
                 </div>
 
+                <!-- 2023: Youth Voice Journal -->
+                <div class="pub-card" data-year="2023">
+                    <div class="pub-header">
+                        <div class="d-flex align-items-center gap-2">
+                            <span class="pub-year-badge">2023</span>
+                            <span class="pub-type-badge">Journal Article</span>
+                            <span class="text-muted small">Youth Voice Journal</span>
+                        </div>
+                    </div>
+                    <h3 class="pub-title">
+                        Mentors' Perceived Interest, Motivation, and Volunteering Intention at DREAMS After-School Intervention Programme
+                    </h3>
+                    <div class="pub-citation-box">
+                        Prakasha, G. S., Thomas, L., & Joseph, J. (2023). Mentors' Perceived Interest, Motivation, and Volunteering Intention at DREAMS After-School Intervention Programme. Youth Voice Journal, 13(5). ISSN (online): 2056-2969.
+                    </div>
+                    <div class="pub-actions">
+                        <a href="https://www.rj4allpublications.com/product/mentors-perceived-interest-motivation-and-volunteering-intention-at-dreams-after-school-intervention-programme/" target="_blank" class="btn btn-sm btn-primary rounded-pill px-3 py-1 fw-semibold">
+                            <i class="fas fa-external-link-alt me-1"></i>Read on RJ4All
+                        </a>
+                        <button class="btn btn-sm btn-outline-secondary rounded-pill px-3 py-1 copy-citation-btn" data-citation="Prakasha, G. S., Thomas, L., & Joseph, J. (2023). Mentors' Perceived Interest, Motivation, and Volunteering Intention at DREAMS After-School Intervention Programme. Youth Voice Journal, 13(5). ISSN (online): 2056-2969.">
+                            <i class="far fa-copy me-1"></i>Copy Citation
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 2023: CRC Press / Taylor & Francis -->
+                <div class="pub-card" data-year="2023">
+                    <div class="pub-header">
+                        <div class="d-flex align-items-center gap-2">
+                            <span class="pub-year-badge">2023</span>
+                            <span class="pub-type-badge">Book Chapter</span>
+                            <span class="text-muted small">CRC Press / Taylor & Francis</span>
+                        </div>
+                    </div>
+                    <h3 class="pub-title">
+                        Feasibility of DREAMS Afterschool Intervention to Implement SDG – 4, 5, and 11 in Rural India
+                    </h3>
+                    <div class="pub-citation-box">
+                        Prakasha, G. S., Thomas, L., & Joseph, J. (2023). Feasibility of DREAMS Afterschool Intervention to Implement SDG – 4, 5, and 11 in Rural India. In D. A. Karras (Ed.), Interdisciplinary Perspectives on Sustainable Development: Achieving the SDGs through Education, Wellbeing, and Innovation (pp. 192–196). CRC Press / Taylor & Francis. DOI: 10.1201/9781003457619-40.
+                    </div>
+                    <div class="pub-actions">
+                        <a href="https://doi.org/10.1201/9781003457619-40" target="_blank" class="btn btn-sm btn-primary rounded-pill px-3 py-1 fw-semibold">
+                            <i class="fas fa-external-link-alt me-1"></i>Read Chapter
+                        </a>
+                        <button class="btn btn-sm btn-outline-secondary rounded-pill px-3 py-1 copy-citation-btn" data-citation="Prakasha, G. S., Thomas, L., & Joseph, J. (2023). Feasibility of DREAMS Afterschool Intervention to Implement SDG – 4, 5, and 11 in Rural India. In D. A. Karras (Ed.), Interdisciplinary Perspectives on Sustainable Development: Achieving the SDGs through Education, Wellbeing, and Innovation (pp. 192–196). CRC Press / Taylor & Francis. DOI: 10.1201/9781003457619-40.">
+                            <i class="far fa-copy me-1"></i>Copy Citation
+                        </button>
+                    </div>
+                </div>
+
                 <!-- 2023: Nova Science Publishers -->
                 <div class="pub-card" data-year="2023">
                     <div class="pub-header">
@@ -534,10 +584,24 @@ document.addEventListener('DOMContentLoaded', function() {
     const filterButtons = document.querySelectorAll('#yearFilterGroup button');
     const noResultsMsg = document.getElementById('noResultsMsg');
 
-    const allBtn = document.querySelector('#yearFilterGroup button[data-year="all"]');
-    if (allBtn) {
-        allBtn.textContent = `All (${cards.length})`;
-    }
+    // Calculate count per year and update badges dynamically
+    const yearCounts = {};
+    cards.forEach(card => {
+        const y = card.getAttribute('data-year');
+        if (y) {
+            yearCounts[y] = (yearCounts[y] || 0) + 1;
+        }
+    });
+
+    filterButtons.forEach(btn => {
+        const yr = btn.getAttribute('data-year');
+        if (yr === 'all') {
+            btn.textContent = `All (${cards.length})`;
+        } else if (yr) {
+            const count = yearCounts[yr] || 0;
+            btn.textContent = `${yr} (${count})`;
+        }
+    });
 
     function applyFilter() {
         let visibleCount = 0;
